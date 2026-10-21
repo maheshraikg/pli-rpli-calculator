@@ -3,6 +3,19 @@
 Offline PLI & RPLI premium / maturity calculator (Flutter, Android).
 Independent calculator — not an official India Post app.
 
+## Features
+- Premium calculator (all 4 frequencies, SA rebate, total premium, maturity, XIRR return,
+  year-wise illustration, paid-vs-benefit chart), age from date of birth
+- Maturity & bonus projection, survival-benefit timeline (Sumangal / Gram Priya)
+- "What can I afford?" reverse calculator; compare up to 3 plans
+- Eligibility checker; plan information cards and FAQs
+- Policy tools: loan interest, paid-up value, revival (arrears + default fee), advance rebate
+- My Policies (stored on the phone): accrued bonus, due dates, local reminders
+- Bilingual quotation shared as PDF or image (WhatsApp etc.)
+- 13 languages; optional verified over-the-air rate updates
+
+See `docs/RELEASE.md` before publishing and `docs/PRIVACY_POLICY.md` for the store listing.
+
 ## Layout
 
 ```
