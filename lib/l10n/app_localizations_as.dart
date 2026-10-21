@@ -1007,4 +1007,222 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get sectionCoverTitle => 'সুৰক্ষা আৰু পৰিশোধ';
+
+  @override
+  String get tileForms => 'প্ৰ-পত্ৰ';
+
+  @override
+  String get descForms => 'প্ৰ-পত্ৰ, তালিকা, চিঠি';
+
+  @override
+  String get formsTitle => 'প্ৰ-পত্ৰ আৰু চিঠি';
+
+  @override
+  String get formsIntro =>
+      'প্ৰতিটো PLI / RPLI অনুৰোধত কি লাগে, প্ৰ-পত্ৰ ক\'ত পাব, আৰু সাজু অনুৰোধ-চিঠি।';
+
+  @override
+  String get formsVerifyNote =>
+      'নথিৰ তালিকা কেৱল নিৰ্দেশনা, সলনি হ\'ব পাৰে। জমা দিয়াৰ আগতে আপোনাৰ ডাকঘৰত নিশ্চিত কৰক।';
+
+  @override
+  String get whereToGetTitle => 'প্ৰ-পত্ৰ ক\'ত পাব';
+
+  @override
+  String get whereToGetBody =>
+      'যিকোনো ডাকঘৰ বা CPCত বিনামূলীয়াকৈ, বা ভাৰতীয় ডাক PLI ৱেবছাইটৰ পৰা ডাউনলোড কৰক।';
+
+  @override
+  String get documentsTitle => 'সাজু কৰি ৰাখিবলগীয়া নথি';
+
+  @override
+  String get openOfficialForm => 'চৰকাৰী প্ৰ-পত্ৰ খোলক';
+
+  @override
+  String get getFromIndiaPost => 'ভাৰতীয় ডাকৰ পৰা প্ৰ-পত্ৰ লওক';
+
+  @override
+  String get detailsSheetTitle => 'পলিচি বিৱৰণ পত্ৰ';
+
+  @override
+  String get detailsSheetIntro =>
+      'চৰকাৰী প্ৰ-পত্ৰত লিখিবলৈ আপোনাৰ সংৰক্ষিত পলিচিৰ বিৱৰণ এঠাইতে।';
+
+  @override
+  String get writeLetterTitle => 'অনুৰোধ-চিঠি লিখক';
+
+  @override
+  String get writeLetterIntro =>
+      'আপোনাৰ সংৰক্ষিত পলিচিৰ পৰা পূৰণ কৰা, পোষ্টমাষ্টাৰৰ বাবে সাজু চিঠি।';
+
+  @override
+  String get choosePolicy => 'সংৰক্ষিত পলিচি';
+
+  @override
+  String get noSavedPolicies => 'প্ৰথমে মোৰ পলিচিত এখন পলিচি সংৰক্ষণ কৰক।';
+
+  @override
+  String get toOfficeLabel => 'প্ৰতি (ডাকঘৰ / CPC)';
+
+  @override
+  String get yourAddressLabel => 'আপোনাৰ ঠিকনা';
+
+  @override
+  String get phoneLabel => 'ফোন';
+
+  @override
+  String get placeLabel => 'স্থান';
+
+  @override
+  String get nomineeNameLabel => 'নতুন নমিনিৰ নাম';
+
+  @override
+  String get nomineeRelationLabel => 'সম্পৰ্ক';
+
+  @override
+  String get nomineeAgeLabel => 'নমিনিৰ বয়স';
+
+  @override
+  String get newAddressLabel => 'নতুন ঠিকনা';
+
+  @override
+  String get bondLost => 'হেৰাল';
+
+  @override
+  String get bondDamaged => 'ক্ষতিগ্ৰস্ত';
+
+  @override
+  String get lapsedFromLabel => 'প্ৰিমিয়াম বাকী কেতিয়াৰ পৰা';
+
+  @override
+  String get shareAsText => 'লিখনি হিচাপে শ্বেয়াৰ কৰক';
+
+  @override
+  String get copyText => 'কপি কৰক';
+
+  @override
+  String get copied => 'কপি হ\'ল';
+
+  @override
+  String get letterEnglishNote =>
+      'চিঠিবোৰ ইংৰাজীত — ভাৰতীয় ডাকৰ পত্ৰ-ব্যৱহাৰৰ সাধাৰণ ভাষা। জমা দিয়াৰ আগতে চহী কৰক।';
+
+  @override
+  String get formsOfficialNote =>
+      'এই এপ ভাৰতীয় ডাক নহয়। নিৰ্ধাৰিত প্ৰ-পত্ৰ থাকিলে সদায় ভাৰতীয় ডাকৰ প্ৰ-পত্ৰহে জমা দিয়ক।';
+
+  @override
+  String get svc_proposal => 'নতুন পলিচি প্ৰস্তাৱ';
+
+  @override
+  String get svcDesc_proposal => 'নতুন PLI বা RPLI পলিচিৰ বাবে আবেদন';
+
+  @override
+  String get svc_maturity => 'ম্যাদ পূৰ্ণৰ দাবী';
+
+  @override
+  String get svcDesc_maturity => 'পলিচিৰ ম্যাদ পূৰ্ণ হ\'লে ধনৰ দাবী';
+
+  @override
+  String get svc_survival => 'জীৱিতকালীন সুবিধাৰ দাবী';
+
+  @override
+  String get svcDesc_survival => 'মানি-বেক কিস্তি (সুমংগল, গ্ৰাম প্ৰিয়া)';
+
+  @override
+  String get svc_death => 'মৃত্যু দাবী';
+
+  @override
+  String get svcDesc_death => 'নমিনি বা আইনী উত্তৰাধিকাৰীৰ দাবী';
+
+  @override
+  String get svc_loan => 'পলিচি ঋণ';
+
+  @override
+  String get svcDesc_loan => 'আপোনাৰ পলিচিৰ বিপৰীতে ঋণ লওক';
+
+  @override
+  String get svc_surrender => 'আত্মসমৰ্পণ';
+
+  @override
+  String get svcDesc_surrender => 'আত্মসমৰ্পণ মূল্যৰ বাবে পলিচি আগতে বন্ধ কৰক';
+
+  @override
+  String get svc_revival => 'পুনৰুজ্জীৱন';
+
+  @override
+  String get svcDesc_revival => 'বন্ধ হোৱা পলিচি পুনৰ আৰম্ভ কৰক';
+
+  @override
+  String get svc_nomination => 'নমিনেশ্বন সলনি';
+
+  @override
+  String get svcDesc_nomination => 'নমিনি যোগ বা সলনি কৰক';
+
+  @override
+  String get svc_address => 'ঠিকনা সলনি';
+
+  @override
+  String get svcDesc_address => 'পলিচিত আপোনাৰ ঠিকনা আপডেট কৰক';
+
+  @override
+  String get svc_duplicate => 'ডুপ্লিকেট পলিচি বণ্ড';
+
+  @override
+  String get svcDesc_duplicate => 'হেৰোৱা বা ক্ষতিগ্ৰস্ত বণ্ড সলনি কৰক';
+
+  @override
+  String get svc_assignment => 'স্বত্ব হস্তান্তৰ';
+
+  @override
+  String get svcDesc_assignment => 'পলিচিৰ অধিকাৰ হস্তান্তৰ, যেনে বেংকলৈ';
+
+  @override
+  String get svc_conversion => 'ৰূপান্তৰ (সুবিধা)';
+
+  @override
+  String get svcDesc_conversion => 'আজীৱন বীমাক এনডাউমেণ্টলৈ ৰূপান্তৰ';
+
+  @override
+  String get doc_form => 'নিৰ্ধাৰিত প্ৰ-পত্ৰ, পূৰণ আৰু চহী কৰা';
+
+  @override
+  String get doc_policyBond => 'মূল পলিচি বণ্ড (বা ePLI বণ্ড)';
+
+  @override
+  String get doc_receiptBook => 'প্ৰিমিয়াম ৰচিদ বহী বা ৰচিদ';
+
+  @override
+  String get doc_idProof => 'পৰিচয়ৰ প্ৰমাণ (আধাৰ, পেন আদি)';
+
+  @override
+  String get doc_addressProof => 'ঠিকনাৰ প্ৰমাণ';
+
+  @override
+  String get doc_ageProof => 'বয়সৰ প্ৰমাণ';
+
+  @override
+  String get doc_bankDetails => 'বেংক পাছবুক বা বাতিল চেক';
+
+  @override
+  String get doc_photo => 'পাছপোৰ্ট আকাৰৰ ফটো';
+
+  @override
+  String get doc_deathCertificate => 'মৃত্যুৰ প্ৰমাণপত্ৰ';
+
+  @override
+  String get doc_claimantId => 'দাবীদাৰৰ পৰিচয় আৰু সম্পৰ্কৰ প্ৰমাণ';
+
+  @override
+  String get doc_medical => 'চিকিৎসা প্ৰমাণপত্ৰ / স্বাস্থ্য ঘোষণা (বিচাৰিলে)';
+
+  @override
+  String get doc_eligibility =>
+      'যোগ্যতাৰ প্ৰমাণ (চাকৰি, ডিগ্ৰী বা গ্ৰাম্য বাসস্থান)';
+
+  @override
+  String get doc_nomineeDetails => 'নমিনিৰ নাম, বয়স আৰু সম্পৰ্ক';
+
+  @override
+  String get doc_indemnity => 'ক্ষতিপূৰণ বণ্ড (বিচাৰিলে)';
 }

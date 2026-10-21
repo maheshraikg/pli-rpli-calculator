@@ -124,7 +124,9 @@ class _PolicyTile extends StatelessWidget {
                           Flexible(
                             child: Text(
                               next.isEmpty ? l.noMoreDues : l.nextDue(formatDate(context, next.first)),
-                              style: theme.textTheme.labelMedium?.copyWith(color: theme.colorScheme.onSecondaryContainer),
+                              style: theme.textTheme.labelMedium?.copyWith(
+                                color: theme.colorScheme.onSecondaryContainer,
+                              ),
                             ),
                           ),
                         ],

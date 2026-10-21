@@ -24,6 +24,7 @@ dependencies:
     path: packages/pli_engine
   share_plus: ^13.3.1
   timezone: ^0.11.2
+  url_launcher: ^6.3.3
 
 dev_dependencies:
   flutter_test:
@@ -37,3 +38,4 @@ flutter:
     - assets/data/
     - assets/data/tables/
     - assets/images/
+    - assets/forms/

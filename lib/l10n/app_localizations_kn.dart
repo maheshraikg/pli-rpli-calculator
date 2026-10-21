@@ -1006,4 +1006,223 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get sectionCoverTitle => 'ವಿಮಾ ರಕ್ಷಣೆ ಮತ್ತು ಪಾವತಿ';
+
+  @override
+  String get tileForms => 'ಫಾರ್ಮ್‌ಗಳು';
+
+  @override
+  String get descForms => 'ಫಾರ್ಮ್‌ಗಳು, ಪಟ್ಟಿಗಳು, ಪತ್ರಗಳು';
+
+  @override
+  String get formsTitle => 'ಫಾರ್ಮ್‌ಗಳು ಮತ್ತು ಪತ್ರಗಳು';
+
+  @override
+  String get formsIntro =>
+      'ಪ್ರತಿ PLI / RPLI ಕೋರಿಕೆಗೆ ಏನು ಬೇಕು, ಫಾರ್ಮ್ ಎಲ್ಲಿ ಸಿಗುತ್ತದೆ, ಮತ್ತು ಸಿದ್ಧ ಕೋರಿಕೆ ಪತ್ರಗಳು.';
+
+  @override
+  String get formsVerifyNote =>
+      'ದಾಖಲೆಗಳ ಪಟ್ಟಿ ಮಾರ್ಗದರ್ಶಿ ಮಾತ್ರ, ಬದಲಾಗಬಹುದು. ಸಲ್ಲಿಸುವ ಮೊದಲು ನಿಮ್ಮ ಅಂಚೆ ಕಚೇರಿಯಲ್ಲಿ ದೃಢಪಡಿಸಿ.';
+
+  @override
+  String get whereToGetTitle => 'ಫಾರ್ಮ್ ಎಲ್ಲಿ ಸಿಗುತ್ತದೆ';
+
+  @override
+  String get whereToGetBody =>
+      'ಯಾವುದೇ ಅಂಚೆ ಕಚೇರಿ ಅಥವಾ CPCಯಲ್ಲಿ ಉಚಿತ, ಅಥವಾ ಭಾರತೀಯ ಅಂಚೆ PLI ವೆಬ್‌ಸೈಟ್‌ನಿಂದ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ.';
+
+  @override
+  String get documentsTitle => 'ಸಿದ್ಧವಿಡಬೇಕಾದ ದಾಖಲೆಗಳು';
+
+  @override
+  String get openOfficialForm => 'ಅಧಿಕೃತ ಫಾರ್ಮ್ ತೆರೆಯಿರಿ';
+
+  @override
+  String get getFromIndiaPost => 'ಭಾರತೀಯ ಅಂಚೆಯಿಂದ ಫಾರ್ಮ್ ಪಡೆಯಿರಿ';
+
+  @override
+  String get detailsSheetTitle => 'ಪಾಲಿಸಿ ವಿವರ ಪತ್ರ';
+
+  @override
+  String get detailsSheetIntro =>
+      'ಅಧಿಕೃತ ಫಾರ್ಮ್‌ಗೆ ನಕಲಿಸಲು ನಿಮ್ಮ ಉಳಿಸಿದ ಪಾಲಿಸಿ ವಿವರಗಳು ಒಂದೇ ಕಡೆ.';
+
+  @override
+  String get writeLetterTitle => 'ಕೋರಿಕೆ ಪತ್ರ ಬರೆಯಿರಿ';
+
+  @override
+  String get writeLetterIntro =>
+      'ನಿಮ್ಮ ಉಳಿಸಿದ ಪಾಲಿಸಿಯಿಂದ ತುಂಬಿದ, ಪೋಸ್ಟ್‌ಮಾಸ್ಟರ್‌ಗೆ ಸಿದ್ಧ ಪತ್ರ.';
+
+  @override
+  String get choosePolicy => 'ಉಳಿಸಿದ ಪಾಲಿಸಿ';
+
+  @override
+  String get noSavedPolicies => 'ಮೊದಲು ನನ್ನ ಪಾಲಿಸಿಗಳಲ್ಲಿ ಒಂದು ಪಾಲಿಸಿ ಉಳಿಸಿ.';
+
+  @override
+  String get toOfficeLabel => 'ಇವರಿಗೆ (ಅಂಚೆ ಕಚೇರಿ / CPC)';
+
+  @override
+  String get yourAddressLabel => 'ನಿಮ್ಮ ವಿಳಾಸ';
+
+  @override
+  String get phoneLabel => 'ದೂರವಾಣಿ';
+
+  @override
+  String get placeLabel => 'ಸ್ಥಳ';
+
+  @override
+  String get nomineeNameLabel => 'ಹೊಸ ನಾಮಿನಿ ಹೆಸರು';
+
+  @override
+  String get nomineeRelationLabel => 'ಸಂಬಂಧ';
+
+  @override
+  String get nomineeAgeLabel => 'ನಾಮಿನಿ ವಯಸ್ಸು';
+
+  @override
+  String get newAddressLabel => 'ಹೊಸ ವಿಳಾಸ';
+
+  @override
+  String get bondLost => 'ಕಳೆದುಹೋಗಿದೆ';
+
+  @override
+  String get bondDamaged => 'ಹಾನಿಯಾಗಿದೆ';
+
+  @override
+  String get lapsedFromLabel => 'ಪ್ರೀಮಿಯಂ ಬಾಕಿ ಇರುವುದು ಇಂದಿನಿಂದ';
+
+  @override
+  String get shareAsText => 'ಪಠ್ಯವಾಗಿ ಹಂಚಿ';
+
+  @override
+  String get copyText => 'ನಕಲಿಸಿ';
+
+  @override
+  String get copied => 'ನಕಲಿಸಲಾಗಿದೆ';
+
+  @override
+  String get letterEnglishNote =>
+      'ಪತ್ರಗಳು ಇಂಗ್ಲಿಷ್‌ನಲ್ಲಿವೆ — ಭಾರತೀಯ ಅಂಚೆ ಪತ್ರವ್ಯವಹಾರದ ಸಾಮಾನ್ಯ ಭಾಷೆ. ಸಲ್ಲಿಸುವ ಮೊದಲು ಸಹಿ ಮಾಡಿ.';
+
+  @override
+  String get formsOfficialNote =>
+      'ಈ ಆ್ಯಪ್ ಭಾರತೀಯ ಅಂಚೆ ಅಲ್ಲ. ನಿಗದಿತ ಫಾರ್ಮ್ ಇದ್ದಲ್ಲಿ ಯಾವಾಗಲೂ ಭಾರತೀಯ ಅಂಚೆಯ ಫಾರ್ಮ್ ಅನ್ನೇ ಸಲ್ಲಿಸಿ.';
+
+  @override
+  String get svc_proposal => 'ಹೊಸ ಪಾಲಿಸಿ ಪ್ರಸ್ತಾವನೆ';
+
+  @override
+  String get svcDesc_proposal => 'ಹೊಸ PLI ಅಥವಾ RPLI ಪಾಲಿಸಿಗೆ ಅರ್ಜಿ';
+
+  @override
+  String get svc_maturity => 'ಪಕ್ವತೆ ಕ್ಲೇಮ್';
+
+  @override
+  String get svcDesc_maturity => 'ಪಾಲಿಸಿ ಪಕ್ವವಾದಾಗ ಮೊತ್ತ ಪಡೆಯಿರಿ';
+
+  @override
+  String get svc_survival => 'ಬದುಕುಳಿಯುವ ಲಾಭ ಕ್ಲೇಮ್';
+
+  @override
+  String get svcDesc_survival => 'ಹಣ ವಾಪಸ್ ಕಂತುಗಳು (ಸುಮಂಗಲ್, ಗ್ರಾಮ ಪ್ರಿಯಾ)';
+
+  @override
+  String get svc_death => 'ಮರಣ ಕ್ಲೇಮ್';
+
+  @override
+  String get svcDesc_death => 'ನಾಮಿನಿ ಅಥವಾ ಕಾನೂನುಬದ್ಧ ವಾರಸುದಾರರಿಂದ ಕ್ಲೇಮ್';
+
+  @override
+  String get svc_loan => 'ಪಾಲಿಸಿ ಸಾಲ';
+
+  @override
+  String get svcDesc_loan => 'ನಿಮ್ಮ ಪಾಲಿಸಿಯ ಮೇಲೆ ಸಾಲ';
+
+  @override
+  String get svc_surrender => 'ಸರೆಂಡರ್';
+
+  @override
+  String get svcDesc_surrender => 'ಸರೆಂಡರ್ ಮೌಲ್ಯಕ್ಕಾಗಿ ಪಾಲಿಸಿಯನ್ನು ಬೇಗ ಮುಚ್ಚಿ';
+
+  @override
+  String get svc_revival => 'ಪುನರುಜ್ಜೀವನ';
+
+  @override
+  String get svcDesc_revival => 'ಸ್ಥಗಿತಗೊಂಡ ಪಾಲಿಸಿಯನ್ನು ಮತ್ತೆ ಆರಂಭಿಸಿ';
+
+  @override
+  String get svc_nomination => 'ನಾಮನಿರ್ದೇಶನ ಬದಲಾವಣೆ';
+
+  @override
+  String get svcDesc_nomination => 'ನಾಮಿನಿ ಸೇರಿಸಿ ಅಥವಾ ಬದಲಿಸಿ';
+
+  @override
+  String get svc_address => 'ವಿಳಾಸ ಬದಲಾವಣೆ';
+
+  @override
+  String get svcDesc_address => 'ಪಾಲಿಸಿಯಲ್ಲಿ ನಿಮ್ಮ ವಿಳಾಸ ನವೀಕರಿಸಿ';
+
+  @override
+  String get svc_duplicate => 'ನಕಲು ಪಾಲಿಸಿ ಬಾಂಡ್';
+
+  @override
+  String get svcDesc_duplicate => 'ಕಳೆದುಹೋದ ಅಥವಾ ಹಾನಿಯಾದ ಬಾಂಡ್ ಬದಲಿಸಿ';
+
+  @override
+  String get svc_assignment => 'ಹಕ್ಕು ವರ್ಗಾವಣೆ';
+
+  @override
+  String get svcDesc_assignment =>
+      'ಪಾಲಿಸಿ ಹಕ್ಕುಗಳನ್ನು ವರ್ಗಾಯಿಸಿ, ಉದಾ. ಬ್ಯಾಂಕ್‌ಗೆ';
+
+  @override
+  String get svc_conversion => 'ಪರಿವರ್ತನೆ (ಸುವಿಧಾ)';
+
+  @override
+  String get svcDesc_conversion => 'ಆಜೀವ ವಿಮೆಯನ್ನು ದತ್ತಿ ವಿಮೆಗೆ ಪರಿವರ್ತಿಸಿ';
+
+  @override
+  String get doc_form => 'ನಿಗದಿತ ಫಾರ್ಮ್, ತುಂಬಿ ಸಹಿ ಮಾಡಿದ್ದು';
+
+  @override
+  String get doc_policyBond => 'ಮೂಲ ಪಾಲಿಸಿ ಬಾಂಡ್ (ಅಥವಾ ePLI ಬಾಂಡ್)';
+
+  @override
+  String get doc_receiptBook => 'ಪ್ರೀಮಿಯಂ ರಸೀದಿ ಪುಸ್ತಕ ಅಥವಾ ರಸೀದಿಗಳು';
+
+  @override
+  String get doc_idProof => 'ಗುರುತಿನ ಪುರಾವೆ (ಆಧಾರ್, ಪ್ಯಾನ್ ಇತ್ಯಾದಿ)';
+
+  @override
+  String get doc_addressProof => 'ವಿಳಾಸ ಪುರಾವೆ';
+
+  @override
+  String get doc_ageProof => 'ವಯಸ್ಸಿನ ಪುರಾವೆ';
+
+  @override
+  String get doc_bankDetails => 'ಬ್ಯಾಂಕ್ ಪಾಸ್‌ಬುಕ್ ಅಥವಾ ರದ್ದಾದ ಚೆಕ್';
+
+  @override
+  String get doc_photo => 'ಪಾಸ್‌ಪೋರ್ಟ್ ಗಾತ್ರದ ಫೋಟೋ';
+
+  @override
+  String get doc_deathCertificate => 'ಮರಣ ಪ್ರಮಾಣಪತ್ರ';
+
+  @override
+  String get doc_claimantId => 'ಕ್ಲೇಮುದಾರರ ಗುರುತು ಮತ್ತು ಸಂಬಂಧದ ಪುರಾವೆ';
+
+  @override
+  String get doc_medical => 'ವೈದ್ಯಕೀಯ ಪ್ರಮಾಣಪತ್ರ / ಆರೋಗ್ಯ ಘೋಷಣೆ (ಕೇಳಿದರೆ)';
+
+  @override
+  String get doc_eligibility =>
+      'ಅರ್ಹತೆಯ ಪುರಾವೆ (ಉದ್ಯೋಗ, ಪದವಿ ಅಥವಾ ಗ್ರಾಮೀಣ ವಾಸ)';
+
+  @override
+  String get doc_nomineeDetails => 'ನಾಮಿನಿಯ ಹೆಸರು, ವಯಸ್ಸು ಮತ್ತು ಸಂಬಂಧ';
+
+  @override
+  String get doc_indemnity => 'ನಷ್ಟಪರಿಹಾರ ಬಾಂಡ್ (ಕೇಳಿದರೆ)';
 }

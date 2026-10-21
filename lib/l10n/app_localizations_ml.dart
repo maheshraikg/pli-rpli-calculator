@@ -1008,4 +1008,228 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get sectionCoverTitle => 'പരിരക്ഷയും അടവും';
+
+  @override
+  String get tileForms => 'ഫോമുകൾ';
+
+  @override
+  String get descForms => 'ഫോമുകൾ, പട്ടികകൾ, കത്തുകൾ';
+
+  @override
+  String get formsTitle => 'ഫോമുകളും കത്തുകളും';
+
+  @override
+  String get formsIntro =>
+      'ഓരോ PLI / RPLI അപേക്ഷയ്ക്കും എന്ത് വേണം, ഫോം എവിടെ കിട്ടും, തയ്യാറായ അപേക്ഷാ കത്തുകൾ.';
+
+  @override
+  String get formsVerifyNote =>
+      'രേഖകളുടെ പട്ടിക മാർഗ്ഗനിർദ്ദേശം മാത്രം, മാറാം. സമർപ്പിക്കും മുമ്പ് നിങ്ങളുടെ പോസ്റ്റ് ഓഫീസിൽ ഉറപ്പാക്കുക.';
+
+  @override
+  String get whereToGetTitle => 'ഫോം എവിടെ കിട്ടും';
+
+  @override
+  String get whereToGetBody =>
+      'ഏത് പോസ്റ്റ് ഓഫീസിലോ CPC-യിലോ സൗജന്യം, അല്ലെങ്കിൽ ഇന്ത്യ പോസ്റ്റ് PLI വെബ്സൈറ്റിൽ നിന്ന് ഡൗൺലോഡ് ചെയ്യുക.';
+
+  @override
+  String get documentsTitle => 'തയ്യാറാക്കി വയ്ക്കേണ്ട രേഖകൾ';
+
+  @override
+  String get openOfficialForm => 'ഔദ്യോഗിക ഫോം തുറക്കുക';
+
+  @override
+  String get getFromIndiaPost => 'ഇന്ത്യ പോസ്റ്റിൽ നിന്ന് ഫോം നേടുക';
+
+  @override
+  String get detailsSheetTitle => 'പോളിസി വിവര ഷീറ്റ്';
+
+  @override
+  String get detailsSheetIntro =>
+      'ഔദ്യോഗിക ഫോമിൽ എഴുതാൻ നിങ്ങളുടെ സേവ് ചെയ്ത പോളിസി വിവരങ്ങൾ ഒരിടത്ത്.';
+
+  @override
+  String get writeLetterTitle => 'അപേക്ഷാ കത്ത് എഴുതുക';
+
+  @override
+  String get writeLetterIntro =>
+      'നിങ്ങളുടെ സേവ് ചെയ്ത പോളിസിയിൽ നിന്ന് പൂരിപ്പിച്ച, പോസ്റ്റ്മാസ്റ്റർക്കുള്ള കത്ത്.';
+
+  @override
+  String get choosePolicy => 'സേവ് ചെയ്ത പോളിസി';
+
+  @override
+  String get noSavedPolicies =>
+      'ആദ്യം എന്റെ പോളിസികളിൽ ഒരു പോളിസി സേവ് ചെയ്യുക.';
+
+  @override
+  String get toOfficeLabel => 'സ്വീകർത്താവ് (പോസ്റ്റ് ഓഫീസ് / CPC)';
+
+  @override
+  String get yourAddressLabel => 'നിങ്ങളുടെ വിലാസം';
+
+  @override
+  String get phoneLabel => 'ഫോൺ';
+
+  @override
+  String get placeLabel => 'സ്ഥലം';
+
+  @override
+  String get nomineeNameLabel => 'പുതിയ നോമിനിയുടെ പേര്';
+
+  @override
+  String get nomineeRelationLabel => 'ബന്ധം';
+
+  @override
+  String get nomineeAgeLabel => 'നോമിനിയുടെ പ്രായം';
+
+  @override
+  String get newAddressLabel => 'പുതിയ വിലാസം';
+
+  @override
+  String get bondLost => 'നഷ്ടപ്പെട്ടു';
+
+  @override
+  String get bondDamaged => 'കേടായി';
+
+  @override
+  String get lapsedFromLabel => 'പ്രീമിയം കുടിശ്ശിക എന്നുമുതൽ';
+
+  @override
+  String get shareAsText => 'ടെക്സ്റ്റായി പങ്കിടുക';
+
+  @override
+  String get copyText => 'പകർത്തുക';
+
+  @override
+  String get copied => 'പകർത്തി';
+
+  @override
+  String get letterEnglishNote =>
+      'കത്തുകൾ ഇംഗ്ലീഷിലാണ് — ഇന്ത്യ പോസ്റ്റ് കത്തിടപാടുകളുടെ സാധാരണ ഭാഷ. സമർപ്പിക്കും മുമ്പ് ഒപ്പിടുക.';
+
+  @override
+  String get formsOfficialNote =>
+      'ഈ ആപ്പ് ഇന്ത്യ പോസ്റ്റ് അല്ല. നിശ്ചിത ഫോം ഉള്ളിടത്ത് എപ്പോഴും ഇന്ത്യ പോസ്റ്റിന്റെ ഫോം തന്നെ സമർപ്പിക്കുക.';
+
+  @override
+  String get svc_proposal => 'പുതിയ പോളിസി നിർദ്ദേശം';
+
+  @override
+  String get svcDesc_proposal => 'പുതിയ PLI അല്ലെങ്കിൽ RPLI പോളിസിക്ക് അപേക്ഷ';
+
+  @override
+  String get svc_maturity => 'കാലാവധി ക്ലെയിം';
+
+  @override
+  String get svcDesc_maturity =>
+      'പോളിസി കാലാവധി എത്തുമ്പോൾ തുക ക്ലെയിം ചെയ്യുക';
+
+  @override
+  String get svc_survival => 'അതിജീവന ആനുകൂല്യ ക്ലെയിം';
+
+  @override
+  String get svcDesc_survival => 'മണി-ബാക്ക് തവണകൾ (സുമംഗൽ, ഗ്രാം പ്രിയ)';
+
+  @override
+  String get svc_death => 'മരണ ക്ലെയിം';
+
+  @override
+  String get svcDesc_death => 'നോമിനിയോ നിയമപരമായ അവകാശിയോ നൽകുന്ന ക്ലെയിം';
+
+  @override
+  String get svc_loan => 'പോളിസി വായ്പ';
+
+  @override
+  String get svcDesc_loan => 'നിങ്ങളുടെ പോളിസിയിന്മേൽ വായ്പ';
+
+  @override
+  String get svc_surrender => 'സറണ്ടർ';
+
+  @override
+  String get svcDesc_surrender =>
+      'സറണ്ടർ മൂല്യത്തിനായി പോളിസി നേരത്തെ അവസാനിപ്പിക്കുക';
+
+  @override
+  String get svc_revival => 'പുനരുജ്ജീവനം';
+
+  @override
+  String get svcDesc_revival => 'മുടങ്ങിയ പോളിസി വീണ്ടും ആരംഭിക്കുക';
+
+  @override
+  String get svc_nomination => 'നോമിനേഷൻ മാറ്റം';
+
+  @override
+  String get svcDesc_nomination => 'നോമിനിയെ ചേർക്കുക അല്ലെങ്കിൽ മാറ്റുക';
+
+  @override
+  String get svc_address => 'വിലാസ മാറ്റം';
+
+  @override
+  String get svcDesc_address => 'പോളിസിയിൽ നിങ്ങളുടെ വിലാസം പുതുക്കുക';
+
+  @override
+  String get svc_duplicate => 'ഡ്യൂപ്ലിക്കേറ്റ് പോളിസി ബോണ്ട്';
+
+  @override
+  String get svcDesc_duplicate => 'നഷ്ടപ്പെട്ടതോ കേടായതോ ആയ ബോണ്ട് മാറ്റുക';
+
+  @override
+  String get svc_assignment => 'അവകാശ കൈമാറ്റം';
+
+  @override
+  String get svcDesc_assignment => 'പോളിസി അവകാശങ്ങൾ കൈമാറുക, ഉദാ. ബാങ്കിന്';
+
+  @override
+  String get svc_conversion => 'മാറ്റം (സുവിധ)';
+
+  @override
+  String get svcDesc_conversion =>
+      'ആജീവനാന്ത ഇൻഷുറൻസ് എൻഡോവ്മെന്റാക്കി മാറ്റുക';
+
+  @override
+  String get doc_form => 'നിശ്ചിത ഫോം, പൂരിപ്പിച്ച് ഒപ്പിട്ടത്';
+
+  @override
+  String get doc_policyBond => 'യഥാർത്ഥ പോളിസി ബോണ്ട് (അല്ലെങ്കിൽ ePLI ബോണ്ട്)';
+
+  @override
+  String get doc_receiptBook => 'പ്രീമിയം രസീത് ബുക്ക് അല്ലെങ്കിൽ രസീതുകൾ';
+
+  @override
+  String get doc_idProof => 'തിരിച്ചറിയൽ രേഖ (ആധാർ, പാൻ തുടങ്ങിയവ)';
+
+  @override
+  String get doc_addressProof => 'വിലാസ രേഖ';
+
+  @override
+  String get doc_ageProof => 'പ്രായ രേഖ';
+
+  @override
+  String get doc_bankDetails =>
+      'ബാങ്ക് പാസ്ബുക്ക് അല്ലെങ്കിൽ റദ്ദാക്കിയ ചെക്ക്';
+
+  @override
+  String get doc_photo => 'പാസ്പോർട്ട് സൈസ് ഫോട്ടോ';
+
+  @override
+  String get doc_deathCertificate => 'മരണ സർട്ടിഫിക്കറ്റ്';
+
+  @override
+  String get doc_claimantId => 'ക്ലെയിമന്റിന്റെ തിരിച്ചറിയൽ, ബന്ധ രേഖ';
+
+  @override
+  String get doc_medical =>
+      'മെഡിക്കൽ സർട്ടിഫിക്കറ്റ് / ആരോഗ്യ പ്രഖ്യാപനം (ആവശ്യപ്പെട്ടാൽ)';
+
+  @override
+  String get doc_eligibility =>
+      'യോഗ്യതാ രേഖ (ജോലി, ബിരുദം അല്ലെങ്കിൽ ഗ്രാമീണ താമസം)';
+
+  @override
+  String get doc_nomineeDetails => 'നോമിനിയുടെ പേര്, പ്രായം, ബന്ധം';
+
+  @override
+  String get doc_indemnity => 'നഷ്ടപരിഹാര ബോണ്ട് (ആവശ്യപ്പെട്ടാൽ)';
 }

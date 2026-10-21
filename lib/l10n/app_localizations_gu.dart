@@ -1003,4 +1003,222 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get sectionCoverTitle => 'સુરક્ષા અને ચુકવણી';
+
+  @override
+  String get tileForms => 'ફોર્મ';
+
+  @override
+  String get descForms => 'ફોર્મ, યાદીઓ, પત્રો';
+
+  @override
+  String get formsTitle => 'ફોર્મ અને પત્રો';
+
+  @override
+  String get formsIntro =>
+      'દરેક PLI / RPLI વિનંતી માટે શું જોઈએ, ફોર્મ ક્યાં મળે, અને તૈયાર વિનંતી પત્રો.';
+
+  @override
+  String get formsVerifyNote =>
+      'દસ્તાવેજોની યાદી માર્ગદર્શક છે અને બદલાઈ શકે. જમા કરતાં પહેલાં તમારી ટપાલ કચેરીમાં ખાતરી કરો.';
+
+  @override
+  String get whereToGetTitle => 'ફોર્મ ક્યાં મળે';
+
+  @override
+  String get whereToGetBody =>
+      'કોઈ પણ ટપાલ કચેરી કે CPC પર મફત, અથવા ભારતીય ટપાલ PLI વેબસાઇટ પરથી ડાઉનલોડ કરો.';
+
+  @override
+  String get documentsTitle => 'તૈયાર રાખવાના દસ્તાવેજો';
+
+  @override
+  String get openOfficialForm => 'સત્તાવાર ફોર્મ ખોલો';
+
+  @override
+  String get getFromIndiaPost => 'ભારતીય ટપાલ પાસેથી ફોર્મ મેળવો';
+
+  @override
+  String get detailsSheetTitle => 'પૉલિસી વિગત પત્રક';
+
+  @override
+  String get detailsSheetIntro =>
+      'સત્તાવાર ફોર્મમાં લખવા માટે તમારી સાચવેલી પૉલિસીની વિગતો એક જગ્યાએ.';
+
+  @override
+  String get writeLetterTitle => 'વિનંતી પત્ર લખો';
+
+  @override
+  String get writeLetterIntro =>
+      'તમારી સાચવેલી પૉલિસીમાંથી ભરેલો, પોસ્ટમાસ્ટર માટે તૈયાર પત્ર.';
+
+  @override
+  String get choosePolicy => 'સાચવેલી પૉલિસી';
+
+  @override
+  String get noSavedPolicies => 'પહેલાં મારી પૉલિસીઓમાં એક પૉલિસી સાચવો.';
+
+  @override
+  String get toOfficeLabel => 'પ્રતિ (ટપાલ કચેરી / CPC)';
+
+  @override
+  String get yourAddressLabel => 'તમારું સરનામું';
+
+  @override
+  String get phoneLabel => 'ફોન';
+
+  @override
+  String get placeLabel => 'સ્થળ';
+
+  @override
+  String get nomineeNameLabel => 'નવા નોમિનીનું નામ';
+
+  @override
+  String get nomineeRelationLabel => 'સંબંધ';
+
+  @override
+  String get nomineeAgeLabel => 'નોમિનીની ઉંમર';
+
+  @override
+  String get newAddressLabel => 'નવું સરનામું';
+
+  @override
+  String get bondLost => 'ખોવાયું';
+
+  @override
+  String get bondDamaged => 'નુકસાન પામ્યું';
+
+  @override
+  String get lapsedFromLabel => 'પ્રીમિયમ બાકી ક્યારથી';
+
+  @override
+  String get shareAsText => 'લખાણ તરીકે શેર કરો';
+
+  @override
+  String get copyText => 'કૉપિ કરો';
+
+  @override
+  String get copied => 'કૉપિ થયું';
+
+  @override
+  String get letterEnglishNote =>
+      'પત્રો અંગ્રેજીમાં છે — ભારતીય ટપાલ પત્રવ્યવહારની સામાન્ય ભાષા. જમા કરતાં પહેલાં સહી કરો.';
+
+  @override
+  String get formsOfficialNote =>
+      'આ એપ ભારતીય ટપાલ નથી. નિયત ફોર્મ હોય ત્યાં હંમેશા ભારતીય ટપાલનું જ ફોર્મ જમા કરો.';
+
+  @override
+  String get svc_proposal => 'નવી પૉલિસી દરખાસ્ત';
+
+  @override
+  String get svcDesc_proposal => 'નવી PLI કે RPLI પૉલિસી માટે અરજી';
+
+  @override
+  String get svc_maturity => 'પાકતી રકમનો દાવો';
+
+  @override
+  String get svcDesc_maturity => 'પૉલિસી પાકે ત્યારે રકમનો દાવો';
+
+  @override
+  String get svc_survival => 'જીવિત લાભ દાવો';
+
+  @override
+  String get svcDesc_survival => 'મની-બેક હપ્તા (સુમંગલ, ગ્રામ પ્રિયા)';
+
+  @override
+  String get svc_death => 'મૃત્યુ દાવો';
+
+  @override
+  String get svcDesc_death => 'નોમિની કે કાનૂની વારસદાર દ્વારા દાવો';
+
+  @override
+  String get svc_loan => 'પૉલિસી લોન';
+
+  @override
+  String get svcDesc_loan => 'તમારી પૉલિસી પર લોન લો';
+
+  @override
+  String get svc_surrender => 'સરેન્ડર';
+
+  @override
+  String get svcDesc_surrender => 'સરેન્ડર મૂલ્ય માટે પૉલિસી વહેલી બંધ કરો';
+
+  @override
+  String get svc_revival => 'પુનઃજીવિત';
+
+  @override
+  String get svcDesc_revival => 'બંધ પડેલી પૉલિસી ફરી શરૂ કરો';
+
+  @override
+  String get svc_nomination => 'નોમિનેશન ફેરફાર';
+
+  @override
+  String get svcDesc_nomination => 'નોમિની ઉમેરો કે બદલો';
+
+  @override
+  String get svc_address => 'સરનામું ફેરફાર';
+
+  @override
+  String get svcDesc_address => 'પૉલિસીમાં તમારું સરનામું અપડેટ કરો';
+
+  @override
+  String get svc_duplicate => 'ડુપ્લિકેટ પૉલિસી બોન્ડ';
+
+  @override
+  String get svcDesc_duplicate => 'ખોવાયેલો કે નુકસાન પામેલો બોન્ડ બદલો';
+
+  @override
+  String get svc_assignment => 'હક્ક તબદીલી';
+
+  @override
+  String get svcDesc_assignment => 'પૉલિસી હક્કો તબદીલ કરો, દા.ત. બેંકને';
+
+  @override
+  String get svc_conversion => 'રૂપાંતર (સુવિધા)';
+
+  @override
+  String get svcDesc_conversion => 'આજીવન વીમાને એન્ડોમેન્ટમાં ફેરવો';
+
+  @override
+  String get doc_form => 'નિયત ફોર્મ, ભરેલું અને સહી કરેલું';
+
+  @override
+  String get doc_policyBond => 'મૂળ પૉલિસી બોન્ડ (અથવા ePLI બોન્ડ)';
+
+  @override
+  String get doc_receiptBook => 'પ્રીમિયમ રસીદ બુક કે રસીદો';
+
+  @override
+  String get doc_idProof => 'ઓળખનો પુરાવો (આધાર, પાન વગેરે)';
+
+  @override
+  String get doc_addressProof => 'સરનામાનો પુરાવો';
+
+  @override
+  String get doc_ageProof => 'ઉંમરનો પુરાવો';
+
+  @override
+  String get doc_bankDetails => 'બેંક પાસબુક કે રદ કરેલો ચેક';
+
+  @override
+  String get doc_photo => 'પાસપોર્ટ સાઇઝ ફોટો';
+
+  @override
+  String get doc_deathCertificate => 'મૃત્યુ પ્રમાણપત્ર';
+
+  @override
+  String get doc_claimantId => 'દાવેદારની ઓળખ અને સંબંધનો પુરાવો';
+
+  @override
+  String get doc_medical => 'તબીબી પ્રમાણપત્ર / આરોગ્ય ઘોષણા (માગે તો)';
+
+  @override
+  String get doc_eligibility =>
+      'પાત્રતાનો પુરાવો (નોકરી, ડિગ્રી કે ગ્રામ્ય નિવાસ)';
+
+  @override
+  String get doc_nomineeDetails => 'નોમિનીનું નામ, ઉંમર અને સંબંધ';
+
+  @override
+  String get doc_indemnity => 'ક્ષતિપૂર્તિ બોન્ડ (માગે તો)';
 }

@@ -1006,4 +1006,221 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get sectionCoverTitle => 'تحفظ اور ادائیگی';
+
+  @override
+  String get tileForms => 'فارم';
+
+  @override
+  String get descForms => 'فارم، فہرستیں، خطوط';
+
+  @override
+  String get formsTitle => 'فارم اور خطوط';
+
+  @override
+  String get formsIntro =>
+      'ہر PLI / RPLI درخواست کے لیے کیا چاہیے، فارم کہاں ملے گا، اور تیار درخواستی خطوط۔';
+
+  @override
+  String get formsVerifyNote =>
+      'دستاویزات کی فہرست صرف رہنمائی ہے اور بدل سکتی ہے۔ جمع کرنے سے پہلے اپنے ڈاک خانے سے تصدیق کریں۔';
+
+  @override
+  String get whereToGetTitle => 'فارم کہاں ملے گا';
+
+  @override
+  String get whereToGetBody =>
+      'کسی بھی ڈاک خانے یا CPC پر مفت، یا انڈیا پوسٹ PLI ویب سائٹ سے ڈاؤن لوڈ کریں۔';
+
+  @override
+  String get documentsTitle => 'تیار رکھنے کے دستاویزات';
+
+  @override
+  String get openOfficialForm => 'سرکاری فارم کھولیں';
+
+  @override
+  String get getFromIndiaPost => 'انڈیا پوسٹ سے فارم حاصل کریں';
+
+  @override
+  String get detailsSheetTitle => 'پالیسی تفصیل شیٹ';
+
+  @override
+  String get detailsSheetIntro =>
+      'سرکاری فارم پر لکھنے کے لیے آپ کی محفوظ پالیسی کی تفصیلات ایک جگہ۔';
+
+  @override
+  String get writeLetterTitle => 'درخواستی خط لکھیں';
+
+  @override
+  String get writeLetterIntro =>
+      'آپ کی محفوظ پالیسی سے بھرا، پوسٹ ماسٹر کے لیے تیار خط۔';
+
+  @override
+  String get choosePolicy => 'محفوظ پالیسی';
+
+  @override
+  String get noSavedPolicies => 'پہلے میری پالیسیاں میں ایک پالیسی محفوظ کریں۔';
+
+  @override
+  String get toOfficeLabel => 'بنام (ڈاک خانہ / CPC)';
+
+  @override
+  String get yourAddressLabel => 'آپ کا پتہ';
+
+  @override
+  String get phoneLabel => 'فون';
+
+  @override
+  String get placeLabel => 'مقام';
+
+  @override
+  String get nomineeNameLabel => 'نئے نامزد کا نام';
+
+  @override
+  String get nomineeRelationLabel => 'رشتہ';
+
+  @override
+  String get nomineeAgeLabel => 'نامزد کی عمر';
+
+  @override
+  String get newAddressLabel => 'نیا پتہ';
+
+  @override
+  String get bondLost => 'گم ہو گیا';
+
+  @override
+  String get bondDamaged => 'خراب ہو گیا';
+
+  @override
+  String get lapsedFromLabel => 'پریمیم بقایا کب سے';
+
+  @override
+  String get shareAsText => 'متن کے طور پر شیئر کریں';
+
+  @override
+  String get copyText => 'کاپی کریں';
+
+  @override
+  String get copied => 'کاپی ہو گیا';
+
+  @override
+  String get letterEnglishNote =>
+      'خطوط انگریزی میں ہیں — انڈیا پوسٹ خط و کتابت کی عام زبان۔ جمع کرنے سے پہلے دستخط کریں۔';
+
+  @override
+  String get formsOfficialNote =>
+      'یہ ایپ انڈیا پوسٹ نہیں ہے۔ جہاں مقررہ فارم ہو وہاں ہمیشہ انڈیا پوسٹ کا فارم ہی جمع کریں۔';
+
+  @override
+  String get svc_proposal => 'نئی پالیسی کی تجویز';
+
+  @override
+  String get svcDesc_proposal => 'نئی PLI یا RPLI پالیسی کے لیے درخواست';
+
+  @override
+  String get svc_maturity => 'میچورٹی دعویٰ';
+
+  @override
+  String get svcDesc_maturity => 'پالیسی میچور ہونے پر رقم کا دعویٰ';
+
+  @override
+  String get svc_survival => 'بقا کے فائدے کا دعویٰ';
+
+  @override
+  String get svcDesc_survival => 'منی بیک اقساط (سومنگل، گرام پریا)';
+
+  @override
+  String get svc_death => 'وفات کا دعویٰ';
+
+  @override
+  String get svcDesc_death => 'نامزد یا قانونی وارث کا دعویٰ';
+
+  @override
+  String get svc_loan => 'پالیسی قرض';
+
+  @override
+  String get svcDesc_loan => 'اپنی پالیسی پر قرض لیں';
+
+  @override
+  String get svc_surrender => 'سرینڈر';
+
+  @override
+  String get svcDesc_surrender => 'سرینڈر ویلیو کے لیے پالیسی جلد بند کریں';
+
+  @override
+  String get svc_revival => 'بحالی';
+
+  @override
+  String get svcDesc_revival => 'ختم شدہ پالیسی دوبارہ شروع کریں';
+
+  @override
+  String get svc_nomination => 'نامزدگی میں تبدیلی';
+
+  @override
+  String get svcDesc_nomination => 'نامزد شامل کریں یا بدلیں';
+
+  @override
+  String get svc_address => 'پتہ کی تبدیلی';
+
+  @override
+  String get svcDesc_address => 'پالیسی میں اپنا پتہ اپ ڈیٹ کریں';
+
+  @override
+  String get svc_duplicate => 'ڈپلیکیٹ پالیسی بانڈ';
+
+  @override
+  String get svcDesc_duplicate => 'گم شدہ یا خراب بانڈ تبدیل کریں';
+
+  @override
+  String get svc_assignment => 'حقوق کی منتقلی';
+
+  @override
+  String get svcDesc_assignment => 'پالیسی کے حقوق منتقل کریں، مثلاً بینک کو';
+
+  @override
+  String get svc_conversion => 'تبدیلی (سویدھا)';
+
+  @override
+  String get svcDesc_conversion => 'تاحیات بیمہ کو اینڈوومنٹ میں تبدیل کریں';
+
+  @override
+  String get doc_form => 'مقررہ فارم، بھرا اور دستخط شدہ';
+
+  @override
+  String get doc_policyBond => 'اصل پالیسی بانڈ (یا ePLI بانڈ)';
+
+  @override
+  String get doc_receiptBook => 'پریمیم رسید بک یا رسیدیں';
+
+  @override
+  String get doc_idProof => 'شناختی ثبوت (آدھار، پین وغیرہ)';
+
+  @override
+  String get doc_addressProof => 'پتہ کا ثبوت';
+
+  @override
+  String get doc_ageProof => 'عمر کا ثبوت';
+
+  @override
+  String get doc_bankDetails => 'بینک پاس بک یا منسوخ چیک';
+
+  @override
+  String get doc_photo => 'پاسپورٹ سائز تصویر';
+
+  @override
+  String get doc_deathCertificate => 'وفات کا سرٹیفکیٹ';
+
+  @override
+  String get doc_claimantId => 'دعویدار کی شناخت اور رشتے کا ثبوت';
+
+  @override
+  String get doc_medical => 'طبی سرٹیفکیٹ / صحت کا اقرار نامہ (طلب کرنے پر)';
+
+  @override
+  String get doc_eligibility => 'اہلیت کا ثبوت (ملازمت، ڈگری یا دیہی رہائش)';
+
+  @override
+  String get doc_nomineeDetails => 'نامزد کا نام، عمر اور رشتہ';
+
+  @override
+  String get doc_indemnity => 'ضمانتی بانڈ (طلب کرنے پر)';
 }

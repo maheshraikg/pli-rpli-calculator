@@ -122,4 +122,37 @@ void main() {
     await pumpApp(tester, locale: const Locale('hi'), location: '/premium');
     await _shot(tester, '10_premium_hindi_full', height: 5000);
   });
+
+  SavedPolicy demoPolicy() => SavedPolicy(
+        id: '1', holderName: 'Lakshmi Devi', policyNumber: 'PLI-KA-123456', planId: 'pli_santosh',
+        sumAssured: 300000, commencement: DateTime(2025, 6, 1), entryAge: 32, column: 58,
+        frequency: PremiumFrequency.monthly, premiumRupees: 1180, reminders: true,
+      );
+
+  testWidgets('11 forms list', (tester) async {
+    await pumpApp(tester, location: '/forms');
+    await _shot(tester, '11_forms_full', height: 4700);
+  });
+
+  testWidgets('12 form detail', (tester) async {
+    await pumpApp(tester, location: '/forms/maturity');
+    await _shot(tester, '12_form_maturity_full', height: 3300);
+  });
+
+  testWidgets('13 letter', (tester) async {
+    final store = MemoryPolicyStore();
+    await store.put(demoPolicy());
+    await pumpApp(tester, location: '/forms/loan/letter', policies: store);
+    await tester.enterText(find.widgetWithText(TextField, 'To (Post Office / CPC)'), 'Mysuru Head Post Office');
+    await tester.enterText(find.widgetWithText(TextField, 'Your address'), '12, MG Road, Mysuru 570001');
+    await tester.enterText(find.widgetWithText(TextField, 'Phone'), '98450 00000');
+    await tester.enterText(find.widgetWithText(TextField, 'Place'), 'Mysuru');
+    await tester.enterText(find.widgetWithText(TextField, 'Loan amount (₹)'), '50000');
+    await _shot(tester, '13_letter_loan_full', height: 6400);
+  });
+
+  testWidgets('14 forms kannada', (tester) async {
+    await pumpApp(tester, locale: const Locale('kn'), location: '/forms');
+    await _shot(tester, '14_forms_kannada');
+  });
 }

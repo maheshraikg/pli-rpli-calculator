@@ -12,6 +12,9 @@ Independent calculator — not an official India Post app.
 - Policy tools: loan interest, paid-up value, revival (arrears + default fee), advance rebate
 - My Policies (stored on the phone): accrued bonus, due dates, local reminders
 - Bilingual quotation shared as PDF or image (WhatsApp etc.)
+- Forms & letters: 12 PLI/RPLI requests with document checklists, a link to India Post's forms,
+  a policy details sheet, and request letters (loan, surrender, revival, nomination, address,
+  duplicate bond, conversion) filled from a saved policy; official PDFs can be bundled in `assets/forms/`
 - 13 languages; optional verified over-the-air rate updates
 
 See `docs/RELEASE.md` before publishing and `docs/PRIVACY_POLICY.md` for the store listing.

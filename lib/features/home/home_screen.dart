@@ -69,6 +69,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           (Icons.folder_shared_rounded, l.tileMyPolicies, l.descPolicies, '/policies', _purple),
           (Icons.build_circle_rounded, l.tileTools, l.descTools, '/tools', _amber),
           (Icons.picture_as_pdf_rounded, l.tileQuotation, l.descQuotation, '/quotation', kAccentRed),
+          (Icons.assignment_rounded, l.tileForms, l.descForms, '/forms', _indigo),
         ],
       ),
       (
@@ -109,7 +110,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            for (final (k, t) in tiles.sublist(i, i + 2 > tiles.length ? tiles.length : i + 2).indexed) ...[
+                            for (final (k, t)
+                                in tiles.sublist(i, i + 2 > tiles.length ? tiles.length : i + 2).indexed) ...[
                               if (k == 1) const SizedBox(width: 12),
                               Expanded(
                                 child: _HomeTile(
@@ -121,7 +123,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                 ),
                               ),
                             ],
-                            if (i + 1 >= tiles.length) ...[const SizedBox(width: 12), const Expanded(child: SizedBox())],
+                            if (i + 1 >= tiles.length) ...[
+                              const SizedBox(width: 12),
+                              const Expanded(child: SizedBox()),
+                            ],
                           ],
                         ),
                       ),

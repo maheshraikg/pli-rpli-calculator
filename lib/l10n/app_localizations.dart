@@ -1793,6 +1793,426 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Cover and payment'**
   String get sectionCoverTitle;
+
+  /// No description provided for @tileForms.
+  ///
+  /// In en, this message translates to:
+  /// **'Forms'**
+  String get tileForms;
+
+  /// No description provided for @descForms.
+  ///
+  /// In en, this message translates to:
+  /// **'Forms, checklists, letters'**
+  String get descForms;
+
+  /// No description provided for @formsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Forms and letters'**
+  String get formsTitle;
+
+  /// No description provided for @formsIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'What each PLI / RPLI request needs, where to get the form, and ready-made request letters.'**
+  String get formsIntro;
+
+  /// No description provided for @formsVerifyNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Document lists are a guide and can change. Confirm with your Post Office before submitting.'**
+  String get formsVerifyNote;
+
+  /// No description provided for @whereToGetTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Where to get the form'**
+  String get whereToGetTitle;
+
+  /// No description provided for @whereToGetBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Free at any Post Office or CPC, or download it from the India Post PLI website.'**
+  String get whereToGetBody;
+
+  /// No description provided for @documentsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Documents to keep ready'**
+  String get documentsTitle;
+
+  /// No description provided for @openOfficialForm.
+  ///
+  /// In en, this message translates to:
+  /// **'Open official form'**
+  String get openOfficialForm;
+
+  /// No description provided for @getFromIndiaPost.
+  ///
+  /// In en, this message translates to:
+  /// **'Get the form from India Post'**
+  String get getFromIndiaPost;
+
+  /// No description provided for @detailsSheetTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Policy details sheet'**
+  String get detailsSheetTitle;
+
+  /// No description provided for @detailsSheetIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Your saved policy details in one place, to copy onto the official form.'**
+  String get detailsSheetIntro;
+
+  /// No description provided for @writeLetterTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Write a request letter'**
+  String get writeLetterTitle;
+
+  /// No description provided for @writeLetterIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'A ready letter to the Postmaster, filled from your saved policy.'**
+  String get writeLetterIntro;
+
+  /// No description provided for @choosePolicy.
+  ///
+  /// In en, this message translates to:
+  /// **'Saved policy'**
+  String get choosePolicy;
+
+  /// No description provided for @noSavedPolicies.
+  ///
+  /// In en, this message translates to:
+  /// **'Save a policy under My Policies first.'**
+  String get noSavedPolicies;
+
+  /// No description provided for @toOfficeLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'To (Post Office / CPC)'**
+  String get toOfficeLabel;
+
+  /// No description provided for @yourAddressLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Your address'**
+  String get yourAddressLabel;
+
+  /// No description provided for @phoneLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone'**
+  String get phoneLabel;
+
+  /// No description provided for @placeLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Place'**
+  String get placeLabel;
+
+  /// No description provided for @nomineeNameLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'New nominee name'**
+  String get nomineeNameLabel;
+
+  /// No description provided for @nomineeRelationLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Relationship'**
+  String get nomineeRelationLabel;
+
+  /// No description provided for @nomineeAgeLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Nominee age'**
+  String get nomineeAgeLabel;
+
+  /// No description provided for @newAddressLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'New address'**
+  String get newAddressLabel;
+
+  /// No description provided for @bondLost.
+  ///
+  /// In en, this message translates to:
+  /// **'Lost'**
+  String get bondLost;
+
+  /// No description provided for @bondDamaged.
+  ///
+  /// In en, this message translates to:
+  /// **'Damaged'**
+  String get bondDamaged;
+
+  /// No description provided for @lapsedFromLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Premiums unpaid since'**
+  String get lapsedFromLabel;
+
+  /// No description provided for @shareAsText.
+  ///
+  /// In en, this message translates to:
+  /// **'Share as text'**
+  String get shareAsText;
+
+  /// No description provided for @copyText.
+  ///
+  /// In en, this message translates to:
+  /// **'Copy'**
+  String get copyText;
+
+  /// No description provided for @copied.
+  ///
+  /// In en, this message translates to:
+  /// **'Copied'**
+  String get copied;
+
+  /// No description provided for @letterEnglishNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Letters are written in English, the usual language for India Post correspondence. Sign before submitting.'**
+  String get letterEnglishNote;
+
+  /// No description provided for @formsOfficialNote.
+  ///
+  /// In en, this message translates to:
+  /// **'This app is not India Post. Always submit India Post\'s own prescribed form where one exists.'**
+  String get formsOfficialNote;
+
+  /// No description provided for @svc_proposal.
+  ///
+  /// In en, this message translates to:
+  /// **'New policy proposal'**
+  String get svc_proposal;
+
+  /// No description provided for @svcDesc_proposal.
+  ///
+  /// In en, this message translates to:
+  /// **'Apply for a new PLI or RPLI policy'**
+  String get svcDesc_proposal;
+
+  /// No description provided for @svc_maturity.
+  ///
+  /// In en, this message translates to:
+  /// **'Maturity claim'**
+  String get svc_maturity;
+
+  /// No description provided for @svcDesc_maturity.
+  ///
+  /// In en, this message translates to:
+  /// **'Claim the amount when the policy matures'**
+  String get svcDesc_maturity;
+
+  /// No description provided for @svc_survival.
+  ///
+  /// In en, this message translates to:
+  /// **'Survival benefit claim'**
+  String get svc_survival;
+
+  /// No description provided for @svcDesc_survival.
+  ///
+  /// In en, this message translates to:
+  /// **'Money-back instalments (Sumangal, Gram Priya)'**
+  String get svcDesc_survival;
+
+  /// No description provided for @svc_death.
+  ///
+  /// In en, this message translates to:
+  /// **'Death claim'**
+  String get svc_death;
+
+  /// No description provided for @svcDesc_death.
+  ///
+  /// In en, this message translates to:
+  /// **'Claim by the nominee or legal heir'**
+  String get svcDesc_death;
+
+  /// No description provided for @svc_loan.
+  ///
+  /// In en, this message translates to:
+  /// **'Policy loan'**
+  String get svc_loan;
+
+  /// No description provided for @svcDesc_loan.
+  ///
+  /// In en, this message translates to:
+  /// **'Borrow against your policy'**
+  String get svcDesc_loan;
+
+  /// No description provided for @svc_surrender.
+  ///
+  /// In en, this message translates to:
+  /// **'Surrender'**
+  String get svc_surrender;
+
+  /// No description provided for @svcDesc_surrender.
+  ///
+  /// In en, this message translates to:
+  /// **'Close the policy early for its surrender value'**
+  String get svcDesc_surrender;
+
+  /// No description provided for @svc_revival.
+  ///
+  /// In en, this message translates to:
+  /// **'Revival'**
+  String get svc_revival;
+
+  /// No description provided for @svcDesc_revival.
+  ///
+  /// In en, this message translates to:
+  /// **'Restart a lapsed policy'**
+  String get svcDesc_revival;
+
+  /// No description provided for @svc_nomination.
+  ///
+  /// In en, this message translates to:
+  /// **'Change of nomination'**
+  String get svc_nomination;
+
+  /// No description provided for @svcDesc_nomination.
+  ///
+  /// In en, this message translates to:
+  /// **'Add or change the nominee'**
+  String get svcDesc_nomination;
+
+  /// No description provided for @svc_address.
+  ///
+  /// In en, this message translates to:
+  /// **'Change of address'**
+  String get svc_address;
+
+  /// No description provided for @svcDesc_address.
+  ///
+  /// In en, this message translates to:
+  /// **'Update your address on the policy'**
+  String get svcDesc_address;
+
+  /// No description provided for @svc_duplicate.
+  ///
+  /// In en, this message translates to:
+  /// **'Duplicate policy bond'**
+  String get svc_duplicate;
+
+  /// No description provided for @svcDesc_duplicate.
+  ///
+  /// In en, this message translates to:
+  /// **'Replace a lost or damaged bond'**
+  String get svcDesc_duplicate;
+
+  /// No description provided for @svc_assignment.
+  ///
+  /// In en, this message translates to:
+  /// **'Assignment'**
+  String get svc_assignment;
+
+  /// No description provided for @svcDesc_assignment.
+  ///
+  /// In en, this message translates to:
+  /// **'Transfer policy rights, e.g. to a bank'**
+  String get svcDesc_assignment;
+
+  /// No description provided for @svc_conversion.
+  ///
+  /// In en, this message translates to:
+  /// **'Conversion (Suvidha)'**
+  String get svc_conversion;
+
+  /// No description provided for @svcDesc_conversion.
+  ///
+  /// In en, this message translates to:
+  /// **'Convert whole life to endowment'**
+  String get svcDesc_conversion;
+
+  /// No description provided for @doc_form.
+  ///
+  /// In en, this message translates to:
+  /// **'Prescribed form, filled and signed'**
+  String get doc_form;
+
+  /// No description provided for @doc_policyBond.
+  ///
+  /// In en, this message translates to:
+  /// **'Original policy bond (or ePLI bond)'**
+  String get doc_policyBond;
+
+  /// No description provided for @doc_receiptBook.
+  ///
+  /// In en, this message translates to:
+  /// **'Premium receipt book or receipts'**
+  String get doc_receiptBook;
+
+  /// No description provided for @doc_idProof.
+  ///
+  /// In en, this message translates to:
+  /// **'ID proof (Aadhaar, PAN, etc.)'**
+  String get doc_idProof;
+
+  /// No description provided for @doc_addressProof.
+  ///
+  /// In en, this message translates to:
+  /// **'Address proof'**
+  String get doc_addressProof;
+
+  /// No description provided for @doc_ageProof.
+  ///
+  /// In en, this message translates to:
+  /// **'Age proof'**
+  String get doc_ageProof;
+
+  /// No description provided for @doc_bankDetails.
+  ///
+  /// In en, this message translates to:
+  /// **'Bank passbook or cancelled cheque'**
+  String get doc_bankDetails;
+
+  /// No description provided for @doc_photo.
+  ///
+  /// In en, this message translates to:
+  /// **'Passport-size photograph'**
+  String get doc_photo;
+
+  /// No description provided for @doc_deathCertificate.
+  ///
+  /// In en, this message translates to:
+  /// **'Death certificate'**
+  String get doc_deathCertificate;
+
+  /// No description provided for @doc_claimantId.
+  ///
+  /// In en, this message translates to:
+  /// **'Claimant\'s ID and proof of relationship'**
+  String get doc_claimantId;
+
+  /// No description provided for @doc_medical.
+  ///
+  /// In en, this message translates to:
+  /// **'Medical certificate / health declaration (if asked)'**
+  String get doc_medical;
+
+  /// No description provided for @doc_eligibility.
+  ///
+  /// In en, this message translates to:
+  /// **'Proof of eligibility (job, degree or rural residence)'**
+  String get doc_eligibility;
+
+  /// No description provided for @doc_nomineeDetails.
+  ///
+  /// In en, this message translates to:
+  /// **'Nominee\'s name, age and relationship'**
+  String get doc_nomineeDetails;
+
+  /// No description provided for @doc_indemnity.
+  ///
+  /// In en, this message translates to:
+  /// **'Indemnity bond (if asked)'**
+  String get doc_indemnity;
 }
 
 class _AppLocalizationsDelegate

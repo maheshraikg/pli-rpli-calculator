@@ -1006,4 +1006,222 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get sectionCoverTitle => 'ସୁରକ୍ଷା ଓ ଦେୟ';
+
+  @override
+  String get tileForms => 'ଫର୍ମ';
+
+  @override
+  String get descForms => 'ଫର୍ମ, ତାଲିକା, ଚିଠି';
+
+  @override
+  String get formsTitle => 'ଫର୍ମ ଓ ଚିଠି';
+
+  @override
+  String get formsIntro =>
+      'ପ୍ରତ୍ୟେକ PLI / RPLI ଅନୁରୋଧ ପାଇଁ କ\'ଣ ଦରକାର, ଫର୍ମ କେଉଁଠି ମିଳିବ, ଏବଂ ପ୍ରସ୍ତୁତ ଅନୁରୋଧ ଚିଠି।';
+
+  @override
+  String get formsVerifyNote =>
+      'ଦଲିଲ ତାଲିକା କେବଳ ମାର୍ଗଦର୍ଶିକା, ବଦଳିପାରେ। ଦାଖଲ ପୂର୍ବରୁ ଆପଣଙ୍କ ଡାକଘରରେ ନିଶ୍ଚିତ କରନ୍ତୁ।';
+
+  @override
+  String get whereToGetTitle => 'ଫର୍ମ କେଉଁଠି ମିଳିବ';
+
+  @override
+  String get whereToGetBody =>
+      'ଯେକୌଣସି ଡାକଘର କିମ୍ବା CPCରେ ମାଗଣା, କିମ୍ବା ଭାରତୀୟ ଡାକ PLI ୱେବସାଇଟରୁ ଡାଉନଲୋଡ କରନ୍ତୁ।';
+
+  @override
+  String get documentsTitle => 'ପ୍ରସ୍ତୁତ ରଖିବାକୁ ଥିବା ଦଲିଲ';
+
+  @override
+  String get openOfficialForm => 'ସରକାରୀ ଫର୍ମ ଖୋଲନ୍ତୁ';
+
+  @override
+  String get getFromIndiaPost => 'ଭାରତୀୟ ଡାକରୁ ଫର୍ମ ନିଅନ୍ତୁ';
+
+  @override
+  String get detailsSheetTitle => 'ପଲିସି ବିବରଣୀ ପତ୍ର';
+
+  @override
+  String get detailsSheetIntro =>
+      'ସରକାରୀ ଫର୍ମରେ ଲେଖିବା ପାଇଁ ଆପଣଙ୍କ ସଞ୍ଚିତ ପଲିସିର ବିବରଣୀ ଗୋଟିଏ ସ୍ଥାନରେ।';
+
+  @override
+  String get writeLetterTitle => 'ଅନୁରୋଧ ଚିଠି ଲେଖନ୍ତୁ';
+
+  @override
+  String get writeLetterIntro =>
+      'ଆପଣଙ୍କ ସଞ୍ଚିତ ପଲିସିରୁ ପୂରଣ ହୋଇଥିବା, ପୋଷ୍ଟମାଷ୍ଟରଙ୍କ ପାଇଁ ପ୍ରସ୍ତୁତ ଚିଠି।';
+
+  @override
+  String get choosePolicy => 'ସଞ୍ଚିତ ପଲିସି';
+
+  @override
+  String get noSavedPolicies => 'ପ୍ରଥମେ ମୋ ପଲିସିରେ ଗୋଟିଏ ପଲିସି ସଞ୍ଚୟ କରନ୍ତୁ।';
+
+  @override
+  String get toOfficeLabel => 'ପ୍ରତି (ଡାକଘର / CPC)';
+
+  @override
+  String get yourAddressLabel => 'ଆପଣଙ୍କ ଠିକଣା';
+
+  @override
+  String get phoneLabel => 'ଫୋନ';
+
+  @override
+  String get placeLabel => 'ସ୍ଥାନ';
+
+  @override
+  String get nomineeNameLabel => 'ନୂଆ ନମିନିଙ୍କ ନାମ';
+
+  @override
+  String get nomineeRelationLabel => 'ସମ୍ପର୍କ';
+
+  @override
+  String get nomineeAgeLabel => 'ନମିନିଙ୍କ ବୟସ';
+
+  @override
+  String get newAddressLabel => 'ନୂଆ ଠିକଣା';
+
+  @override
+  String get bondLost => 'ହଜିଯାଇଛି';
+
+  @override
+  String get bondDamaged => 'କ୍ଷତିଗ୍ରସ୍ତ';
+
+  @override
+  String get lapsedFromLabel => 'ପ୍ରିମିୟମ ବକେୟା କେବେଠାରୁ';
+
+  @override
+  String get shareAsText => 'ଲେଖା ଭାବେ ସେୟାର କରନ୍ତୁ';
+
+  @override
+  String get copyText => 'କପି କରନ୍ତୁ';
+
+  @override
+  String get copied => 'କପି ହେଲା';
+
+  @override
+  String get letterEnglishNote =>
+      'ଚିଠିଗୁଡ଼ିକ ଇଂରାଜୀରେ — ଭାରତୀୟ ଡାକ ପତ୍ରାଚାରର ସାଧାରଣ ଭାଷା। ଦାଖଲ ପୂର୍ବରୁ ଦସ୍ତଖତ କରନ୍ତୁ।';
+
+  @override
+  String get formsOfficialNote =>
+      'ଏହି ଆପ୍ ଭାରତୀୟ ଡାକ ନୁହେଁ। ନିର୍ଦ୍ଧାରିତ ଫର୍ମ ଥିଲେ ସର୍ବଦା ଭାରତୀୟ ଡାକର ଫର୍ମ ହିଁ ଦାଖଲ କରନ୍ତୁ।';
+
+  @override
+  String get svc_proposal => 'ନୂଆ ପଲିସି ପ୍ରସ୍ତାବ';
+
+  @override
+  String get svcDesc_proposal => 'ନୂଆ PLI କିମ୍ବା RPLI ପଲିସି ପାଇଁ ଆବେଦନ';
+
+  @override
+  String get svc_maturity => 'ପରିପକ୍ୱତା ଦାବି';
+
+  @override
+  String get svcDesc_maturity => 'ପଲିସି ପରିପକ୍ୱ ହେଲେ ରାଶିର ଦାବି';
+
+  @override
+  String get svc_survival => 'ଜୀବିତ ଲାଭ ଦାବି';
+
+  @override
+  String get svcDesc_survival => 'ମନି-ବ୍ୟାକ କିସ୍ତି (ସୁମଙ୍ଗଳ, ଗ୍ରାମ ପ୍ରିୟା)';
+
+  @override
+  String get svc_death => 'ମୃତ୍ୟୁ ଦାବି';
+
+  @override
+  String get svcDesc_death => 'ନମିନି କିମ୍ବା ଆଇନଗତ ଉତ୍ତରାଧିକାରୀଙ୍କ ଦାବି';
+
+  @override
+  String get svc_loan => 'ପଲିସି ଋଣ';
+
+  @override
+  String get svcDesc_loan => 'ଆପଣଙ୍କ ପଲିସି ଉପରେ ଋଣ ନିଅନ୍ତୁ';
+
+  @override
+  String get svc_surrender => 'ସମର୍ପଣ';
+
+  @override
+  String get svcDesc_surrender => 'ସମର୍ପଣ ମୂଲ୍ୟ ପାଇଁ ପଲିସି ଶୀଘ୍ର ବନ୍ଦ କରନ୍ତୁ';
+
+  @override
+  String get svc_revival => 'ପୁନରୁଜ୍ଜୀବନ';
+
+  @override
+  String get svcDesc_revival => 'ବନ୍ଦ ହୋଇଥିବା ପଲିସି ପୁଣି ଆରମ୍ଭ କରନ୍ତୁ';
+
+  @override
+  String get svc_nomination => 'ନାମାଙ୍କନ ପରିବର୍ତ୍ତନ';
+
+  @override
+  String get svcDesc_nomination => 'ନମିନି ଯୋଡ଼ନ୍ତୁ କିମ୍ବା ବଦଳାନ୍ତୁ';
+
+  @override
+  String get svc_address => 'ଠିକଣା ପରିବର୍ତ୍ତନ';
+
+  @override
+  String get svcDesc_address => 'ପଲିସିରେ ଆପଣଙ୍କ ଠିକଣା ଅପଡେଟ କରନ୍ତୁ';
+
+  @override
+  String get svc_duplicate => 'ନକଲ ପଲିସି ବଣ୍ଡ';
+
+  @override
+  String get svcDesc_duplicate => 'ହଜିଥିବା କିମ୍ବା କ୍ଷତିଗ୍ରସ୍ତ ବଣ୍ଡ ବଦଳାନ୍ତୁ';
+
+  @override
+  String get svc_assignment => 'ସ୍ୱତ୍ୱ ହସ୍ତାନ୍ତର';
+
+  @override
+  String get svcDesc_assignment => 'ପଲିସି ଅଧିକାର ହସ୍ତାନ୍ତର, ଯେପରି ବ୍ୟାଙ୍କକୁ';
+
+  @override
+  String get svc_conversion => 'ପରିବର୍ତ୍ତନ (ସୁବିଧା)';
+
+  @override
+  String get svcDesc_conversion => 'ଆଜୀବନ ବୀମାକୁ ଏଣ୍ଡୋମେଣ୍ଟକୁ ପରିବର୍ତ୍ତନ';
+
+  @override
+  String get doc_form => 'ନିର୍ଦ୍ଧାରିତ ଫର୍ମ, ପୂରଣ ଓ ଦସ୍ତଖତ';
+
+  @override
+  String get doc_policyBond => 'ମୂଳ ପଲିସି ବଣ୍ଡ (କିମ୍ବା ePLI ବଣ୍ଡ)';
+
+  @override
+  String get doc_receiptBook => 'ପ୍ରିମିୟମ ରସିଦ ବହି କିମ୍ବା ରସିଦ';
+
+  @override
+  String get doc_idProof => 'ପରିଚୟ ପ୍ରମାଣ (ଆଧାର, ପାନ ଇତ୍ୟାଦି)';
+
+  @override
+  String get doc_addressProof => 'ଠିକଣା ପ୍ରମାଣ';
+
+  @override
+  String get doc_ageProof => 'ବୟସ ପ୍ରମାଣ';
+
+  @override
+  String get doc_bankDetails => 'ବ୍ୟାଙ୍କ ପାସବୁକ କିମ୍ବା ବାତିଲ ଚେକ';
+
+  @override
+  String get doc_photo => 'ପାସପୋର୍ଟ ଆକାରର ଫଟୋ';
+
+  @override
+  String get doc_deathCertificate => 'ମୃତ୍ୟୁ ପ୍ରମାଣପତ୍ର';
+
+  @override
+  String get doc_claimantId => 'ଦାବିଦାରଙ୍କ ପରିଚୟ ଓ ସମ୍ପର୍କ ପ୍ରମାଣ';
+
+  @override
+  String get doc_medical => 'ଡାକ୍ତରୀ ପ୍ରମାଣପତ୍ର / ସ୍ୱାସ୍ଥ୍ୟ ଘୋଷଣା (ମାଗିଲେ)';
+
+  @override
+  String get doc_eligibility =>
+      'ଯୋଗ୍ୟତା ପ୍ରମାଣ (ଚାକିରି, ଡିଗ୍ରୀ କିମ୍ବା ଗ୍ରାମୀଣ ବାସ)';
+
+  @override
+  String get doc_nomineeDetails => 'ନମିନିଙ୍କ ନାମ, ବୟସ ଓ ସମ୍ପର୍କ';
+
+  @override
+  String get doc_indemnity => 'କ୍ଷତିପୂରଣ ବଣ୍ଡ (ମାଗିଲେ)';
 }

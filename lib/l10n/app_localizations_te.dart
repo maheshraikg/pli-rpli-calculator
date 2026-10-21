@@ -1008,4 +1008,223 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get sectionCoverTitle => 'రక్షణ మరియు చెల్లింపు';
+
+  @override
+  String get tileForms => 'ఫారాలు';
+
+  @override
+  String get descForms => 'ఫారాలు, జాబితాలు, లేఖలు';
+
+  @override
+  String get formsTitle => 'ఫారాలు మరియు లేఖలు';
+
+  @override
+  String get formsIntro =>
+      'ప్రతి PLI / RPLI అభ్యర్థనకు ఏమి కావాలి, ఫారం ఎక్కడ దొరుకుతుంది, మరియు సిద్ధమైన అభ్యర్థన లేఖలు.';
+
+  @override
+  String get formsVerifyNote =>
+      'పత్రాల జాబితా మార్గదర్శకం మాత్రమే, మారవచ్చు. సమర్పించే ముందు మీ తపాలా కార్యాలయంలో నిర్ధారించుకోండి.';
+
+  @override
+  String get whereToGetTitle => 'ఫారం ఎక్కడ దొరుకుతుంది';
+
+  @override
+  String get whereToGetBody =>
+      'ఏ తపాలా కార్యాలయం లేదా CPCలోనైనా ఉచితం, లేదా భారత తపాలా PLI వెబ్‌సైట్ నుండి డౌన్‌లోడ్ చేయండి.';
+
+  @override
+  String get documentsTitle => 'సిద్ధంగా ఉంచాల్సిన పత్రాలు';
+
+  @override
+  String get openOfficialForm => 'అధికారిక ఫారం తెరవండి';
+
+  @override
+  String get getFromIndiaPost => 'భారత తపాలా నుండి ఫారం పొందండి';
+
+  @override
+  String get detailsSheetTitle => 'పాలసీ వివరాల పత్రం';
+
+  @override
+  String get detailsSheetIntro =>
+      'అధికారిక ఫారంలో రాయడానికి మీ సేవ్ చేసిన పాలసీ వివరాలు ఒకే చోట.';
+
+  @override
+  String get writeLetterTitle => 'అభ్యర్థన లేఖ రాయండి';
+
+  @override
+  String get writeLetterIntro =>
+      'మీ సేవ్ చేసిన పాలసీ నుండి నింపిన, పోస్ట్‌మాస్టర్‌కు సిద్ధమైన లేఖ.';
+
+  @override
+  String get choosePolicy => 'సేవ్ చేసిన పాలసీ';
+
+  @override
+  String get noSavedPolicies => 'ముందుగా నా పాలసీలలో ఒక పాలసీని సేవ్ చేయండి.';
+
+  @override
+  String get toOfficeLabel => 'వీరికి (తపాలా కార్యాలయం / CPC)';
+
+  @override
+  String get yourAddressLabel => 'మీ చిరునామా';
+
+  @override
+  String get phoneLabel => 'ఫోన్';
+
+  @override
+  String get placeLabel => 'స్థలం';
+
+  @override
+  String get nomineeNameLabel => 'కొత్త నామినీ పేరు';
+
+  @override
+  String get nomineeRelationLabel => 'సంబంధం';
+
+  @override
+  String get nomineeAgeLabel => 'నామినీ వయస్సు';
+
+  @override
+  String get newAddressLabel => 'కొత్త చిరునామా';
+
+  @override
+  String get bondLost => 'పోయింది';
+
+  @override
+  String get bondDamaged => 'పాడైంది';
+
+  @override
+  String get lapsedFromLabel => 'ప్రీమియం బకాయి ఎప్పటి నుండి';
+
+  @override
+  String get shareAsText => 'టెక్స్ట్‌గా షేర్ చేయి';
+
+  @override
+  String get copyText => 'కాపీ చేయి';
+
+  @override
+  String get copied => 'కాపీ అయింది';
+
+  @override
+  String get letterEnglishNote =>
+      'లేఖలు ఆంగ్లంలో ఉంటాయి — భారత తపాలా ఉత్తరప్రత్యుత్తరాల సాధారణ భాష. సమర్పించే ముందు సంతకం చేయండి.';
+
+  @override
+  String get formsOfficialNote =>
+      'ఈ యాప్ భారత తపాలా కాదు. నిర్దేశిత ఫారం ఉన్నచోట ఎల్లప్పుడూ భారత తపాలా ఫారాన్నే సమర్పించండి.';
+
+  @override
+  String get svc_proposal => 'కొత్త పాలసీ ప్రతిపాదన';
+
+  @override
+  String get svcDesc_proposal => 'కొత్త PLI లేదా RPLI పాలసీకి దరఖాస్తు';
+
+  @override
+  String get svc_maturity => 'మెచ్యూరిటీ క్లెయిమ్';
+
+  @override
+  String get svcDesc_maturity => 'పాలసీ మెచ్యూర్ అయినప్పుడు మొత్తం క్లెయిమ్';
+
+  @override
+  String get svc_survival => 'సర్వైవల్ ప్రయోజన క్లెయిమ్';
+
+  @override
+  String get svcDesc_survival => 'మనీ-బ్యాక్ వాయిదాలు (సుమంగళ్, గ్రామ ప్రియ)';
+
+  @override
+  String get svc_death => 'మరణ క్లెయిమ్';
+
+  @override
+  String get svcDesc_death => 'నామినీ లేదా చట్టబద్ధ వారసుడి క్లెయిమ్';
+
+  @override
+  String get svc_loan => 'పాలసీ రుణం';
+
+  @override
+  String get svcDesc_loan => 'మీ పాలసీపై రుణం తీసుకోండి';
+
+  @override
+  String get svc_surrender => 'సరెండర్';
+
+  @override
+  String get svcDesc_surrender => 'సరెండర్ విలువ కోసం పాలసీని ముందే మూసివేయండి';
+
+  @override
+  String get svc_revival => 'పునరుద్ధరణ';
+
+  @override
+  String get svcDesc_revival => 'ఆగిపోయిన పాలసీని మళ్లీ ప్రారంభించండి';
+
+  @override
+  String get svc_nomination => 'నామినేషన్ మార్పు';
+
+  @override
+  String get svcDesc_nomination => 'నామినీని జోడించండి లేదా మార్చండి';
+
+  @override
+  String get svc_address => 'చిరునామా మార్పు';
+
+  @override
+  String get svcDesc_address => 'పాలసీలో మీ చిరునామాను నవీకరించండి';
+
+  @override
+  String get svc_duplicate => 'డూప్లికేట్ పాలసీ బాండ్';
+
+  @override
+  String get svcDesc_duplicate => 'పోయిన లేదా పాడైన బాండ్‌ను మార్చండి';
+
+  @override
+  String get svc_assignment => 'హక్కు బదిలీ';
+
+  @override
+  String get svcDesc_assignment =>
+      'పాలసీ హక్కులను బదిలీ చేయండి, ఉదా. బ్యాంకుకు';
+
+  @override
+  String get svc_conversion => 'మార్పిడి (సువిధ)';
+
+  @override
+  String get svcDesc_conversion => 'జీవితకాల బీమాను ఎండోమెంట్‌గా మార్చండి';
+
+  @override
+  String get doc_form => 'నిర్దేశిత ఫారం, నింపి సంతకం చేసినది';
+
+  @override
+  String get doc_policyBond => 'అసలు పాలసీ బాండ్ (లేదా ePLI బాండ్)';
+
+  @override
+  String get doc_receiptBook => 'ప్రీమియం రసీదు పుస్తకం లేదా రసీదులు';
+
+  @override
+  String get doc_idProof => 'గుర్తింపు రుజువు (ఆధార్, పాన్ మొదలైనవి)';
+
+  @override
+  String get doc_addressProof => 'చిరునామా రుజువు';
+
+  @override
+  String get doc_ageProof => 'వయస్సు రుజువు';
+
+  @override
+  String get doc_bankDetails => 'బ్యాంక్ పాస్‌బుక్ లేదా రద్దు చేసిన చెక్';
+
+  @override
+  String get doc_photo => 'పాస్‌పోర్ట్ సైజు ఫోటో';
+
+  @override
+  String get doc_deathCertificate => 'మరణ ధృవపత్రం';
+
+  @override
+  String get doc_claimantId => 'క్లెయిమ్‌దారు గుర్తింపు మరియు సంబంధ రుజువు';
+
+  @override
+  String get doc_medical => 'వైద్య ధృవపత్రం / ఆరోగ్య ప్రకటన (అడిగితే)';
+
+  @override
+  String get doc_eligibility =>
+      'అర్హత రుజువు (ఉద్యోగం, డిగ్రీ లేదా గ్రామీణ నివాసం)';
+
+  @override
+  String get doc_nomineeDetails => 'నామినీ పేరు, వయస్సు మరియు సంబంధం';
+
+  @override
+  String get doc_indemnity => 'నష్టపరిహార బాండ్ (అడిగితే)';
 }

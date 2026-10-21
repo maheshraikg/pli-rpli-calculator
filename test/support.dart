@@ -7,6 +7,7 @@ import 'package:pli_engine/pli_engine.dart';
 import 'package:pli_sahayak/app.dart';
 import 'package:pli_sahayak/data/data_repository.dart';
 import 'package:pli_sahayak/data/storage.dart';
+import 'package:pli_sahayak/features/forms/forms_data.dart';
 import 'package:pli_sahayak/features/maturity/maturity_state.dart';
 
 /// Same files the app bundles, read from disk so tests are synchronous.
@@ -38,6 +39,7 @@ Future<ProviderContainer> pumpApp(
       todayProvider.overrideWithValue(DateTime(2026, 11, 1)),
       settingsStoreProvider.overrideWithValue(settings ?? MemorySettingsStore(disclaimerAccepted: true)),
       policyStoreProvider.overrideWithValue(policies ?? MemoryPolicyStore()),
+      formsCatalogProvider.overrideWith((ref) => bundledForms()),
     ],
     child: PliRpliApp(locale: locale, initialLocation: location),
   ));
@@ -56,3 +58,5 @@ Future<void> scrollTo(WidgetTester tester, Finder finder) => tester.scrollUntilV
           )
           .first,
     );
+
+FormsCatalog bundledForms() => FormsCatalog.parse(File('assets/data/forms.json').readAsStringSync());

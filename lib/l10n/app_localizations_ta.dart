@@ -1011,4 +1011,228 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get sectionCoverTitle => 'பாதுகாப்பு மற்றும் செலுத்தல்';
+
+  @override
+  String get tileForms => 'படிவங்கள்';
+
+  @override
+  String get descForms => 'படிவங்கள், பட்டியல்கள், கடிதங்கள்';
+
+  @override
+  String get formsTitle => 'படிவங்கள் மற்றும் கடிதங்கள்';
+
+  @override
+  String get formsIntro =>
+      'ஒவ்வொரு PLI / RPLI கோரிக்கைக்கும் என்ன தேவை, படிவம் எங்கு கிடைக்கும், மற்றும் தயார் கோரிக்கைக் கடிதங்கள்.';
+
+  @override
+  String get formsVerifyNote =>
+      'ஆவணப் பட்டியல் வழிகாட்டி மட்டுமே, மாறலாம். சமர்ப்பிக்கும் முன் உங்கள் அஞ்சலகத்தில் உறுதிசெய்யவும்.';
+
+  @override
+  String get whereToGetTitle => 'படிவம் எங்கு கிடைக்கும்';
+
+  @override
+  String get whereToGetBody =>
+      'எந்த அஞ்சலகம் அல்லது CPC-யிலும் இலவசம், அல்லது இந்திய அஞ்சல் PLI இணையதளத்திலிருந்து பதிவிறக்கவும்.';
+
+  @override
+  String get documentsTitle => 'தயாராக வைக்க வேண்டிய ஆவணங்கள்';
+
+  @override
+  String get openOfficialForm => 'அதிகாரப்பூர்வ படிவத்தைத் திற';
+
+  @override
+  String get getFromIndiaPost => 'இந்திய அஞ்சலிலிருந்து படிவம் பெறு';
+
+  @override
+  String get detailsSheetTitle => 'பாலிசி விவரத் தாள்';
+
+  @override
+  String get detailsSheetIntro =>
+      'அதிகாரப்பூர்வ படிவத்தில் எழுத உங்கள் சேமித்த பாலிசி விவரங்கள் ஒரே இடத்தில்.';
+
+  @override
+  String get writeLetterTitle => 'கோரிக்கைக் கடிதம் எழுது';
+
+  @override
+  String get writeLetterIntro =>
+      'உங்கள் சேமித்த பாலிசியிலிருந்து நிரப்பிய, அஞ்சல் அதிகாரிக்குத் தயார் கடிதம்.';
+
+  @override
+  String get choosePolicy => 'சேமித்த பாலிசி';
+
+  @override
+  String get noSavedPolicies =>
+      'முதலில் எனது பாலிசிகளில் ஒரு பாலிசியைச் சேமிக்கவும்.';
+
+  @override
+  String get toOfficeLabel => 'பெறுநர் (அஞ்சலகம் / CPC)';
+
+  @override
+  String get yourAddressLabel => 'உங்கள் முகவரி';
+
+  @override
+  String get phoneLabel => 'தொலைபேசி';
+
+  @override
+  String get placeLabel => 'இடம்';
+
+  @override
+  String get nomineeNameLabel => 'புதிய நியமனதாரர் பெயர்';
+
+  @override
+  String get nomineeRelationLabel => 'உறவு';
+
+  @override
+  String get nomineeAgeLabel => 'நியமனதாரர் வயது';
+
+  @override
+  String get newAddressLabel => 'புதிய முகவரி';
+
+  @override
+  String get bondLost => 'தொலைந்தது';
+
+  @override
+  String get bondDamaged => 'சேதமடைந்தது';
+
+  @override
+  String get lapsedFromLabel => 'பிரீமியம் நிலுவை எப்போதிருந்து';
+
+  @override
+  String get shareAsText => 'உரையாகப் பகிர்';
+
+  @override
+  String get copyText => 'நகலெடு';
+
+  @override
+  String get copied => 'நகலெடுக்கப்பட்டது';
+
+  @override
+  String get letterEnglishNote =>
+      'கடிதங்கள் ஆங்கிலத்தில் — இந்திய அஞ்சல் கடிதப் போக்குவரத்தின் வழக்கமான மொழி. சமர்ப்பிக்கும் முன் கையெழுத்திடவும்.';
+
+  @override
+  String get formsOfficialNote =>
+      'இந்தச் செயலி இந்திய அஞ்சல் அல்ல. நிர்ணயிக்கப்பட்ட படிவம் இருந்தால் எப்போதும் இந்திய அஞ்சலின் படிவத்தையே சமர்ப்பிக்கவும்.';
+
+  @override
+  String get svc_proposal => 'புதிய பாலிசி முன்மொழிவு';
+
+  @override
+  String get svcDesc_proposal => 'புதிய PLI அல்லது RPLI பாலிசிக்கு விண்ணப்பம்';
+
+  @override
+  String get svc_maturity => 'முதிர்வுக் கோரிக்கை';
+
+  @override
+  String get svcDesc_maturity => 'பாலிசி முதிர்ந்ததும் தொகையைக் கோருதல்';
+
+  @override
+  String get svc_survival => 'உயிர்வாழ் பலன் கோரிக்கை';
+
+  @override
+  String get svcDesc_survival =>
+      'பணம் திரும்பத் தவணைகள் (சுமங்கல், கிராம பிரியா)';
+
+  @override
+  String get svc_death => 'இறப்புக் கோரிக்கை';
+
+  @override
+  String get svcDesc_death => 'நியமனதாரர் அல்லது சட்ட வாரிசின் கோரிக்கை';
+
+  @override
+  String get svc_loan => 'பாலிசி கடன்';
+
+  @override
+  String get svcDesc_loan => 'உங்கள் பாலிசி மீது கடன் பெறுங்கள்';
+
+  @override
+  String get svc_surrender => 'சரண்டர்';
+
+  @override
+  String get svcDesc_surrender =>
+      'சரண்டர் மதிப்புக்காக பாலிசியை முன்கூட்டியே முடிக்கவும்';
+
+  @override
+  String get svc_revival => 'புதுப்பித்தல்';
+
+  @override
+  String get svcDesc_revival => 'காலாவதியான பாலிசியை மீண்டும் தொடங்கவும்';
+
+  @override
+  String get svc_nomination => 'நியமன மாற்றம்';
+
+  @override
+  String get svcDesc_nomination => 'நியமனதாரரைச் சேர்க்க அல்லது மாற்ற';
+
+  @override
+  String get svc_address => 'முகவரி மாற்றம்';
+
+  @override
+  String get svcDesc_address => 'பாலிசியில் உங்கள் முகவரியைப் புதுப்பிக்கவும்';
+
+  @override
+  String get svc_duplicate => 'நகல் பாலிசி பத்திரம்';
+
+  @override
+  String get svcDesc_duplicate =>
+      'தொலைந்த அல்லது சேதமடைந்த பத்திரத்தை மாற்றவும்';
+
+  @override
+  String get svc_assignment => 'உரிமை மாற்றம்';
+
+  @override
+  String get svcDesc_assignment => 'பாலிசி உரிமைகளை மாற்றவும், எ.கா. வங்கிக்கு';
+
+  @override
+  String get svc_conversion => 'மாற்றம் (சுவிதா)';
+
+  @override
+  String get svcDesc_conversion =>
+      'முழு ஆயுள் காப்பீட்டை எண்டோமென்டாக மாற்றவும்';
+
+  @override
+  String get doc_form => 'நிர்ணயிக்கப்பட்ட படிவம், நிரப்பி கையெழுத்திட்டது';
+
+  @override
+  String get doc_policyBond => 'அசல் பாலிசி பத்திரம் (அல்லது ePLI பத்திரம்)';
+
+  @override
+  String get doc_receiptBook => 'பிரீமியம் ரசீது புத்தகம் அல்லது ரசீதுகள்';
+
+  @override
+  String get doc_idProof => 'அடையாளச் சான்று (ஆதார், பான் போன்றவை)';
+
+  @override
+  String get doc_addressProof => 'முகவரிச் சான்று';
+
+  @override
+  String get doc_ageProof => 'வயதுச் சான்று';
+
+  @override
+  String get doc_bankDetails => 'வங்கிப் புத்தகம் அல்லது ரத்து செய்த காசோலை';
+
+  @override
+  String get doc_photo => 'பாஸ்போர்ட் அளவு புகைப்படம்';
+
+  @override
+  String get doc_deathCertificate => 'இறப்புச் சான்றிதழ்';
+
+  @override
+  String get doc_claimantId => 'கோருபவரின் அடையாளம் மற்றும் உறவுச் சான்று';
+
+  @override
+  String get doc_medical =>
+      'மருத்துவச் சான்றிதழ் / உடல்நல அறிவிப்பு (கேட்டால்)';
+
+  @override
+  String get doc_eligibility =>
+      'தகுதிச் சான்று (வேலை, பட்டம் அல்லது கிராமப்புற வசிப்பு)';
+
+  @override
+  String get doc_nomineeDetails => 'நியமனதாரரின் பெயர், வயது மற்றும் உறவு';
+
+  @override
+  String get doc_indemnity => 'இழப்பீட்டுப் பத்திரம் (கேட்டால்)';
 }

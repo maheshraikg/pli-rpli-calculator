@@ -9,6 +9,8 @@
    existing-policy bonus in My Policies).
 4. Add 5–10 official worked examples as engine tests.
 5. Native-speaker review of every `lib/l10n/app_*.arb`.
+5a. Confirm each document checklist in `assets/data/forms.json` (then set `"verified": true`),
+    and add unmodified official form PDFs to `assets/forms/` with their `pdfAsset` paths.
 6. Run the checks:
    ```
    flutter analyze && flutter test

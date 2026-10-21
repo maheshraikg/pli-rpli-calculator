@@ -45,6 +45,11 @@ class PolicyDetailScreen extends ConsumerWidget {
       actions: [
         if (policy != null) ...[
           IconButton(
+            tooltip: l.formsTitle,
+            icon: const Icon(Icons.assignment_rounded),
+            onPressed: () => context.push('/forms'),
+          ),
+          IconButton(
             tooltip: l.editPolicy,
             icon: const Icon(Icons.edit),
             onPressed: () => context.push('/policies/$id/edit'),

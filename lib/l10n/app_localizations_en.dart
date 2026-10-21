@@ -1006,4 +1006,225 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get sectionCoverTitle => 'Cover and payment';
+
+  @override
+  String get tileForms => 'Forms';
+
+  @override
+  String get descForms => 'Forms, checklists, letters';
+
+  @override
+  String get formsTitle => 'Forms and letters';
+
+  @override
+  String get formsIntro =>
+      'What each PLI / RPLI request needs, where to get the form, and ready-made request letters.';
+
+  @override
+  String get formsVerifyNote =>
+      'Document lists are a guide and can change. Confirm with your Post Office before submitting.';
+
+  @override
+  String get whereToGetTitle => 'Where to get the form';
+
+  @override
+  String get whereToGetBody =>
+      'Free at any Post Office or CPC, or download it from the India Post PLI website.';
+
+  @override
+  String get documentsTitle => 'Documents to keep ready';
+
+  @override
+  String get openOfficialForm => 'Open official form';
+
+  @override
+  String get getFromIndiaPost => 'Get the form from India Post';
+
+  @override
+  String get detailsSheetTitle => 'Policy details sheet';
+
+  @override
+  String get detailsSheetIntro =>
+      'Your saved policy details in one place, to copy onto the official form.';
+
+  @override
+  String get writeLetterTitle => 'Write a request letter';
+
+  @override
+  String get writeLetterIntro =>
+      'A ready letter to the Postmaster, filled from your saved policy.';
+
+  @override
+  String get choosePolicy => 'Saved policy';
+
+  @override
+  String get noSavedPolicies => 'Save a policy under My Policies first.';
+
+  @override
+  String get toOfficeLabel => 'To (Post Office / CPC)';
+
+  @override
+  String get yourAddressLabel => 'Your address';
+
+  @override
+  String get phoneLabel => 'Phone';
+
+  @override
+  String get placeLabel => 'Place';
+
+  @override
+  String get nomineeNameLabel => 'New nominee name';
+
+  @override
+  String get nomineeRelationLabel => 'Relationship';
+
+  @override
+  String get nomineeAgeLabel => 'Nominee age';
+
+  @override
+  String get newAddressLabel => 'New address';
+
+  @override
+  String get bondLost => 'Lost';
+
+  @override
+  String get bondDamaged => 'Damaged';
+
+  @override
+  String get lapsedFromLabel => 'Premiums unpaid since';
+
+  @override
+  String get shareAsText => 'Share as text';
+
+  @override
+  String get copyText => 'Copy';
+
+  @override
+  String get copied => 'Copied';
+
+  @override
+  String get letterEnglishNote =>
+      'Letters are written in English, the usual language for India Post correspondence. Sign before submitting.';
+
+  @override
+  String get formsOfficialNote =>
+      'This app is not India Post. Always submit India Post\'s own prescribed form where one exists.';
+
+  @override
+  String get svc_proposal => 'New policy proposal';
+
+  @override
+  String get svcDesc_proposal => 'Apply for a new PLI or RPLI policy';
+
+  @override
+  String get svc_maturity => 'Maturity claim';
+
+  @override
+  String get svcDesc_maturity => 'Claim the amount when the policy matures';
+
+  @override
+  String get svc_survival => 'Survival benefit claim';
+
+  @override
+  String get svcDesc_survival =>
+      'Money-back instalments (Sumangal, Gram Priya)';
+
+  @override
+  String get svc_death => 'Death claim';
+
+  @override
+  String get svcDesc_death => 'Claim by the nominee or legal heir';
+
+  @override
+  String get svc_loan => 'Policy loan';
+
+  @override
+  String get svcDesc_loan => 'Borrow against your policy';
+
+  @override
+  String get svc_surrender => 'Surrender';
+
+  @override
+  String get svcDesc_surrender =>
+      'Close the policy early for its surrender value';
+
+  @override
+  String get svc_revival => 'Revival';
+
+  @override
+  String get svcDesc_revival => 'Restart a lapsed policy';
+
+  @override
+  String get svc_nomination => 'Change of nomination';
+
+  @override
+  String get svcDesc_nomination => 'Add or change the nominee';
+
+  @override
+  String get svc_address => 'Change of address';
+
+  @override
+  String get svcDesc_address => 'Update your address on the policy';
+
+  @override
+  String get svc_duplicate => 'Duplicate policy bond';
+
+  @override
+  String get svcDesc_duplicate => 'Replace a lost or damaged bond';
+
+  @override
+  String get svc_assignment => 'Assignment';
+
+  @override
+  String get svcDesc_assignment => 'Transfer policy rights, e.g. to a bank';
+
+  @override
+  String get svc_conversion => 'Conversion (Suvidha)';
+
+  @override
+  String get svcDesc_conversion => 'Convert whole life to endowment';
+
+  @override
+  String get doc_form => 'Prescribed form, filled and signed';
+
+  @override
+  String get doc_policyBond => 'Original policy bond (or ePLI bond)';
+
+  @override
+  String get doc_receiptBook => 'Premium receipt book or receipts';
+
+  @override
+  String get doc_idProof => 'ID proof (Aadhaar, PAN, etc.)';
+
+  @override
+  String get doc_addressProof => 'Address proof';
+
+  @override
+  String get doc_ageProof => 'Age proof';
+
+  @override
+  String get doc_bankDetails => 'Bank passbook or cancelled cheque';
+
+  @override
+  String get doc_photo => 'Passport-size photograph';
+
+  @override
+  String get doc_deathCertificate => 'Death certificate';
+
+  @override
+  String get doc_claimantId => 'Claimant\'s ID and proof of relationship';
+
+  @override
+  String get doc_medical =>
+      'Medical certificate / health declaration (if asked)';
+
+  @override
+  String get doc_eligibility =>
+      'Proof of eligibility (job, degree or rural residence)';
+
+  @override
+  String get doc_nomineeDetails => 'Nominee\'s name, age and relationship';
+
+  @override
+  String get doc_indemnity => 'Indemnity bond (if asked)';
 }
