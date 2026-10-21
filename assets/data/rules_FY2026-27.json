@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "ruleSetId": "FY2026-27",
+  "financialYear": "2026-27",
+  "effectiveFrom": "2026-04-01",
+  "source": "India Post PLI/RPLI rules; values from project SPEC.md (research dated 20 Oct 2026)",
+  "gazetteRef": "Gazette Notification No. 12, Jan 2026 (PLI bonus) — exact reference to be confirmed",
+  "verification": {
+    "status": "partial",
+    "notes": [
+      "Any object with \"verified\": false must be confirmed against an official circular before release.",
+      "Premium tables are NOT included here; see assets/data/tables/."
+    ]
+  },
+
+  "schemes": {
+    "PLI": {
+      "sumAssured": { "min": 20000, "max": 5000000, "aggregateAcrossPolicies": true, "multipleOf": null, "verified": false },
+      "eligibilityGroups": [
+        "central_state_govt", "defence_paramilitary", "psu", "banks", "local_bodies",
+        "educational_institutions", "listed_companies", "professionals", "graduates_diploma_holders"
+      ]
+    },
+    "RPLI": {
+      "sumAssured": { "min": 10000, "max": 1000000, "aggregateAcrossPolicies": true, "multipleOf": null, "verified": false },
+      "eligibilityGroups": [ "rural_resident", "scheduled_bank_savings_account_holder" ]
+    }
+  },
+
+  "plans": [
+    {
+      "id": "pli_suraksha", "scheme": "PLI", "type": "WLA",
+      "names": { "en": "Suraksha (Whole Life Assurance)", "kn": "ಸುರಕ್ಷಾ (ಆಜೀವ ವಿಮೆ)" },
+      "entryAge": { "min": 19, "max": 55 },
+      "premiumCeasingAges": [55, 58, 60],
+      "maturityAge": 80,
+      "loanAfterYears": 4, "surrenderAfterYears": 3,
+      "bonusClass": "WLA", "terminalBonusEligible": true,
+      "premiumTableId": "pli_suraksha",
+      "verified": false
+    },
+    {
+      "id": "pli_santosh", "scheme": "PLI", "type": "EA",
+      "names": { "en": "Santosh (Endowment Assurance)", "kn": "ಸಂತೋಷ್ (ದತ್ತಿ ವಿಮೆ)" },
+      "entryAge": { "min": 19, "max": 55 },
+      "maturityAges": [35, 40, 45, 50, 55, 58, 60],
+      "minTermYears": null,
+      "loanAfterYears": 3, "surrenderAfterYears": 3,
+      "bonusClass": "EA", "terminalBonusEligible": true,
+      "premiumTableId": "pli_santosh",
+      "verified": false
+    },
+    {
+      "id": "pli_suvidha", "scheme": "PLI", "type": "CWLA",
+      "names": { "en": "Suvidha (Convertible Whole Life)", "kn": "ಸುವಿಧಾ (ಪರಿವರ್ತನೀಯ ಆಜೀವ ವಿಮೆ)" },
+      "entryAge": { "min": 19, "max": 50 },
+      "conversion": { "toType": "EA", "earliestAfterYears": 5, "latestAfterYears": 6 },
+      "bonusClass": "CWLA",
+      "premiumTableId": null,
+      "verified": false
+    },
+    {
+      "id": "pli_sumangal", "scheme": "PLI", "type": "AEA",
+      "names": { "en": "Sumangal (Anticipated Endowment)", "kn": "ಸುಮಂಗಲ್ (ಮುಂಗಡ ದತ್ತಿ ವಿಮೆ)" },
+      "terms": [
+        { "years": 15, "entryAge": { "min": 19, "max": 45 },
+          "survivalBenefits": [ { "year": 6, "percentOfSA": 20 }, { "year": 9, "percentOfSA": 20 }, { "year": 12, "percentOfSA": 20 } ],
+          "maturityPercentOfSA": 40 },
+        { "years": 20, "entryAge": { "min": 19, "max": 40 },
+          "survivalBenefits": [ { "year": 8, "percentOfSA": 20 }, { "year": 12, "percentOfSA": 20 }, { "year": 16, "percentOfSA": 20 } ],
+          "maturityPercentOfSA": 40 }
+      ],
+      "deathBenefit": "FULL_SA_PLUS_BONUS_NO_DEDUCTION",
+      "bonusOnFullSA": true,
+      "bonusClass": "AEA", "terminalBonusEligible": false,
+      "premiumTableId": "pli_sumangal",
+      "verified": false
+    },
+    {
+      "id": "pli_yugal_suraksha", "scheme": "PLI", "type": "JOINT_EA",
+      "names": { "en": "Yugal Suraksha (Joint Life Endowment)", "kn": "ಯುಗಲ್ ಸುರಕ್ಷಾ (ಜಂಟಿ ಜೀವ ದತ್ತಿ ವಿಮೆ)" },
+      "entryAgeEachSpouse": { "min": 21, "max": 45 },
+      "termYears": { "min": 5, "max": 20 },
+      "premiumAgeBasis": "PENDING_USER_INPUT",
+      "bonusClass": "EA",
+      "premiumTableId": null,
+      "verified": false
+    },
+    {
+      "id": "pli_bal_jeevan_bima", "scheme": "PLI", "type": "CHILD_EA",
+      "names": { "en": "Bal Jeevan Bima (Children Policy)", "kn": "ಬಾಲ ಜೀವನ ಬಿಮಾ (ಮಕ್ಕಳ ವಿಮೆ)" },
+      "childAge": { "min": 5, "max": 20 }, "parentMaxAge": 45, "maxChildren": 2,
+      "sumAssuredMax": 300000, "sumAssuredCapParentSA": true,
+      "premiumWaiverOnParentDeath": true,
+      "bonusClass": "EA",
+      "premiumTableId": null,
+      "verified": false
+    },
+
+    {
+      "id": "rpli_gram_suraksha", "scheme": "RPLI", "type": "WLA",
+      "names": { "en": "Gram Suraksha (Whole Life Assurance)", "kn": "ಗ್ರಾಮ ಸುರಕ್ಷಾ (ಆಜೀವ ವಿಮೆ)" },
+      "entryAge": { "min": 19, "max": 55 },
+      "premiumCeasingAges": [55, 58, 60],
+      "maturityAge": 80,
+      "bonusClass": "WLA", "terminalBonusEligible": null,
+      "premiumTableId": "rpli_gram_suraksha",
+      "verified": false
+    },
+    {
+      "id": "rpli_gram_santosh", "scheme": "RPLI", "type": "EA",
+      "names": { "en": "Gram Santosh (Endowment Assurance)", "kn": "ಗ್ರಾಮ ಸಂತೋಷ್ (ದತ್ತಿ ವಿಮೆ)" },
+      "entryAge": { "min": 19, "max": 55 },
+      "maturityAges": [35, 40, 45, 50, 55, 58, 60],
+      "minTermYears": null,
+      "bonusClass": "EA", "terminalBonusEligible": null,
+      "premiumTableId": "rpli_gram_santosh",
+      "verified": false
+    },
+    {
+      "id": "rpli_gram_suvidha", "scheme": "RPLI", "type": "CWLA",
+      "names": { "en": "Gram Suvidha (Convertible Whole Life)", "kn": "ಗ್ರಾಮ ಸುವಿಧಾ (ಪರಿವರ್ತನೀಯ ಆಜೀವ ವಿಮೆ)" },
+      "entryAge": { "min": 19, "max": 45 },
+      "conversion": { "toType": "EA", "earliestAfterYears": 5, "latestAfterYears": 6 },
+      "bonusClass": "CWLA",
+      "premiumTableId": null,
+      "verified": false
+    },
+    {
+      "id": "rpli_gram_sumangal", "scheme": "RPLI", "type": "AEA",
+      "names": { "en": "Gram Sumangal (Anticipated Endowment)", "kn": "ಗ್ರಾಮ ಸುಮಂಗಲ್ (ಮುಂಗಡ ದತ್ತಿ ವಿಮೆ)" },
+      "terms": [
+        { "years": 15, "entryAge": { "min": 19, "max": 45 },
+          "survivalBenefits": [ { "year": 6, "percentOfSA": 20 }, { "year": 9, "percentOfSA": 20 }, { "year": 12, "percentOfSA": 20 } ],
+          "maturityPercentOfSA": 40 },
+        { "years": 20, "entryAge": { "min": 19, "max": 40 },
+          "survivalBenefits": [ { "year": 8, "percentOfSA": 20 }, { "year": 12, "percentOfSA": 20 }, { "year": 16, "percentOfSA": 20 } ],
+          "maturityPercentOfSA": 40 }
+      ],
+      "deathBenefit": "FULL_SA_PLUS_BONUS_NO_DEDUCTION",
+      "bonusOnFullSA": true,
+      "bonusClass": "AEA", "terminalBonusEligible": false,
+      "premiumTableId": "rpli_gram_sumangal",
+      "verified": false
+    },
+    {
+      "id": "rpli_gram_priya", "scheme": "RPLI", "type": "AEA",
+      "names": { "en": "Gram Priya (10-year Anticipated Endowment)", "kn": "ಗ್ರಾಮ ಪ್ರಿಯಾ (10 ವರ್ಷದ ಮುಂಗಡ ದತ್ತಿ ವಿಮೆ)" },
+      "terms": [
+        { "years": 10, "entryAge": { "min": 20, "max": 45 },
+          "survivalBenefits": [ { "year": 4, "percentOfSA": 20 }, { "year": 7, "percentOfSA": 20 } ],
+          "maturityPercentOfSA": 60 }
+      ],
+      "deathBenefit": "FULL_SA_PLUS_BONUS_NO_DEDUCTION",
+      "bonusOnFullSA": true,
+      "bonusClass": "AEA", "terminalBonusEligible": false,
+      "premiumTableId": "rpli_gram_priya",
+      "verified": false
+    },
+    {
+      "id": "rpli_bal_jeevan_bima", "scheme": "RPLI", "type": "CHILD_EA",
+      "names": { "en": "Bal Jeevan Bima (RPLI Children Policy)", "kn": "ಬಾಲ ಜೀವನ ಬಿಮಾ (ಗ್ರಾಮೀಣ ಮಕ್ಕಳ ವಿಮೆ)" },
+      "childAge": { "min": 5, "max": 20 }, "parentMaxAge": 45, "maxChildren": 2,
+      "sumAssuredMax": 100000, "sumAssuredCapParentSA": true,
+      "premiumWaiverOnParentDeath": true,
+      "bonusClass": "EA",
+      "premiumTableId": null,
+      "verified": false
+    }
+  ],
+
+  "bonusRatesPer1000": {
+    "PLI": {
+      "2026-27": { "WLA": 76, "EA": 52, "AEA": 48, "CWLA_BEFORE_CONVERSION": 76, "CWLA_AFTER_CONVERSION": 52 }
+    },
+    "RPLI": {
+      "2026-27": { "WLA": 60, "EA": 48, "AEA": 45, "CWLA_BEFORE_CONVERSION": 60, "CWLA_AFTER_CONVERSION": 48 }
+    },
+    "note": "Bonus history (earlier financial years) is required for existing-policy maturity calculation. Missing years cause a hard error — never a guessed rate."
+  },
+
+  "terminalBonus": {
+    "perSumAssured": 10000, "amount": 20, "maxAmount": 1000,
+    "minTermYears": 20, "appliesToTypes": ["WLA", "EA"], "schemes": ["PLI"],
+    "verified": false
+  },
+
+  "premium": {
+    "frequencies": ["MONTHLY", "QUARTERLY", "HALF_YEARLY", "YEARLY"],
+    "tableUnitSumAssured": 10000,
+    "ageBasis": "PENDING_USER_INPUT",
+    "rounding": "PENDING_USER_INPUT",
+    "sumAssuredRebate": {
+      "rupeesPerMonth": 1, "perSumAssured": 20000,
+      "applicablePlans": "PENDING_USER_INPUT",
+      "verified": false
+    },
+    "advancePaymentRebate": [
+      { "monthsInAdvance": 6, "percent": 1 },
+      { "monthsInAdvance": 12, "percent": 2 }
+    ],
+    "advancePaymentRebateVerified": false,
+    "defaultFee": { "percentPerMonthOfDelay": 1, "verified": false },
+    "gst": {
+      "currentRatePercent": 0, "nilFrom": "2025-09-22",
+      "historical": { "firstYearPercent": 4.5, "renewalPercent": 2.25, "appliesTo": "endowment-type" },
+      "verified": false
+    }
+  },
+
+  "loan": { "interestPercentPerAnnum": 10, "compounding": "HALF_YEARLY", "maxPercentOfSurrenderValue": null, "verified": false },
+
+  "bonusRounding": { "rule": "HALF_RUPEE_UP", "description": "Fraction of 50 paise or more rounds up to next rupee; below 50 paise is ignored." }
+}

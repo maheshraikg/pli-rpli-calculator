@@ -1,0 +1,18 @@
+{
+  "@@locale": "kn",
+  "appTitle": "ಪಿಎಲ್‌ಐ ಸಹಾಯಕ",
+  "tilePremium": "ಪ್ರೀಮಿಯಂ",
+  "tileMaturity": "ಪಕ್ವತೆ ಮೊತ್ತ",
+  "tileCompare": "ಹೋಲಿಕೆ",
+  "tileEligibility": "ಅರ್ಹತೆ",
+  "tileMyPolicies": "ನನ್ನ ಪಾಲಿಸಿಗಳು",
+  "tileQuotation": "ಉಲ್ಲೇಖ ಪತ್ರ",
+  "comingSoon": "ಶೀಘ್ರದಲ್ಲೇ",
+  "sampleDataBanner": "ಮಾದರಿ ದತ್ತಾಂಶ – ಅಧಿಕೃತವಲ್ಲ",
+  "ratesFooter": "ದರಗಳು ಹಣಕಾಸು ವರ್ಷ {financialYear} • ಮೂಲ: ಭಾರತೀಯ ಅಂಚೆ",
+  "bonusDisclaimer": "ಬೋನಸ್ ದರಗಳನ್ನು ಪ್ರತಿ ವರ್ಷ ಘೋಷಿಸಲಾಗುತ್ತದೆ ಮತ್ತು ಭವಿಷ್ಯಕ್ಕೆ ಖಾತರಿಯಿಲ್ಲ. ಅಂತಿಮ ಮೊತ್ತ ಭಾರತೀಯ ಅಂಚೆ ಪ್ರಕಾರ.",
+  "independentDisclaimerTitle": "ಪ್ರಾರಂಭಿಸುವ ಮೊದಲು",
+  "independentDisclaimer": "ಇದು ಸ್ವತಂತ್ರ ಕ್ಯಾಲ್ಕುಲೇಟರ್, ಭಾರತೀಯ ಅಂಚೆಯ ಅಧಿಕೃತ ಆ್ಯಪ್ ಅಲ್ಲ. ಎಲ್ಲಾ ಲೆಕ್ಕಾಚಾರಗಳು ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲೇ ನಡೆಯುತ್ತವೆ; ಯಾವುದೇ ದತ್ತಾಂಶ ಸಂಗ್ರಹಿಸಲಾಗುವುದಿಲ್ಲ.",
+  "understood": "ಅರ್ಥವಾಯಿತು",
+  "dataLoadError": "ದರ ದತ್ತಾಂಶ ಲೋಡ್ ಆಗಲಿಲ್ಲ: {error}"
+}

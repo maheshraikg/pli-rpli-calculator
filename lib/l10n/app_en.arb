@@ -1,0 +1,20 @@
+{
+  "@@locale": "en",
+  "appTitle": "PLI Sahayak",
+  "tilePremium": "Premium",
+  "tileMaturity": "Maturity",
+  "tileCompare": "Compare",
+  "tileEligibility": "Eligibility",
+  "tileMyPolicies": "My Policies",
+  "tileQuotation": "Quotation",
+  "comingSoon": "Coming soon",
+  "sampleDataBanner": "SAMPLE DATA – NOT OFFICIAL",
+  "ratesFooter": "Rates FY {financialYear} • Source: India Post",
+  "@ratesFooter": { "placeholders": { "financialYear": { "type": "String" } } },
+  "bonusDisclaimer": "Bonus rates are declared yearly and are not guaranteed for the future. Final figures as per India Post.",
+  "independentDisclaimerTitle": "Before you start",
+  "independentDisclaimer": "This is an independent calculator, not an official India Post app. All calculations happen on your phone; no data is collected.",
+  "understood": "I understand",
+  "dataLoadError": "Could not load rate data: {error}",
+  "@dataLoadError": { "placeholders": { "error": { "type": "String" } } }
+}

@@ -1,0 +1,46 @@
+import 'package:flutter/material.dart';
+
+import '../../core/widgets/data_scaffold.dart';
+import '../../l10n/app_localizations.dart';
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context);
+    final tiles = [
+      (Icons.calculate, l.tilePremium),
+      (Icons.savings, l.tileMaturity),
+      (Icons.compare_arrows, l.tileCompare),
+      (Icons.verified_user, l.tileEligibility),
+      (Icons.folder_shared, l.tileMyPolicies),
+      (Icons.picture_as_pdf, l.tileQuotation),
+    ];
+    return DataScaffold(
+      title: l.appTitle,
+      builder: (context, data) => GridView.count(
+        padding: const EdgeInsets.all(16),
+        crossAxisCount: 2,
+        mainAxisSpacing: 12,
+        crossAxisSpacing: 12,
+        children: [
+          for (final (icon, label) in tiles)
+            Card.outlined(
+              child: InkWell(
+                // Screens arrive in Phase 1–3.
+                onTap: () => ScaffoldMessenger.of(context)
+                  ..hideCurrentSnackBar()
+                  ..showSnackBar(SnackBar(content: Text(l.comingSoon))),
+                child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Icon(icon, size: 40, color: Theme.of(context).colorScheme.primary),
+                  const SizedBox(height: 8),
+                  Text(label, style: Theme.of(context).textTheme.titleMedium, textAlign: TextAlign.center),
+                ]),
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+}
