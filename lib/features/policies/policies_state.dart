@@ -47,7 +47,12 @@ class PoliciesNotifier extends Notifier<List<SavedPolicy>> {
         final ids = reminderIds(policy);
         await reminders.schedule([
           for (final (i, due) in dues.indexed)
-            Reminder(id: ids[i], when: due.subtract(const Duration(days: reminderDaysBefore)), title: text.title, body: text.body(policy, due)),
+            Reminder(
+              id: ids[i],
+              when: due.subtract(const Duration(days: reminderDaysBefore)),
+              title: text.title,
+              body: text.body(policy, due),
+            ),
         ]);
       }
     }

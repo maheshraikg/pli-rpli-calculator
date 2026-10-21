@@ -950,4 +950,60 @@ class AppLocalizationsMr extends AppLocalizations {
   String appVersion(String version) {
     return 'आवृत्ती $version';
   }
+
+  @override
+  String get homeTagline =>
+      'PLI आणि RPLI प्रीमियम, बोनस आणि परिपक्वता कॅल्क्युलेटर';
+
+  @override
+  String get quickPremiumTitle => 'प्रीमियम काढा';
+
+  @override
+  String get quickPremiumBody =>
+      'कोणतीही योजना, वय आणि विमा रक्कम — सर्व वारंवारता';
+
+  @override
+  String get sectionCalculators => 'कॅल्क्युलेटर';
+
+  @override
+  String get sectionServicing => 'पॉलिसी सेवा';
+
+  @override
+  String get sectionLearn => 'माहिती';
+
+  @override
+  String get descPremium => 'प्रत्येक वारंवारतेचा प्रीमियम';
+
+  @override
+  String get descMaturity => 'बोनस आणि परिपक्वता रक्कम';
+
+  @override
+  String get descCompare => 'योजना शेजारी-शेजारी';
+
+  @override
+  String get descAfford => 'तुमच्या बजेटमध्ये उत्तम संरक्षण';
+
+  @override
+  String get descPolicies => 'जतन पॉलिसी आणि देय तारखा';
+
+  @override
+  String get descTools => 'कर्ज, पुनरुज्जीवन, पेड-अप';
+
+  @override
+  String get descQuotation => 'PDF कोटेशन शेअर करा';
+
+  @override
+  String get descEligibility => 'PLI किंवा RPLI कोण घेऊ शकते';
+
+  @override
+  String get descPlans => 'योजना नियम आणि प्रश्न';
+
+  @override
+  String get descAbout => 'गोपनीयता आणि दर डेटा';
+
+  @override
+  String get sectionPersonTitle => 'पॉलिसीधारक';
+
+  @override
+  String get sectionCoverTitle => 'संरक्षण आणि भरणा';
 }

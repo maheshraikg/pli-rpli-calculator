@@ -951,4 +951,60 @@ class AppLocalizationsBn extends AppLocalizations {
   String appVersion(String version) {
     return 'সংস্করণ $version';
   }
+
+  @override
+  String get homeTagline =>
+      'PLI ও RPLI প্রিমিয়াম, বোনাস ও মেয়াদপূর্তি ক্যালকুলেটর';
+
+  @override
+  String get quickPremiumTitle => 'প্রিমিয়াম হিসাব করুন';
+
+  @override
+  String get quickPremiumBody =>
+      'যেকোনো প্রকল্প, বয়স ও বিমার অঙ্ক — সব পর্যায়';
+
+  @override
+  String get sectionCalculators => 'ক্যালকুলেটর';
+
+  @override
+  String get sectionServicing => 'পলিসি পরিষেবা';
+
+  @override
+  String get sectionLearn => 'জানুন';
+
+  @override
+  String get descPremium => 'প্রতিটি পর্যায়ের প্রিমিয়াম';
+
+  @override
+  String get descMaturity => 'বোনাস ও মেয়াদপূর্তির অঙ্ক';
+
+  @override
+  String get descCompare => 'প্রকল্প পাশাপাশি';
+
+  @override
+  String get descAfford => 'আপনার বাজেটে সেরা সুরক্ষা';
+
+  @override
+  String get descPolicies => 'সংরক্ষিত পলিসি ও বকেয়া তারিখ';
+
+  @override
+  String get descTools => 'ঋণ, পুনরুজ্জীবন, পেইড-আপ';
+
+  @override
+  String get descQuotation => 'PDF কোটেশন শেয়ার করুন';
+
+  @override
+  String get descEligibility => 'PLI বা RPLI কে নিতে পারেন';
+
+  @override
+  String get descPlans => 'প্রকল্পের নিয়ম ও প্রশ্ন';
+
+  @override
+  String get descAbout => 'গোপনীয়তা ও হারের তথ্য';
+
+  @override
+  String get sectionPersonTitle => 'পলিসিধারী';
+
+  @override
+  String get sectionCoverTitle => 'সুরক্ষা ও প্রদান';
 }

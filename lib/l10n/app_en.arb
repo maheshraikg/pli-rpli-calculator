@@ -830,5 +830,23 @@
         "type": "String"
       }
     }
-  }
+  },
+  "homeTagline": "PLI & RPLI premium, bonus and maturity calculator",
+  "quickPremiumTitle": "Calculate premium",
+  "quickPremiumBody": "Any plan, age and sum assured — all frequencies",
+  "sectionCalculators": "Calculators",
+  "sectionServicing": "Policy servicing",
+  "sectionLearn": "Learn",
+  "descPremium": "Premium for every frequency",
+  "descMaturity": "Bonus and maturity value",
+  "descCompare": "Plans side by side",
+  "descAfford": "Best cover for your budget",
+  "descPolicies": "Saved policies and due dates",
+  "descTools": "Loan, revival, paid-up",
+  "descQuotation": "Share a PDF quote",
+  "descEligibility": "Who can buy PLI or RPLI",
+  "descPlans": "Plan rules and FAQs",
+  "descAbout": "Privacy and rate data",
+  "sectionPersonTitle": "Policy holder",
+  "sectionCoverTitle": "Cover and payment"
 }

@@ -951,4 +951,59 @@ class AppLocalizationsOr extends AppLocalizations {
   String appVersion(String version) {
     return 'ସଂସ୍କରଣ $version';
   }
+
+  @override
+  String get homeTagline => 'PLI ଓ RPLI ପ୍ରିମିୟମ, ବୋନସ ଓ ପରିପକ୍ୱତା କାଲକୁଲେଟର';
+
+  @override
+  String get quickPremiumTitle => 'ପ୍ରିମିୟମ ଗଣନା କରନ୍ତୁ';
+
+  @override
+  String get quickPremiumBody =>
+      'ଯେକୌଣସି ଯୋଜନା, ବୟସ ଓ ବୀମା ରାଶି — ସମସ୍ତ ଆବୃତ୍ତି';
+
+  @override
+  String get sectionCalculators => 'କାଲକୁଲେଟର';
+
+  @override
+  String get sectionServicing => 'ପଲିସି ସେବା';
+
+  @override
+  String get sectionLearn => 'ଜାଣନ୍ତୁ';
+
+  @override
+  String get descPremium => 'ପ୍ରତି ଆବୃତ୍ତିର ପ୍ରିମିୟମ';
+
+  @override
+  String get descMaturity => 'ବୋନସ ଓ ପରିପକ୍ୱତା ରାଶି';
+
+  @override
+  String get descCompare => 'ଯୋଜନା ପାଖାପାଖି';
+
+  @override
+  String get descAfford => 'ଆପଣଙ୍କ ବଜେଟରେ ସର୍ବୋତ୍ତମ ସୁରକ୍ଷା';
+
+  @override
+  String get descPolicies => 'ସଞ୍ଚିତ ପଲିସି ଓ ଦେୟ ତାରିଖ';
+
+  @override
+  String get descTools => 'ଋଣ, ପୁନରୁଜ୍ଜୀବନ, ପେଡ୍-ଅପ୍';
+
+  @override
+  String get descQuotation => 'PDF କୋଟେସନ ସେୟାର କରନ୍ତୁ';
+
+  @override
+  String get descEligibility => 'PLI କିମ୍ବା RPLI କିଏ ନେଇପାରିବେ';
+
+  @override
+  String get descPlans => 'ଯୋଜନା ନିୟମ ଓ ପ୍ରଶ୍ନ';
+
+  @override
+  String get descAbout => 'ଗୋପନୀୟତା ଓ ହାର ତଥ୍ୟ';
+
+  @override
+  String get sectionPersonTitle => 'ପଲିସିଧାରୀ';
+
+  @override
+  String get sectionCoverTitle => 'ସୁରକ୍ଷା ଓ ଦେୟ';
 }

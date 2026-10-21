@@ -51,18 +51,17 @@ class PlanConfig {
     int? spouseAge,
     PremiumFrequency? frequency,
     DateTime? commencement,
-  }) =>
-      PlanConfig(
-        scheme: scheme ?? this.scheme,
-        planId: planId ?? this.planId,
-        dob: clearDob ? null : dob ?? this.dob,
-        manualAge: manualAge ?? this.manualAge,
-        sumAssured: clearSumAssured ? null : sumAssured ?? this.sumAssured,
-        column: clearColumn ? null : column ?? this.column,
-        spouseAge: spouseAge ?? this.spouseAge,
-        frequency: frequency ?? this.frequency,
-        commencement: commencement ?? this.commencement,
-      );
+  }) => PlanConfig(
+    scheme: scheme ?? this.scheme,
+    planId: planId ?? this.planId,
+    dob: clearDob ? null : dob ?? this.dob,
+    manualAge: manualAge ?? this.manualAge,
+    sumAssured: clearSumAssured ? null : sumAssured ?? this.sumAssured,
+    column: clearColumn ? null : column ?? this.column,
+    spouseAge: spouseAge ?? this.spouseAge,
+    frequency: frequency ?? this.frequency,
+    commencement: commencement ?? this.commencement,
+  );
 }
 
 /// Options shown for the plan's "column": table columns, or the joint-life
@@ -92,10 +91,7 @@ class PlanConfigNotifier extends Notifier<PlanConfig> {
   /// Which screen / slot this config belongs to ("premium", "compare0"…).
   final String key;
 
-  static const _defaults = {
-    'compare1': ('pli_sumangal', 20),
-    'compare2': ('pli_suraksha', 60),
-  };
+  static const _defaults = {'compare1': ('pli_sumangal', 20), 'compare2': ('pli_suraksha', 60)};
 
   @override
   PlanConfig build() {
@@ -124,7 +120,12 @@ class PlanConfigNotifier extends Notifier<PlanConfig> {
   void selectPlan(PlanRule plan) {
     final rules = _rules;
     final age = rules == null ? state.manualAge : state.entryAge(rules);
-    state = state.copyWith(scheme: plan.scheme, planId: plan.id, column: defaultColumn(plan, age), clearColumn: defaultColumn(plan, age) == null);
+    state = state.copyWith(
+      scheme: plan.scheme,
+      planId: plan.id,
+      column: defaultColumn(plan, age),
+      clearColumn: defaultColumn(plan, age) == null,
+    );
   }
 
   void setDob(DateTime? dob) => state = dob == null ? state.copyWith(clearDob: true) : state.copyWith(dob: dob);

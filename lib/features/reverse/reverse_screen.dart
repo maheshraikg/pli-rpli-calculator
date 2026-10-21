@@ -15,9 +15,9 @@ class ReverseScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => DataScaffold(
-        title: AppLocalizations.of(context).reverseTitle,
-        builder: (context, data) => _ReverseBody(data: data),
-      );
+    title: AppLocalizations.of(context).reverseTitle,
+    builder: (context, data) => _ReverseBody(data: data),
+  );
 }
 
 class _ReverseBody extends StatefulWidget {
@@ -43,54 +43,74 @@ class _ReverseBodyState extends State<_ReverseBody> {
     final budget = _budget;
     final options = budget == null || budget <= 0
         ? const <AffordableOption>[]
-        : affordableOptions(widget.data.rules, widget.data.tables,
-            scheme: _scheme, entryAge: _age, budget: Paise.wholeRupees(budget), frequency: _frequency);
+        : affordableOptions(
+            widget.data.rules,
+            widget.data.tables,
+            scheme: _scheme,
+            entryAge: _age,
+            budget: Paise.wholeRupees(budget),
+            frequency: _frequency,
+          );
     const gap = SizedBox(height: 16);
 
-    return ListView(padding: const EdgeInsets.all(16), children: [
-      Text(l.reverseIntro),
-      gap,
-      SegmentedButton<Scheme>(
-        segments: [for (final s in Scheme.values) ButtonSegment(value: s, label: Text(s.code))],
-        selected: {_scheme},
-        onSelectionChanged: (s) => setState(() => _scheme = s.single),
-      ),
-      gap,
-      NumberStepper(
-        label: l.entryAgeLabel,
-        value: _age,
-        min: 1,
-        max: 70,
-        onChanged: (v) => setState(() => _age = v),
-        valueText: l.ageYears,
-      ),
-      gap,
-      AmountField(label: l.budgetLabel, value: _budget, onChanged: (v) => setState(() => _budget = v)),
-      gap,
-      Wrap(spacing: 8, children: [
-        for (final f in PremiumFrequency.values)
-          ChoiceChip(
-            label: Text(frequencyName(l, f)),
-            selected: f == _frequency,
-            onSelected: (_) => setState(() => _frequency = f),
-          ),
-      ]),
-      gap,
-      if (budget != null && options.isEmpty) InfoCard(icon: Icons.info_outline, message: l.reverseNone),
-      for (final o in options)
-        Card(
-          child: ListTile(
-            title: Text(o.quote.plan.name(lang)),
-            subtitle: Text('${columnOptionLabel(l, o.quote.plan, o.quote.column)} • '
-                '${l.premiumShort} ${formatRupees(o.quote.premium)}'),
-            trailing: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.end, children: [
-              Text(l.saShort, style: theme.textTheme.labelSmall),
-              Text(formatRupees(Paise.wholeRupees(o.quote.sumAssured)),
-                  style: theme.textTheme.titleMedium?.copyWith(color: theme.colorScheme.primary)),
-            ]),
-          ),
+    return ListView(
+      padding: const EdgeInsets.all(16),
+      children: [
+        Text(l.reverseIntro),
+        gap,
+        SegmentedButton<Scheme>(
+          segments: [for (final s in Scheme.values) ButtonSegment(value: s, label: Text(s.code))],
+          selected: {_scheme},
+          onSelectionChanged: (s) => setState(() => _scheme = s.single),
         ),
-      if (options.isNotEmpty) Text(l.bonusDisclaimer, style: theme.textTheme.bodySmall),
-    ]);
+        gap,
+        NumberStepper(
+          label: l.entryAgeLabel,
+          value: _age,
+          min: 1,
+          max: 70,
+          onChanged: (v) => setState(() => _age = v),
+          valueText: l.ageYears,
+        ),
+        gap,
+        AmountField(label: l.budgetLabel, value: _budget, onChanged: (v) => setState(() => _budget = v)),
+        gap,
+        Wrap(
+          spacing: 8,
+          children: [
+            for (final f in PremiumFrequency.values)
+              ChoiceChip(
+                label: Text(frequencyName(l, f)),
+                selected: f == _frequency,
+                onSelected: (_) => setState(() => _frequency = f),
+              ),
+          ],
+        ),
+        gap,
+        if (budget != null && options.isEmpty) InfoCard(icon: Icons.info_outline, message: l.reverseNone),
+        for (final o in options)
+          Card(
+            child: ListTile(
+              title: Text(o.quote.plan.name(lang)),
+              subtitle: Text(
+                '${columnOptionLabel(l, o.quote.plan, o.quote.column)} • '
+                '${l.premiumShort} ${formatRupees(o.quote.premium)}',
+              ),
+              trailing: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(l.saShort, style: theme.textTheme.labelSmall),
+                  Text(
+                    formatRupees(Paise.wholeRupees(o.quote.sumAssured)),
+                    style: theme.textTheme.titleMedium?.copyWith(color: theme.colorScheme.primary),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        if (options.isNotEmpty) Text(l.bonusDisclaimer, style: theme.textTheme.bodySmall),
+      ],
+    );
   }
 }

@@ -953,4 +953,59 @@ class AppLocalizationsMl extends AppLocalizations {
   String appVersion(String version) {
     return 'പതിപ്പ് $version';
   }
+
+  @override
+  String get homeTagline => 'PLI, RPLI പ്രീമിയം, ബോണസ്, കാലാവധി കാൽക്കുലേറ്റർ';
+
+  @override
+  String get quickPremiumTitle => 'പ്രീമിയം കണക്കാക്കുക';
+
+  @override
+  String get quickPremiumBody =>
+      'ഏത് പദ്ധതിയും പ്രായവും ഇൻഷുറൻസ് തുകയും — എല്ലാ ഇടവേളകളും';
+
+  @override
+  String get sectionCalculators => 'കാൽക്കുലേറ്ററുകൾ';
+
+  @override
+  String get sectionServicing => 'പോളിസി സേവനങ്ങൾ';
+
+  @override
+  String get sectionLearn => 'അറിയുക';
+
+  @override
+  String get descPremium => 'ഓരോ ഇടവേളയുടെയും പ്രീമിയം';
+
+  @override
+  String get descMaturity => 'ബോണസും കാലാവധി തുകയും';
+
+  @override
+  String get descCompare => 'പദ്ധതികൾ അടുത്തടുത്ത്';
+
+  @override
+  String get descAfford => 'നിങ്ങളുടെ ബജറ്റിൽ മികച്ച പരിരക്ഷ';
+
+  @override
+  String get descPolicies => 'സേവ് ചെയ്ത പോളിസികളും തീയതികളും';
+
+  @override
+  String get descTools => 'വായ്പ, പുനരുജ്ജീവനം, പെയ്ഡ്-അപ്പ്';
+
+  @override
+  String get descQuotation => 'PDF ക്വട്ടേഷൻ പങ്കിടുക';
+
+  @override
+  String get descEligibility => 'PLI അല്ലെങ്കിൽ RPLI ആർക്കെടുക്കാം';
+
+  @override
+  String get descPlans => 'പദ്ധതി നിയമങ്ങളും ചോദ്യങ്ങളും';
+
+  @override
+  String get descAbout => 'സ്വകാര്യതയും നിരക്ക് ഡാറ്റയും';
+
+  @override
+  String get sectionPersonTitle => 'പോളിസി ഉടമ';
+
+  @override
+  String get sectionCoverTitle => 'പരിരക്ഷയും അടവും';
 }

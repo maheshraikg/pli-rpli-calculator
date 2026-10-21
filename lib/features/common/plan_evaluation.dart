@@ -37,9 +37,9 @@ class PlanEvaluation {
   bool get isValid => violations.isEmpty;
 
   PremiumQuote? quoteFor(PremiumFrequency f) => switch (premiums[f]) {
-        PremiumQuoted(:final quote) => quote,
-        _ => null,
-      };
+    PremiumQuoted(:final quote) => quote,
+    _ => null,
+  };
 
   PremiumQuote? get selectedQuote => quoteFor(config.frequency);
 }
@@ -50,7 +50,13 @@ Proposal _proposal(PlanRule plan, PlanConfig c, int age, int sa) {
     PlanType.ea => Proposal(planId: plan.id, entryAge: age, sumAssured: sa, maturityAge: column),
     PlanType.wla => Proposal(planId: plan.id, entryAge: age, sumAssured: sa, premiumCeasingAge: column),
     PlanType.aea => Proposal(planId: plan.id, entryAge: age, sumAssured: sa, termYears: column),
-    PlanType.jointEa => Proposal(planId: plan.id, entryAge: age, sumAssured: sa, termYears: column, spouseAge: c.spouseAge),
+    PlanType.jointEa => Proposal(
+      planId: plan.id,
+      entryAge: age,
+      sumAssured: sa,
+      termYears: column,
+      spouseAge: c.spouseAge,
+    ),
     _ => Proposal(planId: plan.id, entryAge: age, sumAssured: sa),
   };
 }
@@ -69,22 +75,23 @@ PlanEvaluation evaluatePlan(AppData data, PlanConfig c) {
     String? missingRate,
     double? returnRate,
     List<IllustrationRow> illustration = const [],
-  }) =>
-      PlanEvaluation(
-        config: c,
-        plan: plan,
-        entryAge: age,
-        violations: violations,
-        premiums: premiums,
-        projection: projection,
-        projectionPending: pending,
-        missingRateYear: missingRate,
-        returnRate: returnRate,
-        illustration: illustration,
-        isSample: data.tableFor(plan)?.isSample ?? false,
-      );
+  }) => PlanEvaluation(
+    config: c,
+    plan: plan,
+    entryAge: age,
+    violations: violations,
+    premiums: premiums,
+    projection: projection,
+    projectionPending: pending,
+    missingRateYear: missingRate,
+    returnRate: returnRate,
+    illustration: illustration,
+    isSample: data.tableFor(plan)?.isSample ?? false,
+  );
 
-  final noTable = {for (final f in PremiumFrequency.values) f: const PremiumUnavailable(PremiumUnavailableReason.noTable)};
+  final noTable = {
+    for (final f in PremiumFrequency.values) f: const PremiumUnavailable(PremiumUnavailableReason.noTable),
+  };
   // Children's policies need parent details whose rules are not yet
   // confirmed, so nothing is checked or calculated for them.
   if (plan.type == PlanType.childEa) return result(premiums: noTable);

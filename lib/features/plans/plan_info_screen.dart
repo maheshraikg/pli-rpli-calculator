@@ -19,18 +19,32 @@ List<String> planFacts(AppLocalizations l, RuleSet rules, PlanRule plan) {
   }
   for (final t in plan.aeaTerms) {
     facts.add('${l.termsInfo('${t.years}')} • ${l.entryAgeInfo(t.entryAge.min, t.entryAge.max)}');
-    facts.add(l.survivalInfo([
-      for (final b in t.survivalBenefits) l.survivalItem(b.percentOfSA, b.year),
-      l.survivalItem(t.maturityPercentOfSA, t.years),
-    ].join(', ')));
+    facts.add(
+      l.survivalInfo(
+        [
+          for (final b in t.survivalBenefits) l.survivalItem(b.percentOfSA, b.year),
+          l.survivalItem(t.maturityPercentOfSA, t.years),
+        ].join(', '),
+      ),
+    );
   }
   final joint = plan.jointLife;
   if (joint != null) {
-    facts.add(l.jointInfo(joint.entryAgeEachSpouse.min, joint.entryAgeEachSpouse.max, joint.termYears.min, joint.termYears.max));
+    facts.add(
+      l.jointInfo(joint.entryAgeEachSpouse.min, joint.entryAgeEachSpouse.max, joint.termYears.min, joint.termYears.max),
+    );
   }
   final child = plan.childPlan;
   if (child != null) {
-    facts.add(l.childInfo(child.childAge.min, child.childAge.max, child.parentMaxAge, child.maxChildren, _rs(child.sumAssuredMax)));
+    facts.add(
+      l.childInfo(
+        child.childAge.min,
+        child.childAge.max,
+        child.parentMaxAge,
+        child.maxChildren,
+        _rs(child.sumAssuredMax),
+      ),
+    );
   } else {
     final limit = rules.sumAssuredLimits[plan.scheme]!;
     facts.add(l.saLimitInfo(_rs(limit.min), _rs(limit.max)));
@@ -57,38 +71,41 @@ class PlanInfoScreen extends StatelessWidget {
     final theme = Theme.of(context);
     return DataScaffold(
       title: l.planInfoTitle,
-      builder: (context, data) => ListView(padding: const EdgeInsets.all(16), children: [
-        for (final scheme in Scheme.values) ...[
-          Text(schemeName(l, scheme), style: theme.textTheme.titleLarge),
-          for (final plan in data.rules.plansFor(scheme))
-            Card(
-              child: ExpansionTile(
-                title: Text(plan.name(lang)),
-                childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
-                expandedCrossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  for (final f in planFacts(l, data.rules, plan))
-                    Padding(padding: const EdgeInsets.symmetric(vertical: 2), child: Text('• $f')),
-                ],
+      builder: (context, data) => ListView(
+        padding: const EdgeInsets.all(16),
+        children: [
+          for (final scheme in Scheme.values) ...[
+            Text(schemeName(l, scheme), style: theme.textTheme.titleLarge),
+            for (final plan in data.rules.plansFor(scheme))
+              Card(
+                child: ExpansionTile(
+                  title: Text(plan.name(lang)),
+                  childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+                  expandedCrossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    for (final f in planFacts(l, data.rules, plan))
+                      Padding(padding: const EdgeInsets.symmetric(vertical: 2), child: Text('• $f')),
+                  ],
+                ),
               ),
+            const SizedBox(height: 16),
+          ],
+          Text(l.faqTitle, style: theme.textTheme.titleLarge),
+          for (final (q, a) in [
+            (l.faq1q, l.faq1a),
+            (l.faq2q, l.faq2a),
+            (l.faq3q, l.faq3a),
+            (l.faq4q, l.faq4a),
+            (l.faq5q, l.faq5a),
+          ])
+            ExpansionTile(
+              title: Text(q),
+              childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+              expandedCrossAxisAlignment: CrossAxisAlignment.start,
+              children: [Text(a)],
             ),
-          const SizedBox(height: 16),
         ],
-        Text(l.faqTitle, style: theme.textTheme.titleLarge),
-        for (final (q, a) in [
-          (l.faq1q, l.faq1a),
-          (l.faq2q, l.faq2a),
-          (l.faq3q, l.faq3a),
-          (l.faq4q, l.faq4a),
-          (l.faq5q, l.faq5a),
-        ])
-          ExpansionTile(
-            title: Text(q),
-            childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
-            expandedCrossAxisAlignment: CrossAxisAlignment.start,
-            children: [Text(a)],
-          ),
-      ]),
+      ),
     );
   }
 }

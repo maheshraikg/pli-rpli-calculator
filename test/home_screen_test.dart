@@ -8,11 +8,12 @@ import 'support.dart';
 void main() {
   testWidgets('home shows tiles, sample banner and rates footer (English)', (tester) async {
     await pumpApp(tester);
-    for (final t in ['Premium', 'Maturity', 'Compare', 'Eligibility', 'My Policies', 'Quotation']) {
+    expect(find.text('SAMPLE DATA – NOT OFFICIAL'), findsOneWidget);
+    for (final t in ['Premium', 'Maturity', 'Compare', 'Afford', 'My Policies', 'Policy tools', 'Quotation', 'Eligibility', 'Plans', 'About']) {
+      await scrollTo(tester, find.text(t));
       expect(find.text(t), findsOneWidget);
     }
-    expect(find.text('SAMPLE DATA – NOT OFFICIAL'), findsOneWidget);
-    expect(find.text('Rates FY 2026-27 • Source: India Post'), findsOneWidget);
+    await scrollTo(tester, find.text('Rates FY 2026-27 • Source: India Post'));
   });
 
   testWidgets('home renders in Kannada', (tester) async {
@@ -50,6 +51,9 @@ void main() {
       ('Quotation', 'Quotation'),
     ]) {
       await pumpApp(tester, key: ValueKey(tile));
+      await scrollTo(tester, find.widgetWithText(InkWell, tile));
+      await tester.ensureVisible(find.widgetWithText(InkWell, tile));
+      await tester.pumpAndSettle();
       await tester.tap(find.widgetWithText(InkWell, tile));
       await tester.pumpAndSettle();
       expect(find.widgetWithText(AppBar, title), findsOneWidget, reason: tile);

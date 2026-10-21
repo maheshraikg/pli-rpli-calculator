@@ -19,19 +19,22 @@ class ValueRow extends StatelessWidget {
     final theme = Theme.of(context);
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4),
-      child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Expanded(child: Text(label)),
-        const SizedBox(width: 12),
-        Flexible(
-          child: Text(
-            value,
-            textAlign: TextAlign.end,
-            style: emphasis
-                ? theme.textTheme.titleLarge?.copyWith(color: theme.colorScheme.primary, fontWeight: FontWeight.bold)
-                : theme.textTheme.titleMedium,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(child: Text(label)),
+          const SizedBox(width: 12),
+          Flexible(
+            child: Text(
+              value,
+              textAlign: TextAlign.end,
+              style: emphasis
+                  ? theme.textTheme.titleLarge?.copyWith(color: theme.colorScheme.primary, fontWeight: FontWeight.bold)
+                  : theme.textTheme.titleMedium,
+            ),
           ),
-        ),
-      ]),
+        ],
+      ),
     );
   }
 }
@@ -48,12 +51,14 @@ class EvaluationIssues extends StatelessWidget {
     final lang = Localizations.localeOf(context).languageCode;
     final error = Theme.of(context).colorScheme.errorContainer;
     final e = evaluation;
-    return Column(children: [
-      for (final v in e.violations)
-        InfoCard(icon: Icons.error_outline, color: error, message: violationMessage(l, v, e.plan, lang)),
-      if (e.missingRateYear != null)
-        InfoCard(icon: Icons.error_outline, color: error, message: l.missingBonusRate(e.missingRateYear!)),
-    ]);
+    return Column(
+      children: [
+        for (final v in e.violations)
+          InfoCard(icon: Icons.error_outline, color: error, message: violationMessage(l, v, e.plan, lang)),
+        if (e.missingRateYear != null)
+          InfoCard(icon: Icons.error_outline, color: error, message: l.missingBonusRate(e.missingRateYear!)),
+      ],
+    );
   }
 }
 
@@ -72,33 +77,41 @@ class PaidVsBenefitsChart extends StatelessWidget {
     final theme = Theme.of(context);
     final maxValue = paid.value > received.value ? paid.value : received.value;
     Widget bar(String label, Paise amount, Color color) => Padding(
-          padding: const EdgeInsets.symmetric(vertical: 6),
-          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Row(children: [
+      padding: const EdgeInsets.symmetric(vertical: 6),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
               Expanded(child: Text(label)),
               Text(formatRupees(amount), style: theme.textTheme.titleSmall),
-            ]),
-            const SizedBox(height: 4),
-            LayoutBuilder(
-              builder: (context, box) => Align(
-                alignment: AlignmentDirectional.centerStart,
-                child: Container(
-                  height: 18,
-                  width: maxValue == 0 ? 0 : box.maxWidth * amount.value / maxValue,
-                  decoration: BoxDecoration(color: color, borderRadius: BorderRadius.circular(4)),
-                ),
+            ],
+          ),
+          const SizedBox(height: 4),
+          LayoutBuilder(
+            builder: (context, box) => Align(
+              alignment: AlignmentDirectional.centerStart,
+              child: Container(
+                height: 18,
+                width: maxValue == 0 ? 0 : box.maxWidth * amount.value / maxValue,
+                decoration: BoxDecoration(color: color, borderRadius: BorderRadius.circular(4)),
               ),
             ),
-          ]),
-        );
+          ),
+        ],
+      ),
+    );
     return Semantics(
       label: '${l.chartPaid} ${formatRupees(paid)}, ${l.chartReceived} ${formatRupees(received)}',
       child: ExcludeSemantics(
-        child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-          Text(l.chartTitle, style: theme.textTheme.titleMedium),
-          bar(l.chartPaid, paid, theme.colorScheme.secondary),
-          bar(l.chartReceived, received, theme.colorScheme.primary),
-        ]),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text(l.chartTitle, style: theme.textTheme.titleMedium),
+            bar(l.chartPaid, paid, theme.colorScheme.secondary),
+            bar(l.chartReceived, received, theme.colorScheme.primary),
+          ],
+        ),
       ),
     );
   }
@@ -114,13 +127,15 @@ class IllustrationTable extends StatelessWidget {
     final l = AppLocalizations.of(context);
     final style = Theme.of(context).textTheme.bodySmall;
     final head = Theme.of(context).textTheme.labelMedium;
-    TableRow row(List<String> cells, TextStyle? s) => TableRow(children: [
-          for (final (i, c) in cells.indexed)
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 2),
-              child: Text(c, style: s, textAlign: i == 0 ? TextAlign.start : TextAlign.end),
-            ),
-        ]);
+    TableRow row(List<String> cells, TextStyle? s) => TableRow(
+      children: [
+        for (final (i, c) in cells.indexed)
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 2),
+            child: Text(c, style: s, textAlign: i == 0 ? TextAlign.start : TextAlign.end),
+          ),
+      ],
+    );
     return Table(
       columnWidths: const {0: FlexColumnWidth(0.6)},
       border: TableBorder(horizontalInside: BorderSide(color: Theme.of(context).dividerColor)),
@@ -154,14 +169,17 @@ class _ExpandableIllustrationState extends State<ExpandableIllustration> {
   @override
   Widget build(BuildContext context) {
     final l = AppLocalizations.of(context);
-    return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-      Text(l.illustrationTitle, style: Theme.of(context).textTheme.titleLarge),
-      TextButton.icon(
-        icon: Icon(_open ? Icons.expand_less : Icons.expand_more),
-        label: Text(_open ? l.hideTable : l.showTable),
-        onPressed: () => setState(() => _open = !_open),
-      ),
-      if (_open) IllustrationTable(rows: widget.rows),
-    ]);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Text(l.illustrationTitle, style: Theme.of(context).textTheme.titleLarge),
+        TextButton.icon(
+          icon: Icon(_open ? Icons.expand_less : Icons.expand_more),
+          label: Text(_open ? l.hideTable : l.showTable),
+          onPressed: () => setState(() => _open = !_open),
+        ),
+        if (_open) IllustrationTable(rows: widget.rows),
+      ],
+    );
   }
 }

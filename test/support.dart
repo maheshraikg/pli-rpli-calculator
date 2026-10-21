@@ -51,7 +51,7 @@ Future<void> scrollTo(WidgetTester tester, Finder finder) => tester.scrollUntilV
       200,
       scrollable: find
           .descendant(
-            of: find.byWidgetPredicate((w) => w is ListView || w is SingleChildScrollView),
+            of: find.byWidgetPredicate((w) => w is ListView || w is SingleChildScrollView || w is CustomScrollView),
             matching: find.byType(Scrollable),
           )
           .first,

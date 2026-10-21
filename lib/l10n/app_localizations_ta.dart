@@ -956,4 +956,60 @@ class AppLocalizationsTa extends AppLocalizations {
   String appVersion(String version) {
     return 'பதிப்பு $version';
   }
+
+  @override
+  String get homeTagline =>
+      'PLI மற்றும் RPLI பிரீமியம், போனஸ், முதிர்வு கணிப்பான்';
+
+  @override
+  String get quickPremiumTitle => 'பிரீமியம் கணக்கிடு';
+
+  @override
+  String get quickPremiumBody =>
+      'எந்தத் திட்டம், வயது, காப்பீட்டுத் தொகையும் — அனைத்து இடைவெளிகளும்';
+
+  @override
+  String get sectionCalculators => 'கணிப்பான்கள்';
+
+  @override
+  String get sectionServicing => 'பாலிசி சேவைகள்';
+
+  @override
+  String get sectionLearn => 'அறிக';
+
+  @override
+  String get descPremium => 'ஒவ்வொரு இடைவெளிக்கும் பிரீமியம்';
+
+  @override
+  String get descMaturity => 'போனஸ் மற்றும் முதிர்வுத் தொகை';
+
+  @override
+  String get descCompare => 'திட்டங்கள் அருகருகே';
+
+  @override
+  String get descAfford => 'உங்கள் பட்ஜெட்டில் சிறந்த பாதுகாப்பு';
+
+  @override
+  String get descPolicies => 'சேமித்த பாலிசிகள், தவணைத் தேதிகள்';
+
+  @override
+  String get descTools => 'கடன், புதுப்பித்தல், பெய்டு-அப்';
+
+  @override
+  String get descQuotation => 'PDF விலைப்புள்ளி பகிர்';
+
+  @override
+  String get descEligibility => 'PLI அல்லது RPLI யார் எடுக்கலாம்';
+
+  @override
+  String get descPlans => 'திட்ட விதிகள், கேள்விகள்';
+
+  @override
+  String get descAbout => 'தனியுரிமை மற்றும் விகிதத் தரவு';
+
+  @override
+  String get sectionPersonTitle => 'பாலிசிதாரர்';
+
+  @override
+  String get sectionCoverTitle => 'பாதுகாப்பு மற்றும் செலுத்தல்';
 }

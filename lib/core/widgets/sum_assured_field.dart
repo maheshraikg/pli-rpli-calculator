@@ -49,7 +49,7 @@ class _SumAssuredFieldState extends State<SumAssuredField> {
         inputFormatters: [FilteringTextInputFormatter.digitsOnly, LengthLimitingTextInputFormatter(9)],
         decoration: InputDecoration(
           labelText: l.sumAssuredLabel,
-          border: const OutlineInputBorder(),
+          
           helperText: v == null ? null : formatRupees(Paise.wholeRupees(v)),
         ),
         onChanged: (text) => widget.onChanged(int.tryParse(text)),

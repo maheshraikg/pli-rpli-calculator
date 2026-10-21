@@ -952,4 +952,60 @@ class AppLocalizationsAs extends AppLocalizations {
   String appVersion(String version) {
     return 'সংস্কৰণ $version';
   }
+
+  @override
+  String get homeTagline =>
+      'PLI আৰু RPLI প্ৰিমিয়াম, বোনাছ আৰু ম্যাদ পূৰ্ণ কেলকুলেটৰ';
+
+  @override
+  String get quickPremiumTitle => 'প্ৰিমিয়াম গণনা কৰক';
+
+  @override
+  String get quickPremiumBody =>
+      'যিকোনো আঁচনি, বয়স আৰু বীমাৰ পৰিমাণ — সকলো ব্যৱধান';
+
+  @override
+  String get sectionCalculators => 'কেলকুলেটৰ';
+
+  @override
+  String get sectionServicing => 'পলিচি সেৱা';
+
+  @override
+  String get sectionLearn => 'জানক';
+
+  @override
+  String get descPremium => 'প্ৰতিটো ব্যৱধানৰ প্ৰিমিয়াম';
+
+  @override
+  String get descMaturity => 'বোনাছ আৰু ম্যাদ পূৰ্ণৰ পৰিমাণ';
+
+  @override
+  String get descCompare => 'আঁচনি কাষে কাষে';
+
+  @override
+  String get descAfford => 'আপোনাৰ বাজেটত শ্ৰেষ্ঠ সুৰক্ষা';
+
+  @override
+  String get descPolicies => 'সংৰক্ষিত পলিচি আৰু তাৰিখ';
+
+  @override
+  String get descTools => 'ঋণ, পুনৰুজ্জীৱন, পেইড-আপ';
+
+  @override
+  String get descQuotation => 'PDF কোটেশ্বন শ্বেয়াৰ কৰক';
+
+  @override
+  String get descEligibility => 'PLI বা RPLI কোনে ল\'ব পাৰে';
+
+  @override
+  String get descPlans => 'আঁচনিৰ নিয়ম আৰু প্ৰশ্ন';
+
+  @override
+  String get descAbout => 'গোপনীয়তা আৰু হাৰৰ তথ্য';
+
+  @override
+  String get sectionPersonTitle => 'পলিচিধাৰক';
+
+  @override
+  String get sectionCoverTitle => 'সুৰক্ষা আৰু পৰিশোধ';
 }

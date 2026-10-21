@@ -15,12 +15,13 @@ ROOT = Path(__file__).resolve().parents[1]
 RES = ROOT / 'android/app/src/main/res'
 
 
-def umbrella(size, scale=0.62, bg=None, rounded=False):
+def umbrella(size, scale=0.62, bg=None, rounded=False, ink=None):
     """Umbrella centred in a size×size canvas, occupying `scale` of it."""
     k = 4  # supersample
     n = size * k
     img = Image.new('RGBA', (n, n), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
+    WHITE = ink or (255, 255, 255, 255)
     if bg:
         if rounded:
             d.rounded_rectangle([0, 0, n - 1, n - 1], radius=int(n * 0.22), fill=bg)
@@ -66,6 +67,9 @@ def main():
     (RES / 'values/ic_launcher_background.xml').write_text(
         '<?xml version="1.0" encoding="utf-8"?>\n<resources>\n'
         '    <color name="ic_launcher_background">#C8102E</color>\n</resources>\n')
+    # In-app header mark: red umbrella on transparent.
+    (ROOT / 'assets/images').mkdir(parents=True, exist_ok=True)
+    umbrella(192, 0.9, ink=RED).save(ROOT / 'assets/images/umbrella.png', optimize=True)
     store = ROOT / 'docs/store'
     store.mkdir(parents=True, exist_ok=True)
     umbrella(512, 0.62, RED).save(store / 'icon_512.png')

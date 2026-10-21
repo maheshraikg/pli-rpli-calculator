@@ -953,4 +953,60 @@ class AppLocalizationsTe extends AppLocalizations {
   String appVersion(String version) {
     return 'వెర్షన్ $version';
   }
+
+  @override
+  String get homeTagline =>
+      'PLI మరియు RPLI ప్రీమియం, బోనస్, మెచ్యూరిటీ కాలిక్యులేటర్';
+
+  @override
+  String get quickPremiumTitle => 'ప్రీమియం లెక్కించండి';
+
+  @override
+  String get quickPremiumBody =>
+      'ఏ పథకం, వయస్సు, బీమా మొత్తమైనా — అన్ని విధానాలు';
+
+  @override
+  String get sectionCalculators => 'కాలిక్యులేటర్లు';
+
+  @override
+  String get sectionServicing => 'పాలసీ సేవలు';
+
+  @override
+  String get sectionLearn => 'తెలుసుకోండి';
+
+  @override
+  String get descPremium => 'ప్రతి విధానానికి ప్రీమియం';
+
+  @override
+  String get descMaturity => 'బోనస్ మరియు మెచ్యూరిటీ మొత్తం';
+
+  @override
+  String get descCompare => 'పథకాలు పక్కపక్కన';
+
+  @override
+  String get descAfford => 'మీ బడ్జెట్‌లో ఉత్తమ రక్షణ';
+
+  @override
+  String get descPolicies => 'సేవ్ చేసిన పాలసీలు, బకాయి తేదీలు';
+
+  @override
+  String get descTools => 'రుణం, పునరుద్ధరణ, పెయిడ్-అప్';
+
+  @override
+  String get descQuotation => 'PDF కొటేషన్ షేర్ చేయండి';
+
+  @override
+  String get descEligibility => 'PLI లేదా RPLI ఎవరు తీసుకోవచ్చు';
+
+  @override
+  String get descPlans => 'పథకం నియమాలు, ప్రశ్నలు';
+
+  @override
+  String get descAbout => 'గోప్యత మరియు రేట్ల డేటా';
+
+  @override
+  String get sectionPersonTitle => 'పాలసీదారు';
+
+  @override
+  String get sectionCoverTitle => 'రక్షణ మరియు చెల్లింపు';
 }

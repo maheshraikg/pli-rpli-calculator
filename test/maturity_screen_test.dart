@@ -8,6 +8,7 @@ void main() {
   testWidgets('default Santosh ₹1L, age 30 → 60: ₹2,56,200 with disclaimer', (tester) async {
     await pumpApp(tester, location: '/maturity');
     // 30 years × ₹5,200 bonus + ₹200 terminal bonus + ₹1,00,000 SA.
+    await scrollTo(tester, find.text('₹2,56,200'));
     expect(find.text('₹2,56,200'), findsOneWidget);
     expect(find.text('₹1,56,000'), findsOneWidget);
     expect(find.text('₹200'), findsOneWidget);
@@ -17,8 +18,12 @@ void main() {
 
   testWidgets('changing maturity age recalculates instantly', (tester) async {
     await pumpApp(tester, location: '/maturity');
+    await scrollTo(tester, find.widgetWithText(ChoiceChip, '50'));
+    await tester.ensureVisible(find.widgetWithText(ChoiceChip, '50'));
+    await tester.pumpAndSettle();
     await tester.tap(find.widgetWithText(ChoiceChip, '50'));
     await tester.pumpAndSettle();
+    await scrollTo(tester, find.text('₹2,04,200'));
     expect(find.text('₹2,04,200'), findsOneWidget);
   });
 
@@ -29,6 +34,7 @@ void main() {
       ..selectPlan(data.rules.plan('rpli_gram_priya'))
       ..setEntryAge(47);
     await tester.pumpAndSettle();
+    await scrollTo(tester, find.textContaining('entry age is 20–45. Your age: 47'));
     expect(find.textContaining('entry age is 20–45. Your age: 47'), findsOneWidget);
   });
 
@@ -65,6 +71,7 @@ void main() {
   testWidgets('renders in Kannada', (tester) async {
     await pumpApp(tester, locale: const Locale('kn'), location: '/maturity');
     expect(find.text('ಪಕ್ವತೆ ಮತ್ತು ಬೋನಸ್'), findsOneWidget);
+    await scrollTo(tester, find.text('₹2,56,200'));
     expect(find.text('ಪಕ್ವತೆ ಮೊತ್ತ'), findsOneWidget);
     expect(find.text('₹2,56,200'), findsOneWidget);
   });

@@ -41,7 +41,7 @@ class _AmountFieldState extends State<AmountField> {
       inputFormatters: [FilteringTextInputFormatter.digitsOnly, LengthLimitingTextInputFormatter(9)],
       decoration: InputDecoration(
         labelText: widget.label,
-        border: const OutlineInputBorder(),
+        
         helperText: widget.rupees && v != null ? formatRupees(Paise.wholeRupees(v)) : null,
       ),
       onChanged: (t) => widget.onChanged(int.tryParse(t)),

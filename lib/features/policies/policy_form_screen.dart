@@ -49,16 +49,20 @@ class _PolicyFormScreenState extends ConsumerState<PolicyFormScreen> {
     _premium = existing.premiumRupees;
     _reminders = existing.reminders;
     final scheme = ref.read(appDataProvider).value?.rules.plan(existing.planId).scheme ?? Scheme.pli;
-    form.replace(ref.read(planConfigProvider(policyFormKey)).copyWith(
-      planId: existing.planId,
-      scheme: scheme,
-      manualAge: existing.entryAge,
-      clearDob: true,
-      sumAssured: existing.sumAssured,
-      column: existing.column,
-      frequency: existing.frequency,
-      commencement: existing.commencement,
-    ));
+    form.replace(
+      ref
+          .read(planConfigProvider(policyFormKey))
+          .copyWith(
+            planId: existing.planId,
+            scheme: scheme,
+            manualAge: existing.entryAge,
+            clearDob: true,
+            sumAssured: existing.sumAssured,
+            column: existing.column,
+            frequency: existing.frequency,
+            commencement: existing.commencement,
+          ),
+    );
   }
 
   @override
@@ -77,37 +81,40 @@ class _PolicyFormScreenState extends ConsumerState<PolicyFormScreen> {
       title: widget.id == null ? l.addPolicy : l.editPolicy,
       builder: (context, data) {
         final e = ref.watch(planEvaluationProvider(policyFormKey));
-        return ListView(padding: const EdgeInsets.all(16), children: [
-          TextField(
-            controller: _name,
-            textCapitalization: TextCapitalization.words,
-            decoration: InputDecoration(labelText: l.holderNameLabel, border: const OutlineInputBorder(), errorText: required(_name.text)),
-            onChanged: (_) => setState(() {}),
-          ),
-          const SizedBox(height: 16),
-          TextField(
-            controller: _number,
-            decoration: InputDecoration(labelText: l.policyNumberLabel, border: const OutlineInputBorder(), errorText: required(_number.text)),
-            onChanged: (_) => setState(() {}),
-          ),
-          const SizedBox(height: 16),
-          PlanConfigForm(configKey: policyFormKey, data: data),
-          const SizedBox(height: 16),
-          AmountField(label: l.premiumAmountLabel, value: _premium, onChanged: (v) => setState(() => _premium = v)),
-          if (_submitted && _premium == null)
-            Text(l.requiredField, style: TextStyle(color: Theme.of(context).colorScheme.error)),
-          SwitchListTile(
-            contentPadding: EdgeInsets.zero,
-            title: Text(l.remindersLabel),
-            value: _reminders,
-            onChanged: (v) => setState(() => _reminders = v),
-          ),
-          if (e != null && !e.isValid) EvaluationIssues(evaluation: e),
-          const SizedBox(height: 16),
-          FilledButton.icon(icon: const Icon(Icons.save), label: Text(l.save), onPressed: () => _save(e)),
-          const SizedBox(height: 8),
-          Text(l.savedLocally, style: Theme.of(context).textTheme.bodySmall),
-        ]);
+        return ListView(
+          padding: const EdgeInsets.all(16),
+          children: [
+            TextField(
+              controller: _name,
+              textCapitalization: TextCapitalization.words,
+              decoration: InputDecoration(labelText: l.holderNameLabel, errorText: required(_name.text)),
+              onChanged: (_) => setState(() {}),
+            ),
+            const SizedBox(height: 16),
+            TextField(
+              controller: _number,
+              decoration: InputDecoration(labelText: l.policyNumberLabel, errorText: required(_number.text)),
+              onChanged: (_) => setState(() {}),
+            ),
+            const SizedBox(height: 16),
+            PlanConfigForm(configKey: policyFormKey, data: data),
+            const SizedBox(height: 16),
+            AmountField(label: l.premiumAmountLabel, value: _premium, onChanged: (v) => setState(() => _premium = v)),
+            if (_submitted && _premium == null)
+              Text(l.requiredField, style: TextStyle(color: Theme.of(context).colorScheme.error)),
+            SwitchListTile(
+              contentPadding: EdgeInsets.zero,
+              title: Text(l.remindersLabel),
+              value: _reminders,
+              onChanged: (v) => setState(() => _reminders = v),
+            ),
+            if (e != null && !e.isValid) EvaluationIssues(evaluation: e),
+            const SizedBox(height: 16),
+            FilledButton.icon(icon: const Icon(Icons.save), label: Text(l.save), onPressed: () => _save(e)),
+            const SizedBox(height: 8),
+            Text(l.savedLocally, style: Theme.of(context).textTheme.bodySmall),
+          ],
+        );
       },
     );
   }

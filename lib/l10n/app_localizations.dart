@@ -1685,6 +1685,114 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Version {version}'**
   String appVersion(String version);
+
+  /// No description provided for @homeTagline.
+  ///
+  /// In en, this message translates to:
+  /// **'PLI & RPLI premium, bonus and maturity calculator'**
+  String get homeTagline;
+
+  /// No description provided for @quickPremiumTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Calculate premium'**
+  String get quickPremiumTitle;
+
+  /// No description provided for @quickPremiumBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Any plan, age and sum assured — all frequencies'**
+  String get quickPremiumBody;
+
+  /// No description provided for @sectionCalculators.
+  ///
+  /// In en, this message translates to:
+  /// **'Calculators'**
+  String get sectionCalculators;
+
+  /// No description provided for @sectionServicing.
+  ///
+  /// In en, this message translates to:
+  /// **'Policy servicing'**
+  String get sectionServicing;
+
+  /// No description provided for @sectionLearn.
+  ///
+  /// In en, this message translates to:
+  /// **'Learn'**
+  String get sectionLearn;
+
+  /// No description provided for @descPremium.
+  ///
+  /// In en, this message translates to:
+  /// **'Premium for every frequency'**
+  String get descPremium;
+
+  /// No description provided for @descMaturity.
+  ///
+  /// In en, this message translates to:
+  /// **'Bonus and maturity value'**
+  String get descMaturity;
+
+  /// No description provided for @descCompare.
+  ///
+  /// In en, this message translates to:
+  /// **'Plans side by side'**
+  String get descCompare;
+
+  /// No description provided for @descAfford.
+  ///
+  /// In en, this message translates to:
+  /// **'Best cover for your budget'**
+  String get descAfford;
+
+  /// No description provided for @descPolicies.
+  ///
+  /// In en, this message translates to:
+  /// **'Saved policies and due dates'**
+  String get descPolicies;
+
+  /// No description provided for @descTools.
+  ///
+  /// In en, this message translates to:
+  /// **'Loan, revival, paid-up'**
+  String get descTools;
+
+  /// No description provided for @descQuotation.
+  ///
+  /// In en, this message translates to:
+  /// **'Share a PDF quote'**
+  String get descQuotation;
+
+  /// No description provided for @descEligibility.
+  ///
+  /// In en, this message translates to:
+  /// **'Who can buy PLI or RPLI'**
+  String get descEligibility;
+
+  /// No description provided for @descPlans.
+  ///
+  /// In en, this message translates to:
+  /// **'Plan rules and FAQs'**
+  String get descPlans;
+
+  /// No description provided for @descAbout.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy and rate data'**
+  String get descAbout;
+
+  /// No description provided for @sectionPersonTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Policy holder'**
+  String get sectionPersonTitle;
+
+  /// No description provided for @sectionCoverTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Cover and payment'**
+  String get sectionCoverTitle;
 }
 
 class _AppLocalizationsDelegate

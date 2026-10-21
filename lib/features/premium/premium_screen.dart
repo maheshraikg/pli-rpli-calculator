@@ -6,6 +6,7 @@ import 'package:pli_engine/pli_engine.dart';
 import '../../core/formatters.dart';
 import '../../core/widgets/data_scaffold.dart';
 import '../../core/widgets/info_card.dart';
+import '../../core/widgets/ui.dart';
 import '../../l10n/app_localizations.dart';
 import '../common/plan_config_form.dart';
 import '../common/plan_evaluation.dart';
@@ -19,13 +20,16 @@ class PremiumScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => DataScaffold(
-        title: AppLocalizations.of(context).premiumTitle,
-        builder: (context, data) => ListView(padding: const EdgeInsets.all(16), children: [
-          PlanConfigForm(configKey: premiumConfigKey, data: data),
-          const SizedBox(height: 16),
-          const PremiumResultView(configKey: premiumConfigKey),
-        ]),
-      );
+    title: AppLocalizations.of(context).premiumTitle,
+    builder: (context, data) => ListView(
+      padding: const EdgeInsets.all(16),
+      children: [
+        PlanConfigForm(configKey: premiumConfigKey, data: data),
+        const SizedBox(height: 16),
+        const PremiumResultView(configKey: premiumConfigKey),
+      ],
+    ),
+  );
 }
 
 class PremiumResultView extends ConsumerWidget {
@@ -37,7 +41,6 @@ class PremiumResultView extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l = AppLocalizations.of(context);
-    final theme = Theme.of(context);
     final e = ref.watch(planEvaluationProvider(configKey));
     if (e == null) return const SizedBox.shrink();
     if (!e.isValid) return EvaluationIssues(evaluation: e);
@@ -48,80 +51,181 @@ class PremiumResultView extends ConsumerWidget {
     final unavailable = e.premiums[freq];
     const gap = SizedBox(height: 16);
 
-    return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-      EvaluationIssues(evaluation: e),
-      if (quote == null)
-        InfoCard(
-          icon: Icons.table_chart_outlined,
-          title: l.notAvailableTitle,
-          message: unavailable is PremiumUnavailable && unavailable.reason == PremiumUnavailableReason.notInTable
-              ? l.notInTable
-              : l.noTableForPlan,
-        )
-      else
-        Card(
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-              Text('${l.premiumPerInstalment} • ${frequencyName(l, freq)}', style: theme.textTheme.titleMedium),
-              Text(
-                formatRupees(quote.premium),
-                style: theme.textTheme.displaySmall?.copyWith(color: theme.colorScheme.primary, fontWeight: FontWeight.bold),
+    final notes = Theme.of(context).textTheme.bodySmall;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        EvaluationIssues(evaluation: e),
+        if (quote == null)
+          InfoCard(
+            icon: Icons.table_chart_outlined,
+            title: l.notAvailableTitle,
+            message: unavailable is PremiumUnavailable && unavailable.reason == PremiumUnavailableReason.notInTable
+                ? l.notInTable
+                : l.noTableForPlan,
+          )
+        else ...[
+          HeroAmountCard(
+            label: '${l.premiumPerInstalment} • ${frequencyName(l, freq)}',
+            amount: formatRupees(quote.premium),
+            caption: e.plan.name(Localizations.localeOf(context).languageCode),
+            details: [
+              ('${l.tablePremiumRow} (₹10,000)', formatRupees(quote.tablePremium)),
+              (l.saRebateRow, '− ${formatRupees(quote.saRebate)}'),
+              (l.payingTermRow, l.termYears(quote.payingYears)),
+            ],
+          ),
+          StatGrid(
+            tiles: [
+              StatTile(
+                icon: Icons.payments_rounded,
+                label: l.totalPremiumRow(quote.totalInstalments),
+                value: formatRupees(quote.totalPremium),
               ),
-              const Divider(height: 24),
-              ValueRow('${l.tablePremiumRow} (₹10,000)', formatRupees(quote.tablePremium)),
-              ValueRow(l.saRebateRow, '− ${formatRupees(quote.saRebate)}'),
-              ValueRow(l.payingTermRow, l.termYears(quote.payingYears)),
-              ValueRow(l.totalPremiumRow(quote.totalInstalments), formatRupees(quote.totalPremium)),
-              if (p != null) ...[
-                ValueRow(p.payments.length > 1 ? l.resultTotalBenefits : l.resultMaturityValue, formatRupees(p.totalBenefits),
-                    emphasis: true),
-                ValueRow(l.lifeCoverRow, formatRupees(Paise.wholeRupees(p.sumAssured))),
+              if (p != null)
+                StatTile(
+                  icon: Icons.savings_rounded,
+                  color: const Color(0xFF2E7D32),
+                  label: p.payments.length > 1 ? l.resultTotalBenefits : l.resultMaturityValue,
+                  value: formatRupees(p.totalBenefits),
+                ),
+              if (e.returnRate != null)
+                StatTile(
+                  icon: Icons.trending_up_rounded,
+                  color: const Color(0xFFB26A00),
+                  label: l.returnRow,
+                  value: l.returnValue(percentText(e.returnRate!)),
+                ),
+              if (p != null)
+                StatTile(
+                  icon: Icons.shield_rounded,
+                  color: const Color(0xFF3949AB),
+                  label: l.lifeCoverRow,
+                  value: formatRupees(Paise.wholeRupees(p.sumAssured)),
+                ),
+            ],
+          ),
+          SectionCard(
+            title: l.allFrequenciesTitle,
+            icon: Icons.event_repeat_rounded,
+            child: Column(
+              children: [
+                for (final f in PremiumFrequency.values)
+                  _FrequencyRow(
+                    label: frequencyName(l, f),
+                    value: switch (e.quoteFor(f)) {
+                      final q? => formatRupees(q.premium),
+                      null => l.notInTable,
+                    },
+                    selected: f == freq,
+                  ),
               ],
-              if (e.returnRate != null) ValueRow(l.returnRow, l.returnValue(percentText(e.returnRate!))),
-            ]),
+            ),
           ),
-        ),
-      if (e.premiums.isNotEmpty && quote != null) ...[
-        gap,
-        Text(l.allFrequenciesTitle, style: theme.textTheme.titleLarge),
-        for (final f in PremiumFrequency.values)
-          ValueRow(
-            frequencyName(l, f),
-            switch (e.quoteFor(f)) {
-              final q? => formatRupees(q.premium),
-              null => l.notInTable,
-            },
-          ),
-      ],
-      if (e.projectionPending) ...[
-        gap,
-        InfoCard(icon: Icons.hourglass_empty, title: l.notAvailableTitle, message: l.rulesPendingBody),
-      ],
-      if (p != null) ...[
-        if (quote != null) ...[gap, PaidVsBenefitsChart(paid: quote.totalPremium, received: p.totalBenefits)],
-        if (p.payments.length > 1) ...[
-          gap,
-          Text(l.timelineTitle, style: theme.textTheme.titleLarge),
-          const SizedBox(height: 12),
-          BenefitTimeline(payments: p.payments),
-          Text(l.timelineDeathNote, style: theme.textTheme.bodySmall),
         ],
-        gap,
-        ExpandableIllustration(rows: e.illustration),
-        Text(l.projectionNote(p.financialYear), style: theme.textTheme.bodySmall),
+        if (e.projectionPending)
+          InfoCard(icon: Icons.hourglass_empty, title: l.notAvailableTitle, message: l.rulesPendingBody),
+        if (p != null) ...[
+          if (quote != null)
+            SectionCard(
+              child: PaidVsBenefitsChart(paid: quote.totalPremium, received: p.totalBenefits),
+            ),
+          if (p.payments.length > 1)
+            SectionCard(
+              title: l.timelineTitle,
+              icon: Icons.timeline_rounded,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  BenefitTimeline(payments: p.payments),
+                  Text(l.timelineDeathNote, style: notes),
+                ],
+              ),
+            ),
+          SectionCard(child: ExpandableIllustration(rows: e.illustration)),
+        ],
+        const SizedBox(height: 8),
+        _Notes(lines: [if (p != null) l.projectionNote(p.financialYear), l.gstNote, l.bonusDisclaimer]),
+        if (showQuotationButton && quote != null) ...[
+          gap,
+          FilledButton.icon(
+            icon: const Icon(Icons.picture_as_pdf),
+            label: Text(l.makeQuotation),
+            onPressed: () => context.push('/quotation'),
+          ),
+        ],
       ],
-      const SizedBox(height: 8),
-      Text(l.gstNote, style: theme.textTheme.bodySmall),
-      Text(l.bonusDisclaimer, style: theme.textTheme.bodySmall?.copyWith(fontWeight: FontWeight.bold)),
-      if (showQuotationButton && quote != null) ...[
-        gap,
-        FilledButton.icon(
-          icon: const Icon(Icons.picture_as_pdf),
-          label: Text(l.makeQuotation),
-          onPressed: () => context.push('/quotation'),
-        ),
-      ],
-    ]);
+    );
+  }
+}
+
+class _FrequencyRow extends StatelessWidget {
+  const _FrequencyRow({required this.label, required this.value, required this.selected});
+
+  final String label;
+  final String value;
+  final bool selected;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 3),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+      decoration: BoxDecoration(
+        color: selected ? theme.colorScheme.primaryContainer.withValues(alpha: 0.6) : null,
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Row(
+        children: [
+          Expanded(child: Text(label, style: selected ? theme.textTheme.titleSmall : theme.textTheme.bodyMedium)),
+          Text(value, style: theme.textTheme.titleMedium),
+        ],
+      ),
+    );
+  }
+}
+
+/// Disclaimers in a quiet tinted box.
+class _Notes extends StatelessWidget {
+  const _Notes({required this.lines});
+
+  final List<String> lines;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return Container(
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        color: theme.colorScheme.surfaceContainerHighest.withValues(alpha: 0.5),
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(Icons.info_outline_rounded, size: 18, color: theme.colorScheme.onSurfaceVariant),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                for (final (i, t) in lines.indexed)
+                  Padding(
+                    padding: EdgeInsets.only(top: i == 0 ? 0 : 6),
+                    child: Text(
+                      t,
+                      style: theme.textTheme.bodySmall?.copyWith(
+                        fontWeight: i == lines.length - 1 ? FontWeight.w700 : null,
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

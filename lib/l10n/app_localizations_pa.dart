@@ -948,4 +948,60 @@ class AppLocalizationsPa extends AppLocalizations {
   String appVersion(String version) {
     return 'ਸੰਸਕਰਣ $version';
   }
+
+  @override
+  String get homeTagline =>
+      'PLI ਅਤੇ RPLI ਪ੍ਰੀਮੀਅਮ, ਬੋਨਸ ਅਤੇ ਮਿਆਦ ਪੂਰੀ ਕੈਲਕੁਲੇਟਰ';
+
+  @override
+  String get quickPremiumTitle => 'ਪ੍ਰੀਮੀਅਮ ਕੱਢੋ';
+
+  @override
+  String get quickPremiumBody =>
+      'ਕੋਈ ਵੀ ਯੋਜਨਾ, ਉਮਰ ਅਤੇ ਬੀਮਾ ਰਕਮ — ਸਾਰੀਆਂ ਬਾਰੰਬਾਰਤਾਵਾਂ';
+
+  @override
+  String get sectionCalculators => 'ਕੈਲਕੁਲੇਟਰ';
+
+  @override
+  String get sectionServicing => 'ਪਾਲਿਸੀ ਸੇਵਾਵਾਂ';
+
+  @override
+  String get sectionLearn => 'ਜਾਣਕਾਰੀ';
+
+  @override
+  String get descPremium => 'ਹਰ ਬਾਰੰਬਾਰਤਾ ਦਾ ਪ੍ਰੀਮੀਅਮ';
+
+  @override
+  String get descMaturity => 'ਬੋਨਸ ਅਤੇ ਮਿਆਦ ਪੂਰੀ ਰਕਮ';
+
+  @override
+  String get descCompare => 'ਯੋਜਨਾਵਾਂ ਨਾਲ-ਨਾਲ';
+
+  @override
+  String get descAfford => 'ਤੁਹਾਡੇ ਬਜਟ ਵਿੱਚ ਵਧੀਆ ਸੁਰੱਖਿਆ';
+
+  @override
+  String get descPolicies => 'ਸੰਭਾਲੀਆਂ ਪਾਲਿਸੀਆਂ ਅਤੇ ਮਿਤੀਆਂ';
+
+  @override
+  String get descTools => 'ਕਰਜ਼ਾ, ਮੁੜ-ਚਾਲੂ, ਪੇਡ-ਅੱਪ';
+
+  @override
+  String get descQuotation => 'PDF ਕੋਟੇਸ਼ਨ ਸਾਂਝਾ ਕਰੋ';
+
+  @override
+  String get descEligibility => 'PLI ਜਾਂ RPLI ਕੌਣ ਲੈ ਸਕਦਾ ਹੈ';
+
+  @override
+  String get descPlans => 'ਯੋਜਨਾ ਨਿਯਮ ਅਤੇ ਸਵਾਲ';
+
+  @override
+  String get descAbout => 'ਨਿੱਜਤਾ ਅਤੇ ਦਰ ਡਾਟਾ';
+
+  @override
+  String get sectionPersonTitle => 'ਪਾਲਿਸੀਧਾਰਕ';
+
+  @override
+  String get sectionCoverTitle => 'ਸੁਰੱਖਿਆ ਅਤੇ ਭੁਗਤਾਨ';
 }

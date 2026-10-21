@@ -951,4 +951,60 @@ class AppLocalizationsKn extends AppLocalizations {
   String appVersion(String version) {
     return 'ಆವೃತ್ತಿ $version';
   }
+
+  @override
+  String get homeTagline =>
+      'PLI ಮತ್ತು RPLI ಪ್ರೀಮಿಯಂ, ಬೋನಸ್ ಮತ್ತು ಪಕ್ವತೆ ಕ್ಯಾಲ್ಕುಲೇಟರ್';
+
+  @override
+  String get quickPremiumTitle => 'ಪ್ರೀಮಿಯಂ ಲೆಕ್ಕಹಾಕಿ';
+
+  @override
+  String get quickPremiumBody =>
+      'ಯಾವುದೇ ಯೋಜನೆ, ವಯಸ್ಸು, ವಿಮಾ ಮೊತ್ತ — ಎಲ್ಲಾ ಆವರ್ತನಗಳು';
+
+  @override
+  String get sectionCalculators => 'ಕ್ಯಾಲ್ಕುಲೇಟರ್‌ಗಳು';
+
+  @override
+  String get sectionServicing => 'ಪಾಲಿಸಿ ಸೇವೆಗಳು';
+
+  @override
+  String get sectionLearn => 'ತಿಳಿಯಿರಿ';
+
+  @override
+  String get descPremium => 'ಎಲ್ಲಾ ಆವರ್ತನಗಳ ಪ್ರೀಮಿಯಂ';
+
+  @override
+  String get descMaturity => 'ಬೋನಸ್ ಮತ್ತು ಪಕ್ವತೆ ಮೊತ್ತ';
+
+  @override
+  String get descCompare => 'ಯೋಜನೆಗಳು ಅಕ್ಕಪಕ್ಕ';
+
+  @override
+  String get descAfford => 'ನಿಮ್ಮ ಬಜೆಟ್‌ಗೆ ಉತ್ತಮ ರಕ್ಷಣೆ';
+
+  @override
+  String get descPolicies => 'ಉಳಿಸಿದ ಪಾಲಿಸಿಗಳು ಮತ್ತು ಕಂತುಗಳು';
+
+  @override
+  String get descTools => 'ಸಾಲ, ಪುನರುಜ್ಜೀವನ, ಪೇಡ್-ಅಪ್';
+
+  @override
+  String get descQuotation => 'PDF ಉಲ್ಲೇಖ ಹಂಚಿ';
+
+  @override
+  String get descEligibility => 'PLI ಅಥವಾ RPLI ಯಾರು ಪಡೆಯಬಹುದು';
+
+  @override
+  String get descPlans => 'ಯೋಜನೆ ನಿಯಮಗಳು ಮತ್ತು ಪ್ರಶ್ನೆಗಳು';
+
+  @override
+  String get descAbout => 'ಗೌಪ್ಯತೆ ಮತ್ತು ದರ ದತ್ತಾಂಶ';
+
+  @override
+  String get sectionPersonTitle => 'ಪಾಲಿಸಿದಾರರು';
+
+  @override
+  String get sectionCoverTitle => 'ವಿಮಾ ರಕ್ಷಣೆ ಮತ್ತು ಪಾವತಿ';
 }

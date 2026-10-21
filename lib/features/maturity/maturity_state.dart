@@ -38,38 +38,36 @@ class MaturityInput {
     int? termYears,
     int? spouseAge,
     DateTime? commencement,
-  }) =>
-      MaturityInput(
-        scheme: scheme,
-        planId: planId,
-        entryAge: entryAge ?? this.entryAge,
-        sumAssured: clearSumAssured ? null : sumAssured ?? this.sumAssured,
-        maturityAge: maturityAge ?? this.maturityAge,
-        termYears: termYears ?? this.termYears,
-        spouseAge: spouseAge ?? this.spouseAge,
-        commencement: commencement ?? this.commencement,
-      );
+  }) => MaturityInput(
+    scheme: scheme,
+    planId: planId,
+    entryAge: entryAge ?? this.entryAge,
+    sumAssured: clearSumAssured ? null : sumAssured ?? this.sumAssured,
+    maturityAge: maturityAge ?? this.maturityAge,
+    termYears: termYears ?? this.termYears,
+    spouseAge: spouseAge ?? this.spouseAge,
+    commencement: commencement ?? this.commencement,
+  );
 }
 
 class MaturityForm extends Notifier<MaturityInput> {
   @override
   MaturityInput build() => MaturityInput(
-        scheme: Scheme.pli,
-        planId: 'pli_santosh',
-        entryAge: 30,
-        sumAssured: 100000,
-        maturityAge: 60,
-        termYears: null,
-        spouseAge: 30,
-        commencement: ref.read(todayProvider),
-      );
+    scheme: Scheme.pli,
+    planId: 'pli_santosh',
+    entryAge: 30,
+    sumAssured: 100000,
+    maturityAge: 60,
+    termYears: null,
+    spouseAge: 30,
+    commencement: ref.read(todayProvider),
+  );
 
   void selectScheme(Scheme scheme, RuleSet rules) {
     if (scheme == state.scheme) return;
-    final plan = rules.plansFor(scheme).firstWhere(
-          (p) => projectionPendingReason(p.type) == null,
-          orElse: () => rules.plansFor(scheme).first,
-        );
+    final plan = rules
+        .plansFor(scheme)
+        .firstWhere((p) => projectionPendingReason(p.type) == null, orElse: () => rules.plansFor(scheme).first);
     _apply(plan, scheme: scheme);
   }
 
@@ -156,15 +154,17 @@ final maturityOutcomeProvider = Provider<MaturityOutcome?>((ref) {
   if (violations.isNotEmpty) return MaturityInvalid(violations);
 
   try {
-    return MaturityReady(projectNewPolicy(
-      rules,
-      planId: plan.id,
-      sumAssured: sa,
-      entryAge: input.entryAge,
-      maturityAge: input.maturityAge,
-      termYears: input.termYears,
-      commencement: input.commencement,
-    ));
+    return MaturityReady(
+      projectNewPolicy(
+        rules,
+        planId: plan.id,
+        sumAssured: sa,
+        entryAge: input.entryAge,
+        maturityAge: input.maturityAge,
+        termYears: input.termYears,
+        commencement: input.commencement,
+      ),
+    );
   } on MissingBonusRateException catch (e) {
     return MaturityMissingRate(e.financialYear);
   }

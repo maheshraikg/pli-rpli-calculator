@@ -951,4 +951,59 @@ class AppLocalizationsEn extends AppLocalizations {
   String appVersion(String version) {
     return 'Version $version';
   }
+
+  @override
+  String get homeTagline => 'PLI & RPLI premium, bonus and maturity calculator';
+
+  @override
+  String get quickPremiumTitle => 'Calculate premium';
+
+  @override
+  String get quickPremiumBody =>
+      'Any plan, age and sum assured — all frequencies';
+
+  @override
+  String get sectionCalculators => 'Calculators';
+
+  @override
+  String get sectionServicing => 'Policy servicing';
+
+  @override
+  String get sectionLearn => 'Learn';
+
+  @override
+  String get descPremium => 'Premium for every frequency';
+
+  @override
+  String get descMaturity => 'Bonus and maturity value';
+
+  @override
+  String get descCompare => 'Plans side by side';
+
+  @override
+  String get descAfford => 'Best cover for your budget';
+
+  @override
+  String get descPolicies => 'Saved policies and due dates';
+
+  @override
+  String get descTools => 'Loan, revival, paid-up';
+
+  @override
+  String get descQuotation => 'Share a PDF quote';
+
+  @override
+  String get descEligibility => 'Who can buy PLI or RPLI';
+
+  @override
+  String get descPlans => 'Plan rules and FAQs';
+
+  @override
+  String get descAbout => 'Privacy and rate data';
+
+  @override
+  String get sectionPersonTitle => 'Policy holder';
+
+  @override
+  String get sectionCoverTitle => 'Cover and payment';
 }

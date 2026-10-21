@@ -26,22 +26,28 @@ class PoliciesScreen extends ConsumerWidget {
     final policies = ref.watch(policiesProvider);
     final today = ref.watch(todayProvider);
     return DataScaffold(
-        title: l.policiesTitle,
-        floatingActionButton: FloatingActionButton.extended(
-          icon: const Icon(Icons.add),
-          label: Text(l.addPolicy),
-          onPressed: () => context.push('/policies/new'),
-        ),
-        builder: (context, data) => policies.isEmpty
-            ? ListView(padding: const EdgeInsets.all(16), children: [
+      title: l.policiesTitle,
+      floatingActionButton: FloatingActionButton.extended(
+        icon: const Icon(Icons.add),
+        label: Text(l.addPolicy),
+        onPressed: () => context.push('/policies/new'),
+      ),
+      builder: (context, data) => policies.isEmpty
+          ? ListView(
+              padding: const EdgeInsets.all(16),
+              children: [
                 InfoCard(icon: Icons.folder_open, message: l.noPolicies),
                 const SizedBox(height: 8),
                 Text(l.savedLocally, style: Theme.of(context).textTheme.bodySmall),
-              ])
-            : ListView(padding: const EdgeInsets.fromLTRB(16, 16, 16, 88), children: [
+              ],
+            )
+          : ListView(
+              padding: const EdgeInsets.fromLTRB(16, 16, 16, 88),
+              children: [
                 for (final p in policies) _PolicyTile(policy: p, data: data, today: today, lang: lang),
                 Text(l.savedLocally, style: Theme.of(context).textTheme.bodySmall),
-              ]),
+              ],
+            ),
     );
   }
 }
@@ -65,14 +71,71 @@ class _PolicyTile extends StatelessWidget {
       from: today,
       count: 1,
     );
+    final theme = Theme.of(context);
+    final initial = policy.holderName.isEmpty ? '?' : policy.holderName.characters.first.toUpperCase();
     return Card(
-      child: ListTile(
-        leading: Icon(policy.reminders ? Icons.notifications_active_outlined : Icons.description_outlined),
-        title: Text(policy.holderName),
-        subtitle: Text('${plan.name(lang)}\n${policy.policyNumber} • ${formatRupees(Paise.wholeRupees(policy.sumAssured))}\n'
-            '${next.isEmpty ? l.noMoreDues : l.nextDue(formatDate(context, next.first))}'),
-        isThreeLine: true,
+      child: InkWell(
         onTap: () => context.push('/policies/${policy.id}'),
+        child: Padding(
+          padding: const EdgeInsets.all(14),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CircleAvatar(
+                radius: 24,
+                backgroundColor: theme.colorScheme.primaryContainer,
+                child: Text(initial, style: theme.textTheme.titleLarge?.copyWith(color: theme.colorScheme.primary)),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Expanded(child: Text(policy.holderName, style: theme.textTheme.titleMedium)),
+                        if (policy.reminders)
+                          Icon(Icons.notifications_active_rounded, size: 18, color: theme.colorScheme.primary),
+                      ],
+                    ),
+                    Text(
+                      plan.name(lang),
+                      style: theme.textTheme.bodySmall,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    const SizedBox(height: 6),
+                    Text(
+                      '${policy.policyNumber} • ${formatRupees(Paise.wholeRupees(policy.sumAssured))}',
+                      style: theme.textTheme.bodyMedium,
+                    ),
+                    const SizedBox(height: 8),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                      decoration: BoxDecoration(
+                        color: theme.colorScheme.secondaryContainer,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(Icons.event_rounded, size: 14, color: theme.colorScheme.onSecondaryContainer),
+                          const SizedBox(width: 6),
+                          Flexible(
+                            child: Text(
+                              next.isEmpty ? l.noMoreDues : l.nextDue(formatDate(context, next.first)),
+                              style: theme.textTheme.labelMedium?.copyWith(color: theme.colorScheme.onSecondaryContainer),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

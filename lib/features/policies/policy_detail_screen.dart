@@ -6,10 +6,10 @@ import 'package:pli_engine/pli_engine.dart';
 import '../../core/formatters.dart';
 import '../../core/widgets/data_scaffold.dart';
 import '../../core/widgets/info_card.dart';
+import '../../core/widgets/ui.dart';
 import '../../data/saved_policy.dart';
 import '../../l10n/app_localizations.dart';
 import '../common/plan_config_form.dart';
-import '../common/result_widgets.dart';
 import '../maturity/maturity_state.dart' show todayProvider;
 import 'policies_screen.dart';
 import 'policies_state.dart';
@@ -18,8 +18,12 @@ ReminderText reminderText(BuildContext context) {
   final l = AppLocalizations.of(context);
   return (
     title: l.reminderTitle,
-    body: (SavedPolicy p, DateTime due) =>
-        l.reminderBody(p.holderName, formatRupees(Paise.wholeRupees(p.premiumRupees)), formatDate(context, due), p.policyNumber),
+    body: (SavedPolicy p, DateTime due) => l.reminderBody(
+      p.holderName,
+      formatRupees(Paise.wholeRupees(p.premiumRupees)),
+      formatDate(context, due),
+      p.policyNumber,
+    ),
   );
 }
 
@@ -40,7 +44,11 @@ class PolicyDetailScreen extends ConsumerWidget {
       title: policy?.holderName ?? l.policiesTitle,
       actions: [
         if (policy != null) ...[
-          IconButton(tooltip: l.editPolicy, icon: const Icon(Icons.edit), onPressed: () => context.push('/policies/$id/edit')),
+          IconButton(
+            tooltip: l.editPolicy,
+            icon: const Icon(Icons.edit),
+            onPressed: () => context.push('/policies/$id/edit'),
+          ),
           IconButton(
             tooltip: l.delete,
             icon: const Icon(Icons.delete_outline),
@@ -69,10 +77,21 @@ class PolicyDetailScreen extends ConsumerWidget {
         final plan = rules.plan(policy.planId);
         final paying = policyPayingYears(plan, policy);
         final dues = upcomingDueDates(
-            commencement: policy.commencement, frequency: policy.frequency, payingYears: paying, from: today, count: 5);
+          commencement: policy.commencement,
+          frequency: policy.frequency,
+          payingYears: paying,
+          from: today,
+          count: 5,
+        );
         final inForce = yearsInForce(policy.commencement, today);
-        final bonus = accruedBonus(rules, plan,
-            sumAssured: policy.sumAssured, commencement: policy.commencement, asOf: today, maxYears: _bonusYears(plan, policy));
+        final bonus = accruedBonus(
+          rules,
+          plan,
+          sumAssured: policy.sumAssured,
+          commencement: policy.commencement,
+          asOf: today,
+          maxYears: _bonusYears(plan, policy),
+        );
         MaturityProjection? projection;
         if (projectionPendingReason(plan.type) == null) {
           try {
@@ -91,58 +110,104 @@ class PolicyDetailScreen extends ConsumerWidget {
           }
         }
 
-        return ListView(padding: const EdgeInsets.all(16), children: [
-          Card(
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-                Text(plan.name(lang), style: theme.textTheme.titleMedium),
-                ValueRow(l.policyNumberLabel, policy.policyNumber),
-                ValueRow(l.sumAssuredRow, formatRupees(Paise.wholeRupees(policy.sumAssured))),
-                ValueRow(l.startDateLabel, formatDate(context, policy.commencement)),
-                ValueRow(l.premiumShort, '${formatRupees(Paise.wholeRupees(policy.premiumRupees))} • ${frequencyName(l, policy.frequency)}'),
-                ValueRow(l.yearsInForceRow, '$inForce'),
-                ValueRow(l.accruedBonusRow, formatRupees(bonus.total), emphasis: true),
-                if (projection != null) ...[
-                  ValueRow(l.projectedMaturityRow, formatRupees(projection.maturity.amount)),
-                  if (projection.maturity.date != null) Text(l.maturityOn(formatDate(context, projection.maturity.date!))),
-                ],
-              ]),
+        return ListView(
+          padding: const EdgeInsets.all(16),
+          children: [
+            HeroAmountCard(
+              icon: Icons.savings_rounded,
+              label: l.accruedBonusRow,
+              amount: formatRupees(bonus.total),
+              caption: plan.name(lang),
+              details: [
+                (l.policyNumberLabel, policy.policyNumber),
+                (l.sumAssuredRow, formatRupees(Paise.wholeRupees(policy.sumAssured))),
+                (
+                  l.premiumShort,
+                  '${formatRupees(Paise.wholeRupees(policy.premiumRupees))} • ${frequencyName(l, policy.frequency)}',
+                ),
+                (l.startDateLabel, formatDate(context, policy.commencement)),
+                (l.yearsInForceRow, '$inForce'),
+              ],
             ),
-          ),
-          if (!bonus.isComplete)
-            InfoCard(icon: Icons.info_outline, message: l.bonusMissingYears(bonus.missingYears.join(', '))),
-          const SizedBox(height: 16),
-          SwitchListTile(
-            contentPadding: EdgeInsets.zero,
-            title: Text(l.remindersLabel),
-            value: policy.reminders,
-            onChanged: (on) async {
-              final text = reminderText(context);
-              final granted = await ref
-                  .read(policiesProvider.notifier)
-                  .save(policy.copyWith(reminders: on), payingYears: paying, text: text);
-              if (!granted && context.mounted) {
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(l.remindersDenied)));
-              }
-            },
-          ),
-          Text(l.upcomingDues, style: theme.textTheme.titleLarge),
-          if (dues.isEmpty) Text(l.noMoreDues),
-          for (final d in dues)
-            ListTile(contentPadding: EdgeInsets.zero, leading: const Icon(Icons.event), title: Text(formatDate(context, d))),
-          const SizedBox(height: 8),
-          Text(l.bonusDisclaimer, style: theme.textTheme.bodySmall),
-        ]);
+            if (projection != null) ...[
+              StatGrid(
+                tiles: [
+                  StatTile(
+                    icon: Icons.flag_rounded,
+                    color: const Color(0xFF2E7D32),
+                    label: l.projectedMaturityRow,
+                    value: formatRupees(projection.maturity.amount),
+                  ),
+                ],
+              ),
+              if (projection.maturity.date != null)
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 4),
+                  child: Text(
+                    l.maturityOn(formatDate(context, projection.maturity.date!)),
+                    style: theme.textTheme.bodyMedium,
+                  ),
+                ),
+            ],
+            if (!bonus.isComplete)
+              InfoCard(icon: Icons.info_outline, message: l.bonusMissingYears(bonus.missingYears.join(', '))),
+            const SizedBox(height: 16),
+            SwitchListTile(
+              secondary: const IconBadge(Icons.notifications_active_rounded, size: 36),
+              title: Text(l.remindersLabel),
+              value: policy.reminders,
+              onChanged: (on) async {
+                final text = reminderText(context);
+                final granted = await ref
+                    .read(policiesProvider.notifier)
+                    .save(
+                      policy.copyWith(reminders: on),
+                      payingYears: paying,
+                      text: text,
+                    );
+                if (!granted && context.mounted) {
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(l.remindersDenied)));
+                }
+              },
+            ),
+            SectionCard(
+              title: l.upcomingDues,
+              icon: Icons.event_repeat_rounded,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  if (dues.isEmpty) Text(l.noMoreDues),
+                  for (final d in dues)
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 6),
+                      child: Row(
+                        children: [
+                          Icon(Icons.circle, size: 8, color: theme.colorScheme.primary),
+                          const SizedBox(width: 12),
+                          Expanded(child: Text(formatDate(context, d), style: theme.textTheme.bodyLarge)),
+                          Text(
+                            formatRupees(Paise.wholeRupees(policy.premiumRupees)),
+                            style: theme.textTheme.titleSmall,
+                          ),
+                        ],
+                      ),
+                    ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 8),
+            Text(l.bonusDisclaimer, style: theme.textTheme.bodySmall),
+          ],
+        );
       },
     );
   }
 
   /// Bonus stops accruing at maturity.
   int? _bonusYears(PlanRule plan, SavedPolicy p) => switch (plan.type) {
-        PlanType.ea => p.column - p.entryAge,
-        PlanType.wla => plan.wholeLifeMaturityAge! - p.entryAge,
-        PlanType.aea || PlanType.jointEa => p.column,
-        _ => null,
-      };
+    PlanType.ea => p.column - p.entryAge,
+    PlanType.wla => plan.wholeLifeMaturityAge! - p.entryAge,
+    PlanType.aea || PlanType.jointEa => p.column,
+    _ => null,
+  };
 }

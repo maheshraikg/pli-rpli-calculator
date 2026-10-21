@@ -29,6 +29,13 @@ Future<void> _load(String family, List<String> paths) async {
 Future<void> _shot(WidgetTester tester, String name, {double height = 2340}) async {
   tester.view.physicalSize = Size(1080, height);
   await tester.pumpAndSettle();
+  // Let asset images decode before capturing.
+  await tester.runAsync(() async {
+    for (final e in find.byType(Image).evaluate()) {
+      await precacheImage((e.widget as Image).image, e);
+    }
+  });
+  await tester.pumpAndSettle();
   await expectLater(find.byType(MaterialApp), matchesGoldenFile('out/$name.png'));
 }
 
@@ -51,6 +58,11 @@ void main() {
   testWidgets('01 home', (tester) async {
     await pumpApp(tester);
     await _shot(tester, '01_home');
+  });
+
+  testWidgets('01b home full', (tester) async {
+    await pumpApp(tester);
+    await _shot(tester, '01b_home_full', height: 4300);
   });
 
   testWidgets('02 premium', (tester) async {

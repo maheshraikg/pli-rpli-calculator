@@ -951,4 +951,59 @@ class AppLocalizationsUr extends AppLocalizations {
   String appVersion(String version) {
     return 'ورژن $version';
   }
+
+  @override
+  String get homeTagline => 'PLI اور RPLI پریمیم، بونس اور میچورٹی کیلکولیٹر';
+
+  @override
+  String get quickPremiumTitle => 'پریمیم معلوم کریں';
+
+  @override
+  String get quickPremiumBody =>
+      'کوئی بھی منصوبہ، عمر اور بیمہ رقم — تمام وقفے';
+
+  @override
+  String get sectionCalculators => 'کیلکولیٹر';
+
+  @override
+  String get sectionServicing => 'پالیسی خدمات';
+
+  @override
+  String get sectionLearn => 'معلومات';
+
+  @override
+  String get descPremium => 'ہر وقفے کا پریمیم';
+
+  @override
+  String get descMaturity => 'بونس اور میچورٹی رقم';
+
+  @override
+  String get descCompare => 'منصوبے ساتھ ساتھ';
+
+  @override
+  String get descAfford => 'آپ کے بجٹ میں بہترین تحفظ';
+
+  @override
+  String get descPolicies => 'محفوظ پالیسیاں اور تاریخیں';
+
+  @override
+  String get descTools => 'قرض، بحالی، پیڈ اپ';
+
+  @override
+  String get descQuotation => 'PDF کوٹیشن شیئر کریں';
+
+  @override
+  String get descEligibility => 'PLI یا RPLI کون لے سکتا ہے';
+
+  @override
+  String get descPlans => 'منصوبے کے قواعد اور سوالات';
+
+  @override
+  String get descAbout => 'رازداری اور شرح کا ڈیٹا';
+
+  @override
+  String get sectionPersonTitle => 'پالیسی ہولڈر';
+
+  @override
+  String get sectionCoverTitle => 'تحفظ اور ادائیگی';
 }
