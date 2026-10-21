@@ -1,6 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../data/storage.dart';
+
 /// App languages with their names written in that language.
 const kAppLanguages = <String, String>{
   'en': 'English',
@@ -18,13 +20,18 @@ const kAppLanguages = <String, String>{
   'ur': 'اردو',
 };
 
-/// Chosen app language; null follows the device language.
-/// In-memory for now — persisted once local storage arrives (Phase 2).
+/// Chosen app language, saved on the device; null follows the device.
 class LocaleSetting extends Notifier<Locale?> {
   @override
-  Locale? build() => null;
+  Locale? build() {
+    final code = ref.read(settingsStoreProvider).languageCode;
+    return code == null || !kAppLanguages.containsKey(code) ? null : Locale(code);
+  }
 
-  void set(Locale? locale) => state = locale;
+  void set(Locale? locale) {
+    state = locale;
+    ref.read(settingsStoreProvider).setLanguageCode(locale?.languageCode);
+  }
 }
 
 final localeProvider = NotifierProvider<LocaleSetting, Locale?>(LocaleSetting.new);

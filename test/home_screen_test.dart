@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+import 'package:pli_sahayak/data/storage.dart';
+
 import 'support.dart';
 
 void main() {
@@ -26,9 +28,31 @@ void main() {
     expect(find.text('Maturity & Bonus'), findsOneWidget);
   });
 
-  testWidgets('Premium screen refuses to show estimated premiums', (tester) async {
-    await pumpApp(tester, location: '/premium');
-    expect(find.text('Not available yet'), findsOneWidget);
-    expect(find.textContaining('no estimated premiums'), findsOneWidget);
+  testWidgets('first launch shows the independent-calculator disclaimer once', (tester) async {
+    final settings = MemorySettingsStore();
+    await pumpApp(tester, settings: settings);
+    expect(find.textContaining('not an official India Post app'), findsOneWidget);
+    await tester.tap(find.text('I understand'));
+    await tester.pumpAndSettle();
+    expect(settings.disclaimerAccepted, isTrue);
+    expect(find.textContaining('not an official India Post app'), findsNothing);
+  });
+
+  testWidgets('every home tile opens a screen', (tester) async {
+    for (final (tile, title) in [
+      ('Premium', 'Premium Calculator'),
+      ('Compare', 'Compare plans'),
+      ('Afford', 'What can I afford?'),
+      ('Policy tools', 'Policy tools'),
+      ('Plans', 'Plan information'),
+      ('About', 'About'),
+      ('My Policies', 'My Policies'),
+      ('Quotation', 'Quotation'),
+    ]) {
+      await pumpApp(tester, key: ValueKey(tile));
+      await tester.tap(find.widgetWithText(InkWell, tile));
+      await tester.pumpAndSettle();
+      expect(find.widgetWithText(AppBar, title), findsOneWidget, reason: tile);
+    }
   });
 }

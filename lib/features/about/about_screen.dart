@@ -1,0 +1,96 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../../core/widgets/data_scaffold.dart';
+import '../../data/data_repository.dart';
+import '../../data/rate_update.dart';
+import '../../l10n/app_localizations.dart';
+import '../common/plan_config_form.dart';
+
+const kAppVersion = '1.0.0';
+
+class AboutScreen extends ConsumerStatefulWidget {
+  const AboutScreen({super.key});
+
+  @override
+  ConsumerState<AboutScreen> createState() => _AboutScreenState();
+}
+
+class _AboutScreenState extends ConsumerState<AboutScreen> {
+  bool _checking = false;
+
+  Future<void> _checkUpdates() async {
+    final dir = ref.read(rateUpdateDirProvider);
+    if (dir == null) return;
+    final l = AppLocalizations.of(context);
+    setState(() => _checking = true);
+    final result = await RateUpdater(dir).check(Uri.parse(kRateManifestUrl));
+    if (!mounted) return;
+    setState(() => _checking = false);
+    final message = switch (result.status) {
+      RateUpdateStatus.installed => l.updateInstalled(result.version ?? 0),
+      RateUpdateStatus.upToDate => l.updateCurrent,
+      RateUpdateStatus.failed => l.updateFailed(result.error ?? ''),
+    };
+    if (result.status == RateUpdateStatus.installed) ref.invalidate(appDataProvider);
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context);
+    final theme = Theme.of(context);
+    final canUpdate = kRateManifestUrl.isNotEmpty && ref.watch(rateUpdateDirProvider) != null;
+    Widget section(String title, Widget child) => Padding(
+          padding: const EdgeInsets.only(bottom: 20),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text(title, style: theme.textTheme.titleLarge),
+            const SizedBox(height: 4),
+            child,
+          ]),
+        );
+
+    return DataScaffold(
+      title: l.aboutTitle,
+      builder: (context, data) => ListView(padding: const EdgeInsets.all(16), children: [
+        section(l.appTitle, Text('${l.independentDisclaimer}\n${l.appVersion(kAppVersion)}')),
+        section(l.privacyTitle, Text(l.privacyBody)),
+        section(
+          l.dataSourceTitle,
+          Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text(l.dataSourceBody(data.rules.ruleSetId, formatDate(context, data.rules.effectiveFrom), data.rules.source)),
+            Text(data.rules.gazetteRef, style: theme.textTheme.bodySmall),
+            if (data.usesSampleData)
+              Padding(
+                padding: const EdgeInsets.only(top: 4),
+                child: Text(l.sampleDataNote, style: TextStyle(color: theme.colorScheme.error, fontWeight: FontWeight.bold)),
+              ),
+            if (canUpdate)
+              Padding(
+                padding: const EdgeInsets.only(top: 8),
+                child: OutlinedButton.icon(
+                  icon: _checking
+                      ? const SizedBox.square(dimension: 16, child: CircularProgressIndicator(strokeWidth: 2))
+                      : const Icon(Icons.system_update_alt),
+                  label: Text(l.checkUpdates),
+                  onPressed: _checking ? null : _checkUpdates,
+                ),
+              ),
+          ]),
+        ),
+        if (data.rules.provisional.isNotEmpty)
+          section(
+            l.provisionalTitle,
+            Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Text(l.provisionalIntro),
+              for (final p in data.rules.provisional)
+                Padding(
+                  padding: const EdgeInsets.only(top: 4),
+                  child: Text('• $p', style: theme.textTheme.bodySmall, textDirection: TextDirection.ltr),
+                ),
+            ]),
+          ),
+      ]),
+    );
+  }
+}

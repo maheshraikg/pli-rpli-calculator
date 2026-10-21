@@ -10,16 +10,19 @@ import 'sample_data_banner.dart';
 /// Scaffold used by every screen: sample-data banner (when applicable) on
 /// top and the rate-year footer at the bottom.
 class DataScaffold extends ConsumerWidget {
-  const DataScaffold({super.key, required this.title, required this.builder});
+  const DataScaffold({super.key, required this.title, required this.builder, this.floatingActionButton, this.actions = const []});
 
   final String title;
+  final Widget? floatingActionButton;
+  final List<Widget> actions;
   final Widget Function(BuildContext context, AppData data) builder;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final data = ref.watch(appDataProvider);
     return Scaffold(
-      appBar: AppBar(title: Text(title), actions: const [LanguageButton()]),
+      appBar: AppBar(title: Text(title), actions: [...actions, const LanguageButton()]),
+      floatingActionButton: floatingActionButton,
       body: switch (data) {
         AsyncData(:final value) => Column(children: [
             if (value.usesSampleData) const SampleDataBanner(),

@@ -5,10 +5,19 @@ import 'package:go_router/go_router.dart';
 
 import 'core/locale.dart';
 import 'core/theme.dart';
+import 'features/about/about_screen.dart';
+import 'features/compare/compare_screen.dart';
 import 'features/eligibility/eligibility_screen.dart';
 import 'features/home/home_screen.dart';
 import 'features/maturity/maturity_screen.dart';
+import 'features/plans/plan_info_screen.dart';
+import 'features/policies/policies_screen.dart';
+import 'features/policies/policy_detail_screen.dart';
+import 'features/policies/policy_form_screen.dart';
 import 'features/premium/premium_screen.dart';
+import 'features/quotation/quotation_screen.dart';
+import 'features/reverse/reverse_screen.dart';
+import 'features/tools/tools_screen.dart';
 import 'l10n/app_localizations.dart';
 
 GoRouter buildRouter({String initialLocation = '/'}) => GoRouter(initialLocation: initialLocation, routes: [
@@ -16,6 +25,18 @@ GoRouter buildRouter({String initialLocation = '/'}) => GoRouter(initialLocation
         GoRoute(path: 'premium', builder: (context, state) => const PremiumScreen()),
         GoRoute(path: 'maturity', builder: (context, state) => const MaturityScreen()),
         GoRoute(path: 'eligibility', builder: (context, state) => const EligibilityScreen()),
+        GoRoute(path: 'afford', builder: (context, state) => const ReverseScreen()),
+        GoRoute(path: 'compare', builder: (context, state) => const CompareScreen()),
+        GoRoute(path: 'tools', builder: (context, state) => const ToolsScreen()),
+        GoRoute(path: 'quotation', builder: (context, state) => const QuotationScreen()),
+        GoRoute(path: 'plans', builder: (context, state) => const PlanInfoScreen()),
+        GoRoute(path: 'about', builder: (context, state) => const AboutScreen()),
+        GoRoute(path: 'policies', builder: (context, state) => const PoliciesScreen(), routes: [
+          GoRoute(path: 'new', builder: (context, state) => const PolicyFormScreen()),
+          GoRoute(path: ':id', builder: (context, state) => PolicyDetailScreen(id: state.pathParameters['id']!), routes: [
+            GoRoute(path: 'edit', builder: (context, state) => PolicyFormScreen(id: state.pathParameters['id'])),
+          ]),
+        ]),
       ]),
     ]);
 

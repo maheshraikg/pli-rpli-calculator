@@ -47,7 +47,7 @@ void main() {
 
   testWidgets('plans with unconfirmed rules show "Not available yet"', (tester) async {
     final container = await pumpApp(tester, location: '/maturity');
-    container.read(maturityFormProvider.notifier).selectPlan(bundledData().rules.plan('pli_suraksha'));
+    container.read(maturityFormProvider.notifier).selectPlan(bundledData().rules.plan('pli_suvidha'));
     await tester.pumpAndSettle();
     expect(find.text('Not available yet'), findsOneWidget);
     expect(find.text('Maturity value'), findsNothing);

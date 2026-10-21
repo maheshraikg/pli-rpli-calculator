@@ -330,5 +330,505 @@
   },
   "eligibilityNote": "Final acceptance is subject to India Post's medical underwriting and documents.",
   "languageLabel": "Language",
-  "systemLanguage": "Device language"
+  "systemLanguage": "Device language",
+  "tileAfford": "Afford",
+  "tileTools": "Policy tools",
+  "tilePlans": "Plans",
+  "tileAbout": "About",
+  "dobLabel": "Date of birth",
+  "useAgeInstead": "Enter age instead",
+  "useDobInstead": "Enter date of birth",
+  "ageFromDobNearest": "Entry age on start date: {age} (age nearest birthday)",
+  "@ageFromDobNearest": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      }
+    }
+  },
+  "ageFromDobLast": "Entry age on start date: {age} (age last birthday)",
+  "@ageFromDobLast": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      }
+    }
+  },
+  "premiumCeasingAgeLabel": "Premium paying age",
+  "frequencyLabel": "Payment frequency",
+  "freqMonthly": "Monthly",
+  "freqQuarterly": "Quarterly",
+  "freqHalfYearly": "Half-yearly",
+  "freqYearly": "Yearly",
+  "premiumPerInstalment": "Premium per instalment",
+  "tablePremiumRow": "Table premium",
+  "saRebateRow": "SA rebate",
+  "totalPremiumRow": "Total premium ({count} instalments)",
+  "@totalPremiumRow": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "payingTermRow": "Premium paying term",
+  "returnRow": "Effective return (XIRR)",
+  "returnValue": "{percent}% a year",
+  "@returnValue": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "lifeCoverRow": "Life cover",
+  "allFrequenciesTitle": "All payment frequencies",
+  "notInTable": "Not available in official table",
+  "noTableForPlan": "The premium table for this plan is not loaded yet.",
+  "illustrationTitle": "Year-wise benefit illustration",
+  "colYear": "Year",
+  "colPremiumsPaid": "Premiums paid",
+  "colBonus": "Bonus",
+  "colLifeCover": "Life cover",
+  "makeQuotation": "Create quotation",
+  "gstNote": "GST: nil on individual life insurance premiums paid on or after 22 Sep 2025.",
+  "chartTitle": "Premium paid vs benefits",
+  "chartPaid": "Total premium",
+  "chartReceived": "Total benefits",
+  "showTable": "Show year-wise table",
+  "hideTable": "Hide year-wise table",
+  "reverseTitle": "What can I afford?",
+  "budgetLabel": "Budget per instalment (₹)",
+  "reverseIntro": "Enter how much you can pay. Each plan option shows the highest sum assured within that amount.",
+  "optMaturityAge": "Matures at {age}",
+  "@optMaturityAge": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      }
+    }
+  },
+  "optCeasingAge": "Premiums till age {age}",
+  "@optCeasingAge": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      }
+    }
+  },
+  "optTerm": "{years}-year term",
+  "@optTerm": {
+    "placeholders": {
+      "years": {
+        "type": "int"
+      }
+    }
+  },
+  "reverseNone": "No plan fits this budget at this age.",
+  "saShort": "Sum assured",
+  "premiumShort": "Premium",
+  "compareTitle": "Compare plans",
+  "optionN": "Option {n}",
+  "@optionN": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "addOption": "Add option",
+  "removeOption": "Remove option",
+  "maturityShort": "Maturity / benefits",
+  "totalPaidShort": "Total paid",
+  "returnShort": "Return",
+  "lifeCoverShort": "Life cover",
+  "comparisonTitle": "Comparison",
+  "toolsTitle": "Policy tools",
+  "tabLoan": "Loan",
+  "tabPaidUp": "Paid-up",
+  "tabRevival": "Revival",
+  "tabAdvance": "Advance",
+  "yearsInForceLabel": "Years the policy has been in force",
+  "loanAmountLabel": "Loan amount (₹)",
+  "loanMonthsLabel": "Months until repayment",
+  "monthsValue": "{months} months",
+  "@monthsValue": {
+    "placeholders": {
+      "months": {
+        "type": "int"
+      }
+    }
+  },
+  "loanInterestRow": "Interest",
+  "loanTotalRow": "Total to repay",
+  "loanRateNote": "Interest {rate}% a year, compounded half-yearly.",
+  "@loanRateNote": {
+    "placeholders": {
+      "rate": {
+        "type": "String"
+      }
+    }
+  },
+  "loanAvailableAfter": "Loan available after {years} years.",
+  "@loanAvailableAfter": {
+    "placeholders": {
+      "years": {
+        "type": "int"
+      }
+    }
+  },
+  "loanNotOffered": "This plan has no loan facility.",
+  "loanEligibleYes": "Eligible for a loan",
+  "loanEligibleNo": "Not yet eligible for a loan",
+  "loanAmountNote": "The maximum loan depends on the surrender value, which India Post calculates.",
+  "premiumsPaidLabel": "Instalments paid",
+  "premiumsPayableLabel": "Total instalments payable",
+  "paidUpSaRow": "Paid-up sum assured",
+  "paidUpNote": "Approximate. Bonus already earned is added as per India Post records. Surrender value needs official surrender factors and is not calculated.",
+  "paidUpNotEligible": "A policy can become paid-up only after {years} years in force.",
+  "@paidUpNotEligible": {
+    "placeholders": {
+      "years": {
+        "type": "int"
+      }
+    }
+  },
+  "paidUpInvalid": "Instalments paid cannot exceed instalments payable.",
+  "instalmentLabel": "Premium per instalment (₹)",
+  "firstUnpaidLabel": "First unpaid due date",
+  "payDateLabel": "Date of payment",
+  "missedRow": "Instalments due",
+  "arrearsRow": "Arrears",
+  "defaultFeeRow": "Default fee",
+  "totalPayableRow": "Total payable",
+  "revivalNote": "Default fee {percent}% of the instalment per month of delay. Revival after a long lapse may need a medical certificate.",
+  "@revivalNote": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "revivalLine": "Due {date} • {months} months late • fee {fee}",
+  "@revivalLine": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "months": {
+        "type": "int"
+      },
+      "fee": {
+        "type": "String"
+      }
+    }
+  },
+  "nothingDue": "Nothing is due on that date.",
+  "monthsAdvanceLabel": "Months paid in advance",
+  "rebateRow": "Rebate ({percent}%)",
+  "@rebateRow": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "amountDueRow": "Amount due",
+  "payableRow": "You pay",
+  "advanceNote": "The rebate shown follows the advance-payment rebate in the rate data; it applies when premiums are paid in advance.",
+  "policiesTitle": "My Policies",
+  "noPolicies": "No saved policies yet. Tap + to add one.",
+  "addPolicy": "Add policy",
+  "editPolicy": "Edit policy",
+  "holderNameLabel": "Policy holder name",
+  "policyNumberLabel": "Policy number",
+  "premiumAmountLabel": "Premium per instalment (₹, as on receipt)",
+  "save": "Save",
+  "delete": "Delete",
+  "deleteConfirm": "Delete this policy?",
+  "cancel": "Cancel",
+  "nextDue": "Next due: {date}",
+  "@nextDue": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "noMoreDues": "All premiums paid",
+  "remindersLabel": "Remind me 3 days before each due date",
+  "remindersDenied": "Notifications are turned off for this app.",
+  "accruedBonusRow": "Bonus accrued so far",
+  "bonusMissingYears": "Bonus rates for FY {years} are not in the app data; the total leaves out those years.",
+  "@bonusMissingYears": {
+    "placeholders": {
+      "years": {
+        "type": "String"
+      }
+    }
+  },
+  "maturityOn": "Matures on {date}",
+  "@maturityOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "upcomingDues": "Upcoming due dates",
+  "yearsInForceRow": "Years in force",
+  "reminderTitle": "PLI premium due",
+  "reminderBody": "{name}: {amount} due on {date} (policy {number})",
+  "@reminderBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      },
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "savedLocally": "Saved only on this phone.",
+  "requiredField": "Required",
+  "projectedMaturityRow": "Projected maturity value",
+  "quotationTitle": "Quotation",
+  "customerNameLabel": "Customer name",
+  "agentNameLabel": "Prepared by (optional)",
+  "sharePdf": "Share PDF",
+  "shareImage": "Share image",
+  "quotationHeading": "Premium Quotation",
+  "preparedOn": "Prepared on {date}",
+  "@preparedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "quotationFor": "For: {name}",
+  "@quotationFor": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "preparedBy": "Prepared by: {name}",
+  "@preparedBy": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "quotationInvalid": "Complete the plan details to create a quotation.",
+  "planDetailsTitle": "Plan details",
+  "planInfoTitle": "Plan information",
+  "entryAgeInfo": "Entry age: {min}–{max}",
+  "@entryAgeInfo": {
+    "placeholders": {
+      "min": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "maturityAgesInfo": "Maturity ages: {ages}",
+  "@maturityAgesInfo": {
+    "placeholders": {
+      "ages": {
+        "type": "String"
+      }
+    }
+  },
+  "ceasingAgesInfo": "Premium paying ages: {ages}; matures at {age}",
+  "@ceasingAgesInfo": {
+    "placeholders": {
+      "ages": {
+        "type": "String"
+      },
+      "age": {
+        "type": "int"
+      }
+    }
+  },
+  "termsInfo": "Terms: {terms} years",
+  "@termsInfo": {
+    "placeholders": {
+      "terms": {
+        "type": "String"
+      }
+    }
+  },
+  "survivalInfo": "Money back: {list}",
+  "@survivalInfo": {
+    "placeholders": {
+      "list": {
+        "type": "String"
+      }
+    }
+  },
+  "survivalItem": "{percent}% at year {year}",
+  "@survivalItem": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "loanInfo": "Loan after {years} years",
+  "@loanInfo": {
+    "placeholders": {
+      "years": {
+        "type": "int"
+      }
+    }
+  },
+  "noLoanInfo": "No loan",
+  "surrenderInfo": "Surrender after {years} years",
+  "@surrenderInfo": {
+    "placeholders": {
+      "years": {
+        "type": "int"
+      }
+    }
+  },
+  "noSurrenderInfo": "No surrender",
+  "bonusInfo": "Bonus FY {fy}: ₹{rate} per ₹1,000 a year",
+  "@bonusInfo": {
+    "placeholders": {
+      "fy": {
+        "type": "String"
+      },
+      "rate": {
+        "type": "int"
+      }
+    }
+  },
+  "saLimitInfo": "Sum assured: {min} – {max}",
+  "@saLimitInfo": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "jointInfo": "Each spouse aged {min}–{max}; term {tmin}–{tmax} years",
+  "@jointInfo": {
+    "placeholders": {
+      "min": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      },
+      "tmin": {
+        "type": "int"
+      },
+      "tmax": {
+        "type": "int"
+      }
+    }
+  },
+  "childInfo": "Child aged {min}–{max}; parent aged up to {parent}; up to {children} children; SA up to {cap}",
+  "@childInfo": {
+    "placeholders": {
+      "min": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      },
+      "parent": {
+        "type": "int"
+      },
+      "children": {
+        "type": "int"
+      },
+      "cap": {
+        "type": "String"
+      }
+    }
+  },
+  "conversionInfo": "Can be converted to endowment after {years} years",
+  "@conversionInfo": {
+    "placeholders": {
+      "years": {
+        "type": "int"
+      }
+    }
+  },
+  "faqTitle": "Common questions",
+  "faq1q": "Is the bonus guaranteed?",
+  "faq1a": "No. India Post declares bonus rates every year. Projections here assume the latest declared rate for every future year.",
+  "faq2q": "Where do the premiums come from?",
+  "faq2a": "From India Post's official premium tables. The app never estimates a premium.",
+  "faq3q": "Is there an income tax benefit?",
+  "faq3a": "Premiums may qualify under Section 80C (old tax regime) and maturity may be exempt under Section 10(10D), subject to conditions. This is not tax advice.",
+  "faq4q": "Is GST charged on premiums?",
+  "faq4a": "No. GST on individual life insurance premiums is nil from 22 September 2025.",
+  "faq5q": "Who can buy PLI and RPLI?",
+  "faq5a": "PLI: government and semi-government employees, professionals, graduates, diploma holders and others listed by India Post. RPLI: rural residents and scheduled bank savings account holders.",
+  "aboutTitle": "About",
+  "privacyTitle": "Privacy",
+  "privacyBody": "PLI Sahayak collects no data. Everything you enter or save stays on this phone. No account or internet connection is needed.",
+  "dataSourceTitle": "Rate data",
+  "dataSourceBody": "Rules {id}, effective {date}. Source: {source}",
+  "@dataSourceBody": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      },
+      "source": {
+        "type": "String"
+      }
+    }
+  },
+  "provisionalTitle": "Rules still being confirmed",
+  "provisionalIntro": "These rules are working assumptions until they are confirmed from official India Post circulars (shown in English):",
+  "checkUpdates": "Check for rate updates",
+  "updateInstalled": "Rate data updated to version {version}.",
+  "@updateInstalled": {
+    "placeholders": {
+      "version": {
+        "type": "int"
+      }
+    }
+  },
+  "updateCurrent": "Rate data is up to date.",
+  "updateFailed": "Update failed; current rates kept. {error}",
+  "@updateFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "sampleDataNote": "Premium tables are SAMPLE data, not official India Post figures.",
+  "appVersion": "Version {version}",
+  "@appVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  }
 }
