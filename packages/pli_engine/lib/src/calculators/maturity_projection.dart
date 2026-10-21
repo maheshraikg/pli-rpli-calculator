@@ -56,8 +56,7 @@ class MaturityProjection {
 
 /// Why a projection is not yet available for a plan type, or null if it is.
 String? projectionPendingReason(PlanType type) => switch (type) {
-      PlanType.ea || PlanType.aea || PlanType.jointEa => null,
-      PlanType.wla => 'whole life: bonus accrual period after premiums cease',
+      PlanType.ea || PlanType.aea || PlanType.jointEa || PlanType.wla => null,
       PlanType.cwla => 'convertible whole life: projection before/after conversion',
       PlanType.childEa => "children's policy: term and maturity",
     };
@@ -69,8 +68,11 @@ String? projectionPendingReason(PlanType type) => switch (type) {
 ///   remaining % of SA + bonus on the full SA.
 /// * Joint EA: [termYears]; payout SA + bonus (+ terminal bonus if the rules
 ///   list the type).
+/// * WLA: premiums until [premiumCeasingAge]; bonus accrues every year until
+///   the plan's maturity age (e.g. 80), when SA + bonus (+ terminal bonus)
+///   is paid.
 ///
-/// Whole life, convertible and children's plans throw
+/// Convertible and children's plans throw
 /// [RuleNotConfirmedException] until their rules are confirmed.
 MaturityProjection projectNewPolicy(
   RuleSet rules, {
@@ -79,6 +81,7 @@ MaturityProjection projectNewPolicy(
   int? entryAge,
   int? maturityAge,
   int? termYears,
+  int? premiumCeasingAge,
   DateTime? commencement,
   String? financialYear,
 }) {
@@ -107,9 +110,8 @@ MaturityProjection projectNewPolicy(
       term = maturityAge - entryAge;
       survival = const [];
       finalSA = sa;
-      // Whether an EA matures on the policy anniversary or on the birthday
-      // is not yet confirmed, so no date is given.
-      maturityDate = null;
+      // Provisional rule (rules.policyDates): matures on the policy anniversary.
+      maturityDate = on(term);
     case PlanType.aea:
       final option = plan.aeaTerms.where((t) => t.years == termYears).firstOrNull;
       if (option == null) {
@@ -131,7 +133,19 @@ MaturityProjection projectNewPolicy(
       survival = const [];
       finalSA = sa;
       maturityDate = on(term);
-    case PlanType.wla || PlanType.cwla || PlanType.childEa:
+    case PlanType.wla:
+      final maturityAt = plan.wholeLifeMaturityAge!;
+      if (entryAge == null || premiumCeasingAge == null) {
+        throw ArgumentError('Whole life projection needs entryAge and premiumCeasingAge');
+      }
+      if (!plan.premiumCeasingAges.contains(premiumCeasingAge) || premiumCeasingAge <= entryAge) {
+        throw ArgumentError.value(premiumCeasingAge, 'premiumCeasingAge', 'Not offered for entry age $entryAge');
+      }
+      term = maturityAt - entryAge;
+      survival = const [];
+      finalSA = sa;
+      maturityDate = on(term);
+    case PlanType.cwla || PlanType.childEa:
       throw StateError('unreachable: rejected above');
   }
 

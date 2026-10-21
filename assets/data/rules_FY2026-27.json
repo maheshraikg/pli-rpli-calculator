@@ -9,7 +9,8 @@
     "status": "partial",
     "notes": [
       "Any object with \"verified\": false must be confirmed against an official circular before release.",
-      "Premium tables are NOT included here; see assets/data/tables/."
+      "Premium tables are NOT included here; see assets/data/tables/.",
+      "Every rule listed in \"provisional\" is a working assumption, not an official rule. Confirm or correct each before release."
     ]
   },
   "schemes": {
@@ -154,7 +155,9 @@
       },
       "bonusClass": "CWLA",
       "premiumTableId": null,
-      "verified": false
+      "verified": false,
+      "loanAfterYears": 4,
+      "surrenderAfterYears": 3
     },
     {
       "id": "pli_sumangal",
@@ -226,7 +229,9 @@
       "bonusClass": "AEA",
       "terminalBonusEligible": false,
       "premiumTableId": "pli_sumangal",
-      "verified": false
+      "verified": false,
+      "loanAfterYears": null,
+      "surrenderAfterYears": 3
     },
     {
       "id": "pli_yugal_suraksha",
@@ -258,7 +263,9 @@
       "premiumAgeBasis": "PENDING_USER_INPUT",
       "bonusClass": "EA",
       "premiumTableId": null,
-      "verified": false
+      "verified": false,
+      "loanAfterYears": 3,
+      "surrenderAfterYears": 3
     },
     {
       "id": "pli_bal_jeevan_bima",
@@ -290,7 +297,9 @@
       "premiumWaiverOnParentDeath": true,
       "bonusClass": "EA",
       "premiumTableId": null,
-      "verified": false
+      "verified": false,
+      "loanAfterYears": null,
+      "surrenderAfterYears": null
     },
     {
       "id": "rpli_gram_suraksha",
@@ -324,7 +333,9 @@
       "bonusClass": "WLA",
       "terminalBonusEligible": null,
       "premiumTableId": "rpli_gram_suraksha",
-      "verified": false
+      "verified": false,
+      "loanAfterYears": 4,
+      "surrenderAfterYears": 3
     },
     {
       "id": "rpli_gram_santosh",
@@ -362,7 +373,9 @@
       "bonusClass": "EA",
       "terminalBonusEligible": null,
       "premiumTableId": "rpli_gram_santosh",
-      "verified": false
+      "verified": false,
+      "loanAfterYears": 3,
+      "surrenderAfterYears": 3
     },
     {
       "id": "rpli_gram_suvidha",
@@ -394,7 +407,9 @@
       },
       "bonusClass": "CWLA",
       "premiumTableId": null,
-      "verified": false
+      "verified": false,
+      "loanAfterYears": 4,
+      "surrenderAfterYears": 3
     },
     {
       "id": "rpli_gram_sumangal",
@@ -466,7 +481,9 @@
       "bonusClass": "AEA",
       "terminalBonusEligible": false,
       "premiumTableId": "rpli_gram_sumangal",
-      "verified": false
+      "verified": false,
+      "loanAfterYears": null,
+      "surrenderAfterYears": 3
     },
     {
       "id": "rpli_gram_priya",
@@ -512,7 +529,9 @@
       "bonusClass": "AEA",
       "terminalBonusEligible": false,
       "premiumTableId": "rpli_gram_priya",
-      "verified": false
+      "verified": false,
+      "loanAfterYears": null,
+      "surrenderAfterYears": 3
     },
     {
       "id": "rpli_bal_jeevan_bima",
@@ -544,7 +563,9 @@
       "premiumWaiverOnParentDeath": true,
       "bonusClass": "EA",
       "premiumTableId": null,
-      "verified": false
+      "verified": false,
+      "loanAfterYears": null,
+      "surrenderAfterYears": null
     }
   ],
   "bonusRatesPer1000": {
@@ -590,12 +611,20 @@
       "YEARLY"
     ],
     "tableUnitSumAssured": 10000,
-    "ageBasis": "PENDING_USER_INPUT",
-    "rounding": "PENDING_USER_INPUT",
+    "ageBasis": "AGE_NEAREST_BIRTHDAY",
+    "rounding": "NEAREST_RUPEE_AFTER_REBATE",
     "sumAssuredRebate": {
       "rupeesPerMonth": 1,
       "perSumAssured": 20000,
-      "applicablePlans": "PENDING_USER_INPUT",
+      "countCompleteBlocksOnly": true,
+      "applicablePlanTypes": [
+        "WLA",
+        "EA",
+        "CWLA",
+        "AEA",
+        "JOINT_EA",
+        "CHILD_EA"
+      ],
       "verified": false
     },
     "advancePaymentRebate": [
@@ -611,6 +640,7 @@
     "advancePaymentRebateVerified": false,
     "defaultFee": {
       "percentPerMonthOfDelay": 1,
+      "countPartMonthAsFull": true,
       "verified": false
     },
     "gst": {
@@ -622,7 +652,9 @@
         "appliesTo": "endowment-type"
       },
       "verified": false
-    }
+    },
+    "ageBasisVerified": false,
+    "roundingVerified": false
   },
   "loan": {
     "interestPercentPerAnnum": 10,
@@ -633,5 +665,33 @@
   "bonusRounding": {
     "rule": "HALF_RUPEE_UP",
     "description": "Fraction of 50 paise or more rounds up to next rupee; below 50 paise is ignored."
-  }
+  },
+  "bonusAccrual": {
+    "creditedPer": "COMPLETED_POLICY_YEAR",
+    "rateYear": "FY_CONTAINING_LAST_DAY_OF_POLICY_YEAR",
+    "wholeLifeAccruesUntilMaturityAge": true,
+    "verified": false
+  },
+  "policyDates": {
+    "maturityDate": "POLICY_ANNIVERSARY",
+    "verified": false
+  },
+  "paidUp": {
+    "minYearsInForce": 3,
+    "formula": "SA_TIMES_PAID_OVER_PAYABLE",
+    "verified": false
+  },
+  "provisional": [
+    "Entry age = age nearest birthday (6 months or more past the last birthday counts as the next age), on the policy start date.",
+    "Premium = table premium × SA ÷ 10,000, minus SA rebate, rounded to the nearest rupee.",
+    "SA rebate = ₹1 per month for every complete ₹20,000 of SA, on all plans, multiplied by the months in the instalment.",
+    "Advance payment rebate = 1% for 6 months and 2% for 12 months paid in advance (PLI and RPLI).",
+    "Default fee = 1% of the instalment per month of delay; a part month counts as a full month.",
+    "Bonus is credited for each completed policy year at the rate of the financial year in which that policy year ends.",
+    "Whole life (Suraksha / Gram Suraksha): bonus keeps accruing until maturity at age 80 after premiums stop; terminal bonus if that period is 20 years or more.",
+    "Maturity and survival benefits fall due on the policy anniversary.",
+    "Paid-up SA = SA × premiums paid ÷ premiums payable, after at least 3 years; bonus already earned is shown separately.",
+    "Loan interest 10% a year, compounded half-yearly; loan after 4 years (whole life, convertible) or 3 years (endowment, joint life); no loan on money-back or children's plans.",
+    "Surrender allowed after 3 years; no surrender value is shown because official surrender factors are not available."
+  ]
 }

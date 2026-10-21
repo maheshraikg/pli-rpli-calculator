@@ -3,6 +3,7 @@ import 'dart:convert';
 import '../data/json_reader.dart';
 import 'enums.dart';
 import 'plan_rule.dart';
+import 'service_rules.dart';
 
 class SumAssuredLimit {
   const SumAssuredLimit({required this.min, required this.max, this.multipleOf});
@@ -74,6 +75,10 @@ class RuleSet {
     required this.bonusRatesPer1000,
     required this.eligibilityGroups,
     required this.terminalBonus,
+    required this.premium,
+    required this.loan,
+    required this.paidUp,
+    required this.provisional,
     required this.raw,
   });
 
@@ -121,6 +126,10 @@ class RuleSet {
         for (final s in Scheme.values) s: schemes.object(s.code).stringList('eligibilityGroups').toSet(),
       },
       terminalBonus: TerminalBonusRule.fromJson(r.object('terminalBonus')),
+      premium: PremiumRules.fromJson(r.object('premium')),
+      loan: LoanRule.fromJson(r.object('loan')),
+      paidUp: PaidUpRule.fromJson(r.object('paidUp')),
+      provisional: r.has('provisional') ? r.stringList('provisional') : const [],
       raw: r.map,
     );
   }
@@ -137,6 +146,12 @@ class RuleSet {
   final Map<Scheme, Map<String, Map<String, int>>> bonusRatesPer1000;
   final Map<Scheme, Set<String>> eligibilityGroups;
   final TerminalBonusRule terminalBonus;
+  final PremiumRules premium;
+  final LoanRule loan;
+  final PaidUpRule paidUp;
+
+  /// Working assumptions not yet confirmed from an official source.
+  final List<String> provisional;
   final Map<String, Object?> raw;
 
   PlanRule plan(String id) => plans.firstWhere(

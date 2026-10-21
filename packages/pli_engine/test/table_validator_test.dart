@@ -15,7 +15,15 @@ const _rulesJson = '''
     "bonusClass": "EA", "premiumTableId": "ea", "verified": true
   } ],
   "bonusRatesPer1000": { "PLI": {}, "RPLI": {} },
-  "terminalBonus": { "perSumAssured": 10000, "amount": 20, "maxAmount": 1000, "minTermYears": 20, "appliesToTypes": [], "schemes": [] }
+  "terminalBonus": { "perSumAssured": 10000, "amount": 20, "maxAmount": 1000, "minTermYears": 20, "appliesToTypes": [], "schemes": [] },
+  "premium": {
+    "tableUnitSumAssured": 10000, "ageBasis": "AGE_NEAREST_BIRTHDAY", "rounding": "NEAREST_RUPEE_AFTER_REBATE",
+    "sumAssuredRebate": { "rupeesPerMonth": 1, "perSumAssured": 20000, "countCompleteBlocksOnly": true, "applicablePlanTypes": [] },
+    "advancePaymentRebate": [], "defaultFee": { "percentPerMonthOfDelay": 1, "countPartMonthAsFull": true },
+    "gst": { "currentRatePercent": 0 }
+  },
+  "loan": { "interestPercentPerAnnum": 10, "compounding": "HALF_YEARLY" },
+  "paidUp": { "minYearsInForce": 3 }
 }''';
 
 PremiumTable _table(Map<String, List<num?>> monthly) => PremiumTable.parse('''

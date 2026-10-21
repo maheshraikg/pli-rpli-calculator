@@ -98,6 +98,9 @@ class PlanRule {
     this.premiumTableId,
     this.jointLife,
     this.childPlan,
+    this.wholeLifeMaturityAge,
+    this.loanAfterYears,
+    this.surrenderAfterYears,
   });
 
   factory PlanRule.fromJson(JsonReader r) {
@@ -130,6 +133,9 @@ class PlanRule {
               capAtParentSA: r.boolean('sumAssuredCapParentSA'),
             )
           : null,
+      wholeLifeMaturityAge: r.intOrNull('maturityAge'),
+      loanAfterYears: r.intOrNull('loanAfterYears'),
+      surrenderAfterYears: r.intOrNull('surrenderAfterYears'),
       raw: r.map,
     );
   }
@@ -148,6 +154,13 @@ class PlanRule {
   final String? premiumTableId;
   final JointLifeRule? jointLife;
   final ChildPlanRule? childPlan;
+
+  /// Whole life plans: age at which SA + bonus is paid (e.g. 80).
+  final int? wholeLifeMaturityAge;
+
+  /// Null = loan / surrender not available on this plan.
+  final int? loanAfterYears;
+  final int? surrenderAfterYears;
   final Map<String, Object?> raw;
 
   String name(String languageCode) => names[languageCode] ?? names['en'] ?? id;

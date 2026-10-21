@@ -53,8 +53,24 @@ void main() {
     expect(p.maturity.amount, rs(760000));
   });
 
+  test('PLI Suraksha ₹1L, entry 30, premiums to 60: bonus to age 80 → ₹4,81,000', () {
+    final p = projectNewPolicy(rules,
+        planId: 'pli_suraksha', sumAssured: 100000, entryAge: 30, premiumCeasingAge: 60, commencement: DateTime(2026, 11, 1));
+    expect(p.termYears, 50);
+    expect(p.totalBonus, rs(7600 * 50));
+    expect(p.terminalBonus, rs(200));
+    expect(p.maturity.amount, rs(100000 + 380000 + 200));
+    expect(p.maturity.date, DateTime(2076, 11, 1));
+  });
+
+  test('EA maturity date is the policy anniversary (provisional rule)', () {
+    final p = projectNewPolicy(rules,
+        planId: 'pli_santosh', sumAssured: 100000, entryAge: 30, maturityAge: 50, commencement: DateTime(2026, 11, 1));
+    expect(p.maturity.date, DateTime(2046, 11, 1));
+  });
+
   test('plans with unconfirmed rules refuse to project', () {
-    for (final id in ['pli_suraksha', 'pli_suvidha', 'pli_bal_jeevan_bima', 'rpli_gram_suraksha']) {
+    for (final id in ['pli_suvidha', 'pli_bal_jeevan_bima', 'rpli_gram_suvidha', 'rpli_bal_jeevan_bima']) {
       expect(() => projectNewPolicy(rules, planId: id, sumAssured: 100000, entryAge: 30, termYears: 10),
           throwsA(isA<RuleNotConfirmedException>()), reason: id);
     }
