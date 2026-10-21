@@ -10,11 +10,323 @@
   "comingSoon": "Coming soon",
   "sampleDataBanner": "SAMPLE DATA – NOT OFFICIAL",
   "ratesFooter": "Rates FY {financialYear} • Source: India Post",
-  "@ratesFooter": { "placeholders": { "financialYear": { "type": "String" } } },
+  "@ratesFooter": {
+    "placeholders": {
+      "financialYear": {
+        "type": "String"
+      }
+    }
+  },
   "bonusDisclaimer": "Bonus rates are declared yearly and are not guaranteed for the future. Final figures as per India Post.",
   "independentDisclaimerTitle": "Before you start",
   "independentDisclaimer": "This is an independent calculator, not an official India Post app. All calculations happen on your phone; no data is collected.",
   "understood": "I understand",
   "dataLoadError": "Could not load rate data: {error}",
-  "@dataLoadError": { "placeholders": { "error": { "type": "String" } } }
+  "@dataLoadError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "maturityTitle": "Maturity & Bonus",
+  "eligibilityTitle": "Eligibility Checker",
+  "premiumTitle": "Premium Calculator",
+  "schemePli": "PLI",
+  "schemeRpli": "RPLI",
+  "planLabel": "Plan",
+  "rulesPendingSuffix": "{plan} (rules pending)",
+  "@rulesPendingSuffix": {
+    "placeholders": {
+      "plan": {
+        "type": "String"
+      }
+    }
+  },
+  "entryAgeLabel": "Age at entry",
+  "childAgeLabel": "Child's age",
+  "spouseAgeLabel": "Spouse's age",
+  "ageYears": "{age} years",
+  "@ageYears": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      }
+    }
+  },
+  "decrease": "Decrease",
+  "increase": "Increase",
+  "ageBasisNote": "Enter age in completed years. Age from date of birth will be added once India Post's age rule is confirmed.",
+  "sumAssuredLabel": "Sum assured (₹)",
+  "maturityAgeLabel": "Maturity age",
+  "termLabel": "Policy term",
+  "termYears": "{years} years",
+  "@termYears": {
+    "placeholders": {
+      "years": {
+        "type": "int"
+      }
+    }
+  },
+  "startDateLabel": "Policy start date",
+  "resultMaturityValue": "Maturity value",
+  "resultTotalBenefits": "Total benefits received",
+  "sumAssuredRow": "Sum assured",
+  "termRow": "Term",
+  "bonusRateRow": "Bonus rate (FY {fy})",
+  "@bonusRateRow": {
+    "placeholders": {
+      "fy": {
+        "type": "String"
+      }
+    }
+  },
+  "bonusRateValue": "₹{rate} per ₹1,000 / year",
+  "@bonusRateValue": {
+    "placeholders": {
+      "rate": {
+        "type": "int"
+      }
+    }
+  },
+  "annualBonusRow": "Bonus per year",
+  "totalBonusRow": "Total bonus ({years} years)",
+  "@totalBonusRow": {
+    "placeholders": {
+      "years": {
+        "type": "int"
+      }
+    }
+  },
+  "terminalBonusRow": "Terminal bonus",
+  "projectionNote": "Assumes the FY {fy} bonus rate continues for every year of the term.",
+  "@projectionNote": {
+    "placeholders": {
+      "fy": {
+        "type": "String"
+      }
+    }
+  },
+  "timelineTitle": "Survival benefit timeline",
+  "timelineYear": "Year {year}",
+  "@timelineYear": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "timelineSurvival": "Survival benefit",
+  "timelineMaturity": "Maturity: remaining sum assured + full bonus",
+  "timelineDeathNote": "On death during the term: full sum assured + bonus, with no deduction for survival benefits already paid.",
+  "notAvailableTitle": "Not available yet",
+  "rulesPendingBody": "The projection for this plan will be added once its rules are confirmed from the official India Post circular.",
+  "premiumPendingBody": "Premiums must come from the official India Post premium tables. This calculator will be switched on once the official tables are loaded and verified — no estimated premiums are shown.",
+  "missingBonusRate": "No declared bonus rate for FY {fy}.",
+  "@missingBonusRate": {
+    "placeholders": {
+      "fy": {
+        "type": "String"
+      }
+    }
+  },
+  "vEntryAge": "{plan} entry age is {min}–{max}. Your age: {age}",
+  "@vEntryAge": {
+    "placeholders": {
+      "plan": {
+        "type": "String"
+      },
+      "min": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      },
+      "age": {
+        "type": "int"
+      }
+    }
+  },
+  "vChildAge": "Child's age must be {min}–{max}. Entered: {age}",
+  "@vChildAge": {
+    "placeholders": {
+      "min": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      },
+      "age": {
+        "type": "int"
+      }
+    }
+  },
+  "vSpouseAge": "Spouse's age must be {min}–{max}. Entered: {age}",
+  "@vSpouseAge": {
+    "placeholders": {
+      "min": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      },
+      "age": {
+        "type": "int"
+      }
+    }
+  },
+  "vSaMin": "Minimum sum assured is {min}. Entered: {sa}",
+  "@vSaMin": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "sa": {
+        "type": "String"
+      }
+    }
+  },
+  "vSaMax": "Maximum sum assured is {max} (all your policies in this scheme combined). Entered: {sa}",
+  "@vSaMax": {
+    "placeholders": {
+      "max": {
+        "type": "String"
+      },
+      "sa": {
+        "type": "String"
+      }
+    }
+  },
+  "vSaMultiple": "Sum assured must be a multiple of {multiple}",
+  "@vSaMultiple": {
+    "placeholders": {
+      "multiple": {
+        "type": "String"
+      }
+    }
+  },
+  "vMaturityNotOffered": "Maturity age {value} is not offered. Choose from: {allowed}",
+  "@vMaturityNotOffered": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      },
+      "allowed": {
+        "type": "String"
+      }
+    }
+  },
+  "vCeasingNotOffered": "Premium paying age {value} is not offered. Choose from: {allowed}",
+  "@vCeasingNotOffered": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      },
+      "allowed": {
+        "type": "String"
+      }
+    }
+  },
+  "vTermNotOffered": "A {value}-year term is not offered. Choose from: {allowed}",
+  "@vTermNotOffered": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      },
+      "allowed": {
+        "type": "String"
+      }
+    }
+  },
+  "vNotAfterEntry": "Maturity age {value} must be more than the entry age ({age}).",
+  "@vNotAfterEntry": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      },
+      "age": {
+        "type": "int"
+      }
+    }
+  },
+  "vTermRange": "Term must be {min}–{max} years. Entered: {term}",
+  "@vTermRange": {
+    "placeholders": {
+      "min": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      },
+      "term": {
+        "type": "int"
+      }
+    }
+  },
+  "vParentAge": "Parent's age must be {max} or less. Entered: {age}",
+  "@vParentAge": {
+    "placeholders": {
+      "max": {
+        "type": "int"
+      },
+      "age": {
+        "type": "int"
+      }
+    }
+  },
+  "vTooManyChildren": "A maximum of {max} children can be covered.",
+  "@vTooManyChildren": {
+    "placeholders": {
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "vChildSaCap": "Maximum sum assured for this child is {cap}. Entered: {sa}",
+  "@vChildSaCap": {
+    "placeholders": {
+      "cap": {
+        "type": "String"
+      },
+      "sa": {
+        "type": "String"
+      }
+    }
+  },
+  "vMissing": "Please fill in all the details.",
+  "eligibilityIntro": "Select everything that applies to the person, then set their age.",
+  "groupsPli": "PLI — any one of these",
+  "groupsRpli": "RPLI — any one of these",
+  "group_central_state_govt": "Central / State Govt employee",
+  "group_defence_paramilitary": "Defence / Paramilitary",
+  "group_psu": "Public Sector Undertaking",
+  "group_banks": "Bank employee",
+  "group_local_bodies": "Local body employee",
+  "group_educational_institutions": "Educational institution (incl. private recognised)",
+  "group_listed_companies": "Listed company employee",
+  "group_professionals": "Professional (doctor, engineer, CA, lawyer…)",
+  "group_graduates_diploma_holders": "Graduate or diploma holder",
+  "group_rural_resident": "Resident of a rural area",
+  "group_scheduled_bank_savings_account_holder": "Savings account holder in a scheduled bank",
+  "ageLabel": "Age",
+  "eligibleFor": "Eligible for",
+  "plansAtAge": "Plans open at age {age}",
+  "@plansAtAge": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      }
+    }
+  },
+  "childPlansTitle": "Children's policies (for your children)",
+  "selectGroupPrompt": "Select at least one option above to see eligible plans.",
+  "noPlansAtAge": "No plan accepts entry at age {age}.",
+  "@noPlansAtAge": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      }
+    }
+  },
+  "eligibilityNote": "Final acceptance is subject to India Post's medical underwriting and documents."
 }

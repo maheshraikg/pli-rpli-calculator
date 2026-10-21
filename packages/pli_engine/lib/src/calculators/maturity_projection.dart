@@ -54,6 +54,14 @@ class MaturityProjection {
   Paise get totalBenefits => payments.fold(Paise.zero, (s, p) => s + p.amount);
 }
 
+/// Why a projection is not yet available for a plan type, or null if it is.
+String? projectionPendingReason(PlanType type) => switch (type) {
+      PlanType.ea || PlanType.aea || PlanType.jointEa => null,
+      PlanType.wla => 'whole life: bonus accrual period after premiums cease',
+      PlanType.cwla => 'convertible whole life: projection before/after conversion',
+      PlanType.childEa => "children's policy: term and maturity",
+    };
+
 /// Projects bonus and payouts for a new policy.
 ///
 /// * EA: term = [maturityAge] − [entryAge]; payout SA + bonus + terminal bonus.
@@ -75,6 +83,8 @@ MaturityProjection projectNewPolicy(
   String? financialYear,
 }) {
   final plan = rules.plan(planId);
+  final pending = projectionPendingReason(plan.type);
+  if (pending != null) throw RuleNotConfirmedException(pending);
   final fy = financialYear ?? rules.financialYear;
   final sa = Paise.wholeRupees(sumAssured);
 
@@ -121,12 +131,8 @@ MaturityProjection projectNewPolicy(
       survival = const [];
       finalSA = sa;
       maturityDate = on(term);
-    case PlanType.wla:
-      throw RuleNotConfirmedException('whole life: bonus accrual period after premiums cease');
-    case PlanType.cwla:
-      throw RuleNotConfirmedException('convertible whole life: projection before/after conversion');
-    case PlanType.childEa:
-      throw RuleNotConfirmedException("children's policy: term and maturity");
+    case PlanType.wla || PlanType.cwla || PlanType.childEa:
+      throw StateError('unreachable: rejected above');
   }
 
   final rate = rules.bonusRate(plan.scheme, fy, plan.bonusClass);
