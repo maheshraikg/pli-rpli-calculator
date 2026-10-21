@@ -63,6 +63,7 @@ class _PliSahayakAppState extends ConsumerState<PliSahayakApp> {
 
   @override
   Widget build(BuildContext context) => MaterialApp.router(
+        debugShowCheckedModeBanner: false,
         onGenerateTitle: (context) => AppLocalizations.of(context).appTitle,
         theme: buildTheme(Brightness.light),
         darkTheme: buildTheme(Brightness.dark),

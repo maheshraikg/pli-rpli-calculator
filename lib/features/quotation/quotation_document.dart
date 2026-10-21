@@ -37,7 +37,8 @@ class QuotationDocument extends StatelessWidget {
     final q = e.selectedQuote;
     final p = e.projection;
     const ink = Color(0xFF1A1A1A);
-    const textStyle = TextStyle(color: ink, fontSize: 12);
+    // Keep the app's font (and Indic fallbacks) while forcing print colours.
+    final textStyle = Theme.of(context).textTheme.bodyMedium!.copyWith(color: ink, fontSize: 12);
     final head = textStyle.copyWith(fontSize: 13, fontWeight: FontWeight.bold);
 
     Widget section(String title, List<Widget> children) => Padding(
@@ -64,7 +65,7 @@ class QuotationDocument extends StatelessWidget {
         );
 
     return Theme(
-      data: ThemeData(brightness: Brightness.light),
+      data: buildTheme(Brightness.light),
       child: DefaultTextStyle(
         style: textStyle,
         child: Container(
