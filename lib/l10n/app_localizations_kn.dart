@@ -341,4 +341,10 @@ class AppLocalizationsKn extends AppLocalizations {
   @override
   String get eligibilityNote =>
       'ಅಂತಿಮ ಸ್ವೀಕಾರವು ಭಾರತೀಯ ಅಂಚೆಯ ವೈದ್ಯಕೀಯ ಪರಿಶೀಲನೆ ಮತ್ತು ದಾಖಲೆಗಳಿಗೆ ಒಳಪಟ್ಟಿರುತ್ತದೆ.';
+
+  @override
+  String get languageLabel => 'ಭಾಷೆ';
+
+  @override
+  String get systemLanguage => 'ಸಾಧನದ ಭಾಷೆ';
 }

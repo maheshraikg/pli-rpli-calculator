@@ -13,6 +13,15 @@ source_tables/           Official PDFs / transcribed CSVs (input to tools/)
 tools/                   Table converter, PDF table dumper, sample-table generator
 ```
 
+## Languages
+
+13 languages: English, Hindi, Kannada, Tamil, Telugu, Malayalam, Marathi, Gujarati,
+Bengali, Punjabi, Odia, Assamese, Urdu (RTL). UI strings live in `lib/l10n/app_<lang>.arb`
+(regenerate non-English files from `tools/l10n/tr_*.py`, which check every key and
+placeholder against `app_en.arb`). Plan names live in the rules JSON
+(`tools/l10n/plan_names.py`). All translations other than English need review by a
+native speaker before release.
+
 ## Data pipeline
 
 1. Put the official PDF in `source_tables/`. Optional first pass:

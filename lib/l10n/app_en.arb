@@ -328,5 +328,7 @@
       }
     }
   },
-  "eligibilityNote": "Final acceptance is subject to India Post's medical underwriting and documents."
+  "eligibilityNote": "Final acceptance is subject to India Post's medical underwriting and documents.",
+  "languageLabel": "Language",
+  "systemLanguage": "Device language"
 }

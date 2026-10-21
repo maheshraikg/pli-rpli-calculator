@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../data/data_repository.dart';
 import '../../l10n/app_localizations.dart';
+import 'language_button.dart';
 import 'rates_footer.dart';
 import 'sample_data_banner.dart';
 
@@ -18,7 +19,7 @@ class DataScaffold extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final data = ref.watch(appDataProvider);
     return Scaffold(
-      appBar: AppBar(title: Text(title)),
+      appBar: AppBar(title: Text(title), actions: const [LanguageButton()]),
       body: switch (data) {
         AsyncData(:final value) => Column(children: [
             if (value.usesSampleData) const SampleDataBanner(),

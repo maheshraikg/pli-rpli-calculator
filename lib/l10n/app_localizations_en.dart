@@ -341,4 +341,10 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get eligibilityNote =>
       'Final acceptance is subject to India Post\'s medical underwriting and documents.';
+
+  @override
+  String get languageLabel => 'Language';
+
+  @override
+  String get systemLanguage => 'Device language';
 }

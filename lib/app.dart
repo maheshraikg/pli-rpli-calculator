@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import 'core/locale.dart';
 import 'core/theme.dart';
 import 'features/eligibility/eligibility_screen.dart';
 import 'features/home/home_screen.dart';
@@ -17,18 +19,19 @@ GoRouter buildRouter({String initialLocation = '/'}) => GoRouter(initialLocation
       ]),
     ]);
 
-class PliSahayakApp extends StatefulWidget {
+class PliSahayakApp extends ConsumerStatefulWidget {
   const PliSahayakApp({super.key, this.locale, this.initialLocation = '/'});
 
-  /// Null follows the device language.
+  /// Starting language; null follows the device. The in-app language
+  /// choice overrides it.
   final Locale? locale;
   final String initialLocation;
 
   @override
-  State<PliSahayakApp> createState() => _PliSahayakAppState();
+  ConsumerState<PliSahayakApp> createState() => _PliSahayakAppState();
 }
 
-class _PliSahayakAppState extends State<PliSahayakApp> {
+class _PliSahayakAppState extends ConsumerState<PliSahayakApp> {
   late final _router = buildRouter(initialLocation: widget.initialLocation);
 
   @override
@@ -42,7 +45,7 @@ class _PliSahayakAppState extends State<PliSahayakApp> {
         onGenerateTitle: (context) => AppLocalizations.of(context).appTitle,
         theme: buildTheme(Brightness.light),
         darkTheme: buildTheme(Brightness.dark),
-        locale: widget.locale,
+        locale: ref.watch(localeProvider) ?? widget.locale,
         supportedLocales: AppLocalizations.supportedLocales,
         localizationsDelegates: const [
           AppLocalizations.delegate,
