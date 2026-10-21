@@ -350,606 +350,607 @@ class AppLocalizationsMl extends AppLocalizations {
   String get systemLanguage => 'ഉപകരണ ഭാഷ';
 
   @override
-  String get tileAfford => 'Afford';
+  String get tileAfford => 'എത്ര സാധ്യം';
 
   @override
-  String get tileTools => 'Policy tools';
+  String get tileTools => 'പോളിസി ടൂളുകൾ';
 
   @override
-  String get tilePlans => 'Plans';
+  String get tilePlans => 'പദ്ധതികൾ';
 
   @override
-  String get tileAbout => 'About';
+  String get tileAbout => 'വിവരം';
 
   @override
-  String get dobLabel => 'Date of birth';
+  String get dobLabel => 'ജനനത്തീയതി';
 
   @override
-  String get useAgeInstead => 'Enter age instead';
+  String get useAgeInstead => 'പകരം പ്രായം നൽകുക';
 
   @override
-  String get useDobInstead => 'Enter date of birth';
+  String get useDobInstead => 'ജനനത്തീയതി നൽകുക';
 
   @override
   String ageFromDobNearest(int age) {
-    return 'Entry age on start date: $age (age nearest birthday)';
+    return 'ആരംഭ തീയതിയിലെ ചേരൽ പ്രായം: $age (അടുത്ത ജന്മദിന പ്രായം)';
   }
 
   @override
   String ageFromDobLast(int age) {
-    return 'Entry age on start date: $age (age last birthday)';
+    return 'ആരംഭ തീയതിയിലെ ചേരൽ പ്രായം: $age (കഴിഞ്ഞ ജന്മദിന പ്രായം)';
   }
 
   @override
-  String get premiumCeasingAgeLabel => 'Premium paying age';
+  String get premiumCeasingAgeLabel => 'പ്രീമിയം അടയ്ക്കുന്ന പ്രായം';
 
   @override
-  String get frequencyLabel => 'Payment frequency';
+  String get frequencyLabel => 'അടവ് ഇടവേള';
 
   @override
-  String get freqMonthly => 'Monthly';
+  String get freqMonthly => 'പ്രതിമാസം';
 
   @override
-  String get freqQuarterly => 'Quarterly';
+  String get freqQuarterly => 'ത്രൈമാസം';
 
   @override
-  String get freqHalfYearly => 'Half-yearly';
+  String get freqHalfYearly => 'അർദ്ധവാർഷികം';
 
   @override
-  String get freqYearly => 'Yearly';
+  String get freqYearly => 'വാർഷികം';
 
   @override
-  String get premiumPerInstalment => 'Premium per instalment';
+  String get premiumPerInstalment => 'ഒരു തവണയുടെ പ്രീമിയം';
 
   @override
-  String get tablePremiumRow => 'Table premium';
+  String get tablePremiumRow => 'പട്ടിക പ്രീമിയം';
 
   @override
-  String get saRebateRow => 'SA rebate';
+  String get saRebateRow => 'ഇൻഷുറൻസ് തുക ഇളവ്';
 
   @override
   String totalPremiumRow(int count) {
-    return 'Total premium ($count instalments)';
+    return 'ആകെ പ്രീമിയം ($count തവണകൾ)';
   }
 
   @override
-  String get payingTermRow => 'Premium paying term';
+  String get payingTermRow => 'പ്രീമിയം അടയ്ക്കുന്ന കാലം';
 
   @override
-  String get returnRow => 'Effective return (XIRR)';
+  String get returnRow => 'ഫലപ്രദമായ വരുമാനം (XIRR)';
 
   @override
   String returnValue(String percent) {
-    return '$percent% a year';
+    return 'വർഷം $percent%';
   }
 
   @override
-  String get lifeCoverRow => 'Life cover';
+  String get lifeCoverRow => 'ജീവൻ പരിരക്ഷ';
 
   @override
-  String get allFrequenciesTitle => 'All payment frequencies';
+  String get allFrequenciesTitle => 'എല്ലാ അടവ് ഇടവേളകളും';
 
   @override
-  String get notInTable => 'Not available in official table';
+  String get notInTable => 'ഔദ്യോഗിക പട്ടികയിൽ ലഭ്യമല്ല';
 
   @override
   String get noTableForPlan =>
-      'The premium table for this plan is not loaded yet.';
+      'ഈ പദ്ധതിയുടെ പ്രീമിയം പട്ടിക ഇതുവരെ ചേർത്തിട്ടില്ല.';
 
   @override
-  String get illustrationTitle => 'Year-wise benefit illustration';
+  String get illustrationTitle => 'വർഷം തിരിച്ചുള്ള ആനുകൂല്യ വിവരം';
 
   @override
-  String get colYear => 'Year';
+  String get colYear => 'വർഷം';
 
   @override
-  String get colPremiumsPaid => 'Premiums paid';
+  String get colPremiumsPaid => 'അടച്ച പ്രീമിയം';
 
   @override
-  String get colBonus => 'Bonus';
+  String get colBonus => 'ബോണസ്';
 
   @override
-  String get colLifeCover => 'Life cover';
+  String get colLifeCover => 'ജീവൻ പരിരക്ഷ';
 
   @override
-  String get makeQuotation => 'Create quotation';
+  String get makeQuotation => 'ക്വട്ടേഷൻ തയ്യാറാക്കുക';
 
   @override
   String get gstNote =>
-      'GST: nil on individual life insurance premiums paid on or after 22 Sep 2025.';
+      'ജിഎസ്ടി: 22 സെപ്റ്റംബർ 2025-നോ ശേഷമോ അടച്ച വ്യക്തിഗത ലൈഫ് ഇൻഷുറൻസ് പ്രീമിയത്തിന് പൂജ്യം.';
 
   @override
-  String get chartTitle => 'Premium paid vs benefits';
+  String get chartTitle => 'അടച്ച പ്രീമിയവും ആനുകൂല്യവും';
 
   @override
-  String get chartPaid => 'Total premium';
+  String get chartPaid => 'ആകെ പ്രീമിയം';
 
   @override
-  String get chartReceived => 'Total benefits';
+  String get chartReceived => 'ആകെ ആനുകൂല്യം';
 
   @override
-  String get showTable => 'Show year-wise table';
+  String get showTable => 'വർഷം തിരിച്ചുള്ള പട്ടിക കാണിക്കുക';
 
   @override
-  String get hideTable => 'Hide year-wise table';
+  String get hideTable => 'വർഷം തിരിച്ചുള്ള പട്ടിക മറയ്ക്കുക';
 
   @override
-  String get reverseTitle => 'What can I afford?';
+  String get reverseTitle => 'എനിക്ക് എത്ര സാധിക്കും?';
 
   @override
-  String get budgetLabel => 'Budget per instalment (₹)';
+  String get budgetLabel => 'ഒരു തവണയുടെ ബജറ്റ് (₹)';
 
   @override
   String get reverseIntro =>
-      'Enter how much you can pay. Each plan option shows the highest sum assured within that amount.';
+      'നിങ്ങൾക്ക് എത്ര അടയ്ക്കാനാകും എന്ന് നൽകുക. ഓരോ പദ്ധതി ഓപ്ഷനും ആ തുകയ്ക്കുള്ളിലെ പരമാവധി ഇൻഷുറൻസ് തുക കാണിക്കും.';
 
   @override
   String optMaturityAge(int age) {
-    return 'Matures at $age';
+    return '$age വയസ്സിൽ കാലാവധി';
   }
 
   @override
   String optCeasingAge(int age) {
-    return 'Premiums till age $age';
+    return '$age വയസ്സുവരെ പ്രീമിയം';
   }
 
   @override
   String optTerm(int years) {
-    return '$years-year term';
+    return '$years വർഷ കാലാവധി';
   }
 
   @override
-  String get reverseNone => 'No plan fits this budget at this age.';
+  String get reverseNone =>
+      'ഈ പ്രായത്തിൽ ഈ ബജറ്റിൽ ഒരു പദ്ധതിയും ഒതുങ്ങുന്നില്ല.';
 
   @override
-  String get saShort => 'Sum assured';
+  String get saShort => 'ഇൻഷുറൻസ് തുക';
 
   @override
-  String get premiumShort => 'Premium';
+  String get premiumShort => 'പ്രീമിയം';
 
   @override
-  String get compareTitle => 'Compare plans';
+  String get compareTitle => 'പദ്ധതികൾ താരതമ്യം';
 
   @override
   String optionN(int n) {
-    return 'Option $n';
+    return 'ഓപ്ഷൻ $n';
   }
 
   @override
-  String get addOption => 'Add option';
+  String get addOption => 'ഓപ്ഷൻ ചേർക്കുക';
 
   @override
-  String get removeOption => 'Remove option';
+  String get removeOption => 'ഓപ്ഷൻ നീക്കുക';
 
   @override
-  String get maturityShort => 'Maturity / benefits';
+  String get maturityShort => 'കാലാവധി / ആനുകൂല്യം';
 
   @override
-  String get totalPaidShort => 'Total paid';
+  String get totalPaidShort => 'ആകെ അടച്ചത്';
 
   @override
-  String get returnShort => 'Return';
+  String get returnShort => 'വരുമാനം';
 
   @override
-  String get lifeCoverShort => 'Life cover';
+  String get lifeCoverShort => 'ജീവൻ പരിരക്ഷ';
 
   @override
-  String get comparisonTitle => 'Comparison';
+  String get comparisonTitle => 'താരതമ്യം';
 
   @override
-  String get toolsTitle => 'Policy tools';
+  String get toolsTitle => 'പോളിസി ടൂളുകൾ';
 
   @override
-  String get tabLoan => 'Loan';
+  String get tabLoan => 'വായ്പ';
 
   @override
-  String get tabPaidUp => 'Paid-up';
+  String get tabPaidUp => 'പെയ്ഡ്-അപ്പ്';
 
   @override
-  String get tabRevival => 'Revival';
+  String get tabRevival => 'പുനരുജ്ജീവനം';
 
   @override
-  String get tabAdvance => 'Advance';
+  String get tabAdvance => 'മുൻകൂർ';
 
   @override
-  String get yearsInForceLabel => 'Years the policy has been in force';
+  String get yearsInForceLabel => 'പോളിസി പ്രാബല്യത്തിലുള്ള വർഷങ്ങൾ';
 
   @override
-  String get loanAmountLabel => 'Loan amount (₹)';
+  String get loanAmountLabel => 'വായ്പ തുക (₹)';
 
   @override
-  String get loanMonthsLabel => 'Months until repayment';
+  String get loanMonthsLabel => 'തിരിച്ചടവ് വരെയുള്ള മാസങ്ങൾ';
 
   @override
   String monthsValue(int months) {
-    return '$months months';
+    return '$months മാസം';
   }
 
   @override
-  String get loanInterestRow => 'Interest';
+  String get loanInterestRow => 'പലിശ';
 
   @override
-  String get loanTotalRow => 'Total to repay';
+  String get loanTotalRow => 'ആകെ തിരിച്ചടവ്';
 
   @override
   String loanRateNote(String rate) {
-    return 'Interest $rate% a year, compounded half-yearly.';
+    return 'വർഷം $rate% പലിശ, അർദ്ധവാർഷിക കൂട്ടുപലിശ.';
   }
 
   @override
   String loanAvailableAfter(int years) {
-    return 'Loan available after $years years.';
+    return '$years വർഷത്തിനു ശേഷം വായ്പ ലഭ്യം.';
   }
 
   @override
-  String get loanNotOffered => 'This plan has no loan facility.';
+  String get loanNotOffered => 'ഈ പദ്ധതിയിൽ വായ്പ സൗകര്യമില്ല.';
 
   @override
-  String get loanEligibleYes => 'Eligible for a loan';
+  String get loanEligibleYes => 'വായ്പയ്ക്ക് അർഹം';
 
   @override
-  String get loanEligibleNo => 'Not yet eligible for a loan';
+  String get loanEligibleNo => 'ഇതുവരെ വായ്പയ്ക്ക് അർഹമല്ല';
 
   @override
   String get loanAmountNote =>
-      'The maximum loan depends on the surrender value, which India Post calculates.';
+      'പരമാവധി വായ്പ സറണ്ടർ മൂല്യത്തെ ആശ്രയിക്കുന്നു; അത് ഇന്ത്യ പോസ്റ്റ് കണക്കാക്കുന്നു.';
 
   @override
-  String get premiumsPaidLabel => 'Instalments paid';
+  String get premiumsPaidLabel => 'അടച്ച തവണകൾ';
 
   @override
-  String get premiumsPayableLabel => 'Total instalments payable';
+  String get premiumsPayableLabel => 'അടയ്ക്കേണ്ട ആകെ തവണകൾ';
 
   @override
-  String get paidUpSaRow => 'Paid-up sum assured';
+  String get paidUpSaRow => 'പെയ്ഡ്-അപ്പ് ഇൻഷുറൻസ് തുക';
 
   @override
   String get paidUpNote =>
-      'Approximate. Bonus already earned is added as per India Post records. Surrender value needs official surrender factors and is not calculated.';
+      'ഏകദേശം. ഇതിനകം നേടിയ ബോണസ് ഇന്ത്യ പോസ്റ്റ് രേഖകൾ പ്രകാരം ചേർക്കും. സറണ്ടർ മൂല്യത്തിന് ഔദ്യോഗിക സറണ്ടർ ഘടകങ്ങൾ വേണം; അത് കണക്കാക്കിയിട്ടില്ല.';
 
   @override
   String paidUpNotEligible(int years) {
-    return 'A policy can become paid-up only after $years years in force.';
+    return 'പോളിസി $years വർഷം പ്രാബല്യത്തിലായ ശേഷമേ പെയ്ഡ്-അപ്പ് ആകൂ.';
   }
 
   @override
-  String get paidUpInvalid =>
-      'Instalments paid cannot exceed instalments payable.';
+  String get paidUpInvalid => 'അടച്ച തവണകൾ അടയ്ക്കേണ്ടതിനേക്കാൾ കൂടരുത്.';
 
   @override
-  String get instalmentLabel => 'Premium per instalment (₹)';
+  String get instalmentLabel => 'ഒരു തവണയുടെ പ്രീമിയം (₹)';
 
   @override
-  String get firstUnpaidLabel => 'First unpaid due date';
+  String get firstUnpaidLabel => 'ആദ്യ കുടിശ്ശിക തവണയുടെ തീയതി';
 
   @override
-  String get payDateLabel => 'Date of payment';
+  String get payDateLabel => 'അടയ്ക്കുന്ന തീയതി';
 
   @override
-  String get missedRow => 'Instalments due';
+  String get missedRow => 'കുടിശ്ശിക തവണകൾ';
 
   @override
-  String get arrearsRow => 'Arrears';
+  String get arrearsRow => 'കുടിശ്ശിക';
 
   @override
-  String get defaultFeeRow => 'Default fee';
+  String get defaultFeeRow => 'വൈകൽ ഫീസ്';
 
   @override
-  String get totalPayableRow => 'Total payable';
+  String get totalPayableRow => 'ആകെ അടയ്ക്കേണ്ടത്';
 
   @override
   String revivalNote(String percent) {
-    return 'Default fee $percent% of the instalment per month of delay. Revival after a long lapse may need a medical certificate.';
+    return 'വൈകിയ ഓരോ മാസത്തിനും തവണയുടെ $percent% വൈകൽ ഫീസ്. ദീർഘകാലത്തിനു ശേഷം പുനരുജ്ജീവിപ്പിക്കാൻ മെഡിക്കൽ സർട്ടിഫിക്കറ്റ് വേണ്ടിവരാം.';
   }
 
   @override
   String revivalLine(String date, int months, String fee) {
-    return 'Due $date • $months months late • fee $fee';
+    return 'കുടിശ്ശിക $date • $months മാസം വൈകി • ഫീസ് $fee';
   }
 
   @override
-  String get nothingDue => 'Nothing is due on that date.';
+  String get nothingDue => 'ആ തീയതിയിൽ ഒന്നും കുടിശ്ശികയില്ല.';
 
   @override
-  String get monthsAdvanceLabel => 'Months paid in advance';
+  String get monthsAdvanceLabel => 'മുൻകൂർ അടയ്ക്കുന്ന മാസങ്ങൾ';
 
   @override
   String rebateRow(String percent) {
-    return 'Rebate ($percent%)';
+    return 'ഇളവ് ($percent%)';
   }
 
   @override
-  String get amountDueRow => 'Amount due';
+  String get amountDueRow => 'അടയ്ക്കേണ്ട തുക';
 
   @override
-  String get payableRow => 'You pay';
+  String get payableRow => 'നിങ്ങൾ അടയ്ക്കുന്നത്';
 
   @override
   String get advanceNote =>
-      'The rebate shown follows the advance-payment rebate in the rate data; it applies when premiums are paid in advance.';
+      'കാണിച്ച ഇളവ് നിരക്ക് ഡാറ്റയിലെ മുൻകൂർ അടവ് ഇളവ് പ്രകാരം; പ്രീമിയം മുൻകൂർ അടയ്ക്കുമ്പോൾ ബാധകം.';
 
   @override
-  String get policiesTitle => 'My Policies';
+  String get policiesTitle => 'എന്റെ പോളിസികൾ';
 
   @override
-  String get noPolicies => 'No saved policies yet. Tap + to add one.';
+  String get noPolicies =>
+      'ഇതുവരെ ഒരു പോളിസിയും സേവ് ചെയ്തിട്ടില്ല. ചേർക്കാൻ + അമർത്തുക.';
 
   @override
-  String get addPolicy => 'Add policy';
+  String get addPolicy => 'പോളിസി ചേർക്കുക';
 
   @override
-  String get editPolicy => 'Edit policy';
+  String get editPolicy => 'പോളിസി തിരുത്തുക';
 
   @override
-  String get holderNameLabel => 'Policy holder name';
+  String get holderNameLabel => 'പോളിസി ഉടമയുടെ പേര്';
 
   @override
-  String get policyNumberLabel => 'Policy number';
+  String get policyNumberLabel => 'പോളിസി നമ്പർ';
 
   @override
-  String get premiumAmountLabel => 'Premium per instalment (₹, as on receipt)';
+  String get premiumAmountLabel => 'ഒരു തവണയുടെ പ്രീമിയം (₹, രസീത് പ്രകാരം)';
 
   @override
-  String get save => 'Save';
+  String get save => 'സേവ് ചെയ്യുക';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'ഇല്ലാതാക്കുക';
 
   @override
-  String get deleteConfirm => 'Delete this policy?';
+  String get deleteConfirm => 'ഈ പോളിസി ഇല്ലാതാക്കണോ?';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'റദ്ദാക്കുക';
 
   @override
   String nextDue(String date) {
-    return 'Next due: $date';
+    return 'അടുത്ത തവണ: $date';
   }
 
   @override
-  String get noMoreDues => 'All premiums paid';
+  String get noMoreDues => 'എല്ലാ പ്രീമിയവും അടച്ചു';
 
   @override
-  String get remindersLabel => 'Remind me 3 days before each due date';
+  String get remindersLabel => 'ഓരോ തവണയ്ക്കും 3 ദിവസം മുമ്പ് ഓർമ്മിപ്പിക്കുക';
 
   @override
-  String get remindersDenied => 'Notifications are turned off for this app.';
+  String get remindersDenied => 'ഈ ആപ്പിന് അറിയിപ്പുകൾ ഓഫാണ്.';
 
   @override
-  String get accruedBonusRow => 'Bonus accrued so far';
+  String get accruedBonusRow => 'ഇതുവരെ ലഭിച്ച ബോണസ്';
 
   @override
   String bonusMissingYears(String years) {
-    return 'Bonus rates for FY $years are not in the app data; the total leaves out those years.';
+    return 'സാ.വ. $years ബോണസ് നിരക്കുകൾ ആപ്പ് ഡാറ്റയിൽ ഇല്ല; ആകെ തുകയിൽ ആ വർഷങ്ങൾ ഉൾപ്പെടുന്നില്ല.';
   }
 
   @override
   String maturityOn(String date) {
-    return 'Matures on $date';
+    return '$date-ന് കാലാവധി';
   }
 
   @override
-  String get upcomingDues => 'Upcoming due dates';
+  String get upcomingDues => 'വരാനിരിക്കുന്ന തവണ തീയതികൾ';
 
   @override
-  String get yearsInForceRow => 'Years in force';
+  String get yearsInForceRow => 'പ്രാബല്യ വർഷങ്ങൾ';
 
   @override
-  String get reminderTitle => 'PLI premium due';
+  String get reminderTitle => 'പിഎൽഐ പ്രീമിയം കുടിശ്ശിക';
 
   @override
   String reminderBody(String name, String amount, String date, String number) {
-    return '$name: $amount due on $date (policy $number)';
+    return '$name: $amount $date-ന് അടയ്ക്കണം (പോളിസി $number)';
   }
 
   @override
-  String get savedLocally => 'Saved only on this phone.';
+  String get savedLocally => 'ഈ ഫോണിൽ മാത്രം സേവ് ചെയ്തു.';
 
   @override
-  String get requiredField => 'Required';
+  String get requiredField => 'ആവശ്യമാണ്';
 
   @override
-  String get projectedMaturityRow => 'Projected maturity value';
+  String get projectedMaturityRow => 'കണക്കാക്കിയ കാലാവധി തുക';
 
   @override
-  String get quotationTitle => 'Quotation';
+  String get quotationTitle => 'ക്വട്ടേഷൻ';
 
   @override
-  String get customerNameLabel => 'Customer name';
+  String get customerNameLabel => 'ഉപഭോക്താവിന്റെ പേര്';
 
   @override
-  String get agentNameLabel => 'Prepared by (optional)';
+  String get agentNameLabel => 'തയ്യാറാക്കിയത് (ഐച്ഛികം)';
 
   @override
-  String get sharePdf => 'Share PDF';
+  String get sharePdf => 'PDF പങ്കിടുക';
 
   @override
-  String get shareImage => 'Share image';
+  String get shareImage => 'ചിത്രം പങ്കിടുക';
 
   @override
-  String get quotationHeading => 'Premium Quotation';
+  String get quotationHeading => 'പ്രീമിയം ക്വട്ടേഷൻ';
 
   @override
   String preparedOn(String date) {
-    return 'Prepared on $date';
+    return '$date-ന് തയ്യാറാക്കിയത്';
   }
 
   @override
   String quotationFor(String name) {
-    return 'For: $name';
+    return 'ഇവർക്ക്: $name';
   }
 
   @override
   String preparedBy(String name) {
-    return 'Prepared by: $name';
+    return 'തയ്യാറാക്കിയത്: $name';
   }
 
   @override
   String get quotationInvalid =>
-      'Complete the plan details to create a quotation.';
+      'ക്വട്ടേഷൻ തയ്യാറാക്കാൻ പദ്ധതി വിവരങ്ങൾ പൂർത്തിയാക്കുക.';
 
   @override
-  String get planDetailsTitle => 'Plan details';
+  String get planDetailsTitle => 'പദ്ധതി വിവരങ്ങൾ';
 
   @override
-  String get planInfoTitle => 'Plan information';
+  String get planInfoTitle => 'പദ്ധതി വിവരം';
 
   @override
   String entryAgeInfo(int min, int max) {
-    return 'Entry age: $min–$max';
+    return 'ചേരാനുള്ള പ്രായം: $min–$max';
   }
 
   @override
   String maturityAgesInfo(String ages) {
-    return 'Maturity ages: $ages';
+    return 'കാലാവധി പ്രായങ്ങൾ: $ages';
   }
 
   @override
   String ceasingAgesInfo(String ages, int age) {
-    return 'Premium paying ages: $ages; matures at $age';
+    return 'പ്രീമിയം അടയ്ക്കുന്ന പ്രായങ്ങൾ: $ages; $age വയസ്സിൽ കാലാവധി';
   }
 
   @override
   String termsInfo(String terms) {
-    return 'Terms: $terms years';
+    return 'കാലാവധി: $terms വർഷം';
   }
 
   @override
   String survivalInfo(String list) {
-    return 'Money back: $list';
+    return 'മണി ബാക്ക്: $list';
   }
 
   @override
   String survivalItem(int percent, int year) {
-    return '$percent% at year $year';
+    return '$year-ാം വർഷം $percent%';
   }
 
   @override
   String loanInfo(int years) {
-    return 'Loan after $years years';
+    return '$years വർഷത്തിനു ശേഷം വായ്പ';
   }
 
   @override
-  String get noLoanInfo => 'No loan';
+  String get noLoanInfo => 'വായ്പയില്ല';
 
   @override
   String surrenderInfo(int years) {
-    return 'Surrender after $years years';
+    return '$years വർഷത്തിനു ശേഷം സറണ്ടർ';
   }
 
   @override
-  String get noSurrenderInfo => 'No surrender';
+  String get noSurrenderInfo => 'സറണ്ടർ ഇല്ല';
 
   @override
   String bonusInfo(String fy, int rate) {
-    return 'Bonus FY $fy: ₹$rate per ₹1,000 a year';
+    return 'സാ.വ. $fy ബോണസ്: ഓരോ ₹1,000-നും വർഷം ₹$rate';
   }
 
   @override
   String saLimitInfo(String min, String max) {
-    return 'Sum assured: $min – $max';
+    return 'ഇൻഷുറൻസ് തുക: $min – $max';
   }
 
   @override
   String jointInfo(int min, int max, int tmin, int tmax) {
-    return 'Each spouse aged $min–$max; term $tmin–$tmax years';
+    return 'ഓരോ ജീവിതപങ്കാളിയുടെയും പ്രായം $min–$max; കാലാവധി $tmin–$tmax വർഷം';
   }
 
   @override
   String childInfo(int min, int max, int parent, int children, String cap) {
-    return 'Child aged $min–$max; parent aged up to $parent; up to $children children; SA up to $cap';
+    return 'കുട്ടിയുടെ പ്രായം $min–$max; രക്ഷിതാവിന്റെ പ്രായം $parent വരെ; പരമാവധി $children കുട്ടികൾ; ഇൻഷുറൻസ് തുക $cap വരെ';
   }
 
   @override
   String conversionInfo(int years) {
-    return 'Can be converted to endowment after $years years';
+    return '$years വർഷത്തിനു ശേഷം എൻഡോവ്മെന്റ് ഇൻഷുറൻസാക്കി മാറ്റാം';
   }
 
   @override
-  String get faqTitle => 'Common questions';
+  String get faqTitle => 'സാധാരണ ചോദ്യങ്ങൾ';
 
   @override
-  String get faq1q => 'Is the bonus guaranteed?';
+  String get faq1q => 'ബോണസ് ഉറപ്പാണോ?';
 
   @override
   String get faq1a =>
-      'No. India Post declares bonus rates every year. Projections here assume the latest declared rate for every future year.';
+      'അല്ല. ഇന്ത്യ പോസ്റ്റ് ഓരോ വർഷവും ബോണസ് നിരക്കുകൾ പ്രഖ്യാപിക്കുന്നു. ഇവിടത്തെ കണക്കുകൾ ഭാവിയിലെ ഓരോ വർഷത്തിനും ഏറ്റവും പുതിയ പ്രഖ്യാപിത നിരക്ക് അനുമാനിക്കുന്നു.';
 
   @override
-  String get faq2q => 'Where do the premiums come from?';
+  String get faq2q => 'പ്രീമിയം എവിടെ നിന്നാണ്?';
 
   @override
   String get faq2a =>
-      'From India Post\'s official premium tables. The app never estimates a premium.';
+      'ഇന്ത്യ പോസ്റ്റിന്റെ ഔദ്യോഗിക പ്രീമിയം പട്ടികകളിൽ നിന്ന്. ആപ്പ് ഒരിക്കലും പ്രീമിയം ഊഹിക്കുന്നില്ല.';
 
   @override
-  String get faq3q => 'Is there an income tax benefit?';
+  String get faq3q => 'ആദായനികുതി ആനുകൂല്യമുണ്ടോ?';
 
   @override
   String get faq3a =>
-      'Premiums may qualify under Section 80C (old tax regime) and maturity may be exempt under Section 10(10D), subject to conditions. This is not tax advice.';
+      'പ്രീമിയം സെക്ഷൻ 80C (പഴയ നികുതി രീതി) പ്രകാരം അർഹമാകാം; കാലാവധി തുക സെക്ഷൻ 10(10D) പ്രകാരം വ്യവസ്ഥകൾക്ക് വിധേയമായി ഒഴിവാകാം. ഇത് നികുതി ഉപദേശമല്ല.';
 
   @override
-  String get faq4q => 'Is GST charged on premiums?';
+  String get faq4q => 'പ്രീമിയത്തിന് ജിഎസ്ടി ഉണ്ടോ?';
 
   @override
   String get faq4a =>
-      'No. GST on individual life insurance premiums is nil from 22 September 2025.';
+      'ഇല്ല. 22 സെപ്റ്റംബർ 2025 മുതൽ വ്യക്തിഗത ലൈഫ് ഇൻഷുറൻസ് പ്രീമിയത്തിന് ജിഎസ്ടി പൂജ്യമാണ്.';
 
   @override
-  String get faq5q => 'Who can buy PLI and RPLI?';
+  String get faq5q => 'PLI, RPLI ആർക്കെടുക്കാം?';
 
   @override
   String get faq5a =>
-      'PLI: government and semi-government employees, professionals, graduates, diploma holders and others listed by India Post. RPLI: rural residents and scheduled bank savings account holders.';
+      'PLI: സർക്കാർ, അർദ്ധസർക്കാർ ജീവനക്കാർ, പ്രൊഫഷണലുകൾ, ബിരുദധാരികൾ, ഡിപ്ലോമക്കാർ, ഇന്ത്യ പോസ്റ്റ് പട്ടികപ്പെടുത്തിയ മറ്റുള്ളവർ. RPLI: ഗ്രാമീണ താമസക്കാരും ഷെഡ്യൂൾഡ് ബാങ്ക് സേവിംഗ്സ് അക്കൗണ്ട് ഉടമകളും.';
 
   @override
-  String get aboutTitle => 'About';
+  String get aboutTitle => 'വിവരം';
 
   @override
-  String get privacyTitle => 'Privacy';
+  String get privacyTitle => 'സ്വകാര്യത';
 
   @override
   String get privacyBody =>
-      'PLI Sahayak collects no data. Everything you enter or save stays on this phone. No account or internet connection is needed.';
+      'പിഎൽഐ സഹായക് ഒരു ഡാറ്റയും ശേഖരിക്കുന്നില്ല. നിങ്ങൾ നൽകുന്നതും സേവ് ചെയ്യുന്നതുമെല്ലാം ഈ ഫോണിൽ തന്നെ. അക്കൗണ്ടോ ഇന്റർനെറ്റോ ആവശ്യമില്ല.';
 
   @override
-  String get dataSourceTitle => 'Rate data';
+  String get dataSourceTitle => 'നിരക്ക് ഡാറ്റ';
 
   @override
   String dataSourceBody(String id, String date, String source) {
-    return 'Rules $id, effective $date. Source: $source';
+    return 'നിയമങ്ങൾ $id, $date മുതൽ പ്രാബല്യം. ഉറവിടം: $source';
   }
 
   @override
-  String get provisionalTitle => 'Rules still being confirmed';
+  String get provisionalTitle => 'ഇനിയും സ്ഥിരീകരിക്കേണ്ട നിയമങ്ങൾ';
 
   @override
   String get provisionalIntro =>
-      'These rules are working assumptions until they are confirmed from official India Post circulars (shown in English):';
+      'ഇന്ത്യ പോസ്റ്റിന്റെ ഔദ്യോഗിക സർക്കുലറുകളിൽ നിന്ന് സ്ഥിരീകരിക്കും വരെ ഈ നിയമങ്ങൾ താൽക്കാലിക അനുമാനങ്ങളാണ് (ഇംഗ്ലീഷിൽ):';
 
   @override
-  String get checkUpdates => 'Check for rate updates';
+  String get checkUpdates => 'നിരക്ക് അപ്ഡേറ്റ് പരിശോധിക്കുക';
 
   @override
   String updateInstalled(int version) {
-    return 'Rate data updated to version $version.';
+    return 'നിരക്ക് ഡാറ്റ പതിപ്പ് $version-ലേക്ക് അപ്ഡേറ്റ് ചെയ്തു.';
   }
 
   @override
-  String get updateCurrent => 'Rate data is up to date.';
+  String get updateCurrent => 'നിരക്ക് ഡാറ്റ ഏറ്റവും പുതിയതാണ്.';
 
   @override
   String updateFailed(String error) {
-    return 'Update failed; current rates kept. $error';
+    return 'അപ്ഡേറ്റ് പരാജയപ്പെട്ടു; നിലവിലെ നിരക്കുകൾ തുടരുന്നു. $error';
   }
 
   @override
   String get sampleDataNote =>
-      'Premium tables are SAMPLE data, not official India Post figures.';
+      'പ്രീമിയം പട്ടികകൾ സാമ്പിൾ ഡാറ്റയാണ്, ഇന്ത്യ പോസ്റ്റിന്റെ ഔദ്യോഗിക കണക്കുകളല്ല.';
 
   @override
   String appVersion(String version) {
-    return 'Version $version';
+    return 'പതിപ്പ് $version';
   }
 }

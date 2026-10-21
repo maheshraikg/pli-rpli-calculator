@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pli_sahayak/core/locale.dart';
@@ -12,6 +15,17 @@ void main() {
       AppLocalizations.supportedLocales.map((l) => l.languageCode).toSet(),
       kAppLanguages.keys.toSet(),
     );
+  });
+
+  test('every language translates every English string', () {
+    Set<String> keys(String lang) => (jsonDecode(File('lib/l10n/app_$lang.arb').readAsStringSync()) as Map<String, Object?>)
+        .keys
+        .where((k) => !k.startsWith('@'))
+        .toSet();
+    final english = keys('en');
+    for (final lang in kAppLanguages.keys) {
+      expect(english.difference(keys(lang)), isEmpty, reason: 'untranslated in $lang');
+    }
   });
 
   test('every plan has a name in every app language', () {
@@ -35,6 +49,13 @@ void main() {
       await tester.pumpAndSettle();
       await scrollTo(tester, find.text('₹1,96,000'));
       expect(find.text('₹1,96,000'), findsOneWidget);
+    });
+
+    testWidgets('[$lang] premium and quotation screens render', (tester) async {
+      await pumpApp(tester, locale: Locale(lang), location: '/premium');
+      await scrollTo(tester, find.byType(FilledButton));
+      await pumpApp(tester, locale: Locale(lang), location: '/quotation', key: ValueKey('q$lang'));
+      expect(find.byType(RepaintBoundary), findsWidgets);
     });
 
     testWidgets('[$lang] eligibility screen lists translated plan names', (tester) async {
