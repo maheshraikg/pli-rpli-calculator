@@ -10,7 +10,7 @@ class AppLocalizationsMl extends AppLocalizations {
   AppLocalizationsMl([String locale = 'ml']) : super(locale);
 
   @override
-  String get appTitle => 'പിഎൽഐ സഹായക്';
+  String get appTitle => 'PLI RPLI കാൽക്കുലേറ്റർ';
 
   @override
   String get tilePremium => 'പ്രീമിയം';
@@ -912,7 +912,7 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'പിഎൽഐ സഹായക് ഒരു ഡാറ്റയും ശേഖരിക്കുന്നില്ല. നിങ്ങൾ നൽകുന്നതും സേവ് ചെയ്യുന്നതുമെല്ലാം ഈ ഫോണിൽ തന്നെ. അക്കൗണ്ടോ ഇന്റർനെറ്റോ ആവശ്യമില്ല.';
+      'PLI RPLI കാൽക്കുലേറ്റർ ഒരു ഡാറ്റയും ശേഖരിക്കുന്നില്ല. നിങ്ങൾ നൽകുന്നതും സേവ് ചെയ്യുന്നതുമെല്ലാം ഈ ഫോണിൽ തന്നെ. അക്കൗണ്ടോ ഇന്റർനെറ്റോ ആവശ്യമില്ല.';
 
   @override
   String get dataSourceTitle => 'നിരക്ക് ഡാറ്റ';
@@ -955,7 +955,7 @@ class AppLocalizationsMl extends AppLocalizations {
   }
 
   @override
-  String get homeTagline => 'PLI, RPLI പ്രീമിയം, ബോണസ്, കാലാവധി കാൽക്കുലേറ്റർ';
+  String get homeTagline => 'പ്രീമിയം, ബോണസ്, കാലാവധി — ഓഫ്‌ലൈനിലും';
 
   @override
   String get quickPremiumTitle => 'പ്രീമിയം കണക്കാക്കുക';

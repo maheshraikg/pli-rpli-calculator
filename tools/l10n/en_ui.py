@@ -1,6 +1,6 @@
 """English strings added with the UI redesign."""
 STRINGS = [
- ('homeTagline', 'PLI & RPLI premium, bonus and maturity calculator', None),
+ ('homeTagline', 'Premium, bonus and maturity — works offline', None),
  ('quickPremiumTitle', 'Calculate premium', None),
  ('quickPremiumBody', 'Any plan, age and sum assured — all frequencies', None),
  ('sectionCalculators', 'Calculators', None),

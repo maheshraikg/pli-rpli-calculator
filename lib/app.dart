@@ -40,8 +40,8 @@ GoRouter buildRouter({String initialLocation = '/'}) => GoRouter(initialLocation
       ]),
     ]);
 
-class PliSahayakApp extends ConsumerStatefulWidget {
-  const PliSahayakApp({super.key, this.locale, this.initialLocation = '/'});
+class PliRpliApp extends ConsumerStatefulWidget {
+  const PliRpliApp({super.key, this.locale, this.initialLocation = '/'});
 
   /// Starting language; null follows the device. The in-app language
   /// choice overrides it.
@@ -49,10 +49,10 @@ class PliSahayakApp extends ConsumerStatefulWidget {
   final String initialLocation;
 
   @override
-  ConsumerState<PliSahayakApp> createState() => _PliSahayakAppState();
+  ConsumerState<PliRpliApp> createState() => _PliRpliAppState();
 }
 
-class _PliSahayakAppState extends ConsumerState<PliSahayakApp> {
+class _PliRpliAppState extends ConsumerState<PliRpliApp> {
   late final _router = buildRouter(initialLocation: widget.initialLocation);
 
   @override

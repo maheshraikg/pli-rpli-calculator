@@ -20,7 +20,7 @@ Future<Uint8List> capturePng(RenderRepaintBoundary boundary, {double pixelRatio 
 /// One A4-width PDF page holding the image (as tall as the content needs).
 Future<Uint8List> pngToPdf(Uint8List png, {required double aspectRatio, required String title}) {
   const width = 595.0; // A4 width in points
-  final doc = pw.Document(title: title, creator: 'PLI Sahayak');
+  final doc = pw.Document(title: title, creator: 'PLI RPLI Calculator');
   doc.addPage(pw.Page(
     pageFormat: PdfPageFormat(width, width / aspectRatio),
     margin: pw.EdgeInsets.zero,

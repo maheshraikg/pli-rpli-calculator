@@ -2,7 +2,7 @@ import sys; sys.path.insert(0, __import__('os').path.dirname(__file__))
 from write_arb import write
 
 write('te', {
- 'appTitle': 'పీఎల్ఐ సహాయక్', 'tilePremium': 'ప్రీమియం', 'tileMaturity': 'మెచ్యూరిటీ', 'tileCompare': 'పోలిక',
+ 'appTitle': 'PLI RPLI కాలిక్యులేటర్', 'tilePremium': 'ప్రీమియం', 'tileMaturity': 'మెచ్యూరిటీ', 'tileCompare': 'పోలిక',
  'tileEligibility': 'అర్హత', 'tileMyPolicies': 'నా పాలసీలు', 'tileQuotation': 'కొటేషన్', 'comingSoon': 'త్వరలో',
  'sampleDataBanner': 'నమూనా డేటా – అధికారికం కాదు', 'ratesFooter': 'రేట్లు ఆర్థిక సంవత్సరం {financialYear} • మూలం: భారత తపాలా',
  'bonusDisclaimer': 'బోనస్ రేట్లు ప్రతి సంవత్సరం ప్రకటించబడతాయి, భవిష్యత్తుకు హామీ లేదు. తుది మొత్తాలు భారత తపాలా ప్రకారం.',
@@ -53,7 +53,7 @@ write('te', {
 })
 
 write('ta', {
- 'appTitle': 'பிஎல்ஐ சகாயக்', 'tilePremium': 'பிரீமியம்', 'tileMaturity': 'முதிர்வு', 'tileCompare': 'ஒப்பீடு',
+ 'appTitle': 'PLI RPLI கணிப்பான்', 'tilePremium': 'பிரீமியம்', 'tileMaturity': 'முதிர்வு', 'tileCompare': 'ஒப்பீடு',
  'tileEligibility': 'தகுதி', 'tileMyPolicies': 'எனது பாலிசிகள்', 'tileQuotation': 'விலைப்புள்ளி', 'comingSoon': 'விரைவில்',
  'sampleDataBanner': 'மாதிரி தரவு – அதிகாரப்பூர்வமற்றது', 'ratesFooter': 'விகிதங்கள் நிதியாண்டு {financialYear} • ஆதாரம்: இந்திய அஞ்சல்',
  'bonusDisclaimer': 'போனஸ் விகிதங்கள் ஒவ்வொரு ஆண்டும் அறிவிக்கப்படுகின்றன; எதிர்காலத்திற்கு உத்தரவாதம் இல்லை. இறுதித் தொகை இந்திய அஞ்சல் படி.',
@@ -104,7 +104,7 @@ write('ta', {
 })
 
 write('ml', {
- 'appTitle': 'പിഎൽഐ സഹായക്', 'tilePremium': 'പ്രീമിയം', 'tileMaturity': 'കാലാവധി', 'tileCompare': 'താരതമ്യം',
+ 'appTitle': 'PLI RPLI കാൽക്കുലേറ്റർ', 'tilePremium': 'പ്രീമിയം', 'tileMaturity': 'കാലാവധി', 'tileCompare': 'താരതമ്യം',
  'tileEligibility': 'യോഗ്യത', 'tileMyPolicies': 'എന്റെ പോളിസികൾ', 'tileQuotation': 'ക്വട്ടേഷൻ', 'comingSoon': 'ഉടൻ വരുന്നു',
  'sampleDataBanner': 'സാമ്പിൾ ഡാറ്റ – ഔദ്യോഗികമല്ല', 'ratesFooter': 'നിരക്കുകൾ സാമ്പത്തിക വർഷം {financialYear} • ഉറവിടം: ഇന്ത്യ പോസ്റ്റ്',
  'bonusDisclaimer': 'ബോണസ് നിരക്കുകൾ ഓരോ വർഷവും പ്രഖ്യാപിക്കുന്നു, ഭാവിയിലേക്ക് ഉറപ്പില്ല. അന്തിമ തുക ഇന്ത്യ പോസ്റ്റ് പ്രകാരം.',
@@ -155,7 +155,7 @@ write('ml', {
 })
 
 write('ur', {
- 'appTitle': 'پی ایل آئی سہایک', 'tilePremium': 'پریمیم', 'tileMaturity': 'میچورٹی', 'tileCompare': 'موازنہ',
+ 'appTitle': 'PLI RPLI کیلکولیٹر', 'tilePremium': 'پریمیم', 'tileMaturity': 'میچورٹی', 'tileCompare': 'موازنہ',
  'tileEligibility': 'اہلیت', 'tileMyPolicies': 'میری پالیسیاں', 'tileQuotation': 'کوٹیشن', 'comingSoon': 'جلد آ رہا ہے',
  'sampleDataBanner': 'نمونہ ڈیٹا – سرکاری نہیں', 'ratesFooter': 'شرحیں مالی سال {financialYear} • ماخذ: انڈیا پوسٹ',
  'bonusDisclaimer': 'بونس کی شرحیں ہر سال اعلان کی جاتی ہیں اور مستقبل کے لیے ضمانت شدہ نہیں ہیں۔ حتمی رقم انڈیا پوسٹ کے مطابق۔',

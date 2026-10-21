@@ -1,13 +1,13 @@
-# PLI Sahayak — Privacy Policy
+# PLI RPLI Calculator — Privacy Policy
 
 _Last updated: 21 October 2026_
 
-PLI Sahayak is an independent calculator for India Post's Postal Life Insurance
+PLI RPLI Calculator is an independent calculator for India Post's Postal Life Insurance
 (PLI) and Rural Postal Life Insurance (RPLI). It is **not** an official India
 Post app.
 
 ## What we collect
-Nothing. PLI Sahayak has no account, no analytics, no advertising and no
+Nothing. PLI RPLI Calculator has no account, no analytics, no advertising and no
 tracking. The app does not request the internet permission.
 
 ## What stays on your phone

@@ -1,4 +1,4 @@
-# PLI Sahayak
+# PLI RPLI Calculator
 
 Offline PLI & RPLI premium / maturity calculator (Flutter, Android).
 Independent calculator — not an official India Post app.

@@ -10,7 +10,7 @@ class AppLocalizationsUr extends AppLocalizations {
   AppLocalizationsUr([String locale = 'ur']) : super(locale);
 
   @override
-  String get appTitle => 'پی ایل آئی سہایک';
+  String get appTitle => 'PLI RPLI کیلکولیٹر';
 
   @override
   String get tilePremium => 'پریمیم';
@@ -910,7 +910,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'پی ایل آئی سہایک کوئی ڈیٹا جمع نہیں کرتا۔ آپ جو بھی درج یا محفوظ کرتے ہیں وہ اسی فون پر رہتا ہے۔ کسی اکاؤنٹ یا انٹرنیٹ کی ضرورت نہیں۔';
+      'PLI RPLI کیلکولیٹر کوئی ڈیٹا جمع نہیں کرتا۔ آپ جو بھی درج یا محفوظ کرتے ہیں وہ اسی فون پر رہتا ہے۔ کسی اکاؤنٹ یا انٹرنیٹ کی ضرورت نہیں۔';
 
   @override
   String get dataSourceTitle => 'شرح کا ڈیٹا';
@@ -953,7 +953,7 @@ class AppLocalizationsUr extends AppLocalizations {
   }
 
   @override
-  String get homeTagline => 'PLI اور RPLI پریمیم، بونس اور میچورٹی کیلکولیٹر';
+  String get homeTagline => 'پریمیم، بونس اور میچورٹی — آف لائن بھی';
 
   @override
   String get quickPremiumTitle => 'پریمیم معلوم کریں';

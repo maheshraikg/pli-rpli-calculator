@@ -10,7 +10,7 @@ class AppLocalizationsBn extends AppLocalizations {
   AppLocalizationsBn([String locale = 'bn']) : super(locale);
 
   @override
-  String get appTitle => 'পিএলআই সহায়ক';
+  String get appTitle => 'PLI RPLI ক্যালকুলেটর';
 
   @override
   String get tilePremium => 'প্রিমিয়াম';
@@ -910,7 +910,7 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'পিএলআই সহায়ক কোনো তথ্য সংগ্রহ করে না। আপনি যা লেখেন বা সংরক্ষণ করেন, সবই এই ফোনে থাকে। অ্যাকাউন্ট বা ইন্টারনেট লাগে না।';
+      'PLI RPLI ক্যালকুলেটর কোনো তথ্য সংগ্রহ করে না। আপনি যা লেখেন বা সংরক্ষণ করেন, সবই এই ফোনে থাকে। অ্যাকাউন্ট বা ইন্টারনেট লাগে না।';
 
   @override
   String get dataSourceTitle => 'হারের তথ্য';
@@ -953,8 +953,7 @@ class AppLocalizationsBn extends AppLocalizations {
   }
 
   @override
-  String get homeTagline =>
-      'PLI ও RPLI প্রিমিয়াম, বোনাস ও মেয়াদপূর্তি ক্যালকুলেটর';
+  String get homeTagline => 'প্রিমিয়াম, বোনাস ও মেয়াদপূর্তি — অফলাইনেও';
 
   @override
   String get quickPremiumTitle => 'প্রিমিয়াম হিসাব করুন';

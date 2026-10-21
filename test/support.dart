@@ -39,10 +39,10 @@ Future<ProviderContainer> pumpApp(
       settingsStoreProvider.overrideWithValue(settings ?? MemorySettingsStore(disclaimerAccepted: true)),
       policyStoreProvider.overrideWithValue(policies ?? MemoryPolicyStore()),
     ],
-    child: PliSahayakApp(locale: locale, initialLocation: location),
+    child: PliRpliApp(locale: locale, initialLocation: location),
   ));
   await tester.pumpAndSettle();
-  return ProviderScope.containerOf(tester.element(find.byType(PliSahayakApp)));
+  return ProviderScope.containerOf(tester.element(find.byType(PliRpliApp)));
 }
 
 /// Scrolls the screen's main list until [finder] is built and visible.

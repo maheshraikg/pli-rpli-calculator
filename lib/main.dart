@@ -28,6 +28,6 @@ Future<void> main() async {
       reminderServiceProvider.overrideWithValue(reminders),
       rateUpdateDirProvider.overrideWithValue(updateDir),
     ],
-    child: const PliSahayakApp(),
+    child: const PliRpliApp(),
   ));
 }

@@ -16,7 +16,7 @@
    ```
 
 ## Package id
-`com.myorg.plisahayak` is a placeholder: change `applicationId` (and
+`com.myorg.plirplicalculator` is a placeholder: change `applicationId` (and
 `namespace` + the Kotlin package folder) in `android/app/` before the first upload.
 
 ## Signing
