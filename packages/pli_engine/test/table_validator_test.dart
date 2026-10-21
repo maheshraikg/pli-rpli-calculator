@@ -6,15 +6,16 @@ const _rulesJson = '''
   "schemaVersion": 1, "ruleSetId": "T", "financialYear": "2026-27", "effectiveFrom": "2026-04-01",
   "source": "test", "gazetteRef": "test",
   "schemes": {
-    "PLI": { "sumAssured": { "min": 20000, "max": 5000000 } },
-    "RPLI": { "sumAssured": { "min": 10000, "max": 1000000 } }
+    "PLI": { "sumAssured": { "min": 20000, "max": 5000000 }, "eligibilityGroups": [] },
+    "RPLI": { "sumAssured": { "min": 10000, "max": 1000000 }, "eligibilityGroups": [] }
   },
   "plans": [ {
     "id": "ea", "scheme": "PLI", "type": "EA", "names": { "en": "EA", "kn": "EA" },
     "entryAge": { "min": 19, "max": 21 }, "maturityAges": [21, 25],
     "bonusClass": "EA", "premiumTableId": "ea", "verified": true
   } ],
-  "bonusRatesPer1000": { "PLI": {}, "RPLI": {} }
+  "bonusRatesPer1000": { "PLI": {}, "RPLI": {} },
+  "terminalBonus": { "perSumAssured": 10000, "amount": 20, "maxAmount": 1000, "minTermYears": 20, "appliesToTypes": [], "schemes": [] }
 }''';
 
 PremiumTable _table(Map<String, List<num?>> monthly) => PremiumTable.parse('''

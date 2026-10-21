@@ -53,6 +53,31 @@ class AeaTerm {
   final int maturityPercentOfSA;
 }
 
+/// Joint-life (Yugal Suraksha) limits.
+class JointLifeRule {
+  const JointLifeRule({required this.entryAgeEachSpouse, required this.termYears});
+
+  final AgeRange entryAgeEachSpouse;
+  final AgeRange termYears;
+}
+
+/// Children's policy (Bal Jeevan Bima) limits.
+class ChildPlanRule {
+  const ChildPlanRule({
+    required this.childAge,
+    required this.parentMaxAge,
+    required this.maxChildren,
+    required this.sumAssuredMax,
+    required this.capAtParentSA,
+  });
+
+  final AgeRange childAge;
+  final int parentMaxAge;
+  final int maxChildren;
+  final int sumAssuredMax;
+  final bool capAtParentSA;
+}
+
 /// Typed view of one entry in `rules.plans`. Plan-specific fields whose
 /// semantics are still being confirmed are kept in [raw] and given typed
 /// accessors only once the rule is verified.
@@ -71,6 +96,8 @@ class PlanRule {
     this.minTermYears,
     this.aeaTerms = const [],
     this.premiumTableId,
+    this.jointLife,
+    this.childPlan,
   });
 
   factory PlanRule.fromJson(JsonReader r) {
@@ -88,6 +115,21 @@ class PlanRule {
       minTermYears: r.intOrNull('minTermYears'),
       aeaTerms: r.has('terms') ? r.objectList('terms').map(AeaTerm.fromJson).toList() : const [],
       premiumTableId: r.stringOrNull('premiumTableId'),
+      jointLife: r.has('entryAgeEachSpouse')
+          ? JointLifeRule(
+              entryAgeEachSpouse: AgeRange.fromJson(r.object('entryAgeEachSpouse')),
+              termYears: AgeRange.fromJson(r.object('termYears')),
+            )
+          : null,
+      childPlan: r.has('childAge')
+          ? ChildPlanRule(
+              childAge: AgeRange.fromJson(r.object('childAge')),
+              parentMaxAge: r.integer('parentMaxAge'),
+              maxChildren: r.integer('maxChildren'),
+              sumAssuredMax: r.integer('sumAssuredMax'),
+              capAtParentSA: r.boolean('sumAssuredCapParentSA'),
+            )
+          : null,
       raw: r.map,
     );
   }
@@ -104,6 +146,8 @@ class PlanRule {
   final int? minTermYears;
   final List<AeaTerm> aeaTerms;
   final String? premiumTableId;
+  final JointLifeRule? jointLife;
+  final ChildPlanRule? childPlan;
   final Map<String, Object?> raw;
 
   String name(String languageCode) => names[languageCode] ?? names['en'] ?? id;
