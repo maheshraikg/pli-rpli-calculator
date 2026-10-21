@@ -10,7 +10,7 @@ class AppLocalizationsPa extends AppLocalizations {
   AppLocalizationsPa([String locale = 'pa']) : super(locale);
 
   @override
-  String get appTitle => 'PLI RPLI ਕੈਲਕੁਲੇਟਰ';
+  String get appTitle => 'PLI & RPLI ਕੈਲਕੁਲੇਟਰ';
 
   @override
   String get tilePremium => 'ਪ੍ਰੀਮੀਅਮ';
@@ -907,7 +907,7 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'PLI RPLI ਕੈਲਕੁਲੇਟਰ ਕੋਈ ਡਾਟਾ ਇਕੱਠਾ ਨਹੀਂ ਕਰਦਾ। ਤੁਸੀਂ ਜੋ ਵੀ ਭਰਦੇ ਜਾਂ ਸੰਭਾਲਦੇ ਹੋ, ਉਹ ਇਸੇ ਫ਼ੋਨ ਉੱਤੇ ਰਹਿੰਦਾ ਹੈ। ਖਾਤੇ ਜਾਂ ਇੰਟਰਨੈੱਟ ਦੀ ਲੋੜ ਨਹੀਂ।';
+      'PLI & RPLI ਕੈਲਕੁਲੇਟਰ ਕੋਈ ਡਾਟਾ ਇਕੱਠਾ ਨਹੀਂ ਕਰਦਾ। ਤੁਸੀਂ ਜੋ ਵੀ ਭਰਦੇ ਜਾਂ ਸੰਭਾਲਦੇ ਹੋ, ਉਹ ਇਸੇ ਫ਼ੋਨ ਉੱਤੇ ਰਹਿੰਦਾ ਹੈ। ਖਾਤੇ ਜਾਂ ਇੰਟਰਨੈੱਟ ਦੀ ਲੋੜ ਨਹੀਂ।';
 
   @override
   String get dataSourceTitle => 'ਦਰ ਡਾਟਾ';

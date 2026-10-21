@@ -10,7 +10,7 @@ class AppLocalizationsHi extends AppLocalizations {
   AppLocalizationsHi([String locale = 'hi']) : super(locale);
 
   @override
-  String get appTitle => 'PLI RPLI कैलकुलेटर';
+  String get appTitle => 'PLI & RPLI कैलकुलेटर';
 
   @override
   String get tilePremium => 'प्रीमियम';
@@ -909,7 +909,7 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'PLI RPLI कैलकुलेटर कोई डेटा एकत्र नहीं करता। आप जो भी दर्ज या सहेजते हैं, वह इसी फ़ोन पर रहता है। किसी खाते या इंटरनेट की ज़रूरत नहीं।';
+      'PLI & RPLI कैलकुलेटर कोई डेटा एकत्र नहीं करता। आप जो भी दर्ज या सहेजते हैं, वह इसी फ़ोन पर रहता है। किसी खाते या इंटरनेट की ज़रूरत नहीं।';
 
   @override
   String get dataSourceTitle => 'दर डेटा';

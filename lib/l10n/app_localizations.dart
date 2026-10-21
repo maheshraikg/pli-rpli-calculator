@@ -123,7 +123,7 @@ abstract class AppLocalizations {
   /// No description provided for @appTitle.
   ///
   /// In en, this message translates to:
-  /// **'PLI RPLI Calculator'**
+  /// **'PLI & RPLI Calculator'**
   String get appTitle;
 
   /// No description provided for @tilePremium.
@@ -1623,7 +1623,7 @@ abstract class AppLocalizations {
   /// No description provided for @privacyBody.
   ///
   /// In en, this message translates to:
-  /// **'PLI RPLI Calculator collects no data. Everything you enter or save stays on this phone. No account or internet connection is needed.'**
+  /// **'PLI & RPLI Calculator collects no data. Everything you enter or save stays on this phone. No account or internet connection is needed.'**
   String get privacyBody;
 
   /// No description provided for @dataSourceTitle.

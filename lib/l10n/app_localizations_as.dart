@@ -10,7 +10,7 @@ class AppLocalizationsAs extends AppLocalizations {
   AppLocalizationsAs([String locale = 'as']) : super(locale);
 
   @override
-  String get appTitle => 'PLI RPLI কেলকুলেটৰ';
+  String get appTitle => 'PLI & RPLI কেলকুলেটৰ';
 
   @override
   String get tilePremium => 'প্ৰিমিয়াম';
@@ -911,7 +911,7 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'PLI RPLI কেলকুলেটৰে কোনো তথ্য সংগ্ৰহ নকৰে। আপুনি লিখা বা সংৰক্ষণ কৰা সকলো এই ফোনতে থাকে। একাউণ্ট বা ইণ্টাৰনেটৰ প্ৰয়োজন নাই।';
+      'PLI & RPLI কেলকুলেটৰে কোনো তথ্য সংগ্ৰহ নকৰে। আপুনি লিখা বা সংৰক্ষণ কৰা সকলো এই ফোনতে থাকে। একাউণ্ট বা ইণ্টাৰনেটৰ প্ৰয়োজন নাই।';
 
   @override
   String get dataSourceTitle => 'হাৰৰ তথ্য';

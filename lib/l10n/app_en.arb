@@ -1,6 +1,6 @@
 {
   "@@locale": "en",
-  "appTitle": "PLI RPLI Calculator",
+  "appTitle": "PLI & RPLI Calculator",
   "tilePremium": "Premium",
   "tileMaturity": "Maturity",
   "tileCompare": "Compare",
@@ -786,7 +786,7 @@
   "faq5a": "PLI: government and semi-government employees, professionals, graduates, diploma holders and others listed by India Post. RPLI: rural residents and scheduled bank savings account holders.",
   "aboutTitle": "About",
   "privacyTitle": "Privacy",
-  "privacyBody": "PLI RPLI Calculator collects no data. Everything you enter or save stays on this phone. No account or internet connection is needed.",
+  "privacyBody": "PLI & RPLI Calculator collects no data. Everything you enter or save stays on this phone. No account or internet connection is needed.",
   "dataSourceTitle": "Rate data",
   "dataSourceBody": "Rules {id}, effective {date}. Source: {source}",
   "@dataSourceBody": {

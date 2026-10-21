@@ -10,7 +10,7 @@ class AppLocalizationsTa extends AppLocalizations {
   AppLocalizationsTa([String locale = 'ta']) : super(locale);
 
   @override
-  String get appTitle => 'PLI RPLI கணிப்பான்';
+  String get appTitle => 'PLI & RPLI கணிப்பான்';
 
   @override
   String get tilePremium => 'பிரீமியம்';
@@ -915,7 +915,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'PLI RPLI கணிப்பான் எந்தத் தரவையும் சேகரிப்பதில்லை. நீங்கள் உள்ளிடுவது அல்லது சேமிப்பது அனைத்தும் இந்தத் தொலைபேசியிலேயே இருக்கும். கணக்கு அல்லது இணையம் தேவையில்லை.';
+      'PLI & RPLI கணிப்பான் எந்தத் தரவையும் சேகரிப்பதில்லை. நீங்கள் உள்ளிடுவது அல்லது சேமிப்பது அனைத்தும் இந்தத் தொலைபேசியிலேயே இருக்கும். கணக்கு அல்லது இணையம் தேவையில்லை.';
 
   @override
   String get dataSourceTitle => 'விகிதத் தரவு';
