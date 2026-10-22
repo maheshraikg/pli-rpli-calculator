@@ -8,3 +8,10 @@ final _rupeesPaise = NumberFormat.currency(locale: 'en_IN', symbol: '₹', decim
 String formatRupees(Paise amount) => amount.paisePart == 0 && amount.value >= 0
     ? _rupees.format(amount.rupeePart)
     : _rupeesPaise.format(amount.value / 100);
+
+/// Short chip label: ₹1L, ₹2.5L, ₹20L.
+String formatLakh(int rupees) {
+  final lakhs = rupees / 100000;
+  final text = lakhs == lakhs.roundToDouble() ? lakhs.toStringAsFixed(0) : lakhs.toString();
+  return '₹${text}L';
+}

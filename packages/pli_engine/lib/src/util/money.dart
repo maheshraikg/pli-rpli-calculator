@@ -35,6 +35,18 @@ extension type const Paise(int value) implements Object {
   }
 }
 
+/// Rounds the exact rupee amount `numerator / denominator` to a whole rupee
+/// using the gazette bonus rule, without any intermediate rounding.
+/// E.g. bonus for SA ₹10,010 at ₹48 per ₹1,000 = 480480 / 1000 = ₹480.48 → ₹480.
+Paise roundBonusFraction(int numerator, int denominator) {
+  if (numerator < 0 || denominator <= 0) {
+    throw ArgumentError('Bonus fraction must be non-negative with positive denominator');
+  }
+  final whole = numerator ~/ denominator;
+  final remainder = numerator % denominator;
+  return Paise.wholeRupees(whole + (remainder * 2 >= denominator ? 1 : 0));
+}
+
 /// Bonus rounding as per gazette: a fraction of 50 paise or more is rounded
 /// up to the next rupee; below 50 paise is ignored.
 Paise roundBonus(Paise amount) {

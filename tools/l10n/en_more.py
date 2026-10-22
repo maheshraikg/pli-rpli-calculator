@@ -1,0 +1,26 @@
+"""English strings for backup, dues and agent profile."""
+S, I = 'String', 'int'
+STRINGS = [
+ ('customerPhoneLabel', 'Customer mobile (for WhatsApp reminders)', None),
+ ('exportBackup', 'Back up policies', None),
+ ('importBackup', 'Restore from backup', None),
+ ('importConfirm', 'Restore {count} policies from this backup? Policies already saved with the same ID are replaced.', {'count': I}),
+ ('importDone', '{count} policies restored.', {'count': I}),
+ ('importFailed', 'This file is not a PLI & RPLI Calculator backup.', None),
+ ('backupNote', 'The backup file contains your policy details. Keep it somewhere safe, such as your own WhatsApp chat or Google Drive.', None),
+ ('restore', 'Restore', None),
+ ('tileDues', 'Dues', None), ('descDues', 'Premiums due this month', None),
+ ('duesTitle', 'Premium dues', None),
+ ('duesTotal', 'Total due', None),
+ ('duesCount', '{count, plural, =1{1 premium} other{{count} premiums}}', {'count': I}),
+ ('noDuesInMonth', 'No premiums fall due in this month.', None),
+ ('remindOnWhatsApp', 'Remind', None),
+ ('dueReminderMessage', 'Dear {name}, your premium of {amount} for policy {number} is due on {date}. Please pay at your Post Office.', {'name': S, 'amount': S, 'number': S, 'date': S}),
+ ('tileProfile', 'Agent profile', None), ('descProfile', 'Your name and logo on quotations', None),
+ ('profileTitle', 'Agent profile', None),
+ ('agentNameField', 'Your name', None), ('agentPhoneField', 'Your phone', None),
+ ('agentCodeField', 'Agent ID / office (optional)', None),
+ ('chooseLogo', 'Choose photo or logo', None), ('removeLogo', 'Remove', None),
+ ('profileNote', 'Shown on quotations and reminder messages. Stored only on this phone.', None),
+ ('profileSaved', 'Profile saved.', None),
+]

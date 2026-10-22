@@ -1,0 +1,21 @@
+"""English strings added with the UI redesign."""
+STRINGS = [
+ ('homeTagline', 'Premium, bonus and maturity — works offline', None),
+ ('quickPremiumTitle', 'Calculate premium', None),
+ ('quickPremiumBody', 'Any plan, age and sum assured — all frequencies', None),
+ ('sectionCalculators', 'Calculators', None),
+ ('sectionServicing', 'Policy servicing', None),
+ ('sectionLearn', 'Learn', None),
+ ('descPremium', 'Premium for every frequency', None),
+ ('descMaturity', 'Bonus and maturity value', None),
+ ('descCompare', 'Plans side by side', None),
+ ('descAfford', 'Best cover for your budget', None),
+ ('descPolicies', 'Saved policies and due dates', None),
+ ('descTools', 'Loan, revival, paid-up', None),
+ ('descQuotation', 'Share a PDF quote', None),
+ ('descEligibility', 'Who can buy PLI or RPLI', None),
+ ('descPlans', 'Plan rules and FAQs', None),
+ ('descAbout', 'Privacy and rate data', None),
+ ('sectionPersonTitle', 'Policy holder', None),
+ ('sectionCoverTitle', 'Cover and payment', None),
+]

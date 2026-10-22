@@ -1,7 +1,25 @@
-# PLI Sahayak
+# PLI & RPLI Calculator
 
 Offline PLI & RPLI premium / maturity calculator (Flutter, Android).
 Independent calculator — not an official India Post app.
+
+## Features
+- Premium calculator (all 4 frequencies, SA rebate, total premium, maturity, XIRR return,
+  year-wise illustration, paid-vs-benefit chart), age from date of birth
+- Maturity & bonus projection, survival-benefit timeline (Sumangal / Gram Priya)
+- "What can I afford?" reverse calculator; compare up to 3 plans
+- Eligibility checker; plan information cards and FAQs
+- Policy tools: loan interest, paid-up value, revival (arrears + default fee), advance rebate
+- My Policies (stored on the phone): accrued bonus, due dates, local reminders
+- Bilingual quotation shared as PDF or image (WhatsApp etc.)
+- Forms & letters: 12 PLI/RPLI requests with document checklists, a link to India Post's forms,
+  a policy details sheet, and request letters (loan, surrender, revival, nomination, address,
+  duplicate bond, conversion) filled from a saved policy; official PDFs can be bundled in `assets/forms/`
+- For agents: monthly dues list with WhatsApp reminders, agent profile (name, phone, logo) on quotations
+- Back up / restore My Policies as a file
+- 13 languages, dark mode and large-text support; optional verified over-the-air rate updates
+
+See `docs/RELEASE.md` before publishing and `docs/PRIVACY_POLICY.md` for the store listing.
 
 ## Layout
 
@@ -12,6 +30,15 @@ assets/data/             rules_FY2026-27.json + tables/<tableId>.json (versioned
 source_tables/           Official PDFs / transcribed CSVs (input to tools/)
 tools/                   Table converter, PDF table dumper, sample-table generator
 ```
+
+## Languages
+
+13 languages: English, Hindi, Kannada, Tamil, Telugu, Malayalam, Marathi, Gujarati,
+Bengali, Punjabi, Odia, Assamese, Urdu (RTL). UI strings live in `lib/l10n/app_<lang>.arb`
+(regenerate non-English files from `tools/l10n/tr_*.py`, which check every key and
+placeholder against `app_en.arb`). Plan names live in the rules JSON
+(`tools/l10n/plan_names.py`). All translations other than English need review by a
+native speaker before release.
 
 ## Data pipeline
 

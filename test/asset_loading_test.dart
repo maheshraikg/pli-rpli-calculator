@@ -6,7 +6,7 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   test('rules and every referenced table load from the asset bundle', () async {
-    final data = await loadAppData(rootBundle);
+    final data = await loadBundledData(rootBundle);
     expect(data.rules.ruleSetId, 'FY2026-27');
     expect(data.tables.keys, containsAll([
       for (final p in data.rules.plans)
