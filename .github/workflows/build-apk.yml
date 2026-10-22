@@ -6,6 +6,9 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  contents: write  # to publish the test APK as a pre-release
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -66,3 +69,16 @@ jobs:
             build/app/outputs/flutter-apk/app-release.apk
             build/app/outputs/bundle/release/app-release.aab
           if-no-files-found: error
+
+      # A direct .apk download link (easier on a phone than the zipped
+      # artifact). Pre-release, so it is never mistaken for a store build.
+      - name: Publish test APK as a pre-release
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp build/app/outputs/flutter-apk/app-release.apk "pli-rpli-calculator-build${{ github.run_number }}.apk"
+          gh release create "build-${{ github.run_number }}" "pli-rpli-calculator-build${{ github.run_number }}.apk" \
+            --prerelease --target "${{ github.event.pull_request.head.sha || github.sha }}" \
+            --title "Test build ${{ github.run_number }} (sample data, not for customers)" \
+            --notes "Test APK from ${{ github.event.pull_request.head.ref || github.ref_name }}. Premium tables are SAMPLE data; do not use for real quotations."
