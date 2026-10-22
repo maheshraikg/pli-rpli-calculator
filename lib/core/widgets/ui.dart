@@ -12,11 +12,14 @@ class IconBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final c = color ?? Theme.of(context).colorScheme.primary;
+    final dark = Theme.of(context).brightness == Brightness.dark;
+    final base = color ?? Theme.of(context).colorScheme.primary;
+    // Lift saturated colours so they stay readable on dark surfaces.
+    final c = dark ? Color.lerp(base, Colors.white, 0.45)! : base;
     return Container(
       width: size,
       height: size,
-      decoration: BoxDecoration(color: c.withValues(alpha: 0.12), borderRadius: BorderRadius.circular(size * 0.32)),
+      decoration: BoxDecoration(color: c.withValues(alpha: dark ? 0.18 : 0.12), borderRadius: BorderRadius.circular(size * 0.32)),
       child: Icon(icon, color: c, size: size * 0.55),
     );
   }

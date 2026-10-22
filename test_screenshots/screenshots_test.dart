@@ -155,4 +155,20 @@ void main() {
     await pumpApp(tester, locale: const Locale('kn'), location: '/forms');
     await _shot(tester, '14_forms_kannada');
   });
+
+  for (final (name, route, height) in [('15_dark_home', '/', 2340.0), ('16_dark_premium_full', '/premium', 5000.0)]) {
+    testWidgets(name, (tester) async {
+      tester.platformDispatcher.platformBrightnessTestValue = Brightness.dark;
+      addTearDown(tester.platformDispatcher.clearAllTestValues);
+      await pumpApp(tester, location: route);
+      await _shot(tester, name, height: height);
+    });
+  }
+
+  testWidgets('17 large text home', (tester) async {
+    tester.platformDispatcher.textScaleFactorTestValue = 1.6;
+    addTearDown(tester.platformDispatcher.clearAllTestValues);
+    await pumpApp(tester);
+    await _shot(tester, '17_large_text_home');
+  });
 }

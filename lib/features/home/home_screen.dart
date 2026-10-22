@@ -219,7 +219,7 @@ class _Header extends StatelessWidget {
               Padding(
                 padding: const EdgeInsetsDirectional.only(end: 12),
                 child: Material(
-                  color: white,
+                  color: Theme.of(context).cardTheme.color ?? Theme.of(context).colorScheme.surface,
                   borderRadius: BorderRadius.circular(18),
                   child: InkWell(
                     borderRadius: BorderRadius.circular(18),

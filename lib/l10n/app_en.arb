@@ -46,7 +46,7 @@
   "entryAgeLabel": "Age at entry",
   "childAgeLabel": "Child's age",
   "spouseAgeLabel": "Spouse's age",
-  "ageYears": "{age} years",
+  "ageYears": "{age, plural, =1{1 year} other{{age} years}}",
   "@ageYears": {
     "placeholders": {
       "age": {
@@ -60,7 +60,7 @@
   "sumAssuredLabel": "Sum assured (₹)",
   "maturityAgeLabel": "Maturity age",
   "termLabel": "Policy term",
-  "termYears": "{years} years",
+  "termYears": "{years, plural, =1{1 year} other{{years} years}}",
   "@termYears": {
     "placeholders": {
       "years": {
@@ -451,7 +451,7 @@
   "yearsInForceLabel": "Years the policy has been in force",
   "loanAmountLabel": "Loan amount (₹)",
   "loanMonthsLabel": "Months until repayment",
-  "monthsValue": "{months} months",
+  "monthsValue": "{months, plural, =1{1 month} other{{months} months}}",
   "@monthsValue": {
     "placeholders": {
       "months": {
@@ -509,7 +509,7 @@
       }
     }
   },
-  "revivalLine": "Due {date} • {months} months late • fee {fee}",
+  "revivalLine": "Due {date} • {months, plural, =0{on time} =1{1 month late} other{{months} months late}} • fee {fee}",
   "@revivalLine": {
     "placeholders": {
       "date": {

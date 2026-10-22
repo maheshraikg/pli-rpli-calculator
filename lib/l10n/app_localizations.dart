@@ -273,7 +273,7 @@ abstract class AppLocalizations {
   /// No description provided for @ageYears.
   ///
   /// In en, this message translates to:
-  /// **'{age} years'**
+  /// **'{age, plural, =1{1 year} other{{age} years}}'**
   String ageYears(int age);
 
   /// No description provided for @decrease.
@@ -315,7 +315,7 @@ abstract class AppLocalizations {
   /// No description provided for @termYears.
   ///
   /// In en, this message translates to:
-  /// **'{years} years'**
+  /// **'{years, plural, =1{1 year} other{{years} years}}'**
   String termYears(int years);
 
   /// No description provided for @startDateLabel.
@@ -1053,7 +1053,7 @@ abstract class AppLocalizations {
   /// No description provided for @monthsValue.
   ///
   /// In en, this message translates to:
-  /// **'{months} months'**
+  /// **'{months, plural, =1{1 month} other{{months} months}}'**
   String monthsValue(int months);
 
   /// No description provided for @loanInterestRow.
@@ -1191,7 +1191,7 @@ abstract class AppLocalizations {
   /// No description provided for @revivalLine.
   ///
   /// In en, this message translates to:
-  /// **'Due {date} • {months} months late • fee {fee}'**
+  /// **'Due {date} • {months, plural, =0{on time} =1{1 month late} other{{months} months late}} • fee {fee}'**
   String revivalLine(String date, int months, String fee);
 
   /// No description provided for @nothingDue.

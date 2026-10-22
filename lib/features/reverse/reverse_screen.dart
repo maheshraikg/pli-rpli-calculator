@@ -6,6 +6,7 @@ import '../../core/widgets/amount_field.dart';
 import '../../core/widgets/data_scaffold.dart';
 import '../../core/widgets/info_card.dart';
 import '../../core/widgets/number_stepper.dart';
+import '../../core/widgets/ui.dart';
 import '../../data/data_repository.dart';
 import '../../l10n/app_localizations.dart';
 import '../common/plan_config_form.dart';
@@ -90,20 +91,32 @@ class _ReverseBodyState extends State<_ReverseBody> {
         if (budget != null && options.isEmpty) InfoCard(icon: Icons.info_outline, message: l.reverseNone),
         for (final o in options)
           Card(
-            child: ListTile(
-              title: Text(o.quote.plan.name(lang)),
-              subtitle: Text(
-                '${columnOptionLabel(l, o.quote.plan, o.quote.column)} • '
-                '${l.premiumShort} ${formatRupees(o.quote.premium)}',
-              ),
-              trailing: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.end,
+            child: Padding(
+              padding: const EdgeInsets.all(14),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(l.saShort, style: theme.textTheme.labelSmall),
-                  Text(
-                    formatRupees(Paise.wholeRupees(o.quote.sumAssured)),
-                    style: theme.textTheme.titleMedium?.copyWith(color: theme.colorScheme.primary),
+                  IconBadge(o.quote.plan.scheme == Scheme.pli ? Icons.shield_rounded : Icons.agriculture_rounded),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(o.quote.plan.name(lang), style: theme.textTheme.titleSmall),
+                        const SizedBox(height: 2),
+                        Text(
+                          '${columnOptionLabel(l, o.quote.plan, o.quote.column)} • '
+                          '${l.premiumShort} ${formatRupees(o.quote.premium)}',
+                          style: theme.textTheme.bodySmall,
+                        ),
+                        const SizedBox(height: 8),
+                        Text(l.saShort, style: theme.textTheme.labelSmall),
+                        Text(
+                          formatRupees(Paise.wholeRupees(o.quote.sumAssured)),
+                          style: theme.textTheme.titleLarge?.copyWith(color: theme.colorScheme.primary),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),

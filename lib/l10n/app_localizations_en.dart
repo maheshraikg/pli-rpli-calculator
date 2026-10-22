@@ -94,7 +94,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String ageYears(int age) {
-    return '$age years';
+    String _temp0 = intl.Intl.pluralLogic(
+      age,
+      locale: localeName,
+      other: '$age years',
+      one: '1 year',
+    );
+    return '$_temp0';
   }
 
   @override
@@ -118,7 +124,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String termYears(int years) {
-    return '$years years';
+    String _temp0 = intl.Intl.pluralLogic(
+      years,
+      locale: localeName,
+      other: '$years years',
+      one: '1 year',
+    );
+    return '$_temp0';
   }
 
   @override
@@ -561,7 +573,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String monthsValue(int months) {
-    return '$months months';
+    String _temp0 = intl.Intl.pluralLogic(
+      months,
+      locale: localeName,
+      other: '$months months',
+      one: '1 month',
+    );
+    return '$_temp0';
   }
 
   @override
@@ -643,7 +661,14 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String revivalLine(String date, int months, String fee) {
-    return 'Due $date • $months months late • fee $fee';
+    String _temp0 = intl.Intl.pluralLogic(
+      months,
+      locale: localeName,
+      other: '$months months late',
+      one: '1 month late',
+      zero: 'on time',
+    );
+    return 'Due $date • $_temp0 • fee $fee';
   }
 
   @override
