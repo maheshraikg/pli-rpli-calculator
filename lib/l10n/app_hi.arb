@@ -374,5 +374,21 @@
   "chooseLogo": "फ़ोटो या लोगो चुनें",
   "removeLogo": "हटाएँ",
   "profileNote": "कोटेशन और रिमाइंडर संदेशों में दिखेगा। केवल इसी फ़ोन पर सहेजा गया।",
-  "profileSaved": "प्रोफ़ाइल सहेजी गई।"
+  "profileSaved": "प्रोफ़ाइल सहेजी गई।",
+  "searchPolicies": "नाम, पॉलिसी नं. या मोबाइल खोजें",
+  "sortLabel": "क्रम",
+  "sortName": "नाम",
+  "sortNextDue": "अगली देय तिथि",
+  "sortSumAssured": "बीमा राशि",
+  "noSearchResults": "“{query}” से मेल खाती कोई पॉलिसी नहीं।",
+  "filterAll": "सभी",
+  "filterPending": "बाकी",
+  "filterCollected": "वसूल",
+  "markCollected": "वसूल के रूप में चिह्नित करें",
+  "markNotCollected": "वसूल नहीं के रूप में चिह्नित करें",
+  "duesPendingTotal": "अभी वसूलना बाकी",
+  "duesCollectedOf": "{total} में से {collected} वसूल",
+  "duesMonthTotal": "महीने का कुल",
+  "collectedNote": "वसूली के चिह्न आपका अपना रिकॉर्ड हैं। ये इंडिया पोस्ट की प्रणाली में भुगतान की जाँच नहीं करते।",
+  "noDuesInFilter": "इस सूची में कुछ नहीं।"
 }

@@ -1326,4 +1326,57 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get profileSaved => 'പ്രൊഫൈൽ സേവ് ചെയ്തു.';
+
+  @override
+  String get searchPolicies => 'പേര്, പോളിസി നം. അല്ലെങ്കിൽ മൊബൈൽ തിരയുക';
+
+  @override
+  String get sortLabel => 'ക്രമം';
+
+  @override
+  String get sortName => 'പേര്';
+
+  @override
+  String get sortNextDue => 'അടുത്ത തവണ';
+
+  @override
+  String get sortSumAssured => 'ഇൻഷുർ തുക';
+
+  @override
+  String noSearchResults(String query) {
+    return '“$query” മായി യോജിക്കുന്ന പോളിസികളില്ല.';
+  }
+
+  @override
+  String get filterAll => 'എല്ലാം';
+
+  @override
+  String get filterPending => 'ബാക്കി';
+
+  @override
+  String get filterCollected => 'പിരിച്ചു';
+
+  @override
+  String get markCollected => 'പിരിച്ചതായി അടയാളപ്പെടുത്തുക';
+
+  @override
+  String get markNotCollected => 'പിരിച്ചിട്ടില്ലെന്ന് അടയാളപ്പെടുത്തുക';
+
+  @override
+  String get duesPendingTotal => 'ഇനിയും പിരിക്കാനുള്ളത്';
+
+  @override
+  String duesCollectedOf(int collected, int total) {
+    return '$total ൽ $collected പിരിച്ചു';
+  }
+
+  @override
+  String get duesMonthTotal => 'മാസത്തെ ആകെ';
+
+  @override
+  String get collectedNote =>
+      'പിരിവ് അടയാളങ്ങൾ നിങ്ങളുടെ സ്വന്തം രേഖയാണ്. ഇവ ഇന്ത്യാ പോസ്റ്റ് സംവിധാനത്തിൽ അടവ് പരിശോധിക്കുന്നില്ല.';
+
+  @override
+  String get noDuesInFilter => 'ഈ പട്ടികയിൽ ഒന്നുമില്ല.';
 }

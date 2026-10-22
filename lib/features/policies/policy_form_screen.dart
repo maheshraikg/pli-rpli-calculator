@@ -147,6 +147,8 @@ class _PolicyFormScreenState extends ConsumerState<PolicyFormScreen> {
       premiumRupees: premium,
       reminders: _reminders,
       phone: _phone.text.trim(),
+      // Keep collected marks when editing; dates that no longer apply are harmless.
+      paidDues: widget.id == null ? const {} : ref.read(policiesProvider.notifier).byId(widget.id!)?.paidDues ?? const {},
     );
     final text = reminderText(context);
     final granted = await ref

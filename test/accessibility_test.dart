@@ -43,6 +43,20 @@ PolicyStore _store() => MemoryPolicyStore()
     frequency: PremiumFrequency.monthly,
     premiumRupees: 1180,
     reminders: true,
+  ))
+  ..put(SavedPolicy(
+    id: '2',
+    holderName: 'Venkataramana Subrahmanya',
+    policyNumber: 'RPLI-KA-987654321',
+    planId: 'pli_santosh',
+    sumAssured: 100000,
+    commencement: DateTime(2025, 6, 20),
+    entryAge: 30,
+    column: 50,
+    frequency: PremiumFrequency.monthly,
+    premiumRupees: 450,
+    reminders: false,
+    paidDues: const {'2026-11-20'},
   ));
 
 void main() {

@@ -374,5 +374,21 @@
   "chooseLogo": "تصویر یا لوگو منتخب کریں",
   "removeLogo": "ہٹائیں",
   "profileNote": "کوٹیشن اور یاد دہانی پیغامات میں دکھایا جائے گا۔ صرف اسی فون پر محفوظ۔",
-  "profileSaved": "پروفائل محفوظ ہو گیا۔"
+  "profileSaved": "پروفائل محفوظ ہو گیا۔",
+  "searchPolicies": "نام، پالیسی نمبر یا موبائل تلاش کریں",
+  "sortLabel": "ترتیب",
+  "sortName": "نام",
+  "sortNextDue": "اگلی واجب تاریخ",
+  "sortSumAssured": "بیمہ رقم",
+  "noSearchResults": "“{query}” سے ملتی کوئی پالیسی نہیں۔",
+  "filterAll": "سب",
+  "filterPending": "باقی",
+  "filterCollected": "وصول",
+  "markCollected": "وصول کے طور پر نشان لگائیں",
+  "markNotCollected": "وصول نہیں کے طور پر نشان لگائیں",
+  "duesPendingTotal": "ابھی وصول کرنا باقی",
+  "duesCollectedOf": "{total} میں سے {collected} وصول",
+  "duesMonthTotal": "مہینے کا کل",
+  "collectedNote": "وصولی کے نشان آپ کا اپنا ریکارڈ ہیں۔ یہ انڈیا پوسٹ کے نظام میں ادائیگی کی جانچ نہیں کرتے۔",
+  "noDuesInFilter": "اس فہرست میں کچھ نہیں۔"
 }

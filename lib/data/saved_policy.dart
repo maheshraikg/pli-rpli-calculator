@@ -15,6 +15,7 @@ class SavedPolicy {
     required this.premiumRupees,
     required this.reminders,
     this.phone = '',
+    this.paidDues = const {},
   });
 
   factory SavedPolicy.fromJson(Map<String, Object?> j) => SavedPolicy(
@@ -30,6 +31,7 @@ class SavedPolicy {
         premiumRupees: j['premiumRupees']! as int,
         reminders: j['reminders']! as bool,
         phone: j['phone'] as String? ?? '',
+        paidDues: {...?(j['paidDues'] as List?)?.cast<String>()},
       );
 
   final String id;
@@ -51,6 +53,12 @@ class SavedPolicy {
   /// Customer's mobile, optional; used for WhatsApp due reminders.
   final String phone;
 
+  /// Due dates ("2026-10-15") the agent marked as collected. The agent's own
+  /// record; not checked against India Post.
+  final Set<String> paidDues;
+
+  bool isPaid(DateTime due) => paidDues.contains(dueKey(due));
+
   Map<String, Object?> toJson() => {
         'id': id,
         'holderName': holderName,
@@ -64,9 +72,10 @@ class SavedPolicy {
         'premiumRupees': premiumRupees,
         'reminders': reminders,
         'phone': phone,
+        'paidDues': (paidDues.toList()..sort()),
       };
 
-  SavedPolicy copyWith({bool? reminders}) => SavedPolicy(
+  SavedPolicy copyWith({bool? reminders, Set<String>? paidDues}) => SavedPolicy(
         id: id,
         holderName: holderName,
         policyNumber: policyNumber,
@@ -79,5 +88,13 @@ class SavedPolicy {
         premiumRupees: premiumRupees,
         reminders: reminders ?? this.reminders,
         phone: phone,
+        paidDues: paidDues ?? this.paidDues,
       );
+
+  /// Copy with [due] marked collected or not.
+  SavedPolicy withPaid(DateTime due, bool paid) =>
+      copyWith(paidDues: paid ? {...paidDues, dueKey(due)} : paidDues.difference({dueKey(due)}));
 }
+
+String dueKey(DateTime d) =>
+    '${d.year.toString().padLeft(4, '0')}-${d.month.toString().padLeft(2, '0')}-${d.day.toString().padLeft(2, '0')}';

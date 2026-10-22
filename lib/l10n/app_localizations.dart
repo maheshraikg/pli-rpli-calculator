@@ -2374,6 +2374,102 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Profile saved.'**
   String get profileSaved;
+
+  /// No description provided for @searchPolicies.
+  ///
+  /// In en, this message translates to:
+  /// **'Search name, policy no. or mobile'**
+  String get searchPolicies;
+
+  /// No description provided for @sortLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Sort by'**
+  String get sortLabel;
+
+  /// No description provided for @sortName.
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get sortName;
+
+  /// No description provided for @sortNextDue.
+  ///
+  /// In en, this message translates to:
+  /// **'Next due'**
+  String get sortNextDue;
+
+  /// No description provided for @sortSumAssured.
+  ///
+  /// In en, this message translates to:
+  /// **'Sum assured'**
+  String get sortSumAssured;
+
+  /// No description provided for @noSearchResults.
+  ///
+  /// In en, this message translates to:
+  /// **'No policies match “{query}”.'**
+  String noSearchResults(String query);
+
+  /// No description provided for @filterAll.
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get filterAll;
+
+  /// No description provided for @filterPending.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending'**
+  String get filterPending;
+
+  /// No description provided for @filterCollected.
+  ///
+  /// In en, this message translates to:
+  /// **'Collected'**
+  String get filterCollected;
+
+  /// No description provided for @markCollected.
+  ///
+  /// In en, this message translates to:
+  /// **'Mark as collected'**
+  String get markCollected;
+
+  /// No description provided for @markNotCollected.
+  ///
+  /// In en, this message translates to:
+  /// **'Mark as not collected'**
+  String get markNotCollected;
+
+  /// No description provided for @duesPendingTotal.
+  ///
+  /// In en, this message translates to:
+  /// **'Still to collect'**
+  String get duesPendingTotal;
+
+  /// No description provided for @duesCollectedOf.
+  ///
+  /// In en, this message translates to:
+  /// **'{collected} of {total} collected'**
+  String duesCollectedOf(int collected, int total);
+
+  /// No description provided for @duesMonthTotal.
+  ///
+  /// In en, this message translates to:
+  /// **'Total for the month'**
+  String get duesMonthTotal;
+
+  /// No description provided for @collectedNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Collected marks are your own record. They do not check payment in India Post\'s system.'**
+  String get collectedNote;
+
+  /// No description provided for @noDuesInFilter.
+  ///
+  /// In en, this message translates to:
+  /// **'Nothing in this list.'**
+  String get noDuesInFilter;
 }
 
 class _AppLocalizationsDelegate

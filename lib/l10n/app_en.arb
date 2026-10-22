@@ -981,5 +981,38 @@
   "chooseLogo": "Choose photo or logo",
   "removeLogo": "Remove",
   "profileNote": "Shown on quotations and reminder messages. Stored only on this phone.",
-  "profileSaved": "Profile saved."
+  "profileSaved": "Profile saved.",
+  "searchPolicies": "Search name, policy no. or mobile",
+  "sortLabel": "Sort by",
+  "sortName": "Name",
+  "sortNextDue": "Next due",
+  "sortSumAssured": "Sum assured",
+  "noSearchResults": "No policies match “{query}”.",
+  "@noSearchResults": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "filterAll": "All",
+  "filterPending": "Pending",
+  "filterCollected": "Collected",
+  "markCollected": "Mark as collected",
+  "markNotCollected": "Mark as not collected",
+  "duesPendingTotal": "Still to collect",
+  "duesCollectedOf": "{collected} of {total} collected",
+  "@duesCollectedOf": {
+    "placeholders": {
+      "collected": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "duesMonthTotal": "Total for the month",
+  "collectedNote": "Collected marks are your own record. They do not check payment in India Post's system.",
+  "noDuesInFilter": "Nothing in this list."
 }

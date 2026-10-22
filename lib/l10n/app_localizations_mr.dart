@@ -1316,4 +1316,57 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get profileSaved => 'प्रोफाइल जतन झाले.';
+
+  @override
+  String get searchPolicies => 'नाव, पॉलिसी क्र. किंवा मोबाइल शोधा';
+
+  @override
+  String get sortLabel => 'क्रम';
+
+  @override
+  String get sortName => 'नाव';
+
+  @override
+  String get sortNextDue => 'पुढील देय';
+
+  @override
+  String get sortSumAssured => 'विमा रक्कम';
+
+  @override
+  String noSearchResults(String query) {
+    return '“$query” शी जुळणारी पॉलिसी नाही.';
+  }
+
+  @override
+  String get filterAll => 'सर्व';
+
+  @override
+  String get filterPending => 'बाकी';
+
+  @override
+  String get filterCollected => 'वसूल';
+
+  @override
+  String get markCollected => 'वसूल म्हणून खूण करा';
+
+  @override
+  String get markNotCollected => 'वसूल नाही म्हणून खूण करा';
+
+  @override
+  String get duesPendingTotal => 'अजून वसूल करायचे';
+
+  @override
+  String duesCollectedOf(int collected, int total) {
+    return '$total पैकी $collected वसूल';
+  }
+
+  @override
+  String get duesMonthTotal => 'महिन्याची एकूण';
+
+  @override
+  String get collectedNote =>
+      'वसुलीच्या खुणा तुमची स्वतःची नोंद आहेत. त्या इंडिया पोस्टच्या प्रणालीत भरणा तपासत नाहीत.';
+
+  @override
+  String get noDuesInFilter => 'या यादीत काही नाही.';
 }

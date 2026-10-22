@@ -1330,4 +1330,57 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get profileSaved => 'சுயவிவரம் சேமிக்கப்பட்டது.';
+
+  @override
+  String get searchPolicies => 'பெயர், பாலிசி எண் அல்லது மொபைல் தேடவும்';
+
+  @override
+  String get sortLabel => 'வரிசை';
+
+  @override
+  String get sortName => 'பெயர்';
+
+  @override
+  String get sortNextDue => 'அடுத்த தவணை';
+
+  @override
+  String get sortSumAssured => 'காப்பீட்டுத் தொகை';
+
+  @override
+  String noSearchResults(String query) {
+    return '“$query” உடன் பொருந்தும் பாலிசிகள் இல்லை.';
+  }
+
+  @override
+  String get filterAll => 'அனைத்தும்';
+
+  @override
+  String get filterPending => 'நிலுவை';
+
+  @override
+  String get filterCollected => 'வசூலானது';
+
+  @override
+  String get markCollected => 'வசூலானது எனக் குறி';
+
+  @override
+  String get markNotCollected => 'வசூலாகவில்லை எனக் குறி';
+
+  @override
+  String get duesPendingTotal => 'இன்னும் வசூலிக்க வேண்டியது';
+
+  @override
+  String duesCollectedOf(int collected, int total) {
+    return '$total இல் $collected வசூலானது';
+  }
+
+  @override
+  String get duesMonthTotal => 'மாத மொத்தம்';
+
+  @override
+  String get collectedNote =>
+      'வசூல் குறிகள் உங்கள் சொந்தப் பதிவு. இவை இந்திய அஞ்சல் அமைப்பில் செலுத்தலைச் சரிபார்க்காது.';
+
+  @override
+  String get noDuesInFilter => 'இந்தப் பட்டியலில் எதுவும் இல்லை.';
 }

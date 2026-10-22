@@ -374,5 +374,21 @@
   "chooseLogo": "புகைப்படம் அல்லது லோகோ தேர்வு",
   "removeLogo": "நீக்கு",
   "profileNote": "விலைப்புள்ளிகள் மற்றும் நினைவூட்டல் செய்திகளில் காட்டப்படும். இந்தத் தொலைபேசியில் மட்டும் சேமிக்கப்படும்.",
-  "profileSaved": "சுயவிவரம் சேமிக்கப்பட்டது."
+  "profileSaved": "சுயவிவரம் சேமிக்கப்பட்டது.",
+  "searchPolicies": "பெயர், பாலிசி எண் அல்லது மொபைல் தேடவும்",
+  "sortLabel": "வரிசை",
+  "sortName": "பெயர்",
+  "sortNextDue": "அடுத்த தவணை",
+  "sortSumAssured": "காப்பீட்டுத் தொகை",
+  "noSearchResults": "“{query}” உடன் பொருந்தும் பாலிசிகள் இல்லை.",
+  "filterAll": "அனைத்தும்",
+  "filterPending": "நிலுவை",
+  "filterCollected": "வசூலானது",
+  "markCollected": "வசூலானது எனக் குறி",
+  "markNotCollected": "வசூலாகவில்லை எனக் குறி",
+  "duesPendingTotal": "இன்னும் வசூலிக்க வேண்டியது",
+  "duesCollectedOf": "{total} இல் {collected} வசூலானது",
+  "duesMonthTotal": "மாத மொத்தம்",
+  "collectedNote": "வசூல் குறிகள் உங்கள் சொந்தப் பதிவு. இவை இந்திய அஞ்சல் அமைப்பில் செலுத்தலைச் சரிபார்க்காது.",
+  "noDuesInFilter": "இந்தப் பட்டியலில் எதுவும் இல்லை."
 }

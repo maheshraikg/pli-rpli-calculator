@@ -374,5 +374,21 @@
   "chooseLogo": "फोटो किंवा लोगो निवडा",
   "removeLogo": "काढा",
   "profileNote": "कोटेशन आणि आठवण संदेशांमध्ये दिसेल. फक्त या फोनवर जतन.",
-  "profileSaved": "प्रोफाइल जतन झाले."
+  "profileSaved": "प्रोफाइल जतन झाले.",
+  "searchPolicies": "नाव, पॉलिसी क्र. किंवा मोबाइल शोधा",
+  "sortLabel": "क्रम",
+  "sortName": "नाव",
+  "sortNextDue": "पुढील देय",
+  "sortSumAssured": "विमा रक्कम",
+  "noSearchResults": "“{query}” शी जुळणारी पॉलिसी नाही.",
+  "filterAll": "सर्व",
+  "filterPending": "बाकी",
+  "filterCollected": "वसूल",
+  "markCollected": "वसूल म्हणून खूण करा",
+  "markNotCollected": "वसूल नाही म्हणून खूण करा",
+  "duesPendingTotal": "अजून वसूल करायचे",
+  "duesCollectedOf": "{total} पैकी {collected} वसूल",
+  "duesMonthTotal": "महिन्याची एकूण",
+  "collectedNote": "वसुलीच्या खुणा तुमची स्वतःची नोंद आहेत. त्या इंडिया पोस्टच्या प्रणालीत भरणा तपासत नाहीत.",
+  "noDuesInFilter": "या यादीत काही नाही."
 }

@@ -22,11 +22,66 @@ import 'policy_detail_screen.dart' show reminderText;
 int policyPayingYears(PlanRule plan, SavedPolicy p) =>
     columnDimensionFor(plan) == null ? p.column : payingYears(plan, p.entryAge, p.column);
 
-class PoliciesScreen extends ConsumerWidget {
+enum PolicySort { name, nextDue, sumAssured }
+
+/// Next premium date of [p] on or after [today]; null once premiums stop.
+DateTime? nextDueDate(AppData data, SavedPolicy p, DateTime today) => upcomingDueDates(
+      commencement: p.commencement,
+      frequency: p.frequency,
+      payingYears: policyPayingYears(data.rules.plan(p.planId), p),
+      from: today,
+      count: 1,
+    ).firstOrNull;
+
+/// Policies matching [query] (holder name, policy number or mobile digits),
+/// in [sort] order. Fully paid policies sort last by next due.
+List<SavedPolicy> findPolicies(AppData data, List<SavedPolicy> policies, String query, PolicySort sort, DateTime today) {
+  final q = query.trim().toLowerCase();
+  final digits = q.replaceAll(RegExp(r'\D'), '');
+  final found = [
+    for (final p in policies)
+      if (q.isEmpty ||
+          p.holderName.toLowerCase().contains(q) ||
+          p.policyNumber.toLowerCase().contains(q) ||
+          (digits.isNotEmpty && p.phone.replaceAll(RegExp(r'\D'), '').contains(digits)))
+        p,
+  ];
+  int byName(SavedPolicy a, SavedPolicy b) => a.holderName.toLowerCase().compareTo(b.holderName.toLowerCase());
+  switch (sort) {
+    case PolicySort.name:
+      found.sort(byName);
+    case PolicySort.sumAssured:
+      found.sort((a, b) => b.sumAssured != a.sumAssured ? b.sumAssured.compareTo(a.sumAssured) : byName(a, b));
+    case PolicySort.nextDue:
+      final next = {for (final p in found) p.id: nextDueDate(data, p, today)};
+      found.sort((a, b) {
+        final x = next[a.id], y = next[b.id];
+        if (x == null || y == null) return x == y ? byName(a, b) : (x == null ? 1 : -1);
+        return x != y ? x.compareTo(y) : byName(a, b);
+      });
+  }
+  return found;
+}
+
+class PoliciesScreen extends ConsumerStatefulWidget {
   const PoliciesScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<PoliciesScreen> createState() => _PoliciesScreenState();
+}
+
+class _PoliciesScreenState extends ConsumerState<PoliciesScreen> {
+  final _search = TextEditingController();
+  var _sort = PolicySort.name;
+
+  @override
+  void dispose() {
+    _search.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final l = AppLocalizations.of(context);
     final lang = Localizations.localeOf(context).languageCode;
     final policies = ref.watch(policiesProvider);
@@ -55,22 +110,59 @@ class PoliciesScreen extends ConsumerWidget {
         label: Text(l.addPolicy),
         onPressed: () => context.push('/policies/new'),
       ),
-      builder: (context, data) => policies.isEmpty
-          ? ListView(
-              padding: const EdgeInsets.all(16),
+      builder: (context, data) {
+        if (policies.isEmpty) {
+          return ListView(
+            padding: const EdgeInsets.all(16),
+            children: [
+              InfoCard(icon: Icons.folder_open, message: l.noPolicies),
+              const SizedBox(height: 8),
+              Text(l.savedLocally, style: Theme.of(context).textTheme.bodySmall),
+            ],
+          );
+        }
+        final shown = findPolicies(data, policies, _search.text, _sort, today);
+        return ListView(
+          padding: const EdgeInsets.fromLTRB(16, 16, 16, 88),
+          children: [
+            TextField(
+              controller: _search,
+              onChanged: (_) => setState(() {}),
+              textInputAction: TextInputAction.search,
+              decoration: InputDecoration(
+                prefixIcon: const Icon(Icons.search_rounded),
+                hintText: l.searchPolicies,
+                suffixIcon: _search.text.isEmpty
+                    ? null
+                    : IconButton(
+                        icon: const Icon(Icons.close_rounded),
+                        tooltip: MaterialLocalizations.of(context).deleteButtonTooltip,
+                        onPressed: () => setState(_search.clear),
+                      ),
+              ),
+            ),
+            const SizedBox(height: 8),
+            Wrap(
+              spacing: 8,
+              runSpacing: 4,
+              crossAxisAlignment: WrapCrossAlignment.center,
               children: [
-                InfoCard(icon: Icons.folder_open, message: l.noPolicies),
-                const SizedBox(height: 8),
-                Text(l.savedLocally, style: Theme.of(context).textTheme.bodySmall),
-              ],
-            )
-          : ListView(
-              padding: const EdgeInsets.fromLTRB(16, 16, 16, 88),
-              children: [
-                for (final p in policies) _PolicyTile(policy: p, data: data, today: today, lang: lang),
-                Text(l.savedLocally, style: Theme.of(context).textTheme.bodySmall),
+                Text(l.sortLabel, style: Theme.of(context).textTheme.labelLarge),
+                for (final (sort, label) in [
+                  (PolicySort.name, l.sortName),
+                  (PolicySort.nextDue, l.sortNextDue),
+                  (PolicySort.sumAssured, l.sortSumAssured),
+                ])
+                  ChoiceChip(label: Text(label), selected: _sort == sort, onSelected: (_) => setState(() => _sort = sort)),
               ],
             ),
+            const SizedBox(height: 8),
+            if (shown.isEmpty) InfoCard(icon: Icons.search_off_rounded, message: l.noSearchResults(_search.text.trim())),
+            for (final p in shown) _PolicyTile(policy: p, data: data, today: today, lang: lang),
+            Text(l.savedLocally, style: Theme.of(context).textTheme.bodySmall),
+          ],
+        );
+      },
     );
   }
 }
@@ -127,13 +219,7 @@ class _PolicyTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final l = AppLocalizations.of(context);
     final plan = data.rules.plan(policy.planId);
-    final next = upcomingDueDates(
-      commencement: policy.commencement,
-      frequency: policy.frequency,
-      payingYears: policyPayingYears(plan, policy),
-      from: today,
-      count: 1,
-    );
+    final next = nextDueDate(data, policy, today);
     final theme = Theme.of(context);
     final initial = policy.holderName.isEmpty ? '?' : policy.holderName.characters.first.toUpperCase();
     return Card(
@@ -186,7 +272,7 @@ class _PolicyTile extends StatelessWidget {
                           const SizedBox(width: 6),
                           Flexible(
                             child: Text(
-                              next.isEmpty ? l.noMoreDues : l.nextDue(formatDate(context, next.first)),
+                              next == null ? l.noMoreDues : l.nextDue(formatDate(context, next)),
                               style: theme.textTheme.labelMedium?.copyWith(
                                 color: theme.colorScheme.onSecondaryContainer,
                               ),

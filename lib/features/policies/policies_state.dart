@@ -46,7 +46,7 @@ class PoliciesNotifier extends Notifier<List<SavedPolicy>> {
         );
         final ids = reminderIds(policy);
         await reminders.schedule([
-          for (final (i, due) in dues.indexed)
+          for (final (i, due) in dues.where((d) => !policy.isPaid(d)).indexed)
             Reminder(
               id: ids[i],
               when: due.subtract(const Duration(days: reminderDaysBefore)),

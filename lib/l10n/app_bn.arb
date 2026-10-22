@@ -374,5 +374,21 @@
   "chooseLogo": "ছবি বা লোগো বাছুন",
   "removeLogo": "সরান",
   "profileNote": "কোটেশন ও রিমাইন্ডার বার্তায় দেখানো হবে। শুধু এই ফোনে সংরক্ষিত।",
-  "profileSaved": "প্রোফাইল সংরক্ষিত।"
+  "profileSaved": "প্রোফাইল সংরক্ষিত।",
+  "searchPolicies": "নাম, পলিসি নং বা মোবাইল খুঁজুন",
+  "sortLabel": "সাজান",
+  "sortName": "নাম",
+  "sortNextDue": "পরবর্তী দেয়",
+  "sortSumAssured": "বিমার অঙ্ক",
+  "noSearchResults": "“{query}” এর সাথে মেলে এমন কোনো পলিসি নেই।",
+  "filterAll": "সব",
+  "filterPending": "বাকি",
+  "filterCollected": "আদায় হয়েছে",
+  "markCollected": "আদায় হয়েছে চিহ্নিত করুন",
+  "markNotCollected": "আদায় হয়নি চিহ্নিত করুন",
+  "duesPendingTotal": "এখনও আদায় বাকি",
+  "duesCollectedOf": "{total} এর মধ্যে {collected} আদায় হয়েছে",
+  "duesMonthTotal": "মাসের মোট",
+  "collectedNote": "আদায়ের চিহ্ন আপনার নিজের রেকর্ড। এগুলি ইন্ডিয়া পোস্টের সিস্টেমে প্রদান যাচাই করে না।",
+  "noDuesInFilter": "এই তালিকায় কিছু নেই।"
 }

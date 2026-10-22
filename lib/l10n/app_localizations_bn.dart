@@ -1318,4 +1318,57 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get profileSaved => 'প্রোফাইল সংরক্ষিত।';
+
+  @override
+  String get searchPolicies => 'নাম, পলিসি নং বা মোবাইল খুঁজুন';
+
+  @override
+  String get sortLabel => 'সাজান';
+
+  @override
+  String get sortName => 'নাম';
+
+  @override
+  String get sortNextDue => 'পরবর্তী দেয়';
+
+  @override
+  String get sortSumAssured => 'বিমার অঙ্ক';
+
+  @override
+  String noSearchResults(String query) {
+    return '“$query” এর সাথে মেলে এমন কোনো পলিসি নেই।';
+  }
+
+  @override
+  String get filterAll => 'সব';
+
+  @override
+  String get filterPending => 'বাকি';
+
+  @override
+  String get filterCollected => 'আদায় হয়েছে';
+
+  @override
+  String get markCollected => 'আদায় হয়েছে চিহ্নিত করুন';
+
+  @override
+  String get markNotCollected => 'আদায় হয়নি চিহ্নিত করুন';
+
+  @override
+  String get duesPendingTotal => 'এখনও আদায় বাকি';
+
+  @override
+  String duesCollectedOf(int collected, int total) {
+    return '$total এর মধ্যে $collected আদায় হয়েছে';
+  }
+
+  @override
+  String get duesMonthTotal => 'মাসের মোট';
+
+  @override
+  String get collectedNote =>
+      'আদায়ের চিহ্ন আপনার নিজের রেকর্ড। এগুলি ইন্ডিয়া পোস্টের সিস্টেমে প্রদান যাচাই করে না।';
+
+  @override
+  String get noDuesInFilter => 'এই তালিকায় কিছু নেই।';
 }

@@ -374,5 +374,21 @@
   "chooseLogo": "ਫ਼ੋਟੋ ਜਾਂ ਲੋਗੋ ਚੁਣੋ",
   "removeLogo": "ਹਟਾਓ",
   "profileNote": "ਕੋਟੇਸ਼ਨ ਅਤੇ ਯਾਦ-ਦਹਾਨੀ ਸੁਨੇਹਿਆਂ ਵਿੱਚ ਦਿਖੇਗਾ। ਸਿਰਫ਼ ਇਸ ਫ਼ੋਨ ਉੱਤੇ ਸੰਭਾਲਿਆ।",
-  "profileSaved": "ਪ੍ਰੋਫ਼ਾਈਲ ਸੰਭਾਲਿਆ ਗਿਆ।"
+  "profileSaved": "ਪ੍ਰੋਫ਼ਾਈਲ ਸੰਭਾਲਿਆ ਗਿਆ।",
+  "searchPolicies": "ਨਾਮ, ਪਾਲਿਸੀ ਨੰ. ਜਾਂ ਮੋਬਾਈਲ ਲੱਭੋ",
+  "sortLabel": "ਕ੍ਰਮ",
+  "sortName": "ਨਾਮ",
+  "sortNextDue": "ਅਗਲੀ ਬਕਾਇਆ ਮਿਤੀ",
+  "sortSumAssured": "ਬੀਮਾ ਰਕਮ",
+  "noSearchResults": "“{query}” ਨਾਲ ਮਿਲਦੀ ਕੋਈ ਪਾਲਿਸੀ ਨਹੀਂ।",
+  "filterAll": "ਸਾਰੀਆਂ",
+  "filterPending": "ਬਾਕੀ",
+  "filterCollected": "ਵਸੂਲ",
+  "markCollected": "ਵਸੂਲ ਵਜੋਂ ਨਿਸ਼ਾਨ ਲਗਾਓ",
+  "markNotCollected": "ਵਸੂਲ ਨਹੀਂ ਵਜੋਂ ਨਿਸ਼ਾਨ ਲਗਾਓ",
+  "duesPendingTotal": "ਹਾਲੇ ਵਸੂਲਣਾ ਬਾਕੀ",
+  "duesCollectedOf": "{total} ਵਿੱਚੋਂ {collected} ਵਸੂਲ",
+  "duesMonthTotal": "ਮਹੀਨੇ ਦਾ ਕੁੱਲ",
+  "collectedNote": "ਵਸੂਲੀ ਦੇ ਨਿਸ਼ਾਨ ਤੁਹਾਡਾ ਆਪਣਾ ਰਿਕਾਰਡ ਹਨ। ਇਹ ਇੰਡੀਆ ਪੋਸਟ ਦੇ ਸਿਸਟਮ ਵਿੱਚ ਭੁਗਤਾਨ ਦੀ ਜਾਂਚ ਨਹੀਂ ਕਰਦੇ।",
+  "noDuesInFilter": "ਇਸ ਸੂਚੀ ਵਿੱਚ ਕੁਝ ਨਹੀਂ।"
 }

@@ -1316,4 +1316,57 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get profileSaved => 'پروفائل محفوظ ہو گیا۔';
+
+  @override
+  String get searchPolicies => 'نام، پالیسی نمبر یا موبائل تلاش کریں';
+
+  @override
+  String get sortLabel => 'ترتیب';
+
+  @override
+  String get sortName => 'نام';
+
+  @override
+  String get sortNextDue => 'اگلی واجب تاریخ';
+
+  @override
+  String get sortSumAssured => 'بیمہ رقم';
+
+  @override
+  String noSearchResults(String query) {
+    return '“$query” سے ملتی کوئی پالیسی نہیں۔';
+  }
+
+  @override
+  String get filterAll => 'سب';
+
+  @override
+  String get filterPending => 'باقی';
+
+  @override
+  String get filterCollected => 'وصول';
+
+  @override
+  String get markCollected => 'وصول کے طور پر نشان لگائیں';
+
+  @override
+  String get markNotCollected => 'وصول نہیں کے طور پر نشان لگائیں';
+
+  @override
+  String get duesPendingTotal => 'ابھی وصول کرنا باقی';
+
+  @override
+  String duesCollectedOf(int collected, int total) {
+    return '$total میں سے $collected وصول';
+  }
+
+  @override
+  String get duesMonthTotal => 'مہینے کا کل';
+
+  @override
+  String get collectedNote =>
+      'وصولی کے نشان آپ کا اپنا ریکارڈ ہیں۔ یہ انڈیا پوسٹ کے نظام میں ادائیگی کی جانچ نہیں کرتے۔';
+
+  @override
+  String get noDuesInFilter => 'اس فہرست میں کچھ نہیں۔';
 }

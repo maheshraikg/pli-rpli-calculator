@@ -374,5 +374,21 @@
   "chooseLogo": "ଫଟୋ କିମ୍ବା ଲୋଗୋ ବାଛନ୍ତୁ",
   "removeLogo": "ହଟାନ୍ତୁ",
   "profileNote": "କୋଟେସନ ଓ ସ୍ମାରକ ବାର୍ତ୍ତାରେ ଦେଖାଯିବ। କେବଳ ଏହି ଫୋନରେ ସଞ୍ଚିତ।",
-  "profileSaved": "ପ୍ରୋଫାଇଲ ସଞ୍ଚିତ ହେଲା।"
+  "profileSaved": "ପ୍ରୋଫାଇଲ ସଞ୍ଚିତ ହେଲା।",
+  "searchPolicies": "ନାମ, ପଲିସି ନଂ କିମ୍ବା ମୋବାଇଲ ଖୋଜନ୍ତୁ",
+  "sortLabel": "କ୍ରମ",
+  "sortName": "ନାମ",
+  "sortNextDue": "ପରବର୍ତ୍ତୀ ଦେୟ",
+  "sortSumAssured": "ବୀମା ରାଶି",
+  "noSearchResults": "“{query}” ସହ ମେଳ ଖାଉଥିବା କୌଣସି ପଲିସି ନାହିଁ।",
+  "filterAll": "ସମସ୍ତ",
+  "filterPending": "ବାକି",
+  "filterCollected": "ଆଦାୟ ହୋଇଛି",
+  "markCollected": "ଆଦାୟ ହୋଇଛି ବୋଲି ଚିହ୍ନିତ କରନ୍ତୁ",
+  "markNotCollected": "ଆଦାୟ ହୋଇନାହିଁ ବୋଲି ଚିହ୍ନିତ କରନ୍ତୁ",
+  "duesPendingTotal": "ଏବେ ବି ଆଦାୟ ବାକି",
+  "duesCollectedOf": "{total} ମଧ୍ୟରୁ {collected} ଆଦାୟ ହୋଇଛି",
+  "duesMonthTotal": "ମାସର ମୋଟ",
+  "collectedNote": "ଆଦାୟ ଚିହ୍ନ ଆପଣଙ୍କ ନିଜ ରେକର୍ଡ। ଏହା ଇଣ୍ଡିଆ ପୋଷ୍ଟ ପ୍ରଣାଳୀରେ ଦେୟ ଯାଞ୍ଚ କରେ ନାହିଁ।",
+  "noDuesInFilter": "ଏହି ତାଲିକାରେ କିଛି ନାହିଁ।"
 }

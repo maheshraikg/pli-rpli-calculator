@@ -1351,4 +1351,57 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get profileSaved => 'Profile saved.';
+
+  @override
+  String get searchPolicies => 'Search name, policy no. or mobile';
+
+  @override
+  String get sortLabel => 'Sort by';
+
+  @override
+  String get sortName => 'Name';
+
+  @override
+  String get sortNextDue => 'Next due';
+
+  @override
+  String get sortSumAssured => 'Sum assured';
+
+  @override
+  String noSearchResults(String query) {
+    return 'No policies match “$query”.';
+  }
+
+  @override
+  String get filterAll => 'All';
+
+  @override
+  String get filterPending => 'Pending';
+
+  @override
+  String get filterCollected => 'Collected';
+
+  @override
+  String get markCollected => 'Mark as collected';
+
+  @override
+  String get markNotCollected => 'Mark as not collected';
+
+  @override
+  String get duesPendingTotal => 'Still to collect';
+
+  @override
+  String duesCollectedOf(int collected, int total) {
+    return '$collected of $total collected';
+  }
+
+  @override
+  String get duesMonthTotal => 'Total for the month';
+
+  @override
+  String get collectedNote =>
+      'Collected marks are your own record. They do not check payment in India Post\'s system.';
+
+  @override
+  String get noDuesInFilter => 'Nothing in this list.';
 }

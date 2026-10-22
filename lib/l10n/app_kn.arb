@@ -374,5 +374,21 @@
   "chooseLogo": "ಫೋಟೋ ಅಥವಾ ಲೋಗೋ ಆರಿಸಿ",
   "removeLogo": "ತೆಗೆಯಿರಿ",
   "profileNote": "ಉಲ್ಲೇಖ ಪತ್ರಗಳು ಮತ್ತು ನೆನಪಿನ ಸಂದೇಶಗಳಲ್ಲಿ ತೋರಿಸಲಾಗುತ್ತದೆ. ಈ ಫೋನ್‌ನಲ್ಲಿ ಮಾತ್ರ ಉಳಿಸಲಾಗಿದೆ.",
-  "profileSaved": "ಪ್ರೊಫೈಲ್ ಉಳಿಸಲಾಗಿದೆ."
+  "profileSaved": "ಪ್ರೊಫೈಲ್ ಉಳಿಸಲಾಗಿದೆ.",
+  "searchPolicies": "ಹೆಸರು, ಪಾಲಿಸಿ ಸಂಖ್ಯೆ ಅಥವಾ ಮೊಬೈಲ್ ಹುಡುಕಿ",
+  "sortLabel": "ವಿಂಗಡಿಸಿ",
+  "sortName": "ಹೆಸರು",
+  "sortNextDue": "ಮುಂದಿನ ಕಂತು",
+  "sortSumAssured": "ವಿಮಾ ಮೊತ್ತ",
+  "noSearchResults": "“{query}” ಗೆ ಹೊಂದುವ ಪಾಲಿಸಿಗಳಿಲ್ಲ.",
+  "filterAll": "ಎಲ್ಲಾ",
+  "filterPending": "ಬಾಕಿ",
+  "filterCollected": "ಸಂಗ್ರಹಿಸಲಾಗಿದೆ",
+  "markCollected": "ಸಂಗ್ರಹಿಸಲಾಗಿದೆ ಎಂದು ಗುರುತಿಸಿ",
+  "markNotCollected": "ಸಂಗ್ರಹಿಸಿಲ್ಲ ಎಂದು ಗುರುತಿಸಿ",
+  "duesPendingTotal": "ಇನ್ನೂ ಸಂಗ್ರಹಿಸಬೇಕಾದದ್ದು",
+  "duesCollectedOf": "{total} ರಲ್ಲಿ {collected} ಸಂಗ್ರಹಿಸಲಾಗಿದೆ",
+  "duesMonthTotal": "ತಿಂಗಳ ಒಟ್ಟು",
+  "collectedNote": "ಸಂಗ್ರಹ ಗುರುತುಗಳು ನಿಮ್ಮ ಸ್ವಂತ ದಾಖಲೆ. ಇವು ಅಂಚೆ ಇಲಾಖೆಯ ವ್ಯವಸ್ಥೆಯಲ್ಲಿ ಪಾವತಿಯನ್ನು ಪರಿಶೀಲಿಸುವುದಿಲ್ಲ.",
+  "noDuesInFilter": "ಈ ಪಟ್ಟಿಯಲ್ಲಿ ಏನೂ ಇಲ್ಲ."
 }

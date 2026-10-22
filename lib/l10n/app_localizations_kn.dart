@@ -1318,4 +1318,57 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get profileSaved => 'ಪ್ರೊಫೈಲ್ ಉಳಿಸಲಾಗಿದೆ.';
+
+  @override
+  String get searchPolicies => 'ಹೆಸರು, ಪಾಲಿಸಿ ಸಂಖ್ಯೆ ಅಥವಾ ಮೊಬೈಲ್ ಹುಡುಕಿ';
+
+  @override
+  String get sortLabel => 'ವಿಂಗಡಿಸಿ';
+
+  @override
+  String get sortName => 'ಹೆಸರು';
+
+  @override
+  String get sortNextDue => 'ಮುಂದಿನ ಕಂತು';
+
+  @override
+  String get sortSumAssured => 'ವಿಮಾ ಮೊತ್ತ';
+
+  @override
+  String noSearchResults(String query) {
+    return '“$query” ಗೆ ಹೊಂದುವ ಪಾಲಿಸಿಗಳಿಲ್ಲ.';
+  }
+
+  @override
+  String get filterAll => 'ಎಲ್ಲಾ';
+
+  @override
+  String get filterPending => 'ಬಾಕಿ';
+
+  @override
+  String get filterCollected => 'ಸಂಗ್ರಹಿಸಲಾಗಿದೆ';
+
+  @override
+  String get markCollected => 'ಸಂಗ್ರಹಿಸಲಾಗಿದೆ ಎಂದು ಗುರುತಿಸಿ';
+
+  @override
+  String get markNotCollected => 'ಸಂಗ್ರಹಿಸಿಲ್ಲ ಎಂದು ಗುರುತಿಸಿ';
+
+  @override
+  String get duesPendingTotal => 'ಇನ್ನೂ ಸಂಗ್ರಹಿಸಬೇಕಾದದ್ದು';
+
+  @override
+  String duesCollectedOf(int collected, int total) {
+    return '$total ರಲ್ಲಿ $collected ಸಂಗ್ರಹಿಸಲಾಗಿದೆ';
+  }
+
+  @override
+  String get duesMonthTotal => 'ತಿಂಗಳ ಒಟ್ಟು';
+
+  @override
+  String get collectedNote =>
+      'ಸಂಗ್ರಹ ಗುರುತುಗಳು ನಿಮ್ಮ ಸ್ವಂತ ದಾಖಲೆ. ಇವು ಅಂಚೆ ಇಲಾಖೆಯ ವ್ಯವಸ್ಥೆಯಲ್ಲಿ ಪಾವತಿಯನ್ನು ಪರಿಶೀಲಿಸುವುದಿಲ್ಲ.';
+
+  @override
+  String get noDuesInFilter => 'ಈ ಪಟ್ಟಿಯಲ್ಲಿ ಏನೂ ಇಲ್ಲ.';
 }

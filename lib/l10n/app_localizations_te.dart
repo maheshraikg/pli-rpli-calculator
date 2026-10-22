@@ -1321,4 +1321,57 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get profileSaved => 'ప్రొఫైల్ సేవ్ అయింది.';
+
+  @override
+  String get searchPolicies => 'పేరు, పాలసీ నం. లేదా మొబైల్ వెతకండి';
+
+  @override
+  String get sortLabel => 'క్రమం';
+
+  @override
+  String get sortName => 'పేరు';
+
+  @override
+  String get sortNextDue => 'తదుపరి గడువు';
+
+  @override
+  String get sortSumAssured => 'బీమా మొత్తం';
+
+  @override
+  String noSearchResults(String query) {
+    return '“$query” కు సరిపోయే పాలసీలు లేవు.';
+  }
+
+  @override
+  String get filterAll => 'అన్నీ';
+
+  @override
+  String get filterPending => 'బాకీ';
+
+  @override
+  String get filterCollected => 'వసూలైంది';
+
+  @override
+  String get markCollected => 'వసూలైనట్లు గుర్తించండి';
+
+  @override
+  String get markNotCollected => 'వసూలు కానట్లు గుర్తించండి';
+
+  @override
+  String get duesPendingTotal => 'ఇంకా వసూలు చేయాల్సింది';
+
+  @override
+  String duesCollectedOf(int collected, int total) {
+    return '$total లో $collected వసూలయ్యాయి';
+  }
+
+  @override
+  String get duesMonthTotal => 'నెల మొత్తం';
+
+  @override
+  String get collectedNote =>
+      'వసూలు గుర్తులు మీ సొంత రికార్డు. ఇవి ఇండియా పోస్ట్ వ్యవస్థలో చెల్లింపును తనిఖీ చేయవు.';
+
+  @override
+  String get noDuesInFilter => 'ఈ జాబితాలో ఏమీ లేదు.';
 }

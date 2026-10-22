@@ -1318,4 +1318,57 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get profileSaved => 'প্ৰফাইল সংৰক্ষিত হ\'ল।';
+
+  @override
+  String get searchPolicies => 'নাম, পলিচি নং বা মোবাইল বিচাৰক';
+
+  @override
+  String get sortLabel => 'সজাওক';
+
+  @override
+  String get sortName => 'নাম';
+
+  @override
+  String get sortNextDue => 'পৰৱৰ্তী দেয়';
+
+  @override
+  String get sortSumAssured => 'বীমাৰ অংক';
+
+  @override
+  String noSearchResults(String query) {
+    return '“$query” ৰ সৈতে মিলা কোনো পলিচি নাই।';
+  }
+
+  @override
+  String get filterAll => 'সকলো';
+
+  @override
+  String get filterPending => 'বাকী';
+
+  @override
+  String get filterCollected => 'আদায় হৈছে';
+
+  @override
+  String get markCollected => 'আদায় হৈছে বুলি চিহ্নিত কৰক';
+
+  @override
+  String get markNotCollected => 'আদায় হোৱা নাই বুলি চিহ্নিত কৰক';
+
+  @override
+  String get duesPendingTotal => 'এতিয়াও আদায় বাকী';
+
+  @override
+  String duesCollectedOf(int collected, int total) {
+    return '$total ৰ ভিতৰত $collected আদায় হৈছে';
+  }
+
+  @override
+  String get duesMonthTotal => 'মাহৰ মুঠ';
+
+  @override
+  String get collectedNote =>
+      'আদায়ৰ চিহ্নবোৰ আপোনাৰ নিজৰ ৰেকৰ্ড। এইবোৰে ইণ্ডিয়া পোষ্টৰ ব্যৱস্থাত পৰিশোধ পৰীক্ষা নকৰে।';
+
+  @override
+  String get noDuesInFilter => 'এই তালিকাত একো নাই।';
 }

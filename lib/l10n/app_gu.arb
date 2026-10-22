@@ -374,5 +374,21 @@
   "chooseLogo": "ફોટો કે લોગો પસંદ કરો",
   "removeLogo": "દૂર કરો",
   "profileNote": "ક્વોટેશન અને યાદી સંદેશાઓમાં દેખાશે. ફક્ત આ ફોન પર સાચવેલ.",
-  "profileSaved": "પ્રોફાઇલ સાચવી."
+  "profileSaved": "પ્રોફાઇલ સાચવી.",
+  "searchPolicies": "નામ, પોલિસી નં. અથવા મોબાઇલ શોધો",
+  "sortLabel": "ક્રમ",
+  "sortName": "નામ",
+  "sortNextDue": "આગલી બાકી તારીખ",
+  "sortSumAssured": "વીમા રકમ",
+  "noSearchResults": "“{query}” સાથે મેળ ખાતી કોઈ પોલિસી નથી.",
+  "filterAll": "બધી",
+  "filterPending": "બાકી",
+  "filterCollected": "વસૂલ",
+  "markCollected": "વસૂલ તરીકે ચિહ્નિત કરો",
+  "markNotCollected": "વસૂલ નથી તરીકે ચિહ્નિત કરો",
+  "duesPendingTotal": "હજી વસૂલવાનું",
+  "duesCollectedOf": "{total} માંથી {collected} વસૂલ",
+  "duesMonthTotal": "મહિનાનો કુલ",
+  "collectedNote": "વસૂલીના ચિહ્નો તમારો પોતાનો રેકોર્ડ છે. તે ઇન્ડિયા પોસ્ટની સિસ્ટમમાં ચુકવણી તપાસતા નથી.",
+  "noDuesInFilter": "આ યાદીમાં કંઈ નથી."
 }

@@ -374,5 +374,21 @@
   "chooseLogo": "ফটো বা লোগো বাছক",
   "removeLogo": "আঁতৰাওক",
   "profileNote": "কোটেশ্বন আৰু সোঁৱৰণী বাৰ্তাত দেখুওৱা হ'ব। কেৱল এই ফোনতে সংৰক্ষিত।",
-  "profileSaved": "প্ৰফাইল সংৰক্ষিত হ'ল।"
+  "profileSaved": "প্ৰফাইল সংৰক্ষিত হ'ল।",
+  "searchPolicies": "নাম, পলিচি নং বা মোবাইল বিচাৰক",
+  "sortLabel": "সজাওক",
+  "sortName": "নাম",
+  "sortNextDue": "পৰৱৰ্তী দেয়",
+  "sortSumAssured": "বীমাৰ অংক",
+  "noSearchResults": "“{query}” ৰ সৈতে মিলা কোনো পলিচি নাই।",
+  "filterAll": "সকলো",
+  "filterPending": "বাকী",
+  "filterCollected": "আদায় হৈছে",
+  "markCollected": "আদায় হৈছে বুলি চিহ্নিত কৰক",
+  "markNotCollected": "আদায় হোৱা নাই বুলি চিহ্নিত কৰক",
+  "duesPendingTotal": "এতিয়াও আদায় বাকী",
+  "duesCollectedOf": "{total} ৰ ভিতৰত {collected} আদায় হৈছে",
+  "duesMonthTotal": "মাহৰ মুঠ",
+  "collectedNote": "আদায়ৰ চিহ্নবোৰ আপোনাৰ নিজৰ ৰেকৰ্ড। এইবোৰে ইণ্ডিয়া পোষ্টৰ ব্যৱস্থাত পৰিশোধ পৰীক্ষা নকৰে।",
+  "noDuesInFilter": "এই তালিকাত একো নাই।"
 }

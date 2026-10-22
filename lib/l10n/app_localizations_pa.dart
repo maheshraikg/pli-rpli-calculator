@@ -1314,4 +1314,57 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get profileSaved => 'ਪ੍ਰੋਫ਼ਾਈਲ ਸੰਭਾਲਿਆ ਗਿਆ।';
+
+  @override
+  String get searchPolicies => 'ਨਾਮ, ਪਾਲਿਸੀ ਨੰ. ਜਾਂ ਮੋਬਾਈਲ ਲੱਭੋ';
+
+  @override
+  String get sortLabel => 'ਕ੍ਰਮ';
+
+  @override
+  String get sortName => 'ਨਾਮ';
+
+  @override
+  String get sortNextDue => 'ਅਗਲੀ ਬਕਾਇਆ ਮਿਤੀ';
+
+  @override
+  String get sortSumAssured => 'ਬੀਮਾ ਰਕਮ';
+
+  @override
+  String noSearchResults(String query) {
+    return '“$query” ਨਾਲ ਮਿਲਦੀ ਕੋਈ ਪਾਲਿਸੀ ਨਹੀਂ।';
+  }
+
+  @override
+  String get filterAll => 'ਸਾਰੀਆਂ';
+
+  @override
+  String get filterPending => 'ਬਾਕੀ';
+
+  @override
+  String get filterCollected => 'ਵਸੂਲ';
+
+  @override
+  String get markCollected => 'ਵਸੂਲ ਵਜੋਂ ਨਿਸ਼ਾਨ ਲਗਾਓ';
+
+  @override
+  String get markNotCollected => 'ਵਸੂਲ ਨਹੀਂ ਵਜੋਂ ਨਿਸ਼ਾਨ ਲਗਾਓ';
+
+  @override
+  String get duesPendingTotal => 'ਹਾਲੇ ਵਸੂਲਣਾ ਬਾਕੀ';
+
+  @override
+  String duesCollectedOf(int collected, int total) {
+    return '$total ਵਿੱਚੋਂ $collected ਵਸੂਲ';
+  }
+
+  @override
+  String get duesMonthTotal => 'ਮਹੀਨੇ ਦਾ ਕੁੱਲ';
+
+  @override
+  String get collectedNote =>
+      'ਵਸੂਲੀ ਦੇ ਨਿਸ਼ਾਨ ਤੁਹਾਡਾ ਆਪਣਾ ਰਿਕਾਰਡ ਹਨ। ਇਹ ਇੰਡੀਆ ਪੋਸਟ ਦੇ ਸਿਸਟਮ ਵਿੱਚ ਭੁਗਤਾਨ ਦੀ ਜਾਂਚ ਨਹੀਂ ਕਰਦੇ।';
+
+  @override
+  String get noDuesInFilter => 'ਇਸ ਸੂਚੀ ਵਿੱਚ ਕੁਝ ਨਹੀਂ।';
 }

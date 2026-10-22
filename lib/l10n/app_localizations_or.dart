@@ -1317,4 +1317,57 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get profileSaved => 'ପ୍ରୋଫାଇଲ ସଞ୍ଚିତ ହେଲା।';
+
+  @override
+  String get searchPolicies => 'ନାମ, ପଲିସି ନଂ କିମ୍ବା ମୋବାଇଲ ଖୋଜନ୍ତୁ';
+
+  @override
+  String get sortLabel => 'କ୍ରମ';
+
+  @override
+  String get sortName => 'ନାମ';
+
+  @override
+  String get sortNextDue => 'ପରବର୍ତ୍ତୀ ଦେୟ';
+
+  @override
+  String get sortSumAssured => 'ବୀମା ରାଶି';
+
+  @override
+  String noSearchResults(String query) {
+    return '“$query” ସହ ମେଳ ଖାଉଥିବା କୌଣସି ପଲିସି ନାହିଁ।';
+  }
+
+  @override
+  String get filterAll => 'ସମସ୍ତ';
+
+  @override
+  String get filterPending => 'ବାକି';
+
+  @override
+  String get filterCollected => 'ଆଦାୟ ହୋଇଛି';
+
+  @override
+  String get markCollected => 'ଆଦାୟ ହୋଇଛି ବୋଲି ଚିହ୍ନିତ କରନ୍ତୁ';
+
+  @override
+  String get markNotCollected => 'ଆଦାୟ ହୋଇନାହିଁ ବୋଲି ଚିହ୍ନିତ କରନ୍ତୁ';
+
+  @override
+  String get duesPendingTotal => 'ଏବେ ବି ଆଦାୟ ବାକି';
+
+  @override
+  String duesCollectedOf(int collected, int total) {
+    return '$total ମଧ୍ୟରୁ $collected ଆଦାୟ ହୋଇଛି';
+  }
+
+  @override
+  String get duesMonthTotal => 'ମାସର ମୋଟ';
+
+  @override
+  String get collectedNote =>
+      'ଆଦାୟ ଚିହ୍ନ ଆପଣଙ୍କ ନିଜ ରେକର୍ଡ। ଏହା ଇଣ୍ଡିଆ ପୋଷ୍ଟ ପ୍ରଣାଳୀରେ ଦେୟ ଯାଞ୍ଚ କରେ ନାହିଁ।';
+
+  @override
+  String get noDuesInFilter => 'ଏହି ତାଲିକାରେ କିଛି ନାହିଁ।';
 }

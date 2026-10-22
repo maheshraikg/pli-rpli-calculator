@@ -374,5 +374,21 @@
   "chooseLogo": "ഫോട്ടോ അല്ലെങ്കിൽ ലോഗോ തിരഞ്ഞെടുക്കുക",
   "removeLogo": "നീക്കുക",
   "profileNote": "ക്വട്ടേഷനുകളിലും ഓർമ്മപ്പെടുത്തൽ സന്ദേശങ്ങളിലും കാണിക്കും. ഈ ഫോണിൽ മാത്രം സൂക്ഷിക്കുന്നു.",
-  "profileSaved": "പ്രൊഫൈൽ സേവ് ചെയ്തു."
+  "profileSaved": "പ്രൊഫൈൽ സേവ് ചെയ്തു.",
+  "searchPolicies": "പേര്, പോളിസി നം. അല്ലെങ്കിൽ മൊബൈൽ തിരയുക",
+  "sortLabel": "ക്രമം",
+  "sortName": "പേര്",
+  "sortNextDue": "അടുത്ത തവണ",
+  "sortSumAssured": "ഇൻഷുർ തുക",
+  "noSearchResults": "“{query}” മായി യോജിക്കുന്ന പോളിസികളില്ല.",
+  "filterAll": "എല്ലാം",
+  "filterPending": "ബാക്കി",
+  "filterCollected": "പിരിച്ചു",
+  "markCollected": "പിരിച്ചതായി അടയാളപ്പെടുത്തുക",
+  "markNotCollected": "പിരിച്ചിട്ടില്ലെന്ന് അടയാളപ്പെടുത്തുക",
+  "duesPendingTotal": "ഇനിയും പിരിക്കാനുള്ളത്",
+  "duesCollectedOf": "{total} ൽ {collected} പിരിച്ചു",
+  "duesMonthTotal": "മാസത്തെ ആകെ",
+  "collectedNote": "പിരിവ് അടയാളങ്ങൾ നിങ്ങളുടെ സ്വന്തം രേഖയാണ്. ഇവ ഇന്ത്യാ പോസ്റ്റ് സംവിധാനത്തിൽ അടവ് പരിശോധിക്കുന്നില്ല.",
+  "noDuesInFilter": "ഈ പട്ടികയിൽ ഒന്നുമില്ല."
 }

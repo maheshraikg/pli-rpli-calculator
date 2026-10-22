@@ -181,10 +181,27 @@ void main() {
         id: '$i', holderName: n, policyNumber: 'PLI-KA-10${i}234', planId: 'pli_santosh', sumAssured: 100000 * (i + 1),
         commencement: DateTime(2024, 1 + i * 2, 4 + i * 6), entryAge: 30, column: 58, frequency: PremiumFrequency.monthly,
         premiumRupees: 450 * (i + 1), reminders: true, phone: i.isEven ? '98450 0000$i' : '',
+        paidDues: i == 0 ? const {'2026-11-04'} : const {},
       ));
     }
     await pumpApp(tester, location: '/dues', policies: store);
-    await _shot(tester, '18_dues');
+    await _shot(tester, '18_dues_full', height: 4200);
+  });
+
+  testWidgets('22 policies search and sort', (tester) async {
+    final store = MemoryPolicyStore();
+    final names = ['Lakshmi Devi', 'Ravi Kumar', 'Shabnam Begum', 'Manjunath Gowda'];
+    for (final (i, n) in names.indexed) {
+      await store.put(SavedPolicy(
+        id: '$i', holderName: n, policyNumber: 'PLI-KA-10${i}234', planId: 'pli_santosh', sumAssured: 100000 * (i + 1),
+        commencement: DateTime(2024, 1 + i * 2, 4 + i * 6), entryAge: 30, column: 58, frequency: PremiumFrequency.monthly,
+        premiumRupees: 450 * (i + 1), reminders: i.isEven,
+      ));
+    }
+    await pumpApp(tester, location: '/policies', policies: store);
+    await tester.tap(find.widgetWithText(ChoiceChip, 'Next due'));
+    await tester.pumpAndSettle();
+    await _shot(tester, '22_policies_sorted');
   });
 
   testWidgets('19 agent quotation', (tester) async {
