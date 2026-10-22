@@ -918,5 +918,68 @@
   "doc_medical": "Medical certificate / health declaration (if asked)",
   "doc_eligibility": "Proof of eligibility (job, degree or rural residence)",
   "doc_nomineeDetails": "Nominee's name, age and relationship",
-  "doc_indemnity": "Indemnity bond (if asked)"
+  "doc_indemnity": "Indemnity bond (if asked)",
+  "customerPhoneLabel": "Customer mobile (for WhatsApp reminders)",
+  "exportBackup": "Back up policies",
+  "importBackup": "Restore from backup",
+  "importConfirm": "Restore {count} policies from this backup? Policies already saved with the same ID are replaced.",
+  "@importConfirm": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importDone": "{count} policies restored.",
+  "@importDone": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importFailed": "This file is not a PLI & RPLI Calculator backup.",
+  "backupNote": "The backup file contains your policy details. Keep it somewhere safe, such as your own WhatsApp chat or Google Drive.",
+  "restore": "Restore",
+  "tileDues": "Dues",
+  "descDues": "Premiums due this month",
+  "duesTitle": "Premium dues",
+  "duesTotal": "Total due",
+  "duesCount": "{count, plural, =1{1 premium} other{{count} premiums}}",
+  "@duesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noDuesInMonth": "No premiums fall due in this month.",
+  "remindOnWhatsApp": "Remind",
+  "dueReminderMessage": "Dear {name}, your premium of {amount} for policy {number} is due on {date}. Please pay at your Post Office.",
+  "@dueReminderMessage": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      },
+      "number": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "tileProfile": "Agent profile",
+  "descProfile": "Your name and logo on quotations",
+  "profileTitle": "Agent profile",
+  "agentNameField": "Your name",
+  "agentPhoneField": "Your phone",
+  "agentCodeField": "Agent ID / office (optional)",
+  "chooseLogo": "Choose photo or logo",
+  "removeLogo": "Remove",
+  "profileNote": "Shown on quotations and reminder messages. Stored only on this phone.",
+  "profileSaved": "Profile saved."
 }

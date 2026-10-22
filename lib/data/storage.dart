@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_ce/hive_ce.dart';
 
+import 'agent_profile.dart';
 import 'saved_policy.dart';
 
 abstract interface class SettingsStore {
@@ -10,6 +11,8 @@ abstract interface class SettingsStore {
   Future<void> setLanguageCode(String? code);
   bool get disclaimerAccepted;
   Future<void> acceptDisclaimer();
+  AgentProfile get agentProfile;
+  Future<void> setAgentProfile(AgentProfile profile);
 }
 
 abstract interface class PolicyStore {
@@ -19,7 +22,7 @@ abstract interface class PolicyStore {
 }
 
 class MemorySettingsStore implements SettingsStore {
-  MemorySettingsStore({this.languageCode, this.disclaimerAccepted = false});
+  MemorySettingsStore({this.languageCode, this.disclaimerAccepted = false, this.agentProfile = const AgentProfile()});
 
   @override
   String? languageCode;
@@ -30,6 +33,10 @@ class MemorySettingsStore implements SettingsStore {
   Future<void> setLanguageCode(String? code) async => languageCode = code;
   @override
   Future<void> acceptDisclaimer() async => disclaimerAccepted = true;
+  @override
+  AgentProfile agentProfile;
+  @override
+  Future<void> setAgentProfile(AgentProfile profile) async => agentProfile = profile;
 }
 
 class MemoryPolicyStore implements PolicyStore {
@@ -56,6 +63,13 @@ class HiveSettingsStore implements SettingsStore {
   bool get disclaimerAccepted => _box.get('disclaimerAccepted', defaultValue: false) as bool;
   @override
   Future<void> acceptDisclaimer() => _box.put('disclaimerAccepted', true);
+  @override
+  AgentProfile get agentProfile => switch (_box.get('agentProfile')) {
+        final Map<dynamic, dynamic> m => AgentProfile.fromJson(m),
+        _ => const AgentProfile(),
+      };
+  @override
+  Future<void> setAgentProfile(AgentProfile profile) => _box.put('agentProfile', profile.toJson());
 }
 
 /// Policies stored as JSON strings keyed by id, so no generated adapters
@@ -78,3 +92,15 @@ class HivePolicyStore implements PolicyStore {
 /// Overridden in main() with Hive-backed stores; in-memory by default.
 final settingsStoreProvider = Provider<SettingsStore>((ref) => MemorySettingsStore());
 final policyStoreProvider = Provider<PolicyStore>((ref) => MemoryPolicyStore());
+
+class AgentProfileNotifier extends Notifier<AgentProfile> {
+  @override
+  AgentProfile build() => ref.read(settingsStoreProvider).agentProfile;
+
+  Future<void> save(AgentProfile p) async {
+    await ref.read(settingsStoreProvider).setAgentProfile(p);
+    state = p;
+  }
+}
+
+final agentProfileProvider = NotifierProvider<AgentProfileNotifier, AgentProfile>(AgentProfileNotifier.new);

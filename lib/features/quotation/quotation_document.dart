@@ -3,9 +3,11 @@ import 'package:pli_engine/pli_engine.dart';
 
 import '../../core/formatters.dart';
 import '../../core/theme.dart';
+import '../../data/agent_profile.dart';
 import '../../l10n/app_localizations.dart';
 import '../common/plan_config_form.dart';
 import '../common/plan_evaluation.dart';
+import '../profile/profile_screen.dart' show AgentAvatar;
 
 /// Printable quotation. Labels are bilingual (app language + English) when
 /// the app language is not English. Always drawn light, for printing.
@@ -17,6 +19,7 @@ class QuotationDocument extends StatelessWidget {
     required this.agentName,
     required this.preparedOn,
     required this.financialYear,
+    this.agent = const AgentProfile(),
   });
 
   final PlanEvaluation evaluation;
@@ -24,6 +27,7 @@ class QuotationDocument extends StatelessWidget {
   final String agentName;
   final DateTime preparedOn;
   final String financialYear;
+  final AgentProfile agent;
 
   @override
   Widget build(BuildContext context) {
@@ -80,6 +84,39 @@ class QuotationDocument extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              if (!agent.isEmpty)
+                Container(
+                  margin: const EdgeInsets.only(bottom: 12),
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: kAccentRed.withValues(alpha: 0.06),
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(color: kAccentRed.withValues(alpha: 0.2)),
+                  ),
+                  child: Row(
+                    children: [
+                      AgentAvatar(profile: agent, radius: 26),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            if (agent.name.isNotEmpty) Text(agent.name, style: head.copyWith(fontSize: 15)),
+                            if (agent.phone.isNotEmpty)
+                              Row(
+                                children: [
+                                  const Icon(Icons.phone_rounded, size: 13, color: ink),
+                                  const SizedBox(width: 4),
+                                  Text(agent.phone),
+                                ],
+                              ),
+                            if (agent.code.isNotEmpty) Text(agent.code),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               Text(bi((l) => l.appTitle), style: head.copyWith(fontSize: 18, color: kAccentRed)),
               Text(bi((l) => l.quotationHeading), style: head.copyWith(fontSize: 15)),
               const SizedBox(height: 6),

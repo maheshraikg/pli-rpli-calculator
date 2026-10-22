@@ -1221,4 +1221,97 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get doc_indemnity => 'ਹਰਜਾਨਾ ਬਾਂਡ (ਮੰਗਣ ਉੱਤੇ)';
+
+  @override
+  String get customerPhoneLabel => 'ਗਾਹਕ ਦਾ ਮੋਬਾਈਲ (ਵਟਸਐਪ ਯਾਦ-ਦਹਾਨੀ ਲਈ)';
+
+  @override
+  String get exportBackup => 'ਪਾਲਿਸੀਆਂ ਦਾ ਬੈਕਅੱਪ';
+
+  @override
+  String get importBackup => 'ਬੈਕਅੱਪ ਤੋਂ ਮੁੜ-ਬਹਾਲ ਕਰੋ';
+
+  @override
+  String importConfirm(int count) {
+    return 'ਇਸ ਬੈਕਅੱਪ ਤੋਂ $count ਪਾਲਿਸੀਆਂ ਮੁੜ-ਬਹਾਲ ਕਰਨੀਆਂ ਹਨ? ਇੱਕੋ ID ਵਾਲੀਆਂ ਸੰਭਾਲੀਆਂ ਪਾਲਿਸੀਆਂ ਬਦਲ ਜਾਣਗੀਆਂ।';
+  }
+
+  @override
+  String importDone(int count) {
+    return '$count ਪਾਲਿਸੀਆਂ ਮੁੜ-ਬਹਾਲ ਹੋਈਆਂ।';
+  }
+
+  @override
+  String get importFailed => 'ਇਹ PLI & RPLI ਕੈਲਕੁਲੇਟਰ ਬੈਕਅੱਪ ਫ਼ਾਈਲ ਨਹੀਂ ਹੈ।';
+
+  @override
+  String get backupNote =>
+      'ਬੈਕਅੱਪ ਫ਼ਾਈਲ ਵਿੱਚ ਤੁਹਾਡੀ ਪਾਲਿਸੀ ਦੇ ਵੇਰਵੇ ਹਨ। ਇਸ ਨੂੰ ਆਪਣੀ ਵਟਸਐਪ ਚੈਟ ਜਾਂ ਗੂਗਲ ਡਰਾਈਵ ਵਰਗੀ ਸੁਰੱਖਿਅਤ ਥਾਂ ਰੱਖੋ।';
+
+  @override
+  String get restore => 'ਮੁੜ-ਬਹਾਲ ਕਰੋ';
+
+  @override
+  String get tileDues => 'ਬਕਾਇਆ';
+
+  @override
+  String get descDues => 'ਇਸ ਮਹੀਨੇ ਬਕਾਇਆ ਪ੍ਰੀਮੀਅਮ';
+
+  @override
+  String get duesTitle => 'ਪ੍ਰੀਮੀਅਮ ਬਕਾਇਆ';
+
+  @override
+  String get duesTotal => 'ਕੁੱਲ ਬਕਾਇਆ';
+
+  @override
+  String duesCount(int count) {
+    return '$count ਪ੍ਰੀਮੀਅਮ';
+  }
+
+  @override
+  String get noDuesInMonth => 'ਇਸ ਮਹੀਨੇ ਕੋਈ ਪ੍ਰੀਮੀਅਮ ਬਕਾਇਆ ਨਹੀਂ।';
+
+  @override
+  String get remindOnWhatsApp => 'ਯਾਦ ਕਰਾਓ';
+
+  @override
+  String dueReminderMessage(
+    String name,
+    String amount,
+    String number,
+    String date,
+  ) {
+    return 'ਪਿਆਰੇ $name, ਪਾਲਿਸੀ $number ਦਾ $amount ਪ੍ਰੀਮੀਅਮ $date ਨੂੰ ਬਕਾਇਆ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਡਾਕਘਰ ਵਿੱਚ ਭਰੋ।';
+  }
+
+  @override
+  String get tileProfile => 'ਏਜੰਟ ਪ੍ਰੋਫ਼ਾਈਲ';
+
+  @override
+  String get descProfile => 'ਕੋਟੇਸ਼ਨ ਉੱਤੇ ਤੁਹਾਡਾ ਨਾਮ ਅਤੇ ਲੋਗੋ';
+
+  @override
+  String get profileTitle => 'ਏਜੰਟ ਪ੍ਰੋਫ਼ਾਈਲ';
+
+  @override
+  String get agentNameField => 'ਤੁਹਾਡਾ ਨਾਮ';
+
+  @override
+  String get agentPhoneField => 'ਤੁਹਾਡਾ ਫ਼ੋਨ';
+
+  @override
+  String get agentCodeField => 'ਏਜੰਟ ID / ਦਫ਼ਤਰ (ਵਿਕਲਪਿਕ)';
+
+  @override
+  String get chooseLogo => 'ਫ਼ੋਟੋ ਜਾਂ ਲੋਗੋ ਚੁਣੋ';
+
+  @override
+  String get removeLogo => 'ਹਟਾਓ';
+
+  @override
+  String get profileNote =>
+      'ਕੋਟੇਸ਼ਨ ਅਤੇ ਯਾਦ-ਦਹਾਨੀ ਸੁਨੇਹਿਆਂ ਵਿੱਚ ਦਿਖੇਗਾ। ਸਿਰਫ਼ ਇਸ ਫ਼ੋਨ ਉੱਤੇ ਸੰਭਾਲਿਆ।';
+
+  @override
+  String get profileSaved => 'ਪ੍ਰੋਫ਼ਾਈਲ ਸੰਭਾਲਿਆ ਗਿਆ।';
 }

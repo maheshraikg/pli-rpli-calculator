@@ -1225,4 +1225,97 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get doc_indemnity => 'ক্ষতিপূৰণ বণ্ড (বিচাৰিলে)';
+
+  @override
+  String get customerPhoneLabel => 'গ্ৰাহকৰ মোবাইল (হোৱাটছএপ সোঁৱৰণীৰ বাবে)';
+
+  @override
+  String get exportBackup => 'পলিচিৰ বেকআপ';
+
+  @override
+  String get importBackup => 'বেকআপৰ পৰা পুনৰুদ্ধাৰ';
+
+  @override
+  String importConfirm(int count) {
+    return 'এই বেকআপৰ পৰা $countখন পলিচি পুনৰুদ্ধাৰ কৰিবনে? একে ID থকা সংৰক্ষিত পলিচি সলনি হ\'ব।';
+  }
+
+  @override
+  String importDone(int count) {
+    return '$countখন পলিচি পুনৰুদ্ধাৰ হ\'ল।';
+  }
+
+  @override
+  String get importFailed => 'এইটো PLI & RPLI কেলকুলেটৰৰ বেকআপ ফাইল নহয়।';
+
+  @override
+  String get backupNote =>
+      'বেকআপ ফাইলত আপোনাৰ পলিচিৰ বিৱৰণ আছে। নিজৰ হোৱাটছএপ চেট বা গুগল ড্ৰাইভৰ দৰে সুৰক্ষিত ঠাইত ৰাখক।';
+
+  @override
+  String get restore => 'পুনৰুদ্ধাৰ';
+
+  @override
+  String get tileDues => 'বাকী';
+
+  @override
+  String get descDues => 'এই মাহৰ বাকী প্ৰিমিয়াম';
+
+  @override
+  String get duesTitle => 'প্ৰিমিয়াম বাকী';
+
+  @override
+  String get duesTotal => 'মুঠ বাকী';
+
+  @override
+  String duesCount(int count) {
+    return '$countটা প্ৰিমিয়াম';
+  }
+
+  @override
+  String get noDuesInMonth => 'এই মাহত কোনো প্ৰিমিয়াম বাকী নাই।';
+
+  @override
+  String get remindOnWhatsApp => 'সোঁৱৰাই দিয়ক';
+
+  @override
+  String dueReminderMessage(
+    String name,
+    String amount,
+    String number,
+    String date,
+  ) {
+    return 'মৰমৰ $name, পলিচি $numberৰ $amount প্ৰিমিয়াম $dateত দিবলগীয়া। অনুগ্ৰহ কৰি আপোনাৰ ডাকঘৰত দিয়ক।';
+  }
+
+  @override
+  String get tileProfile => 'এজেণ্ট প্ৰফাইল';
+
+  @override
+  String get descProfile => 'কোটেশ্বনত আপোনাৰ নাম আৰু লোগো';
+
+  @override
+  String get profileTitle => 'এজেণ্ট প্ৰফাইল';
+
+  @override
+  String get agentNameField => 'আপোনাৰ নাম';
+
+  @override
+  String get agentPhoneField => 'আপোনাৰ ফোন';
+
+  @override
+  String get agentCodeField => 'এজেণ্ট ID / কাৰ্যালয় (ঐচ্ছিক)';
+
+  @override
+  String get chooseLogo => 'ফটো বা লোগো বাছক';
+
+  @override
+  String get removeLogo => 'আঁতৰাওক';
+
+  @override
+  String get profileNote =>
+      'কোটেশ্বন আৰু সোঁৱৰণী বাৰ্তাত দেখুওৱা হ\'ব। কেৱল এই ফোনতে সংৰক্ষিত।';
+
+  @override
+  String get profileSaved => 'প্ৰফাইল সংৰক্ষিত হ\'ল।';
 }

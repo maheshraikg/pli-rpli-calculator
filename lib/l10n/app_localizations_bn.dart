@@ -1224,4 +1224,98 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get doc_indemnity => 'ক্ষতিপূরণ বন্ড (চাইলে)';
+
+  @override
+  String get customerPhoneLabel =>
+      'গ্রাহকের মোবাইল (হোয়াটসঅ্যাপ রিমাইন্ডারের জন্য)';
+
+  @override
+  String get exportBackup => 'পলিসির ব্যাকআপ';
+
+  @override
+  String get importBackup => 'ব্যাকআপ থেকে পুনরুদ্ধার';
+
+  @override
+  String importConfirm(int count) {
+    return 'এই ব্যাকআপ থেকে $countটি পলিসি পুনরুদ্ধার করবেন? একই ID-র সংরক্ষিত পলিসি বদলে যাবে।';
+  }
+
+  @override
+  String importDone(int count) {
+    return '$countটি পলিসি পুনরুদ্ধার হয়েছে।';
+  }
+
+  @override
+  String get importFailed => 'এটি PLI & RPLI ক্যালকুলেটরের ব্যাকআপ ফাইল নয়।';
+
+  @override
+  String get backupNote =>
+      'ব্যাকআপ ফাইলে আপনার পলিসির বিবরণ আছে। নিজের হোয়াটসঅ্যাপ চ্যাট বা গুগল ড্রাইভের মতো নিরাপদ জায়গায় রাখুন।';
+
+  @override
+  String get restore => 'পুনরুদ্ধার';
+
+  @override
+  String get tileDues => 'বকেয়া';
+
+  @override
+  String get descDues => 'এই মাসের বকেয়া প্রিমিয়াম';
+
+  @override
+  String get duesTitle => 'প্রিমিয়াম বকেয়া';
+
+  @override
+  String get duesTotal => 'মোট বকেয়া';
+
+  @override
+  String duesCount(int count) {
+    return '$countটি প্রিমিয়াম';
+  }
+
+  @override
+  String get noDuesInMonth => 'এই মাসে কোনো প্রিমিয়াম বকেয়া নেই।';
+
+  @override
+  String get remindOnWhatsApp => 'মনে করান';
+
+  @override
+  String dueReminderMessage(
+    String name,
+    String amount,
+    String number,
+    String date,
+  ) {
+    return 'প্রিয় $name, পলিসি $number-এর $amount প্রিমিয়াম $date তারিখে দেয়। অনুগ্রহ করে আপনার ডাকঘরে জমা দিন।';
+  }
+
+  @override
+  String get tileProfile => 'এজেন্ট প্রোফাইল';
+
+  @override
+  String get descProfile => 'কোটেশনে আপনার নাম ও লোগো';
+
+  @override
+  String get profileTitle => 'এজেন্ট প্রোফাইল';
+
+  @override
+  String get agentNameField => 'আপনার নাম';
+
+  @override
+  String get agentPhoneField => 'আপনার ফোন';
+
+  @override
+  String get agentCodeField => 'এজেন্ট ID / অফিস (ঐচ্ছিক)';
+
+  @override
+  String get chooseLogo => 'ছবি বা লোগো বাছুন';
+
+  @override
+  String get removeLogo => 'সরান';
+
+  @override
+  String get profileNote =>
+      'কোটেশন ও রিমাইন্ডার বার্তায় দেখানো হবে। শুধু এই ফোনে সংরক্ষিত।';
+
+  @override
+  String get profileSaved => 'প্রোফাইল সংরক্ষিত।';
 }

@@ -1252,4 +1252,103 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get doc_indemnity => 'Indemnity bond (if asked)';
+
+  @override
+  String get customerPhoneLabel => 'Customer mobile (for WhatsApp reminders)';
+
+  @override
+  String get exportBackup => 'Back up policies';
+
+  @override
+  String get importBackup => 'Restore from backup';
+
+  @override
+  String importConfirm(int count) {
+    return 'Restore $count policies from this backup? Policies already saved with the same ID are replaced.';
+  }
+
+  @override
+  String importDone(int count) {
+    return '$count policies restored.';
+  }
+
+  @override
+  String get importFailed => 'This file is not a PLI & RPLI Calculator backup.';
+
+  @override
+  String get backupNote =>
+      'The backup file contains your policy details. Keep it somewhere safe, such as your own WhatsApp chat or Google Drive.';
+
+  @override
+  String get restore => 'Restore';
+
+  @override
+  String get tileDues => 'Dues';
+
+  @override
+  String get descDues => 'Premiums due this month';
+
+  @override
+  String get duesTitle => 'Premium dues';
+
+  @override
+  String get duesTotal => 'Total due';
+
+  @override
+  String duesCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count premiums',
+      one: '1 premium',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get noDuesInMonth => 'No premiums fall due in this month.';
+
+  @override
+  String get remindOnWhatsApp => 'Remind';
+
+  @override
+  String dueReminderMessage(
+    String name,
+    String amount,
+    String number,
+    String date,
+  ) {
+    return 'Dear $name, your premium of $amount for policy $number is due on $date. Please pay at your Post Office.';
+  }
+
+  @override
+  String get tileProfile => 'Agent profile';
+
+  @override
+  String get descProfile => 'Your name and logo on quotations';
+
+  @override
+  String get profileTitle => 'Agent profile';
+
+  @override
+  String get agentNameField => 'Your name';
+
+  @override
+  String get agentPhoneField => 'Your phone';
+
+  @override
+  String get agentCodeField => 'Agent ID / office (optional)';
+
+  @override
+  String get chooseLogo => 'Choose photo or logo';
+
+  @override
+  String get removeLogo => 'Remove';
+
+  @override
+  String get profileNote =>
+      'Shown on quotations and reminder messages. Stored only on this phone.';
+
+  @override
+  String get profileSaved => 'Profile saved.';
 }

@@ -1235,4 +1235,99 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get doc_indemnity => 'இழப்பீட்டுப் பத்திரம் (கேட்டால்)';
+
+  @override
+  String get customerPhoneLabel =>
+      'வாடிக்கையாளர் மொபைல் (வாட்ஸ்அப் நினைவூட்டலுக்கு)';
+
+  @override
+  String get exportBackup => 'பாலிசிகளின் காப்புப்பிரதி';
+
+  @override
+  String get importBackup => 'காப்புப்பிரதியிலிருந்து மீட்டமை';
+
+  @override
+  String importConfirm(int count) {
+    return 'இந்தக் காப்புப்பிரதியிலிருந்து $count பாலிசிகளை மீட்டமைக்கவா? அதே ID கொண்ட சேமித்த பாலிசிகள் மாற்றப்படும்.';
+  }
+
+  @override
+  String importDone(int count) {
+    return '$count பாலிசிகள் மீட்டமைக்கப்பட்டன.';
+  }
+
+  @override
+  String get importFailed =>
+      'இது PLI & RPLI கணிப்பான் காப்புப்பிரதி கோப்பு அல்ல.';
+
+  @override
+  String get backupNote =>
+      'காப்புப்பிரதி கோப்பில் உங்கள் பாலிசி விவரங்கள் உள்ளன. உங்கள் சொந்த வாட்ஸ்அப் உரையாடல் அல்லது கூகுள் டிரைவ் போன்ற பாதுகாப்பான இடத்தில் வைக்கவும்.';
+
+  @override
+  String get restore => 'மீட்டமை';
+
+  @override
+  String get tileDues => 'நிலுவைகள்';
+
+  @override
+  String get descDues => 'இந்த மாத நிலுவை பிரீமியங்கள்';
+
+  @override
+  String get duesTitle => 'பிரீமியம் நிலுவைகள்';
+
+  @override
+  String get duesTotal => 'மொத்த நிலுவை';
+
+  @override
+  String duesCount(int count) {
+    return '$count பிரீமியங்கள்';
+  }
+
+  @override
+  String get noDuesInMonth => 'இந்த மாதம் எந்தப் பிரீமியமும் நிலுவையில் இல்லை.';
+
+  @override
+  String get remindOnWhatsApp => 'நினைவூட்டு';
+
+  @override
+  String dueReminderMessage(
+    String name,
+    String amount,
+    String number,
+    String date,
+  ) {
+    return 'அன்புள்ள $name, பாலிசி $number-இன் $amount பிரீமியம் $date அன்று செலுத்த வேண்டும். உங்கள் அஞ்சலகத்தில் செலுத்தவும்.';
+  }
+
+  @override
+  String get tileProfile => 'முகவர் சுயவிவரம்';
+
+  @override
+  String get descProfile => 'விலைப்புள்ளியில் உங்கள் பெயர் மற்றும் லோகோ';
+
+  @override
+  String get profileTitle => 'முகவர் சுயவிவரம்';
+
+  @override
+  String get agentNameField => 'உங்கள் பெயர்';
+
+  @override
+  String get agentPhoneField => 'உங்கள் தொலைபேசி';
+
+  @override
+  String get agentCodeField => 'முகவர் ID / அலுவலகம் (விருப்பம்)';
+
+  @override
+  String get chooseLogo => 'புகைப்படம் அல்லது லோகோ தேர்வு';
+
+  @override
+  String get removeLogo => 'நீக்கு';
+
+  @override
+  String get profileNote =>
+      'விலைப்புள்ளிகள் மற்றும் நினைவூட்டல் செய்திகளில் காட்டப்படும். இந்தத் தொலைபேசியில் மட்டும் சேமிக்கப்படும்.';
+
+  @override
+  String get profileSaved => 'சுயவிவரம் சேமிக்கப்பட்டது.';
 }

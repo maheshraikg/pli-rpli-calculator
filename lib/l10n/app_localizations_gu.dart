@@ -1221,4 +1221,97 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get doc_indemnity => 'ક્ષતિપૂર્તિ બોન્ડ (માગે તો)';
+
+  @override
+  String get customerPhoneLabel => 'ગ્રાહકનો મોબાઇલ (વૉટ્સએપ યાદી માટે)';
+
+  @override
+  String get exportBackup => 'પૉલિસીઓનો બેકઅપ';
+
+  @override
+  String get importBackup => 'બેકઅપમાંથી પુનઃસ્થાપિત કરો';
+
+  @override
+  String importConfirm(int count) {
+    return 'આ બેકઅપમાંથી $count પૉલિસીઓ પુનઃસ્થાપિત કરવી? સમાન ID વાળી સાચવેલી પૉલિસીઓ બદલાશે.';
+  }
+
+  @override
+  String importDone(int count) {
+    return '$count પૉલિસીઓ પુનઃસ્થાપિત થઈ.';
+  }
+
+  @override
+  String get importFailed => 'આ PLI & RPLI કેલ્ક્યુલેટર બેકઅપ ફાઇલ નથી.';
+
+  @override
+  String get backupNote =>
+      'બેકઅપ ફાઇલમાં તમારી પૉલિસીની વિગતો છે. તેને તમારી વૉટ્સએપ ચૅટ કે ગૂગલ ડ્રાઇવ જેવી સુરક્ષિત જગ્યાએ રાખો.';
+
+  @override
+  String get restore => 'પુનઃસ્થાપિત કરો';
+
+  @override
+  String get tileDues => 'બાકી';
+
+  @override
+  String get descDues => 'આ મહિને બાકી પ્રીમિયમ';
+
+  @override
+  String get duesTitle => 'પ્રીમિયમ બાકી';
+
+  @override
+  String get duesTotal => 'કુલ બાકી';
+
+  @override
+  String duesCount(int count) {
+    return '$count પ્રીમિયમ';
+  }
+
+  @override
+  String get noDuesInMonth => 'આ મહિને કોઈ પ્રીમિયમ બાકી નથી.';
+
+  @override
+  String get remindOnWhatsApp => 'યાદ અપાવો';
+
+  @override
+  String dueReminderMessage(
+    String name,
+    String amount,
+    String number,
+    String date,
+  ) {
+    return 'પ્રિય $name, પૉલિસી $number નું $amount પ્રીમિયમ $date ના રોજ બાકી છે. કૃપા કરી તમારી ટપાલ કચેરીમાં ભરો.';
+  }
+
+  @override
+  String get tileProfile => 'એજન્ટ પ્રોફાઇલ';
+
+  @override
+  String get descProfile => 'ક્વોટેશન પર તમારું નામ અને લોગો';
+
+  @override
+  String get profileTitle => 'એજન્ટ પ્રોફાઇલ';
+
+  @override
+  String get agentNameField => 'તમારું નામ';
+
+  @override
+  String get agentPhoneField => 'તમારો ફોન';
+
+  @override
+  String get agentCodeField => 'એજન્ટ ID / કચેરી (વૈકલ્પિક)';
+
+  @override
+  String get chooseLogo => 'ફોટો કે લોગો પસંદ કરો';
+
+  @override
+  String get removeLogo => 'દૂર કરો';
+
+  @override
+  String get profileNote =>
+      'ક્વોટેશન અને યાદી સંદેશાઓમાં દેખાશે. ફક્ત આ ફોન પર સાચવેલ.';
+
+  @override
+  String get profileSaved => 'પ્રોફાઇલ સાચવી.';
 }

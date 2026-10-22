@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pli_engine/pli_engine.dart';
+import 'package:pli_sahayak/data/agent_profile.dart';
 import 'package:pli_sahayak/data/saved_policy.dart';
 import 'package:pli_sahayak/data/storage.dart';
 import 'package:pli_sahayak/features/common/plan_config.dart';
@@ -170,5 +171,38 @@ void main() {
     addTearDown(tester.platformDispatcher.clearAllTestValues);
     await pumpApp(tester);
     await _shot(tester, '17_large_text_home');
+  });
+
+  testWidgets('18 dues', (tester) async {
+    final store = MemoryPolicyStore();
+    final names = ['Lakshmi Devi', 'Ravi Kumar', 'Shabnam Begum', 'Manjunath Gowda'];
+    for (final (i, n) in names.indexed) {
+      await store.put(SavedPolicy(
+        id: '$i', holderName: n, policyNumber: 'PLI-KA-10${i}234', planId: 'pli_santosh', sumAssured: 100000 * (i + 1),
+        commencement: DateTime(2024, 1 + i * 2, 4 + i * 6), entryAge: 30, column: 58, frequency: PremiumFrequency.monthly,
+        premiumRupees: 450 * (i + 1), reminders: true, phone: i.isEven ? '98450 0000$i' : '',
+      ));
+    }
+    await pumpApp(tester, location: '/dues', policies: store);
+    await _shot(tester, '18_dues');
+  });
+
+  testWidgets('19 agent quotation', (tester) async {
+    final settings = MemorySettingsStore(
+      disclaimerAccepted: true,
+      agentProfile: const AgentProfile(name: 'Suresh Kumar', phone: '94480 11111', code: 'PLI Agent • Mysuru HO'),
+    );
+    await pumpApp(tester, location: '/quotation', settings: settings);
+    await tester.enterText(find.widgetWithText(TextField, 'Customer name'), 'Ravi Kumar');
+    await _shot(tester, '19_quotation_agent_full', height: 6600);
+  });
+
+  testWidgets('20 profile', (tester) async {
+    final settings = MemorySettingsStore(
+      disclaimerAccepted: true,
+      agentProfile: const AgentProfile(name: 'Suresh Kumar', phone: '94480 11111', code: 'PLI Agent • Mysuru HO'),
+    );
+    await pumpApp(tester, location: '/profile', settings: settings);
+    await _shot(tester, '20_profile');
   });
 }

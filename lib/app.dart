@@ -7,6 +7,7 @@ import 'core/locale.dart';
 import 'core/theme.dart';
 import 'features/about/about_screen.dart';
 import 'features/compare/compare_screen.dart';
+import 'features/dues/dues_screen.dart';
 import 'features/eligibility/eligibility_screen.dart';
 import 'features/forms/forms_screen.dart';
 import 'features/forms/letter_screen.dart';
@@ -17,6 +18,7 @@ import 'features/policies/policies_screen.dart';
 import 'features/policies/policy_detail_screen.dart';
 import 'features/policies/policy_form_screen.dart';
 import 'features/premium/premium_screen.dart';
+import 'features/profile/profile_screen.dart';
 import 'features/quotation/quotation_screen.dart';
 import 'features/reverse/reverse_screen.dart';
 import 'features/tools/tools_screen.dart';
@@ -38,6 +40,8 @@ GoRouter buildRouter({String initialLocation = '/'}) => GoRouter(
         GoRoute(path: 'quotation', builder: (context, state) => const QuotationScreen()),
         GoRoute(path: 'plans', builder: (context, state) => const PlanInfoScreen()),
         GoRoute(path: 'about', builder: (context, state) => const AboutScreen()),
+        GoRoute(path: 'dues', builder: (context, state) => const DuesScreen()),
+        GoRoute(path: 'profile', builder: (context, state) => const ProfileScreen()),
         GoRoute(
           path: 'forms',
           builder: (context, state) => const FormsScreen(),

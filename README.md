@@ -15,7 +15,9 @@ Independent calculator — not an official India Post app.
 - Forms & letters: 12 PLI/RPLI requests with document checklists, a link to India Post's forms,
   a policy details sheet, and request letters (loan, surrender, revival, nomination, address,
   duplicate bond, conversion) filled from a saved policy; official PDFs can be bundled in `assets/forms/`
-- 13 languages; optional verified over-the-air rate updates
+- For agents: monthly dues list with WhatsApp reminders, agent profile (name, phone, logo) on quotations
+- Back up / restore My Policies as a file
+- 13 languages, dark mode and large-text support; optional verified over-the-air rate updates
 
 See `docs/RELEASE.md` before publishing and `docs/PRIVACY_POLICY.md` for the store listing.
 

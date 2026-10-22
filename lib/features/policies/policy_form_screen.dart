@@ -31,6 +31,7 @@ class PolicyFormScreen extends ConsumerStatefulWidget {
 class _PolicyFormScreenState extends ConsumerState<PolicyFormScreen> {
   final _name = TextEditingController();
   final _number = TextEditingController();
+  final _phone = TextEditingController();
   int? _premium;
   bool _reminders = true;
   bool _submitted = false;
@@ -46,6 +47,7 @@ class _PolicyFormScreenState extends ConsumerState<PolicyFormScreen> {
     }
     _name.text = existing.holderName;
     _number.text = existing.policyNumber;
+    _phone.text = existing.phone;
     _premium = existing.premiumRupees;
     _reminders = existing.reminders;
     final scheme = ref.read(appDataProvider).value?.rules.plan(existing.planId).scheme ?? Scheme.pli;
@@ -69,6 +71,7 @@ class _PolicyFormScreenState extends ConsumerState<PolicyFormScreen> {
   void dispose() {
     _name.dispose();
     _number.dispose();
+    _phone.dispose();
     super.dispose();
   }
 
@@ -100,6 +103,12 @@ class _PolicyFormScreenState extends ConsumerState<PolicyFormScreen> {
             PlanConfigForm(configKey: policyFormKey, data: data),
             const SizedBox(height: 16),
             AmountField(label: l.premiumAmountLabel, value: _premium, onChanged: (v) => setState(() => _premium = v)),
+            const SizedBox(height: 16),
+            TextField(
+              controller: _phone,
+              keyboardType: TextInputType.phone,
+              decoration: InputDecoration(labelText: l.customerPhoneLabel, prefixIcon: const Icon(Icons.phone_android_rounded)),
+            ),
             if (_submitted && _premium == null)
               Text(l.requiredField, style: TextStyle(color: Theme.of(context).colorScheme.error)),
             SwitchListTile(
@@ -137,6 +146,7 @@ class _PolicyFormScreenState extends ConsumerState<PolicyFormScreen> {
       frequency: c.frequency,
       premiumRupees: premium,
       reminders: _reminders,
+      phone: _phone.text.trim(),
     );
     final text = reminderText(context);
     final granted = await ref

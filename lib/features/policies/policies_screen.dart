@@ -1,3 +1,6 @@
+import 'dart:convert';
+
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -6,12 +9,15 @@ import 'package:pli_engine/pli_engine.dart';
 import '../../core/formatters.dart';
 import '../../core/widgets/data_scaffold.dart';
 import '../../core/widgets/info_card.dart';
+import '../../data/backup.dart';
 import '../../data/data_repository.dart';
 import '../../data/saved_policy.dart';
 import '../../l10n/app_localizations.dart';
 import '../common/plan_config_form.dart';
 import '../maturity/maturity_state.dart' show todayProvider;
+import '../../services/share_export.dart';
 import 'policies_state.dart';
+import 'policy_detail_screen.dart' show reminderText;
 
 int policyPayingYears(PlanRule plan, SavedPolicy p) =>
     columnDimensionFor(plan) == null ? p.column : payingYears(plan, p.entryAge, p.column);
@@ -27,6 +33,23 @@ class PoliciesScreen extends ConsumerWidget {
     final today = ref.watch(todayProvider);
     return DataScaffold(
       title: l.policiesTitle,
+      actions: [
+        PopupMenuButton<String>(
+          icon: const Icon(Icons.more_vert_rounded),
+          onSelected: (v) => v == 'export' ? _export(context, ref) : _import(context, ref),
+          itemBuilder: (context) => [
+            PopupMenuItem(
+              value: 'export',
+              enabled: policies.isNotEmpty,
+              child: ListTile(leading: const Icon(Icons.backup_rounded), title: Text(l.exportBackup)),
+            ),
+            PopupMenuItem(
+              value: 'import',
+              child: ListTile(leading: const Icon(Icons.restore_rounded), title: Text(l.importBackup)),
+            ),
+          ],
+        ),
+      ],
       floatingActionButton: FloatingActionButton.extended(
         icon: const Icon(Icons.add),
         label: Text(l.addPolicy),
@@ -50,6 +73,46 @@ class PoliciesScreen extends ConsumerWidget {
             ),
     );
   }
+}
+
+Future<void> _export(BuildContext context, WidgetRef ref) async {
+  final l = AppLocalizations.of(context);
+  final today = ref.read(todayProvider);
+  final json = exportPolicies(ref.read(policiesProvider), DateTime.now());
+  final stamp = '${today.year}${today.month.toString().padLeft(2, '0')}${today.day.toString().padLeft(2, '0')}';
+  await shareBytes(utf8.encode(json), fileName: 'pli_policies_backup_$stamp.json', mimeType: 'application/json', text: l.backupNote);
+}
+
+Future<void> _import(BuildContext context, WidgetRef ref) async {
+  final l = AppLocalizations.of(context);
+  final file = await FilePicker.pickFile(type: FileType.custom, allowedExtensions: ['json']);
+  if (file == null || !context.mounted) return;
+  final List<SavedPolicy> policies;
+  try {
+    policies = parseBackup(utf8.decode(await file.readAsBytes()));
+  } on FormatException {
+    if (context.mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(l.importFailed)));
+    return;
+  }
+  if (!context.mounted) return;
+  final ok = await showDialog<bool>(
+    context: context,
+    builder: (context) => AlertDialog(
+      content: Text(l.importConfirm(policies.length)),
+      actions: [
+        TextButton(onPressed: () => Navigator.pop(context, false), child: Text(l.cancel)),
+        FilledButton(onPressed: () => Navigator.pop(context, true), child: Text(l.restore)),
+      ],
+    ),
+  );
+  if (ok != true || !context.mounted) return;
+  final rules = ref.read(appDataProvider).value!.rules;
+  await ref.read(policiesProvider.notifier).restore(
+        policies,
+        payingYears: (p) => policyPayingYears(rules.plan(p.planId), p),
+        text: reminderText(context),
+      );
+  if (context.mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(l.importDone(policies.length))));
 }
 
 class _PolicyTile extends StatelessWidget {

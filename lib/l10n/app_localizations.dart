@@ -2213,6 +2213,167 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Indemnity bond (if asked)'**
   String get doc_indemnity;
+
+  /// No description provided for @customerPhoneLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Customer mobile (for WhatsApp reminders)'**
+  String get customerPhoneLabel;
+
+  /// No description provided for @exportBackup.
+  ///
+  /// In en, this message translates to:
+  /// **'Back up policies'**
+  String get exportBackup;
+
+  /// No description provided for @importBackup.
+  ///
+  /// In en, this message translates to:
+  /// **'Restore from backup'**
+  String get importBackup;
+
+  /// No description provided for @importConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Restore {count} policies from this backup? Policies already saved with the same ID are replaced.'**
+  String importConfirm(int count);
+
+  /// No description provided for @importDone.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} policies restored.'**
+  String importDone(int count);
+
+  /// No description provided for @importFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'This file is not a PLI & RPLI Calculator backup.'**
+  String get importFailed;
+
+  /// No description provided for @backupNote.
+  ///
+  /// In en, this message translates to:
+  /// **'The backup file contains your policy details. Keep it somewhere safe, such as your own WhatsApp chat or Google Drive.'**
+  String get backupNote;
+
+  /// No description provided for @restore.
+  ///
+  /// In en, this message translates to:
+  /// **'Restore'**
+  String get restore;
+
+  /// No description provided for @tileDues.
+  ///
+  /// In en, this message translates to:
+  /// **'Dues'**
+  String get tileDues;
+
+  /// No description provided for @descDues.
+  ///
+  /// In en, this message translates to:
+  /// **'Premiums due this month'**
+  String get descDues;
+
+  /// No description provided for @duesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Premium dues'**
+  String get duesTitle;
+
+  /// No description provided for @duesTotal.
+  ///
+  /// In en, this message translates to:
+  /// **'Total due'**
+  String get duesTotal;
+
+  /// No description provided for @duesCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 premium} other{{count} premiums}}'**
+  String duesCount(int count);
+
+  /// No description provided for @noDuesInMonth.
+  ///
+  /// In en, this message translates to:
+  /// **'No premiums fall due in this month.'**
+  String get noDuesInMonth;
+
+  /// No description provided for @remindOnWhatsApp.
+  ///
+  /// In en, this message translates to:
+  /// **'Remind'**
+  String get remindOnWhatsApp;
+
+  /// No description provided for @dueReminderMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Dear {name}, your premium of {amount} for policy {number} is due on {date}. Please pay at your Post Office.'**
+  String dueReminderMessage(
+    String name,
+    String amount,
+    String number,
+    String date,
+  );
+
+  /// No description provided for @tileProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Agent profile'**
+  String get tileProfile;
+
+  /// No description provided for @descProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Your name and logo on quotations'**
+  String get descProfile;
+
+  /// No description provided for @profileTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Agent profile'**
+  String get profileTitle;
+
+  /// No description provided for @agentNameField.
+  ///
+  /// In en, this message translates to:
+  /// **'Your name'**
+  String get agentNameField;
+
+  /// No description provided for @agentPhoneField.
+  ///
+  /// In en, this message translates to:
+  /// **'Your phone'**
+  String get agentPhoneField;
+
+  /// No description provided for @agentCodeField.
+  ///
+  /// In en, this message translates to:
+  /// **'Agent ID / office (optional)'**
+  String get agentCodeField;
+
+  /// No description provided for @chooseLogo.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose photo or logo'**
+  String get chooseLogo;
+
+  /// No description provided for @removeLogo.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove'**
+  String get removeLogo;
+
+  /// No description provided for @profileNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Shown on quotations and reminder messages. Stored only on this phone.'**
+  String get profileNote;
+
+  /// No description provided for @profileSaved.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile saved.'**
+  String get profileSaved;
 }
 
 class _AppLocalizationsDelegate

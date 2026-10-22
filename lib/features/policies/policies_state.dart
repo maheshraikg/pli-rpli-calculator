@@ -61,6 +61,14 @@ class PoliciesNotifier extends Notifier<List<SavedPolicy>> {
     return granted;
   }
 
+  /// Restores policies from a backup, replacing any with the same id, and
+  /// reschedules their reminders.
+  Future<void> restore(List<SavedPolicy> policies, {required int Function(SavedPolicy) payingYears, required ReminderText text}) async {
+    for (final p in policies) {
+      await save(p, payingYears: payingYears(p), text: text);
+    }
+  }
+
   Future<void> delete(SavedPolicy policy) async {
     await ref.read(reminderServiceProvider).cancel(reminderIds(policy));
     await ref.read(policyStoreProvider).delete(policy.id);

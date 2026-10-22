@@ -1223,4 +1223,97 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get doc_indemnity => 'ضمانتی بانڈ (طلب کرنے پر)';
+
+  @override
+  String get customerPhoneLabel => 'گاہک کا موبائل (واٹس ایپ یاد دہانی کے لیے)';
+
+  @override
+  String get exportBackup => 'پالیسیوں کا بیک اپ';
+
+  @override
+  String get importBackup => 'بیک اپ سے بحال کریں';
+
+  @override
+  String importConfirm(int count) {
+    return 'اس بیک اپ سے $count پالیسیاں بحال کریں؟ ایک جیسی ID والی محفوظ پالیسیاں بدل دی جائیں گی۔';
+  }
+
+  @override
+  String importDone(int count) {
+    return '$count پالیسیاں بحال ہو گئیں۔';
+  }
+
+  @override
+  String get importFailed => 'یہ PLI & RPLI کیلکولیٹر کی بیک اپ فائل نہیں ہے۔';
+
+  @override
+  String get backupNote =>
+      'بیک اپ فائل میں آپ کی پالیسی کی تفصیلات ہیں۔ اسے اپنی واٹس ایپ چیٹ یا گوگل ڈرائیو جیسی محفوظ جگہ رکھیں۔';
+
+  @override
+  String get restore => 'بحال کریں';
+
+  @override
+  String get tileDues => 'واجبات';
+
+  @override
+  String get descDues => 'اس مہینے کے واجب پریمیم';
+
+  @override
+  String get duesTitle => 'پریمیم واجبات';
+
+  @override
+  String get duesTotal => 'کل واجب';
+
+  @override
+  String duesCount(int count) {
+    return '$count پریمیم';
+  }
+
+  @override
+  String get noDuesInMonth => 'اس مہینے کوئی پریمیم واجب نہیں۔';
+
+  @override
+  String get remindOnWhatsApp => 'یاد دلائیں';
+
+  @override
+  String dueReminderMessage(
+    String name,
+    String amount,
+    String number,
+    String date,
+  ) {
+    return 'محترم $name، پالیسی $number کا $amount پریمیم $date کو واجب ہے۔ براہ کرم اپنے ڈاک خانے میں ادا کریں۔';
+  }
+
+  @override
+  String get tileProfile => 'ایجنٹ پروفائل';
+
+  @override
+  String get descProfile => 'کوٹیشن پر آپ کا نام اور لوگو';
+
+  @override
+  String get profileTitle => 'ایجنٹ پروفائل';
+
+  @override
+  String get agentNameField => 'آپ کا نام';
+
+  @override
+  String get agentPhoneField => 'آپ کا فون';
+
+  @override
+  String get agentCodeField => 'ایجنٹ ID / دفتر (اختیاری)';
+
+  @override
+  String get chooseLogo => 'تصویر یا لوگو منتخب کریں';
+
+  @override
+  String get removeLogo => 'ہٹائیں';
+
+  @override
+  String get profileNote =>
+      'کوٹیشن اور یاد دہانی پیغامات میں دکھایا جائے گا۔ صرف اسی فون پر محفوظ۔';
+
+  @override
+  String get profileSaved => 'پروفائل محفوظ ہو گیا۔';
 }

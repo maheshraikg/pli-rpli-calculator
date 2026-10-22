@@ -67,9 +67,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         l.sectionServicing,
         [
           (Icons.folder_shared_rounded, l.tileMyPolicies, l.descPolicies, '/policies', _purple),
+        (Icons.event_note_rounded, l.tileDues, l.descDues, '/dues', _teal),
           (Icons.build_circle_rounded, l.tileTools, l.descTools, '/tools', _amber),
           (Icons.picture_as_pdf_rounded, l.tileQuotation, l.descQuotation, '/quotation', kAccentRed),
           (Icons.assignment_rounded, l.tileForms, l.descForms, '/forms', _indigo),
+        (Icons.badge_rounded, l.tileProfile, l.descProfile, '/profile', _green),
         ],
       ),
       (

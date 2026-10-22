@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/widgets/data_scaffold.dart';
 import '../../core/widgets/info_card.dart';
 import '../../core/widgets/ui.dart';
+import '../../data/storage.dart';
 import '../../l10n/app_localizations.dart';
 import '../../services/share_export.dart';
 import '../common/plan_config_form.dart';
@@ -22,7 +23,7 @@ class QuotationScreen extends ConsumerStatefulWidget {
 
 class _QuotationScreenState extends ConsumerState<QuotationScreen> {
   final _customer = TextEditingController();
-  final _agent = TextEditingController();
+  late final _agent = TextEditingController(text: ref.read(agentProfileProvider).name);
   final _docKey = GlobalKey();
   bool _busy = false;
 
@@ -130,6 +131,7 @@ class _QuotationScreenState extends ConsumerState<QuotationScreen> {
                       agentName: _agent.text.trim(),
                       preparedOn: ref.watch(todayProvider),
                       financialYear: data.rules.financialYear,
+                      agent: ref.watch(agentProfileProvider),
                     ),
                   ),
                 ),

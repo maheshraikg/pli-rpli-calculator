@@ -26,6 +26,8 @@ const _routes = [
   '/forms/sheet',
   '/plans',
   '/about',
+  '/dues',
+  '/profile',
 ];
 
 PolicyStore _store() => MemoryPolicyStore()

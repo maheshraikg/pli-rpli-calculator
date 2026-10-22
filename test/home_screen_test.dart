@@ -49,6 +49,9 @@ void main() {
       ('About', 'About'),
       ('My Policies', 'My Policies'),
       ('Quotation', 'Quotation'),
+      ('Dues', 'Premium dues'),
+      ('Forms', 'Forms and letters'),
+      ('Agent profile', 'Agent profile'),
     ]) {
       await pumpApp(tester, key: ValueKey(tile));
       await scrollTo(tester, find.widgetWithText(InkWell, tile));

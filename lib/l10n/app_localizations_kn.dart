@@ -1225,4 +1225,97 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get doc_indemnity => 'ನಷ್ಟಪರಿಹಾರ ಬಾಂಡ್ (ಕೇಳಿದರೆ)';
+
+  @override
+  String get customerPhoneLabel => 'ಗ್ರಾಹಕರ ಮೊಬೈಲ್ (ವಾಟ್ಸ್‌ಆ್ಯಪ್ ನೆನಪಿಗಾಗಿ)';
+
+  @override
+  String get exportBackup => 'ಪಾಲಿಸಿಗಳ ಬ್ಯಾಕಪ್';
+
+  @override
+  String get importBackup => 'ಬ್ಯಾಕಪ್‌ನಿಂದ ಮರುಸ್ಥಾಪಿಸಿ';
+
+  @override
+  String importConfirm(int count) {
+    return 'ಈ ಬ್ಯಾಕಪ್‌ನಿಂದ $count ಪಾಲಿಸಿಗಳನ್ನು ಮರುಸ್ಥಾಪಿಸುವುದೇ? ಅದೇ ID ಇರುವ ಉಳಿಸಿದ ಪಾಲಿಸಿಗಳು ಬದಲಾಗುತ್ತವೆ.';
+  }
+
+  @override
+  String importDone(int count) {
+    return '$count ಪಾಲಿಸಿಗಳು ಮರುಸ್ಥಾಪನೆಯಾಗಿವೆ.';
+  }
+
+  @override
+  String get importFailed => 'ಇದು PLI & RPLI ಕ್ಯಾಲ್ಕುಲೇಟರ್ ಬ್ಯಾಕಪ್ ಫೈಲ್ ಅಲ್ಲ.';
+
+  @override
+  String get backupNote =>
+      'ಬ್ಯಾಕಪ್ ಫೈಲ್‌ನಲ್ಲಿ ನಿಮ್ಮ ಪಾಲಿಸಿ ವಿವರಗಳಿವೆ. ನಿಮ್ಮದೇ ವಾಟ್ಸ್‌ಆ್ಯಪ್ ಚಾಟ್ ಅಥವಾ ಗೂಗಲ್ ಡ್ರೈವ್‌ನಂತಹ ಸುರಕ್ಷಿತ ಸ್ಥಳದಲ್ಲಿಡಿ.';
+
+  @override
+  String get restore => 'ಮರುಸ್ಥಾಪಿಸಿ';
+
+  @override
+  String get tileDues => 'ಕಂತುಗಳು';
+
+  @override
+  String get descDues => 'ಈ ತಿಂಗಳ ಪ್ರೀಮಿಯಂ ಕಂತುಗಳು';
+
+  @override
+  String get duesTitle => 'ಪ್ರೀಮಿಯಂ ಕಂತುಗಳು';
+
+  @override
+  String get duesTotal => 'ಒಟ್ಟು ಬಾಕಿ';
+
+  @override
+  String duesCount(int count) {
+    return '$count ಪ್ರೀಮಿಯಂಗಳು';
+  }
+
+  @override
+  String get noDuesInMonth => 'ಈ ತಿಂಗಳಲ್ಲಿ ಯಾವುದೇ ಪ್ರೀಮಿಯಂ ಬಾಕಿ ಇಲ್ಲ.';
+
+  @override
+  String get remindOnWhatsApp => 'ನೆನಪಿಸಿ';
+
+  @override
+  String dueReminderMessage(
+    String name,
+    String amount,
+    String number,
+    String date,
+  ) {
+    return 'ಆತ್ಮೀಯ $name, ಪಾಲಿಸಿ $numberರ $amount ಪ್ರೀಮಿಯಂ $date ರಂದು ಬಾಕಿ ಇದೆ. ದಯವಿಟ್ಟು ನಿಮ್ಮ ಅಂಚೆ ಕಚೇರಿಯಲ್ಲಿ ಪಾವತಿಸಿ.';
+  }
+
+  @override
+  String get tileProfile => 'ಏಜೆಂಟ್ ಪ್ರೊಫೈಲ್';
+
+  @override
+  String get descProfile => 'ಉಲ್ಲೇಖ ಪತ್ರದಲ್ಲಿ ನಿಮ್ಮ ಹೆಸರು ಮತ್ತು ಲೋಗೋ';
+
+  @override
+  String get profileTitle => 'ಏಜೆಂಟ್ ಪ್ರೊಫೈಲ್';
+
+  @override
+  String get agentNameField => 'ನಿಮ್ಮ ಹೆಸರು';
+
+  @override
+  String get agentPhoneField => 'ನಿಮ್ಮ ದೂರವಾಣಿ';
+
+  @override
+  String get agentCodeField => 'ಏಜೆಂಟ್ ID / ಕಚೇರಿ (ಐಚ್ಛಿಕ)';
+
+  @override
+  String get chooseLogo => 'ಫೋಟೋ ಅಥವಾ ಲೋಗೋ ಆರಿಸಿ';
+
+  @override
+  String get removeLogo => 'ತೆಗೆಯಿರಿ';
+
+  @override
+  String get profileNote =>
+      'ಉಲ್ಲೇಖ ಪತ್ರಗಳು ಮತ್ತು ನೆನಪಿನ ಸಂದೇಶಗಳಲ್ಲಿ ತೋರಿಸಲಾಗುತ್ತದೆ. ಈ ಫೋನ್‌ನಲ್ಲಿ ಮಾತ್ರ ಉಳಿಸಲಾಗಿದೆ.';
+
+  @override
+  String get profileSaved => 'ಪ್ರೊಫೈಲ್ ಉಳಿಸಲಾಗಿದೆ.';
 }

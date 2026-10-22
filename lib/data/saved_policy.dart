@@ -14,6 +14,7 @@ class SavedPolicy {
     required this.frequency,
     required this.premiumRupees,
     required this.reminders,
+    this.phone = '',
   });
 
   factory SavedPolicy.fromJson(Map<String, Object?> j) => SavedPolicy(
@@ -28,6 +29,7 @@ class SavedPolicy {
         frequency: PremiumFrequency.parse(j['frequency']! as String),
         premiumRupees: j['premiumRupees']! as int,
         reminders: j['reminders']! as bool,
+        phone: j['phone'] as String? ?? '',
       );
 
   final String id;
@@ -46,6 +48,9 @@ class SavedPolicy {
   final int premiumRupees;
   final bool reminders;
 
+  /// Customer's mobile, optional; used for WhatsApp due reminders.
+  final String phone;
+
   Map<String, Object?> toJson() => {
         'id': id,
         'holderName': holderName,
@@ -58,6 +63,7 @@ class SavedPolicy {
         'frequency': frequency.code,
         'premiumRupees': premiumRupees,
         'reminders': reminders,
+        'phone': phone,
       };
 
   SavedPolicy copyWith({bool? reminders}) => SavedPolicy(
@@ -72,5 +78,6 @@ class SavedPolicy {
         frequency: frequency,
         premiumRupees: premiumRupees,
         reminders: reminders ?? this.reminders,
+        phone: phone,
       );
 }

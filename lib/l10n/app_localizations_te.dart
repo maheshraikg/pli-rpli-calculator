@@ -1227,4 +1227,98 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get doc_indemnity => 'నష్టపరిహార బాండ్ (అడిగితే)';
+
+  @override
+  String get customerPhoneLabel =>
+      'వినియోగదారు మొబైల్ (వాట్సాప్ రిమైండర్ల కోసం)';
+
+  @override
+  String get exportBackup => 'పాలసీల బ్యాకప్';
+
+  @override
+  String get importBackup => 'బ్యాకప్ నుండి పునరుద్ధరించండి';
+
+  @override
+  String importConfirm(int count) {
+    return 'ఈ బ్యాకప్ నుండి $count పాలసీలను పునరుద్ధరించాలా? అదే ID ఉన్న సేవ్ చేసిన పాలసీలు భర్తీ అవుతాయి.';
+  }
+
+  @override
+  String importDone(int count) {
+    return '$count పాలసీలు పునరుద్ధరించబడ్డాయి.';
+  }
+
+  @override
+  String get importFailed => 'ఇది PLI & RPLI కాలిక్యులేటర్ బ్యాకప్ ఫైల్ కాదు.';
+
+  @override
+  String get backupNote =>
+      'బ్యాకప్ ఫైల్‌లో మీ పాలసీ వివరాలు ఉన్నాయి. మీ సొంత వాట్సాప్ చాట్ లేదా గూగుల్ డ్రైవ్ వంటి సురక్షిత చోట ఉంచండి.';
+
+  @override
+  String get restore => 'పునరుద్ధరించు';
+
+  @override
+  String get tileDues => 'బకాయిలు';
+
+  @override
+  String get descDues => 'ఈ నెల బకాయి ప్రీమియంలు';
+
+  @override
+  String get duesTitle => 'ప్రీమియం బకాయిలు';
+
+  @override
+  String get duesTotal => 'మొత్తం బకాయి';
+
+  @override
+  String duesCount(int count) {
+    return '$count ప్రీమియంలు';
+  }
+
+  @override
+  String get noDuesInMonth => 'ఈ నెలలో ఏ ప్రీమియం బకాయి లేదు.';
+
+  @override
+  String get remindOnWhatsApp => 'గుర్తు చేయి';
+
+  @override
+  String dueReminderMessage(
+    String name,
+    String amount,
+    String number,
+    String date,
+  ) {
+    return 'ప్రియమైన $name, పాలసీ $number యొక్క $amount ప్రీమియం $dateన చెల్లించాలి. దయచేసి మీ తపాలా కార్యాలయంలో చెల్లించండి.';
+  }
+
+  @override
+  String get tileProfile => 'ఏజెంట్ ప్రొఫైల్';
+
+  @override
+  String get descProfile => 'కొటేషన్‌పై మీ పేరు మరియు లోగో';
+
+  @override
+  String get profileTitle => 'ఏజెంట్ ప్రొఫైల్';
+
+  @override
+  String get agentNameField => 'మీ పేరు';
+
+  @override
+  String get agentPhoneField => 'మీ ఫోన్';
+
+  @override
+  String get agentCodeField => 'ఏజెంట్ ID / కార్యాలయం (ఐచ్ఛికం)';
+
+  @override
+  String get chooseLogo => 'ఫోటో లేదా లోగో ఎంచుకోండి';
+
+  @override
+  String get removeLogo => 'తీసివేయి';
+
+  @override
+  String get profileNote =>
+      'కొటేషన్లు, రిమైండర్ సందేశాలలో చూపబడుతుంది. ఈ ఫోన్‌లో మాత్రమే సేవ్ చేయబడింది.';
+
+  @override
+  String get profileSaved => 'ప్రొఫైల్ సేవ్ అయింది.';
 }
