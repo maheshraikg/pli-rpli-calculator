@@ -7,7 +7,6 @@ import 'package:pli_sahayak/data/saved_policy.dart';
 import 'package:pli_sahayak/data/storage.dart';
 import 'package:pli_sahayak/features/dues/dues_screen.dart';
 import 'package:pli_sahayak/features/policies/policies_screen.dart';
-import 'package:pli_sahayak/features/policies/policies_state.dart';
 import 'package:pli_sahayak/services/reminders.dart';
 
 import 'support.dart';
