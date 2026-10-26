@@ -1363,4 +1363,15 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get noDuesInFilter => 'ఈ జాబితాలో ఏమీ లేదు.';
+
+  @override
+  String get openFormLink => 'ఫారం డౌన్‌లోడ్ చేయండి';
+
+  @override
+  String get shareFormLink => 'ఫారం లింక్ పంచుకోండి';
+
+  @override
+  String formLinkMessage(String service, String url) {
+    return '$service ఫారం (ఇండియా పోస్ట్): $url';
+  }
 }

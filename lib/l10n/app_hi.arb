@@ -387,5 +387,8 @@
   "duesCollectedOf": "{total} में से {collected} वसूल",
   "duesMonthTotal": "महीने का कुल",
   "collectedNote": "वसूली के चिह्न आपका अपना रिकॉर्ड हैं। ये इंडिया पोस्ट की प्रणाली में भुगतान की जाँच नहीं करते।",
-  "noDuesInFilter": "इस सूची में कुछ नहीं।"
+  "noDuesInFilter": "इस सूची में कुछ नहीं।",
+  "openFormLink": "फ़ॉर्म डाउनलोड करें",
+  "shareFormLink": "फ़ॉर्म लिंक साझा करें",
+  "formLinkMessage": "{service} फ़ॉर्म (इंडिया पोस्ट): {url}"
 }

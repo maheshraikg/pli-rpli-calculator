@@ -387,5 +387,8 @@
   "duesCollectedOf": "{total} ರಲ್ಲಿ {collected} ಸಂಗ್ರಹಿಸಲಾಗಿದೆ",
   "duesMonthTotal": "ತಿಂಗಳ ಒಟ್ಟು",
   "collectedNote": "ಸಂಗ್ರಹ ಗುರುತುಗಳು ನಿಮ್ಮ ಸ್ವಂತ ದಾಖಲೆ. ಇವು ಅಂಚೆ ಇಲಾಖೆಯ ವ್ಯವಸ್ಥೆಯಲ್ಲಿ ಪಾವತಿಯನ್ನು ಪರಿಶೀಲಿಸುವುದಿಲ್ಲ.",
-  "noDuesInFilter": "ಈ ಪಟ್ಟಿಯಲ್ಲಿ ಏನೂ ಇಲ್ಲ."
+  "noDuesInFilter": "ಈ ಪಟ್ಟಿಯಲ್ಲಿ ಏನೂ ಇಲ್ಲ.",
+  "openFormLink": "ಫಾರ್ಮ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ",
+  "shareFormLink": "ಫಾರ್ಮ್ ಲಿಂಕ್ ಹಂಚಿಕೊಳ್ಳಿ",
+  "formLinkMessage": "{service} ಫಾರ್ಮ್ (ಅಂಚೆ ಇಲಾಖೆ): {url}"
 }

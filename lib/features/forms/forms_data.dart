@@ -8,7 +8,7 @@ import '../../l10n/app_localizations.dart';
 import '../../core/app_icons.dart';
 
 class FormService {
-  const FormService({required this.id, required this.icon, required this.docs, required this.letter, this.pdfAsset});
+  const FormService({required this.id, required this.icon, required this.docs, required this.letter, this.pdfAsset, this.formUrl});
 
   final String id;
   final IconData icon;
@@ -21,6 +21,10 @@ class FormService {
 
   /// Bundled official India Post PDF, if one has been added.
   final String? pdfAsset;
+
+  /// Download link for the official form (e.g. a Google Drive file shared
+  /// as "anyone with the link"), if one has been added.
+  final String? formUrl;
 }
 
 class FormsCatalog {
@@ -39,6 +43,7 @@ class FormsCatalog {
             docs: (s['docs']! as List).cast<String>(),
             letter: s['letter']! as bool,
             pdfAsset: s['pdfAsset'] as String?,
+            formUrl: s['formUrl'] as String?,
           ),
       ],
     );

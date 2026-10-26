@@ -2452,6 +2452,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Nothing in this list.'**
   String get noDuesInFilter;
+
+  /// No description provided for @openFormLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Download form'**
+  String get openFormLink;
+
+  /// No description provided for @shareFormLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Share form link'**
+  String get shareFormLink;
+
+  /// No description provided for @formLinkMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'{service} form (India Post): {url}'**
+  String formLinkMessage(String service, String url);
 }
 
 class _AppLocalizationsDelegate

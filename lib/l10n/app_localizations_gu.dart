@@ -1356,4 +1356,15 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get noDuesInFilter => 'આ યાદીમાં કંઈ નથી.';
+
+  @override
+  String get openFormLink => 'ફોર્મ ડાઉનલોડ કરો';
+
+  @override
+  String get shareFormLink => 'ફોર્મ લિંક શેર કરો';
+
+  @override
+  String formLinkMessage(String service, String url) {
+    return '$service ફોર્મ (ઇન્ડિયા પોસ્ટ): $url';
+  }
 }

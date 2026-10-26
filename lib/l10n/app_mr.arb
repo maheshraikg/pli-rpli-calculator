@@ -387,5 +387,8 @@
   "duesCollectedOf": "{total} पैकी {collected} वसूल",
   "duesMonthTotal": "महिन्याची एकूण",
   "collectedNote": "वसुलीच्या खुणा तुमची स्वतःची नोंद आहेत. त्या इंडिया पोस्टच्या प्रणालीत भरणा तपासत नाहीत.",
-  "noDuesInFilter": "या यादीत काही नाही."
+  "noDuesInFilter": "या यादीत काही नाही.",
+  "openFormLink": "फॉर्म डाउनलोड करा",
+  "shareFormLink": "फॉर्म लिंक शेअर करा",
+  "formLinkMessage": "{service} फॉर्म (इंडिया पोस्ट): {url}"
 }

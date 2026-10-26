@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -114,6 +115,22 @@ class _FormDetailScreenState extends ConsumerState<FormDetailScreen> {
                           icon: const AppIcon(AppIcons.filePdf),
                           label: Text(l.openOfficialForm),
                           onPressed: () => _openBundled(s.pdfAsset!),
+                        ),
+                        const SizedBox(height: 8),
+                      ],
+                      if (s.formUrl != null) ...[
+                        FilledButton.tonalIcon(
+                          icon: const AppIcon(AppIcons.downloadSimple),
+                          label: Text(l.openFormLink),
+                          onPressed: () => launchUrl(Uri.parse(s.formUrl!), mode: LaunchMode.externalApplication),
+                        ),
+                        const SizedBox(height: 8),
+                        OutlinedButton.icon(
+                          icon: const AppIcon(AppIcons.whatsappLogo),
+                          label: Text(l.shareFormLink),
+                          onPressed: () => SharePlus.instance.share(
+                            ShareParams(text: l.formLinkMessage(serviceName(l, s.id), s.formUrl!)),
+                          ),
                         ),
                         const SizedBox(height: 8),
                       ],

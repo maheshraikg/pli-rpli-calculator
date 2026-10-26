@@ -387,5 +387,8 @@
   "duesCollectedOf": "{total} ମଧ୍ୟରୁ {collected} ଆଦାୟ ହୋଇଛି",
   "duesMonthTotal": "ମାସର ମୋଟ",
   "collectedNote": "ଆଦାୟ ଚିହ୍ନ ଆପଣଙ୍କ ନିଜ ରେକର୍ଡ। ଏହା ଇଣ୍ଡିଆ ପୋଷ୍ଟ ପ୍ରଣାଳୀରେ ଦେୟ ଯାଞ୍ଚ କରେ ନାହିଁ।",
-  "noDuesInFilter": "ଏହି ତାଲିକାରେ କିଛି ନାହିଁ।"
+  "noDuesInFilter": "ଏହି ତାଲିକାରେ କିଛି ନାହିଁ।",
+  "openFormLink": "ଫର୍ମ ଡାଉନଲୋଡ କରନ୍ତୁ",
+  "shareFormLink": "ଫର୍ମ ଲିଙ୍କ ସେୟାର କରନ୍ତୁ",
+  "formLinkMessage": "{service} ଫର୍ମ (ଇଣ୍ଡିଆ ପୋଷ୍ଟ): {url}"
 }

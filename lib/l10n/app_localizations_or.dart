@@ -1359,4 +1359,15 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get noDuesInFilter => 'ଏହି ତାଲିକାରେ କିଛି ନାହିଁ।';
+
+  @override
+  String get openFormLink => 'ଫର୍ମ ଡାଉନଲୋଡ କରନ୍ତୁ';
+
+  @override
+  String get shareFormLink => 'ଫର୍ମ ଲିଙ୍କ ସେୟାର କରନ୍ତୁ';
+
+  @override
+  String formLinkMessage(String service, String url) {
+    return '$service ଫର୍ମ (ଇଣ୍ଡିଆ ପୋଷ୍ଟ): $url';
+  }
 }

@@ -387,5 +387,8 @@
   "duesCollectedOf": "{total} এর মধ্যে {collected} আদায় হয়েছে",
   "duesMonthTotal": "মাসের মোট",
   "collectedNote": "আদায়ের চিহ্ন আপনার নিজের রেকর্ড। এগুলি ইন্ডিয়া পোস্টের সিস্টেমে প্রদান যাচাই করে না।",
-  "noDuesInFilter": "এই তালিকায় কিছু নেই।"
+  "noDuesInFilter": "এই তালিকায় কিছু নেই।",
+  "openFormLink": "ফর্ম ডাউনলোড করুন",
+  "shareFormLink": "ফর্মের লিঙ্ক শেয়ার করুন",
+  "formLinkMessage": "{service} ফর্ম (ইন্ডিয়া পোস্ট): {url}"
 }

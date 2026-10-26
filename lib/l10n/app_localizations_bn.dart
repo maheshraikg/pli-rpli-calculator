@@ -1360,4 +1360,15 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get noDuesInFilter => 'এই তালিকায় কিছু নেই।';
+
+  @override
+  String get openFormLink => 'ফর্ম ডাউনলোড করুন';
+
+  @override
+  String get shareFormLink => 'ফর্মের লিঙ্ক শেয়ার করুন';
+
+  @override
+  String formLinkMessage(String service, String url) {
+    return '$service ফর্ম (ইন্ডিয়া পোস্ট): $url';
+  }
 }

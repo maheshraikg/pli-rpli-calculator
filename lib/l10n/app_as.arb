@@ -387,5 +387,8 @@
   "duesCollectedOf": "{total} ৰ ভিতৰত {collected} আদায় হৈছে",
   "duesMonthTotal": "মাহৰ মুঠ",
   "collectedNote": "আদায়ৰ চিহ্নবোৰ আপোনাৰ নিজৰ ৰেকৰ্ড। এইবোৰে ইণ্ডিয়া পোষ্টৰ ব্যৱস্থাত পৰিশোধ পৰীক্ষা নকৰে।",
-  "noDuesInFilter": "এই তালিকাত একো নাই।"
+  "noDuesInFilter": "এই তালিকাত একো নাই।",
+  "openFormLink": "ফৰ্ম ডাউনলোড কৰক",
+  "shareFormLink": "ফৰ্মৰ লিংক শ্বেয়াৰ কৰক",
+  "formLinkMessage": "{service} ফৰ্ম (ইণ্ডিয়া পোষ্ট): {url}"
 }

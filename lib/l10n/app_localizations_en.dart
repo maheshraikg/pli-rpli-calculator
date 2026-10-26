@@ -1393,4 +1393,15 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get noDuesInFilter => 'Nothing in this list.';
+
+  @override
+  String get openFormLink => 'Download form';
+
+  @override
+  String get shareFormLink => 'Share form link';
+
+  @override
+  String formLinkMessage(String service, String url) {
+    return '$service form (India Post): $url';
+  }
 }

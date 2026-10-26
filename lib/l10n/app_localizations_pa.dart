@@ -1356,4 +1356,15 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get noDuesInFilter => 'ਇਸ ਸੂਚੀ ਵਿੱਚ ਕੁਝ ਨਹੀਂ।';
+
+  @override
+  String get openFormLink => 'ਫ਼ਾਰਮ ਡਾਊਨਲੋਡ ਕਰੋ';
+
+  @override
+  String get shareFormLink => 'ਫ਼ਾਰਮ ਲਿੰਕ ਸਾਂਝਾ ਕਰੋ';
+
+  @override
+  String formLinkMessage(String service, String url) {
+    return '$service ਫ਼ਾਰਮ (ਇੰਡੀਆ ਪੋਸਟ): $url';
+  }
 }

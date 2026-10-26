@@ -1358,4 +1358,15 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get noDuesInFilter => 'اس فہرست میں کچھ نہیں۔';
+
+  @override
+  String get openFormLink => 'فارم ڈاؤن لوڈ کریں';
+
+  @override
+  String get shareFormLink => 'فارم کا لنک شیئر کریں';
+
+  @override
+  String formLinkMessage(String service, String url) {
+    return '$service فارم (انڈیا پوسٹ): $url';
+  }
 }

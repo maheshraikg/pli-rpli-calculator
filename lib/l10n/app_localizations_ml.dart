@@ -1368,4 +1368,15 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get noDuesInFilter => 'ഈ പട്ടികയിൽ ഒന്നുമില്ല.';
+
+  @override
+  String get openFormLink => 'ഫോം ഡൗൺലോഡ് ചെയ്യുക';
+
+  @override
+  String get shareFormLink => 'ഫോം ലിങ്ക് പങ്കിടുക';
+
+  @override
+  String formLinkMessage(String service, String url) {
+    return '$service ഫോം (ഇന്ത്യാ പോസ്റ്റ്): $url';
+  }
 }

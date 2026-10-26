@@ -387,5 +387,8 @@
   "duesCollectedOf": "{total} లో {collected} వసూలయ్యాయి",
   "duesMonthTotal": "నెల మొత్తం",
   "collectedNote": "వసూలు గుర్తులు మీ సొంత రికార్డు. ఇవి ఇండియా పోస్ట్ వ్యవస్థలో చెల్లింపును తనిఖీ చేయవు.",
-  "noDuesInFilter": "ఈ జాబితాలో ఏమీ లేదు."
+  "noDuesInFilter": "ఈ జాబితాలో ఏమీ లేదు.",
+  "openFormLink": "ఫారం డౌన్‌లోడ్ చేయండి",
+  "shareFormLink": "ఫారం లింక్ పంచుకోండి",
+  "formLinkMessage": "{service} ఫారం (ఇండియా పోస్ట్): {url}"
 }

@@ -387,5 +387,8 @@
   "duesCollectedOf": "{total} ਵਿੱਚੋਂ {collected} ਵਸੂਲ",
   "duesMonthTotal": "ਮਹੀਨੇ ਦਾ ਕੁੱਲ",
   "collectedNote": "ਵਸੂਲੀ ਦੇ ਨਿਸ਼ਾਨ ਤੁਹਾਡਾ ਆਪਣਾ ਰਿਕਾਰਡ ਹਨ। ਇਹ ਇੰਡੀਆ ਪੋਸਟ ਦੇ ਸਿਸਟਮ ਵਿੱਚ ਭੁਗਤਾਨ ਦੀ ਜਾਂਚ ਨਹੀਂ ਕਰਦੇ।",
-  "noDuesInFilter": "ਇਸ ਸੂਚੀ ਵਿੱਚ ਕੁਝ ਨਹੀਂ।"
+  "noDuesInFilter": "ਇਸ ਸੂਚੀ ਵਿੱਚ ਕੁਝ ਨਹੀਂ।",
+  "openFormLink": "ਫ਼ਾਰਮ ਡਾਊਨਲੋਡ ਕਰੋ",
+  "shareFormLink": "ਫ਼ਾਰਮ ਲਿੰਕ ਸਾਂਝਾ ਕਰੋ",
+  "formLinkMessage": "{service} ਫ਼ਾਰਮ (ਇੰਡੀਆ ਪੋਸਟ): {url}"
 }

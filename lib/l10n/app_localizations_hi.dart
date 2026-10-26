@@ -1361,4 +1361,15 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get noDuesInFilter => 'इस सूची में कुछ नहीं।';
+
+  @override
+  String get openFormLink => 'फ़ॉर्म डाउनलोड करें';
+
+  @override
+  String get shareFormLink => 'फ़ॉर्म लिंक साझा करें';
+
+  @override
+  String formLinkMessage(String service, String url) {
+    return '$service फ़ॉर्म (इंडिया पोस्ट): $url';
+  }
 }

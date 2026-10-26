@@ -1372,4 +1372,15 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get noDuesInFilter => 'இந்தப் பட்டியலில் எதுவும் இல்லை.';
+
+  @override
+  String get openFormLink => 'படிவத்தைப் பதிவிறக்கு';
+
+  @override
+  String get shareFormLink => 'படிவ இணைப்பைப் பகிர்';
+
+  @override
+  String formLinkMessage(String service, String url) {
+    return '$service படிவம் (இந்திய அஞ்சல்): $url';
+  }
 }

@@ -1360,4 +1360,15 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get noDuesInFilter => 'ಈ ಪಟ್ಟಿಯಲ್ಲಿ ಏನೂ ಇಲ್ಲ.';
+
+  @override
+  String get openFormLink => 'ಫಾರ್ಮ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ';
+
+  @override
+  String get shareFormLink => 'ಫಾರ್ಮ್ ಲಿಂಕ್ ಹಂಚಿಕೊಳ್ಳಿ';
+
+  @override
+  String formLinkMessage(String service, String url) {
+    return '$service ಫಾರ್ಮ್ (ಅಂಚೆ ಇಲಾಖೆ): $url';
+  }
 }

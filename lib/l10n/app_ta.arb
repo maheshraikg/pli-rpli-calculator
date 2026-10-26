@@ -387,5 +387,8 @@
   "duesCollectedOf": "{total} இல் {collected} வசூலானது",
   "duesMonthTotal": "மாத மொத்தம்",
   "collectedNote": "வசூல் குறிகள் உங்கள் சொந்தப் பதிவு. இவை இந்திய அஞ்சல் அமைப்பில் செலுத்தலைச் சரிபார்க்காது.",
-  "noDuesInFilter": "இந்தப் பட்டியலில் எதுவும் இல்லை."
+  "noDuesInFilter": "இந்தப் பட்டியலில் எதுவும் இல்லை.",
+  "openFormLink": "படிவத்தைப் பதிவிறக்கு",
+  "shareFormLink": "படிவ இணைப்பைப் பகிர்",
+  "formLinkMessage": "{service} படிவம் (இந்திய அஞ்சல்): {url}"
 }

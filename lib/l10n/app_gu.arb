@@ -387,5 +387,8 @@
   "duesCollectedOf": "{total} માંથી {collected} વસૂલ",
   "duesMonthTotal": "મહિનાનો કુલ",
   "collectedNote": "વસૂલીના ચિહ્નો તમારો પોતાનો રેકોર્ડ છે. તે ઇન્ડિયા પોસ્ટની સિસ્ટમમાં ચુકવણી તપાસતા નથી.",
-  "noDuesInFilter": "આ યાદીમાં કંઈ નથી."
+  "noDuesInFilter": "આ યાદીમાં કંઈ નથી.",
+  "openFormLink": "ફોર્મ ડાઉનલોડ કરો",
+  "shareFormLink": "ફોર્મ લિંક શેર કરો",
+  "formLinkMessage": "{service} ફોર્મ (ઇન્ડિયા પોસ્ટ): {url}"
 }

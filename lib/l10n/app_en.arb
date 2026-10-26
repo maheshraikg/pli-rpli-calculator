@@ -1004,5 +1004,18 @@
   },
   "duesMonthTotal": "Total for the month",
   "collectedNote": "Collected marks are your own record. They do not check payment in India Post's system.",
-  "noDuesInFilter": "Nothing in this list."
+  "noDuesInFilter": "Nothing in this list.",
+  "openFormLink": "Download form",
+  "shareFormLink": "Share form link",
+  "formLinkMessage": "{service} form (India Post): {url}",
+  "@formLinkMessage": {
+    "placeholders": {
+      "service": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  }
 }

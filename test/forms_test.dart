@@ -52,6 +52,22 @@ void main() {
     });
 
     test('official forms link is https', () => expect(catalog.officialFormsUrl, startsWith('https://')));
+
+    test('form download links, when listed, are https', () {
+      for (final s in catalog.services.where((s) => s.formUrl != null)) {
+        expect(s.formUrl, startsWith('https://'), reason: s.id);
+      }
+      final parsed = FormsCatalog.parse(
+        '{"verified": false, "officialFormsUrl": "https://x", "services": [{"id": "loan", "icon": "loan", '
+        '"letter": true, "docs": [], "formUrl": "https://drive.google.com/file/d/abc/view"}]}',
+      );
+      expect(parsed.services.single.formUrl, 'https://drive.google.com/file/d/abc/view');
+      expect(parsed.services.single.pdfAsset, isNull);
+    });
+
+    test('form link message names the service and link', () {
+      expect(en.formLinkMessage('Loan', 'https://x'), 'Loan form (India Post): https://x');
+    });
   });
 
   group('letters', () {

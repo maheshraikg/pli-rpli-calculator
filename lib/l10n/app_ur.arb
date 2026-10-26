@@ -387,5 +387,8 @@
   "duesCollectedOf": "{total} میں سے {collected} وصول",
   "duesMonthTotal": "مہینے کا کل",
   "collectedNote": "وصولی کے نشان آپ کا اپنا ریکارڈ ہیں۔ یہ انڈیا پوسٹ کے نظام میں ادائیگی کی جانچ نہیں کرتے۔",
-  "noDuesInFilter": "اس فہرست میں کچھ نہیں۔"
+  "noDuesInFilter": "اس فہرست میں کچھ نہیں۔",
+  "openFormLink": "فارم ڈاؤن لوڈ کریں",
+  "shareFormLink": "فارم کا لنک شیئر کریں",
+  "formLinkMessage": "{service} فارم (انڈیا پوسٹ): {url}"
 }
