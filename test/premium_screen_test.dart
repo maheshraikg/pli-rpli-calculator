@@ -49,6 +49,16 @@ void main() {
     expect(find.text('For: Ravi Kumar'), findsOneWidget);
   });
 
+  testWidgets('quotation shows premium and total paid for all four frequencies', (tester) async {
+    await pumpApp(tester, location: '/quotation');
+    await scrollTo(tester, find.text('Total paid'));
+    for (final f in ['Yearly', 'Half-yearly', 'Quarterly', 'Monthly', 'Premium', 'Total paid']) {
+      expect(find.text(f), findsWidgets, reason: f);
+    }
+    await scrollTo(tester, find.textContaining('Total bonus'));
+    expect(find.textContaining('+ ₹'), findsWidgets);
+  });
+
   testWidgets('quotation in Kannada is bilingual', (tester) async {
     await pumpApp(tester, locale: const Locale('kn'), location: '/quotation');
     await scrollTo(tester, find.textContaining('Premium Quotation'));

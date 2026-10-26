@@ -145,28 +145,47 @@ class QuotationDocument extends StatelessWidget {
               ]),
               if (q != null)
                 section(bi((l) => l.allFrequenciesTitle), [
-                  for (final f in PremiumFrequency.values)
-                    row(bi((l) => frequencyName(l, f)), switch (e.quoteFor(f)) {
-                      final fq? => formatRupees(fq.premium),
-                      null => en.notInTable,
-                    }, bold: f == e.config.frequency),
-                  row(bi((l) => l.saRebateRow), formatRupees(q.saRebate)),
-                  row(bi((l) => l.totalPremiumRow(q.totalInstalments)), formatRupees(q.totalPremium)),
+                  const SizedBox(height: 6),
+                  _FrequencyTable(
+                    evaluation: e,
+                    textStyle: textStyle,
+                    headStyle: head,
+                    label: (f) => bilingual ? '${f(local)}\n${f(en)}' : f(en),
+                    notInTable: en.notInTable,
+                  ),
+                  if (q.saRebate.value > 0) row(bi((l) => l.saRebateRow), formatRupees(q.saRebate)),
                 ]),
               if (p != null)
                 section(bi((l) => l.resultMaturityValue), [
-                  row(bi((l) => l.bonusRateRow(p.financialYear)), bi((l) => l.bonusRateValue(p.ratePer1000))),
-                  row(bi((l) => l.totalBonusRow(p.termYears)), formatRupees(p.totalBonus)),
-                  if (p.terminalBonus.value > 0) row(bi((l) => l.terminalBonusRow), formatRupees(p.terminalBonus)),
-                  for (final b in p.payments)
+                  // Endowment / whole life: Sum assured + Bonus = Maturity, as on
+                  // the printed India Post quotation sheet.
+                  if (p.payments.length == 1 &&
+                      Paise.wholeRupees(p.sumAssured) + p.totalBonus + p.terminalBonus == p.maturity.amount) ...[
+                    row(bi((l) => l.sumAssuredRow), formatRupees(Paise.wholeRupees(p.sumAssured))),
+                    row(bi((l) => l.totalBonusRow(p.termYears)), '+ ${formatRupees(p.totalBonus)}'),
+                    if (p.terminalBonus.value > 0)
+                      row(bi((l) => l.terminalBonusRow), '+ ${formatRupees(p.terminalBonus)}'),
+                    const Divider(height: 8, color: ink),
                     row(
-                      '${bi((l) => b.kind == PaymentKind.maturity ? l.resultMaturityValue : l.timelineSurvival)} — '
-                      '${bi((l) => l.timelineYear(b.policyYear))}${b.date == null ? '' : ' (${formatDate(context, b.date!)})'}',
-                      formatRupees(b.amount),
-                      bold: b.kind == PaymentKind.maturity,
+                      '${bi((l) => l.resultMaturityValue)}'
+                      '${p.maturity.date == null ? '' : ' (${formatDate(context, p.maturity.date!)})'}',
+                      formatRupees(p.maturity.amount),
+                      bold: true,
                     ),
-                  if (p.payments.length > 1)
-                    row(bi((l) => l.resultTotalBenefits), formatRupees(p.totalBenefits), bold: true),
+                  ] else ...[
+                    row(bi((l) => l.totalBonusRow(p.termYears)), formatRupees(p.totalBonus)),
+                    if (p.terminalBonus.value > 0) row(bi((l) => l.terminalBonusRow), formatRupees(p.terminalBonus)),
+                    for (final b in p.payments)
+                      row(
+                        '${bi((l) => b.kind == PaymentKind.maturity ? l.resultMaturityValue : l.timelineSurvival)} — '
+                        '${bi((l) => l.timelineYear(b.policyYear))}${b.date == null ? '' : ' (${formatDate(context, b.date!)})'}',
+                        formatRupees(b.amount),
+                        bold: b.kind == PaymentKind.maturity,
+                      ),
+                    if (p.payments.length > 1)
+                      row(bi((l) => l.resultTotalBenefits), formatRupees(p.totalBenefits), bold: true),
+                  ],
+                  row(bi((l) => l.bonusRateRow(p.financialYear)), bi((l) => l.bonusRateValue(p.ratePer1000))),
                 ]),
               const SizedBox(height: 14),
               for (final t in [
@@ -188,3 +207,76 @@ class QuotationDocument extends StatelessWidget {
   }
 }
 
+/// Premium and total premium paid for every frequency side by side, like the
+/// "Premium Details" grid on the printed quotation sheet. The chosen
+/// frequency is shaded.
+class _FrequencyTable extends StatelessWidget {
+  const _FrequencyTable({
+    required this.evaluation,
+    required this.textStyle,
+    required this.headStyle,
+    required this.label,
+    required this.notInTable,
+  });
+
+  final PlanEvaluation evaluation;
+  final TextStyle textStyle;
+  final TextStyle headStyle;
+  final String Function(String Function(AppLocalizations l) f) label;
+  final String notInTable;
+
+  @override
+  Widget build(BuildContext context) {
+    const border = Color(0xFFBDBDBD);
+    final selected = evaluation.config.frequency;
+    final small = textStyle.copyWith(fontSize: 10.5);
+    final smallBold = headStyle.copyWith(fontSize: 11);
+    Widget cell(String text, {TextStyle? style, TextAlign align = TextAlign.center, Color? color}) => Container(
+      color: color,
+      padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 6),
+      child: Text(text, textAlign: align, style: style ?? small),
+    );
+    Color? shade(PremiumFrequency f) => f == selected ? kAccentRed.withValues(alpha: 0.08) : null;
+    String money(Paise? v) => v == null ? '—' : formatRupees(v);
+
+    return Table(
+      border: TableBorder.all(color: border, width: 0.8),
+      columnWidths: const {0: FlexColumnWidth(1.25)},
+      defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+      children: [
+        TableRow(
+          decoration: BoxDecoration(color: kAccentRed.withValues(alpha: 0.12)),
+          children: [
+            cell(''),
+            for (final f in _sheetOrder) cell(label((l) => frequencyName(l, f)), style: smallBold),
+          ],
+        ),
+        TableRow(
+          children: [
+            cell(label((l) => l.premiumShort), style: smallBold, align: TextAlign.start),
+            for (final f in _sheetOrder)
+              cell(
+                evaluation.quoteFor(f) == null ? notInTable : money(evaluation.quoteFor(f)!.premium),
+                style: f == selected ? smallBold : small,
+                color: shade(f),
+              ),
+          ],
+        ),
+        TableRow(
+          children: [
+            cell(label((l) => l.totalPaidShort), style: smallBold, align: TextAlign.start),
+            for (final f in _sheetOrder)
+              cell(
+                money(evaluation.quoteFor(f)?.totalPremium),
+                style: f == selected ? smallBold : small,
+                color: shade(f),
+              ),
+          ],
+        ),
+      ],
+    );
+  }
+}
+
+/// Same column order as the printed quotation sheet.
+final _sheetOrder = PremiumFrequency.values.reversed.toList();
