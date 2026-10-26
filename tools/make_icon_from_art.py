@@ -4,6 +4,7 @@
 - Legacy icons: the art with its white outer corners made transparent.
 - Adaptive icon: the art scaled into the safe zone on a matching red
   background, so circle/squircle masks never clip the PLI / RPLI lettering.
+- assets/images/app_icon.png: the icon shown in the app's home header.
 - Play Store icon 512x512: full-bleed square (Play rounds the corners itself).
 
 Usage: python3 -I tools/make_icon_from_art.py
@@ -56,6 +57,9 @@ def main():
     (RES / 'values/ic_launcher_background.xml').write_text(
         '<?xml version="1.0" encoding="utf-8"?>\n<resources>\n'
         '    <color name="ic_launcher_background">#%02X%02X%02X</color>\n</resources>\n' % BG)
+    # In-app header mark.
+    (ROOT / 'assets/images').mkdir(exist_ok=True)
+    art.resize((256, 256), Image.LANCZOS).save(ROOT / 'assets/images/app_icon.png', optimize=True)
     store = Image.new('RGBA', art.size, BG + (255,))
     store.alpha_composite(art)
     store.convert('RGB').resize((512, 512), Image.LANCZOS).save(ROOT / 'docs/store/icon_512.png', optimize=True)

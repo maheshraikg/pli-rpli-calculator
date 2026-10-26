@@ -43,17 +43,26 @@ def feature_graphic(black, medium):
     for x in range(w):  # diagonal-ish red → maroon gradient
         t = x / w
         d.line([(x, 0), (x, h)], fill=tuple(int(RED[i] + (MAROON[i] - RED[i]) * t) for i in range(3)))
-    art = Image.open(OUT / 'icon_512.png').convert('RGBA').resize((250, 250), Image.LANCZOS)
+    # The app icon, highlighted: soft white glow, white rim, then the art.
+    from PIL import ImageFilter
+    size, x0, y0 = 290, 40, 105
+    glow = Image.new('L', (w, h), 0)
+    ImageDraw.Draw(glow).rounded_rectangle([x0 - 6, y0 - 6, x0 + size + 6, y0 + size + 6], radius=72, fill=200)
+    glow = glow.filter(ImageFilter.GaussianBlur(22))
+    img.paste(Image.new('RGB', (w, h), WHITE), (0, 0), glow)
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle([x0 - 5, y0 - 5, x0 + size + 5, y0 + size + 5], radius=70, fill=WHITE)
+    art = Image.open(OUT / 'icon_512.png').convert('RGBA').resize((size, size), Image.LANCZOS)
     m = Image.new('L', art.size, 0)
-    ImageDraw.Draw(m).rounded_rectangle([0, 0, 249, 249], radius=56, fill=255)
+    ImageDraw.Draw(m).rounded_rectangle([0, 0, size - 1, size - 1], radius=64, fill=255)
     art.putalpha(m)
-    img.paste(art, (55, 125), art)  # the app icon
+    img.paste(art, (x0, y0), art)
     title = ImageFont.truetype(black, 64)
     sub = ImageFont.truetype(medium, 30)
-    d.text((330, 140), 'PLI & RPLI', font=title, fill=WHITE)
-    d.text((330, 215), 'Calculator', font=title, fill=WHITE)
-    d.text((332, 305), 'Premium • Bonus • Maturity • Dues', font=sub, fill=(255, 225, 228))
-    d.text((332, 350), 'Offline • 13 Indian languages', font=sub, fill=(255, 225, 228))
+    d.text((370, 140), 'PLI & RPLI', font=title, fill=WHITE)
+    d.text((370, 215), 'Calculator', font=title, fill=WHITE)
+    d.text((372, 305), 'Premium • Bonus • Maturity • Dues', font=sub, fill=(255, 225, 228))
+    d.text((372, 350), 'Offline • 13 Indian languages', font=sub, fill=(255, 225, 228))
     img.save(OUT / 'feature_graphic.png', optimize=True)
 
 

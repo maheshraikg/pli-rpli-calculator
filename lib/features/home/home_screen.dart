@@ -175,11 +175,20 @@ class _Header extends StatelessWidget {
             children: [
               Row(
                 children: [
+                  // The app icon, lifted off the red header with a white ring and glow.
                   Container(
-                    width: 48,
-                    height: 48,
-                    decoration: const BoxDecoration(color: white, shape: BoxShape.circle),
-                    child: Padding(padding: const EdgeInsets.all(9), child: Image.asset('assets/images/umbrella.png')),
+                    width: 60,
+                    height: 60,
+                    padding: const EdgeInsets.all(2.5),
+                    decoration: BoxDecoration(
+                      color: white,
+                      borderRadius: BorderRadius.circular(16),
+                      boxShadow: [BoxShadow(color: white.withValues(alpha: 0.45), blurRadius: 14, spreadRadius: 1)],
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(13.5),
+                      child: Image.asset('assets/images/app_icon.png', semanticLabel: l.appTitle),
+                    ),
                   ),
                   const SizedBox(width: 12),
                   Expanded(
