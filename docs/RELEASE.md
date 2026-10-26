@@ -18,8 +18,13 @@
    ```
 
 ## Package id
-`com.myorg.plirplicalculator` is a placeholder: change `applicationId` (and
-`namespace` + the Kotlin package folder) in `android/app/` before the first upload.
+`com.maheshraikg.plirplicalculator`. Google Play never allows this to change
+after the first upload.
+
+## Version code
+CI passes `--build-number=<GitHub run number>`, so every build has a higher
+versionCode than the last (Play rejects a reused one). Bump `version:` in
+pubspec.yaml (the part before `+`) for each public release.
 
 ## Signing
 Create an upload key once and keep it safe (losing it blocks future updates):

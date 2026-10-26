@@ -1,4 +1,4 @@
-package com.myorg.pli_sahayak
+package com.maheshraikg.plirplicalculator
 
 import io.flutter.embedding.android.FlutterActivity
 
