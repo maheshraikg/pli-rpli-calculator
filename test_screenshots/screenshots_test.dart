@@ -225,4 +225,14 @@ void main() {
     await pumpApp(tester, location: '/profile', settings: settings);
     await _shot(tester, '20_profile');
   });
+
+  testWidgets('23 official links', (tester) async {
+    await pumpApp(tester, location: '/links');
+    await _shot(tester, '23_links');
+  });
+
+  testWidgets('24 form detail', (tester) async {
+    await pumpApp(tester, location: '/forms/maturity');
+    await _shot(tester, '24_form_maturity');
+  });
 }
