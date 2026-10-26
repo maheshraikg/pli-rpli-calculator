@@ -417,14 +417,6 @@ class AppLocalizationsTa extends AppLocalizations {
   String get payingTermRow => 'பிரீமியம் செலுத்தும் காலம்';
 
   @override
-  String get returnRow => 'பயனுள்ள வருவாய் (XIRR)';
-
-  @override
-  String returnValue(String percent) {
-    return 'ஆண்டுக்கு $percent%';
-  }
-
-  @override
   String get lifeCoverRow => 'ஆயுள் பாதுகாப்பு';
 
   @override
@@ -528,9 +520,6 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get totalPaidShort => 'மொத்தம் செலுத்தியது';
-
-  @override
-  String get returnShort => 'வருவாய்';
 
   @override
   String get lifeCoverShort => 'ஆயுள் பாதுகாப்பு';

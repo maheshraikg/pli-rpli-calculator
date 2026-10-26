@@ -786,18 +786,6 @@ abstract class AppLocalizations {
   /// **'Premium paying term'**
   String get payingTermRow;
 
-  /// No description provided for @returnRow.
-  ///
-  /// In en, this message translates to:
-  /// **'Effective return (XIRR)'**
-  String get returnRow;
-
-  /// No description provided for @returnValue.
-  ///
-  /// In en, this message translates to:
-  /// **'{percent}% a year'**
-  String returnValue(String percent);
-
   /// No description provided for @lifeCoverRow.
   ///
   /// In en, this message translates to:
@@ -983,12 +971,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Total paid'**
   String get totalPaidShort;
-
-  /// No description provided for @returnShort.
-  ///
-  /// In en, this message translates to:
-  /// **'Return'**
-  String get returnShort;
 
   /// No description provided for @lifeCoverShort.
   ///

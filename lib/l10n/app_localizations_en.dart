@@ -427,14 +427,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get payingTermRow => 'Premium paying term';
 
   @override
-  String get returnRow => 'Effective return (XIRR)';
-
-  @override
-  String returnValue(String percent) {
-    return '$percent% a year';
-  }
-
-  @override
   String get lifeCoverRow => 'Life cover';
 
   @override
@@ -537,9 +529,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get totalPaidShort => 'Total paid';
-
-  @override
-  String get returnShort => 'Return';
 
   @override
   String get lifeCoverShort => 'Life cover';

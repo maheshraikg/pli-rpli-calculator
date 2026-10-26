@@ -372,15 +372,6 @@
     }
   },
   "payingTermRow": "Premium paying term",
-  "returnRow": "Effective return (XIRR)",
-  "returnValue": "{percent}% a year",
-  "@returnValue": {
-    "placeholders": {
-      "percent": {
-        "type": "String"
-      }
-    }
-  },
   "lifeCoverRow": "Life cover",
   "allFrequenciesTitle": "All payment frequencies",
   "notInTable": "Not available in official table",
@@ -440,7 +431,6 @@
   "removeOption": "Remove option",
   "maturityShort": "Maturity / benefits",
   "totalPaidShort": "Total paid",
-  "returnShort": "Return",
   "lifeCoverShort": "Life cover",
   "comparisonTitle": "Comparison",
   "toolsTitle": "Policy tools",

@@ -417,14 +417,6 @@ class AppLocalizationsTe extends AppLocalizations {
   String get payingTermRow => 'ప్రీమియం చెల్లింపు కాలం';
 
   @override
-  String get returnRow => 'ప్రభావవంతమైన రాబడి (XIRR)';
-
-  @override
-  String returnValue(String percent) {
-    return 'సంవత్సరానికి $percent%';
-  }
-
-  @override
   String get lifeCoverRow => 'జీవిత రక్షణ';
 
   @override
@@ -526,9 +518,6 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get totalPaidShort => 'మొత్తం చెల్లింపు';
-
-  @override
-  String get returnShort => 'రాబడి';
 
   @override
   String get lifeCoverShort => 'జీవిత రక్షణ';

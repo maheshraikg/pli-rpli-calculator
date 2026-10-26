@@ -109,7 +109,6 @@ class _ComparisonTable extends ConsumerWidget {
       ),
       (l.totalPaidShort, (e) => money(e.selectedQuote?.totalPremium)),
       (l.maturityShort, (e) => money(e.projection?.totalBenefits)),
-      (l.returnShort, (e) => e.returnRate == null ? '—' : l.returnValue(percentText(e.returnRate!))),
       (l.lifeCoverShort, (e) => formatRupees(Paise.wholeRupees(e.config.sumAssured ?? 0))),
     ];
 

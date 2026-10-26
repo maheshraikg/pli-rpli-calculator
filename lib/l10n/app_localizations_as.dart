@@ -415,14 +415,6 @@ class AppLocalizationsAs extends AppLocalizations {
   String get payingTermRow => 'প্ৰিমিয়াম দিয়াৰ ম্যাদ';
 
   @override
-  String get returnRow => 'কাৰ্যকৰী উভতি (XIRR)';
-
-  @override
-  String returnValue(String percent) {
-    return 'বছৰি $percent%';
-  }
-
-  @override
   String get lifeCoverRow => 'জীৱন সুৰক্ষা';
 
   @override
@@ -525,9 +517,6 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get totalPaidShort => 'মুঠ পৰিশোধ';
-
-  @override
-  String get returnShort => 'উভতি';
 
   @override
   String get lifeCoverShort => 'জীৱন সুৰক্ষা';

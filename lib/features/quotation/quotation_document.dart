@@ -167,7 +167,6 @@ class QuotationDocument extends StatelessWidget {
                     ),
                   if (p.payments.length > 1)
                     row(bi((l) => l.resultTotalBenefits), formatRupees(p.totalBenefits), bold: true),
-                  if (e.returnRate != null) row(bi((l) => l.returnRow), l10nReturn(en, e.returnRate!)),
                 ]),
               const SizedBox(height: 14),
               for (final t in [
@@ -189,4 +188,3 @@ class QuotationDocument extends StatelessWidget {
   }
 }
 
-String l10nReturn(AppLocalizations l, double rate) => l.returnValue((rate * 100).toStringAsFixed(2));

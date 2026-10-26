@@ -416,14 +416,6 @@ class AppLocalizationsMl extends AppLocalizations {
   String get payingTermRow => 'പ്രീമിയം അടയ്ക്കുന്ന കാലം';
 
   @override
-  String get returnRow => 'ഫലപ്രദമായ വരുമാനം (XIRR)';
-
-  @override
-  String returnValue(String percent) {
-    return 'വർഷം $percent%';
-  }
-
-  @override
   String get lifeCoverRow => 'ജീവൻ പരിരക്ഷ';
 
   @override
@@ -527,9 +519,6 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get totalPaidShort => 'ആകെ അടച്ചത്';
-
-  @override
-  String get returnShort => 'വരുമാനം';
 
   @override
   String get lifeCoverShort => 'ജീവൻ പരിരക്ഷ';

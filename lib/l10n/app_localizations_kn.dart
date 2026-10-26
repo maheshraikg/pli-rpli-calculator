@@ -415,14 +415,6 @@ class AppLocalizationsKn extends AppLocalizations {
   String get payingTermRow => 'ಪ್ರೀಮಿಯಂ ಪಾವತಿ ಅವಧಿ';
 
   @override
-  String get returnRow => 'ಪರಿಣಾಮಕಾರಿ ಲಾಭ (XIRR)';
-
-  @override
-  String returnValue(String percent) {
-    return 'ವರ್ಷಕ್ಕೆ $percent%';
-  }
-
-  @override
   String get lifeCoverRow => 'ಜೀವ ವಿಮಾ ರಕ್ಷಣೆ';
 
   @override
@@ -525,9 +517,6 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get totalPaidShort => 'ಒಟ್ಟು ಪಾವತಿ';
-
-  @override
-  String get returnShort => 'ಲಾಭ ದರ';
 
   @override
   String get lifeCoverShort => 'ಜೀವ ರಕ್ಷಣೆ';

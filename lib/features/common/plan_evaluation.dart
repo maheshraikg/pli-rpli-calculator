@@ -15,7 +15,6 @@ class PlanEvaluation {
     required this.projection,
     required this.projectionPending,
     required this.missingRateYear,
-    required this.returnRate,
     required this.illustration,
     required this.isSample,
   });
@@ -30,7 +29,6 @@ class PlanEvaluation {
   final MaturityProjection? projection;
   final bool projectionPending;
   final String? missingRateYear;
-  final double? returnRate;
   final List<IllustrationRow> illustration;
   final bool isSample;
 
@@ -73,7 +71,6 @@ PlanEvaluation evaluatePlan(AppData data, PlanConfig c) {
     Map<PremiumFrequency, PremiumResult> premiums = const {},
     MaturityProjection? projection,
     String? missingRate,
-    double? returnRate,
     List<IllustrationRow> illustration = const [],
   }) => PlanEvaluation(
     config: c,
@@ -84,7 +81,6 @@ PlanEvaluation evaluatePlan(AppData data, PlanConfig c) {
     projection: projection,
     projectionPending: pending,
     missingRateYear: missingRate,
-    returnRate: returnRate,
     illustration: illustration,
     isSample: data.tableFor(plan)?.isSample ?? false,
   );
@@ -126,7 +122,6 @@ PlanEvaluation evaluatePlan(AppData data, PlanConfig c) {
     return result(
       premiums: premiums,
       projection: projection,
-      returnRate: quote == null ? null : effectiveReturn(quote, projection, c.commencement),
       illustration: benefitIllustration(projection, quote),
     );
   } on MissingBonusRateException catch (e) {

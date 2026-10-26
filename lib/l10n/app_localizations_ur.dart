@@ -414,14 +414,6 @@ class AppLocalizationsUr extends AppLocalizations {
   String get payingTermRow => 'پریمیم ادائیگی کی مدت';
 
   @override
-  String get returnRow => 'مؤثر منافع (XIRR)';
-
-  @override
-  String returnValue(String percent) {
-    return 'سالانہ $percent%';
-  }
-
-  @override
   String get lifeCoverRow => 'زندگی کا تحفظ';
 
   @override
@@ -524,9 +516,6 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get totalPaidShort => 'کل ادائیگی';
-
-  @override
-  String get returnShort => 'منافع';
 
   @override
   String get lifeCoverShort => 'زندگی کا تحفظ';

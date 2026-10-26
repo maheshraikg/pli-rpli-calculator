@@ -416,14 +416,6 @@ class AppLocalizationsBn extends AppLocalizations {
   String get payingTermRow => 'প্রিমিয়াম দেওয়ার মেয়াদ';
 
   @override
-  String get returnRow => 'কার্যকর রিটার্ন (XIRR)';
-
-  @override
-  String returnValue(String percent) {
-    return 'বছরে $percent%';
-  }
-
-  @override
   String get lifeCoverRow => 'জীবন সুরক্ষা';
 
   @override
@@ -525,9 +517,6 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get totalPaidShort => 'মোট প্রদান';
-
-  @override
-  String get returnShort => 'রিটার্ন';
 
   @override
   String get lifeCoverShort => 'জীবন সুরক্ষা';

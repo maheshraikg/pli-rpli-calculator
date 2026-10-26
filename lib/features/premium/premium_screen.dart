@@ -90,13 +90,6 @@ class PremiumResultView extends ConsumerWidget {
                   label: p.payments.length > 1 ? l.resultTotalBenefits : l.resultMaturityValue,
                   value: formatRupees(p.totalBenefits),
                 ),
-              if (e.returnRate != null)
-                StatTile(
-                  icon: Icons.trending_up_rounded,
-                  color: const Color(0xFFB26A00),
-                  label: l.returnRow,
-                  value: l.returnValue(percentText(e.returnRate!)),
-                ),
               if (p != null)
                 StatTile(
                   icon: Icons.shield_rounded,
