@@ -43,8 +43,11 @@ def feature_graphic(black, medium):
     for x in range(w):  # diagonal-ish red → maroon gradient
         t = x / w
         d.line([(x, 0), (x, h)], fill=tuple(int(RED[i] + (MAROON[i] - RED[i]) * t) for i in range(3)))
-    icon = ImageFont.truetype(str(ROOT / 'assets/fonts/phosphor/Phosphor-Fill.ttf'), 210)
-    d.text((70, 135), chr(0xE684), font=icon, fill=WHITE)  # umbrella
+    art = Image.open(OUT / 'icon_512.png').convert('RGBA').resize((250, 250), Image.LANCZOS)
+    m = Image.new('L', art.size, 0)
+    ImageDraw.Draw(m).rounded_rectangle([0, 0, 249, 249], radius=56, fill=255)
+    art.putalpha(m)
+    img.paste(art, (55, 125), art)  # the app icon
     title = ImageFont.truetype(black, 64)
     sub = ImageFont.truetype(medium, 30)
     d.text((330, 140), 'PLI & RPLI', font=title, fill=WHITE)
