@@ -1,0 +1,74 @@
+name: Play Store release
+
+# Run by hand (Actions > Play Store release > Run workflow). Builds the
+# signed App Bundle (.aab) to upload in Play Console. Refuses to build while
+# any premium table is sample data or the upload key secrets are missing.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write  # to attach the .aab to a draft GitHub release
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Release checks (no sample data)
+        run: python3 -I tools/check_release_ready.py
+
+      - name: Require the upload key
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          for v in KEYSTORE_BASE64 KEYSTORE_PASSWORD KEY_ALIAS KEY_PASSWORD; do
+            if [ -z "${!v}" ]; then echo "Missing repository secret $v (see docs/RELEASE.md)"; exit 1; fi
+          done
+          echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/upload.jks"
+          cat > android/key.properties <<PROPS
+          storeFile=$RUNNER_TEMP/upload.jks
+          storePassword=$KEYSTORE_PASSWORD
+          keyAlias=$KEY_ALIAS
+          keyPassword=$KEY_PASSWORD
+          PROPS
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.47.7'
+          channel: stable
+          cache: true
+
+      - name: Install dependencies
+        run: |
+          flutter pub get
+          (cd packages/pli_engine && dart pub get)
+
+      - name: Analyze and test
+        run: |
+          flutter analyze
+          flutter test
+          (cd packages/pli_engine && dart analyze && dart test && dart run bin/validate_data.dart ../../assets/data)
+
+      - name: Build signed App Bundle
+        run: flutter build appbundle --release --build-number=${{ github.run_number }}0
+
+      - name: Attach to a draft release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version=$(grep '^version:' pubspec.yaml | sed 's/version: *//; s/+.*//')
+          name="pli-rpli-calculator-$version-play${{ github.run_number }}.aab"
+          cp build/app/outputs/bundle/release/app-release.aab "$name"
+          gh release create "play-$version-${{ github.run_number }}" "$name" --draft \
+            --title "Play release $version (${{ github.run_number }})" \
+            --notes "Signed App Bundle for Google Play Console. Upload this .aab under Production or a testing track."

@@ -60,3 +60,11 @@ data if anything fails.
 - Data safety: no data collected or shared.
 - Do not use the India Post logo or name as branding; the listing must say it
   is an independent calculator.
+
+## Play Store release
+1. Make sure `python3 -I tools/check_release_ready.py` passes (it refuses
+   while any premium table is sample data).
+2. GitHub > Actions > **Play Store release** > Run workflow.
+3. Download the `.aab` from the draft release it creates and upload it in
+   Play Console (closed testing first, then Production).
+The listing text, data-safety answers and declarations are in `docs/store/`.
