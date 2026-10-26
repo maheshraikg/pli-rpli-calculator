@@ -12,6 +12,7 @@ import '../common/plan_config_form.dart';
 import '../common/plan_evaluation.dart';
 import '../common/result_widgets.dart';
 import '../maturity/benefit_timeline.dart';
+import '../../core/app_icons.dart';
 
 const premiumConfigKey = 'premium';
 
@@ -59,7 +60,7 @@ class PremiumResultView extends ConsumerWidget {
         EvaluationIssues(evaluation: e),
         if (quote == null)
           InfoCard(
-            icon: Icons.table_chart_outlined,
+            icon: AppIcons.table,
             title: l.notAvailableTitle,
             message: unavailable is PremiumUnavailable && unavailable.reason == PremiumUnavailableReason.notInTable
                 ? l.notInTable
@@ -79,20 +80,20 @@ class PremiumResultView extends ConsumerWidget {
           StatGrid(
             tiles: [
               StatTile(
-                icon: Icons.payments_rounded,
+                icon: AppIcons.money,
                 label: l.totalPremiumRow(quote.totalInstalments),
                 value: formatRupees(quote.totalPremium),
               ),
               if (p != null)
                 StatTile(
-                  icon: Icons.savings_rounded,
+                  icon: AppIcons.handCoins,
                   color: const Color(0xFF2E7D32),
                   label: p.payments.length > 1 ? l.resultTotalBenefits : l.resultMaturityValue,
                   value: formatRupees(p.totalBenefits),
                 ),
               if (p != null)
                 StatTile(
-                  icon: Icons.shield_rounded,
+                  icon: AppIcons.shieldCheck,
                   color: const Color(0xFF3949AB),
                   label: l.lifeCoverRow,
                   value: formatRupees(Paise.wholeRupees(p.sumAssured)),
@@ -101,7 +102,7 @@ class PremiumResultView extends ConsumerWidget {
           ),
           SectionCard(
             title: l.allFrequenciesTitle,
-            icon: Icons.event_repeat_rounded,
+            icon: AppIcons.clockCounterClockwise,
             child: Column(
               children: [
                 for (final f in PremiumFrequency.values)
@@ -118,7 +119,7 @@ class PremiumResultView extends ConsumerWidget {
           ),
         ],
         if (e.projectionPending)
-          InfoCard(icon: Icons.hourglass_empty, title: l.notAvailableTitle, message: l.rulesPendingBody),
+          InfoCard(icon: AppIcons.hourglassMedium, title: l.notAvailableTitle, message: l.rulesPendingBody),
         if (p != null) ...[
           if (quote != null)
             SectionCard(
@@ -127,7 +128,7 @@ class PremiumResultView extends ConsumerWidget {
           if (p.payments.length > 1)
             SectionCard(
               title: l.timelineTitle,
-              icon: Icons.timeline_rounded,
+              icon: AppIcons.chartLineUp,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
@@ -143,7 +144,7 @@ class PremiumResultView extends ConsumerWidget {
         if (showQuotationButton && quote != null) ...[
           gap,
           FilledButton.icon(
-            icon: const Icon(Icons.picture_as_pdf),
+            icon: const AppIcon(AppIcons.filePdf),
             label: Text(l.makeQuotation),
             onPressed: () => context.push('/quotation'),
           ),
@@ -198,7 +199,7 @@ class _Notes extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(Icons.info_outline_rounded, size: 18, color: theme.colorScheme.onSurfaceVariant),
+          Icon(AppIcons.infoLine, size: 18, color: theme.colorScheme.onSurfaceVariant),
           const SizedBox(width: 10),
           Expanded(
             child: Column(

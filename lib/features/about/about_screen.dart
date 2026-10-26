@@ -6,6 +6,7 @@ import '../../data/data_repository.dart';
 import '../../data/rate_update.dart';
 import '../../l10n/app_localizations.dart';
 import '../common/plan_config_form.dart';
+import '../../core/app_icons.dart';
 
 const kAppVersion = '1.0.0';
 
@@ -87,7 +88,7 @@ class _AboutScreenState extends ConsumerState<AboutScreen> {
                     child: OutlinedButton.icon(
                       icon: _checking
                           ? const SizedBox.square(dimension: 16, child: CircularProgressIndicator(strokeWidth: 2))
-                          : const Icon(Icons.system_update_alt),
+                          : const AppIcon(AppIcons.downloadSimple),
                       label: Text(l.checkUpdates),
                       onPressed: _checking ? null : _checkUpdates,
                     ),

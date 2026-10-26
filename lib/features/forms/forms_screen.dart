@@ -10,6 +10,7 @@ import '../../core/widgets/ui.dart';
 import '../../l10n/app_localizations.dart';
 import '../../services/share_export.dart';
 import 'forms_data.dart';
+import '../../core/app_icons.dart';
 
 class FormsScreen extends ConsumerWidget {
   const FormsScreen({super.key});
@@ -27,10 +28,10 @@ class FormsScreen extends ConsumerWidget {
           const SizedBox(height: 8),
           Card(
             child: ListTile(
-              leading: const IconBadge(Icons.badge_rounded),
+              leading: const IconBadge(AppIcons.identificationBadge),
               title: Text(l.detailsSheetTitle),
               subtitle: Text(l.detailsSheetIntro),
-              trailing: const Icon(Icons.chevron_right_rounded),
+              trailing: const Icon(AppIcons.caretRightLine),
               onTap: () => context.push('/forms/sheet'),
             ),
           ),
@@ -46,8 +47,8 @@ class FormsScreen extends ConsumerWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       if (s.letter)
-                        Icon(Icons.edit_note_rounded, size: 20, color: Theme.of(context).colorScheme.primary),
-                      const Icon(Icons.chevron_right_rounded),
+                        AppIcon(AppIcons.notePencil, size: 20, color: Theme.of(context).colorScheme.primary),
+                      const Icon(AppIcons.caretRightLine),
                     ],
                   ),
                   onTap: () => context.push('/forms/${s.id}'),
@@ -102,7 +103,7 @@ class _FormDetailScreenState extends ConsumerState<FormDetailScreen> {
                 ),
                 SectionCard(
                   title: l.whereToGetTitle,
-                  icon: Icons.local_post_office_rounded,
+                  icon: AppIcons.mailbox,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
@@ -110,14 +111,14 @@ class _FormDetailScreenState extends ConsumerState<FormDetailScreen> {
                       const SizedBox(height: 12),
                       if (s.pdfAsset != null) ...[
                         FilledButton.icon(
-                          icon: const Icon(Icons.picture_as_pdf_rounded),
+                          icon: const AppIcon(AppIcons.filePdf),
                           label: Text(l.openOfficialForm),
                           onPressed: () => _openBundled(s.pdfAsset!),
                         ),
                         const SizedBox(height: 8),
                       ],
                       OutlinedButton.icon(
-                        icon: const Icon(Icons.open_in_new_rounded),
+                        icon: const Icon(AppIcons.arrowSquareOutLine),
                         label: Text(l.getFromIndiaPost),
                         onPressed: () =>
                             launchUrl(Uri.parse(catalog!.officialFormsUrl), mode: LaunchMode.externalApplication),
@@ -127,7 +128,7 @@ class _FormDetailScreenState extends ConsumerState<FormDetailScreen> {
                 ),
                 SectionCard(
                   title: l.documentsTitle,
-                  icon: Icons.checklist_rounded,
+                  icon: AppIcons.listChecks,
                   child: Column(
                     children: [
                       for (final d in s.docs)
@@ -141,11 +142,11 @@ class _FormDetailScreenState extends ConsumerState<FormDetailScreen> {
                     ],
                   ),
                 ),
-                if (!catalog!.verified) InfoCard(icon: Icons.info_outline_rounded, message: l.formsVerifyNote),
+                if (!catalog!.verified) InfoCard(icon: AppIcons.infoLine, message: l.formsVerifyNote),
                 if (s.letter) ...[
                   const SizedBox(height: 8),
                   FilledButton.icon(
-                    icon: const Icon(Icons.edit_note_rounded),
+                    icon: const AppIcon(AppIcons.notePencil),
                     label: Text(l.writeLetterTitle),
                     onPressed: () => context.push('/forms/${s.id}/letter'),
                   ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../app_icons.dart';
 
 class InfoCard extends StatelessWidget {
   const InfoCard({super.key, required this.icon, required this.message, this.title, this.color});
@@ -16,7 +17,7 @@ class InfoCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Icon(icon),
+          AppIcon(icon),
           const SizedBox(width: 12),
           Expanded(
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [

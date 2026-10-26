@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../l10n/app_localizations.dart';
+import '../../core/app_icons.dart';
 
 class FormService {
   const FormService({required this.id, required this.icon, required this.docs, required this.letter, this.pdfAsset});
@@ -34,7 +35,7 @@ class FormsCatalog {
         for (final s in (j['services']! as List).cast<Map<String, Object?>>())
           FormService(
             id: s['id']! as String,
-            icon: _icons[s['icon']] ?? Icons.description_rounded,
+            icon: _icons[s['icon']] ?? AppIcons.fileText,
             docs: (s['docs']! as List).cast<String>(),
             letter: s['letter']! as bool,
             pdfAsset: s['pdfAsset'] as String?,
@@ -51,18 +52,18 @@ class FormsCatalog {
 }
 
 const _icons = <String, IconData>{
-  'note_add': Icons.note_add_rounded,
-  'flag': Icons.flag_rounded,
-  'payments': Icons.payments_rounded,
-  'volunteer': Icons.volunteer_activism_rounded,
-  'loan': Icons.account_balance_rounded,
-  'close': Icons.cancel_rounded,
-  'restart': Icons.restart_alt_rounded,
-  'person_add': Icons.person_add_alt_1_rounded,
-  'home': Icons.home_rounded,
-  'content_copy': Icons.content_copy_rounded,
-  'swap': Icons.swap_horiz_rounded,
-  'transform': Icons.transform_rounded,
+  'note_add': AppIcons.filePlus,
+  'flag': AppIcons.flagBanner,
+  'payments': AppIcons.money,
+  'volunteer': AppIcons.handHeart,
+  'loan': AppIcons.bank,
+  'close': AppIcons.xCircle,
+  'restart': AppIcons.arrowCounterClockwiseLine,
+  'person_add': AppIcons.userPlus,
+  'home': AppIcons.house,
+  'content_copy': AppIcons.copyLine,
+  'swap': AppIcons.arrowsLeftRightLine,
+  'transform': AppIcons.swap,
 };
 
 final formsCatalogProvider = FutureProvider<FormsCatalog>(

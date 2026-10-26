@@ -10,6 +10,7 @@ import '../../l10n/app_localizations.dart';
 import '../common/plan_config_form.dart';
 import '../common/plan_evaluation.dart';
 import '../common/result_widgets.dart';
+import '../../core/app_icons.dart';
 
 String compareKey(int i) => 'compare$i';
 
@@ -55,13 +56,13 @@ class _CompareBodyState extends State<_CompareBody> {
               ),
             if (_count < 3)
               ActionChip(
-                avatar: const Icon(Icons.add, size: 18),
+                avatar: const Icon(AppIcons.plusBold, size: 18),
                 label: Text(l.addOption),
                 onPressed: () => setState(() => _editing = _count++),
               )
             else
               ActionChip(
-                avatar: const Icon(Icons.remove, size: 18),
+                avatar: const Icon(AppIcons.minusBold, size: 18),
                 label: Text(l.removeOption),
                 onPressed: () => setState(() {
                   _count--;
@@ -117,7 +118,7 @@ class _ComparisonTable extends ConsumerWidget {
       children: [
         SectionCard(
           title: l.comparisonTitle,
-          icon: Icons.compare_arrows_rounded,
+          icon: AppIcons.scales,
           child: Table(
             columnWidths: const {0: FlexColumnWidth(0.9)},
             border: TableBorder(horizontalInside: BorderSide(color: theme.dividerColor)),

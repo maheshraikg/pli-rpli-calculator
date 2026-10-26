@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../l10n/app_localizations.dart';
 import '../locale.dart';
+import '../app_icons.dart';
 
 class LanguageButton extends ConsumerWidget {
   const LanguageButton({super.key});
@@ -14,7 +15,7 @@ class LanguageButton extends ConsumerWidget {
     final l = AppLocalizations.of(context);
     final current = ref.watch(localeProvider)?.languageCode ?? _system;
     return PopupMenuButton<String>(
-      icon: const Icon(Icons.translate),
+      icon: const Icon(AppIcons.translateLine),
       tooltip: l.languageLabel,
       initialValue: current,
       onSelected: (code) => ref.read(localeProvider.notifier).set(code == _system ? null : Locale(code)),

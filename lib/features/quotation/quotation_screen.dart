@@ -13,6 +13,7 @@ import '../common/plan_evaluation.dart';
 import '../maturity/maturity_state.dart' show todayProvider;
 import '../premium/premium_screen.dart' show premiumConfigKey;
 import 'quotation_document.dart';
+import '../../core/app_icons.dart';
 
 class QuotationScreen extends ConsumerStatefulWidget {
   const QuotationScreen({super.key});
@@ -69,13 +70,13 @@ class _QuotationScreenState extends ConsumerState<QuotationScreen> {
             children: [
               ExpansionTile(
                 tilePadding: const EdgeInsets.symmetric(horizontal: 4),
-                leading: const IconBadge(Icons.tune_rounded, size: 34),
+                leading: const IconBadge(AppIcons.slidersHorizontalLine, size: 34),
                 title: Text(l.planDetailsTitle),
                 children: [PlanConfigForm(configKey: premiumConfigKey, data: data)],
               ),
               SectionCard(
                 title: l.quotationTitle,
-                icon: Icons.person_rounded,
+                icon: AppIcons.user,
                 child: Column(
                   children: [
                     TextField(
@@ -96,13 +97,13 @@ class _QuotationScreenState extends ConsumerState<QuotationScreen> {
               ),
               const SizedBox(height: 12),
               if (!ready)
-                InfoCard(icon: Icons.info_outline, message: l.quotationInvalid)
+                InfoCard(icon: AppIcons.infoLine, message: l.quotationInvalid)
               else ...[
                 Row(
                   children: [
                     Expanded(
                       child: FilledButton.icon(
-                        icon: const Icon(Icons.picture_as_pdf),
+                        icon: const AppIcon(AppIcons.filePdf),
                         label: Text(l.sharePdf),
                         onPressed: _busy ? null : () => _share(pdf: true),
                       ),
@@ -110,7 +111,7 @@ class _QuotationScreenState extends ConsumerState<QuotationScreen> {
                     const SizedBox(width: 12),
                     Expanded(
                       child: OutlinedButton.icon(
-                        icon: const Icon(Icons.image_outlined),
+                        icon: const AppIcon(AppIcons.image),
                         label: Text(l.shareImage),
                         onPressed: _busy ? null : () => _share(pdf: false),
                       ),

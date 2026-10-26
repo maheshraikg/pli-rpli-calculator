@@ -19,6 +19,7 @@ import '../policies/policies_screen.dart' show policyPayingYears;
 import '../policies/policies_state.dart';
 import 'forms_data.dart';
 import 'letters.dart';
+import '../../core/app_icons.dart';
 
 /// Saved-policy picker shared by the letter and details-sheet screens.
 class _PolicyPicker extends StatelessWidget {
@@ -67,7 +68,7 @@ class _TextOutput extends StatelessWidget {
           children: [
             Expanded(
               child: OutlinedButton.icon(
-                icon: const Icon(Icons.copy_rounded),
+                icon: const Icon(AppIcons.copyLine),
                 label: Text(l.copyText),
                 onPressed: () async {
                   await Clipboard.setData(ClipboardData(text: text));
@@ -78,7 +79,7 @@ class _TextOutput extends StatelessWidget {
             const SizedBox(width: 10),
             Expanded(
               child: OutlinedButton.icon(
-                icon: const Icon(Icons.share_rounded),
+                icon: const Icon(AppIcons.shareNetworkLine),
                 label: Text(l.shareAsText),
                 onPressed: () => SharePlus.instance.share(ShareParams(text: text)),
               ),
@@ -88,7 +89,7 @@ class _TextOutput extends StatelessWidget {
         if (boundaryKey != null) ...[
           const SizedBox(height: 10),
           FilledButton.icon(
-            icon: const Icon(Icons.picture_as_pdf_rounded),
+            icon: const AppIcon(AppIcons.filePdf),
             label: Text(l.sharePdf),
             onPressed: () async {
               final boundary = boundaryKey!.currentContext?.findRenderObject() as RenderRepaintBoundary?;
@@ -171,7 +172,7 @@ class _LetterScreenState extends ConsumerState<LetterScreen> {
         if (policies.isEmpty || catalog == null) {
           return ListView(
             padding: const EdgeInsets.all(16),
-            children: [InfoCard(icon: Icons.folder_open_rounded, message: l.noSavedPolicies)],
+            children: [InfoCard(icon: AppIcons.folderOpen, message: l.noSavedPolicies)],
           );
         }
         final plan = data.rules.plan(policy!.planId);
@@ -203,7 +204,7 @@ class _LetterScreenState extends ConsumerState<LetterScreen> {
           children: [
             SectionCard(
               title: l.writeLetterTitle,
-              icon: Icons.edit_note_rounded,
+              icon: AppIcons.notePencil,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
@@ -248,7 +249,7 @@ class _LetterScreenState extends ConsumerState<LetterScreen> {
                   if (id == 'revival')
                     ListTile(
                       contentPadding: EdgeInsets.zero,
-                      leading: const Icon(Icons.event_busy_rounded),
+                      leading: const AppIcon(AppIcons.calendarX),
                       title: Text(l.lapsedFromLabel),
                       subtitle: Text(_lapsedFrom == null ? '—' : formatDate(context, _lapsedFrom!)),
                       onTap: () async {
@@ -313,7 +314,7 @@ class _DetailsSheetScreenState extends ConsumerState<DetailsSheetScreen> {
         if (policy == null) {
           return ListView(
             padding: const EdgeInsets.all(16),
-            children: [InfoCard(icon: Icons.folder_open_rounded, message: l.noSavedPolicies)],
+            children: [InfoCard(icon: AppIcons.folderOpen, message: l.noSavedPolicies)],
           );
         }
         final plan = data.rules.plan(policy.planId);

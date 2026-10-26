@@ -51,6 +51,9 @@ void main() {
       ...indic,
     ]);
     await _load('MaterialIcons', ['$_flutterFonts/MaterialIcons-Regular.otf']);
+    for (final w in ['Duotone', 'Regular', 'Bold', 'Fill']) {
+      await _load('Phosphor$w', ['assets/fonts/phosphor/Phosphor-$w.ttf']);
+    }
     for (final f in ['Kannada', 'Devanagari']) {
       await _load('Noto Sans $f', ['$_extraFonts/$f.ttf']);
     }

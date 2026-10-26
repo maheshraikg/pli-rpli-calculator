@@ -13,6 +13,7 @@ import '../common/plan_config_form.dart';
 import '../maturity/maturity_state.dart' show todayProvider;
 import 'policies_screen.dart';
 import 'policies_state.dart';
+import '../../core/app_icons.dart';
 
 ReminderText reminderText(BuildContext context) {
   final l = AppLocalizations.of(context);
@@ -46,17 +47,17 @@ class PolicyDetailScreen extends ConsumerWidget {
         if (policy != null) ...[
           IconButton(
             tooltip: l.formsTitle,
-            icon: const Icon(Icons.assignment_rounded),
+            icon: const AppIcon(AppIcons.clipboardText),
             onPressed: () => context.push('/forms'),
           ),
           IconButton(
             tooltip: l.editPolicy,
-            icon: const Icon(Icons.edit),
+            icon: const Icon(AppIcons.pencilSimpleLine),
             onPressed: () => context.push('/policies/$id/edit'),
           ),
           IconButton(
             tooltip: l.delete,
-            icon: const Icon(Icons.delete_outline),
+            icon: const Icon(AppIcons.trashLine),
             onPressed: () async {
               final ok = await showDialog<bool>(
                 context: context,
@@ -119,7 +120,7 @@ class PolicyDetailScreen extends ConsumerWidget {
           padding: const EdgeInsets.all(16),
           children: [
             HeroAmountCard(
-              icon: Icons.savings_rounded,
+              icon: AppIcons.handCoins,
               label: l.accruedBonusRow,
               amount: formatRupees(bonus.total),
               caption: plan.name(lang),
@@ -138,7 +139,7 @@ class PolicyDetailScreen extends ConsumerWidget {
               StatGrid(
                 tiles: [
                   StatTile(
-                    icon: Icons.flag_rounded,
+                    icon: AppIcons.flagBanner,
                     color: const Color(0xFF2E7D32),
                     label: l.projectedMaturityRow,
                     value: formatRupees(projection.maturity.amount),
@@ -155,10 +156,10 @@ class PolicyDetailScreen extends ConsumerWidget {
                 ),
             ],
             if (!bonus.isComplete)
-              InfoCard(icon: Icons.info_outline, message: l.bonusMissingYears(bonus.missingYears.join(', '))),
+              InfoCard(icon: AppIcons.infoLine, message: l.bonusMissingYears(bonus.missingYears.join(', '))),
             const SizedBox(height: 16),
             SwitchListTile(
-              secondary: const IconBadge(Icons.notifications_active_rounded, size: 36),
+              secondary: const IconBadge(AppIcons.bellRinging, size: 36),
               title: Text(l.remindersLabel),
               value: policy.reminders,
               onChanged: (on) async {
@@ -177,7 +178,7 @@ class PolicyDetailScreen extends ConsumerWidget {
             ),
             SectionCard(
               title: l.upcomingDues,
-              icon: Icons.event_repeat_rounded,
+              icon: AppIcons.clockCounterClockwise,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
@@ -187,7 +188,7 @@ class PolicyDetailScreen extends ConsumerWidget {
                       padding: const EdgeInsets.symmetric(vertical: 6),
                       child: Row(
                         children: [
-                          Icon(Icons.circle, size: 8, color: theme.colorScheme.primary),
+                          Icon(AppIcons.circleFill, size: 8, color: theme.colorScheme.primary),
                           const SizedBox(width: 12),
                           Expanded(child: Text(formatDate(context, d), style: theme.textTheme.bodyLarge)),
                           Text(

@@ -10,6 +10,7 @@ import '../../core/widgets/ui.dart';
 import '../../data/agent_profile.dart';
 import '../../data/storage.dart';
 import '../../l10n/app_localizations.dart';
+import '../../core/app_icons.dart';
 
 /// Round logo / photo, or an initial when none is set.
 class AgentAvatar extends StatelessWidget {
@@ -83,7 +84,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
             controller: c,
             keyboardType: type,
             textCapitalization: TextCapitalization.words,
-            decoration: InputDecoration(labelText: label, prefixIcon: Icon(icon)),
+            decoration: InputDecoration(labelText: label, prefixIcon: AppIcon(icon)),
             onChanged: (_) => setState(() {}),
           ),
         );
@@ -98,7 +99,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
             Wrap(spacing: 8, alignment: WrapAlignment.center, children: [
               OutlinedButton.icon(
                 style: OutlinedButton.styleFrom(minimumSize: const Size(0, 44)),
-                icon: const Icon(Icons.add_a_photo_rounded),
+                icon: const AppIcon(AppIcons.camera),
                 label: Text(l.chooseLogo),
                 onPressed: _pickLogo,
               ),
@@ -109,9 +110,9 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
         ),
         SectionCard(
           child: Column(children: [
-            field(_name, l.agentNameField, Icons.person_rounded),
-            field(_phone, l.agentPhoneField, Icons.phone_rounded, type: TextInputType.phone),
-            field(_code, l.agentCodeField, Icons.badge_rounded),
+            field(_name, l.agentNameField, AppIcons.user),
+            field(_phone, l.agentPhoneField, AppIcons.phoneLine, type: TextInputType.phone),
+            field(_code, l.agentCodeField, AppIcons.identificationBadge),
           ]),
         ),
         Padding(
@@ -119,7 +120,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
           child: Text(l.profileNote, style: Theme.of(context).textTheme.bodySmall),
         ),
         FilledButton.icon(
-          icon: const Icon(Icons.save_rounded),
+          icon: const Icon(AppIcons.floppyDiskLine),
           label: Text(l.save),
           onPressed: () async {
             await ref.read(agentProfileProvider.notifier).save(_current);

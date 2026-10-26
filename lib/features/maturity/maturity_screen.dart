@@ -14,6 +14,7 @@ import '../../data/data_repository.dart';
 import '../../l10n/app_localizations.dart';
 import 'benefit_timeline.dart';
 import 'maturity_state.dart';
+import '../../core/app_icons.dart';
 
 class MaturityScreen extends StatelessWidget {
   const MaturityScreen({super.key});
@@ -46,7 +47,7 @@ class _MaturityBody extends ConsumerWidget {
       children: [
         SectionCard(
           title: l.planLabel,
-          icon: Icons.description_rounded,
+          icon: AppIcons.fileText,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -78,11 +79,11 @@ class _MaturityBody extends ConsumerWidget {
           ),
         ),
         if (pending)
-          InfoCard(icon: Icons.hourglass_empty, title: l.notAvailableTitle, message: l.rulesPendingBody)
+          InfoCard(icon: AppIcons.hourglassMedium, title: l.notAvailableTitle, message: l.rulesPendingBody)
         else ...[
           SectionCard(
             title: l.sectionCoverTitle,
-            icon: Icons.shield_rounded,
+            icon: AppIcons.shieldCheck,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -139,7 +140,7 @@ class _MaturityBody extends ConsumerWidget {
 
     final startDate = ListTile(
       contentPadding: EdgeInsets.zero,
-      leading: const Icon(Icons.event),
+      leading: const AppIcon(AppIcons.calendarBlank),
       title: Text(l.startDateLabel),
       subtitle: Text(DateFormat.yMMMd(Localizations.localeOf(context).toLanguageTag()).format(input.commencement)),
       onTap: () async {
@@ -197,19 +198,19 @@ class _Result extends ConsumerWidget {
     return switch (outcome) {
       null => const SizedBox.shrink(),
       MaturityRulesPending() => InfoCard(
-        icon: Icons.hourglass_empty,
+        icon: AppIcons.hourglassMedium,
         title: l.notAvailableTitle,
         message: l.rulesPendingBody,
       ),
       MaturityMissingRate(:final financialYear) => InfoCard(
-        icon: Icons.error_outline,
+        icon: AppIcons.warningCircle,
         color: errorColor,
         message: l.missingBonusRate(financialYear),
       ),
       MaturityInvalid(:final violations) => Column(
         children: [
           for (final v in violations)
-            InfoCard(icon: Icons.error_outline, color: errorColor, message: violationMessage(l, v, plan, lang)),
+            InfoCard(icon: AppIcons.warningCircle, color: errorColor, message: violationMessage(l, v, plan, lang)),
         ],
       ),
       MaturityReady(:final projection) => _ProjectionView(projection: projection),
@@ -233,7 +234,7 @@ class _ProjectionView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         HeroAmountCard(
-          icon: Icons.savings_rounded,
+          icon: AppIcons.handCoins,
           label: hasSurvival ? l.resultTotalBenefits : l.resultMaturityValue,
           amount: formatRupees(hasSurvival ? p.totalBenefits : p.maturity.amount),
           caption: '${l.sumAssuredRow} ${formatRupees(Paise.wholeRupees(p.sumAssured))} • ${l.termYears(p.termYears)}',
@@ -248,7 +249,7 @@ class _ProjectionView extends StatelessWidget {
         if (hasSurvival)
           SectionCard(
             title: l.timelineTitle,
-            icon: Icons.timeline_rounded,
+            icon: AppIcons.chartLineUp,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [

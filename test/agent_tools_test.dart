@@ -10,6 +10,7 @@ import 'package:pli_sahayak/features/policies/policies_screen.dart';
 import 'package:pli_sahayak/services/reminders.dart';
 
 import 'support.dart';
+import 'package:pli_sahayak/core/app_icons.dart';
 
 SavedPolicy _p(String id, String name, DateTime start,
         {PremiumFrequency f = PremiumFrequency.monthly, String phone = '', int sa = 100000, bool reminders = false}) =>
@@ -179,7 +180,7 @@ void main() {
     await tester.enterText(find.byType(TextField), 'nobody');
     await tester.pumpAndSettle();
     expect(find.text('No policies match “nobody”.'), findsOneWidget);
-    await tester.tap(find.byIcon(Icons.close_rounded));
+    await tester.tap(find.byIcon(AppIcons.xLine));
     await tester.pumpAndSettle();
     expect(find.text('Lakshmi'), findsOneWidget);
     await tester.tap(find.widgetWithText(ChoiceChip, 'Sum assured'));

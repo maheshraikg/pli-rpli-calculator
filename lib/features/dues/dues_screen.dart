@@ -20,6 +20,7 @@ import '../maturity/maturity_state.dart' show todayProvider;
 import '../policies/policies_screen.dart' show policyPayingYears;
 import '../policies/policies_state.dart';
 import '../policies/policy_detail_screen.dart' show reminderText;
+import '../../core/app_icons.dart';
 
 class DueItem {
   const DueItem(this.policy, this.date);
@@ -139,12 +140,12 @@ class _DuesScreenState extends ConsumerState<DuesScreen> {
           ]),
           const SizedBox(height: 8),
           if (policies.isEmpty)
-            InfoCard(icon: Icons.folder_open_rounded, message: l.noSavedPolicies)
+            InfoCard(icon: AppIcons.folderOpen, message: l.noSavedPolicies)
           else if (items.isEmpty)
-            InfoCard(icon: Icons.event_available_rounded, message: l.noDuesInMonth)
+            InfoCard(icon: AppIcons.calendarCheck, message: l.noDuesInMonth)
           else ...[
             HeroAmountCard(
-              icon: Icons.event_note_rounded,
+              icon: AppIcons.calendarDots,
               label: l.duesPendingTotal,
               amount: formatRupees(sum.pending),
               caption: l.duesCollectedOf(sum.collectedCount, items.length),
@@ -160,7 +161,7 @@ class _DuesScreenState extends ConsumerState<DuesScreen> {
                 ChoiceChip(label: Text(label), selected: _filter == f, onSelected: (_) => setState(() => _filter = f)),
             ]),
             const SizedBox(height: 4),
-            if (shown.isEmpty) InfoCard(icon: Icons.checklist_rounded, message: l.noDuesInFilter),
+            if (shown.isEmpty) InfoCard(icon: AppIcons.listChecks, message: l.noDuesInFilter),
             for (final item in shown) _dueCard(context, data, item, agent, lang),
             const SizedBox(height: 4),
             Text(l.collectedNote, style: theme.textTheme.bodySmall),
@@ -219,7 +220,7 @@ class _DuesScreenState extends ConsumerState<DuesScreen> {
                   ),
                   if (!paid)
                     TextButton.icon(
-                      icon: Icon(item.policy.phone.isEmpty ? Icons.share_rounded : Icons.chat_rounded),
+                      icon: AppIcon(item.policy.phone.isEmpty ? AppIcons.shareNetworkLine : AppIcons.whatsappLogo),
                       label: Text(l.remindOnWhatsApp),
                       onPressed: () {
                         final msg = l.dueReminderMessage(

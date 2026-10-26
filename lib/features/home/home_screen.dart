@@ -10,6 +10,7 @@ import '../../core/widgets/ui.dart';
 import '../../data/data_repository.dart';
 import '../../data/storage.dart';
 import '../../l10n/app_localizations.dart';
+import '../../core/app_icons.dart';
 
 const _teal = Color(0xFF00897B);
 const _indigo = Color(0xFF3949AB);
@@ -39,7 +40,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       context: context,
       barrierDismissible: false,
       builder: (context) => AlertDialog(
-        icon: const Icon(Icons.info_outline),
+        icon: const Icon(AppIcons.infoLine),
         title: Text(l.independentDisclaimerTitle),
         content: Text('${l.independentDisclaimer}\n\n${l.bonusDisclaimer}'),
         actions: [FilledButton(onPressed: () => Navigator.pop(context), child: Text(l.understood))],
@@ -57,29 +58,29 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       (
         l.sectionCalculators,
         [
-          (Icons.calculate_rounded, l.tilePremium, l.descPremium, '/premium', kAccentRed),
-          (Icons.savings_rounded, l.tileMaturity, l.descMaturity, '/maturity', _green),
-          (Icons.compare_arrows_rounded, l.tileCompare, l.descCompare, '/compare', _indigo),
-          (Icons.account_balance_wallet_rounded, l.tileAfford, l.descAfford, '/afford', _teal),
+          (AppIcons.currencyInr, l.tilePremium, l.descPremium, '/premium', kAccentRed),
+          (AppIcons.handCoins, l.tileMaturity, l.descMaturity, '/maturity', _green),
+          (AppIcons.scales, l.tileCompare, l.descCompare, '/compare', _indigo),
+          (AppIcons.wallet, l.tileAfford, l.descAfford, '/afford', _teal),
         ],
       ),
       (
         l.sectionServicing,
         [
-          (Icons.folder_shared_rounded, l.tileMyPolicies, l.descPolicies, '/policies', _purple),
-        (Icons.event_note_rounded, l.tileDues, l.descDues, '/dues', _teal),
-          (Icons.build_circle_rounded, l.tileTools, l.descTools, '/tools', _amber),
-          (Icons.picture_as_pdf_rounded, l.tileQuotation, l.descQuotation, '/quotation', kAccentRed),
-          (Icons.assignment_rounded, l.tileForms, l.descForms, '/forms', _indigo),
-        (Icons.badge_rounded, l.tileProfile, l.descProfile, '/profile', _green),
+          (AppIcons.umbrella, l.tileMyPolicies, l.descPolicies, '/policies', _purple),
+        (AppIcons.calendarDots, l.tileDues, l.descDues, '/dues', _teal),
+          (AppIcons.bank, l.tileTools, l.descTools, '/tools', _amber),
+          (AppIcons.invoice, l.tileQuotation, l.descQuotation, '/quotation', kAccentRed),
+          (AppIcons.clipboardText, l.tileForms, l.descForms, '/forms', _indigo),
+        (AppIcons.identificationBadge, l.tileProfile, l.descProfile, '/profile', _green),
         ],
       ),
       (
         l.sectionLearn,
         [
-          (Icons.verified_user_rounded, l.tileEligibility, l.descEligibility, '/eligibility', _green),
-          (Icons.menu_book_rounded, l.tilePlans, l.descPlans, '/plans', _indigo),
-          (Icons.info_rounded, l.tileAbout, l.descAbout, '/about', _teal),
+          (AppIcons.userCheck, l.tileEligibility, l.descEligibility, '/eligibility', _green),
+          (AppIcons.bookOpenText, l.tilePlans, l.descPlans, '/plans', _indigo),
+          (AppIcons.info, l.tileAbout, l.descAbout, '/about', _teal),
         ],
       ),
     ];
@@ -209,7 +210,7 @@ class _Header extends StatelessWidget {
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          const Icon(Icons.event_note_rounded, color: white, size: 16),
+                          const AppIcon(AppIcons.calendarDots, color: white, size: 16),
                           const SizedBox(width: 6),
                           Text('FY $financialYear', style: text.labelMedium?.copyWith(color: white)),
                         ],
@@ -230,7 +231,7 @@ class _Header extends StatelessWidget {
                       padding: const EdgeInsets.all(14),
                       child: Row(
                         children: [
-                          const IconBadge(Icons.bolt_rounded, size: 44),
+                          const IconBadge(AppIcons.calculator, size: 44),
                           const SizedBox(width: 12),
                           Expanded(
                             child: Column(
@@ -241,7 +242,7 @@ class _Header extends StatelessWidget {
                               ],
                             ),
                           ),
-                          const Icon(Icons.arrow_forward_rounded, color: kAccentRed),
+                          const Icon(AppIcons.arrowRightBold, color: kAccentRed),
                         ],
                       ),
                     ),

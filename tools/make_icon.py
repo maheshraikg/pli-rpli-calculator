@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
-"""Generate the launcher icon: a white umbrella (insurance) on the app's red
-accent. Deliberately not India Post's logo. Writes legacy + adaptive
-Android icons and a 512 px Play Store icon.
+"""Generate the launcher icon: a white umbrella (insurance cover) over bold
+"PLI" lettering on the app's red. Deliberately not India Post's logo.
+Writes legacy + adaptive Android icons, the in-app header mark and a
+512 px Play Store icon.
 
-Usage: python3 -I tools/make_icon.py
+Usage: python3 -I tools/make_icon.py <Roboto-Black.ttf>
+(The umbrella glyph comes from the bundled Phosphor Fill font.)
 """
+import sys
 from pathlib import Path
 
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 
 RED = (200, 16, 46, 255)
 WHITE = (255, 255, 255, 255)
@@ -50,12 +53,41 @@ def umbrella(size, scale=0.62, bg=None, rounded=False, ink=None):
     return img.resize((size, size), Image.LANCZOS)
 
 
+UMBRELLA = chr(0xE684)  # Phosphor Fill "umbrella"
+
+
+def mark(size, scale=0.62, bg=None, rounded=False, ink=None, lettering=True):
+    """Umbrella above "PLI", centred, occupying `scale` of a size×size canvas."""
+    k = 4
+    n = size * k
+    img = Image.new('RGBA', (n, n), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    colour = ink or WHITE
+    if bg:
+        if rounded:
+            d.rounded_rectangle([0, 0, n - 1, n - 1], radius=int(n * 0.22), fill=bg)
+        else:
+            d.rectangle([0, 0, n, n], fill=bg)
+    box = n * scale
+    glyph_h = box * (0.62 if lettering else 1.0)
+    icon_font = ImageFont.truetype(str(ROOT / 'assets/fonts/phosphor/Phosphor-Fill.ttf'), int(glyph_h * 1.18))
+    l, t, r, b = d.textbbox((0, 0), UMBRELLA, font=icon_font)
+    top = (n - box) / 2
+    d.text(((n - (r - l)) / 2 - l, top - t), UMBRELLA, font=icon_font, fill=colour)
+    if lettering:
+        text_font = ImageFont.truetype(sys.argv[1], int(box * 0.36))
+        l2, t2, r2, b2 = d.textbbox((0, 0), 'PLI', font=text_font)
+        y = top + (b - t) + box * 0.04
+        d.text(((n - (r2 - l2)) / 2 - l2, y - t2), 'PLI', font=text_font, fill=colour)
+    return img.resize((size, size), Image.LANCZOS)
+
+
 def main():
     legacy = {'mdpi': 48, 'hdpi': 72, 'xhdpi': 96, 'xxhdpi': 144, 'xxxhdpi': 192}
     for density, px in legacy.items():
-        umbrella(px, 0.62, RED, rounded=True).save(RES / f'mipmap-{density}/ic_launcher.png')
+        mark(px, 0.66, RED, rounded=True).save(RES / f'mipmap-{density}/ic_launcher.png')
         # Adaptive foreground: 108dp canvas, art inside the 66dp safe zone.
-        umbrella(px * 108 // 48, 0.42).save(RES / f'mipmap-{density}/ic_launcher_foreground.png')
+        mark(px * 108 // 48, 0.44).save(RES / f'mipmap-{density}/ic_launcher_foreground.png')
     (RES / 'mipmap-anydpi-v26').mkdir(exist_ok=True)
     (RES / 'mipmap-anydpi-v26/ic_launcher.xml').write_text(
         '<?xml version="1.0" encoding="utf-8"?>\n'
@@ -69,10 +101,10 @@ def main():
         '    <color name="ic_launcher_background">#C8102E</color>\n</resources>\n')
     # In-app header mark: red umbrella on transparent.
     (ROOT / 'assets/images').mkdir(parents=True, exist_ok=True)
-    umbrella(192, 0.9, ink=RED).save(ROOT / 'assets/images/umbrella.png', optimize=True)
+    mark(192, 0.9, ink=RED, lettering=False).save(ROOT / 'assets/images/umbrella.png', optimize=True)
     store = ROOT / 'docs/store'
     store.mkdir(parents=True, exist_ok=True)
-    umbrella(512, 0.62, RED).save(store / 'icon_512.png')
+    mark(512, 0.66, RED).save(store / 'icon_512.png')
     print('icons written')
 
 

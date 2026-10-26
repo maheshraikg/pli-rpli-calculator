@@ -7,6 +7,7 @@ import '../../core/widgets/info_card.dart';
 import '../../core/widgets/number_stepper.dart';
 import '../../core/widgets/ui.dart';
 import '../../l10n/app_localizations.dart';
+import '../../core/app_icons.dart';
 
 class EligibilityScreen extends StatelessWidget {
   const EligibilityScreen({super.key});
@@ -41,7 +42,7 @@ class _EligibilityBodyState extends State<_EligibilityBody> {
 
     Widget groupSection(Scheme scheme, String title) => SectionCard(
       title: title,
-      icon: scheme == Scheme.pli ? Icons.work_rounded : Icons.agriculture_rounded,
+      icon: scheme == Scheme.pli ? AppIcons.briefcase : AppIcons.plant,
       child: Wrap(
         spacing: 8,
         runSpacing: 4,
@@ -61,7 +62,7 @@ class _EligibilityBodyState extends State<_EligibilityBody> {
         for (final p in plans)
           ListTile(
             contentPadding: EdgeInsets.zero,
-            leading: const IconBadge(Icons.check_rounded, color: Color(0xFF2E7D32), size: 36),
+            leading: const IconBadge(AppIcons.checkBold, color: Color(0xFF2E7D32), size: 36),
             title: Text(p.name(lang)),
             subtitle: Text(schemeName(l, p.scheme)),
           ),
@@ -87,7 +88,7 @@ class _EligibilityBodyState extends State<_EligibilityBody> {
         ),
         const SizedBox(height: 8),
         if (_groups.isEmpty)
-          InfoCard(icon: Icons.info_outline, message: l.selectGroupPrompt)
+          InfoCard(icon: AppIcons.infoLine, message: l.selectGroupPrompt)
         else
           SectionCard(
             child: Column(
@@ -99,7 +100,7 @@ class _EligibilityBodyState extends State<_EligibilityBody> {
                   spacing: 8,
                   children: [
                     for (final s in result.eligibleSchemes)
-                      Chip(avatar: const Icon(Icons.verified, size: 18), label: Text(schemeName(l, s))),
+                      Chip(avatar: const AppIcon(AppIcons.sealCheck, size: 18), label: Text(schemeName(l, s))),
                   ],
                 ),
                 const SizedBox(height: 16),

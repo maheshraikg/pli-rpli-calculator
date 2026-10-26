@@ -8,6 +8,7 @@ import 'package:pli_sahayak/features/maturity/maturity_state.dart';
 import 'package:pli_sahayak/l10n/app_localizations.dart';
 
 import 'support.dart';
+import 'package:pli_sahayak/core/app_icons.dart';
 
 void main() {
   test('language picker offers exactly the generated locales', () {
@@ -75,7 +76,7 @@ void main() {
 
   testWidgets('choosing a language from the picker switches the app', (tester) async {
     await pumpApp(tester);
-    await tester.tap(find.byIcon(Icons.translate));
+    await tester.tap(find.byIcon(AppIcons.translateLine));
     await tester.pumpAndSettle();
     await tester.tap(find.text('हिन्दी'));
     await tester.pumpAndSettle();

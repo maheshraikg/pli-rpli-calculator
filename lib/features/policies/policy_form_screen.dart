@@ -15,6 +15,7 @@ import '../common/result_widgets.dart';
 import 'policies_screen.dart';
 import 'policies_state.dart';
 import 'policy_detail_screen.dart';
+import '../../core/app_icons.dart';
 
 const policyFormKey = 'policyForm';
 
@@ -107,7 +108,7 @@ class _PolicyFormScreenState extends ConsumerState<PolicyFormScreen> {
             TextField(
               controller: _phone,
               keyboardType: TextInputType.phone,
-              decoration: InputDecoration(labelText: l.customerPhoneLabel, prefixIcon: const Icon(Icons.phone_android_rounded)),
+              decoration: InputDecoration(labelText: l.customerPhoneLabel, prefixIcon: const AppIcon(AppIcons.deviceMobile)),
             ),
             if (_submitted && _premium == null)
               Text(l.requiredField, style: TextStyle(color: Theme.of(context).colorScheme.error)),
@@ -119,7 +120,7 @@ class _PolicyFormScreenState extends ConsumerState<PolicyFormScreen> {
             ),
             if (e != null && !e.isValid) EvaluationIssues(evaluation: e),
             const SizedBox(height: 16),
-            FilledButton.icon(icon: const Icon(Icons.save), label: Text(l.save), onPressed: () => _save(e)),
+            FilledButton.icon(icon: const Icon(AppIcons.floppyDiskLine), label: Text(l.save), onPressed: () => _save(e)),
             const SizedBox(height: 8),
             Text(l.savedLocally, style: Theme.of(context).textTheme.bodySmall),
           ],

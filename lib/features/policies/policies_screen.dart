@@ -18,6 +18,7 @@ import '../maturity/maturity_state.dart' show todayProvider;
 import '../../services/share_export.dart';
 import 'policies_state.dart';
 import 'policy_detail_screen.dart' show reminderText;
+import '../../core/app_icons.dart';
 
 int policyPayingYears(PlanRule plan, SavedPolicy p) =>
     columnDimensionFor(plan) == null ? p.column : payingYears(plan, p.entryAge, p.column);
@@ -90,23 +91,23 @@ class _PoliciesScreenState extends ConsumerState<PoliciesScreen> {
       title: l.policiesTitle,
       actions: [
         PopupMenuButton<String>(
-          icon: const Icon(Icons.more_vert_rounded),
+          icon: const Icon(AppIcons.dotsThreeVerticalBold),
           onSelected: (v) => v == 'export' ? _export(context, ref) : _import(context, ref),
           itemBuilder: (context) => [
             PopupMenuItem(
               value: 'export',
               enabled: policies.isNotEmpty,
-              child: ListTile(leading: const Icon(Icons.backup_rounded), title: Text(l.exportBackup)),
+              child: ListTile(leading: const Icon(AppIcons.cloudArrowUpLine), title: Text(l.exportBackup)),
             ),
             PopupMenuItem(
               value: 'import',
-              child: ListTile(leading: const Icon(Icons.restore_rounded), title: Text(l.importBackup)),
+              child: ListTile(leading: const Icon(AppIcons.clockCounterClockwiseLine), title: Text(l.importBackup)),
             ),
           ],
         ),
       ],
       floatingActionButton: FloatingActionButton.extended(
-        icon: const Icon(Icons.add),
+        icon: const Icon(AppIcons.plusBold),
         label: Text(l.addPolicy),
         onPressed: () => context.push('/policies/new'),
       ),
@@ -115,7 +116,7 @@ class _PoliciesScreenState extends ConsumerState<PoliciesScreen> {
           return ListView(
             padding: const EdgeInsets.all(16),
             children: [
-              InfoCard(icon: Icons.folder_open, message: l.noPolicies),
+              InfoCard(icon: AppIcons.folderOpen, message: l.noPolicies),
               const SizedBox(height: 8),
               Text(l.savedLocally, style: Theme.of(context).textTheme.bodySmall),
             ],
@@ -130,12 +131,12 @@ class _PoliciesScreenState extends ConsumerState<PoliciesScreen> {
               onChanged: (_) => setState(() {}),
               textInputAction: TextInputAction.search,
               decoration: InputDecoration(
-                prefixIcon: const Icon(Icons.search_rounded),
+                prefixIcon: const Icon(AppIcons.magnifyingGlassLine),
                 hintText: l.searchPolicies,
                 suffixIcon: _search.text.isEmpty
                     ? null
                     : IconButton(
-                        icon: const Icon(Icons.close_rounded),
+                        icon: const Icon(AppIcons.xLine),
                         tooltip: MaterialLocalizations.of(context).deleteButtonTooltip,
                         onPressed: () => setState(_search.clear),
                       ),
@@ -157,7 +158,7 @@ class _PoliciesScreenState extends ConsumerState<PoliciesScreen> {
               ],
             ),
             const SizedBox(height: 8),
-            if (shown.isEmpty) InfoCard(icon: Icons.search_off_rounded, message: l.noSearchResults(_search.text.trim())),
+            if (shown.isEmpty) InfoCard(icon: AppIcons.magnifyingGlassMinus, message: l.noSearchResults(_search.text.trim())),
             for (final p in shown) _PolicyTile(policy: p, data: data, today: today, lang: lang),
             Text(l.savedLocally, style: Theme.of(context).textTheme.bodySmall),
           ],
@@ -244,7 +245,7 @@ class _PolicyTile extends StatelessWidget {
                       children: [
                         Expanded(child: Text(policy.holderName, style: theme.textTheme.titleMedium)),
                         if (policy.reminders)
-                          Icon(Icons.notifications_active_rounded, size: 18, color: theme.colorScheme.primary),
+                          AppIcon(AppIcons.bellRinging, size: 18, color: theme.colorScheme.primary),
                       ],
                     ),
                     Text(
@@ -268,7 +269,7 @@ class _PolicyTile extends StatelessWidget {
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Icon(Icons.event_rounded, size: 14, color: theme.colorScheme.onSecondaryContainer),
+                          AppIcon(AppIcons.calendarBlank, size: 14, color: theme.colorScheme.onSecondaryContainer),
                           const SizedBox(width: 6),
                           Flexible(
                             child: Text(

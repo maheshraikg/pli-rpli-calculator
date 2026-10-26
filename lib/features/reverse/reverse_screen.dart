@@ -10,6 +10,7 @@ import '../../core/widgets/ui.dart';
 import '../../data/data_repository.dart';
 import '../../l10n/app_localizations.dart';
 import '../common/plan_config_form.dart';
+import '../../core/app_icons.dart';
 
 class ReverseScreen extends StatelessWidget {
   const ReverseScreen({super.key});
@@ -88,7 +89,7 @@ class _ReverseBodyState extends State<_ReverseBody> {
           ],
         ),
         gap,
-        if (budget != null && options.isEmpty) InfoCard(icon: Icons.info_outline, message: l.reverseNone),
+        if (budget != null && options.isEmpty) InfoCard(icon: AppIcons.infoLine, message: l.reverseNone),
         for (final o in options)
           Card(
             child: Padding(
@@ -96,7 +97,7 @@ class _ReverseBodyState extends State<_ReverseBody> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  IconBadge(o.quote.plan.scheme == Scheme.pli ? Icons.shield_rounded : Icons.agriculture_rounded),
+                  IconBadge(o.quote.plan.scheme == Scheme.pli ? AppIcons.shieldCheck : AppIcons.plant),
                   const SizedBox(width: 12),
                   Expanded(
                     child: Column(

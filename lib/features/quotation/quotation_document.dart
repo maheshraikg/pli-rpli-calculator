@@ -8,6 +8,7 @@ import '../../l10n/app_localizations.dart';
 import '../common/plan_config_form.dart';
 import '../common/plan_evaluation.dart';
 import '../profile/profile_screen.dart' show AgentAvatar;
+import '../../core/app_icons.dart';
 
 /// Printable quotation. Labels are bilingual (app language + English) when
 /// the app language is not English. Always drawn light, for printing.
@@ -105,7 +106,7 @@ class QuotationDocument extends StatelessWidget {
                             if (agent.phone.isNotEmpty)
                               Row(
                                 children: [
-                                  const Icon(Icons.phone_rounded, size: 13, color: ink),
+                                  const Icon(AppIcons.phoneLine, size: 13, color: ink),
                                   const SizedBox(width: 4),
                                   Text(agent.phone),
                                 ],

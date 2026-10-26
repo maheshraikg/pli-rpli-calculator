@@ -9,6 +9,7 @@ import '../../core/widgets/ui.dart';
 import '../../data/data_repository.dart';
 import '../../l10n/app_localizations.dart';
 import 'plan_config.dart';
+import '../../core/app_icons.dart';
 
 String frequencyName(AppLocalizations l, PremiumFrequency f) => switch (f) {
   PremiumFrequency.monthly => l.freqMonthly,
@@ -80,7 +81,7 @@ class PlanConfigForm extends ConsumerWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        group(l.planLabel, Icons.description_rounded, [
+        group(l.planLabel, AppIcons.fileText, [
           SegmentedButton<Scheme>(
             segments: [for (final s in Scheme.values) ButtonSegment(value: s, label: Text(s.code))],
             selected: {c.scheme},
@@ -102,7 +103,7 @@ class PlanConfigForm extends ConsumerWidget {
             onChanged: (id) => form.selectPlan(rules.plan(id!)),
           ),
         ]),
-        group(l.sectionPersonTitle, Icons.person_rounded, [
+        group(l.sectionPersonTitle, AppIcons.user, [
           if (c.dob == null) ...[
             NumberStepper(
               label: l.entryAgeLabel,
@@ -115,7 +116,7 @@ class PlanConfigForm extends ConsumerWidget {
             Align(
               alignment: AlignmentDirectional.centerStart,
               child: TextButton.icon(
-                icon: const Icon(Icons.cake_outlined),
+                icon: const AppIcon(AppIcons.cake),
                 label: Text(l.useDobInstead),
                 onPressed: () async {
                   final d = await pickDate(
@@ -130,7 +131,7 @@ class PlanConfigForm extends ConsumerWidget {
           ] else ...[
             ListTile(
               contentPadding: EdgeInsets.zero,
-              leading: const Icon(Icons.cake_outlined),
+              leading: const AppIcon(AppIcons.cake),
               title: Text(l.dobLabel),
               subtitle: Text(formatDate(context, c.dob!)),
               onTap: () async {
@@ -159,7 +160,7 @@ class PlanConfigForm extends ConsumerWidget {
               valueText: l.ageYears,
             ),
         ]),
-        group(l.sectionCoverTitle, Icons.shield_rounded, [
+        group(l.sectionCoverTitle, AppIcons.shieldCheck, [
           SumAssuredField(
             value: c.sumAssured,
             onChanged: form.setSumAssured,
@@ -194,7 +195,7 @@ class PlanConfigForm extends ConsumerWidget {
           if (showStartDate)
             ListTile(
               contentPadding: EdgeInsets.zero,
-              leading: const Icon(Icons.event),
+              leading: const AppIcon(AppIcons.calendarBlank),
               title: Text(l.startDateLabel),
               subtitle: Text(formatDate(context, c.commencement)),
               onTap: () async {

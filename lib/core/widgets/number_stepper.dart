@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../l10n/app_localizations.dart';
+import '../app_icons.dart';
 
 /// Large −/+ control for small whole numbers such as age or term.
 class NumberStepper extends StatelessWidget {
@@ -30,7 +31,7 @@ class NumberStepper extends StatelessWidget {
       IconButton.outlined(
         tooltip: l.decrease,
         onPressed: value > min ? () => onChanged(value - 1) : null,
-        icon: const Icon(Icons.remove),
+        icon: const Icon(AppIcons.minusBold),
       ),
       SizedBox(
         width: 96,
@@ -39,7 +40,7 @@ class NumberStepper extends StatelessWidget {
       IconButton.outlined(
         tooltip: l.increase,
         onPressed: value < max ? () => onChanged(value + 1) : null,
-        icon: const Icon(Icons.add),
+        icon: const Icon(AppIcons.plusBold),
       ),
     ]);
   }

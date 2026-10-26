@@ -6,6 +6,7 @@ import '../../core/messages.dart';
 import '../../core/widgets/info_card.dart';
 import '../../l10n/app_localizations.dart';
 import 'plan_evaluation.dart';
+import '../../core/app_icons.dart';
 
 class ValueRow extends StatelessWidget {
   const ValueRow(this.label, this.value, {super.key, this.emphasis = false});
@@ -54,9 +55,9 @@ class EvaluationIssues extends StatelessWidget {
     return Column(
       children: [
         for (final v in e.violations)
-          InfoCard(icon: Icons.error_outline, color: error, message: violationMessage(l, v, e.plan, lang)),
+          InfoCard(icon: AppIcons.warningCircle, color: error, message: violationMessage(l, v, e.plan, lang)),
         if (e.missingRateYear != null)
-          InfoCard(icon: Icons.error_outline, color: error, message: l.missingBonusRate(e.missingRateYear!)),
+          InfoCard(icon: AppIcons.warningCircle, color: error, message: l.missingBonusRate(e.missingRateYear!)),
       ],
     );
   }
@@ -174,7 +175,7 @@ class _ExpandableIllustrationState extends State<ExpandableIllustration> {
       children: [
         Text(l.illustrationTitle, style: Theme.of(context).textTheme.titleLarge),
         TextButton.icon(
-          icon: Icon(_open ? Icons.expand_less : Icons.expand_more),
+          icon: Icon(_open ? AppIcons.caretUpLine : AppIcons.caretDownLine),
           label: Text(_open ? l.hideTable : l.showTable),
           onPressed: () => setState(() => _open = !_open),
         ),

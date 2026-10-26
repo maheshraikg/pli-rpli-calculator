@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../theme.dart';
+import '../app_icons.dart';
 
 /// Tinted rounded square holding an icon.
 class IconBadge extends StatelessWidget {
@@ -20,7 +21,7 @@ class IconBadge extends StatelessWidget {
       width: size,
       height: size,
       decoration: BoxDecoration(color: c.withValues(alpha: dark ? 0.18 : 0.12), borderRadius: BorderRadius.circular(size * 0.32)),
-      child: Icon(icon, color: c, size: size * 0.55),
+      child: AppIcon(icon, color: c, size: size * 0.6),
     );
   }
 }
@@ -63,7 +64,7 @@ class HeroAmountCard extends StatelessWidget {
     required this.amount,
     this.caption,
     this.details = const [],
-    this.icon = Icons.currency_rupee,
+    this.icon = AppIcons.currencyInr,
   });
 
   final String label;
@@ -89,7 +90,7 @@ class HeroAmountCard extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(6),
             decoration: BoxDecoration(color: white.withValues(alpha: 0.18), borderRadius: BorderRadius.circular(10)),
-            child: Icon(icon, color: white, size: 18),
+            child: AppIcon(icon, color: white, size: 18),
           ),
           const SizedBox(width: 10),
           Expanded(child: Text(label, style: text.titleSmall?.copyWith(color: white.withValues(alpha: 0.9)))),

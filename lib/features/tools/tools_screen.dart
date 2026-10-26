@@ -14,6 +14,7 @@ import '../../data/data_repository.dart';
 import '../../l10n/app_localizations.dart';
 import '../common/plan_config_form.dart';
 import '../maturity/maturity_state.dart' show todayProvider;
+import '../../core/app_icons.dart';
 
 class ToolsScreen extends ConsumerWidget {
   const ToolsScreen({super.key});
@@ -134,7 +135,7 @@ class _LoanTabState extends State<_LoanTab> {
           ),
         ]),
         InfoCard(
-          icon: eligible ? Icons.check_circle_outline : Icons.info_outline,
+          icon: eligible ? AppIcons.checkCircle : AppIcons.infoLine,
           title: eligible ? l.loanEligibleYes : l.loanEligibleNo,
           message: plan.loanAfterYears == null ? l.loanNotOffered : l.loanAvailableAfter(plan.loanAfterYears!),
         ),
@@ -154,7 +155,7 @@ class _LoanTabState extends State<_LoanTab> {
           ]),
           if (amount != null && interest != null) ...[
             HeroAmountCard(
-              icon: Icons.account_balance_rounded,
+              icon: AppIcons.bank,
               label: l.loanTotalRow,
               amount: formatRupees(Paise.wholeRupees(amount) + interest),
               details: [
@@ -225,15 +226,15 @@ class _PaidUpTabState extends State<_PaidUpTab> {
         ]),
         if (sa != null && paid != null && payable != null && !valid)
           InfoCard(
-            icon: Icons.error_outline,
+            icon: AppIcons.warningCircle,
             color: Theme.of(context).colorScheme.errorContainer,
             message: l.paidUpInvalid,
           ),
         if (estimate != null && !estimate.eligible)
-          InfoCard(icon: Icons.info_outline, message: l.paidUpNotEligible(estimate.minYears)),
+          InfoCard(icon: AppIcons.infoLine, message: l.paidUpNotEligible(estimate.minYears)),
         if (estimate != null && estimate.eligible) ...[
           HeroAmountCard(
-            icon: Icons.verified_rounded,
+            icon: AppIcons.sealCheck,
             label: l.paidUpSaRow,
             amount: formatRupees(estimate.paidUpSumAssured),
           ),
@@ -285,7 +286,7 @@ class _RevivalTabState extends ConsumerState<_RevivalTab> {
           _frequencyChips(l, _frequency, (f) => setState(() => _frequency = f)),
           ListTile(
             contentPadding: EdgeInsets.zero,
-            leading: const Icon(Icons.event_busy),
+            leading: const AppIcon(AppIcons.calendarX),
             title: Text(l.firstUnpaidLabel),
             subtitle: Text(formatDate(context, firstUnpaid)),
             onTap: () async {
@@ -295,7 +296,7 @@ class _RevivalTabState extends ConsumerState<_RevivalTab> {
           ),
           ListTile(
             contentPadding: EdgeInsets.zero,
-            leading: const Icon(Icons.event_available),
+            leading: const AppIcon(AppIcons.calendarCheck),
             title: Text(l.payDateLabel),
             subtitle: Text(formatDate(context, payDate)),
             onTap: () async {
@@ -304,10 +305,10 @@ class _RevivalTabState extends ConsumerState<_RevivalTab> {
             },
           ),
         ]),
-        if (estimate != null && estimate.instalments.isEmpty) InfoCard(icon: Icons.info_outline, message: l.nothingDue),
+        if (estimate != null && estimate.instalments.isEmpty) InfoCard(icon: AppIcons.infoLine, message: l.nothingDue),
         if (estimate != null && estimate.instalments.isNotEmpty) ...[
           HeroAmountCard(
-            icon: Icons.restart_alt_rounded,
+            icon: AppIcons.arrowCounterClockwiseLine,
             label: l.totalPayableRow,
             amount: formatRupees(estimate.total),
             details: [
@@ -324,7 +325,7 @@ class _RevivalTabState extends ConsumerState<_RevivalTab> {
                   ListTile(
                     contentPadding: EdgeInsets.zero,
                     dense: true,
-                    leading: const IconBadge(Icons.event_busy_rounded, size: 32),
+                    leading: const IconBadge(AppIcons.calendarX, size: 32),
                     title: Text(
                       l.revivalLine(formatDate(context, i.dueDate), i.monthsLate, formatRupees(i.defaultFee)),
                     ),
@@ -387,7 +388,7 @@ class _AdvanceTabState extends State<_AdvanceTab> {
         ]),
         if (r != null) ...[
           HeroAmountCard(
-            icon: Icons.local_offer_rounded,
+            icon: AppIcons.tag,
             label: l.payableRow,
             amount: formatRupees(r.payable),
             details: [
