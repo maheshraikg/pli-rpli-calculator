@@ -474,7 +474,7 @@
   "premiumsPaidLabel": "Instalments paid",
   "premiumsPayableLabel": "Total instalments payable",
   "paidUpSaRow": "Paid-up sum assured",
-  "paidUpNote": "Approximate. Bonus already earned is added as per India Post records. Surrender value needs official surrender factors and is not calculated.",
+  "paidUpNote": "Approximate. Bonus: none if the policy is less than 5 years old; after 5 years, proportionate bonus on the paid-up value, as per India Post. Surrender value needs official surrender factors and is not calculated.",
   "paidUpNotEligible": "A policy can become paid-up only after {years} years in force.",
   "@paidUpNotEligible": {
     "placeholders": {

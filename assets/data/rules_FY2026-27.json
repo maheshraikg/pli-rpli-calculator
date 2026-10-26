@@ -231,7 +231,7 @@
       "premiumTableId": "pli_sumangal",
       "verified": false,
       "loanAfterYears": null,
-      "surrenderAfterYears": 3
+      "surrenderAfterYears": null
     },
     {
       "id": "pli_yugal_suraksha",
@@ -483,7 +483,7 @@
       "premiumTableId": "rpli_gram_sumangal",
       "verified": false,
       "loanAfterYears": null,
-      "surrenderAfterYears": 3
+      "surrenderAfterYears": null
     },
     {
       "id": "rpli_gram_priya",
@@ -531,7 +531,7 @@
       "premiumTableId": "rpli_gram_priya",
       "verified": false,
       "loanAfterYears": null,
-      "surrenderAfterYears": 3
+      "surrenderAfterYears": null
     },
     {
       "id": "rpli_bal_jeevan_bima",
@@ -690,8 +690,8 @@
     "Bonus is credited for each completed policy year at the rate of the financial year in which that policy year ends.",
     "Whole life (Suraksha / Gram Suraksha): bonus keeps accruing until maturity at age 80 after premiums stop; terminal bonus if that period is 20 years or more.",
     "Maturity and survival benefits fall due on the policy anniversary.",
-    "Paid-up SA = SA × premiums paid ÷ premiums payable, after at least 3 years; bonus already earned is shown separately.",
+    "Paid-up: confirmed SA × premiums paid ÷ premiums payable (Surrender SOP 2023); a policy becomes paid-up only after 3 years in force.",
     "Loan interest 10% a year, compounded half-yearly; loan after 4 years (whole life, convertible) or 3 years (endowment, joint life); no loan on money-back or children's plans.",
-    "Surrender allowed after 3 years; no surrender value is shown because official surrender factors are not available."
+    "Surrender value is not shown because official surrender factors are not available."
   ]
 }

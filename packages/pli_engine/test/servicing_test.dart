@@ -18,7 +18,12 @@ void main() {
     expect(loanAvailable(rules.plan('pli_santosh'), 2), isFalse);
     expect(loanAvailable(rules.plan('pli_suraksha'), 3), isFalse);
     expect(loanAvailable(rules.plan('pli_sumangal'), 10), isFalse, reason: 'no loan on money-back plans');
-    expect(surrenderAvailable(rules.plan('pli_sumangal'), 3), isTrue);
+    // Surrender SOP 2023: WLA, EA, CWLA and Yugal Suraksha only, after 3 years.
+    expect(surrenderAvailable(rules.plan('pli_santosh'), 3), isTrue);
+    expect(surrenderAvailable(rules.plan('pli_santosh'), 2), isFalse);
+    for (final id in ['pli_sumangal', 'rpli_gram_sumangal', 'rpli_gram_priya', 'pli_bal_jeevan_bima']) {
+      expect(surrenderAvailable(rules.plan(id), 10), isFalse, reason: '$id cannot be surrendered');
+    }
   });
 
   test('paid-up SA = SA × paid ÷ payable', () {

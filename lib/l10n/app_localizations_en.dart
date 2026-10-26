@@ -611,7 +611,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get paidUpNote =>
-      'Approximate. Bonus already earned is added as per India Post records. Surrender value needs official surrender factors and is not calculated.';
+      'Approximate. Bonus: none if the policy is less than 5 years old; after 5 years, proportionate bonus on the paid-up value, as per India Post. Surrender value needs official surrender factors and is not calculated.';
 
   @override
   String paidUpNotEligible(int years) {
