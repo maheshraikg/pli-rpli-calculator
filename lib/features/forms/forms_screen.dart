@@ -116,6 +116,12 @@ class _FormDetailScreenState extends ConsumerState<FormDetailScreen> {
                           label: Text(l.openOfficialForm),
                           onPressed: () => _openBundled(s.pdfAsset!),
                         ),
+                        if (s.pdfSource != null)
+                          TextButton.icon(
+                            icon: const Icon(AppIcons.sealCheck),
+                            label: Text(l.formSourceLabel),
+                            onPressed: () => launchUrl(Uri.parse(s.pdfSource!), mode: LaunchMode.externalApplication),
+                          ),
                         const SizedBox(height: 8),
                       ],
                       if (s.formUrl != null) ...[

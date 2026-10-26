@@ -6,6 +6,7 @@ import 'package:go_router/go_router.dart';
 import 'core/locale.dart';
 import 'core/theme.dart';
 import 'features/about/about_screen.dart';
+import 'features/links/links_screen.dart';
 import 'features/compare/compare_screen.dart';
 import 'features/dues/dues_screen.dart';
 import 'features/eligibility/eligibility_screen.dart';
@@ -40,6 +41,7 @@ GoRouter buildRouter({String initialLocation = '/'}) => GoRouter(
         GoRoute(path: 'quotation', builder: (context, state) => const QuotationScreen()),
         GoRoute(path: 'plans', builder: (context, state) => const PlanInfoScreen()),
         GoRoute(path: 'about', builder: (context, state) => const AboutScreen()),
+        GoRoute(path: 'links', builder: (context, state) => const LinksScreen()),
         GoRoute(path: 'dues', builder: (context, state) => const DuesScreen()),
         GoRoute(path: 'profile', builder: (context, state) => const ProfileScreen()),
         GoRoute(

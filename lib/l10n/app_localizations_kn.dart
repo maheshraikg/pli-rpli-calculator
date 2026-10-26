@@ -1371,4 +1371,59 @@ class AppLocalizationsKn extends AppLocalizations {
   String formLinkMessage(String service, String url) {
     return '$service ಫಾರ್ಮ್ (ಅಂಚೆ ಇಲಾಖೆ): $url';
   }
+
+  @override
+  String get tileLinks => 'ಅಧಿಕೃತ ಲಿಂಕ್‌ಗಳು';
+
+  @override
+  String get descLinks => 'ಪೋರ್ಟಲ್, ಫಾರ್ಮ್‌ಗಳು, ಸಹಾಯವಾಣಿ';
+
+  @override
+  String get linksTitle => 'ಅಧಿಕೃತ ಲಿಂಕ್‌ಗಳು ಮತ್ತು ಸಹಾಯ';
+
+  @override
+  String get linkPortalTitle => 'PLI ಗ್ರಾಹಕ ಪೋರ್ಟಲ್';
+
+  @override
+  String get linkPortalDesc =>
+      'ಆನ್‌ಲೈನ್ ಪ್ರೀಮಿಯಂ ಪಾವತಿ, ಪಾಲಿಸಿ ಸ್ಥಿತಿ, ರಶೀದಿಗಳು';
+
+  @override
+  String get linkFormsTitle => 'ಅಧಿಕೃತ PLI/RPLI ಫಾರ್ಮ್‌ಗಳು';
+
+  @override
+  String get linkFormsDesc => 'ಅಂಚೆ ಇಲಾಖೆಯಿಂದ ಫಾರ್ಮ್‌ಗಳನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ';
+
+  @override
+  String get linkIndiaPostTitle => 'ಇಂಡಿಯಾ ಪೋಸ್ಟ್';
+
+  @override
+  String get linkIndiaPostDesc => 'ಅಂಚೆ ಇಲಾಖೆಯ ವೆಬ್‌ಸೈಟ್';
+
+  @override
+  String get linkHelplineTitle => 'ಇಂಡಿಯಾ ಪೋಸ್ಟ್ ಗ್ರಾಹಕ ಸೇವೆ';
+
+  @override
+  String linkHelplineDesc(String number) {
+    return 'ಉಚಿತ ಕರೆ $number';
+  }
+
+  @override
+  String get linkDigiLockerTitle => 'ಡಿಜಿಲಾಕರ್';
+
+  @override
+  String get linkDigiLockerDesc => 'ನಿಮ್ಮ ಇ-ಪಾಲಿಸಿ ಬಾಂಡ್ ಸುರಕ್ಷಿತವಾಗಿಡಿ';
+
+  @override
+  String get linkGrievanceTitle => 'ಸಾರ್ವಜನಿಕ ಕುಂದುಕೊರತೆ (CPGRAMS)';
+
+  @override
+  String get linkGrievanceDesc => 'ಭಾರತ ಸರ್ಕಾರಕ್ಕೆ ದೂರು ಸಲ್ಲಿಸಿ';
+
+  @override
+  String get linksNote =>
+      'ಇವು ಭಾರತ ಸರ್ಕಾರದ ಅಧಿಕೃತ ವೆಬ್‌ಸೈಟ್‌ಗಳನ್ನು ತೆರೆಯುತ್ತವೆ. ಈ ಆ್ಯಪ್ ಸ್ವತಂತ್ರವಾಗಿದ್ದು, ಅಂಚೆ ಇಲಾಖೆಯೊಂದಿಗೆ ಸಂಬಂಧ ಹೊಂದಿಲ್ಲ.';
+
+  @override
+  String get formSourceLabel => 'ಈ ಫಾರ್ಮ್‌ನ ಅಧಿಕೃತ ಮೂಲ';
 }

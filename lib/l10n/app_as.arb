@@ -390,5 +390,22 @@
   "noDuesInFilter": "এই তালিকাত একো নাই।",
   "openFormLink": "ফৰ্ম ডাউনলোড কৰক",
   "shareFormLink": "ফৰ্মৰ লিংক শ্বেয়াৰ কৰক",
-  "formLinkMessage": "{service} ফৰ্ম (ইণ্ডিয়া পোষ্ট): {url}"
+  "formLinkMessage": "{service} ফৰ্ম (ইণ্ডিয়া পোষ্ট): {url}",
+  "tileLinks": "চৰকাৰী লিংক",
+  "descLinks": "পৰ্টেল, ফৰ্ম, হেল্পলাইন",
+  "linksTitle": "চৰকাৰী লিংক আৰু সহায়",
+  "linkPortalTitle": "PLI গ্ৰাহক পৰ্টেল",
+  "linkPortalDesc": "অনলাইনত প্ৰিমিয়াম পৰিশোধ, পলিচিৰ স্থিতি, ৰচিদ",
+  "linkFormsTitle": "চৰকাৰী PLI/RPLI ফৰ্ম",
+  "linkFormsDesc": "ইণ্ডিয়া পোষ্টৰ পৰা ফৰ্ম ডাউনলোড কৰক",
+  "linkIndiaPostTitle": "ইণ্ডিয়া পোষ্ট",
+  "linkIndiaPostDesc": "ডাক বিভাগৰ ৱেবছাইট",
+  "linkHelplineTitle": "ইণ্ডিয়া পোষ্ট গ্ৰাহক সেৱা",
+  "linkHelplineDesc": "টোল-ফ্ৰী {number}",
+  "linkDigiLockerTitle": "ডিজিলকাৰ",
+  "linkDigiLockerDesc": "আপোনাৰ ই-পলিচি বণ্ড সুৰক্ষিত ৰাখক",
+  "linkGrievanceTitle": "ৰাজহুৱা অভিযোগ (CPGRAMS)",
+  "linkGrievanceDesc": "ভাৰত চৰকাৰৰ ওচৰত অভিযোগ দাখিল কৰক",
+  "linksNote": "এইবোৰে ভাৰত চৰকাৰৰ চৰকাৰী ৱেবছাইট খোলে। এই এপটো স্বতন্ত্ৰ আৰু ইণ্ডিয়া পোষ্ট বা ডাক বিভাগৰ সৈতে জড়িত নহয়।",
+  "formSourceLabel": "এই ফৰ্মৰ চৰকাৰী উৎস"
 }

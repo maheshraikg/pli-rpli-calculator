@@ -1404,4 +1404,59 @@ class AppLocalizationsEn extends AppLocalizations {
   String formLinkMessage(String service, String url) {
     return '$service form (India Post): $url';
   }
+
+  @override
+  String get tileLinks => 'Official links';
+
+  @override
+  String get descLinks => 'Portal, forms, helpline';
+
+  @override
+  String get linksTitle => 'Official links & help';
+
+  @override
+  String get linkPortalTitle => 'PLI Customer Portal';
+
+  @override
+  String get linkPortalDesc => 'Pay premium online, policy status, receipts';
+
+  @override
+  String get linkFormsTitle => 'Official PLI/RPLI forms';
+
+  @override
+  String get linkFormsDesc => 'Download forms from India Post';
+
+  @override
+  String get linkIndiaPostTitle => 'India Post';
+
+  @override
+  String get linkIndiaPostDesc => 'Department of Posts website';
+
+  @override
+  String get linkHelplineTitle => 'India Post customer care';
+
+  @override
+  String linkHelplineDesc(String number) {
+    return 'Toll-free $number';
+  }
+
+  @override
+  String get linkDigiLockerTitle => 'DigiLocker';
+
+  @override
+  String get linkDigiLockerDesc => 'Keep your e-policy bond safe';
+
+  @override
+  String get linkGrievanceTitle => 'Public grievance (CPGRAMS)';
+
+  @override
+  String get linkGrievanceDesc =>
+      'Raise a complaint with the Government of India';
+
+  @override
+  String get linksNote =>
+      'These open official Government of India websites. This app is independent and is not affiliated with India Post or the Department of Posts.';
+
+  @override
+  String get formSourceLabel => 'Official source of this form';
 }

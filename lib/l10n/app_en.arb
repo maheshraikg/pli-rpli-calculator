@@ -1017,5 +1017,29 @@
         "type": "String"
       }
     }
-  }
+  },
+  "tileLinks": "Official links",
+  "descLinks": "Portal, forms, helpline",
+  "linksTitle": "Official links & help",
+  "linkPortalTitle": "PLI Customer Portal",
+  "linkPortalDesc": "Pay premium online, policy status, receipts",
+  "linkFormsTitle": "Official PLI/RPLI forms",
+  "linkFormsDesc": "Download forms from India Post",
+  "linkIndiaPostTitle": "India Post",
+  "linkIndiaPostDesc": "Department of Posts website",
+  "linkHelplineTitle": "India Post customer care",
+  "linkHelplineDesc": "Toll-free {number}",
+  "@linkHelplineDesc": {
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "linkDigiLockerTitle": "DigiLocker",
+  "linkDigiLockerDesc": "Keep your e-policy bond safe",
+  "linkGrievanceTitle": "Public grievance (CPGRAMS)",
+  "linkGrievanceDesc": "Raise a complaint with the Government of India",
+  "linksNote": "These open official Government of India websites. This app is independent and is not affiliated with India Post or the Department of Posts.",
+  "formSourceLabel": "Official source of this form"
 }

@@ -390,5 +390,22 @@
   "noDuesInFilter": "આ યાદીમાં કંઈ નથી.",
   "openFormLink": "ફોર્મ ડાઉનલોડ કરો",
   "shareFormLink": "ફોર્મ લિંક શેર કરો",
-  "formLinkMessage": "{service} ફોર્મ (ઇન્ડિયા પોસ્ટ): {url}"
+  "formLinkMessage": "{service} ફોર્મ (ઇન્ડિયા પોસ્ટ): {url}",
+  "tileLinks": "અધિકૃત લિંક",
+  "descLinks": "પોર્ટલ, ફોર્મ, હેલ્પલાઇન",
+  "linksTitle": "અધિકૃત લિંક અને મદદ",
+  "linkPortalTitle": "PLI ગ્રાહક પોર્ટલ",
+  "linkPortalDesc": "ઓનલાઇન પ્રીમિયમ ચુકવણી, પોલિસી સ્થિતિ, રસીદો",
+  "linkFormsTitle": "અધિકૃત PLI/RPLI ફોર્મ",
+  "linkFormsDesc": "ઇન્ડિયા પોસ્ટ પરથી ફોર્મ ડાઉનલોડ કરો",
+  "linkIndiaPostTitle": "ઇન્ડિયા પોસ્ટ",
+  "linkIndiaPostDesc": "ટપાલ વિભાગની વેબસાઇટ",
+  "linkHelplineTitle": "ઇન્ડિયા પોસ્ટ ગ્રાહક સેવા",
+  "linkHelplineDesc": "ટોલ-ફ્રી {number}",
+  "linkDigiLockerTitle": "ડિજિલોકર",
+  "linkDigiLockerDesc": "તમારો ઇ-પોલિસી બોન્ડ સુરક્ષિત રાખો",
+  "linkGrievanceTitle": "જાહેર ફરિયાદ (CPGRAMS)",
+  "linkGrievanceDesc": "ભારત સરકારને ફરિયાદ કરો",
+  "linksNote": "આ ભારત સરકારની અધિકૃત વેબસાઇટ્સ ખોલે છે. આ એપ સ્વતંત્ર છે અને ઇન્ડિયા પોસ્ટ કે ટપાલ વિભાગ સાથે સંકળાયેલી નથી.",
+  "formSourceLabel": "આ ફોર્મનો અધિકૃત સ્ત્રોત"
 }

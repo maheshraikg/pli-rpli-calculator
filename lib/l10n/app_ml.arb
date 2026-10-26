@@ -390,5 +390,22 @@
   "noDuesInFilter": "ഈ പട്ടികയിൽ ഒന്നുമില്ല.",
   "openFormLink": "ഫോം ഡൗൺലോഡ് ചെയ്യുക",
   "shareFormLink": "ഫോം ലിങ്ക് പങ്കിടുക",
-  "formLinkMessage": "{service} ഫോം (ഇന്ത്യാ പോസ്റ്റ്): {url}"
+  "formLinkMessage": "{service} ഫോം (ഇന്ത്യാ പോസ്റ്റ്): {url}",
+  "tileLinks": "ഔദ്യോഗിക ലിങ്കുകൾ",
+  "descLinks": "പോർട്ടൽ, ഫോമുകൾ, ഹെൽപ്‌ലൈൻ",
+  "linksTitle": "ഔദ്യോഗിക ലിങ്കുകളും സഹായവും",
+  "linkPortalTitle": "PLI കസ്റ്റമർ പോർട്ടൽ",
+  "linkPortalDesc": "ഓൺലൈൻ പ്രീമിയം അടവ്, പോളിസി നില, രസീതുകൾ",
+  "linkFormsTitle": "ഔദ്യോഗിക PLI/RPLI ഫോമുകൾ",
+  "linkFormsDesc": "ഇന്ത്യാ പോസ്റ്റിൽ നിന്ന് ഫോമുകൾ ഡൗൺലോഡ് ചെയ്യുക",
+  "linkIndiaPostTitle": "ഇന്ത്യാ പോസ്റ്റ്",
+  "linkIndiaPostDesc": "തപാൽ വകുപ്പ് വെബ്സൈറ്റ്",
+  "linkHelplineTitle": "ഇന്ത്യാ പോസ്റ്റ് കസ്റ്റമർ കെയർ",
+  "linkHelplineDesc": "ടോൾ-ഫ്രീ {number}",
+  "linkDigiLockerTitle": "ഡിജിലോക്കർ",
+  "linkDigiLockerDesc": "നിങ്ങളുടെ ഇ-പോളിസി ബോണ്ട് സുരക്ഷിതമായി സൂക്ഷിക്കുക",
+  "linkGrievanceTitle": "പൊതു പരാതി (CPGRAMS)",
+  "linkGrievanceDesc": "ഭാരത സർക്കാരിന് പരാതി നൽകുക",
+  "linksNote": "ഇവ ഭാരത സർക്കാരിന്റെ ഔദ്യോഗിക വെബ്സൈറ്റുകൾ തുറക്കുന്നു. ഈ ആപ്പ് സ്വതന്ത്രമാണ്; ഇന്ത്യാ പോസ്റ്റുമായോ തപാൽ വകുപ്പുമായോ ബന്ധമില്ല.",
+  "formSourceLabel": "ഈ ഫോമിന്റെ ഔദ്യോഗിക ഉറവിടം"
 }

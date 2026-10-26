@@ -390,5 +390,22 @@
   "noDuesInFilter": "اس فہرست میں کچھ نہیں۔",
   "openFormLink": "فارم ڈاؤن لوڈ کریں",
   "shareFormLink": "فارم کا لنک شیئر کریں",
-  "formLinkMessage": "{service} فارم (انڈیا پوسٹ): {url}"
+  "formLinkMessage": "{service} فارم (انڈیا پوسٹ): {url}",
+  "tileLinks": "سرکاری لنکس",
+  "descLinks": "پورٹل، فارم، ہیلپ لائن",
+  "linksTitle": "سرکاری لنکس اور مدد",
+  "linkPortalTitle": "PLI کسٹمر پورٹل",
+  "linkPortalDesc": "آن لائن پریمیم ادائیگی، پالیسی کی حیثیت، رسیدیں",
+  "linkFormsTitle": "سرکاری PLI/RPLI فارم",
+  "linkFormsDesc": "انڈیا پوسٹ سے فارم ڈاؤن لوڈ کریں",
+  "linkIndiaPostTitle": "انڈیا پوسٹ",
+  "linkIndiaPostDesc": "محکمہ ڈاک کی ویب سائٹ",
+  "linkHelplineTitle": "انڈیا پوسٹ کسٹمر کیئر",
+  "linkHelplineDesc": "ٹول فری {number}",
+  "linkDigiLockerTitle": "ڈیجی لاکر",
+  "linkDigiLockerDesc": "اپنا ای پالیسی بانڈ محفوظ رکھیں",
+  "linkGrievanceTitle": "عوامی شکایت (CPGRAMS)",
+  "linkGrievanceDesc": "حکومتِ ہند سے شکایت کریں",
+  "linksNote": "یہ حکومتِ ہند کی سرکاری ویب سائٹس کھولتے ہیں۔ یہ ایپ آزاد ہے اور انڈیا پوسٹ یا محکمہ ڈاک سے وابستہ نہیں۔",
+  "formSourceLabel": "اس فارم کا سرکاری ماخذ"
 }

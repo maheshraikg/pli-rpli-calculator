@@ -1372,4 +1372,58 @@ class AppLocalizationsHi extends AppLocalizations {
   String formLinkMessage(String service, String url) {
     return '$service फ़ॉर्म (इंडिया पोस्ट): $url';
   }
+
+  @override
+  String get tileLinks => 'आधिकारिक लिंक';
+
+  @override
+  String get descLinks => 'पोर्टल, फ़ॉर्म, हेल्पलाइन';
+
+  @override
+  String get linksTitle => 'आधिकारिक लिंक और सहायता';
+
+  @override
+  String get linkPortalTitle => 'PLI ग्राहक पोर्टल';
+
+  @override
+  String get linkPortalDesc => 'ऑनलाइन प्रीमियम भुगतान, पॉलिसी स्थिति, रसीदें';
+
+  @override
+  String get linkFormsTitle => 'आधिकारिक PLI/RPLI फ़ॉर्म';
+
+  @override
+  String get linkFormsDesc => 'इंडिया पोस्ट से फ़ॉर्म डाउनलोड करें';
+
+  @override
+  String get linkIndiaPostTitle => 'इंडिया पोस्ट';
+
+  @override
+  String get linkIndiaPostDesc => 'डाक विभाग की वेबसाइट';
+
+  @override
+  String get linkHelplineTitle => 'इंडिया पोस्ट ग्राहक सेवा';
+
+  @override
+  String linkHelplineDesc(String number) {
+    return 'टोल-फ़्री $number';
+  }
+
+  @override
+  String get linkDigiLockerTitle => 'डिजिलॉकर';
+
+  @override
+  String get linkDigiLockerDesc => 'अपना ई-पॉलिसी बॉन्ड सुरक्षित रखें';
+
+  @override
+  String get linkGrievanceTitle => 'लोक शिकायत (CPGRAMS)';
+
+  @override
+  String get linkGrievanceDesc => 'भारत सरकार को शिकायत दर्ज करें';
+
+  @override
+  String get linksNote =>
+      'ये भारत सरकार की आधिकारिक वेबसाइटें खोलते हैं। यह ऐप स्वतंत्र है और इंडिया पोस्ट या डाक विभाग से संबद्ध नहीं है।';
+
+  @override
+  String get formSourceLabel => 'इस फ़ॉर्म का आधिकारिक स्रोत';
 }

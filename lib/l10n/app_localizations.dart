@@ -2470,6 +2470,108 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{service} form (India Post): {url}'**
   String formLinkMessage(String service, String url);
+
+  /// No description provided for @tileLinks.
+  ///
+  /// In en, this message translates to:
+  /// **'Official links'**
+  String get tileLinks;
+
+  /// No description provided for @descLinks.
+  ///
+  /// In en, this message translates to:
+  /// **'Portal, forms, helpline'**
+  String get descLinks;
+
+  /// No description provided for @linksTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Official links & help'**
+  String get linksTitle;
+
+  /// No description provided for @linkPortalTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'PLI Customer Portal'**
+  String get linkPortalTitle;
+
+  /// No description provided for @linkPortalDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Pay premium online, policy status, receipts'**
+  String get linkPortalDesc;
+
+  /// No description provided for @linkFormsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Official PLI/RPLI forms'**
+  String get linkFormsTitle;
+
+  /// No description provided for @linkFormsDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Download forms from India Post'**
+  String get linkFormsDesc;
+
+  /// No description provided for @linkIndiaPostTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'India Post'**
+  String get linkIndiaPostTitle;
+
+  /// No description provided for @linkIndiaPostDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Department of Posts website'**
+  String get linkIndiaPostDesc;
+
+  /// No description provided for @linkHelplineTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'India Post customer care'**
+  String get linkHelplineTitle;
+
+  /// No description provided for @linkHelplineDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Toll-free {number}'**
+  String linkHelplineDesc(String number);
+
+  /// No description provided for @linkDigiLockerTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'DigiLocker'**
+  String get linkDigiLockerTitle;
+
+  /// No description provided for @linkDigiLockerDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep your e-policy bond safe'**
+  String get linkDigiLockerDesc;
+
+  /// No description provided for @linkGrievanceTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Public grievance (CPGRAMS)'**
+  String get linkGrievanceTitle;
+
+  /// No description provided for @linkGrievanceDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Raise a complaint with the Government of India'**
+  String get linkGrievanceDesc;
+
+  /// No description provided for @linksNote.
+  ///
+  /// In en, this message translates to:
+  /// **'These open official Government of India websites. This app is independent and is not affiliated with India Post or the Department of Posts.'**
+  String get linksNote;
+
+  /// No description provided for @formSourceLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Official source of this form'**
+  String get formSourceLabel;
 }
 
 class _AppLocalizationsDelegate

@@ -42,6 +42,7 @@ abstract final class AppIcons {
   static const flagBanner = IconData(0xe623, fontFamily: 'PhosphorDuotone');
   static const floppyDiskLine = IconData(0xe248, fontFamily: 'PhosphorRegular');
   static const folderOpen = IconData(0xe257, fontFamily: 'PhosphorDuotone');
+  static const globeHemisphereEast = IconData(0xe28b, fontFamily: 'PhosphorDuotone');
   static const handCoins = IconData(0xea8d, fontFamily: 'PhosphorDuotone');
   static const handHeart = IconData(0xe811, fontFamily: 'PhosphorDuotone');
   static const hourglassMedium = IconData(0xe2b9, fontFamily: 'PhosphorDuotone');
@@ -59,6 +60,7 @@ abstract final class AppIcons {
   static const money = IconData(0xe589, fontFamily: 'PhosphorDuotone');
   static const notePencil = IconData(0xe34d, fontFamily: 'PhosphorDuotone');
   static const pencilSimpleLine = IconData(0xe3b4, fontFamily: 'PhosphorRegular');
+  static const phone = IconData(0xe3b9, fontFamily: 'PhosphorDuotone');
   static const phoneLine = IconData(0xe3b8, fontFamily: 'PhosphorRegular');
   static const plant = IconData(0xebaf, fontFamily: 'PhosphorDuotone');
   static const plusBold = IconData(0xe3d4, fontFamily: 'PhosphorBold');
@@ -110,6 +112,7 @@ const _duotoneLayer = <int, IconData>{
   0xe23b: IconData(0xe23a, fontFamily: 'PhosphorDuotone'),
   0xe623: IconData(0xe622, fontFamily: 'PhosphorDuotone'),
   0xe257: IconData(0xe256, fontFamily: 'PhosphorDuotone'),
+  0xe28b: IconData(0xe28a, fontFamily: 'PhosphorDuotone'),
   0xea8d: IconData(0xea8c, fontFamily: 'PhosphorDuotone'),
   0xe811: IconData(0xe810, fontFamily: 'PhosphorDuotone'),
   0xe2b9: IconData(0xe2b8, fontFamily: 'PhosphorDuotone'),
@@ -123,6 +126,7 @@ const _duotoneLayer = <int, IconData>{
   0xec1f: IconData(0xec1e, fontFamily: 'PhosphorDuotone'),
   0xe589: IconData(0xe588, fontFamily: 'PhosphorDuotone'),
   0xe34d: IconData(0xe34c, fontFamily: 'PhosphorDuotone'),
+  0xe3b9: IconData(0xe3b8, fontFamily: 'PhosphorDuotone'),
   0xebaf: IconData(0xebae, fontFamily: 'PhosphorDuotone'),
   0xe751: IconData(0xe750, fontFamily: 'PhosphorDuotone'),
   0xe607: IconData(0xe606, fontFamily: 'PhosphorDuotone'),

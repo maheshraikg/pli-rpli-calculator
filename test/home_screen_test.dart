@@ -52,6 +52,7 @@ void main() {
       ('Dues', 'Premium dues'),
       ('Forms', 'Forms and letters'),
       ('Agent profile', 'Agent profile'),
+      ('Official links', 'Official links & help'),
     ]) {
       await pumpApp(tester, key: ValueKey(tile));
       await scrollTo(tester, find.widgetWithText(InkWell, tile));

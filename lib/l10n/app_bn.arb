@@ -390,5 +390,22 @@
   "noDuesInFilter": "এই তালিকায় কিছু নেই।",
   "openFormLink": "ফর্ম ডাউনলোড করুন",
   "shareFormLink": "ফর্মের লিঙ্ক শেয়ার করুন",
-  "formLinkMessage": "{service} ফর্ম (ইন্ডিয়া পোস্ট): {url}"
+  "formLinkMessage": "{service} ফর্ম (ইন্ডিয়া পোস্ট): {url}",
+  "tileLinks": "অফিসিয়াল লিঙ্ক",
+  "descLinks": "পোর্টাল, ফর্ম, হেল্পলাইন",
+  "linksTitle": "অফিসিয়াল লিঙ্ক ও সাহায্য",
+  "linkPortalTitle": "PLI গ্রাহক পোর্টাল",
+  "linkPortalDesc": "অনলাইনে প্রিমিয়াম প্রদান, পলিসির অবস্থা, রসিদ",
+  "linkFormsTitle": "অফিসিয়াল PLI/RPLI ফর্ম",
+  "linkFormsDesc": "ইন্ডিয়া পোস্ট থেকে ফর্ম ডাউনলোড করুন",
+  "linkIndiaPostTitle": "ইন্ডিয়া পোস্ট",
+  "linkIndiaPostDesc": "ডাক বিভাগের ওয়েবসাইট",
+  "linkHelplineTitle": "ইন্ডিয়া পোস্ট গ্রাহক পরিষেবা",
+  "linkHelplineDesc": "টোল-ফ্রি {number}",
+  "linkDigiLockerTitle": "ডিজিলকার",
+  "linkDigiLockerDesc": "আপনার ই-পলিসি বন্ড নিরাপদে রাখুন",
+  "linkGrievanceTitle": "জনঅভিযোগ (CPGRAMS)",
+  "linkGrievanceDesc": "ভারত সরকারের কাছে অভিযোগ জানান",
+  "linksNote": "এগুলি ভারত সরকারের অফিসিয়াল ওয়েবসাইট খোলে। এই অ্যাপটি স্বাধীন এবং ইন্ডিয়া পোস্ট বা ডাক বিভাগের সাথে যুক্ত নয়।",
+  "formSourceLabel": "এই ফর্মের অফিসিয়াল উৎস"
 }

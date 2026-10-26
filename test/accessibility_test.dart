@@ -28,6 +28,7 @@ const _routes = [
   '/about',
   '/dues',
   '/profile',
+  '/links',
 ];
 
 PolicyStore _store() => MemoryPolicyStore()

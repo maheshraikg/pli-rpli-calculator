@@ -390,5 +390,22 @@
   "noDuesInFilter": "ਇਸ ਸੂਚੀ ਵਿੱਚ ਕੁਝ ਨਹੀਂ।",
   "openFormLink": "ਫ਼ਾਰਮ ਡਾਊਨਲੋਡ ਕਰੋ",
   "shareFormLink": "ਫ਼ਾਰਮ ਲਿੰਕ ਸਾਂਝਾ ਕਰੋ",
-  "formLinkMessage": "{service} ਫ਼ਾਰਮ (ਇੰਡੀਆ ਪੋਸਟ): {url}"
+  "formLinkMessage": "{service} ਫ਼ਾਰਮ (ਇੰਡੀਆ ਪੋਸਟ): {url}",
+  "tileLinks": "ਅਧਿਕਾਰਤ ਲਿੰਕ",
+  "descLinks": "ਪੋਰਟਲ, ਫ਼ਾਰਮ, ਹੈਲਪਲਾਈਨ",
+  "linksTitle": "ਅਧਿਕਾਰਤ ਲਿੰਕ ਅਤੇ ਮਦਦ",
+  "linkPortalTitle": "PLI ਗਾਹਕ ਪੋਰਟਲ",
+  "linkPortalDesc": "ਆਨਲਾਈਨ ਪ੍ਰੀਮੀਅਮ ਭੁਗਤਾਨ, ਪਾਲਿਸੀ ਸਥਿਤੀ, ਰਸੀਦਾਂ",
+  "linkFormsTitle": "ਅਧਿਕਾਰਤ PLI/RPLI ਫ਼ਾਰਮ",
+  "linkFormsDesc": "ਇੰਡੀਆ ਪੋਸਟ ਤੋਂ ਫ਼ਾਰਮ ਡਾਊਨਲੋਡ ਕਰੋ",
+  "linkIndiaPostTitle": "ਇੰਡੀਆ ਪੋਸਟ",
+  "linkIndiaPostDesc": "ਡਾਕ ਵਿਭਾਗ ਦੀ ਵੈੱਬਸਾਈਟ",
+  "linkHelplineTitle": "ਇੰਡੀਆ ਪੋਸਟ ਗਾਹਕ ਸੇਵਾ",
+  "linkHelplineDesc": "ਟੋਲ-ਫ਼੍ਰੀ {number}",
+  "linkDigiLockerTitle": "ਡਿਜੀਲਾਕਰ",
+  "linkDigiLockerDesc": "ਆਪਣਾ ਈ-ਪਾਲਿਸੀ ਬਾਂਡ ਸੁਰੱਖਿਅਤ ਰੱਖੋ",
+  "linkGrievanceTitle": "ਜਨਤਕ ਸ਼ਿਕਾਇਤ (CPGRAMS)",
+  "linkGrievanceDesc": "ਭਾਰਤ ਸਰਕਾਰ ਨੂੰ ਸ਼ਿਕਾਇਤ ਕਰੋ",
+  "linksNote": "ਇਹ ਭਾਰਤ ਸਰਕਾਰ ਦੀਆਂ ਅਧਿਕਾਰਤ ਵੈੱਬਸਾਈਟਾਂ ਖੋਲ੍ਹਦੇ ਹਨ। ਇਹ ਐਪ ਸੁਤੰਤਰ ਹੈ ਅਤੇ ਇੰਡੀਆ ਪੋਸਟ ਜਾਂ ਡਾਕ ਵਿਭਾਗ ਨਾਲ ਸੰਬੰਧਿਤ ਨਹੀਂ ਹੈ।",
+  "formSourceLabel": "ਇਸ ਫ਼ਾਰਮ ਦਾ ਅਧਿਕਾਰਤ ਸਰੋਤ"
 }

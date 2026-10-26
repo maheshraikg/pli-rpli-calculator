@@ -1369,4 +1369,59 @@ class AppLocalizationsUr extends AppLocalizations {
   String formLinkMessage(String service, String url) {
     return '$service فارم (انڈیا پوسٹ): $url';
   }
+
+  @override
+  String get tileLinks => 'سرکاری لنکس';
+
+  @override
+  String get descLinks => 'پورٹل، فارم، ہیلپ لائن';
+
+  @override
+  String get linksTitle => 'سرکاری لنکس اور مدد';
+
+  @override
+  String get linkPortalTitle => 'PLI کسٹمر پورٹل';
+
+  @override
+  String get linkPortalDesc =>
+      'آن لائن پریمیم ادائیگی، پالیسی کی حیثیت، رسیدیں';
+
+  @override
+  String get linkFormsTitle => 'سرکاری PLI/RPLI فارم';
+
+  @override
+  String get linkFormsDesc => 'انڈیا پوسٹ سے فارم ڈاؤن لوڈ کریں';
+
+  @override
+  String get linkIndiaPostTitle => 'انڈیا پوسٹ';
+
+  @override
+  String get linkIndiaPostDesc => 'محکمہ ڈاک کی ویب سائٹ';
+
+  @override
+  String get linkHelplineTitle => 'انڈیا پوسٹ کسٹمر کیئر';
+
+  @override
+  String linkHelplineDesc(String number) {
+    return 'ٹول فری $number';
+  }
+
+  @override
+  String get linkDigiLockerTitle => 'ڈیجی لاکر';
+
+  @override
+  String get linkDigiLockerDesc => 'اپنا ای پالیسی بانڈ محفوظ رکھیں';
+
+  @override
+  String get linkGrievanceTitle => 'عوامی شکایت (CPGRAMS)';
+
+  @override
+  String get linkGrievanceDesc => 'حکومتِ ہند سے شکایت کریں';
+
+  @override
+  String get linksNote =>
+      'یہ حکومتِ ہند کی سرکاری ویب سائٹس کھولتے ہیں۔ یہ ایپ آزاد ہے اور انڈیا پوسٹ یا محکمہ ڈاک سے وابستہ نہیں۔';
+
+  @override
+  String get formSourceLabel => 'اس فارم کا سرکاری ماخذ';
 }

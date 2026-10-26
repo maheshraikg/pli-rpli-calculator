@@ -390,5 +390,22 @@
   "noDuesInFilter": "ఈ జాబితాలో ఏమీ లేదు.",
   "openFormLink": "ఫారం డౌన్‌లోడ్ చేయండి",
   "shareFormLink": "ఫారం లింక్ పంచుకోండి",
-  "formLinkMessage": "{service} ఫారం (ఇండియా పోస్ట్): {url}"
+  "formLinkMessage": "{service} ఫారం (ఇండియా పోస్ట్): {url}",
+  "tileLinks": "అధికారిక లింకులు",
+  "descLinks": "పోర్టల్, ఫారాలు, హెల్ప్‌లైన్",
+  "linksTitle": "అధికారిక లింకులు & సహాయం",
+  "linkPortalTitle": "PLI కస్టమర్ పోర్టల్",
+  "linkPortalDesc": "ఆన్‌లైన్ ప్రీమియం చెల్లింపు, పాలసీ స్థితి, రసీదులు",
+  "linkFormsTitle": "అధికారిక PLI/RPLI ఫారాలు",
+  "linkFormsDesc": "ఇండియా పోస్ట్ నుండి ఫారాలు డౌన్‌లోడ్ చేయండి",
+  "linkIndiaPostTitle": "ఇండియా పోస్ట్",
+  "linkIndiaPostDesc": "తపాలా శాఖ వెబ్‌సైట్",
+  "linkHelplineTitle": "ఇండియా పోస్ట్ కస్టమర్ కేర్",
+  "linkHelplineDesc": "టోల్-ఫ్రీ {number}",
+  "linkDigiLockerTitle": "డిజిలాకర్",
+  "linkDigiLockerDesc": "మీ ఇ-పాలసీ బాండ్‌ను సురక్షితంగా ఉంచండి",
+  "linkGrievanceTitle": "ప్రజా ఫిర్యాదు (CPGRAMS)",
+  "linkGrievanceDesc": "భారత ప్రభుత్వానికి ఫిర్యాదు చేయండి",
+  "linksNote": "ఇవి భారత ప్రభుత్వ అధికారిక వెబ్‌సైట్‌లను తెరుస్తాయి. ఈ యాప్ స్వతంత్రమైనది, ఇండియా పోస్ట్ లేదా తపాలా శాఖతో సంబంధం లేదు.",
+  "formSourceLabel": "ఈ ఫారం అధికారిక మూలం"
 }

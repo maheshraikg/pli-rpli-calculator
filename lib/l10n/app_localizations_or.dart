@@ -1370,4 +1370,58 @@ class AppLocalizationsOr extends AppLocalizations {
   String formLinkMessage(String service, String url) {
     return '$service ଫର୍ମ (ଇଣ୍ଡିଆ ପୋଷ୍ଟ): $url';
   }
+
+  @override
+  String get tileLinks => 'ସରକାରୀ ଲିଙ୍କ';
+
+  @override
+  String get descLinks => 'ପୋର୍ଟାଲ, ଫର୍ମ, ହେଲ୍ପଲାଇନ';
+
+  @override
+  String get linksTitle => 'ସରକାରୀ ଲିଙ୍କ ଓ ସହାୟତା';
+
+  @override
+  String get linkPortalTitle => 'PLI ଗ୍ରାହକ ପୋର୍ଟାଲ';
+
+  @override
+  String get linkPortalDesc => 'ଅନଲାଇନ ପ୍ରିମିୟମ ଦେୟ, ପଲିସି ସ୍ଥିତି, ରସିଦ';
+
+  @override
+  String get linkFormsTitle => 'ସରକାରୀ PLI/RPLI ଫର୍ମ';
+
+  @override
+  String get linkFormsDesc => 'ଇଣ୍ଡିଆ ପୋଷ୍ଟରୁ ଫର୍ମ ଡାଉନଲୋଡ କରନ୍ତୁ';
+
+  @override
+  String get linkIndiaPostTitle => 'ଇଣ୍ଡିଆ ପୋଷ୍ଟ';
+
+  @override
+  String get linkIndiaPostDesc => 'ଡାକ ବିଭାଗ ୱେବସାଇଟ';
+
+  @override
+  String get linkHelplineTitle => 'ଇଣ୍ଡିଆ ପୋଷ୍ଟ ଗ୍ରାହକ ସେବା';
+
+  @override
+  String linkHelplineDesc(String number) {
+    return 'ଟୋଲ-ଫ୍ରି $number';
+  }
+
+  @override
+  String get linkDigiLockerTitle => 'ଡିଜିଲକର';
+
+  @override
+  String get linkDigiLockerDesc => 'ଆପଣଙ୍କ ଇ-ପଲିସି ବଣ୍ଡ ସୁରକ୍ଷିତ ରଖନ୍ତୁ';
+
+  @override
+  String get linkGrievanceTitle => 'ଜନ ଅଭିଯୋଗ (CPGRAMS)';
+
+  @override
+  String get linkGrievanceDesc => 'ଭାରତ ସରକାରଙ୍କ ପାଖରେ ଅଭିଯୋଗ କରନ୍ତୁ';
+
+  @override
+  String get linksNote =>
+      'ଏଗୁଡ଼ିକ ଭାରତ ସରକାରଙ୍କ ସରକାରୀ ୱେବସାଇଟ ଖୋଲେ। ଏହି ଆପ ସ୍ୱାଧୀନ ଏବଂ ଇଣ୍ଡିଆ ପୋଷ୍ଟ ବା ଡାକ ବିଭାଗ ସହ ସମ୍ପୃକ୍ତ ନୁହେଁ।';
+
+  @override
+  String get formSourceLabel => 'ଏହି ଫର୍ମର ସରକାରୀ ଉତ୍ସ';
 }

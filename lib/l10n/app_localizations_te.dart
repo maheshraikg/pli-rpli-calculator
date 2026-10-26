@@ -1374,4 +1374,59 @@ class AppLocalizationsTe extends AppLocalizations {
   String formLinkMessage(String service, String url) {
     return '$service ఫారం (ఇండియా పోస్ట్): $url';
   }
+
+  @override
+  String get tileLinks => 'అధికారిక లింకులు';
+
+  @override
+  String get descLinks => 'పోర్టల్, ఫారాలు, హెల్ప్‌లైన్';
+
+  @override
+  String get linksTitle => 'అధికారిక లింకులు & సహాయం';
+
+  @override
+  String get linkPortalTitle => 'PLI కస్టమర్ పోర్టల్';
+
+  @override
+  String get linkPortalDesc =>
+      'ఆన్‌లైన్ ప్రీమియం చెల్లింపు, పాలసీ స్థితి, రసీదులు';
+
+  @override
+  String get linkFormsTitle => 'అధికారిక PLI/RPLI ఫారాలు';
+
+  @override
+  String get linkFormsDesc => 'ఇండియా పోస్ట్ నుండి ఫారాలు డౌన్‌లోడ్ చేయండి';
+
+  @override
+  String get linkIndiaPostTitle => 'ఇండియా పోస్ట్';
+
+  @override
+  String get linkIndiaPostDesc => 'తపాలా శాఖ వెబ్‌సైట్';
+
+  @override
+  String get linkHelplineTitle => 'ఇండియా పోస్ట్ కస్టమర్ కేర్';
+
+  @override
+  String linkHelplineDesc(String number) {
+    return 'టోల్-ఫ్రీ $number';
+  }
+
+  @override
+  String get linkDigiLockerTitle => 'డిజిలాకర్';
+
+  @override
+  String get linkDigiLockerDesc => 'మీ ఇ-పాలసీ బాండ్‌ను సురక్షితంగా ఉంచండి';
+
+  @override
+  String get linkGrievanceTitle => 'ప్రజా ఫిర్యాదు (CPGRAMS)';
+
+  @override
+  String get linkGrievanceDesc => 'భారత ప్రభుత్వానికి ఫిర్యాదు చేయండి';
+
+  @override
+  String get linksNote =>
+      'ఇవి భారత ప్రభుత్వ అధికారిక వెబ్‌సైట్‌లను తెరుస్తాయి. ఈ యాప్ స్వతంత్రమైనది, ఇండియా పోస్ట్ లేదా తపాలా శాఖతో సంబంధం లేదు.';
+
+  @override
+  String get formSourceLabel => 'ఈ ఫారం అధికారిక మూలం';
 }

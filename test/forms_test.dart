@@ -51,6 +51,12 @@ void main() {
       }
     });
 
+    test('every bundled form names its official gov.in source', () {
+      for (final s in catalog.services.where((s) => s.pdfAsset != null)) {
+        expect(Uri.parse(s.pdfSource!).host, endsWith('.gov.in'), reason: s.id);
+      }
+    });
+
     test('official forms link is https', () => expect(catalog.officialFormsUrl, startsWith('https://')));
 
     test('form download links, when listed, are https', () {

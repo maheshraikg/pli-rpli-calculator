@@ -390,5 +390,22 @@
   "noDuesInFilter": "या यादीत काही नाही.",
   "openFormLink": "फॉर्म डाउनलोड करा",
   "shareFormLink": "फॉर्म लिंक शेअर करा",
-  "formLinkMessage": "{service} फॉर्म (इंडिया पोस्ट): {url}"
+  "formLinkMessage": "{service} फॉर्म (इंडिया पोस्ट): {url}",
+  "tileLinks": "अधिकृत लिंक",
+  "descLinks": "पोर्टल, फॉर्म, हेल्पलाइन",
+  "linksTitle": "अधिकृत लिंक आणि मदत",
+  "linkPortalTitle": "PLI ग्राहक पोर्टल",
+  "linkPortalDesc": "ऑनलाइन प्रीमियम भरणा, पॉलिसी स्थिती, पावत्या",
+  "linkFormsTitle": "अधिकृत PLI/RPLI फॉर्म",
+  "linkFormsDesc": "इंडिया पोस्टवरून फॉर्म डाउनलोड करा",
+  "linkIndiaPostTitle": "इंडिया पोस्ट",
+  "linkIndiaPostDesc": "टपाल विभागाचे संकेतस्थळ",
+  "linkHelplineTitle": "इंडिया पोस्ट ग्राहक सेवा",
+  "linkHelplineDesc": "टोल-फ्री {number}",
+  "linkDigiLockerTitle": "डिजिलॉकर",
+  "linkDigiLockerDesc": "तुमचा ई-पॉलिसी बाँड सुरक्षित ठेवा",
+  "linkGrievanceTitle": "सार्वजनिक तक्रार (CPGRAMS)",
+  "linkGrievanceDesc": "भारत सरकारकडे तक्रार नोंदवा",
+  "linksNote": "हे भारत सरकारच्या अधिकृत संकेतस्थळांवर नेतात. हे ॲप स्वतंत्र आहे आणि इंडिया पोस्ट किंवा टपाल विभागाशी संलग्न नाही.",
+  "formSourceLabel": "या फॉर्मचा अधिकृत स्रोत"
 }

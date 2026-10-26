@@ -390,5 +390,22 @@
   "noDuesInFilter": "इस सूची में कुछ नहीं।",
   "openFormLink": "फ़ॉर्म डाउनलोड करें",
   "shareFormLink": "फ़ॉर्म लिंक साझा करें",
-  "formLinkMessage": "{service} फ़ॉर्म (इंडिया पोस्ट): {url}"
+  "formLinkMessage": "{service} फ़ॉर्म (इंडिया पोस्ट): {url}",
+  "tileLinks": "आधिकारिक लिंक",
+  "descLinks": "पोर्टल, फ़ॉर्म, हेल्पलाइन",
+  "linksTitle": "आधिकारिक लिंक और सहायता",
+  "linkPortalTitle": "PLI ग्राहक पोर्टल",
+  "linkPortalDesc": "ऑनलाइन प्रीमियम भुगतान, पॉलिसी स्थिति, रसीदें",
+  "linkFormsTitle": "आधिकारिक PLI/RPLI फ़ॉर्म",
+  "linkFormsDesc": "इंडिया पोस्ट से फ़ॉर्म डाउनलोड करें",
+  "linkIndiaPostTitle": "इंडिया पोस्ट",
+  "linkIndiaPostDesc": "डाक विभाग की वेबसाइट",
+  "linkHelplineTitle": "इंडिया पोस्ट ग्राहक सेवा",
+  "linkHelplineDesc": "टोल-फ़्री {number}",
+  "linkDigiLockerTitle": "डिजिलॉकर",
+  "linkDigiLockerDesc": "अपना ई-पॉलिसी बॉन्ड सुरक्षित रखें",
+  "linkGrievanceTitle": "लोक शिकायत (CPGRAMS)",
+  "linkGrievanceDesc": "भारत सरकार को शिकायत दर्ज करें",
+  "linksNote": "ये भारत सरकार की आधिकारिक वेबसाइटें खोलते हैं। यह ऐप स्वतंत्र है और इंडिया पोस्ट या डाक विभाग से संबद्ध नहीं है।",
+  "formSourceLabel": "इस फ़ॉर्म का आधिकारिक स्रोत"
 }

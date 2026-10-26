@@ -1367,4 +1367,58 @@ class AppLocalizationsGu extends AppLocalizations {
   String formLinkMessage(String service, String url) {
     return '$service ફોર્મ (ઇન્ડિયા પોસ્ટ): $url';
   }
+
+  @override
+  String get tileLinks => 'અધિકૃત લિંક';
+
+  @override
+  String get descLinks => 'પોર્ટલ, ફોર્મ, હેલ્પલાઇન';
+
+  @override
+  String get linksTitle => 'અધિકૃત લિંક અને મદદ';
+
+  @override
+  String get linkPortalTitle => 'PLI ગ્રાહક પોર્ટલ';
+
+  @override
+  String get linkPortalDesc => 'ઓનલાઇન પ્રીમિયમ ચુકવણી, પોલિસી સ્થિતિ, રસીદો';
+
+  @override
+  String get linkFormsTitle => 'અધિકૃત PLI/RPLI ફોર્મ';
+
+  @override
+  String get linkFormsDesc => 'ઇન્ડિયા પોસ્ટ પરથી ફોર્મ ડાઉનલોડ કરો';
+
+  @override
+  String get linkIndiaPostTitle => 'ઇન્ડિયા પોસ્ટ';
+
+  @override
+  String get linkIndiaPostDesc => 'ટપાલ વિભાગની વેબસાઇટ';
+
+  @override
+  String get linkHelplineTitle => 'ઇન્ડિયા પોસ્ટ ગ્રાહક સેવા';
+
+  @override
+  String linkHelplineDesc(String number) {
+    return 'ટોલ-ફ્રી $number';
+  }
+
+  @override
+  String get linkDigiLockerTitle => 'ડિજિલોકર';
+
+  @override
+  String get linkDigiLockerDesc => 'તમારો ઇ-પોલિસી બોન્ડ સુરક્ષિત રાખો';
+
+  @override
+  String get linkGrievanceTitle => 'જાહેર ફરિયાદ (CPGRAMS)';
+
+  @override
+  String get linkGrievanceDesc => 'ભારત સરકારને ફરિયાદ કરો';
+
+  @override
+  String get linksNote =>
+      'આ ભારત સરકારની અધિકૃત વેબસાઇટ્સ ખોલે છે. આ એપ સ્વતંત્ર છે અને ઇન્ડિયા પોસ્ટ કે ટપાલ વિભાગ સાથે સંકળાયેલી નથી.';
+
+  @override
+  String get formSourceLabel => 'આ ફોર્મનો અધિકૃત સ્ત્રોત';
 }

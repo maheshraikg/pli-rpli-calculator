@@ -1367,4 +1367,58 @@ class AppLocalizationsPa extends AppLocalizations {
   String formLinkMessage(String service, String url) {
     return '$service ਫ਼ਾਰਮ (ਇੰਡੀਆ ਪੋਸਟ): $url';
   }
+
+  @override
+  String get tileLinks => 'ਅਧਿਕਾਰਤ ਲਿੰਕ';
+
+  @override
+  String get descLinks => 'ਪੋਰਟਲ, ਫ਼ਾਰਮ, ਹੈਲਪਲਾਈਨ';
+
+  @override
+  String get linksTitle => 'ਅਧਿਕਾਰਤ ਲਿੰਕ ਅਤੇ ਮਦਦ';
+
+  @override
+  String get linkPortalTitle => 'PLI ਗਾਹਕ ਪੋਰਟਲ';
+
+  @override
+  String get linkPortalDesc => 'ਆਨਲਾਈਨ ਪ੍ਰੀਮੀਅਮ ਭੁਗਤਾਨ, ਪਾਲਿਸੀ ਸਥਿਤੀ, ਰਸੀਦਾਂ';
+
+  @override
+  String get linkFormsTitle => 'ਅਧਿਕਾਰਤ PLI/RPLI ਫ਼ਾਰਮ';
+
+  @override
+  String get linkFormsDesc => 'ਇੰਡੀਆ ਪੋਸਟ ਤੋਂ ਫ਼ਾਰਮ ਡਾਊਨਲੋਡ ਕਰੋ';
+
+  @override
+  String get linkIndiaPostTitle => 'ਇੰਡੀਆ ਪੋਸਟ';
+
+  @override
+  String get linkIndiaPostDesc => 'ਡਾਕ ਵਿਭਾਗ ਦੀ ਵੈੱਬਸਾਈਟ';
+
+  @override
+  String get linkHelplineTitle => 'ਇੰਡੀਆ ਪੋਸਟ ਗਾਹਕ ਸੇਵਾ';
+
+  @override
+  String linkHelplineDesc(String number) {
+    return 'ਟੋਲ-ਫ਼੍ਰੀ $number';
+  }
+
+  @override
+  String get linkDigiLockerTitle => 'ਡਿਜੀਲਾਕਰ';
+
+  @override
+  String get linkDigiLockerDesc => 'ਆਪਣਾ ਈ-ਪਾਲਿਸੀ ਬਾਂਡ ਸੁਰੱਖਿਅਤ ਰੱਖੋ';
+
+  @override
+  String get linkGrievanceTitle => 'ਜਨਤਕ ਸ਼ਿਕਾਇਤ (CPGRAMS)';
+
+  @override
+  String get linkGrievanceDesc => 'ਭਾਰਤ ਸਰਕਾਰ ਨੂੰ ਸ਼ਿਕਾਇਤ ਕਰੋ';
+
+  @override
+  String get linksNote =>
+      'ਇਹ ਭਾਰਤ ਸਰਕਾਰ ਦੀਆਂ ਅਧਿਕਾਰਤ ਵੈੱਬਸਾਈਟਾਂ ਖੋਲ੍ਹਦੇ ਹਨ। ਇਹ ਐਪ ਸੁਤੰਤਰ ਹੈ ਅਤੇ ਇੰਡੀਆ ਪੋਸਟ ਜਾਂ ਡਾਕ ਵਿਭਾਗ ਨਾਲ ਸੰਬੰਧਿਤ ਨਹੀਂ ਹੈ।';
+
+  @override
+  String get formSourceLabel => 'ਇਸ ਫ਼ਾਰਮ ਦਾ ਅਧਿਕਾਰਤ ਸਰੋਤ';
 }

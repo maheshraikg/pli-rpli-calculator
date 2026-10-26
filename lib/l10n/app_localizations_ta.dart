@@ -1383,4 +1383,60 @@ class AppLocalizationsTa extends AppLocalizations {
   String formLinkMessage(String service, String url) {
     return '$service படிவம் (இந்திய அஞ்சல்): $url';
   }
+
+  @override
+  String get tileLinks => 'அதிகாரப்பூர்வ இணைப்புகள்';
+
+  @override
+  String get descLinks => 'போர்டல், படிவங்கள், உதவி எண்';
+
+  @override
+  String get linksTitle => 'அதிகாரப்பூர்வ இணைப்புகள் & உதவி';
+
+  @override
+  String get linkPortalTitle => 'PLI வாடிக்கையாளர் போர்டல்';
+
+  @override
+  String get linkPortalDesc =>
+      'ஆன்லைன் பிரீமியம் செலுத்தல், பாலிசி நிலை, ரசீதுகள்';
+
+  @override
+  String get linkFormsTitle => 'அதிகாரப்பூர்வ PLI/RPLI படிவங்கள்';
+
+  @override
+  String get linkFormsDesc => 'இந்திய அஞ்சலிலிருந்து படிவங்களைப் பதிவிறக்கவும்';
+
+  @override
+  String get linkIndiaPostTitle => 'இந்திய அஞ்சல்';
+
+  @override
+  String get linkIndiaPostDesc => 'அஞ்சல் துறை இணையதளம்';
+
+  @override
+  String get linkHelplineTitle => 'இந்திய அஞ்சல் வாடிக்கையாளர் சேவை';
+
+  @override
+  String linkHelplineDesc(String number) {
+    return 'கட்டணமில்லா $number';
+  }
+
+  @override
+  String get linkDigiLockerTitle => 'டிஜிலாக்கர்';
+
+  @override
+  String get linkDigiLockerDesc =>
+      'உங்கள் இ-பாலிசி பத்திரத்தைப் பாதுகாப்பாக வைக்கவும்';
+
+  @override
+  String get linkGrievanceTitle => 'பொதுக் குறைதீர்ப்பு (CPGRAMS)';
+
+  @override
+  String get linkGrievanceDesc => 'இந்திய அரசிடம் புகார் அளிக்கவும்';
+
+  @override
+  String get linksNote =>
+      'இவை இந்திய அரசின் அதிகாரப்பூர்வ இணையதளங்களைத் திறக்கும். இந்தச் செயலி தனிப்பட்டது; இந்திய அஞ்சல் அல்லது அஞ்சல் துறையுடன் தொடர்பில்லை.';
+
+  @override
+  String get formSourceLabel => 'இந்தப் படிவத்தின் அதிகாரப்பூர்வ மூலம்';
 }

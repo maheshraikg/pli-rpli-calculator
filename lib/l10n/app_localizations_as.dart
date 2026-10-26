@@ -1371,4 +1371,58 @@ class AppLocalizationsAs extends AppLocalizations {
   String formLinkMessage(String service, String url) {
     return '$service ফৰ্ম (ইণ্ডিয়া পোষ্ট): $url';
   }
+
+  @override
+  String get tileLinks => 'চৰকাৰী লিংক';
+
+  @override
+  String get descLinks => 'পৰ্টেল, ফৰ্ম, হেল্পলাইন';
+
+  @override
+  String get linksTitle => 'চৰকাৰী লিংক আৰু সহায়';
+
+  @override
+  String get linkPortalTitle => 'PLI গ্ৰাহক পৰ্টেল';
+
+  @override
+  String get linkPortalDesc => 'অনলাইনত প্ৰিমিয়াম পৰিশোধ, পলিচিৰ স্থিতি, ৰচিদ';
+
+  @override
+  String get linkFormsTitle => 'চৰকাৰী PLI/RPLI ফৰ্ম';
+
+  @override
+  String get linkFormsDesc => 'ইণ্ডিয়া পোষ্টৰ পৰা ফৰ্ম ডাউনলোড কৰক';
+
+  @override
+  String get linkIndiaPostTitle => 'ইণ্ডিয়া পোষ্ট';
+
+  @override
+  String get linkIndiaPostDesc => 'ডাক বিভাগৰ ৱেবছাইট';
+
+  @override
+  String get linkHelplineTitle => 'ইণ্ডিয়া পোষ্ট গ্ৰাহক সেৱা';
+
+  @override
+  String linkHelplineDesc(String number) {
+    return 'টোল-ফ্ৰী $number';
+  }
+
+  @override
+  String get linkDigiLockerTitle => 'ডিজিলকাৰ';
+
+  @override
+  String get linkDigiLockerDesc => 'আপোনাৰ ই-পলিচি বণ্ড সুৰক্ষিত ৰাখক';
+
+  @override
+  String get linkGrievanceTitle => 'ৰাজহুৱা অভিযোগ (CPGRAMS)';
+
+  @override
+  String get linkGrievanceDesc => 'ভাৰত চৰকাৰৰ ওচৰত অভিযোগ দাখিল কৰক';
+
+  @override
+  String get linksNote =>
+      'এইবোৰে ভাৰত চৰকাৰৰ চৰকাৰী ৱেবছাইট খোলে। এই এপটো স্বতন্ত্ৰ আৰু ইণ্ডিয়া পোষ্ট বা ডাক বিভাগৰ সৈতে জড়িত নহয়।';
+
+  @override
+  String get formSourceLabel => 'এই ফৰ্মৰ চৰকাৰী উৎস';
 }

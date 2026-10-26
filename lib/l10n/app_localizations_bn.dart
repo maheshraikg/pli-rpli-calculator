@@ -1371,4 +1371,58 @@ class AppLocalizationsBn extends AppLocalizations {
   String formLinkMessage(String service, String url) {
     return '$service ফর্ম (ইন্ডিয়া পোস্ট): $url';
   }
+
+  @override
+  String get tileLinks => 'অফিসিয়াল লিঙ্ক';
+
+  @override
+  String get descLinks => 'পোর্টাল, ফর্ম, হেল্পলাইন';
+
+  @override
+  String get linksTitle => 'অফিসিয়াল লিঙ্ক ও সাহায্য';
+
+  @override
+  String get linkPortalTitle => 'PLI গ্রাহক পোর্টাল';
+
+  @override
+  String get linkPortalDesc => 'অনলাইনে প্রিমিয়াম প্রদান, পলিসির অবস্থা, রসিদ';
+
+  @override
+  String get linkFormsTitle => 'অফিসিয়াল PLI/RPLI ফর্ম';
+
+  @override
+  String get linkFormsDesc => 'ইন্ডিয়া পোস্ট থেকে ফর্ম ডাউনলোড করুন';
+
+  @override
+  String get linkIndiaPostTitle => 'ইন্ডিয়া পোস্ট';
+
+  @override
+  String get linkIndiaPostDesc => 'ডাক বিভাগের ওয়েবসাইট';
+
+  @override
+  String get linkHelplineTitle => 'ইন্ডিয়া পোস্ট গ্রাহক পরিষেবা';
+
+  @override
+  String linkHelplineDesc(String number) {
+    return 'টোল-ফ্রি $number';
+  }
+
+  @override
+  String get linkDigiLockerTitle => 'ডিজিলকার';
+
+  @override
+  String get linkDigiLockerDesc => 'আপনার ই-পলিসি বন্ড নিরাপদে রাখুন';
+
+  @override
+  String get linkGrievanceTitle => 'জনঅভিযোগ (CPGRAMS)';
+
+  @override
+  String get linkGrievanceDesc => 'ভারত সরকারের কাছে অভিযোগ জানান';
+
+  @override
+  String get linksNote =>
+      'এগুলি ভারত সরকারের অফিসিয়াল ওয়েবসাইট খোলে। এই অ্যাপটি স্বাধীন এবং ইন্ডিয়া পোস্ট বা ডাক বিভাগের সাথে যুক্ত নয়।';
+
+  @override
+  String get formSourceLabel => 'এই ফর্মের অফিসিয়াল উৎস';
 }

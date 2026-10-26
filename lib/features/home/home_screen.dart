@@ -80,6 +80,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         [
           (AppIcons.userCheck, l.tileEligibility, l.descEligibility, '/eligibility', _green),
           (AppIcons.bookOpenText, l.tilePlans, l.descPlans, '/plans', _indigo),
+          (AppIcons.globeHemisphereEast, l.tileLinks, l.descLinks, '/links', kAccentRed),
           (AppIcons.info, l.tileAbout, l.descAbout, '/about', _teal),
         ],
       ),

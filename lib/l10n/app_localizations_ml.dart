@@ -1379,4 +1379,59 @@ class AppLocalizationsMl extends AppLocalizations {
   String formLinkMessage(String service, String url) {
     return '$service ഫോം (ഇന്ത്യാ പോസ്റ്റ്): $url';
   }
+
+  @override
+  String get tileLinks => 'ഔദ്യോഗിക ലിങ്കുകൾ';
+
+  @override
+  String get descLinks => 'പോർട്ടൽ, ഫോമുകൾ, ഹെൽപ്‌ലൈൻ';
+
+  @override
+  String get linksTitle => 'ഔദ്യോഗിക ലിങ്കുകളും സഹായവും';
+
+  @override
+  String get linkPortalTitle => 'PLI കസ്റ്റമർ പോർട്ടൽ';
+
+  @override
+  String get linkPortalDesc => 'ഓൺലൈൻ പ്രീമിയം അടവ്, പോളിസി നില, രസീതുകൾ';
+
+  @override
+  String get linkFormsTitle => 'ഔദ്യോഗിക PLI/RPLI ഫോമുകൾ';
+
+  @override
+  String get linkFormsDesc => 'ഇന്ത്യാ പോസ്റ്റിൽ നിന്ന് ഫോമുകൾ ഡൗൺലോഡ് ചെയ്യുക';
+
+  @override
+  String get linkIndiaPostTitle => 'ഇന്ത്യാ പോസ്റ്റ്';
+
+  @override
+  String get linkIndiaPostDesc => 'തപാൽ വകുപ്പ് വെബ്സൈറ്റ്';
+
+  @override
+  String get linkHelplineTitle => 'ഇന്ത്യാ പോസ്റ്റ് കസ്റ്റമർ കെയർ';
+
+  @override
+  String linkHelplineDesc(String number) {
+    return 'ടോൾ-ഫ്രീ $number';
+  }
+
+  @override
+  String get linkDigiLockerTitle => 'ഡിജിലോക്കർ';
+
+  @override
+  String get linkDigiLockerDesc =>
+      'നിങ്ങളുടെ ഇ-പോളിസി ബോണ്ട് സുരക്ഷിതമായി സൂക്ഷിക്കുക';
+
+  @override
+  String get linkGrievanceTitle => 'പൊതു പരാതി (CPGRAMS)';
+
+  @override
+  String get linkGrievanceDesc => 'ഭാരത സർക്കാരിന് പരാതി നൽകുക';
+
+  @override
+  String get linksNote =>
+      'ഇവ ഭാരത സർക്കാരിന്റെ ഔദ്യോഗിക വെബ്സൈറ്റുകൾ തുറക്കുന്നു. ഈ ആപ്പ് സ്വതന്ത്രമാണ്; ഇന്ത്യാ പോസ്റ്റുമായോ തപാൽ വകുപ്പുമായോ ബന്ധമില്ല.';
+
+  @override
+  String get formSourceLabel => 'ഈ ഫോമിന്റെ ഔദ്യോഗിക ഉറവിടം';
 }
