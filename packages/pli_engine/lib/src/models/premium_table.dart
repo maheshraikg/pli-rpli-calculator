@@ -20,6 +20,7 @@ class PremiumTable {
     required this.columns,
     required this.cells,
     this.monotonicExceptions = const {},
+    this.agesNotInSource = const {},
   });
 
   factory PremiumTable.parse(String jsonText) =>
@@ -63,6 +64,7 @@ class PremiumTable {
       cells: cells,
       monotonicExceptions:
           r.has('monotonicExceptions') ? r.stringList('monotonicExceptions').toSet() : const {},
+      agesNotInSource: r.has('agesNotInSource') ? r.intList('agesNotInSource').toSet() : const {},
     );
   }
 
@@ -80,6 +82,10 @@ class PremiumTable {
   /// Cells exempt from monotonicity checks, as "FREQ:age:column", for
   /// documented anomalies in the official source.
   final Set<String> monotonicExceptions;
+
+  /// Entry ages the plan allows but the source table does not print. Lookups
+  /// for them report "not in table"; they are never filled in or estimated.
+  final Set<int> agesNotInSource;
 
   Set<PremiumFrequency> get frequencies => cells.keys.toSet();
 

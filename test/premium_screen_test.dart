@@ -9,7 +9,7 @@ import 'package:pli_sahayak/features/premium/premium_screen.dart';
 import 'support.dart';
 
 void main() {
-  testWidgets('premium screen shows the table premium for the selected frequency, flagged as sample', (tester) async {
+  testWidgets('premium screen shows the table premium for the selected frequency, with no sample banner', (tester) async {
     final container = await pumpApp(tester, location: '/premium');
     final data = bundledData();
     final e = evaluatePlan(data, container.read(planConfigProvider(premiumConfigKey)));
@@ -22,7 +22,7 @@ void main() {
     expect(expected, direct);
     await scrollTo(tester, find.text('Premium per instalment • Monthly'));
     expect(find.text(formatRupees(expected)), findsWidgets);
-    expect(find.text('SAMPLE DATA – NOT OFFICIAL'), findsOneWidget);
+    expect(find.text('SAMPLE DATA – NOT OFFICIAL'), findsNothing);
   });
 
   testWidgets('date of birth gives age nearest birthday', (tester) async {

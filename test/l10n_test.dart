@@ -81,6 +81,6 @@ void main() {
     await tester.tap(find.text('हिन्दी'));
     await tester.pumpAndSettle();
     expect(find.text('प्रीमियम'), findsOneWidget);
-    expect(find.text('नमूना डेटा – आधिकारिक नहीं'), findsOneWidget);
+    expect(find.text('नमूना डेटा – आधिकारिक नहीं'), findsNothing);
   });
 }

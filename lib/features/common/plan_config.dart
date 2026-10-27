@@ -91,7 +91,7 @@ class PlanConfigNotifier extends Notifier<PlanConfig> {
   /// Which screen / slot this config belongs to ("premium", "compare0"…).
   final String key;
 
-  static const _defaults = {'compare1': ('pli_sumangal', 20), 'compare2': ('pli_suraksha', 60)};
+  static const _defaults = {'compare1': ('pli_santosh', 60), 'compare2': ('pli_suraksha', 60)};
 
   @override
   PlanConfig build() {

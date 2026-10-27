@@ -52,8 +52,7 @@ Premium rates, bonus rates and rules are taken from India Post / Department of P
 - App icon 512×512: `icon_512.png`
 - Feature graphic 1024×500: `feature_graphic.png`
 - Phone screenshots 1080×1920 (2–8 needed): `screenshots/01_home.png` … `08_official_links.png`
-  (`09_kannada.png` is optional). **Re-render after the official tables are
-  added:** the current shots show the "SAMPLE DATA" banner.
+  (`09_kannada.png` is optional).
 
 ---
 
@@ -97,7 +96,7 @@ no exact alarms, no internet, no SMS/call log, no location).
 ---
 
 ## Before the first upload
-1. Official premium tables in `assets/data/tables/` (CI release check refuses sample data).
+1. ✅ Premium tables are from the Department of Posts booklet (no sample data). Check them against your current rate book.
 2. Upload key in GitHub secrets (see docs/RELEASE.md).
 3. A public privacy policy URL.
 4. New personal developer accounts: a **closed test with at least 12 testers for

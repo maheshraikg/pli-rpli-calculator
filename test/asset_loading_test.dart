@@ -12,6 +12,6 @@ void main() {
       for (final p in data.rules.plans)
         if (p.premiumTableId != null) p.premiumTableId!,
     ]));
-    expect(data.usesSampleData, isTrue, reason: 'official tables not yet supplied');
+    expect(data.usesSampleData, isFalse, reason: 'bundled premium tables are official');
   });
 }

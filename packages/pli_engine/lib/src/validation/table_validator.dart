@@ -61,6 +61,10 @@ class TableValidator {
     }
 
     if (table.frequencies.isEmpty) error('table has no frequencies');
+    for (final age in table.agesNotInSource) {
+      if (!entryAges.contains(age)) error('agesNotInSource: $age is outside entry ages $entryAges');
+      if (table.cells.values.any((rows) => rows.containsKey(age))) error('agesNotInSource: age $age has a row');
+    }
     for (final freq in PremiumFrequency.values) {
       if (!table.frequencies.contains(freq)) warn('no ${freq.code} premiums in table');
     }
@@ -72,7 +76,11 @@ class TableValidator {
       for (final age in entryAges.ages) {
         final row = rows[age];
         if (row == null) {
-          error('${freq.code}: missing row for entry age $age');
+          if (table.agesNotInSource.contains(age)) {
+            warn('${freq.code}: entry age $age is not in the source table');
+          } else {
+            error('${freq.code}: missing row for entry age $age');
+          }
           continue;
         }
         if (row.length != table.columns.length) {

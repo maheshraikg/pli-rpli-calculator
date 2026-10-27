@@ -6,9 +6,9 @@ import 'package:pli_sahayak/data/storage.dart';
 import 'support.dart';
 
 void main() {
-  testWidgets('home shows tiles, sample banner and rates footer (English)', (tester) async {
+  testWidgets('home shows tiles and rates footer, no sample banner (English)', (tester) async {
     await pumpApp(tester);
-    expect(find.text('SAMPLE DATA – NOT OFFICIAL'), findsOneWidget);
+    expect(find.text('SAMPLE DATA – NOT OFFICIAL'), findsNothing);
     for (final t in ['Premium', 'Maturity', 'Compare', 'Afford', 'My Policies', 'Policy tools', 'Quotation', 'Eligibility', 'Plans', 'About']) {
       await scrollTo(tester, find.text(t));
       expect(find.text(t), findsOneWidget);
@@ -19,7 +19,7 @@ void main() {
   testWidgets('home renders in Kannada', (tester) async {
     await pumpApp(tester, locale: const Locale('kn'));
     expect(find.text('ಪ್ರೀಮಿಯಂ'), findsOneWidget);
-    expect(find.text('ಮಾದರಿ ದತ್ತಾಂಶ – ಅಧಿಕೃತವಲ್ಲ'), findsOneWidget);
+    expect(find.text('ಮಾದರಿ ದತ್ತಾಂಶ – ಅಧಿಕೃತವಲ್ಲ'), findsNothing);
   });
 
   testWidgets('Maturity tile opens the maturity calculator', (tester) async {
