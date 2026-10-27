@@ -78,7 +78,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           cp build/app/outputs/flutter-apk/app-release.apk "pli-rpli-calculator-build${{ github.run_number }}.apk"
+          cp build/app/outputs/bundle/release/app-release.aab "pli-rpli-calculator-build${{ github.run_number }}.aab"
           gh release create "build-${{ github.run_number }}" "pli-rpli-calculator-build${{ github.run_number }}.apk" \
+            "pli-rpli-calculator-build${{ github.run_number }}.aab" \
             --prerelease --target "${{ github.event.pull_request.head.sha || github.sha }}" \
             --title "Test build ${{ github.run_number }} (sample data, not for customers)" \
             --notes "Test APK from ${{ github.event.pull_request.head.ref || github.ref_name }}. Premium tables are SAMPLE data; do not use for real quotations."
