@@ -10,7 +10,7 @@ class AppLocalizationsKn extends AppLocalizations {
   AppLocalizationsKn([String locale = 'kn']) : super(locale);
 
   @override
-  String get appTitle => 'ಪಿಎಲ್‌ಐ ಸಹಾಯಕ';
+  String get appTitle => 'PLI & RPLI ಕ್ಯಾಲ್ಕುಲೇಟರ್';
 
   @override
   String get tilePremium => 'ಪ್ರೀಮಿಯಂ';
@@ -59,4 +59,1371 @@ class AppLocalizationsKn extends AppLocalizations {
   String dataLoadError(String error) {
     return 'ದರ ದತ್ತಾಂಶ ಲೋಡ್ ಆಗಲಿಲ್ಲ: $error';
   }
+
+  @override
+  String get maturityTitle => 'ಪಕ್ವತೆ ಮತ್ತು ಬೋನಸ್';
+
+  @override
+  String get eligibilityTitle => 'ಅರ್ಹತೆ ಪರಿಶೀಲನೆ';
+
+  @override
+  String get premiumTitle => 'ಪ್ರೀಮಿಯಂ ಕ್ಯಾಲ್ಕುಲೇಟರ್';
+
+  @override
+  String get schemePli => 'ಅಂಚೆ ಜೀವ ವಿಮೆ (PLI)';
+
+  @override
+  String get schemeRpli => 'ಗ್ರಾಮೀಣ ಅಂಚೆ ಜೀವ ವಿಮೆ (RPLI)';
+
+  @override
+  String get planLabel => 'ಯೋಜನೆ';
+
+  @override
+  String rulesPendingSuffix(String plan) {
+    return '$plan (ನಿಯಮ ಬಾಕಿ)';
+  }
+
+  @override
+  String get entryAgeLabel => 'ಪ್ರವೇಶ ವಯಸ್ಸು';
+
+  @override
+  String get childAgeLabel => 'ಮಗುವಿನ ವಯಸ್ಸು';
+
+  @override
+  String get spouseAgeLabel => 'ಸಂಗಾತಿಯ ವಯಸ್ಸು';
+
+  @override
+  String ageYears(int age) {
+    return '$age ವರ್ಷ';
+  }
+
+  @override
+  String get decrease => 'ಕಡಿಮೆ ಮಾಡಿ';
+
+  @override
+  String get increase => 'ಹೆಚ್ಚಿಸಿ';
+
+  @override
+  String get ageBasisNote =>
+      'ಪೂರ್ಣಗೊಂಡ ವರ್ಷಗಳಲ್ಲಿ ವಯಸ್ಸು ನಮೂದಿಸಿ. ಭಾರತೀಯ ಅಂಚೆಯ ವಯಸ್ಸಿನ ನಿಯಮ ದೃಢಪಟ್ಟ ನಂತರ ಜನ್ಮ ದಿನಾಂಕದಿಂದ ವಯಸ್ಸು ಲೆಕ್ಕಹಾಕುವ ಸೌಲಭ್ಯ ಸೇರಿಸಲಾಗುವುದು.';
+
+  @override
+  String get sumAssuredLabel => 'ವಿಮಾ ಮೊತ್ತ (₹)';
+
+  @override
+  String get maturityAgeLabel => 'ಪಕ್ವತೆ ವಯಸ್ಸು';
+
+  @override
+  String get termLabel => 'ಪಾಲಿಸಿ ಅವಧಿ';
+
+  @override
+  String termYears(int years) {
+    return '$years ವರ್ಷ';
+  }
+
+  @override
+  String get startDateLabel => 'ಪಾಲಿಸಿ ಆರಂಭ ದಿನಾಂಕ';
+
+  @override
+  String get resultMaturityValue => 'ಪಕ್ವತೆ ಮೊತ್ತ';
+
+  @override
+  String get resultTotalBenefits => 'ಒಟ್ಟು ಪಡೆಯುವ ಲಾಭ';
+
+  @override
+  String get sumAssuredRow => 'ವಿಮಾ ಮೊತ್ತ';
+
+  @override
+  String get termRow => 'ಅವಧಿ';
+
+  @override
+  String bonusRateRow(String fy) {
+    return 'ಬೋನಸ್ ದರ (ಹ.ವ. $fy)';
+  }
+
+  @override
+  String bonusRateValue(int rate) {
+    return 'ಪ್ರತಿ ₹1,000ಕ್ಕೆ ವರ್ಷಕ್ಕೆ ₹$rate';
+  }
+
+  @override
+  String get annualBonusRow => 'ವಾರ್ಷಿಕ ಬೋನಸ್';
+
+  @override
+  String totalBonusRow(int years) {
+    return 'ಒಟ್ಟು ಬೋನಸ್ ($years ವರ್ಷ)';
+  }
+
+  @override
+  String get terminalBonusRow => 'ಅಂತಿಮ ಬೋನಸ್';
+
+  @override
+  String projectionNote(String fy) {
+    return 'ಅವಧಿಯ ಪ್ರತಿ ವರ್ಷಕ್ಕೂ ಹ.ವ. $fy ಬೋನಸ್ ದರವೇ ಮುಂದುವರಿಯುತ್ತದೆ ಎಂದು ಊಹಿಸಲಾಗಿದೆ.';
+  }
+
+  @override
+  String get timelineTitle => 'ಬದುಕುಳಿಯುವ ಲಾಭದ ವೇಳಾಪಟ್ಟಿ';
+
+  @override
+  String timelineYear(int year) {
+    return '$yearನೇ ವರ್ಷ';
+  }
+
+  @override
+  String get timelineSurvival => 'ಬದುಕುಳಿಯುವ ಲಾಭ';
+
+  @override
+  String get timelineMaturity => 'ಪಕ್ವತೆ: ಉಳಿದ ವಿಮಾ ಮೊತ್ತ + ಸಂಪೂರ್ಣ ಬೋನಸ್';
+
+  @override
+  String get timelineDeathNote =>
+      'ಅವಧಿಯಲ್ಲಿ ಮರಣವಾದರೆ: ಈಗಾಗಲೇ ಪಾವತಿಸಿದ ಲಾಭಗಳನ್ನು ಕಡಿತಗೊಳಿಸದೆ ಸಂಪೂರ್ಣ ವಿಮಾ ಮೊತ್ತ + ಬೋನಸ್.';
+
+  @override
+  String get notAvailableTitle => 'ಇನ್ನೂ ಲಭ್ಯವಿಲ್ಲ';
+
+  @override
+  String get rulesPendingBody =>
+      'ಈ ಯೋಜನೆಯ ನಿಯಮಗಳು ಭಾರತೀಯ ಅಂಚೆಯ ಅಧಿಕೃತ ಸುತ್ತೋಲೆಯಿಂದ ದೃಢಪಟ್ಟ ನಂತರ ಲೆಕ್ಕಾಚಾರ ಸೇರಿಸಲಾಗುವುದು.';
+
+  @override
+  String get premiumPendingBody =>
+      'ಪ್ರೀಮಿಯಂ ಭಾರತೀಯ ಅಂಚೆಯ ಅಧಿಕೃತ ಪ್ರೀಮಿಯಂ ಕೋಷ್ಟಕಗಳಿಂದಲೇ ಬರಬೇಕು. ಅಧಿಕೃತ ಕೋಷ್ಟಕಗಳನ್ನು ಸೇರಿಸಿ ಪರಿಶೀಲಿಸಿದ ನಂತರ ಈ ಕ್ಯಾಲ್ಕುಲೇಟರ್ ಆರಂಭವಾಗುತ್ತದೆ — ಅಂದಾಜು ಪ್ರೀಮಿಯಂ ತೋರಿಸಲಾಗುವುದಿಲ್ಲ.';
+
+  @override
+  String missingBonusRate(String fy) {
+    return 'ಹ.ವ. $fyಕ್ಕೆ ಘೋಷಿತ ಬೋನಸ್ ದರ ಇಲ್ಲ.';
+  }
+
+  @override
+  String vEntryAge(String plan, int min, int max, int age) {
+    return '$plan ಪ್ರವೇಶ ವಯಸ್ಸು $min–$max. ನಿಮ್ಮ ವಯಸ್ಸು: $age';
+  }
+
+  @override
+  String vChildAge(int min, int max, int age) {
+    return 'ಮಗುವಿನ ವಯಸ್ಸು $min–$max ಇರಬೇಕು. ನಮೂದಿಸಿದ್ದು: $age';
+  }
+
+  @override
+  String vSpouseAge(int min, int max, int age) {
+    return 'ಸಂಗಾತಿಯ ವಯಸ್ಸು $min–$max ಇರಬೇಕು. ನಮೂದಿಸಿದ್ದು: $age';
+  }
+
+  @override
+  String vSaMin(String min, String sa) {
+    return 'ಕನಿಷ್ಠ ವಿಮಾ ಮೊತ್ತ $min. ನಮೂದಿಸಿದ್ದು: $sa';
+  }
+
+  @override
+  String vSaMax(String max, String sa) {
+    return 'ಗರಿಷ್ಠ ವಿಮಾ ಮೊತ್ತ $max (ಈ ಯೋಜನೆಯ ನಿಮ್ಮ ಎಲ್ಲಾ ಪಾಲಿಸಿಗಳು ಸೇರಿ). ನಮೂದಿಸಿದ್ದು: $sa';
+  }
+
+  @override
+  String vSaMultiple(String multiple) {
+    return 'ವಿಮಾ ಮೊತ್ತ $multipleರ ಗುಣಕವಾಗಿರಬೇಕು';
+  }
+
+  @override
+  String vMaturityNotOffered(int value, String allowed) {
+    return 'ಪಕ್ವತೆ ವಯಸ್ಸು $value ಲಭ್ಯವಿಲ್ಲ. ಇವುಗಳಿಂದ ಆರಿಸಿ: $allowed';
+  }
+
+  @override
+  String vCeasingNotOffered(int value, String allowed) {
+    return 'ಪ್ರೀಮಿಯಂ ಪಾವತಿ ವಯಸ್ಸು $value ಲಭ್ಯವಿಲ್ಲ. ಇವುಗಳಿಂದ ಆರಿಸಿ: $allowed';
+  }
+
+  @override
+  String vTermNotOffered(int value, String allowed) {
+    return '$value ವರ್ಷದ ಅವಧಿ ಲಭ್ಯವಿಲ್ಲ. ಇವುಗಳಿಂದ ಆರಿಸಿ: $allowed';
+  }
+
+  @override
+  String vNotAfterEntry(int value, int age) {
+    return 'ಪಕ್ವತೆ ವಯಸ್ಸು $value ಪ್ರವೇಶ ವಯಸ್ಸಿಗಿಂತ ($age) ಹೆಚ್ಚಿರಬೇಕು.';
+  }
+
+  @override
+  String vTermRange(int min, int max, int term) {
+    return 'ಅವಧಿ $min–$max ವರ್ಷ ಇರಬೇಕು. ನಮೂದಿಸಿದ್ದು: $term';
+  }
+
+  @override
+  String vParentAge(int max, int age) {
+    return 'ಪೋಷಕರ ವಯಸ್ಸು $max ಅಥವಾ ಕಡಿಮೆ ಇರಬೇಕು. ನಮೂದಿಸಿದ್ದು: $age';
+  }
+
+  @override
+  String vTooManyChildren(int max) {
+    return 'ಗರಿಷ್ಠ $max ಮಕ್ಕಳಿಗೆ ಮಾತ್ರ ವಿಮೆ ಸಾಧ್ಯ.';
+  }
+
+  @override
+  String vChildSaCap(String cap, String sa) {
+    return 'ಈ ಮಗುವಿಗೆ ಗರಿಷ್ಠ ವಿಮಾ ಮೊತ್ತ $cap. ನಮೂದಿಸಿದ್ದು: $sa';
+  }
+
+  @override
+  String get vMissing => 'ದಯವಿಟ್ಟು ಎಲ್ಲಾ ವಿವರಗಳನ್ನು ಭರ್ತಿ ಮಾಡಿ.';
+
+  @override
+  String get eligibilityIntro =>
+      'ವ್ಯಕ್ತಿಗೆ ಅನ್ವಯಿಸುವ ಎಲ್ಲವನ್ನೂ ಆರಿಸಿ, ನಂತರ ವಯಸ್ಸು ನಮೂದಿಸಿ.';
+
+  @override
+  String get groupsPli => 'PLI — ಇವುಗಳಲ್ಲಿ ಯಾವುದಾದರೂ ಒಂದು';
+
+  @override
+  String get groupsRpli => 'RPLI — ಇವುಗಳಲ್ಲಿ ಯಾವುದಾದರೂ ಒಂದು';
+
+  @override
+  String get group_central_state_govt => 'ಕೇಂದ್ರ / ರಾಜ್ಯ ಸರ್ಕಾರಿ ನೌಕರ';
+
+  @override
+  String get group_defence_paramilitary => 'ರಕ್ಷಣಾ / ಅರೆಸೇನಾ ಪಡೆ';
+
+  @override
+  String get group_psu => 'ಸಾರ್ವಜನಿಕ ವಲಯದ ಉದ್ಯಮ';
+
+  @override
+  String get group_banks => 'ಬ್ಯಾಂಕ್ ನೌಕರ';
+
+  @override
+  String get group_local_bodies => 'ಸ್ಥಳೀಯ ಸಂಸ್ಥೆ ನೌಕರ';
+
+  @override
+  String get group_educational_institutions =>
+      'ಶಿಕ್ಷಣ ಸಂಸ್ಥೆ (ಮಾನ್ಯತೆ ಪಡೆದ ಖಾಸಗಿ ಸೇರಿ)';
+
+  @override
+  String get group_listed_companies => 'ಪಟ್ಟಿಮಾಡಿದ ಕಂಪನಿ ನೌಕರ';
+
+  @override
+  String get group_professionals => 'ವೃತ್ತಿಪರ (ವೈದ್ಯ, ಎಂಜಿನಿಯರ್, ಸಿಎ, ವಕೀಲ…)';
+
+  @override
+  String get group_graduates_diploma_holders =>
+      'ಪದವೀಧರ ಅಥವಾ ಡಿಪ್ಲೊಮಾ ಹೊಂದಿರುವವರು';
+
+  @override
+  String get group_rural_resident => 'ಗ್ರಾಮೀಣ ಪ್ರದೇಶದ ನಿವಾಸಿ';
+
+  @override
+  String get group_scheduled_bank_savings_account_holder =>
+      'ಅನುಸೂಚಿತ ಬ್ಯಾಂಕ್‌ನಲ್ಲಿ ಉಳಿತಾಯ ಖಾತೆದಾರ';
+
+  @override
+  String get ageLabel => 'ವಯಸ್ಸು';
+
+  @override
+  String get eligibleFor => 'ಅರ್ಹತೆ ಇದೆ';
+
+  @override
+  String plansAtAge(int age) {
+    return '$age ವಯಸ್ಸಿನಲ್ಲಿ ಲಭ್ಯವಿರುವ ಯೋಜನೆಗಳು';
+  }
+
+  @override
+  String get childPlansTitle => 'ಮಕ್ಕಳ ಪಾಲಿಸಿಗಳು (ನಿಮ್ಮ ಮಕ್ಕಳಿಗಾಗಿ)';
+
+  @override
+  String get selectGroupPrompt =>
+      'ಅರ್ಹ ಯೋಜನೆಗಳನ್ನು ನೋಡಲು ಮೇಲಿನವುಗಳಲ್ಲಿ ಕನಿಷ್ಠ ಒಂದನ್ನು ಆರಿಸಿ.';
+
+  @override
+  String noPlansAtAge(int age) {
+    return '$age ವಯಸ್ಸಿನಲ್ಲಿ ಯಾವುದೇ ಯೋಜನೆಗೆ ಪ್ರವೇಶವಿಲ್ಲ.';
+  }
+
+  @override
+  String get eligibilityNote =>
+      'ಅಂತಿಮ ಸ್ವೀಕಾರವು ಭಾರತೀಯ ಅಂಚೆಯ ವೈದ್ಯಕೀಯ ಪರಿಶೀಲನೆ ಮತ್ತು ದಾಖಲೆಗಳಿಗೆ ಒಳಪಟ್ಟಿರುತ್ತದೆ.';
+
+  @override
+  String get languageLabel => 'ಭಾಷೆ';
+
+  @override
+  String get systemLanguage => 'ಸಾಧನದ ಭಾಷೆ';
+
+  @override
+  String get tileAfford => 'ಎಷ್ಟು ಸಾಧ್ಯ';
+
+  @override
+  String get tileTools => 'ಪಾಲಿಸಿ ಸಾಧನಗಳು';
+
+  @override
+  String get tilePlans => 'ಯೋಜನೆಗಳು';
+
+  @override
+  String get tileAbout => 'ಕುರಿತು';
+
+  @override
+  String get dobLabel => 'ಜನ್ಮ ದಿನಾಂಕ';
+
+  @override
+  String get useAgeInstead => 'ಬದಲಿಗೆ ವಯಸ್ಸು ನಮೂದಿಸಿ';
+
+  @override
+  String get useDobInstead => 'ಜನ್ಮ ದಿನಾಂಕ ನಮೂದಿಸಿ';
+
+  @override
+  String ageFromDobNearest(int age) {
+    return 'ಆರಂಭ ದಿನಾಂಕದಂದು ಪ್ರವೇಶ ವಯಸ್ಸು: $age (ಹತ್ತಿರದ ಜನ್ಮದಿನದ ವಯಸ್ಸು)';
+  }
+
+  @override
+  String ageFromDobLast(int age) {
+    return 'ಆರಂಭ ದಿನಾಂಕದಂದು ಪ್ರವೇಶ ವಯಸ್ಸು: $age (ಕೊನೆಯ ಜನ್ಮದಿನದ ವಯಸ್ಸು)';
+  }
+
+  @override
+  String get premiumCeasingAgeLabel => 'ಪ್ರೀಮಿಯಂ ಪಾವತಿ ವಯಸ್ಸು';
+
+  @override
+  String get frequencyLabel => 'ಪಾವತಿ ಆವರ್ತನ';
+
+  @override
+  String get freqMonthly => 'ಮಾಸಿಕ';
+
+  @override
+  String get freqQuarterly => 'ತ್ರೈಮಾಸಿಕ';
+
+  @override
+  String get freqHalfYearly => 'ಅರ್ಧವಾರ್ಷಿಕ';
+
+  @override
+  String get freqYearly => 'ವಾರ್ಷಿಕ';
+
+  @override
+  String get premiumPerInstalment => 'ಪ್ರತಿ ಕಂತಿನ ಪ್ರೀಮಿಯಂ';
+
+  @override
+  String get tablePremiumRow => 'ಕೋಷ್ಟಕ ಪ್ರೀಮಿಯಂ';
+
+  @override
+  String get saRebateRow => 'ವಿಮಾ ಮೊತ್ತ ರಿಯಾಯಿತಿ';
+
+  @override
+  String totalPremiumRow(int count) {
+    return 'ಒಟ್ಟು ಪ್ರೀಮಿಯಂ ($count ಕಂತುಗಳು)';
+  }
+
+  @override
+  String get payingTermRow => 'ಪ್ರೀಮಿಯಂ ಪಾವತಿ ಅವಧಿ';
+
+  @override
+  String get lifeCoverRow => 'ಜೀವ ವಿಮಾ ರಕ್ಷಣೆ';
+
+  @override
+  String get allFrequenciesTitle => 'ಎಲ್ಲಾ ಪಾವತಿ ಆವರ್ತನಗಳು';
+
+  @override
+  String get notInTable => 'ಅಧಿಕೃತ ಕೋಷ್ಟಕದಲ್ಲಿ ಲಭ್ಯವಿಲ್ಲ';
+
+  @override
+  String get noTableForPlan => 'ಈ ಯೋಜನೆಯ ಪ್ರೀಮಿಯಂ ಕೋಷ್ಟಕ ಇನ್ನೂ ಸೇರಿಸಿಲ್ಲ.';
+
+  @override
+  String get illustrationTitle => 'ವರ್ಷವಾರು ಲಾಭ ವಿವರ';
+
+  @override
+  String get colYear => 'ವರ್ಷ';
+
+  @override
+  String get colPremiumsPaid => 'ಪಾವತಿಸಿದ ಪ್ರೀಮಿಯಂ';
+
+  @override
+  String get colBonus => 'ಬೋನಸ್';
+
+  @override
+  String get colLifeCover => 'ಜೀವ ರಕ್ಷಣೆ';
+
+  @override
+  String get makeQuotation => 'ಉಲ್ಲೇಖ ಪತ್ರ ತಯಾರಿಸಿ';
+
+  @override
+  String get gstNote =>
+      'ಜಿಎಸ್‌ಟಿ: 22 ಸೆಪ್ಟೆಂಬರ್ 2025 ಅಥವಾ ನಂತರ ಪಾವತಿಸಿದ ವೈಯಕ್ತಿಕ ಜೀವ ವಿಮಾ ಪ್ರೀಮಿಯಂಗೆ ಇಲ್ಲ.';
+
+  @override
+  String get chartTitle => 'ಪಾವತಿಸಿದ ಪ್ರೀಮಿಯಂ ಮತ್ತು ಲಾಭ';
+
+  @override
+  String get chartPaid => 'ಒಟ್ಟು ಪ್ರೀಮಿಯಂ';
+
+  @override
+  String get chartReceived => 'ಒಟ್ಟು ಲಾಭ';
+
+  @override
+  String get showTable => 'ವರ್ಷವಾರು ಕೋಷ್ಟಕ ತೋರಿಸಿ';
+
+  @override
+  String get hideTable => 'ವರ್ಷವಾರು ಕೋಷ್ಟಕ ಮರೆಮಾಡಿ';
+
+  @override
+  String get reverseTitle => 'ನನಗೆ ಎಷ್ಟು ಸಾಧ್ಯ?';
+
+  @override
+  String get budgetLabel => 'ಪ್ರತಿ ಕಂತಿನ ಬಜೆಟ್ (₹)';
+
+  @override
+  String get reverseIntro =>
+      'ನೀವು ಎಷ್ಟು ಪಾವತಿಸಬಲ್ಲಿರಿ ಎಂದು ನಮೂದಿಸಿ. ಪ್ರತಿ ಯೋಜನೆ ಆಯ್ಕೆಗೆ ಆ ಮೊತ್ತದೊಳಗಿನ ಗರಿಷ್ಠ ವಿಮಾ ಮೊತ್ತ ತೋರಿಸಲಾಗುತ್ತದೆ.';
+
+  @override
+  String optMaturityAge(int age) {
+    return '$ageರಲ್ಲಿ ಪಕ್ವತೆ';
+  }
+
+  @override
+  String optCeasingAge(int age) {
+    return '$age ವಯಸ್ಸಿನವರೆಗೆ ಪ್ರೀಮಿಯಂ';
+  }
+
+  @override
+  String optTerm(int years) {
+    return '$years ವರ್ಷದ ಅವಧಿ';
+  }
+
+  @override
+  String get reverseNone =>
+      'ಈ ವಯಸ್ಸಿನಲ್ಲಿ ಈ ಬಜೆಟ್‌ಗೆ ಯಾವುದೇ ಯೋಜನೆ ಹೊಂದುವುದಿಲ್ಲ.';
+
+  @override
+  String get saShort => 'ವಿಮಾ ಮೊತ್ತ';
+
+  @override
+  String get premiumShort => 'ಪ್ರೀಮಿಯಂ';
+
+  @override
+  String get compareTitle => 'ಯೋಜನೆಗಳ ಹೋಲಿಕೆ';
+
+  @override
+  String optionN(int n) {
+    return 'ಆಯ್ಕೆ $n';
+  }
+
+  @override
+  String get addOption => 'ಆಯ್ಕೆ ಸೇರಿಸಿ';
+
+  @override
+  String get removeOption => 'ಆಯ್ಕೆ ತೆಗೆಯಿರಿ';
+
+  @override
+  String get maturityShort => 'ಪಕ್ವತೆ / ಲಾಭ';
+
+  @override
+  String get totalPaidShort => 'ಒಟ್ಟು ಪಾವತಿ';
+
+  @override
+  String get lifeCoverShort => 'ಜೀವ ರಕ್ಷಣೆ';
+
+  @override
+  String get comparisonTitle => 'ಹೋಲಿಕೆ';
+
+  @override
+  String get toolsTitle => 'ಪಾಲಿಸಿ ಸಾಧನಗಳು';
+
+  @override
+  String get tabLoan => 'ಸಾಲ';
+
+  @override
+  String get tabPaidUp => 'ಪೇಡ್-ಅಪ್';
+
+  @override
+  String get tabRevival => 'ಪುನರುಜ್ಜೀವನ';
+
+  @override
+  String get tabAdvance => 'ಮುಂಗಡ';
+
+  @override
+  String get yearsInForceLabel => 'ಪಾಲಿಸಿ ಜಾರಿಯಲ್ಲಿರುವ ವರ್ಷಗಳು';
+
+  @override
+  String get loanAmountLabel => 'ಸಾಲದ ಮೊತ್ತ (₹)';
+
+  @override
+  String get loanMonthsLabel => 'ಮರುಪಾವತಿಯವರೆಗಿನ ತಿಂಗಳುಗಳು';
+
+  @override
+  String monthsValue(int months) {
+    return '$months ತಿಂಗಳು';
+  }
+
+  @override
+  String get loanInterestRow => 'ಬಡ್ಡಿ';
+
+  @override
+  String get loanTotalRow => 'ಒಟ್ಟು ಮರುಪಾವತಿ';
+
+  @override
+  String loanRateNote(String rate) {
+    return 'ವರ್ಷಕ್ಕೆ $rate% ಬಡ್ಡಿ, ಅರ್ಧವಾರ್ಷಿಕ ಚಕ್ರಬಡ್ಡಿ.';
+  }
+
+  @override
+  String loanAvailableAfter(int years) {
+    return '$years ವರ್ಷಗಳ ನಂತರ ಸಾಲ ಲಭ್ಯ.';
+  }
+
+  @override
+  String get loanNotOffered => 'ಈ ಯೋಜನೆಯಲ್ಲಿ ಸಾಲ ಸೌಲಭ್ಯವಿಲ್ಲ.';
+
+  @override
+  String get loanEligibleYes => 'ಸಾಲಕ್ಕೆ ಅರ್ಹ';
+
+  @override
+  String get loanEligibleNo => 'ಇನ್ನೂ ಸಾಲಕ್ಕೆ ಅರ್ಹವಲ್ಲ';
+
+  @override
+  String get loanAmountNote =>
+      'ಗರಿಷ್ಠ ಸಾಲವು ಸರೆಂಡರ್ ಮೌಲ್ಯವನ್ನು ಅವಲಂಬಿಸಿದೆ; ಅದನ್ನು ಭಾರತೀಯ ಅಂಚೆ ಲೆಕ್ಕಹಾಕುತ್ತದೆ.';
+
+  @override
+  String get premiumsPaidLabel => 'ಪಾವತಿಸಿದ ಕಂತುಗಳು';
+
+  @override
+  String get premiumsPayableLabel => 'ಪಾವತಿಸಬೇಕಾದ ಒಟ್ಟು ಕಂತುಗಳು';
+
+  @override
+  String get paidUpSaRow => 'ಪೇಡ್-ಅಪ್ ವಿಮಾ ಮೊತ್ತ';
+
+  @override
+  String get paidUpNote =>
+      'ಅಂದಾಜು. ಬೋನಸ್: ಪಾಲಿಸಿ 5 ವರ್ಷಕ್ಕಿಂತ ಕಡಿಮೆಯಿದ್ದರೆ ಇಲ್ಲ; 5 ವರ್ಷಗಳ ನಂತರ ಪೇಯ್ಡ್-ಅಪ್ ಮೊತ್ತದ ಮೇಲೆ ಅನುಪಾತದ ಬೋನಸ್, ಅಂಚೆ ಇಲಾಖೆಯ ನಿಯಮದಂತೆ. ಸರೆಂಡರ್ ಮೌಲ್ಯಕ್ಕೆ ಅಧಿಕೃತ ಸರೆಂಡರ್ ಅಂಶಗಳು ಬೇಕು, ಅದನ್ನು ಲೆಕ್ಕಿಸಲಾಗಿಲ್ಲ.';
+
+  @override
+  String paidUpNotEligible(int years) {
+    return 'ಪಾಲಿಸಿ $years ವರ್ಷ ಜಾರಿಯಲ್ಲಿದ್ದ ನಂತರವೇ ಪೇಡ್-ಅಪ್ ಆಗಬಹುದು.';
+  }
+
+  @override
+  String get paidUpInvalid =>
+      'ಪಾವತಿಸಿದ ಕಂತುಗಳು ಪಾವತಿಸಬೇಕಾದ ಕಂತುಗಳಿಗಿಂತ ಹೆಚ್ಚಿರಬಾರದು.';
+
+  @override
+  String get instalmentLabel => 'ಪ್ರತಿ ಕಂತಿನ ಪ್ರೀಮಿಯಂ (₹)';
+
+  @override
+  String get firstUnpaidLabel => 'ಮೊದಲ ಬಾಕಿ ಕಂತಿನ ದಿನಾಂಕ';
+
+  @override
+  String get payDateLabel => 'ಪಾವತಿ ದಿನಾಂಕ';
+
+  @override
+  String get missedRow => 'ಬಾಕಿ ಕಂತುಗಳು';
+
+  @override
+  String get arrearsRow => 'ಬಾಕಿ ಮೊತ್ತ';
+
+  @override
+  String get defaultFeeRow => 'ವಿಳಂಬ ಶುಲ್ಕ';
+
+  @override
+  String get totalPayableRow => 'ಒಟ್ಟು ಪಾವತಿಸಬೇಕಾದ್ದು';
+
+  @override
+  String revivalNote(String percent) {
+    return 'ವಿಳಂಬದ ಪ್ರತಿ ತಿಂಗಳಿಗೆ ಕಂತಿನ $percent% ವಿಳಂಬ ಶುಲ್ಕ. ದೀರ್ಘ ಕಾಲದ ನಂತರ ಪುನರುಜ್ಜೀವನಕ್ಕೆ ವೈದ್ಯಕೀಯ ಪ್ರಮಾಣಪತ್ರ ಬೇಕಾಗಬಹುದು.';
+  }
+
+  @override
+  String revivalLine(String date, int months, String fee) {
+    return '$date ಬಾಕಿ • $months ತಿಂಗಳು ತಡ • ಶುಲ್ಕ $fee';
+  }
+
+  @override
+  String get nothingDue => 'ಆ ದಿನಾಂಕಕ್ಕೆ ಯಾವುದೇ ಬಾಕಿ ಇಲ್ಲ.';
+
+  @override
+  String get monthsAdvanceLabel => 'ಮುಂಗಡವಾಗಿ ಪಾವತಿಸುವ ತಿಂಗಳುಗಳು';
+
+  @override
+  String rebateRow(String percent) {
+    return 'ರಿಯಾಯಿತಿ ($percent%)';
+  }
+
+  @override
+  String get amountDueRow => 'ಬಾಕಿ ಮೊತ್ತ';
+
+  @override
+  String get payableRow => 'ನೀವು ಪಾವತಿಸುವುದು';
+
+  @override
+  String get advanceNote =>
+      'ತೋರಿಸಿದ ರಿಯಾಯಿತಿ ದರ ದತ್ತಾಂಶದ ಮುಂಗಡ ಪಾವತಿ ರಿಯಾಯಿತಿಯಂತೆ; ಪ್ರೀಮಿಯಂ ಮುಂಗಡವಾಗಿ ಪಾವತಿಸಿದಾಗ ಅನ್ವಯ.';
+
+  @override
+  String get policiesTitle => 'ನನ್ನ ಪಾಲಿಸಿಗಳು';
+
+  @override
+  String get noPolicies => 'ಇನ್ನೂ ಯಾವುದೇ ಪಾಲಿಸಿ ಉಳಿಸಿಲ್ಲ. ಸೇರಿಸಲು + ಒತ್ತಿ.';
+
+  @override
+  String get addPolicy => 'ಪಾಲಿಸಿ ಸೇರಿಸಿ';
+
+  @override
+  String get editPolicy => 'ಪಾಲಿಸಿ ತಿದ್ದಿ';
+
+  @override
+  String get holderNameLabel => 'ಪಾಲಿಸಿದಾರರ ಹೆಸರು';
+
+  @override
+  String get policyNumberLabel => 'ಪಾಲಿಸಿ ಸಂಖ್ಯೆ';
+
+  @override
+  String get premiumAmountLabel => 'ಪ್ರತಿ ಕಂತಿನ ಪ್ರೀಮಿಯಂ (₹, ರಸೀದಿಯಂತೆ)';
+
+  @override
+  String get save => 'ಉಳಿಸಿ';
+
+  @override
+  String get delete => 'ಅಳಿಸಿ';
+
+  @override
+  String get deleteConfirm => 'ಈ ಪಾಲಿಸಿಯನ್ನು ಅಳಿಸುವುದೇ?';
+
+  @override
+  String get cancel => 'ರದ್ದು';
+
+  @override
+  String nextDue(String date) {
+    return 'ಮುಂದಿನ ಕಂತು: $date';
+  }
+
+  @override
+  String get noMoreDues => 'ಎಲ್ಲಾ ಪ್ರೀಮಿಯಂ ಪಾವತಿಯಾಗಿದೆ';
+
+  @override
+  String get remindersLabel => 'ಪ್ರತಿ ಕಂತಿಗೆ 3 ದಿನ ಮೊದಲು ನೆನಪಿಸಿ';
+
+  @override
+  String get remindersDenied => 'ಈ ಆ್ಯಪ್‌ಗೆ ಅಧಿಸೂಚನೆಗಳು ಆಫ್ ಆಗಿವೆ.';
+
+  @override
+  String get accruedBonusRow => 'ಇಲ್ಲಿಯವರೆಗೆ ಸಂಚಿತ ಬೋನಸ್';
+
+  @override
+  String bonusMissingYears(String years) {
+    return 'ಹ.ವ. $yearsರ ಬೋನಸ್ ದರಗಳು ಆ್ಯಪ್ ದತ್ತಾಂಶದಲ್ಲಿಲ್ಲ; ಒಟ್ಟು ಮೊತ್ತದಲ್ಲಿ ಆ ವರ್ಷಗಳು ಸೇರಿಲ್ಲ.';
+  }
+
+  @override
+  String maturityOn(String date) {
+    return '$date ರಂದು ಪಕ್ವತೆ';
+  }
+
+  @override
+  String get upcomingDues => 'ಮುಂಬರುವ ಕಂತಿನ ದಿನಾಂಕಗಳು';
+
+  @override
+  String get yearsInForceRow => 'ಜಾರಿಯಲ್ಲಿರುವ ವರ್ಷಗಳು';
+
+  @override
+  String get reminderTitle => 'ಪಿಎಲ್‌ಐ ಪ್ರೀಮಿಯಂ ಬಾಕಿ';
+
+  @override
+  String reminderBody(String name, String amount, String date, String number) {
+    return '$name: $amount $date ರಂದು ಬಾಕಿ (ಪಾಲಿಸಿ $number)';
+  }
+
+  @override
+  String get savedLocally => 'ಈ ಫೋನ್‌ನಲ್ಲಿ ಮಾತ್ರ ಉಳಿಸಲಾಗಿದೆ.';
+
+  @override
+  String get requiredField => 'ಅಗತ್ಯ';
+
+  @override
+  String get projectedMaturityRow => 'ಅಂದಾಜು ಪಕ್ವತೆ ಮೊತ್ತ';
+
+  @override
+  String get quotationTitle => 'ಉಲ್ಲೇಖ ಪತ್ರ';
+
+  @override
+  String get customerNameLabel => 'ಗ್ರಾಹಕರ ಹೆಸರು';
+
+  @override
+  String get agentNameLabel => 'ತಯಾರಿಸಿದವರು (ಐಚ್ಛಿಕ)';
+
+  @override
+  String get sharePdf => 'PDF ಹಂಚಿ';
+
+  @override
+  String get shareImage => 'ಚಿತ್ರ ಹಂಚಿ';
+
+  @override
+  String get quotationHeading => 'ಪ್ರೀಮಿಯಂ ಉಲ್ಲೇಖ ಪತ್ರ';
+
+  @override
+  String preparedOn(String date) {
+    return '$date ರಂದು ತಯಾರಿಸಲಾಗಿದೆ';
+  }
+
+  @override
+  String quotationFor(String name) {
+    return 'ಇವರಿಗೆ: $name';
+  }
+
+  @override
+  String preparedBy(String name) {
+    return 'ತಯಾರಿಸಿದವರು: $name';
+  }
+
+  @override
+  String get quotationInvalid =>
+      'ಉಲ್ಲೇಖ ಪತ್ರ ತಯಾರಿಸಲು ಯೋಜನೆಯ ವಿವರಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ.';
+
+  @override
+  String get planDetailsTitle => 'ಯೋಜನೆಯ ವಿವರಗಳು';
+
+  @override
+  String get planInfoTitle => 'ಯೋಜನೆಗಳ ಮಾಹಿತಿ';
+
+  @override
+  String entryAgeInfo(int min, int max) {
+    return 'ಪ್ರವೇಶ ವಯಸ್ಸು: $min–$max';
+  }
+
+  @override
+  String maturityAgesInfo(String ages) {
+    return 'ಪಕ್ವತೆ ವಯಸ್ಸುಗಳು: $ages';
+  }
+
+  @override
+  String ceasingAgesInfo(String ages, int age) {
+    return 'ಪ್ರೀಮಿಯಂ ಪಾವತಿ ವಯಸ್ಸುಗಳು: $ages; $ageರಲ್ಲಿ ಪಕ್ವತೆ';
+  }
+
+  @override
+  String termsInfo(String terms) {
+    return 'ಅವಧಿ: $terms ವರ್ಷ';
+  }
+
+  @override
+  String survivalInfo(String list) {
+    return 'ಹಣ ವಾಪಸ್: $list';
+  }
+
+  @override
+  String survivalItem(int percent, int year) {
+    return '$yearನೇ ವರ್ಷದಲ್ಲಿ $percent%';
+  }
+
+  @override
+  String loanInfo(int years) {
+    return '$years ವರ್ಷಗಳ ನಂತರ ಸಾಲ';
+  }
+
+  @override
+  String get noLoanInfo => 'ಸಾಲವಿಲ್ಲ';
+
+  @override
+  String surrenderInfo(int years) {
+    return '$years ವರ್ಷಗಳ ನಂತರ ಸರೆಂಡರ್';
+  }
+
+  @override
+  String get noSurrenderInfo => 'ಸರೆಂಡರ್ ಇಲ್ಲ';
+
+  @override
+  String bonusInfo(String fy, int rate) {
+    return 'ಹ.ವ. $fy ಬೋನಸ್: ಪ್ರತಿ ₹1,000ಕ್ಕೆ ವರ್ಷಕ್ಕೆ ₹$rate';
+  }
+
+  @override
+  String saLimitInfo(String min, String max) {
+    return 'ವಿಮಾ ಮೊತ್ತ: $min – $max';
+  }
+
+  @override
+  String jointInfo(int min, int max, int tmin, int tmax) {
+    return 'ಪ್ರತಿ ಸಂಗಾತಿಯ ವಯಸ್ಸು $min–$max; ಅವಧಿ $tmin–$tmax ವರ್ಷ';
+  }
+
+  @override
+  String childInfo(int min, int max, int parent, int children, String cap) {
+    return 'ಮಗುವಿನ ವಯಸ್ಸು $min–$max; ಪೋಷಕರ ವಯಸ್ಸು $parentರವರೆಗೆ; ಗರಿಷ್ಠ $children ಮಕ್ಕಳು; ವಿಮಾ ಮೊತ್ತ $capರವರೆಗೆ';
+  }
+
+  @override
+  String conversionInfo(int years) {
+    return '$years ವರ್ಷಗಳ ನಂತರ ದತ್ತಿ ವಿಮೆಗೆ ಪರಿವರ್ತಿಸಬಹುದು';
+  }
+
+  @override
+  String get faqTitle => 'ಸಾಮಾನ್ಯ ಪ್ರಶ್ನೆಗಳು';
+
+  @override
+  String get faq1q => 'ಬೋನಸ್ ಖಾತರಿಯೇ?';
+
+  @override
+  String get faq1a =>
+      'ಇಲ್ಲ. ಭಾರತೀಯ ಅಂಚೆ ಪ್ರತಿ ವರ್ಷ ಬೋನಸ್ ದರ ಘೋಷಿಸುತ್ತದೆ. ಇಲ್ಲಿನ ಅಂದಾಜುಗಳು ಮುಂದಿನ ಎಲ್ಲಾ ವರ್ಷಗಳಿಗೂ ಇತ್ತೀಚಿನ ದರವನ್ನೇ ಊಹಿಸುತ್ತವೆ.';
+
+  @override
+  String get faq2q => 'ಪ್ರೀಮಿಯಂ ಎಲ್ಲಿಂದ ಬರುತ್ತದೆ?';
+
+  @override
+  String get faq2a =>
+      'ಭಾರತೀಯ ಅಂಚೆಯ ಅಧಿಕೃತ ಪ್ರೀಮಿಯಂ ಕೋಷ್ಟಕಗಳಿಂದ. ಆ್ಯಪ್ ಎಂದಿಗೂ ಪ್ರೀಮಿಯಂ ಅಂದಾಜು ಮಾಡುವುದಿಲ್ಲ.';
+
+  @override
+  String get faq3q => 'ಆದಾಯ ತೆರಿಗೆ ಪ್ರಯೋಜನ ಇದೆಯೇ?';
+
+  @override
+  String get faq3a =>
+      'ಪ್ರೀಮಿಯಂ ಸೆಕ್ಷನ್ 80C (ಹಳೆಯ ತೆರಿಗೆ ಪದ್ಧತಿ) ಅಡಿ ಅರ್ಹವಾಗಬಹುದು ಮತ್ತು ಪಕ್ವತೆ ಮೊತ್ತ ಸೆಕ್ಷನ್ 10(10D) ಅಡಿ ಷರತ್ತುಗಳಿಗೆ ಒಳಪಟ್ಟು ವಿನಾಯಿತಿ ಪಡೆಯಬಹುದು. ಇದು ತೆರಿಗೆ ಸಲಹೆಯಲ್ಲ.';
+
+  @override
+  String get faq4q => 'ಪ್ರೀಮಿಯಂ ಮೇಲೆ ಜಿಎಸ್‌ಟಿ ಇದೆಯೇ?';
+
+  @override
+  String get faq4a =>
+      'ಇಲ್ಲ. 22 ಸೆಪ್ಟೆಂಬರ್ 2025ರಿಂದ ವೈಯಕ್ತಿಕ ಜೀವ ವಿಮಾ ಪ್ರೀಮಿಯಂ ಮೇಲೆ ಜಿಎಸ್‌ಟಿ ಇಲ್ಲ.';
+
+  @override
+  String get faq5q => 'PLI ಮತ್ತು RPLI ಯಾರು ಪಡೆಯಬಹುದು?';
+
+  @override
+  String get faq5a =>
+      'PLI: ಸರ್ಕಾರಿ ಮತ್ತು ಅರೆ-ಸರ್ಕಾರಿ ನೌಕರರು, ವೃತ್ತಿಪರರು, ಪದವೀಧರರು, ಡಿಪ್ಲೊಮಾ ಹೊಂದಿರುವವರು ಮತ್ತು ಭಾರತೀಯ ಅಂಚೆ ಪಟ್ಟಿ ಮಾಡಿದ ಇತರರು. RPLI: ಗ್ರಾಮೀಣ ನಿವಾಸಿಗಳು ಮತ್ತು ಅನುಸೂಚಿತ ಬ್ಯಾಂಕ್ ಉಳಿತಾಯ ಖಾತೆದಾರರು.';
+
+  @override
+  String get aboutTitle => 'ಕುರಿತು';
+
+  @override
+  String get privacyTitle => 'ಗೌಪ್ಯತೆ';
+
+  @override
+  String get privacyBody =>
+      'PLI & RPLI ಕ್ಯಾಲ್ಕುಲೇಟರ್ ಯಾವುದೇ ದತ್ತಾಂಶ ಸಂಗ್ರಹಿಸುವುದಿಲ್ಲ. ನೀವು ನಮೂದಿಸುವ ಅಥವಾ ಉಳಿಸುವ ಎಲ್ಲವೂ ಈ ಫೋನ್‌ನಲ್ಲೇ ಇರುತ್ತದೆ. ಖಾತೆ ಅಥವಾ ಇಂಟರ್ನೆಟ್ ಅಗತ್ಯವಿಲ್ಲ.';
+
+  @override
+  String get dataSourceTitle => 'ದರ ದತ್ತಾಂಶ';
+
+  @override
+  String dataSourceBody(String id, String date, String source) {
+    return 'ನಿಯಮಗಳು $id, $dateರಿಂದ ಜಾರಿ. ಮೂಲ: $source';
+  }
+
+  @override
+  String get provisionalTitle => 'ಇನ್ನೂ ದೃಢಪಡಬೇಕಾದ ನಿಯಮಗಳು';
+
+  @override
+  String get provisionalIntro =>
+      'ಭಾರತೀಯ ಅಂಚೆಯ ಅಧಿಕೃತ ಸುತ್ತೋಲೆಗಳಿಂದ ದೃಢಪಡುವವರೆಗೆ ಈ ನಿಯಮಗಳು ತಾತ್ಕಾಲಿಕ ಊಹೆಗಳು (ಇಂಗ್ಲಿಷ್‌ನಲ್ಲಿ):';
+
+  @override
+  String get checkUpdates => 'ದರ ನವೀಕರಣ ಪರಿಶೀಲಿಸಿ';
+
+  @override
+  String updateInstalled(int version) {
+    return 'ದರ ದತ್ತಾಂಶ ಆವೃತ್ತಿ $versionಕ್ಕೆ ನವೀಕರಿಸಲಾಗಿದೆ.';
+  }
+
+  @override
+  String get updateCurrent => 'ದರ ದತ್ತಾಂಶ ಇತ್ತೀಚಿನದು.';
+
+  @override
+  String updateFailed(String error) {
+    return 'ನವೀಕರಣ ವಿಫಲ; ಈಗಿನ ದರಗಳೇ ಮುಂದುವರಿದಿವೆ. $error';
+  }
+
+  @override
+  String get sampleDataNote =>
+      'ಪ್ರೀಮಿಯಂ ಕೋಷ್ಟಕಗಳು ಮಾದರಿ ದತ್ತಾಂಶ, ಭಾರತೀಯ ಅಂಚೆಯ ಅಧಿಕೃತ ಅಂಕಿಗಳಲ್ಲ.';
+
+  @override
+  String appVersion(String version) {
+    return 'ಆವೃತ್ತಿ $version';
+  }
+
+  @override
+  String get homeTagline => 'ಪ್ರೀಮಿಯಂ, ಬೋನಸ್ ಮತ್ತು ಪಕ್ವತೆ — ಆಫ್‌ಲೈನ್‌ನಲ್ಲೂ';
+
+  @override
+  String get quickPremiumTitle => 'ಪ್ರೀಮಿಯಂ ಲೆಕ್ಕಹಾಕಿ';
+
+  @override
+  String get quickPremiumBody =>
+      'ಯಾವುದೇ ಯೋಜನೆ, ವಯಸ್ಸು, ವಿಮಾ ಮೊತ್ತ — ಎಲ್ಲಾ ಆವರ್ತನಗಳು';
+
+  @override
+  String get sectionCalculators => 'ಕ್ಯಾಲ್ಕುಲೇಟರ್‌ಗಳು';
+
+  @override
+  String get sectionServicing => 'ಪಾಲಿಸಿ ಸೇವೆಗಳು';
+
+  @override
+  String get sectionLearn => 'ತಿಳಿಯಿರಿ';
+
+  @override
+  String get descPremium => 'ಎಲ್ಲಾ ಆವರ್ತನಗಳ ಪ್ರೀಮಿಯಂ';
+
+  @override
+  String get descMaturity => 'ಬೋನಸ್ ಮತ್ತು ಪಕ್ವತೆ ಮೊತ್ತ';
+
+  @override
+  String get descCompare => 'ಯೋಜನೆಗಳು ಅಕ್ಕಪಕ್ಕ';
+
+  @override
+  String get descAfford => 'ನಿಮ್ಮ ಬಜೆಟ್‌ಗೆ ಉತ್ತಮ ರಕ್ಷಣೆ';
+
+  @override
+  String get descPolicies => 'ಉಳಿಸಿದ ಪಾಲಿಸಿಗಳು ಮತ್ತು ಕಂತುಗಳು';
+
+  @override
+  String get descTools => 'ಸಾಲ, ಪುನರುಜ್ಜೀವನ, ಪೇಡ್-ಅಪ್';
+
+  @override
+  String get descQuotation => 'PDF ಉಲ್ಲೇಖ ಹಂಚಿ';
+
+  @override
+  String get descEligibility => 'PLI ಅಥವಾ RPLI ಯಾರು ಪಡೆಯಬಹುದು';
+
+  @override
+  String get descPlans => 'ಯೋಜನೆ ನಿಯಮಗಳು ಮತ್ತು ಪ್ರಶ್ನೆಗಳು';
+
+  @override
+  String get descAbout => 'ಗೌಪ್ಯತೆ ಮತ್ತು ದರ ದತ್ತಾಂಶ';
+
+  @override
+  String get sectionPersonTitle => 'ಪಾಲಿಸಿದಾರರು';
+
+  @override
+  String get sectionCoverTitle => 'ವಿಮಾ ರಕ್ಷಣೆ ಮತ್ತು ಪಾವತಿ';
+
+  @override
+  String get tileForms => 'ಫಾರ್ಮ್‌ಗಳು';
+
+  @override
+  String get descForms => 'ಫಾರ್ಮ್‌ಗಳು, ಪಟ್ಟಿಗಳು, ಪತ್ರಗಳು';
+
+  @override
+  String get formsTitle => 'ಫಾರ್ಮ್‌ಗಳು ಮತ್ತು ಪತ್ರಗಳು';
+
+  @override
+  String get formsIntro =>
+      'ಪ್ರತಿ PLI / RPLI ಕೋರಿಕೆಗೆ ಏನು ಬೇಕು, ಫಾರ್ಮ್ ಎಲ್ಲಿ ಸಿಗುತ್ತದೆ, ಮತ್ತು ಸಿದ್ಧ ಕೋರಿಕೆ ಪತ್ರಗಳು.';
+
+  @override
+  String get formsVerifyNote =>
+      'ದಾಖಲೆಗಳ ಪಟ್ಟಿ ಮಾರ್ಗದರ್ಶಿ ಮಾತ್ರ, ಬದಲಾಗಬಹುದು. ಸಲ್ಲಿಸುವ ಮೊದಲು ನಿಮ್ಮ ಅಂಚೆ ಕಚೇರಿಯಲ್ಲಿ ದೃಢಪಡಿಸಿ.';
+
+  @override
+  String get whereToGetTitle => 'ಫಾರ್ಮ್ ಎಲ್ಲಿ ಸಿಗುತ್ತದೆ';
+
+  @override
+  String get whereToGetBody =>
+      'ಯಾವುದೇ ಅಂಚೆ ಕಚೇರಿ ಅಥವಾ CPCಯಲ್ಲಿ ಉಚಿತ, ಅಥವಾ ಭಾರತೀಯ ಅಂಚೆ PLI ವೆಬ್‌ಸೈಟ್‌ನಿಂದ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ.';
+
+  @override
+  String get documentsTitle => 'ಸಿದ್ಧವಿಡಬೇಕಾದ ದಾಖಲೆಗಳು';
+
+  @override
+  String get openOfficialForm => 'ಅಧಿಕೃತ ಫಾರ್ಮ್ ತೆರೆಯಿರಿ';
+
+  @override
+  String get getFromIndiaPost => 'ಭಾರತೀಯ ಅಂಚೆಯಿಂದ ಫಾರ್ಮ್ ಪಡೆಯಿರಿ';
+
+  @override
+  String get detailsSheetTitle => 'ಪಾಲಿಸಿ ವಿವರ ಪತ್ರ';
+
+  @override
+  String get detailsSheetIntro =>
+      'ಅಧಿಕೃತ ಫಾರ್ಮ್‌ಗೆ ನಕಲಿಸಲು ನಿಮ್ಮ ಉಳಿಸಿದ ಪಾಲಿಸಿ ವಿವರಗಳು ಒಂದೇ ಕಡೆ.';
+
+  @override
+  String get writeLetterTitle => 'ಕೋರಿಕೆ ಪತ್ರ ಬರೆಯಿರಿ';
+
+  @override
+  String get writeLetterIntro =>
+      'ನಿಮ್ಮ ಉಳಿಸಿದ ಪಾಲಿಸಿಯಿಂದ ತುಂಬಿದ, ಪೋಸ್ಟ್‌ಮಾಸ್ಟರ್‌ಗೆ ಸಿದ್ಧ ಪತ್ರ.';
+
+  @override
+  String get choosePolicy => 'ಉಳಿಸಿದ ಪಾಲಿಸಿ';
+
+  @override
+  String get noSavedPolicies => 'ಮೊದಲು ನನ್ನ ಪಾಲಿಸಿಗಳಲ್ಲಿ ಒಂದು ಪಾಲಿಸಿ ಉಳಿಸಿ.';
+
+  @override
+  String get toOfficeLabel => 'ಇವರಿಗೆ (ಅಂಚೆ ಕಚೇರಿ / CPC)';
+
+  @override
+  String get yourAddressLabel => 'ನಿಮ್ಮ ವಿಳಾಸ';
+
+  @override
+  String get phoneLabel => 'ದೂರವಾಣಿ';
+
+  @override
+  String get placeLabel => 'ಸ್ಥಳ';
+
+  @override
+  String get nomineeNameLabel => 'ಹೊಸ ನಾಮಿನಿ ಹೆಸರು';
+
+  @override
+  String get nomineeRelationLabel => 'ಸಂಬಂಧ';
+
+  @override
+  String get nomineeAgeLabel => 'ನಾಮಿನಿ ವಯಸ್ಸು';
+
+  @override
+  String get newAddressLabel => 'ಹೊಸ ವಿಳಾಸ';
+
+  @override
+  String get bondLost => 'ಕಳೆದುಹೋಗಿದೆ';
+
+  @override
+  String get bondDamaged => 'ಹಾನಿಯಾಗಿದೆ';
+
+  @override
+  String get lapsedFromLabel => 'ಪ್ರೀಮಿಯಂ ಬಾಕಿ ಇರುವುದು ಇಂದಿನಿಂದ';
+
+  @override
+  String get shareAsText => 'ಪಠ್ಯವಾಗಿ ಹಂಚಿ';
+
+  @override
+  String get copyText => 'ನಕಲಿಸಿ';
+
+  @override
+  String get copied => 'ನಕಲಿಸಲಾಗಿದೆ';
+
+  @override
+  String get letterEnglishNote =>
+      'ಪತ್ರಗಳು ಇಂಗ್ಲಿಷ್‌ನಲ್ಲಿವೆ — ಭಾರತೀಯ ಅಂಚೆ ಪತ್ರವ್ಯವಹಾರದ ಸಾಮಾನ್ಯ ಭಾಷೆ. ಸಲ್ಲಿಸುವ ಮೊದಲು ಸಹಿ ಮಾಡಿ.';
+
+  @override
+  String get formsOfficialNote =>
+      'ಈ ಆ್ಯಪ್ ಭಾರತೀಯ ಅಂಚೆ ಅಲ್ಲ. ನಿಗದಿತ ಫಾರ್ಮ್ ಇದ್ದಲ್ಲಿ ಯಾವಾಗಲೂ ಭಾರತೀಯ ಅಂಚೆಯ ಫಾರ್ಮ್ ಅನ್ನೇ ಸಲ್ಲಿಸಿ.';
+
+  @override
+  String get svc_proposal => 'ಹೊಸ ಪಾಲಿಸಿ ಪ್ರಸ್ತಾವನೆ';
+
+  @override
+  String get svcDesc_proposal => 'ಹೊಸ PLI ಅಥವಾ RPLI ಪಾಲಿಸಿಗೆ ಅರ್ಜಿ';
+
+  @override
+  String get svc_maturity => 'ಪಕ್ವತೆ ಕ್ಲೇಮ್';
+
+  @override
+  String get svcDesc_maturity => 'ಪಾಲಿಸಿ ಪಕ್ವವಾದಾಗ ಮೊತ್ತ ಪಡೆಯಿರಿ';
+
+  @override
+  String get svc_survival => 'ಬದುಕುಳಿಯುವ ಲಾಭ ಕ್ಲೇಮ್';
+
+  @override
+  String get svcDesc_survival => 'ಹಣ ವಾಪಸ್ ಕಂತುಗಳು (ಸುಮಂಗಲ್, ಗ್ರಾಮ ಪ್ರಿಯಾ)';
+
+  @override
+  String get svc_death => 'ಮರಣ ಕ್ಲೇಮ್';
+
+  @override
+  String get svcDesc_death => 'ನಾಮಿನಿ ಅಥವಾ ಕಾನೂನುಬದ್ಧ ವಾರಸುದಾರರಿಂದ ಕ್ಲೇಮ್';
+
+  @override
+  String get svc_loan => 'ಪಾಲಿಸಿ ಸಾಲ';
+
+  @override
+  String get svcDesc_loan => 'ನಿಮ್ಮ ಪಾಲಿಸಿಯ ಮೇಲೆ ಸಾಲ';
+
+  @override
+  String get svc_surrender => 'ಸರೆಂಡರ್';
+
+  @override
+  String get svcDesc_surrender => 'ಸರೆಂಡರ್ ಮೌಲ್ಯಕ್ಕಾಗಿ ಪಾಲಿಸಿಯನ್ನು ಬೇಗ ಮುಚ್ಚಿ';
+
+  @override
+  String get svc_revival => 'ಪುನರುಜ್ಜೀವನ';
+
+  @override
+  String get svcDesc_revival => 'ಸ್ಥಗಿತಗೊಂಡ ಪಾಲಿಸಿಯನ್ನು ಮತ್ತೆ ಆರಂಭಿಸಿ';
+
+  @override
+  String get svc_nomination => 'ನಾಮನಿರ್ದೇಶನ ಬದಲಾವಣೆ';
+
+  @override
+  String get svcDesc_nomination => 'ನಾಮಿನಿ ಸೇರಿಸಿ ಅಥವಾ ಬದಲಿಸಿ';
+
+  @override
+  String get svc_address => 'ವಿಳಾಸ ಬದಲಾವಣೆ';
+
+  @override
+  String get svcDesc_address => 'ಪಾಲಿಸಿಯಲ್ಲಿ ನಿಮ್ಮ ವಿಳಾಸ ನವೀಕರಿಸಿ';
+
+  @override
+  String get svc_duplicate => 'ನಕಲು ಪಾಲಿಸಿ ಬಾಂಡ್';
+
+  @override
+  String get svcDesc_duplicate => 'ಕಳೆದುಹೋದ ಅಥವಾ ಹಾನಿಯಾದ ಬಾಂಡ್ ಬದಲಿಸಿ';
+
+  @override
+  String get svc_assignment => 'ಹಕ್ಕು ವರ್ಗಾವಣೆ';
+
+  @override
+  String get svcDesc_assignment =>
+      'ಪಾಲಿಸಿ ಹಕ್ಕುಗಳನ್ನು ವರ್ಗಾಯಿಸಿ, ಉದಾ. ಬ್ಯಾಂಕ್‌ಗೆ';
+
+  @override
+  String get svc_conversion => 'ಪರಿವರ್ತನೆ (ಸುವಿಧಾ)';
+
+  @override
+  String get svcDesc_conversion => 'ಆಜೀವ ವಿಮೆಯನ್ನು ದತ್ತಿ ವಿಮೆಗೆ ಪರಿವರ್ತಿಸಿ';
+
+  @override
+  String get doc_form => 'ನಿಗದಿತ ಫಾರ್ಮ್, ತುಂಬಿ ಸಹಿ ಮಾಡಿದ್ದು';
+
+  @override
+  String get doc_policyBond => 'ಮೂಲ ಪಾಲಿಸಿ ಬಾಂಡ್ (ಅಥವಾ ePLI ಬಾಂಡ್)';
+
+  @override
+  String get doc_receiptBook => 'ಪ್ರೀಮಿಯಂ ರಸೀದಿ ಪುಸ್ತಕ ಅಥವಾ ರಸೀದಿಗಳು';
+
+  @override
+  String get doc_idProof => 'ಗುರುತಿನ ಪುರಾವೆ (ಆಧಾರ್, ಪ್ಯಾನ್ ಇತ್ಯಾದಿ)';
+
+  @override
+  String get doc_addressProof => 'ವಿಳಾಸ ಪುರಾವೆ';
+
+  @override
+  String get doc_ageProof => 'ವಯಸ್ಸಿನ ಪುರಾವೆ';
+
+  @override
+  String get doc_bankDetails => 'ಬ್ಯಾಂಕ್ ಪಾಸ್‌ಬುಕ್ ಅಥವಾ ರದ್ದಾದ ಚೆಕ್';
+
+  @override
+  String get doc_photo => 'ಪಾಸ್‌ಪೋರ್ಟ್ ಗಾತ್ರದ ಫೋಟೋ';
+
+  @override
+  String get doc_deathCertificate => 'ಮರಣ ಪ್ರಮಾಣಪತ್ರ';
+
+  @override
+  String get doc_claimantId => 'ಕ್ಲೇಮುದಾರರ ಗುರುತು ಮತ್ತು ಸಂಬಂಧದ ಪುರಾವೆ';
+
+  @override
+  String get doc_medical => 'ವೈದ್ಯಕೀಯ ಪ್ರಮಾಣಪತ್ರ / ಆರೋಗ್ಯ ಘೋಷಣೆ (ಕೇಳಿದರೆ)';
+
+  @override
+  String get doc_eligibility =>
+      'ಅರ್ಹತೆಯ ಪುರಾವೆ (ಉದ್ಯೋಗ, ಪದವಿ ಅಥವಾ ಗ್ರಾಮೀಣ ವಾಸ)';
+
+  @override
+  String get doc_nomineeDetails => 'ನಾಮಿನಿಯ ಹೆಸರು, ವಯಸ್ಸು ಮತ್ತು ಸಂಬಂಧ';
+
+  @override
+  String get doc_indemnity => 'ನಷ್ಟಪರಿಹಾರ ಬಾಂಡ್ (ಕೇಳಿದರೆ)';
+
+  @override
+  String get customerPhoneLabel => 'ಗ್ರಾಹಕರ ಮೊಬೈಲ್ (ವಾಟ್ಸ್‌ಆ್ಯಪ್ ನೆನಪಿಗಾಗಿ)';
+
+  @override
+  String get exportBackup => 'ಪಾಲಿಸಿಗಳ ಬ್ಯಾಕಪ್';
+
+  @override
+  String get importBackup => 'ಬ್ಯಾಕಪ್‌ನಿಂದ ಮರುಸ್ಥಾಪಿಸಿ';
+
+  @override
+  String importConfirm(int count) {
+    return 'ಈ ಬ್ಯಾಕಪ್‌ನಿಂದ $count ಪಾಲಿಸಿಗಳನ್ನು ಮರುಸ್ಥಾಪಿಸುವುದೇ? ಅದೇ ID ಇರುವ ಉಳಿಸಿದ ಪಾಲಿಸಿಗಳು ಬದಲಾಗುತ್ತವೆ.';
+  }
+
+  @override
+  String importDone(int count) {
+    return '$count ಪಾಲಿಸಿಗಳು ಮರುಸ್ಥಾಪನೆಯಾಗಿವೆ.';
+  }
+
+  @override
+  String get importFailed => 'ಇದು PLI & RPLI ಕ್ಯಾಲ್ಕುಲೇಟರ್ ಬ್ಯಾಕಪ್ ಫೈಲ್ ಅಲ್ಲ.';
+
+  @override
+  String get backupNote =>
+      'ಬ್ಯಾಕಪ್ ಫೈಲ್‌ನಲ್ಲಿ ನಿಮ್ಮ ಪಾಲಿಸಿ ವಿವರಗಳಿವೆ. ನಿಮ್ಮದೇ ವಾಟ್ಸ್‌ಆ್ಯಪ್ ಚಾಟ್ ಅಥವಾ ಗೂಗಲ್ ಡ್ರೈವ್‌ನಂತಹ ಸುರಕ್ಷಿತ ಸ್ಥಳದಲ್ಲಿಡಿ.';
+
+  @override
+  String get restore => 'ಮರುಸ್ಥಾಪಿಸಿ';
+
+  @override
+  String get tileDues => 'ಕಂತುಗಳು';
+
+  @override
+  String get descDues => 'ಈ ತಿಂಗಳ ಪ್ರೀಮಿಯಂ ಕಂತುಗಳು';
+
+  @override
+  String get duesTitle => 'ಪ್ರೀಮಿಯಂ ಕಂತುಗಳು';
+
+  @override
+  String get duesTotal => 'ಒಟ್ಟು ಬಾಕಿ';
+
+  @override
+  String duesCount(int count) {
+    return '$count ಪ್ರೀಮಿಯಂಗಳು';
+  }
+
+  @override
+  String get noDuesInMonth => 'ಈ ತಿಂಗಳಲ್ಲಿ ಯಾವುದೇ ಪ್ರೀಮಿಯಂ ಬಾಕಿ ಇಲ್ಲ.';
+
+  @override
+  String get remindOnWhatsApp => 'ನೆನಪಿಸಿ';
+
+  @override
+  String dueReminderMessage(
+    String name,
+    String amount,
+    String number,
+    String date,
+  ) {
+    return 'ಆತ್ಮೀಯ $name, ಪಾಲಿಸಿ $numberರ $amount ಪ್ರೀಮಿಯಂ $date ರಂದು ಬಾಕಿ ಇದೆ. ದಯವಿಟ್ಟು ನಿಮ್ಮ ಅಂಚೆ ಕಚೇರಿಯಲ್ಲಿ ಪಾವತಿಸಿ.';
+  }
+
+  @override
+  String get tileProfile => 'ಏಜೆಂಟ್ ಪ್ರೊಫೈಲ್';
+
+  @override
+  String get descProfile => 'ಉಲ್ಲೇಖ ಪತ್ರದಲ್ಲಿ ನಿಮ್ಮ ಹೆಸರು ಮತ್ತು ಲೋಗೋ';
+
+  @override
+  String get profileTitle => 'ಏಜೆಂಟ್ ಪ್ರೊಫೈಲ್';
+
+  @override
+  String get agentNameField => 'ನಿಮ್ಮ ಹೆಸರು';
+
+  @override
+  String get agentPhoneField => 'ನಿಮ್ಮ ದೂರವಾಣಿ';
+
+  @override
+  String get agentCodeField => 'ಏಜೆಂಟ್ ID / ಕಚೇರಿ (ಐಚ್ಛಿಕ)';
+
+  @override
+  String get chooseLogo => 'ಫೋಟೋ ಅಥವಾ ಲೋಗೋ ಆರಿಸಿ';
+
+  @override
+  String get removeLogo => 'ತೆಗೆಯಿರಿ';
+
+  @override
+  String get profileNote =>
+      'ಉಲ್ಲೇಖ ಪತ್ರಗಳು ಮತ್ತು ನೆನಪಿನ ಸಂದೇಶಗಳಲ್ಲಿ ತೋರಿಸಲಾಗುತ್ತದೆ. ಈ ಫೋನ್‌ನಲ್ಲಿ ಮಾತ್ರ ಉಳಿಸಲಾಗಿದೆ.';
+
+  @override
+  String get profileSaved => 'ಪ್ರೊಫೈಲ್ ಉಳಿಸಲಾಗಿದೆ.';
+
+  @override
+  String get searchPolicies => 'ಹೆಸರು, ಪಾಲಿಸಿ ಸಂಖ್ಯೆ ಅಥವಾ ಮೊಬೈಲ್ ಹುಡುಕಿ';
+
+  @override
+  String get sortLabel => 'ವಿಂಗಡಿಸಿ';
+
+  @override
+  String get sortName => 'ಹೆಸರು';
+
+  @override
+  String get sortNextDue => 'ಮುಂದಿನ ಕಂತು';
+
+  @override
+  String get sortSumAssured => 'ವಿಮಾ ಮೊತ್ತ';
+
+  @override
+  String noSearchResults(String query) {
+    return '“$query” ಗೆ ಹೊಂದುವ ಪಾಲಿಸಿಗಳಿಲ್ಲ.';
+  }
+
+  @override
+  String get filterAll => 'ಎಲ್ಲಾ';
+
+  @override
+  String get filterPending => 'ಬಾಕಿ';
+
+  @override
+  String get filterCollected => 'ಸಂಗ್ರಹಿಸಲಾಗಿದೆ';
+
+  @override
+  String get markCollected => 'ಸಂಗ್ರಹಿಸಲಾಗಿದೆ ಎಂದು ಗುರುತಿಸಿ';
+
+  @override
+  String get markNotCollected => 'ಸಂಗ್ರಹಿಸಿಲ್ಲ ಎಂದು ಗುರುತಿಸಿ';
+
+  @override
+  String get duesPendingTotal => 'ಇನ್ನೂ ಸಂಗ್ರಹಿಸಬೇಕಾದದ್ದು';
+
+  @override
+  String duesCollectedOf(int collected, int total) {
+    return '$total ರಲ್ಲಿ $collected ಸಂಗ್ರಹಿಸಲಾಗಿದೆ';
+  }
+
+  @override
+  String get duesMonthTotal => 'ತಿಂಗಳ ಒಟ್ಟು';
+
+  @override
+  String get collectedNote =>
+      'ಸಂಗ್ರಹ ಗುರುತುಗಳು ನಿಮ್ಮ ಸ್ವಂತ ದಾಖಲೆ. ಇವು ಅಂಚೆ ಇಲಾಖೆಯ ವ್ಯವಸ್ಥೆಯಲ್ಲಿ ಪಾವತಿಯನ್ನು ಪರಿಶೀಲಿಸುವುದಿಲ್ಲ.';
+
+  @override
+  String get noDuesInFilter => 'ಈ ಪಟ್ಟಿಯಲ್ಲಿ ಏನೂ ಇಲ್ಲ.';
+
+  @override
+  String get openFormLink => 'ಫಾರ್ಮ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ';
+
+  @override
+  String get shareFormLink => 'ಫಾರ್ಮ್ ಲಿಂಕ್ ಹಂಚಿಕೊಳ್ಳಿ';
+
+  @override
+  String formLinkMessage(String service, String url) {
+    return '$service ಫಾರ್ಮ್ (ಅಂಚೆ ಇಲಾಖೆ): $url';
+  }
+
+  @override
+  String get tileLinks => 'ಅಧಿಕೃತ ಲಿಂಕ್‌ಗಳು';
+
+  @override
+  String get descLinks => 'ಪೋರ್ಟಲ್, ಫಾರ್ಮ್‌ಗಳು, ಸಹಾಯವಾಣಿ';
+
+  @override
+  String get linksTitle => 'ಅಧಿಕೃತ ಲಿಂಕ್‌ಗಳು ಮತ್ತು ಸಹಾಯ';
+
+  @override
+  String get linkPortalTitle => 'PLI ಗ್ರಾಹಕ ಪೋರ್ಟಲ್';
+
+  @override
+  String get linkPortalDesc =>
+      'ಆನ್‌ಲೈನ್ ಪ್ರೀಮಿಯಂ ಪಾವತಿ, ಪಾಲಿಸಿ ಸ್ಥಿತಿ, ರಶೀದಿಗಳು';
+
+  @override
+  String get linkFormsTitle => 'ಅಧಿಕೃತ PLI/RPLI ಫಾರ್ಮ್‌ಗಳು';
+
+  @override
+  String get linkFormsDesc => 'ಅಂಚೆ ಇಲಾಖೆಯಿಂದ ಫಾರ್ಮ್‌ಗಳನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ';
+
+  @override
+  String get linkIndiaPostTitle => 'ಇಂಡಿಯಾ ಪೋಸ್ಟ್';
+
+  @override
+  String get linkIndiaPostDesc => 'ಅಂಚೆ ಇಲಾಖೆಯ ವೆಬ್‌ಸೈಟ್';
+
+  @override
+  String get linkHelplineTitle => 'ಇಂಡಿಯಾ ಪೋಸ್ಟ್ ಗ್ರಾಹಕ ಸೇವೆ';
+
+  @override
+  String linkHelplineDesc(String number) {
+    return 'ಉಚಿತ ಕರೆ $number';
+  }
+
+  @override
+  String get linkDigiLockerTitle => 'ಡಿಜಿಲಾಕರ್';
+
+  @override
+  String get linkDigiLockerDesc => 'ನಿಮ್ಮ ಇ-ಪಾಲಿಸಿ ಬಾಂಡ್ ಸುರಕ್ಷಿತವಾಗಿಡಿ';
+
+  @override
+  String get linkGrievanceTitle => 'ಸಾರ್ವಜನಿಕ ಕುಂದುಕೊರತೆ (CPGRAMS)';
+
+  @override
+  String get linkGrievanceDesc => 'ಭಾರತ ಸರ್ಕಾರಕ್ಕೆ ದೂರು ಸಲ್ಲಿಸಿ';
+
+  @override
+  String get linksNote =>
+      'ಇವು ಭಾರತ ಸರ್ಕಾರದ ಅಧಿಕೃತ ವೆಬ್‌ಸೈಟ್‌ಗಳನ್ನು ತೆರೆಯುತ್ತವೆ. ಈ ಆ್ಯಪ್ ಸ್ವತಂತ್ರವಾಗಿದ್ದು, ಅಂಚೆ ಇಲಾಖೆಯೊಂದಿಗೆ ಸಂಬಂಧ ಹೊಂದಿಲ್ಲ.';
+
+  @override
+  String get formSourceLabel => 'ಈ ಫಾರ್ಮ್‌ನ ಅಧಿಕೃತ ಮೂಲ';
 }

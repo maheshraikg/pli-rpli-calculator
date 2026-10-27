@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../l10n/app_localizations.dart';
+import '../app_icons.dart';
 
 class SampleDataBanner extends StatelessWidget {
   const SampleDataBanner({super.key});
@@ -10,13 +11,19 @@ class SampleDataBanner extends StatelessWidget {
         liveRegion: true,
         child: Container(
           width: double.infinity,
-          color: Colors.red.shade900,
-          padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
-          child: Text(
-            AppLocalizations.of(context).sampleDataBanner,
-            textAlign: TextAlign.center,
-            style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-          ),
+          color: const Color(0xFF7A0A1D),
+          padding: const EdgeInsets.symmetric(vertical: 7, horizontal: 12),
+          child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+            const AppIcon(AppIcons.warning, color: Color(0xFFFFD27A), size: 18),
+            const SizedBox(width: 8),
+            Flexible(
+              child: Text(
+                AppLocalizations.of(context).sampleDataBanner,
+                textAlign: TextAlign.center,
+                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w700, letterSpacing: 0.4),
+              ),
+            ),
+          ]),
         ),
       );
 }

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "verified": false,
+  "source": "General PLI/RPLI servicing practice; document lists to be confirmed against the current India Post circulars / PLI Customer Portal.",
+  "officialFormsUrl": "https://pli.indiapost.gov.in/CustomerPortal/GuidelinesforCustomers.action",
+  "services": [
+    { "id": "proposal",     "icon": "note_add",        "letter": false, "pdfAsset": null,
+      "docs": ["form", "ageProof", "idProof", "addressProof", "photo", "eligibility", "nomineeDetails", "bankDetails"] },
+    { "id": "maturity",     "icon": "flag",            "letter": false, "pdfAsset": "assets/forms/maturity_survival.pdf", "pdfSource": "https://utilities.cept.gov.in/pli/ExcelReports/SOP/SOP%20for%20handling%20matuirty%20cases%20with%20covering%20letter.pdf",
+      "docs": ["form", "policyBond", "receiptBook", "idProof", "bankDetails"] },
+    { "id": "survival",     "icon": "payments",        "letter": false, "pdfAsset": "assets/forms/maturity_survival.pdf", "pdfSource": "https://utilities.cept.gov.in/pli/ExcelReports/SOP/SOP%20for%20handling%20matuirty%20cases%20with%20covering%20letter.pdf",
+      "docs": ["form", "policyBond", "idProof", "bankDetails"] },
+    { "id": "death",        "icon": "volunteer",       "letter": false, "pdfAsset": "assets/forms/death.pdf", "pdfSource": "https://utilities.cept.gov.in/dop/pdfbind.ashx?id=4708",
+      "docs": ["form", "policyBond", "deathCertificate", "claimantId", "bankDetails", "indemnity"] },
+    { "id": "loan",         "icon": "loan",            "letter": true,  "pdfAsset": "assets/forms/loan.pdf", "pdfSource": "https://utilities.cept.gov.in/pli/ExcelReports/SOP/SOP%20for%20handling%20Loan%20Cases%20with%20covering%20letter.pdf",
+      "docs": ["form", "policyBond", "receiptBook", "idProof", "bankDetails"] },
+    { "id": "surrender",    "icon": "close",           "letter": true,  "pdfAsset": "assets/forms/surrender.pdf", "pdfSource": "https://utilities.cept.gov.in/dop/pdfbind.ashx?id=9024",
+      "docs": ["form", "policyBond", "receiptBook", "idProof", "bankDetails"] },
+    { "id": "revival",      "icon": "restart",         "letter": true,  "pdfAsset": null,
+      "docs": ["form", "receiptBook", "medical", "idProof"] },
+    { "id": "nomination",   "icon": "person_add",      "letter": true,  "pdfAsset": null,
+      "docs": ["form", "policyBond", "nomineeDetails", "idProof"] },
+    { "id": "address",      "icon": "home",            "letter": true,  "pdfAsset": null,
+      "docs": ["form", "addressProof", "idProof"] },
+    { "id": "duplicate",    "icon": "content_copy",    "letter": true,  "pdfAsset": null,
+      "docs": ["form", "indemnity", "idProof"] },
+    { "id": "assignment",   "icon": "swap",            "letter": false, "pdfAsset": "assets/forms/assignment.pdf", "pdfSource": "https://utilities.cept.gov.in/pli/ExcelReports/SOP/SOP%20for%20handling%20Loan%20Cases%20with%20covering%20letter.pdf",
+      "docs": ["form", "policyBond", "idProof"] },
+    { "id": "conversion",   "icon": "transform",       "letter": true,  "pdfAsset": null,
+      "docs": ["form", "policyBond", "receiptBook"] }
+  ]
+}

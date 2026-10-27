@@ -92,6 +92,7 @@ def convert(meta_path: Path, csv_path: Path) -> dict:
         "columnDimension": meta["columnDimension"],
         "columns": columns,
         "monotonicExceptions": meta.get("monotonicExceptions", []),
+        "agesNotInSource": meta.get("agesNotInSource", []),
         "premiums": {
             fq: dict(sorted(premiums[fq].items(), key=lambda kv: int(kv[0])))
             for fq in FREQUENCIES if fq in premiums

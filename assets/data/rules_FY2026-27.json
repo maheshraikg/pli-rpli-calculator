@@ -9,206 +9,686 @@
     "status": "partial",
     "notes": [
       "Any object with \"verified\": false must be confirmed against an official circular before release.",
-      "Premium tables are NOT included here; see assets/data/tables/."
+      "Premium tables are NOT included here; see assets/data/tables/.",
+      "Every rule listed in \"provisional\" is a working assumption, not an official rule. Confirm or correct each before release."
     ]
   },
-
   "schemes": {
     "PLI": {
-      "sumAssured": { "min": 20000, "max": 5000000, "aggregateAcrossPolicies": true, "multipleOf": null, "verified": false },
+      "sumAssured": {
+        "min": 20000,
+        "max": 5000000,
+        "aggregateAcrossPolicies": true,
+        "multipleOf": null,
+        "verified": false
+      },
       "eligibilityGroups": [
-        "central_state_govt", "defence_paramilitary", "psu", "banks", "local_bodies",
-        "educational_institutions", "listed_companies", "professionals", "graduates_diploma_holders"
+        "central_state_govt",
+        "defence_paramilitary",
+        "psu",
+        "banks",
+        "local_bodies",
+        "educational_institutions",
+        "listed_companies",
+        "professionals",
+        "graduates_diploma_holders"
       ]
     },
     "RPLI": {
-      "sumAssured": { "min": 10000, "max": 1000000, "aggregateAcrossPolicies": true, "multipleOf": null, "verified": false },
-      "eligibilityGroups": [ "rural_resident", "scheduled_bank_savings_account_holder" ]
+      "sumAssured": {
+        "min": 10000,
+        "max": 1000000,
+        "aggregateAcrossPolicies": true,
+        "multipleOf": null,
+        "verified": false
+      },
+      "eligibilityGroups": [
+        "rural_resident",
+        "scheduled_bank_savings_account_holder"
+      ]
     }
   },
-
   "plans": [
     {
-      "id": "pli_suraksha", "scheme": "PLI", "type": "WLA",
-      "names": { "en": "Suraksha (Whole Life Assurance)", "kn": "ಸುರಕ್ಷಾ (ಆಜೀವ ವಿಮೆ)" },
-      "entryAge": { "min": 19, "max": 55 },
-      "premiumCeasingAges": [55, 58, 60],
+      "id": "pli_suraksha",
+      "scheme": "PLI",
+      "type": "WLA",
+      "names": {
+        "en": "Suraksha (Whole Life Assurance)",
+        "kn": "ಸುರಕ್ಷಾ (ಆಜೀವ ವಿಮೆ)",
+        "hi": "सुरक्षा (संपूर्ण जीवन बीमा)",
+        "mr": "सुरक्षा (आजीवन विमा)",
+        "gu": "સુરક્ષા (આજીવન વીમો)",
+        "pa": "ਸੁਰੱਖਿਆ (ਸੰਪੂਰਨ ਜੀਵਨ ਬੀਮਾ)",
+        "bn": "সুরক্ষা (আজীবন বিমা)",
+        "as": "সুৰক্ষা (আজীৱন বীমা)",
+        "or": "ସୁରକ୍ଷା (ଆଜୀବନ ବୀମା)",
+        "te": "సురక్ష (జీవితకాల బీమా)",
+        "ta": "சுரக்ஷா (முழு ஆயுள் காப்பீடு)",
+        "ml": "സുരക്ഷ (ആജീവനാന്ത ഇൻഷുറൻസ്)",
+        "ur": "سرکشا (تاحیات بیمہ)"
+      },
+      "entryAge": {
+        "min": 19,
+        "max": 55
+      }, "minTermYears": 5,
+      "premiumCeasingAges": [
+        55,
+        58,
+        60
+      ],
       "maturityAge": 80,
-      "loanAfterYears": 4, "surrenderAfterYears": 3,
-      "bonusClass": "WLA", "terminalBonusEligible": true,
+      "loanAfterYears": 4,
+      "surrenderAfterYears": 3,
+      "bonusClass": "WLA",
+      "terminalBonusEligible": true,
       "premiumTableId": "pli_suraksha",
       "verified": false
     },
     {
-      "id": "pli_santosh", "scheme": "PLI", "type": "EA",
-      "names": { "en": "Santosh (Endowment Assurance)", "kn": "ಸಂತೋಷ್ (ದತ್ತಿ ವಿಮೆ)" },
-      "entryAge": { "min": 19, "max": 55 },
-      "maturityAges": [35, 40, 45, 50, 55, 58, 60],
-      "minTermYears": null,
-      "loanAfterYears": 3, "surrenderAfterYears": 3,
-      "bonusClass": "EA", "terminalBonusEligible": true,
+      "id": "pli_santosh",
+      "scheme": "PLI",
+      "type": "EA",
+      "names": {
+        "en": "Santosh (Endowment Assurance)",
+        "kn": "ಸಂತೋಷ್ (ದತ್ತಿ ವಿಮೆ)",
+        "hi": "संतोष (बंदोबस्ती बीमा)",
+        "mr": "संतोष (एंडोमेंट विमा)",
+        "gu": "સંતોષ (એન્ડોમેન્ટ વીમો)",
+        "pa": "ਸੰਤੋਸ਼ (ਐਂਡੋਮੈਂਟ ਬੀਮਾ)",
+        "bn": "সন্তোষ (এনডাওমেন্ট বিমা)",
+        "as": "সন্তোষ (এনডাউমেণ্ট বীমা)",
+        "or": "ସନ୍ତୋଷ (ଏଣ୍ଡୋମେଣ୍ଟ ବୀମା)",
+        "te": "సంతోష్ (ఎండోమెంట్ బీమా)",
+        "ta": "சந்தோஷ் (எண்டோமென்ட் காப்பீடு)",
+        "ml": "സന്തോഷ് (എൻഡോവ്മെന്റ് ഇൻഷുറൻസ്)",
+        "ur": "سنتوش (اینڈوومنٹ بیمہ)"
+      },
+      "entryAge": {
+        "min": 19,
+        "max": 55
+      },
+      "maturityAges": [
+        35,
+        40,
+        45,
+        50,
+        55,
+        58,
+        60
+      ],
+      "minTermYears": 5,
+      "loanAfterYears": 3,
+      "surrenderAfterYears": 3,
+      "bonusClass": "EA",
+      "terminalBonusEligible": true,
       "premiumTableId": "pli_santosh",
       "verified": false
     },
     {
-      "id": "pli_suvidha", "scheme": "PLI", "type": "CWLA",
-      "names": { "en": "Suvidha (Convertible Whole Life)", "kn": "ಸುವಿಧಾ (ಪರಿವರ್ತನೀಯ ಆಜೀವ ವಿಮೆ)" },
-      "entryAge": { "min": 19, "max": 50 },
-      "conversion": { "toType": "EA", "earliestAfterYears": 5, "latestAfterYears": 6 },
+      "id": "pli_suvidha",
+      "scheme": "PLI",
+      "type": "CWLA",
+      "names": {
+        "en": "Suvidha (Convertible Whole Life)",
+        "kn": "ಸುವಿಧಾ (ಪರಿವರ್ತನೀಯ ಆಜೀವ ವಿಮೆ)",
+        "hi": "सुविधा (परिवर्तनीय संपूर्ण जीवन बीमा)",
+        "mr": "सुविधा (परिवर्तनीय आजीवन विमा)",
+        "gu": "સુવિધા (પરિવર્તનીય આજીવન વીમો)",
+        "pa": "ਸੁਵਿਧਾ (ਬਦਲਣਯੋਗ ਸੰਪੂਰਨ ਜੀਵਨ ਬੀਮਾ)",
+        "bn": "সুবিধা (রূপান্তরযোগ্য আজীবন বিমা)",
+        "as": "সুবিধা (ৰূপান্তৰযোগ্য আজীৱন বীমা)",
+        "or": "ସୁବିଧା (ପରିବର୍ତ୍ତନୀୟ ଆଜୀବନ ବୀମା)",
+        "te": "సువిధ (మార్పిడి చేయదగిన జీవితకాల బీమా)",
+        "ta": "சுவிதா (மாற்றக்கூடிய முழு ஆயுள் காப்பீடு)",
+        "ml": "സുവിധ (മാറ്റാവുന്ന ആജീവനാന്ത ഇൻഷുറൻസ്)",
+        "ur": "سویدھا (قابلِ تبدیل تاحیات بیمہ)"
+      },
+      "entryAge": {
+        "min": 19,
+        "max": 50
+      },
+      "conversion": {
+        "toType": "EA",
+        "earliestAfterYears": 5,
+        "latestAfterYears": 6
+      },
       "bonusClass": "CWLA",
       "premiumTableId": null,
-      "verified": false
+      "verified": false,
+      "loanAfterYears": 4,
+      "surrenderAfterYears": 3
     },
     {
-      "id": "pli_sumangal", "scheme": "PLI", "type": "AEA",
-      "names": { "en": "Sumangal (Anticipated Endowment)", "kn": "ಸುಮಂಗಲ್ (ಮುಂಗಡ ದತ್ತಿ ವಿಮೆ)" },
+      "id": "pli_sumangal",
+      "scheme": "PLI",
+      "type": "AEA",
+      "names": {
+        "en": "Sumangal (Anticipated Endowment)",
+        "kn": "ಸುಮಂಗಲ್ (ಮುಂಗಡ ದತ್ತಿ ವಿಮೆ)",
+        "hi": "सुमंगल (प्रत्याशित बंदोबस्ती बीमा)",
+        "mr": "सुमंगल (अग्रिम एंडोमेंट विमा)",
+        "gu": "સુમંગલ (અગ્રિમ એન્ડોમેન્ટ વીમો)",
+        "pa": "ਸੁਮੰਗਲ (ਅਗਾਊਂ ਐਂਡੋਮੈਂਟ ਬੀਮਾ)",
+        "bn": "সুমঙ্গল (অগ্রিম এনডাওমেন্ট বিমা)",
+        "as": "সুমংগল (অগ্ৰিম এনডাউমেণ্ট বীমা)",
+        "or": "ସୁମଙ୍ଗଳ (ଅଗ୍ରିମ ଏଣ୍ଡୋମେଣ୍ଟ ବୀମା)",
+        "te": "సుమంగళ్ (ముందస్తు ఎండోమెంట్ బీమా)",
+        "ta": "சுமங்கல் (முன்கூட்டிய எண்டோமென்ட் காப்பீடு)",
+        "ml": "സുമംഗൽ (മുൻകൂർ എൻഡോവ്മെന്റ് ഇൻഷുറൻസ്)",
+        "ur": "سومنگل (پیشگی اینڈوومنٹ بیمہ)"
+      },
       "terms": [
-        { "years": 15, "entryAge": { "min": 19, "max": 45 },
-          "survivalBenefits": [ { "year": 6, "percentOfSA": 20 }, { "year": 9, "percentOfSA": 20 }, { "year": 12, "percentOfSA": 20 } ],
-          "maturityPercentOfSA": 40 },
-        { "years": 20, "entryAge": { "min": 19, "max": 40 },
-          "survivalBenefits": [ { "year": 8, "percentOfSA": 20 }, { "year": 12, "percentOfSA": 20 }, { "year": 16, "percentOfSA": 20 } ],
-          "maturityPercentOfSA": 40 }
+        {
+          "years": 15,
+          "entryAge": {
+            "min": 19,
+            "max": 45
+          },
+          "survivalBenefits": [
+            {
+              "year": 6,
+              "percentOfSA": 20
+            },
+            {
+              "year": 9,
+              "percentOfSA": 20
+            },
+            {
+              "year": 12,
+              "percentOfSA": 20
+            }
+          ],
+          "maturityPercentOfSA": 40
+        },
+        {
+          "years": 20,
+          "entryAge": {
+            "min": 19,
+            "max": 40
+          },
+          "survivalBenefits": [
+            {
+              "year": 8,
+              "percentOfSA": 20
+            },
+            {
+              "year": 12,
+              "percentOfSA": 20
+            },
+            {
+              "year": 16,
+              "percentOfSA": 20
+            }
+          ],
+          "maturityPercentOfSA": 40
+        }
       ],
       "deathBenefit": "FULL_SA_PLUS_BONUS_NO_DEDUCTION",
       "bonusOnFullSA": true,
-      "bonusClass": "AEA", "terminalBonusEligible": false,
-      "premiumTableId": "pli_sumangal",
-      "verified": false
+      "bonusClass": "AEA",
+      "terminalBonusEligible": false,
+      "premiumTableId": null,
+      "verified": false,
+      "loanAfterYears": null,
+      "surrenderAfterYears": null
     },
     {
-      "id": "pli_yugal_suraksha", "scheme": "PLI", "type": "JOINT_EA",
-      "names": { "en": "Yugal Suraksha (Joint Life Endowment)", "kn": "ಯುಗಲ್ ಸುರಕ್ಷಾ (ಜಂಟಿ ಜೀವ ದತ್ತಿ ವಿಮೆ)" },
-      "entryAgeEachSpouse": { "min": 21, "max": 45 },
-      "termYears": { "min": 5, "max": 20 },
+      "id": "pli_yugal_suraksha",
+      "scheme": "PLI",
+      "type": "JOINT_EA",
+      "names": {
+        "en": "Yugal Suraksha (Joint Life Endowment)",
+        "kn": "ಯುಗಲ್ ಸುರಕ್ಷಾ (ಜಂಟಿ ಜೀವ ದತ್ತಿ ವಿಮೆ)",
+        "hi": "युगल सुरक्षा (संयुक्त जीवन बंदोबस्ती बीमा)",
+        "mr": "युगल सुरक्षा (संयुक्त जीवन एंडोमेंट विमा)",
+        "gu": "યુગલ સુરક્ષા (સંયુક્ત જીવન એન્ડોમેન્ટ વીમો)",
+        "pa": "ਯੁਗਲ ਸੁਰੱਖਿਆ (ਸਾਂਝਾ ਜੀਵਨ ਐਂਡੋਮੈਂਟ ਬੀਮਾ)",
+        "bn": "যুগল সুরক্ষা (যৌথ জীবন এনডাওমেন্ট বিমা)",
+        "as": "যুগল সুৰক্ষা (যুটীয়া জীৱন এনডাউমেণ্ট বীমা)",
+        "or": "ଯୁଗଳ ସୁରକ୍ଷା (ମିଳିତ ଜୀବନ ଏଣ୍ଡୋମେଣ୍ଟ ବୀମା)",
+        "te": "యుగళ్ సురక్ష (ఉమ్మడి జీవిత ఎండోమెంట్ బీమా)",
+        "ta": "யுகல் சுரக்ஷா (கூட்டு ஆயுள் எண்டோமென்ட் காப்பீடு)",
+        "ml": "യുഗൾ സുരക്ഷ (സംയുക്ത ജീവിത എൻഡോവ്മെന്റ് ഇൻഷുറൻസ്)",
+        "ur": "یُگل سرکشا (مشترکہ زندگی اینڈوومنٹ بیمہ)"
+      },
+      "entryAgeEachSpouse": {
+        "min": 21,
+        "max": 45
+      },
+      "termYears": {
+        "min": 5,
+        "max": 20
+      },
       "premiumAgeBasis": "PENDING_USER_INPUT",
       "bonusClass": "EA",
       "premiumTableId": null,
-      "verified": false
+      "verified": false,
+      "loanAfterYears": 3,
+      "surrenderAfterYears": 3
     },
     {
-      "id": "pli_bal_jeevan_bima", "scheme": "PLI", "type": "CHILD_EA",
-      "names": { "en": "Bal Jeevan Bima (Children Policy)", "kn": "ಬಾಲ ಜೀವನ ಬಿಮಾ (ಮಕ್ಕಳ ವಿಮೆ)" },
-      "childAge": { "min": 5, "max": 20 }, "parentMaxAge": 45, "maxChildren": 2,
-      "sumAssuredMax": 300000, "sumAssuredCapParentSA": true,
+      "id": "pli_bal_jeevan_bima",
+      "scheme": "PLI",
+      "type": "CHILD_EA",
+      "names": {
+        "en": "Bal Jeevan Bima (Children Policy)",
+        "kn": "ಬಾಲ ಜೀವನ ಬಿಮಾ (ಮಕ್ಕಳ ವಿಮೆ)",
+        "hi": "बाल जीवन बीमा (बच्चों की पॉलिसी)",
+        "mr": "बाल जीवन विमा (मुलांची पॉलिसी)",
+        "gu": "બાલ જીવન બીમા (બાળકોની પૉલિસી)",
+        "pa": "ਬਾਲ ਜੀਵਨ ਬੀਮਾ (ਬੱਚਿਆਂ ਦੀ ਪਾਲਿਸੀ)",
+        "bn": "বাল জীবন বিমা (শিশুদের পলিসি)",
+        "as": "বাল জীৱন বীমা (শিশুৰ পলিচি)",
+        "or": "ବାଳ ଜୀବନ ବୀମା (ପିଲାଙ୍କ ପଲିସି)",
+        "te": "బాల జీవన్ బీమా (పిల్లల పాలసీ)",
+        "ta": "பால் ஜீவன் பீமா (குழந்தைகள் பாலிசி)",
+        "ml": "ബാൽ ജീവൻ ബീമ (കുട്ടികളുടെ പോളിസി)",
+        "ur": "بال جیون بیمہ (بچوں کی پالیسی)"
+      },
+      "childAge": {
+        "min": 5,
+        "max": 20
+      },
+      "parentMaxAge": 45,
+      "maxChildren": 2,
+      "sumAssuredMax": 300000,
+      "sumAssuredCapParentSA": true,
       "premiumWaiverOnParentDeath": true,
       "bonusClass": "EA",
       "premiumTableId": null,
-      "verified": false
+      "verified": false,
+      "loanAfterYears": null,
+      "surrenderAfterYears": null
     },
-
     {
-      "id": "rpli_gram_suraksha", "scheme": "RPLI", "type": "WLA",
-      "names": { "en": "Gram Suraksha (Whole Life Assurance)", "kn": "ಗ್ರಾಮ ಸುರಕ್ಷಾ (ಆಜೀವ ವಿಮೆ)" },
-      "entryAge": { "min": 19, "max": 55 },
-      "premiumCeasingAges": [55, 58, 60],
+      "id": "rpli_gram_suraksha",
+      "scheme": "RPLI",
+      "type": "WLA",
+      "names": {
+        "en": "Gram Suraksha (Whole Life Assurance)",
+        "kn": "ಗ್ರಾಮ ಸುರಕ್ಷಾ (ಆಜೀವ ವಿಮೆ)",
+        "hi": "ग्राम सुरक्षा (संपूर्ण जीवन बीमा)",
+        "mr": "ग्राम सुरक्षा (आजीवन विमा)",
+        "gu": "ગ્રામ સુરક્ષા (આજીવન વીમો)",
+        "pa": "ਗ੍ਰਾਮ ਸੁਰੱਖਿਆ (ਸੰਪੂਰਨ ਜੀਵਨ ਬੀਮਾ)",
+        "bn": "গ্রাম সুরক্ষা (আজীবন বিমা)",
+        "as": "গ্ৰাম সুৰক্ষা (আজীৱন বীমা)",
+        "or": "ଗ୍ରାମ ସୁରକ୍ଷା (ଆଜୀବନ ବୀମା)",
+        "te": "గ్రామ సురక్ష (జీవితకాల బీమా)",
+        "ta": "கிராம சுரக்ஷா (முழு ஆயுள் காப்பீடு)",
+        "ml": "ഗ്രാം സുരക്ഷ (ആജീവനാന്ത ഇൻഷുറൻസ്)",
+        "ur": "گرام سرکشا (تاحیات بیمہ)"
+      },
+      "entryAge": {
+        "min": 19,
+        "max": 55
+      }, "minTermYears": 5,
+      "premiumCeasingAges": [
+        55,
+        58,
+        60
+      ],
       "maturityAge": 80,
-      "bonusClass": "WLA", "terminalBonusEligible": null,
+      "bonusClass": "WLA",
+      "terminalBonusEligible": null,
       "premiumTableId": "rpli_gram_suraksha",
-      "verified": false
+      "verified": false,
+      "loanAfterYears": 4,
+      "surrenderAfterYears": 3
     },
     {
-      "id": "rpli_gram_santosh", "scheme": "RPLI", "type": "EA",
-      "names": { "en": "Gram Santosh (Endowment Assurance)", "kn": "ಗ್ರಾಮ ಸಂತೋಷ್ (ದತ್ತಿ ವಿಮೆ)" },
-      "entryAge": { "min": 19, "max": 55 },
-      "maturityAges": [35, 40, 45, 50, 55, 58, 60],
-      "minTermYears": null,
-      "bonusClass": "EA", "terminalBonusEligible": null,
+      "id": "rpli_gram_santosh",
+      "scheme": "RPLI",
+      "type": "EA",
+      "names": {
+        "en": "Gram Santosh (Endowment Assurance)",
+        "kn": "ಗ್ರಾಮ ಸಂತೋಷ್ (ದತ್ತಿ ವಿಮೆ)",
+        "hi": "ग्राम संतोष (बंदोबस्ती बीमा)",
+        "mr": "ग्राम संतोष (एंडोमेंट विमा)",
+        "gu": "ગ્રામ સંતોષ (એન્ડોમેન્ટ વીમો)",
+        "pa": "ਗ੍ਰਾਮ ਸੰਤੋਸ਼ (ਐਂਡੋਮੈਂਟ ਬੀਮਾ)",
+        "bn": "গ্রাম সন্তোষ (এনডাওমেন্ট বিমা)",
+        "as": "গ্ৰাম সন্তোষ (এনডাউমেণ্ট বীমা)",
+        "or": "ଗ୍ରାମ ସନ୍ତୋଷ (ଏଣ୍ଡୋମେଣ୍ଟ ବୀମା)",
+        "te": "గ్రామ సంతోష్ (ఎండోమెంట్ బీమా)",
+        "ta": "கிராம சந்தோஷ் (எண்டோமென்ட் காப்பீடு)",
+        "ml": "ഗ്രാം സന്തോഷ് (എൻഡോവ്മെന്റ് ഇൻഷുറൻസ്)",
+        "ur": "گرام سنتوش (اینڈوومنٹ بیمہ)"
+      },
+      "entryAge": {
+        "min": 19,
+        "max": 55
+      },
+      "maturityAges": [
+        35,
+        40,
+        45,
+        50,
+        55,
+        58,
+        60
+      ],
+      "minTermYears": 5,
+      "bonusClass": "EA",
+      "terminalBonusEligible": null,
       "premiumTableId": "rpli_gram_santosh",
-      "verified": false
+      "verified": false,
+      "loanAfterYears": 3,
+      "surrenderAfterYears": 3
     },
     {
-      "id": "rpli_gram_suvidha", "scheme": "RPLI", "type": "CWLA",
-      "names": { "en": "Gram Suvidha (Convertible Whole Life)", "kn": "ಗ್ರಾಮ ಸುವಿಧಾ (ಪರಿವರ್ತನೀಯ ಆಜೀವ ವಿಮೆ)" },
-      "entryAge": { "min": 19, "max": 45 },
-      "conversion": { "toType": "EA", "earliestAfterYears": 5, "latestAfterYears": 6 },
+      "id": "rpli_gram_suvidha",
+      "scheme": "RPLI",
+      "type": "CWLA",
+      "names": {
+        "en": "Gram Suvidha (Convertible Whole Life)",
+        "kn": "ಗ್ರಾಮ ಸುವಿಧಾ (ಪರಿವರ್ತನೀಯ ಆಜೀವ ವಿಮೆ)",
+        "hi": "ग्राम सुविधा (परिवर्तनीय संपूर्ण जीवन बीमा)",
+        "mr": "ग्राम सुविधा (परिवर्तनीय आजीवन विमा)",
+        "gu": "ગ્રામ સુવિધા (પરિવર્તનીય આજીવન વીમો)",
+        "pa": "ਗ੍ਰਾਮ ਸੁਵਿਧਾ (ਬਦਲਣਯੋਗ ਸੰਪੂਰਨ ਜੀਵਨ ਬੀਮਾ)",
+        "bn": "গ্রাম সুবিধা (রূপান্তরযোগ্য আজীবন বিমা)",
+        "as": "গ্ৰাম সুবিধা (ৰূপান্তৰযোগ্য আজীৱন বীমা)",
+        "or": "ଗ୍ରାମ ସୁବିଧା (ପରିବର୍ତ୍ତନୀୟ ଆଜୀବନ ବୀମା)",
+        "te": "గ్రామ సువిధ (మార్పిడి చేయదగిన జీవితకాల బీమా)",
+        "ta": "கிராம சுவிதா (மாற்றக்கூடிய முழு ஆயுள் காப்பீடு)",
+        "ml": "ഗ്രാം സുവിധ (മാറ്റാവുന്ന ആജീവനാന്ത ഇൻഷുറൻസ്)",
+        "ur": "گرام سویدھا (قابلِ تبدیل تاحیات بیمہ)"
+      },
+      "entryAge": {
+        "min": 19,
+        "max": 45
+      },
+      "conversion": {
+        "toType": "EA",
+        "earliestAfterYears": 5,
+        "latestAfterYears": 6
+      },
       "bonusClass": "CWLA",
       "premiumTableId": null,
-      "verified": false
+      "verified": false,
+      "loanAfterYears": 4,
+      "surrenderAfterYears": 3
     },
     {
-      "id": "rpli_gram_sumangal", "scheme": "RPLI", "type": "AEA",
-      "names": { "en": "Gram Sumangal (Anticipated Endowment)", "kn": "ಗ್ರಾಮ ಸುಮಂಗಲ್ (ಮುಂಗಡ ದತ್ತಿ ವಿಮೆ)" },
+      "id": "rpli_gram_sumangal",
+      "scheme": "RPLI",
+      "type": "AEA",
+      "names": {
+        "en": "Gram Sumangal (Anticipated Endowment)",
+        "kn": "ಗ್ರಾಮ ಸುಮಂಗಲ್ (ಮುಂಗಡ ದತ್ತಿ ವಿಮೆ)",
+        "hi": "ग्राम सुमंगल (प्रत्याशित बंदोबस्ती बीमा)",
+        "mr": "ग्राम सुमंगल (अग्रिम एंडोमेंट विमा)",
+        "gu": "ગ્રામ સુમંગલ (અગ્રિમ એન્ડોમેન્ટ વીમો)",
+        "pa": "ਗ੍ਰਾਮ ਸੁਮੰਗਲ (ਅਗਾਊਂ ਐਂਡੋਮੈਂਟ ਬੀਮਾ)",
+        "bn": "গ্রাম সুমঙ্গল (অগ্রিম এনডাওমেন্ট বিমা)",
+        "as": "গ্ৰাম সুমংগল (অগ্ৰিম এনডাউমেণ্ট বীমা)",
+        "or": "ଗ୍ରାମ ସୁମଙ୍ଗଳ (ଅଗ୍ରିମ ଏଣ୍ଡୋମେଣ୍ଟ ବୀମା)",
+        "te": "గ్రామ సుమంగళ్ (ముందస్తు ఎండోమెంట్ బీమా)",
+        "ta": "கிராம சுமங்கல் (முன்கூட்டிய எண்டோமென்ட் காப்பீடு)",
+        "ml": "ഗ്രാം സുമംഗൽ (മുൻകൂർ എൻഡോവ്മെന്റ് ഇൻഷുറൻസ്)",
+        "ur": "گرام سومنگل (پیشگی اینڈوومنٹ بیمہ)"
+      },
       "terms": [
-        { "years": 15, "entryAge": { "min": 19, "max": 45 },
-          "survivalBenefits": [ { "year": 6, "percentOfSA": 20 }, { "year": 9, "percentOfSA": 20 }, { "year": 12, "percentOfSA": 20 } ],
-          "maturityPercentOfSA": 40 },
-        { "years": 20, "entryAge": { "min": 19, "max": 40 },
-          "survivalBenefits": [ { "year": 8, "percentOfSA": 20 }, { "year": 12, "percentOfSA": 20 }, { "year": 16, "percentOfSA": 20 } ],
-          "maturityPercentOfSA": 40 }
+        {
+          "years": 15,
+          "entryAge": {
+            "min": 19,
+            "max": 45
+          },
+          "survivalBenefits": [
+            {
+              "year": 6,
+              "percentOfSA": 20
+            },
+            {
+              "year": 9,
+              "percentOfSA": 20
+            },
+            {
+              "year": 12,
+              "percentOfSA": 20
+            }
+          ],
+          "maturityPercentOfSA": 40
+        },
+        {
+          "years": 20,
+          "entryAge": {
+            "min": 19,
+            "max": 40
+          },
+          "survivalBenefits": [
+            {
+              "year": 8,
+              "percentOfSA": 20
+            },
+            {
+              "year": 12,
+              "percentOfSA": 20
+            },
+            {
+              "year": 16,
+              "percentOfSA": 20
+            }
+          ],
+          "maturityPercentOfSA": 40
+        }
       ],
       "deathBenefit": "FULL_SA_PLUS_BONUS_NO_DEDUCTION",
       "bonusOnFullSA": true,
-      "bonusClass": "AEA", "terminalBonusEligible": false,
+      "bonusClass": "AEA",
+      "terminalBonusEligible": false,
       "premiumTableId": "rpli_gram_sumangal",
-      "verified": false
+      "verified": false,
+      "loanAfterYears": null,
+      "surrenderAfterYears": null
     },
     {
-      "id": "rpli_gram_priya", "scheme": "RPLI", "type": "AEA",
-      "names": { "en": "Gram Priya (10-year Anticipated Endowment)", "kn": "ಗ್ರಾಮ ಪ್ರಿಯಾ (10 ವರ್ಷದ ಮುಂಗಡ ದತ್ತಿ ವಿಮೆ)" },
+      "id": "rpli_gram_priya",
+      "scheme": "RPLI",
+      "type": "AEA",
+      "names": {
+        "en": "Gram Priya (10-year Anticipated Endowment)",
+        "kn": "ಗ್ರಾಮ ಪ್ರಿಯಾ (10 ವರ್ಷದ ಮುಂಗಡ ದತ್ತಿ ವಿಮೆ)",
+        "hi": "ग्राम प्रिया (10 वर्षीय प्रत्याशित बंदोबस्ती बीमा)",
+        "mr": "ग्राम प्रिया (10 वर्षांचा अग्रिम एंडोमेंट विमा)",
+        "gu": "ગ્રામ પ્રિયા (10 વર્ષનો અગ્રિમ એન્ડોમેન્ટ વીમો)",
+        "pa": "ਗ੍ਰਾਮ ਪ੍ਰਿਆ (10 ਸਾਲਾ ਅਗਾਊਂ ਐਂਡੋਮੈਂਟ ਬੀਮਾ)",
+        "bn": "গ্রাম প্রিয়া (10 বছরের অগ্রিম এনডাওমেন্ট বিমা)",
+        "as": "গ্ৰাম প্ৰিয়া (10 বছৰীয়া অগ্ৰিম এনডাউমেণ্ট বীমা)",
+        "or": "ଗ୍ରାମ ପ୍ରିୟା (10 ବର୍ଷର ଅଗ୍ରିମ ଏଣ୍ଡୋମେଣ୍ଟ ବୀମା)",
+        "te": "గ్రామ ప్రియ (10 ఏళ్ల ముందస్తు ఎండోమెంట్ బీమా)",
+        "ta": "கிராம பிரியா (10 ஆண்டு முன்கூட்டிய எண்டோமென்ட் காப்பீடு)",
+        "ml": "ഗ്രാം പ്രിയ (10 വർഷ മുൻകൂർ എൻഡോവ്മെന്റ് ഇൻഷുറൻസ്)",
+        "ur": "گرام پریا (10 سالہ پیشگی اینڈوومنٹ بیمہ)"
+      },
       "terms": [
-        { "years": 10, "entryAge": { "min": 20, "max": 45 },
-          "survivalBenefits": [ { "year": 4, "percentOfSA": 20 }, { "year": 7, "percentOfSA": 20 } ],
-          "maturityPercentOfSA": 60 }
+        {
+          "years": 10,
+          "entryAge": {
+            "min": 20,
+            "max": 45
+          },
+          "survivalBenefits": [
+            {
+              "year": 4,
+              "percentOfSA": 20
+            },
+            {
+              "year": 7,
+              "percentOfSA": 20
+            }
+          ],
+          "maturityPercentOfSA": 60
+        }
       ],
       "deathBenefit": "FULL_SA_PLUS_BONUS_NO_DEDUCTION",
       "bonusOnFullSA": true,
-      "bonusClass": "AEA", "terminalBonusEligible": false,
+      "bonusClass": "AEA",
+      "terminalBonusEligible": false,
       "premiumTableId": "rpli_gram_priya",
-      "verified": false
+      "verified": false,
+      "loanAfterYears": null,
+      "surrenderAfterYears": null
     },
     {
-      "id": "rpli_bal_jeevan_bima", "scheme": "RPLI", "type": "CHILD_EA",
-      "names": { "en": "Bal Jeevan Bima (RPLI Children Policy)", "kn": "ಬಾಲ ಜೀವನ ಬಿಮಾ (ಗ್ರಾಮೀಣ ಮಕ್ಕಳ ವಿಮೆ)" },
-      "childAge": { "min": 5, "max": 20 }, "parentMaxAge": 45, "maxChildren": 2,
-      "sumAssuredMax": 100000, "sumAssuredCapParentSA": true,
+      "id": "rpli_bal_jeevan_bima",
+      "scheme": "RPLI",
+      "type": "CHILD_EA",
+      "names": {
+        "en": "Bal Jeevan Bima (RPLI Children Policy)",
+        "kn": "ಬಾಲ ಜೀವನ ಬಿಮಾ (ಗ್ರಾಮೀಣ ಮಕ್ಕಳ ವಿಮೆ)",
+        "hi": "बाल जीवन बीमा (बच्चों की पॉलिसी – RPLI)",
+        "mr": "बाल जीवन विमा (मुलांची पॉलिसी – RPLI)",
+        "gu": "બાલ જીવન બીમા (બાળકોની પૉલિસી – RPLI)",
+        "pa": "ਬਾਲ ਜੀਵਨ ਬੀਮਾ (ਬੱਚਿਆਂ ਦੀ ਪਾਲਿਸੀ – RPLI)",
+        "bn": "বাল জীবন বিমা (শিশুদের পলিসি – RPLI)",
+        "as": "বাল জীৱন বীমা (শিশুৰ পলিচি – RPLI)",
+        "or": "ବାଳ ଜୀବନ ବୀମା (ପିଲାଙ୍କ ପଲିସି – RPLI)",
+        "te": "బాల జీవన్ బీమా (పిల్లల పాలసీ – RPLI)",
+        "ta": "பால் ஜீவன் பீமா (குழந்தைகள் பாலிசி – RPLI)",
+        "ml": "ബാൽ ജീവൻ ബീമ (കുട്ടികളുടെ പോളിസി – RPLI)",
+        "ur": "بال جیون بیمہ (بچوں کی پالیسی – RPLI)"
+      },
+      "childAge": {
+        "min": 5,
+        "max": 20
+      },
+      "parentMaxAge": 45,
+      "maxChildren": 2,
+      "sumAssuredMax": 100000,
+      "sumAssuredCapParentSA": true,
       "premiumWaiverOnParentDeath": true,
       "bonusClass": "EA",
       "premiumTableId": null,
-      "verified": false
+      "verified": false,
+      "loanAfterYears": null,
+      "surrenderAfterYears": null
     }
   ],
-
   "bonusRatesPer1000": {
     "PLI": {
-      "2026-27": { "WLA": 76, "EA": 52, "AEA": 48, "CWLA_BEFORE_CONVERSION": 76, "CWLA_AFTER_CONVERSION": 52 }
+      "2026-27": {
+        "WLA": 76,
+        "EA": 52,
+        "AEA": 48,
+        "CWLA_BEFORE_CONVERSION": 76,
+        "CWLA_AFTER_CONVERSION": 52
+      }
     },
     "RPLI": {
-      "2026-27": { "WLA": 60, "EA": 48, "AEA": 45, "CWLA_BEFORE_CONVERSION": 60, "CWLA_AFTER_CONVERSION": 48 }
+      "2026-27": {
+        "WLA": 60,
+        "EA": 48,
+        "AEA": 45,
+        "CWLA_BEFORE_CONVERSION": 60,
+        "CWLA_AFTER_CONVERSION": 48
+      }
     },
     "note": "Bonus history (earlier financial years) is required for existing-policy maturity calculation. Missing years cause a hard error — never a guessed rate."
   },
-
   "terminalBonus": {
-    "perSumAssured": 10000, "amount": 20, "maxAmount": 1000,
-    "minTermYears": 20, "appliesToTypes": ["WLA", "EA"], "schemes": ["PLI"],
+    "perSumAssured": 10000,
+    "amount": 20,
+    "maxAmount": 1000,
+    "minTermYears": 20,
+    "appliesToTypes": [
+      "WLA",
+      "EA"
+    ],
+    "schemes": [
+      "PLI"
+    ],
     "verified": false
   },
-
   "premium": {
-    "frequencies": ["MONTHLY", "QUARTERLY", "HALF_YEARLY", "YEARLY"],
+    "frequencies": [
+      "MONTHLY",
+      "QUARTERLY",
+      "HALF_YEARLY",
+      "YEARLY"
+    ],
     "tableUnitSumAssured": 10000,
-    "ageBasis": "PENDING_USER_INPUT",
-    "rounding": "PENDING_USER_INPUT",
+    "ageBasis": "AGE_NEAREST_BIRTHDAY",
+    "rounding": "NEAREST_RUPEE_AFTER_REBATE",
     "sumAssuredRebate": {
-      "rupeesPerMonth": 1, "perSumAssured": 20000,
-      "applicablePlans": "PENDING_USER_INPUT",
+      "rupeesPerMonth": 1,
+      "perSumAssured": 20000,
+      "countCompleteBlocksOnly": true,
+      "applicablePlanTypes": [
+        "WLA",
+        "EA",
+        "CWLA",
+        "AEA",
+        "JOINT_EA",
+        "CHILD_EA"
+      ],
       "verified": false
     },
     "advancePaymentRebate": [
-      { "monthsInAdvance": 6, "percent": 1 },
-      { "monthsInAdvance": 12, "percent": 2 }
+      {
+        "monthsInAdvance": 6,
+        "percent": 1
+      },
+      {
+        "monthsInAdvance": 12,
+        "percent": 2
+      }
     ],
     "advancePaymentRebateVerified": false,
-    "defaultFee": { "percentPerMonthOfDelay": 1, "verified": false },
-    "gst": {
-      "currentRatePercent": 0, "nilFrom": "2025-09-22",
-      "historical": { "firstYearPercent": 4.5, "renewalPercent": 2.25, "appliesTo": "endowment-type" },
+    "defaultFee": {
+      "percentPerMonthOfDelay": 1,
+      "countPartMonthAsFull": true,
       "verified": false
-    }
+    },
+    "gst": {
+      "currentRatePercent": 0,
+      "nilFrom": "2025-09-22",
+      "historical": {
+        "firstYearPercent": 4.5,
+        "renewalPercent": 2.25,
+        "appliesTo": "endowment-type"
+      },
+      "verified": false
+    },
+    "ageBasisVerified": false,
+    "roundingVerified": false
   },
-
-  "loan": { "interestPercentPerAnnum": 10, "compounding": "HALF_YEARLY", "maxPercentOfSurrenderValue": null, "verified": false },
-
-  "bonusRounding": { "rule": "HALF_RUPEE_UP", "description": "Fraction of 50 paise or more rounds up to next rupee; below 50 paise is ignored." }
+  "loan": {
+    "interestPercentPerAnnum": 10,
+    "compounding": "HALF_YEARLY",
+    "maxPercentOfSurrenderValue": null,
+    "verified": false
+  },
+  "bonusRounding": {
+    "rule": "HALF_RUPEE_UP",
+    "description": "Fraction of 50 paise or more rounds up to next rupee; below 50 paise is ignored."
+  },
+  "bonusAccrual": {
+    "creditedPer": "COMPLETED_POLICY_YEAR",
+    "rateYear": "FY_CONTAINING_LAST_DAY_OF_POLICY_YEAR",
+    "wholeLifeAccruesUntilMaturityAge": true,
+    "verified": false
+  },
+  "policyDates": {
+    "maturityDate": "POLICY_ANNIVERSARY",
+    "verified": false
+  },
+  "paidUp": {
+    "minYearsInForce": 3,
+    "formula": "SA_TIMES_PAID_OVER_PAYABLE",
+    "verified": false
+  },
+  "provisional": [
+    "Entry age = age nearest birthday (6 months or more past the last birthday counts as the next age), on the policy start date.",
+    "Default fee = 1% of the instalment per month of delay; a part month counts as a full month.",
+    "Bonus is credited for each completed policy year at the rate of the financial year in which that policy year ends.",
+    "Whole life (Suraksha / Gram Suraksha): bonus keeps accruing until maturity at age 80 after premiums stop; terminal bonus if that period is 20 years or more.",
+    "Maturity and survival benefits fall due on the policy anniversary.",
+    "Paid-up: confirmed SA × premiums paid ÷ premiums payable (Surrender SOP 2023); a policy becomes paid-up only after 3 years in force.",
+    "Loan interest 10% a year, compounded half-yearly; loan after 4 years (whole life, convertible) or 3 years (endowment, joint life); no loan on money-back or children's plans.",
+    "Surrender value is not shown because official surrender factors are not available."
+  ]
 }

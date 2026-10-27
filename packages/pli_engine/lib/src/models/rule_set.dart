@@ -3,6 +3,7 @@ import 'dart:convert';
 import '../data/json_reader.dart';
 import 'enums.dart';
 import 'plan_rule.dart';
+import 'service_rules.dart';
 
 class SumAssuredLimit {
   const SumAssuredLimit({required this.min, required this.max, this.multipleOf});
@@ -16,6 +17,35 @@ class SumAssuredLimit {
   final int min;
   final int max;
   final int? multipleOf;
+}
+
+/// Terminal bonus: [amount] per [perSumAssured] of SA, capped at
+/// [maxAmount], for [appliesToTypes] in [schemes] with term ≥ [minTermYears].
+class TerminalBonusRule {
+  const TerminalBonusRule({
+    required this.perSumAssured,
+    required this.amount,
+    required this.maxAmount,
+    required this.minTermYears,
+    required this.appliesToTypes,
+    required this.schemes,
+  });
+
+  factory TerminalBonusRule.fromJson(JsonReader r) => TerminalBonusRule(
+        perSumAssured: r.integer('perSumAssured'),
+        amount: r.integer('amount'),
+        maxAmount: r.integer('maxAmount'),
+        minTermYears: r.integer('minTermYears'),
+        appliesToTypes: r.stringList('appliesToTypes').map(PlanType.parse).toSet(),
+        schemes: r.stringList('schemes').map(Scheme.parse).toSet(),
+      );
+
+  final int perSumAssured;
+  final int amount;
+  final int maxAmount;
+  final int minTermYears;
+  final Set<PlanType> appliesToTypes;
+  final Set<Scheme> schemes;
 }
 
 /// Thrown when a bonus rate is needed for a year the data doesn't have.
@@ -43,6 +73,12 @@ class RuleSet {
     required this.sumAssuredLimits,
     required this.plans,
     required this.bonusRatesPer1000,
+    required this.eligibilityGroups,
+    required this.terminalBonus,
+    required this.premium,
+    required this.loan,
+    required this.paidUp,
+    required this.provisional,
     required this.raw,
   });
 
@@ -86,6 +122,14 @@ class RuleSet {
       },
       plans: plans,
       bonusRatesPer1000: rates,
+      eligibilityGroups: {
+        for (final s in Scheme.values) s: schemes.object(s.code).stringList('eligibilityGroups').toSet(),
+      },
+      terminalBonus: TerminalBonusRule.fromJson(r.object('terminalBonus')),
+      premium: PremiumRules.fromJson(r.object('premium')),
+      loan: LoanRule.fromJson(r.object('loan')),
+      paidUp: PaidUpRule.fromJson(r.object('paidUp')),
+      provisional: r.has('provisional') ? r.stringList('provisional') : const [],
       raw: r.map,
     );
   }
@@ -100,6 +144,14 @@ class RuleSet {
 
   /// scheme → financial year ("2026-27") → bonus class → ₹ per ₹1,000 SA.
   final Map<Scheme, Map<String, Map<String, int>>> bonusRatesPer1000;
+  final Map<Scheme, Set<String>> eligibilityGroups;
+  final TerminalBonusRule terminalBonus;
+  final PremiumRules premium;
+  final LoanRule loan;
+  final PaidUpRule paidUp;
+
+  /// Working assumptions not yet confirmed from an official source.
+  final List<String> provisional;
   final Map<String, Object?> raw;
 
   PlanRule plan(String id) => plans.firstWhere(
