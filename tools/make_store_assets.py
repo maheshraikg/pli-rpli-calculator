@@ -3,6 +3,8 @@
 
 - docs/store/screenshots/NN_name.png: 1080x1920 marketing screenshots
   (headline, phone frame with the app screen).
+- docs/store/screenshots_tab7|tab10/N_name.png: 7- and 10-inch tablet
+  screenshots (1080x1920, 1440x2560) from the tablet renders.
 - docs/store/feature_graphic.png: 1024x500.
 
 Usage: python3 -I tools/make_store_assets.py <Roboto-Black.ttf> <Roboto-Medium.ttf>
@@ -37,6 +39,16 @@ SHOTS = [
     ('09_kannada', '09_home_kannada.png', 0,
      '13 Indian languages', 'Kannada, Hindi, Tamil, Telugu and more'),
 ]
+# Tablet shots: (output name, source suffix, headline, subline); sources are
+# tab7_<suffix>.png / tab10_<suffix>.png.
+TABLET_SHOTS = [
+    ('1_home', '1_home', 'All PLI & RPLI tools', 'Premium, maturity, dues and forms'),
+    ('2_premium', '2_premium', 'Premium in seconds', 'Every plan, age and frequency'),
+    ('3_dues', '3_dues', 'Never miss a due', 'Monthly dues and WhatsApp reminders'),
+    ('4_official_links', '4_links', 'Official links', 'PLI portal, DigiLocker, toll-free helpline'),
+]
+# Play needs 16:9 or 9:16: (folder tag, canvas size).
+TABLETS = [('tab7', (1080, 1920)), ('tab10', (1440, 2560))]
 RED, MAROON, WHITE = (200, 16, 46), (110, 6, 24), (255, 255, 255)
 PINK = (255, 214, 220)
 APP_BAR = 160  # source px of the app bar kept at the top of scrolled shots
@@ -124,6 +136,28 @@ def screenshots(black, medium):
         img.convert('RGB').save(OUT / 'screenshots' / f'{name}.png', optimize=True)
 
 
+def tablet_screenshots(black, medium):
+    for tag, (W, H) in TABLETS:
+        out = OUT / f'screenshots_{tag}'
+        out.mkdir(parents=True, exist_ok=True)
+        k = W / 1080  # type scale relative to the phone canvas
+        head, sub = ImageFont.truetype(black, int(84 * k)), ImageFont.truetype(medium, int(44 * k))
+        for name, src, title, line in TABLET_SHOTS:
+            img = gradient(W, H, RED, MAROON).convert('RGBA')
+            decorate(img, [(int(980 * k), int(120 * k), int(260 * k), 22), (int(60 * k), int(700 * k), int(200 * k), 14)])
+            d = ImageDraw.Draw(img)
+            centered(d, int(130 * k), title, head, WHITE, W)
+            centered(d, int(245 * k), line, sub, PINK, W)
+            d.rounded_rectangle([W / 2 - 50 * k, 330 * k, W / 2 + 50 * k, 338 * k], radius=4, fill=(255, 255, 255, 180))
+            screen = Image.open(SRC / f'{tag}_{src}.png').convert('RGB')
+            top, bezel = int(420 * k), int(26 * k)
+            screen_h = H - top - int(70 * k) - 2 * bezel
+            screen_w = int(screen_h * screen.width / screen.height)
+            tab = phone(screen_w, screen_h, screen, bezel=bezel, radius=int(56 * k))
+            place_with_shadow(img, tab, (W - tab.width) // 2, top)
+            img.convert('RGB').save(out / f'{name}.png', optimize=True)
+
+
 def feature_graphic(black, medium):
     w, h = 1024, 500
     img = gradient(w, h, RED, MAROON).convert('RGBA')
@@ -161,5 +195,6 @@ def feature_graphic(black, medium):
 
 if __name__ == '__main__':
     screenshots(sys.argv[1], sys.argv[2])
+    tablet_screenshots(sys.argv[1], sys.argv[2])
     feature_graphic(sys.argv[1], sys.argv[2])
     print('store assets written')

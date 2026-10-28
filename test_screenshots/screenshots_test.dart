@@ -28,7 +28,7 @@ Future<void> _load(String family, List<String> paths) async {
 }
 
 Future<void> _shot(WidgetTester tester, String name, {double height = 2340}) async {
-  tester.view.physicalSize = Size(1080, height);
+  tester.view.physicalSize = Size(tester.view.physicalSize.width, height);
   await tester.pumpAndSettle();
   // Let asset images decode before capturing.
   await tester.runAsync(() async {
@@ -38,6 +38,13 @@ Future<void> _shot(WidgetTester tester, String name, {double height = 2340}) asy
   });
   await tester.pumpAndSettle();
   await expectLater(find.byType(MaterialApp), matchesGoldenFile('out/$name.png'));
+}
+
+/// Tablet render: [width]x[height] physical px at 2x (7-inch: 600dp wide, 10-inch: 800dp).
+Future<void> _tabletShot(WidgetTester tester, String name, Size size) async {
+  tester.view.physicalSize = size;
+  tester.view.devicePixelRatio = 2;
+  await _shot(tester, name, height: size.height);
 }
 
 void main() {
@@ -241,4 +248,27 @@ void main() {
     c.read(planConfigProvider(premiumConfigKey).notifier).selectPlan(bundledData().rules.plan('pli_suvidha'));
     await _shot(tester, '25_suvidha_full', height: 5800);
   });
+
+  MemoryPolicyStore duesStore() {
+    final store = MemoryPolicyStore();
+    final names = ['Lakshmi Devi', 'Ravi Kumar', 'Shabnam Begum', 'Manjunath Gowda'];
+    for (final (i, n) in names.indexed) {
+      store.put(SavedPolicy(
+        id: '$i', holderName: n, policyNumber: 'PLI-KA-10${i}234', planId: 'pli_santosh', sumAssured: 100000 * (i + 1),
+        commencement: DateTime(2024, 1 + i * 2, 4 + i * 6), entryAge: 30, column: 58, frequency: PremiumFrequency.monthly,
+        premiumRupees: 450 * (i + 1), reminders: true, phone: i.isEven ? '98450 0000$i' : '',
+        paidDues: i == 0 ? const {'2026-11-04'} : const {},
+      ));
+    }
+    return store;
+  }
+
+  for (final (tag, size) in [('tab7', const Size(1200, 1920)), ('tab10', const Size(1600, 2560))]) {
+    for (final (name, route) in [('1_home', '/'), ('2_premium', '/premium'), ('3_dues', '/dues'), ('4_links', '/links')]) {
+      testWidgets('${tag}_$name', (tester) async {
+        await pumpApp(tester, location: route, policies: route == '/dues' ? duesStore() : null);
+        await _tabletShot(tester, '${tag}_$name', size);
+      });
+    }
+  }
 }
