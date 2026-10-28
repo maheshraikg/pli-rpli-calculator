@@ -1426,4 +1426,7 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get formSourceLabel => 'ಈ ಫಾರ್ಮ್‌ನ ಅಧಿಕೃತ ಮೂಲ';
+
+  @override
+  String get privacyPolicyLink => 'ಸಂಪೂರ್ಣ ಗೌಪ್ಯತಾ ನೀತಿ ಓದಿ';
 }

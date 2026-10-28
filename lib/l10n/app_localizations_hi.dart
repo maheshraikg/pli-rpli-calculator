@@ -1426,4 +1426,7 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get formSourceLabel => 'इस फ़ॉर्म का आधिकारिक स्रोत';
+
+  @override
+  String get privacyPolicyLink => 'पूरी गोपनीयता नीति पढ़ें';
 }

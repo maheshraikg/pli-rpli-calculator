@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../core/widgets/data_scaffold.dart';
 import '../../data/data_repository.dart';
@@ -9,6 +11,9 @@ import '../common/plan_config_form.dart';
 import '../../core/app_icons.dart';
 
 const kAppVersion = '1.0.0';
+
+/// Public privacy policy (also entered in Play Console).
+const kPrivacyPolicyUrl = 'https://docs.google.com/document/d/1nlTftF_zHcZhkOsaneC_XL56SENDPpFScdPiWmn1mLM/view';
 
 class AboutScreen extends ConsumerStatefulWidget {
   const AboutScreen({super.key});
@@ -60,7 +65,25 @@ class _AboutScreenState extends ConsumerState<AboutScreen> {
         padding: const EdgeInsets.all(16),
         children: [
           section(l.appTitle, Text('${l.independentDisclaimer}\n${l.appVersion(kAppVersion)}')),
-          section(l.privacyTitle, Text(l.privacyBody)),
+          section(
+            l.privacyTitle,
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(l.privacyBody),
+                TextButton.icon(
+                  icon: const AppIcon(AppIcons.shieldCheck),
+                  label: Text(l.privacyPolicyLink),
+                  onPressed: () => launchUrl(Uri.parse(kPrivacyPolicyUrl), mode: LaunchMode.externalApplication),
+                ),
+                TextButton.icon(
+                  icon: const AppIcon(AppIcons.globeHemisphereEast),
+                  label: Text(l.linksTitle),
+                  onPressed: () => context.push('/links'),
+                ),
+              ],
+            ),
+          ),
           section(
             l.dataSourceTitle,
             Column(

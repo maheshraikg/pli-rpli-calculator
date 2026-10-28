@@ -1424,4 +1424,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get formSourceLabel => 'اس فارم کا سرکاری ماخذ';
+
+  @override
+  String get privacyPolicyLink => 'مکمل رازداری پالیسی پڑھیں';
 }

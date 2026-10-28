@@ -1429,4 +1429,7 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get formSourceLabel => 'ఈ ఫారం అధికారిక మూలం';
+
+  @override
+  String get privacyPolicyLink => 'పూర్తి గోప్యతా విధానం చదవండి';
 }

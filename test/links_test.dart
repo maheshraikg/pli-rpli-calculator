@@ -1,4 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:pli_sahayak/features/about/about_screen.dart';
 import 'package:pli_sahayak/features/links/links_screen.dart';
 
 import 'support.dart';
@@ -22,5 +23,15 @@ void main() {
     await tester.scrollUntilVisible(find.textContaining('not affiliated'), 200);
     expect(find.text('Toll-free 1800 266 6868'), findsOneWidget);
     expect(find.textContaining('not affiliated with India Post'), findsOneWidget);
+  });
+
+  testWidgets('About shows the privacy policy and official links', (tester) async {
+    await pumpApp(tester, location: '/about');
+    expect(find.text('Read the full privacy policy'), findsOneWidget);
+    expect(find.text('Official links & help'), findsOneWidget);
+  });
+
+  test('privacy policy URL is the public Google Doc', () {
+    expect(Uri.parse(kPrivacyPolicyUrl).host, 'docs.google.com');
   });
 }

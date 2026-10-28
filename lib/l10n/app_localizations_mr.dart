@@ -1423,4 +1423,7 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get formSourceLabel => 'या फॉर्मचा अधिकृत स्रोत';
+
+  @override
+  String get privacyPolicyLink => 'संपूर्ण गोपनीयता धोरण वाचा';
 }
