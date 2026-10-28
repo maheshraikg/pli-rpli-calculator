@@ -1042,5 +1042,17 @@
   "linkGrievanceDesc": "Raise a complaint with the Government of India",
   "linksNote": "These open official Government of India websites. This app is independent and is not affiliated with India Post or the Department of Posts.",
   "formSourceLabel": "Official source of this form",
-  "privacyPolicyLink": "Read the full privacy policy"
+  "privacyPolicyLink": "Read the full privacy policy",
+  "helpTitle": "Help & feedback",
+  "helpBody": "Found a problem or a wrong figure? Tell us and we will fix it in the next update. Support: {email}",
+  "reportProblem": "Report a problem",
+  "sendSuggestion": "Send a suggestion",
+  "checkAppUpdates": "Check for app updates (Play Store)",
+  "@helpBody": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  }
 }

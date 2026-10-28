@@ -12,6 +12,18 @@ import '../../core/app_icons.dart';
 
 const kAppVersion = '1.0.0';
 
+/// Where users report problems and send suggestions (also the Play listing contact).
+const kSupportEmail = 'maheshraikg@gmail.com';
+const kPlayStoreUrl = 'https://play.google.com/store/apps/details?id=com.maheshraikg.plirplicalculator';
+
+/// mailto: link with a subject and a short template, so reports arrive with
+/// the app version.
+Uri supportMail(String subject, String body) => Uri(
+  scheme: 'mailto',
+  path: kSupportEmail,
+  query: 'subject=${Uri.encodeComponent(subject)}&body=${Uri.encodeComponent(body)}',
+);
+
 /// Public privacy policy (also entered in Play Console).
 const kPrivacyPolicyUrl = 'https://docs.google.com/document/d/1nlTftF_zHcZhkOsaneC_XL56SENDPpFScdPiWmn1mLM/view';
 
@@ -65,6 +77,38 @@ class _AboutScreenState extends ConsumerState<AboutScreen> {
         padding: const EdgeInsets.all(16),
         children: [
           section(l.appTitle, Text('${l.independentDisclaimer}\n${l.appVersion(kAppVersion)}')),
+          section(
+            l.helpTitle,
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(l.helpBody(kSupportEmail)),
+                TextButton.icon(
+                  icon: const AppIcon(AppIcons.bug),
+                  label: Text(l.reportProblem),
+                  onPressed: () => launchUrl(
+                    supportMail(
+                      'PLI & RPLI Calculator $kAppVersion – problem report',
+                      'What I did:\n\nWhat went wrong:\n\nPlan / age / sum assured (if relevant):\n\n'
+                          'App version: $kAppVersion\nLanguage: ${Localizations.localeOf(context).languageCode}\n',
+                    ),
+                  ),
+                ),
+                TextButton.icon(
+                  icon: const AppIcon(AppIcons.lightbulb),
+                  label: Text(l.sendSuggestion),
+                  onPressed: () => launchUrl(
+                    supportMail('PLI & RPLI Calculator $kAppVersion – suggestion', 'My suggestion:\n\n'),
+                  ),
+                ),
+                TextButton.icon(
+                  icon: const AppIcon(AppIcons.googlePlayLogo),
+                  label: Text(l.checkAppUpdates),
+                  onPressed: () => launchUrl(Uri.parse(kPlayStoreUrl), mode: LaunchMode.externalApplication),
+                ),
+              ],
+            ),
+          ),
           section(
             l.privacyTitle,
             Column(

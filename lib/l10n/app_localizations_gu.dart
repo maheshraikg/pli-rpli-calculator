@@ -1424,4 +1424,21 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get privacyPolicyLink => 'સંપૂર્ણ ગોપનીયતા નીતિ વાંચો';
+
+  @override
+  String get helpTitle => 'મદદ અને પ્રતિસાદ';
+
+  @override
+  String helpBody(String email) {
+    return 'કોઈ સમસ્યા કે ખોટી રકમ દેખાઈ? અમને જણાવો, આગલા અપડેટમાં સુધારીશું. સહાય: $email';
+  }
+
+  @override
+  String get reportProblem => 'સમસ્યા જણાવો';
+
+  @override
+  String get sendSuggestion => 'સૂચન મોકલો';
+
+  @override
+  String get checkAppUpdates => 'એપ અપડેટ તપાસો (પ્લે સ્ટોર)';
 }

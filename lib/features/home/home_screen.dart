@@ -82,6 +82,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           (AppIcons.bookOpenText, l.tilePlans, l.descPlans, '/plans', _indigo),
           (AppIcons.globeHemisphereEast, l.tileLinks, l.descLinks, '/links', kAccentRed),
           (AppIcons.info, l.tileAbout, l.descAbout, '/about', _teal),
+          (AppIcons.lifebuoy, l.helpTitle, l.reportProblem, '/about', _amber),
         ],
       ),
     ];

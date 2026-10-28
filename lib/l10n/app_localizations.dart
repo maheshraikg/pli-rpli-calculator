@@ -2578,6 +2578,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Read the full privacy policy'**
   String get privacyPolicyLink;
+
+  /// No description provided for @helpTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Help & feedback'**
+  String get helpTitle;
+
+  /// No description provided for @helpBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Found a problem or a wrong figure? Tell us and we will fix it in the next update. Support: {email}'**
+  String helpBody(String email);
+
+  /// No description provided for @reportProblem.
+  ///
+  /// In en, this message translates to:
+  /// **'Report a problem'**
+  String get reportProblem;
+
+  /// No description provided for @sendSuggestion.
+  ///
+  /// In en, this message translates to:
+  /// **'Send a suggestion'**
+  String get sendSuggestion;
+
+  /// No description provided for @checkAppUpdates.
+  ///
+  /// In en, this message translates to:
+  /// **'Check for app updates (Play Store)'**
+  String get checkAppUpdates;
 }
 
 class _AppLocalizationsDelegate

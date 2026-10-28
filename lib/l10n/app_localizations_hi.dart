@@ -1429,4 +1429,21 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get privacyPolicyLink => 'पूरी गोपनीयता नीति पढ़ें';
+
+  @override
+  String get helpTitle => 'सहायता और सुझाव';
+
+  @override
+  String helpBody(String email) {
+    return 'कोई समस्या या गलत राशि दिखी? हमें बताएँ, अगले अपडेट में ठीक करेंगे। सहायता: $email';
+  }
+
+  @override
+  String get reportProblem => 'समस्या बताएँ';
+
+  @override
+  String get sendSuggestion => 'सुझाव भेजें';
+
+  @override
+  String get checkAppUpdates => 'ऐप अपडेट देखें (प्ले स्टोर)';
 }

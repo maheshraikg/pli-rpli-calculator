@@ -1429,4 +1429,21 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get privacyPolicyLink => 'ಸಂಪೂರ್ಣ ಗೌಪ್ಯತಾ ನೀತಿ ಓದಿ';
+
+  @override
+  String get helpTitle => 'ಸಹಾಯ ಮತ್ತು ಪ್ರತಿಕ್ರಿಯೆ';
+
+  @override
+  String helpBody(String email) {
+    return 'ಸಮಸ್ಯೆ ಅಥವಾ ತಪ್ಪು ಮೊತ್ತ ಕಂಡುಬಂದಿದೆಯೇ? ನಮಗೆ ತಿಳಿಸಿ, ಮುಂದಿನ ಅಪ್‌ಡೇಟ್‌ನಲ್ಲಿ ಸರಿಪಡಿಸುತ್ತೇವೆ. ಬೆಂಬಲ: $email';
+  }
+
+  @override
+  String get reportProblem => 'ಸಮಸ್ಯೆ ವರದಿ ಮಾಡಿ';
+
+  @override
+  String get sendSuggestion => 'ಸಲಹೆ ಕಳುಹಿಸಿ';
+
+  @override
+  String get checkAppUpdates => 'ಆ್ಯಪ್ ಅಪ್‌ಡೇಟ್ ಪರಿಶೀಲಿಸಿ (ಪ್ಲೇ ಸ್ಟೋರ್)';
 }
