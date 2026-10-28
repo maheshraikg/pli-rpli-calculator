@@ -2572,6 +2572,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Official source of this form'**
   String get formSourceLabel;
+
+  /// No description provided for @privacyPolicyLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Read the full privacy policy'**
+  String get privacyPolicyLink;
 }
 
 class _AppLocalizationsDelegate

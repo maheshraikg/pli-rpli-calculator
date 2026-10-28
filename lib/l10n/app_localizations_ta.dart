@@ -1439,4 +1439,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get formSourceLabel => 'இந்தப் படிவத்தின் அதிகாரப்பூர்வ மூலம்';
+
+  @override
+  String get privacyPolicyLink => 'முழு தனியுரிமைக் கொள்கையைப் படிக்கவும்';
 }

@@ -1425,4 +1425,7 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get formSourceLabel => 'এই ফর্মের অফিসিয়াল উৎস';
+
+  @override
+  String get privacyPolicyLink => 'সম্পূর্ণ গোপনীয়তা নীতি পড়ুন';
 }

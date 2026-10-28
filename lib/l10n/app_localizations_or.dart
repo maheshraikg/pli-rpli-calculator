@@ -1424,4 +1424,7 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get formSourceLabel => 'ଏହି ଫର୍ମର ସରକାରୀ ଉତ୍ସ';
+
+  @override
+  String get privacyPolicyLink => 'ସମ୍ପୂର୍ଣ୍ଣ ଗୋପନୀୟତା ନୀତି ପଢ଼ନ୍ତୁ';
 }

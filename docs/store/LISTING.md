@@ -9,8 +9,8 @@ Copy each block into Play Console. Limits are Google's.
 - **Category:** Finance
 - **Tags:** Insurance, Calculator
 - **Contact email:** your developer email (shown publicly on the listing)
-- **Privacy policy URL:** the public link to `docs/PRIVACY_POLICY.md`
-  (see "Privacy policy link" below)
+- **Privacy policy URL:** https://docs.google.com/document/d/1nlTftF_zHcZhkOsaneC_XL56SENDPpFScdPiWmn1mLM/view
+  (the Google Doc must be shared as "Anyone with the link: Viewer"; the same link is in the app's About screen)
 
 ## Full description (4000 max)
 ```

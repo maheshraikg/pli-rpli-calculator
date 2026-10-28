@@ -1425,4 +1425,7 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get formSourceLabel => 'এই ফৰ্মৰ চৰকাৰী উৎস';
+
+  @override
+  String get privacyPolicyLink => 'সম্পূৰ্ণ গোপনীয়তা নীতি পঢ়ক';
 }

@@ -1041,5 +1041,6 @@
   "linkGrievanceTitle": "Public grievance (CPGRAMS)",
   "linkGrievanceDesc": "Raise a complaint with the Government of India",
   "linksNote": "These open official Government of India websites. This app is independent and is not affiliated with India Post or the Department of Posts.",
-  "formSourceLabel": "Official source of this form"
+  "formSourceLabel": "Official source of this form",
+  "privacyPolicyLink": "Read the full privacy policy"
 }

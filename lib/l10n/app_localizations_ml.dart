@@ -1434,4 +1434,7 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get formSourceLabel => 'ഈ ഫോമിന്റെ ഔദ്യോഗിക ഉറവിടം';
+
+  @override
+  String get privacyPolicyLink => 'പൂർണ്ണ സ്വകാര്യതാ നയം വായിക്കുക';
 }

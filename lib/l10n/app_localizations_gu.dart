@@ -1421,4 +1421,7 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get formSourceLabel => 'આ ફોર્મનો અધિકૃત સ્ત્રોત';
+
+  @override
+  String get privacyPolicyLink => 'સંપૂર્ણ ગોપનીયતા નીતિ વાંચો';
 }

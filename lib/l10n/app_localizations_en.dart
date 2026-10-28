@@ -1459,4 +1459,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get formSourceLabel => 'Official source of this form';
+
+  @override
+  String get privacyPolicyLink => 'Read the full privacy policy';
 }

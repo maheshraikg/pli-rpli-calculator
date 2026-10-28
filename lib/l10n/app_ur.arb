@@ -407,5 +407,6 @@
   "linkGrievanceTitle": "عوامی شکایت (CPGRAMS)",
   "linkGrievanceDesc": "حکومتِ ہند سے شکایت کریں",
   "linksNote": "یہ حکومتِ ہند کی سرکاری ویب سائٹس کھولتے ہیں۔ یہ ایپ آزاد ہے اور انڈیا پوسٹ یا محکمہ ڈاک سے وابستہ نہیں۔",
-  "formSourceLabel": "اس فارم کا سرکاری ماخذ"
+  "formSourceLabel": "اس فارم کا سرکاری ماخذ",
+  "privacyPolicyLink": "مکمل رازداری پالیسی پڑھیں"
 }

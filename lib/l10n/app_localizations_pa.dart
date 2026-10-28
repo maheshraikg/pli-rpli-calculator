@@ -1421,4 +1421,7 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get formSourceLabel => 'ਇਸ ਫ਼ਾਰਮ ਦਾ ਅਧਿਕਾਰਤ ਸਰੋਤ';
+
+  @override
+  String get privacyPolicyLink => 'ਪੂਰੀ ਪਰਦੇਦਾਰੀ ਨੀਤੀ ਪੜ੍ਹੋ';
 }
