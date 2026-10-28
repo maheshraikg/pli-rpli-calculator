@@ -49,6 +49,6 @@ void main() {
     expect(uri.path, kSupportEmail);
     expect(uri.query, contains('subject=Bug'));
     expect(Uri.decodeComponent(uri.query), contains('Line 1\nLine 2'));
-    expect(Uri.parse(kPlayStoreUrl).queryParameters['id'], 'com.maheshraikg.plirplicalculator');
+    expect(Uri.parse(kPlayStoreUrl).queryParameters['id'], 'com.plirpli.calculator');
   });
 }

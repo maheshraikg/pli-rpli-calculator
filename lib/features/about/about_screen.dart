@@ -14,7 +14,7 @@ const kAppVersion = '1.0.0';
 
 /// Where users report problems and send suggestions (also the Play listing contact).
 const kSupportEmail = 'maheshraikg@gmail.com';
-const kPlayStoreUrl = 'https://play.google.com/store/apps/details?id=com.maheshraikg.plirplicalculator';
+const kPlayStoreUrl = 'https://play.google.com/store/apps/details?id=com.plirpli.calculator';
 
 /// mailto: link with a subject and a short template, so reports arrive with
 /// the app version.

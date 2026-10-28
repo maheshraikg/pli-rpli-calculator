@@ -18,7 +18,7 @@
    ```
 
 ## Package id
-`com.maheshraikg.plirplicalculator`. Google Play never allows this to change
+`com.plirpli.calculator`. Google Play never allows this to change
 after the first upload.
 
 ## Version code
