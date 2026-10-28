@@ -68,3 +68,23 @@ data if anything fails.
 3. Download the `.aab` from the draft release it creates and upload it in
    Play Console (closed testing first, then Production).
 The listing text, data-safety answers and declarations are in `docs/store/`.
+
+## Upload straight to Play Console (business account)
+Organisation (business) developer accounts do not need the 12-tester closed test.
+
+One-time, by hand (Google requires these in Play Console):
+1. Play Console > **Create app**: name "PLI & RPLI Calculator", App, Free.
+2. **App content**: privacy policy URL, ads (No), app access, target audience (18+),
+   content rating, data safety, government apps (No), financial features. Answers: docs/store/LISTING.md.
+3. **Production > Create new release**: upload the first `.aab` by hand
+   (GitHub > Releases > latest build > `.aab`). Google needs the first upload manually.
+
+Then let GitHub upload future versions and the store listing:
+4. Google Cloud console > create a **service account** and a **JSON key** for it.
+5. Play Console > **Users and permissions** > Invite the service account e-mail,
+   app access: PLI & RPLI Calculator, permission "Release apps to testing tracks"
+   and "Release to production" (and "Manage store presence" for listing upload).
+6. GitHub repo > Settings > Secrets > Actions > `PLAY_SERVICE_ACCOUNT_JSON` = the whole JSON file.
+7. GitHub > Actions > **Play Store release** > Run workflow > track `production`
+   (or `internal`). It uploads a **draft** release plus the listing in
+   `fastlane/metadata/android/en-US`; open Play Console and press "Send for review".

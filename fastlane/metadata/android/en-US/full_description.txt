@@ -1,0 +1,32 @@
+PLI & RPLI Calculator helps Postal Life Insurance (PLI) and Rural Postal Life Insurance (RPLI) agents and policy holders work out premiums, bonus and maturity value in seconds, even without internet.
+
+⚠️ Independent app: This app is NOT an official app of India Post, the Department of Posts or the Government of India, and is not affiliated with them. Figures are estimates; the final amounts are as per India Post. Official information: https://pli.indiapost.gov.in and https://www.indiapost.gov.in
+
+CALCULATORS
+• Premium for every plan, age and sum assured: monthly, quarterly, half-yearly and yearly side by side
+• Bonus and maturity value: Sum assured + Bonus = Maturity, with money-back (survival) payment dates
+• Compare plans side by side
+• "What can I afford?": best cover for a monthly budget
+• Eligibility checker: who can buy PLI or RPLI
+
+POLICY SERVICING
+• My Policies: save customers' policies with due dates and reminders; search and sort
+• Dues: premiums due this month, mark as collected, remind customers on WhatsApp
+• Policy tools: loan, revival, paid-up value
+• Quotation: share a professional PDF or image quotation on WhatsApp, with your name, photo and phone
+• Forms & letters: document checklists, request letters, and official claim forms (maturity/survival, death, loan, assignment, surrender) taken from Department of Posts SOPs, with their source
+
+OFFICIAL LINKS
+• PLI Customer Portal, official forms page, India Post, DigiLocker, CPGRAMS grievance portal and the India Post toll-free number, all in one place
+
+BUILT FOR THE FIELD
+• Works fully offline; no account, no ads
+• 13 languages: English, ಕನ್ನಡ, हिन्दी, தமிழ், తెలుగు, മലയാളം, मराठी, ગુજરાતી, বাংলা, ਪੰਜਾਬੀ, ଓଡ଼ିଆ, অসমীয়া, اردو
+• Large text and dark mode supported
+• Backup and restore your saved policies
+
+PRIVACY
+The app collects no data. Everything you enter stays on your phone.
+
+DATA SOURCES
+Premium rates, bonus rates and rules are taken from India Post / Department of Posts publications. Each screen shows the rate year and source. Bonus rates are declared every year and are not guaranteed for the future.

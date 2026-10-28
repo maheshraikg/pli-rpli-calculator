@@ -3,8 +3,20 @@ name: Play Store release
 # Run by hand (Actions > Play Store release > Run workflow). Builds the
 # signed App Bundle (.aab) to upload in Play Console. Refuses to build while
 # any premium table is sample data or the upload key secrets are missing.
+# With a Play service account it can also upload the bundle and the store
+# listing straight to Play Console (as a draft release you then send for review).
 on:
   workflow_dispatch:
+    inputs:
+      track:
+        description: 'Play track to upload to (needs the PLAY_SERVICE_ACCOUNT_JSON secret; "none" = only build the .aab)'
+        type: choice
+        options: [none, internal, production]
+        default: none
+      upload_listing:
+        description: 'Also upload store text, icon, feature graphic and screenshots (fastlane/metadata)'
+        type: boolean
+        default: true
 
 permissions:
   contents: write  # to attach the .aab to a draft GitHub release
@@ -72,3 +84,28 @@ jobs:
           gh release create "play-$version-${{ github.run_number }}" "$name" --draft \
             --title "Play release $version (${{ github.run_number }})" \
             --notes "Signed App Bundle for Google Play Console. Upload this .aab under Production or a testing track."
+
+      # Upload to Play Console. Google requires the very first .aab of a new
+      # app to be uploaded by hand in Play Console; use this from then on.
+      - uses: ruby/setup-ruby@v1
+        if: inputs.track != 'none'
+        with:
+          ruby-version: '3.3'
+
+      - name: Upload to Google Play
+        if: inputs.track != 'none'
+        env:
+          PLAY_JSON: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          if [ -z "$PLAY_JSON" ]; then echo "Missing repository secret PLAY_SERVICE_ACCOUNT_JSON (see docs/RELEASE.md)"; exit 1; fi
+          gem install fastlane --no-document --silent
+          skip_meta=${{ inputs.upload_listing && 'false' || 'true' }}
+          fastlane supply \
+            --package_name com.maheshraikg.plirplicalculator \
+            --json_key_data "$PLAY_JSON" \
+            --aab build/app/outputs/bundle/release/app-release.aab \
+            --track "${{ inputs.track }}" \
+            --release_status draft \
+            --metadata_path fastlane/metadata/android \
+            --skip_upload_metadata "$skip_meta" --skip_upload_images "$skip_meta" --skip_upload_screenshots "$skip_meta" \
+            --skip_upload_changelogs false
