@@ -1446,4 +1446,19 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get checkAppUpdates => 'ಆ್ಯಪ್ ಅಪ್‌ಡೇಟ್ ಪರಿಶೀಲಿಸಿ (ಪ್ಲೇ ಸ್ಟೋರ್)';
+
+  @override
+  String get conversionTitle => '5 ವರ್ಷಗಳ ನಂತರ ದತ್ತಿ ವಿಮೆಗೆ ಪರಿವರ್ತಿಸಿದರೆ';
+
+  @override
+  String conversionRow(int age) {
+    return 'ಮಾಸಿಕ • $age ವಯಸ್ಸಿಗೆ ಪಕ್ವತೆ';
+  }
+
+  @override
+  String get conversionNote =>
+      'ಸುವಿಧಾ ಪಾಲಿಸಿಯನ್ನು 5 ವರ್ಷಗಳ ನಂತರ ದತ್ತಿ ವಿಮೆಗೆ ಪರಿವರ್ತಿಸಬಹುದು. ನಂತರ ಆಯ್ಕೆ ಮಾಡಿದ ಪಕ್ವತಾ ವಯಸ್ಸಿನವರೆಗೆ ಹೊಸ ಮಾಸಿಕ ಪ್ರೀಮಿಯಂ ಅನ್ವಯಿಸುತ್ತದೆ. \"ಕೋಷ್ಟಕದಲ್ಲಿಲ್ಲ\" ಎಂದರೆ ಈ ಪ್ರವೇಶ ವಯಸ್ಸಿಗೆ ಆ ಪಕ್ವತಾ ವಯಸ್ಸು ಲಭ್ಯವಿಲ್ಲ.';
+
+  @override
+  String get equivalentAgeRow => 'ಸಮಾನ ವಯಸ್ಸು (ಇಬ್ಬರು ಸಂಗಾತಿಗಳು)';
 }

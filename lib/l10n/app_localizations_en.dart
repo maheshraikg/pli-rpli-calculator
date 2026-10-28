@@ -1479,4 +1479,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get checkAppUpdates => 'Check for app updates (Play Store)';
+
+  @override
+  String get conversionTitle => 'After 5 years, if converted to Endowment';
+
+  @override
+  String conversionRow(int age) {
+    return 'Monthly • maturity at $age';
+  }
+
+  @override
+  String get conversionNote =>
+      'Suvidha can be converted to an Endowment Assurance after 5 years. The new monthly premium then applies until the chosen maturity age. \"Not in table\" means that maturity age is not available for this entry age.';
+
+  @override
+  String get equivalentAgeRow => 'Equivalent age (both spouses)';
 }

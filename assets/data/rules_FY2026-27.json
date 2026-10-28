@@ -154,7 +154,7 @@
         "latestAfterYears": 6
       },
       "bonusClass": "CWLA",
-      "premiumTableId": null,
+      "premiumTableId": "pli_suvidha", "premiumCeasingAges": [60], "conversionTableId": "pli_suvidha_conversion", "conversionMaturityAges": [50, 55, 58],
       "verified": false,
       "loanAfterYears": 4,
       "surrenderAfterYears": 3
@@ -260,9 +260,9 @@
         "min": 5,
         "max": 20
       },
-      "premiumAgeBasis": "PENDING_USER_INPUT",
+      "premiumAgeBasis": "EQUIVALENT_AGE", "equivalentAgeAdditions": [0, 1, 1, 2, 2, 3, 3, 4, 5, 5, 6, 7, 8, 8, 9, 10, 11, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24], "maxMaturityAge": 60, "saRebate": {"firstSumAssured": 40000, "firstRupeesPerMonth": 1, "thenPerSumAssured": 10000, "thenRupeesPerMonth": 1},
       "bonusClass": "EA",
-      "premiumTableId": null,
+      "premiumTableId": "pli_yugal_suraksha",
       "verified": false,
       "loanAfterYears": 3,
       "surrenderAfterYears": 3
@@ -406,7 +406,7 @@
         "latestAfterYears": 6
       },
       "bonusClass": "CWLA",
-      "premiumTableId": null,
+      "premiumTableId": "rpli_gram_suvidha", "premiumCeasingAges": [60], "conversionTableId": "rpli_gram_suvidha_conversion", "conversionMaturityAges": [50, 55, 58, 60],
       "verified": false,
       "loanAfterYears": 4,
       "surrenderAfterYears": 3

@@ -17,6 +17,8 @@ class PlanEvaluation {
     required this.missingRateYear,
     required this.illustration,
     required this.isSample,
+    this.conversions = const {},
+    this.tableUnit = 10000,
   });
 
   final PlanConfig config;
@@ -31,6 +33,12 @@ class PlanEvaluation {
   final String? missingRateYear;
   final List<IllustrationRow> illustration;
   final bool isSample;
+
+  /// Convertible plans: monthly premium after conversion, by maturity age.
+  final Map<int, PremiumResult> conversions;
+
+  /// Sum assured the table premium is quoted per (₹10,000 PLI, ₹1,000 RPLI).
+  final int tableUnit;
 
   bool get isValid => violations.isEmpty;
 
@@ -72,6 +80,7 @@ PlanEvaluation evaluatePlan(AppData data, PlanConfig c) {
     MaturityProjection? projection,
     String? missingRate,
     List<IllustrationRow> illustration = const [],
+    Map<int, PremiumResult> conversions = const {},
   }) => PlanEvaluation(
     config: c,
     plan: plan,
@@ -83,6 +92,8 @@ PlanEvaluation evaluatePlan(AppData data, PlanConfig c) {
     missingRateYear: missingRate,
     illustration: illustration,
     isSample: data.tableFor(plan)?.isSample ?? false,
+    conversions: conversions,
+    tableUnit: data.tableFor(plan)?.unitSumAssured ?? 10000,
   );
 
   final noTable = {
@@ -96,14 +107,39 @@ PlanEvaluation evaluatePlan(AppData data, PlanConfig c) {
   if (violations.isNotEmpty) return result(violations: violations);
 
   final column = c.column;
+  // Joint life is priced at the couple's equivalent age.
+  final tableAge = plan.premiumAge(age, c.spouseAge);
   final premiums = {
     for (final f in PremiumFrequency.values)
       f: column == null || columnDimensionFor(plan) == null
           ? const PremiumUnavailable(PremiumUnavailableReason.noTable)
-          : quotePremium(rules, data.tableFor(plan), plan, sumAssured: sa, entryAge: age, column: column, frequency: f),
+          : tableAge == null
+          ? const PremiumUnavailable(PremiumUnavailableReason.notInTable)
+          : quotePremium(
+              rules,
+              data.tableFor(plan),
+              plan,
+              sumAssured: sa,
+              entryAge: tableAge,
+              column: column,
+              frequency: f,
+            ),
   };
 
-  if (pending) return result(premiums: premiums);
+  final conversions = {
+    for (final m in plan.conversionMaturityAges)
+      m: quoteConversion(
+        rules,
+        data.conversionTableFor(plan),
+        plan,
+        sumAssured: sa,
+        entryAge: age,
+        maturityAge: m,
+        frequency: PremiumFrequency.monthly,
+      ),
+  };
+
+  if (pending) return result(premiums: premiums, conversions: conversions);
   try {
     final projection = projectNewPolicy(
       rules,
@@ -121,11 +157,12 @@ PlanEvaluation evaluatePlan(AppData data, PlanConfig c) {
     };
     return result(
       premiums: premiums,
+      conversions: conversions,
       projection: projection,
       illustration: benefitIllustration(projection, quote),
     );
   } on MissingBonusRateException catch (e) {
-    return result(premiums: premiums, missingRate: e.financialYear);
+    return result(premiums: premiums, conversions: conversions, missingRate: e.financialYear);
   }
 }
 

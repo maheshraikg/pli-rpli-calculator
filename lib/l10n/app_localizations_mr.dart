@@ -1443,4 +1443,19 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get checkAppUpdates => 'ॲप अपडेट तपासा (प्ले स्टोअर)';
+
+  @override
+  String get conversionTitle => '5 वर्षांनंतर एंडोमेंटमध्ये रूपांतर केल्यास';
+
+  @override
+  String conversionRow(int age) {
+    return 'मासिक • $age वर्षी परिपक्वता';
+  }
+
+  @override
+  String get conversionNote =>
+      'सुविधा पॉलिसी 5 वर्षांनंतर एंडोमेंट विम्यात रूपांतरित करता येते. त्यानंतर निवडलेल्या परिपक्वता वयापर्यंत नवा मासिक प्रीमियम लागू होतो. \"तक्त्यात नाही\" म्हणजे या प्रवेश वयासाठी ते परिपक्वता वय उपलब्ध नाही.';
+
+  @override
+  String get equivalentAgeRow => 'समतुल्य वय (दोन्ही जोडीदार)';
 }

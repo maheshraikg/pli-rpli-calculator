@@ -40,12 +40,13 @@ class TableValidator {
       error('planId "${table.planId}" not found in rules ${rules.ruleSetId}');
       return issues;
     }
-    if (plan.premiumTableId != table.tableId) {
+    final isConversion = plan.conversionTableId == table.tableId;
+    if (plan.premiumTableId != table.tableId && !isConversion) {
       error('plan ${plan.id} expects premiumTableId "${plan.premiumTableId}"');
     }
     if (table.unitSumAssured <= 0) error('unitSumAssured must be positive');
 
-    final expectedColumns = _expectedColumns(plan, table.columnDimension);
+    final expectedColumns = isConversion ? plan.conversionMaturityAges : _expectedColumns(plan, table.columnDimension);
     if (expectedColumns == null) {
       error('plan ${plan.id} defines no options for ${table.columnDimension.code} columns');
       return issues;
@@ -54,7 +55,7 @@ class TableValidator {
       error('columns ${table.columns} do not match plan options $expectedColumns');
     }
 
-    final entryAges = plan.overallEntryAge;
+    final entryAges = plan.overallEntryAge ?? plan.jointLife?.entryAgeEachSpouse;
     if (entryAges == null) {
       error('plan ${plan.id} has no entry age range');
       return issues;
@@ -88,9 +89,11 @@ class TableValidator {
           continue;
         }
         for (final (i, col) in table.columns.indexed) {
-          final offered = _isOffered(plan, table.columnDimension, age, col);
+          // Conversion tables print only the maturity ages open after the
+          // first 5 years; a blank there is the source's, not a gap.
+          final offered = isConversion ? col - age > 5 : _isOffered(plan, table.columnDimension, age, col);
           final v = row[i];
-          if (offered && v == null) {
+          if (offered && v == null && !isConversion) {
             error('${freq.code} age $age, ${table.columnDimension.code} $col: empty cell');
           } else if (!offered && v != null) {
             error('${freq.code} age $age, ${table.columnDimension.code} $col: value present for a combination the plan does not offer');
@@ -108,7 +111,10 @@ class TableValidator {
   List<int>? _expectedColumns(PlanRule plan, ColumnDimension dim) => switch (dim) {
         ColumnDimension.maturityAge => plan.maturityAges.isEmpty ? null : plan.maturityAges,
         ColumnDimension.premiumCeasingAge => plan.premiumCeasingAges.isEmpty ? null : plan.premiumCeasingAges,
-        ColumnDimension.termYears => plan.aeaTerms.isEmpty ? null : [for (final t in plan.aeaTerms) t.years],
+        ColumnDimension.termYears => switch (plan.jointLife) {
+            final j? => [for (var t = j.termYears.min; t <= j.termYears.max; t++) t],
+            null => plan.aeaTerms.isEmpty ? null : [for (final t in plan.aeaTerms) t.years],
+          },
       };
 
   /// Whether the plan rules allow this entry age with this column option.
@@ -118,6 +124,7 @@ class TableValidator {
   bool _isOffered(PlanRule plan, ColumnDimension dim, int age, int col) => switch (dim) {
         ColumnDimension.maturityAge || ColumnDimension.premiumCeasingAge =>
           col - age >= (plan.minTermYears ?? 1),
+        ColumnDimension.termYears when plan.jointLife != null => age + col <= (plan.maxMaturityAge ?? 999),
         ColumnDimension.termYears =>
           plan.aeaTerms.firstWhere((t) => t.years == col).entryAge.contains(age),
       };

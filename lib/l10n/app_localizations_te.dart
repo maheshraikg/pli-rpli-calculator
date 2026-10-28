@@ -1449,4 +1449,19 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get checkAppUpdates => 'యాప్ అప్‌డేట్‌లు చూడండి (ప్లే స్టోర్)';
+
+  @override
+  String get conversionTitle => '5 ఏళ్ల తర్వాత ఎండోమెంట్‌గా మార్చితే';
+
+  @override
+  String conversionRow(int age) {
+    return 'నెలవారీ • $age ఏళ్లకు మెచ్యూరిటీ';
+  }
+
+  @override
+  String get conversionNote =>
+      'సువిధ పాలసీని 5 ఏళ్ల తర్వాత ఎండోమెంట్ బీమాగా మార్చవచ్చు. తర్వాత ఎంచుకున్న మెచ్యూరిటీ వయసు వరకు కొత్త నెలవారీ ప్రీమియం వర్తిస్తుంది. \"పట్టికలో లేదు\" అంటే ఈ ప్రవేశ వయసుకు ఆ మెచ్యూరిటీ వయసు అందుబాటులో లేదు.';
+
+  @override
+  String get equivalentAgeRow => 'సమాన వయసు (ఇద్దరు జీవిత భాగస్వాములు)';
 }

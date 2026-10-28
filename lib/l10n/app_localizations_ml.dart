@@ -1454,4 +1454,19 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get checkAppUpdates => 'ആപ്പ് അപ്ഡേറ്റ് നോക്കുക (പ്ലേ സ്റ്റോർ)';
+
+  @override
+  String get conversionTitle => '5 വർഷത്തിന് ശേഷം എൻഡോവ്മെന്റാക്കി മാറ്റിയാൽ';
+
+  @override
+  String conversionRow(int age) {
+    return 'പ്രതിമാസം • $age വയസ്സിൽ കാലാവധി';
+  }
+
+  @override
+  String get conversionNote =>
+      'സുവിധ പോളിസി 5 വർഷത്തിന് ശേഷം എൻഡോവ്മെന്റ് ഇൻഷുറൻസാക്കി മാറ്റാം. തുടർന്ന് തിരഞ്ഞെടുത്ത കാലാവധി പ്രായം വരെ പുതിയ പ്രതിമാസ പ്രീമിയം ബാധകമാണ്. \"പട്ടികയിൽ ഇല്ല\" എന്നാൽ ഈ പ്രവേശന പ്രായത്തിന് ആ കാലാവധി പ്രായം ലഭ്യമല്ല.';
+
+  @override
+  String get equivalentAgeRow => 'തുല്യ പ്രായം (ഇരുവരും)';
 }

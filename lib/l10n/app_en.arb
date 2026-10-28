@@ -1054,5 +1054,16 @@
         "type": "String"
       }
     }
-  }
+  },
+  "conversionTitle": "After 5 years, if converted to Endowment",
+  "conversionRow": "Monthly • maturity at {age}",
+  "@conversionRow": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      }
+    }
+  },
+  "conversionNote": "Suvidha can be converted to an Endowment Assurance after 5 years. The new monthly premium then applies until the chosen maturity age. \"Not in table\" means that maturity age is not available for this entry age.",
+  "equivalentAgeRow": "Equivalent age (both spouses)"
 }

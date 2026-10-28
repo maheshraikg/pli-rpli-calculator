@@ -1459,4 +1459,19 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get checkAppUpdates => 'செயலி புதுப்பிப்பைப் பார் (ப்ளே ஸ்டோர்)';
+
+  @override
+  String get conversionTitle => '5 ஆண்டுகளுக்குப் பின் எண்டோமென்டாக மாற்றினால்';
+
+  @override
+  String conversionRow(int age) {
+    return 'மாதாந்திரம் • $age வயதில் முதிர்வு';
+  }
+
+  @override
+  String get conversionNote =>
+      'சுவிதா பாலிசியை 5 ஆண்டுகளுக்குப் பின் எண்டோமென்ட் காப்பீடாக மாற்றலாம். பின்னர் தேர்ந்தெடுத்த முதிர்வு வயது வரை புதிய மாதாந்திர பிரீமியம் பொருந்தும். \"அட்டவணையில் இல்லை\" என்றால் இந்த நுழைவு வயதுக்கு அந்த முதிர்வு வயது இல்லை.';
+
+  @override
+  String get equivalentAgeRow => 'சமமான வயது (இரு வாழ்க்கைத் துணைவர்கள்)';
 }

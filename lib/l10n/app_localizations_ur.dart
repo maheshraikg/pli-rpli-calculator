@@ -1444,4 +1444,19 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get checkAppUpdates => 'ایپ اپڈیٹ دیکھیں (پلے اسٹور)';
+
+  @override
+  String get conversionTitle => '5 سال بعد اینڈوومنٹ میں تبدیل کرنے پر';
+
+  @override
+  String conversionRow(int age) {
+    return 'ماہانہ • $age سال پر میچورٹی';
+  }
+
+  @override
+  String get conversionNote =>
+      'سویدھا پالیسی کو 5 سال بعد اینڈوومنٹ بیمہ میں تبدیل کیا جا سکتا ہے۔ پھر منتخب میچورٹی عمر تک نیا ماہانہ پریمیم لاگو ہوتا ہے۔ \"جدول میں نہیں\" کا مطلب ہے کہ اس داخلہ عمر کے لیے وہ میچورٹی عمر دستیاب نہیں۔';
+
+  @override
+  String get equivalentAgeRow => 'مساوی عمر (دونوں میاں بیوی)';
 }

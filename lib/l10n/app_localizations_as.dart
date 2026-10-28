@@ -1445,4 +1445,19 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get checkAppUpdates => 'এপ আপডেট চাওক (প্লে ষ্ট’ৰ)';
+
+  @override
+  String get conversionTitle => '৫ বছৰৰ পিছত এনডাউমেণ্টলৈ ৰূপান্তৰ কৰিলে';
+
+  @override
+  String conversionRow(int age) {
+    return 'মাহেকীয়া • $age বছৰত পৰিপক্কতা';
+  }
+
+  @override
+  String get conversionNote =>
+      'সুবিধা পলিচি ৫ বছৰৰ পিছত এনডাউমেণ্ট বীমালৈ ৰূপান্তৰ কৰিব পাৰি। তাৰ পিছত বাছনি কৰা পৰিপক্কতাৰ বয়সলৈকে নতুন মাহেকীয়া প্ৰিমিয়াম প্ৰযোজ্য। \"তালিকাত নাই\" মানে এই প্ৰৱেশ বয়সৰ বাবে সেই পৰিপক্কতাৰ বয়স উপলব্ধ নহয়।';
+
+  @override
+  String get equivalentAgeRow => 'সমতুল্য বয়স (দুয়োজন সংগী)';
 }

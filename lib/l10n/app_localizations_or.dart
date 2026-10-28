@@ -1444,4 +1444,19 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get checkAppUpdates => 'ଆପ ଅପଡେଟ ଦେଖନ୍ତୁ (ପ୍ଲେ ଷ୍ଟୋର)';
+
+  @override
+  String get conversionTitle => '5 ବର୍ଷ ପରେ ଏଣ୍ଡୋମେଣ୍ଟକୁ ପରିବର୍ତ୍ତନ କଲେ';
+
+  @override
+  String conversionRow(int age) {
+    return 'ମାସିକ • $age ବର୍ଷରେ ପରିପକ୍ୱତା';
+  }
+
+  @override
+  String get conversionNote =>
+      'ସୁବିଧା ପଲିସିକୁ 5 ବର୍ଷ ପରେ ଏଣ୍ଡୋମେଣ୍ଟ ବୀମାକୁ ପରିବର୍ତ୍ତନ କରାଯାଇପାରେ। ତା’ପରେ ବଛା ପରିପକ୍ୱତା ବୟସ ପର୍ଯ୍ୟନ୍ତ ନୂଆ ମାସିକ ପ୍ରିମିୟମ ଲାଗୁ ହୁଏ। \"ସାରଣୀରେ ନାହିଁ\" ଅର୍ଥ ଏହି ପ୍ରବେଶ ବୟସ ପାଇଁ ସେହି ପରିପକ୍ୱତା ବୟସ ଉପଲବ୍ଧ ନାହିଁ।';
+
+  @override
+  String get equivalentAgeRow => 'ସମତୁଲ୍ୟ ବୟସ (ଉଭୟ ସାଥୀ)';
 }
