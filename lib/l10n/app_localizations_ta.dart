@@ -1442,4 +1442,21 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get privacyPolicyLink => 'முழு தனியுரிமைக் கொள்கையைப் படிக்கவும்';
+
+  @override
+  String get helpTitle => 'உதவி & கருத்து';
+
+  @override
+  String helpBody(String email) {
+    return 'ஏதேனும் சிக்கல் அல்லது தவறான தொகை கண்டீர்களா? எங்களிடம் தெரிவியுங்கள், அடுத்த புதுப்பிப்பில் சரிசெய்வோம். உதவி: $email';
+  }
+
+  @override
+  String get reportProblem => 'சிக்கலைத் தெரிவி';
+
+  @override
+  String get sendSuggestion => 'பரிந்துரை அனுப்பு';
+
+  @override
+  String get checkAppUpdates => 'செயலி புதுப்பிப்பைப் பார் (ப்ளே ஸ்டோர்)';
 }

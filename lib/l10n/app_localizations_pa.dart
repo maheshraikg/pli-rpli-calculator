@@ -1424,4 +1424,21 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get privacyPolicyLink => 'ਪੂਰੀ ਪਰਦੇਦਾਰੀ ਨੀਤੀ ਪੜ੍ਹੋ';
+
+  @override
+  String get helpTitle => 'ਮਦਦ ਅਤੇ ਫੀਡਬੈਕ';
+
+  @override
+  String helpBody(String email) {
+    return 'ਕੋਈ ਸਮੱਸਿਆ ਜਾਂ ਗਲਤ ਰਕਮ ਦਿਸੀ? ਸਾਨੂੰ ਦੱਸੋ, ਅਗਲੇ ਅੱਪਡੇਟ ਵਿੱਚ ਠੀਕ ਕਰਾਂਗੇ। ਸਹਾਇਤਾ: $email';
+  }
+
+  @override
+  String get reportProblem => 'ਸਮੱਸਿਆ ਦੱਸੋ';
+
+  @override
+  String get sendSuggestion => 'ਸੁਝਾਅ ਭੇਜੋ';
+
+  @override
+  String get checkAppUpdates => 'ਐਪ ਅੱਪਡੇਟ ਦੇਖੋ (ਪਲੇ ਸਟੋਰ)';
 }

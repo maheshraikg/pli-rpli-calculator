@@ -34,4 +34,21 @@ void main() {
   test('privacy policy URL is the public Google Doc', () {
     expect(Uri.parse(kPrivacyPolicyUrl).host, 'docs.google.com');
   });
+
+  testWidgets('About has Help & feedback with the support email', (tester) async {
+    await pumpApp(tester, location: '/about');
+    expect(find.text('Help & feedback'), findsOneWidget);
+    expect(find.textContaining('maheshraikg@gmail.com'), findsOneWidget);
+    expect(find.text('Report a problem'), findsOneWidget);
+    expect(find.text('Check for app updates (Play Store)'), findsOneWidget);
+  });
+
+  test('support e-mail link carries subject and body', () {
+    final uri = supportMail('Bug', 'Line 1\nLine 2');
+    expect(uri.scheme, 'mailto');
+    expect(uri.path, kSupportEmail);
+    expect(uri.query, contains('subject=Bug'));
+    expect(Uri.decodeComponent(uri.query), contains('Line 1\nLine 2'));
+    expect(Uri.parse(kPlayStoreUrl).queryParameters['id'], 'com.maheshraikg.plirplicalculator');
+  });
 }

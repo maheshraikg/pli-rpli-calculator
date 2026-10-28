@@ -1427,4 +1427,21 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get privacyPolicyLink => 'مکمل رازداری پالیسی پڑھیں';
+
+  @override
+  String get helpTitle => 'مدد اور رائے';
+
+  @override
+  String helpBody(String email) {
+    return 'کوئی مسئلہ یا غلط رقم نظر آئی؟ ہمیں بتائیں، اگلی اپڈیٹ میں ٹھیک کریں گے۔ مدد: $email';
+  }
+
+  @override
+  String get reportProblem => 'مسئلہ بتائیں';
+
+  @override
+  String get sendSuggestion => 'تجویز بھیجیں';
+
+  @override
+  String get checkAppUpdates => 'ایپ اپڈیٹ دیکھیں (پلے اسٹور)';
 }

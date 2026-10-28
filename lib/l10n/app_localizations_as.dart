@@ -1428,4 +1428,21 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get privacyPolicyLink => 'সম্পূৰ্ণ গোপনীয়তা নীতি পঢ়ক';
+
+  @override
+  String get helpTitle => 'সহায় আৰু মতামত';
+
+  @override
+  String helpBody(String email) {
+    return 'কোনো সমস্যা বা ভুল অংক দেখিলে? আমাক জনাওক, পৰৱৰ্তী আপডেটত ঠিক কৰিম। সহায়: $email';
+  }
+
+  @override
+  String get reportProblem => 'সমস্যা জনাওক';
+
+  @override
+  String get sendSuggestion => 'পৰামৰ্শ পঠিয়াওক';
+
+  @override
+  String get checkAppUpdates => 'এপ আপডেট চাওক (প্লে ষ্ট’ৰ)';
 }

@@ -1428,4 +1428,21 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get privacyPolicyLink => 'সম্পূর্ণ গোপনীয়তা নীতি পড়ুন';
+
+  @override
+  String get helpTitle => 'সাহায্য ও মতামত';
+
+  @override
+  String helpBody(String email) {
+    return 'কোনো সমস্যা বা ভুল অঙ্ক দেখেছেন? আমাদের জানান, পরের আপডেটে ঠিক করব। সহায়তা: $email';
+  }
+
+  @override
+  String get reportProblem => 'সমস্যা জানান';
+
+  @override
+  String get sendSuggestion => 'পরামর্শ পাঠান';
+
+  @override
+  String get checkAppUpdates => 'অ্যাপ আপডেট দেখুন (প্লে স্টোর)';
 }

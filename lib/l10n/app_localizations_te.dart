@@ -1432,4 +1432,21 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get privacyPolicyLink => 'పూర్తి గోప్యతా విధానం చదవండి';
+
+  @override
+  String get helpTitle => 'సహాయం & అభిప్రాయం';
+
+  @override
+  String helpBody(String email) {
+    return 'ఏదైనా సమస్య లేదా తప్పు మొత్తం కనిపించిందా? మాకు తెలియజేయండి, తదుపరి అప్‌డేట్‌లో సరిచేస్తాం. సహాయం: $email';
+  }
+
+  @override
+  String get reportProblem => 'సమస్యను తెలియజేయండి';
+
+  @override
+  String get sendSuggestion => 'సూచన పంపండి';
+
+  @override
+  String get checkAppUpdates => 'యాప్ అప్‌డేట్‌లు చూడండి (ప్లే స్టోర్)';
 }

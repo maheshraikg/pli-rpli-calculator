@@ -8,7 +8,7 @@ Copy each block into Play Console. Limits are Google's.
   `Premium, bonus & maturity calculator for PLI & RPLI. Offline, 13 languages.`
 - **Category:** Finance
 - **Tags:** Insurance, Calculator
-- **Contact email:** your developer email (shown publicly on the listing)
+- **Contact email:** maheshraikg@gmail.com (same as in the app: About > Help & feedback)
 - **Privacy policy URL:** https://docs.google.com/document/d/1nlTftF_zHcZhkOsaneC_XL56SENDPpFScdPiWmn1mLM/view
   (the Google Doc must be shared as "Anyone with the link: Viewer"; the same link is in the app's About screen)
 
@@ -43,6 +43,9 @@ BUILT FOR THE FIELD
 
 PRIVACY
 The app collects no data. Everything you enter stays on your phone.
+
+SUPPORT
+Found a problem or a wrong figure? Use Help & feedback in the app or write to maheshraikg@gmail.com.
 
 DATA SOURCES
 Premium rates, bonus rates and rules are taken from India Post / Department of Posts publications. Each screen shows the rate year and source. Bonus rates are declared every year and are not guaranteed for the future.

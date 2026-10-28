@@ -1426,4 +1426,21 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get privacyPolicyLink => 'संपूर्ण गोपनीयता धोरण वाचा';
+
+  @override
+  String get helpTitle => 'मदत आणि अभिप्राय';
+
+  @override
+  String helpBody(String email) {
+    return 'काही अडचण किंवा चुकीची रक्कम दिसली? आम्हाला कळवा, पुढच्या अपडेटमध्ये दुरुस्त करू. सहाय्य: $email';
+  }
+
+  @override
+  String get reportProblem => 'अडचण कळवा';
+
+  @override
+  String get sendSuggestion => 'सूचना पाठवा';
+
+  @override
+  String get checkAppUpdates => 'ॲप अपडेट तपासा (प्ले स्टोअर)';
 }

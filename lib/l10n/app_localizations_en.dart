@@ -1462,4 +1462,21 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get privacyPolicyLink => 'Read the full privacy policy';
+
+  @override
+  String get helpTitle => 'Help & feedback';
+
+  @override
+  String helpBody(String email) {
+    return 'Found a problem or a wrong figure? Tell us and we will fix it in the next update. Support: $email';
+  }
+
+  @override
+  String get reportProblem => 'Report a problem';
+
+  @override
+  String get sendSuggestion => 'Send a suggestion';
+
+  @override
+  String get checkAppUpdates => 'Check for app updates (Play Store)';
 }

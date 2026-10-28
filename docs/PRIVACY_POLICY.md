@@ -62,5 +62,5 @@ If this policy changes, the new version will be published at the same
 address with a new "Last updated" date.
 
 ## Contact
-For questions about this policy, use the developer contact email shown on
-the app's Google Play listing.
+For questions about this policy, problems or suggestions: maheshraikg@gmail.com
+(also in the app under About > Help & feedback).

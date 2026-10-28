@@ -1437,4 +1437,21 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get privacyPolicyLink => 'പൂർണ്ണ സ്വകാര്യതാ നയം വായിക്കുക';
+
+  @override
+  String get helpTitle => 'സഹായവും അഭിപ്രായവും';
+
+  @override
+  String helpBody(String email) {
+    return 'എന്തെങ്കിലും പ്രശ്നമോ തെറ്റായ തുകയോ കണ്ടോ? ഞങ്ങളെ അറിയിക്കൂ, അടുത്ത അപ്ഡേറ്റിൽ ശരിയാക്കാം. സഹായം: $email';
+  }
+
+  @override
+  String get reportProblem => 'പ്രശ്നം അറിയിക്കുക';
+
+  @override
+  String get sendSuggestion => 'നിർദ്ദേശം അയയ്ക്കുക';
+
+  @override
+  String get checkAppUpdates => 'ആപ്പ് അപ്ഡേറ്റ് നോക്കുക (പ്ലേ സ്റ്റോർ)';
 }
