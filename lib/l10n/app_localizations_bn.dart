@@ -1445,4 +1445,19 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get checkAppUpdates => 'অ্যাপ আপডেট দেখুন (প্লে স্টোর)';
+
+  @override
+  String get conversionTitle => '৫ বছর পরে এনডাওমেন্টে রূপান্তর করলে';
+
+  @override
+  String conversionRow(int age) {
+    return 'মাসিক • $age বছরে মেয়াদপূর্তি';
+  }
+
+  @override
+  String get conversionNote =>
+      'সুবিধা পলিসি ৫ বছর পরে এনডাওমেন্ট বিমায় রূপান্তর করা যায়। তারপর বেছে নেওয়া মেয়াদপূর্তির বয়স পর্যন্ত নতুন মাসিক প্রিমিয়াম প্রযোজ্য। \"সারণিতে নেই\" মানে এই প্রবেশ বয়সে সেই মেয়াদপূর্তির বয়স পাওয়া যায় না।';
+
+  @override
+  String get equivalentAgeRow => 'সমতুল্য বয়স (স্বামী-স্ত্রী দুজন)';
 }

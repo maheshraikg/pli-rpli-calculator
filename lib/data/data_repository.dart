@@ -23,24 +23,32 @@ class AppData {
   bool get usesSampleData => tables.values.any((t) => t.isSample);
 
   PremiumTable? tableFor(PlanRule plan) => tables[plan.premiumTableId];
+
+  /// Post-conversion premiums of a convertible plan, if bundled.
+  PremiumTable? conversionTableFor(PlanRule plan) => tables[plan.conversionTableId];
 }
 
 /// Parses rules and the tables they reference. With [validate], any table
 /// validation error throws (used for downloaded data).
-AppData buildAppData(String rulesJson, String? Function(String tableId) tableJson, {bool validate = false, int? updateVersion}) {
+AppData buildAppData(
+  String rulesJson,
+  String? Function(String tableId) tableJson, {
+  bool validate = false,
+  int? updateVersion,
+}) {
   final rules = RuleSet.parse(rulesJson);
   final validator = TableValidator(rules);
   final tables = <String, PremiumTable>{};
   for (final plan in rules.plans) {
-    final id = plan.premiumTableId;
-    if (id == null) continue;
-    final text = tableJson(id) ?? (throw FormatException('Missing table $id'));
-    final table = PremiumTable.parse(text);
-    if (validate) {
-      final errors = validator.validate(table).where((i) => i.severity == Severity.error).toList();
-      if (errors.isNotEmpty) throw FormatException('Table $id invalid: ${errors.first}');
+    for (final id in plan.tableIds) {
+      final text = tableJson(id) ?? (throw FormatException('Missing table $id'));
+      final table = PremiumTable.parse(text);
+      if (validate) {
+        final errors = validator.validate(table).where((i) => i.severity == Severity.error).toList();
+        if (errors.isNotEmpty) throw FormatException('Table $id invalid: ${errors.first}');
+      }
+      tables[id] = table;
     }
-    tables[id] = table;
   }
   return AppData(rules, tables, updateVersion: updateVersion);
 }
@@ -50,8 +58,9 @@ Future<AppData> loadBundledData(AssetBundle bundle) async {
   final rules = RuleSet.parse(rulesText);
   final texts = <String, String>{};
   for (final plan in rules.plans) {
-    final id = plan.premiumTableId;
-    if (id != null) texts[id] = await bundle.loadString('assets/data/tables/$id.json');
+    for (final id in plan.tableIds) {
+      texts[id] = await bundle.loadString('assets/data/tables/$id.json');
+    }
   }
   return buildAppData(rulesText, (id) => texts[id]);
 }

@@ -1446,4 +1446,19 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get checkAppUpdates => 'ऐप अपडेट देखें (प्ले स्टोर)';
+
+  @override
+  String get conversionTitle => '5 वर्ष बाद बंदोबस्ती में बदलने पर';
+
+  @override
+  String conversionRow(int age) {
+    return 'मासिक • $age वर्ष पर परिपक्वता';
+  }
+
+  @override
+  String get conversionNote =>
+      'सुविधा पॉलिसी को 5 वर्ष बाद बंदोबस्ती बीमा में बदला जा सकता है। फिर चुनी गई परिपक्वता आयु तक नया मासिक प्रीमियम लगता है। \"तालिका में नहीं\" का अर्थ है कि इस प्रवेश आयु के लिए वह परिपक्वता आयु उपलब्ध नहीं है।';
+
+  @override
+  String get equivalentAgeRow => 'समतुल्य आयु (दोनों पति-पत्नी)';
 }

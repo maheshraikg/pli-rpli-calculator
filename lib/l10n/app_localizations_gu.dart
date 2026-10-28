@@ -1441,4 +1441,19 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get checkAppUpdates => 'એપ અપડેટ તપાસો (પ્લે સ્ટોર)';
+
+  @override
+  String get conversionTitle => '5 વર્ષ પછી એન્ડોમેન્ટમાં ફેરવો તો';
+
+  @override
+  String conversionRow(int age) {
+    return 'માસિક • $age વર્ષે પાકતી મુદત';
+  }
+
+  @override
+  String get conversionNote =>
+      'સુવિધા પોલિસી 5 વર્ષ પછી એન્ડોમેન્ટ વીમામાં ફેરવી શકાય છે. પછી પસંદ કરેલી પાકતી ઉંમર સુધી નવું માસિક પ્રીમિયમ લાગુ પડે છે. \"કોષ્ટકમાં નથી\" એટલે આ પ્રવેશ ઉંમર માટે તે પાકતી ઉંમર ઉપલબ્ધ નથી.';
+
+  @override
+  String get equivalentAgeRow => 'સમકક્ષ ઉંમર (બંને જીવનસાથી)';
 }

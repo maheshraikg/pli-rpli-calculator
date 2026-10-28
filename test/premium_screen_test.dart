@@ -34,7 +34,7 @@ void main() {
 
   testWidgets('plan without a premium table says so instead of a number', (tester) async {
     final container = await pumpApp(tester, location: '/premium');
-    container.read(planConfigProvider(premiumConfigKey).notifier).selectPlan(bundledData().rules.plan('pli_yugal_suraksha'));
+    container.read(planConfigProvider(premiumConfigKey).notifier).selectPlan(bundledData().rules.plan('pli_sumangal'));
     await tester.pumpAndSettle();
     await scrollTo(tester, find.text('The premium table for this plan is not loaded yet.'));
     expect(find.text('The premium table for this plan is not loaded yet.'), findsOneWidget);
@@ -63,5 +63,28 @@ void main() {
     await pumpApp(tester, locale: const Locale('kn'), location: '/quotation');
     await scrollTo(tester, find.textContaining('Premium Quotation'));
     expect(find.textContaining('/ Premium Quotation'), findsOneWidget);
+  });
+
+  testWidgets('Suvidha shows the premium after conversion to endowment', (tester) async {
+    final container = await pumpApp(tester, location: '/premium');
+    container.read(planConfigProvider(premiumConfigKey).notifier).selectPlan(bundledData().rules.plan('pli_suvidha'));
+    await tester.pumpAndSettle();
+    await scrollTo(tester, find.text('After 5 years, if converted to Endowment'));
+    expect(find.text('Monthly • maturity at 50'), findsOneWidget);
+    expect(find.text('Monthly • maturity at 58'), findsOneWidget);
+  });
+
+  testWidgets('Yugal Suraksha uses the equivalent age (booklet example)', (tester) async {
+    final container = await pumpApp(tester, location: '/premium');
+    container.read(planConfigProvider(premiumConfigKey).notifier)
+      ..selectPlan(bundledData().rules.plan('pli_yugal_suraksha'))
+      ..setManualAge(40)
+      ..setSpouseAge(35)
+      ..setColumn(7)
+      ..setSumAssured(600000);
+    await tester.pumpAndSettle();
+    await scrollTo(tester, find.text('Equivalent age (both spouses)'));
+    expect(find.text('38 years'), findsWidgets);
+    expect(find.text('₹8,163'), findsWidgets);
   });
 }

@@ -28,11 +28,12 @@ void main(List<String> args) {
     issues.forEach(stdout.writeln);
   }
   for (final plan in rules.plans) {
-    if (plan.premiumTableId == null) {
-      stdout.writeln('NOTE ${plan.id}: no premium table yet');
-    } else if (!tables.any((f) => f.uri.pathSegments.last == '${plan.premiumTableId}.json')) {
-      stdout.writeln('FAIL ${plan.id}: table ${plan.premiumTableId}.json missing');
-      errors++;
+    if (plan.premiumTableId == null) stdout.writeln('NOTE ${plan.id}: no premium table yet');
+    for (final id in plan.tableIds) {
+      if (!tables.any((f) => f.uri.pathSegments.last == '$id.json')) {
+        stdout.writeln('FAIL ${plan.id}: table $id.json missing');
+        errors++;
+      }
     }
   }
   exit(errors == 0 ? 0 : 1);

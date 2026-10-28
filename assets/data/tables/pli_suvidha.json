@@ -1,0 +1,114 @@
+{
+ "schemaVersion": 1,
+ "tableId": "pli_suvidha",
+ "planId": "pli_suvidha",
+ "isSample": false,
+ "source": "Department of Posts, Bikaner Division: \"PLI-RPLI Plans\" booklet (Jan 2024), premium table page 9. Copy published at staffnews.in/wp-content/uploads/2024/01/DO-PLI-TABLES.pdf. Verify against the current India Post rate book. Only the monthly table is printed.",
+ "unitSumAssured": 10000,
+ "columnDimension": "PREMIUM_CEASING_AGE",
+ "columns": [
+  60
+ ],
+ "monotonicExceptions": [],
+ "agesNotInSource": [],
+ "premiums": {
+  "MONTHLY": {
+   "19": [
+    14
+   ],
+   "20": [
+    14
+   ],
+   "21": [
+    16
+   ],
+   "22": [
+    16
+   ],
+   "23": [
+    16
+   ],
+   "24": [
+    16
+   ],
+   "25": [
+    18
+   ],
+   "26": [
+    18
+   ],
+   "27": [
+    18
+   ],
+   "28": [
+    18
+   ],
+   "29": [
+    20
+   ],
+   "30": [
+    20
+   ],
+   "31": [
+    22
+   ],
+   "32": [
+    22
+   ],
+   "33": [
+    24
+   ],
+   "34": [
+    24
+   ],
+   "35": [
+    26
+   ],
+   "36": [
+    26
+   ],
+   "37": [
+    28
+   ],
+   "38": [
+    30
+   ],
+   "39": [
+    32
+   ],
+   "40": [
+    32
+   ],
+   "41": [
+    34
+   ],
+   "42": [
+    36
+   ],
+   "43": [
+    38
+   ],
+   "44": [
+    42
+   ],
+   "45": [
+    44
+   ],
+   "46": [
+    48
+   ],
+   "47": [
+    52
+   ],
+   "48": [
+    56
+   ],
+   "49": [
+    60
+   ],
+   "50": [
+    66
+   ]
+  }
+ }
+}

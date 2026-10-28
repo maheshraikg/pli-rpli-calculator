@@ -2608,6 +2608,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Check for app updates (Play Store)'**
   String get checkAppUpdates;
+
+  /// No description provided for @conversionTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'After 5 years, if converted to Endowment'**
+  String get conversionTitle;
+
+  /// No description provided for @conversionRow.
+  ///
+  /// In en, this message translates to:
+  /// **'Monthly • maturity at {age}'**
+  String conversionRow(int age);
+
+  /// No description provided for @conversionNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Suvidha can be converted to an Endowment Assurance after 5 years. The new monthly premium then applies until the chosen maturity age. \"Not in table\" means that maturity age is not available for this entry age.'**
+  String get conversionNote;
+
+  /// No description provided for @equivalentAgeRow.
+  ///
+  /// In en, this message translates to:
+  /// **'Equivalent age (both spouses)'**
+  String get equivalentAgeRow;
 }
 
 class _AppLocalizationsDelegate

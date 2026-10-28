@@ -72,7 +72,8 @@ class PremiumResultView extends ConsumerWidget {
             amount: formatRupees(quote.premium),
             caption: e.plan.name(Localizations.localeOf(context).languageCode),
             details: [
-              ('${l.tablePremiumRow} (₹10,000)', formatRupees(quote.tablePremium)),
+              if (e.plan.equivalentAgeAdditions.isNotEmpty) (l.equivalentAgeRow, l.ageYears(quote.entryAge)),
+              ('${l.tablePremiumRow} (${formatRupees(Paise.wholeRupees(e.tableUnit))})', formatRupees(quote.tablePremium)),
               (l.saRebateRow, '− ${formatRupees(quote.saRebate)}'),
               (l.payingTermRow, l.termYears(quote.payingYears)),
             ],
@@ -117,6 +118,27 @@ class PremiumResultView extends ConsumerWidget {
               ],
             ),
           ),
+          if (e.conversions.isNotEmpty)
+            SectionCard(
+              title: l.conversionTitle,
+              icon: AppIcons.swap,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  for (final MapEntry(key: age, value: r) in e.conversions.entries)
+                    _FrequencyRow(
+                      label: l.conversionRow(age),
+                      value: switch (r) {
+                        PremiumQuoted(:final quote) => formatRupees(quote.premium),
+                        _ => l.notInTable,
+                      },
+                      selected: false,
+                    ),
+                  const SizedBox(height: 6),
+                  Text(l.conversionNote, style: Theme.of(context).textTheme.bodySmall),
+                ],
+              ),
+            ),
         ],
         if (e.projectionPending)
           InfoCard(icon: AppIcons.hourglassMedium, title: l.notAvailableTitle, message: l.rulesPendingBody),
@@ -173,8 +195,10 @@ class _FrequencyRow extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Expanded(child: Text(label, style: selected ? theme.textTheme.titleSmall : theme.textTheme.bodyMedium)),
-          Text(value, style: theme.textTheme.titleMedium),
+          Expanded(flex: 3, child: Text(label, style: selected ? theme.textTheme.titleSmall : theme.textTheme.bodyMedium)),
+          const SizedBox(width: 8),
+          // "Not in table" is long in some languages; let it wrap, right-aligned.
+          Expanded(flex: 2, child: Text(value, textAlign: TextAlign.end, style: theme.textTheme.titleMedium)),
         ],
       ),
     );

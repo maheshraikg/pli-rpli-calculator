@@ -11,8 +11,8 @@ int _roundHalfUp(int numerator, int denominator) => (numerator * 2 + denominator
 /// The table column dimension a plan's premium table uses.
 ColumnDimension? columnDimensionFor(PlanRule plan) => switch (plan.type) {
       PlanType.ea => ColumnDimension.maturityAge,
-      PlanType.wla => ColumnDimension.premiumCeasingAge,
-      PlanType.aea => ColumnDimension.termYears,
+      PlanType.wla || PlanType.cwla => ColumnDimension.premiumCeasingAge,
+      PlanType.aea || PlanType.jointEa => ColumnDimension.termYears,
       _ => null,
     };
 
@@ -20,7 +20,10 @@ ColumnDimension? columnDimensionFor(PlanRule plan) => switch (plan.type) {
 List<int> columnOptions(PlanRule plan) => switch (columnDimensionFor(plan)) {
       ColumnDimension.maturityAge => plan.maturityAges,
       ColumnDimension.premiumCeasingAge => plan.premiumCeasingAges,
-      ColumnDimension.termYears => [for (final t in plan.aeaTerms) t.years],
+      ColumnDimension.termYears => switch (plan.jointLife) {
+          final j? => [for (var t = j.termYears.min; t <= j.termYears.max; t++) t],
+          null => [for (final t in plan.aeaTerms) t.years],
+        },
       null => const [],
     };
 
@@ -104,9 +107,12 @@ PremiumResult quotePremium(
   final r = rules.premium;
   final unit = table.unitSumAssured;
   final grossNumerator = perUnit.value * sumAssured; // paise × unit
-  final rebate = r.saRebatePlanTypes.contains(plan.type)
-      ? Paise((sumAssured ~/ r.saRebatePerSumAssured) * r.saRebateRupeesPerMonth * 100 * frequency.months)
-      : Paise.zero;
+  final rebate = switch (plan.saRebate) {
+    final own? => Paise(own.rupeesPerMonth(sumAssured) * 100 * frequency.months),
+    null => r.saRebatePlanTypes.contains(plan.type)
+        ? Paise((sumAssured ~/ r.saRebatePerSumAssured) * r.saRebateRupeesPerMonth * 100 * frequency.months)
+        : Paise.zero,
+  };
   final netNumerator = grossNumerator - rebate.value * unit;
   final netRupees = netNumerator <= 0 ? 0 : _roundHalfUp(netNumerator, unit * 100);
 
@@ -122,6 +128,39 @@ PremiumResult quotePremium(
     premium: Paise.wholeRupees(netRupees),
     payingYears: payingYears(plan, entryAge, column),
     isSample: table.isSample,
+  ));
+}
+
+/// Convertible whole life: the premium payable after the first
+/// [conversionAfterYears] years if the policy is converted to an endowment
+/// maturing at [maturityAge]. Same table rule and rebate as [quotePremium];
+/// premiums then run from conversion to maturity.
+PremiumResult quoteConversion(
+  RuleSet rules,
+  PremiumTable? table,
+  PlanRule plan, {
+  required int sumAssured,
+  required int entryAge,
+  required int maturityAge,
+  required PremiumFrequency frequency,
+  int conversionAfterYears = 5,
+}) {
+  final r = quotePremium(rules, table, plan,
+      sumAssured: sumAssured, entryAge: entryAge, column: maturityAge, frequency: frequency);
+  if (r is! PremiumQuoted) return r;
+  final q = r.quote;
+  return PremiumQuoted(PremiumQuote(
+    plan: plan,
+    frequency: frequency,
+    sumAssured: sumAssured,
+    entryAge: entryAge,
+    column: maturityAge,
+    tablePremium: q.tablePremium,
+    grossPremium: q.grossPremium,
+    saRebate: q.saRebate,
+    premium: q.premium,
+    payingYears: maturityAge - entryAge - conversionAfterYears,
+    isSample: q.isSample,
   ));
 }
 

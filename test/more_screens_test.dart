@@ -8,9 +8,11 @@ import 'support.dart';
 void main() {
   testWidgets('afford screen lists options within budget', (tester) async {
     await pumpApp(tester, location: '/afford');
-    await scrollTo(tester, find.textContaining('Santosh'));
-    expect(find.textContaining('Santosh'), findsWidgets);
+    // Plan names repeat (one card per maturity age), so check that options
+    // from plans with tables are listed at all.
     expect(find.text('Sum assured'), findsWidgets);
+    final top = find.textContaining(RegExp('Suvidha|Santosh|Suraksha'), skipOffstage: false);
+    expect(top, findsWidgets);
   });
 
   testWidgets('compare shows two options side by side', (tester) async {

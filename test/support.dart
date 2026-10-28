@@ -14,8 +14,8 @@ import 'package:pli_sahayak/features/maturity/maturity_state.dart';
 AppData bundledData() {
   final rules = RuleSet.parse(File(rulesAsset).readAsStringSync());
   return AppData(rules, {
-    for (final p in rules.plans.where((p) => p.premiumTableId != null))
-      p.premiumTableId!: PremiumTable.parse(File('assets/data/tables/${p.premiumTableId}.json').readAsStringSync()),
+    for (final p in rules.plans)
+      for (final id in p.tableIds) id: PremiumTable.parse(File('assets/data/tables/$id.json').readAsStringSync()),
   });
 }
 

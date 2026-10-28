@@ -235,4 +235,10 @@ void main() {
     await pumpApp(tester, location: '/forms/maturity');
     await _shot(tester, '24_form_maturity');
   });
+
+  testWidgets('25 suvidha conversion', (tester) async {
+    final c = await pumpApp(tester, location: '/premium');
+    c.read(planConfigProvider(premiumConfigKey).notifier).selectPlan(bundledData().rules.plan('pli_suvidha'));
+    await _shot(tester, '25_suvidha_full', height: 5800);
+  });
 }

@@ -1441,4 +1441,19 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get checkAppUpdates => 'ਐਪ ਅੱਪਡੇਟ ਦੇਖੋ (ਪਲੇ ਸਟੋਰ)';
+
+  @override
+  String get conversionTitle => '5 ਸਾਲ ਬਾਅਦ ਐਂਡੋਮੈਂਟ ਵਿੱਚ ਬਦਲਣ ਉੱਤੇ';
+
+  @override
+  String conversionRow(int age) {
+    return 'ਮਹੀਨਾਵਾਰ • $age ਸਾਲ ’ਤੇ ਪਰਿਪੱਕਤਾ';
+  }
+
+  @override
+  String get conversionNote =>
+      'ਸੁਵਿਧਾ ਪਾਲਿਸੀ ਨੂੰ 5 ਸਾਲ ਬਾਅਦ ਐਂਡੋਮੈਂਟ ਬੀਮੇ ਵਿੱਚ ਬਦਲਿਆ ਜਾ ਸਕਦਾ ਹੈ। ਫਿਰ ਚੁਣੀ ਪਰਿਪੱਕਤਾ ਉਮਰ ਤੱਕ ਨਵਾਂ ਮਹੀਨਾਵਾਰ ਪ੍ਰੀਮੀਅਮ ਲਾਗੂ ਹੁੰਦਾ ਹੈ। \"ਸਾਰਣੀ ਵਿੱਚ ਨਹੀਂ\" ਦਾ ਅਰਥ ਹੈ ਇਸ ਦਾਖਲਾ ਉਮਰ ਲਈ ਉਹ ਪਰਿਪੱਕਤਾ ਉਮਰ ਉਪਲਬਧ ਨਹੀਂ।';
+
+  @override
+  String get equivalentAgeRow => 'ਬਰਾਬਰ ਉਮਰ (ਦੋਵੇਂ ਜੀਵਨ ਸਾਥੀ)';
 }
