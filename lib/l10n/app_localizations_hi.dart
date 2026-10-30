@@ -10,7 +10,7 @@ class AppLocalizationsHi extends AppLocalizations {
   AppLocalizationsHi([String locale = 'hi']) : super(locale);
 
   @override
-  String get appTitle => 'PLI & RPLI कैलकुलेटर';
+  String get appTitle => 'PO Premium Calculator';
 
   @override
   String get tilePremium => 'प्रीमियम';
@@ -898,7 +898,7 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'PLI & RPLI कैलकुलेटर कोई डेटा एकत्र नहीं करता। आप जो भी दर्ज या सहेजते हैं, वह इसी फ़ोन पर रहता है। किसी खाते या इंटरनेट की ज़रूरत नहीं।';
+      'PO Premium Calculator कोई डेटा एकत्र नहीं करता। आप जो भी दर्ज या सहेजते हैं, वह इसी फ़ोन पर रहता है। किसी खाते या इंटरनेट की ज़रूरत नहीं।';
 
   @override
   String get dataSourceTitle => 'दर डेटा';
@@ -1236,7 +1236,7 @@ class AppLocalizationsHi extends AppLocalizations {
   }
 
   @override
-  String get importFailed => 'यह PLI & RPLI कैलकुलेटर बैकअप फ़ाइल नहीं है।';
+  String get importFailed => 'यह PO Premium Calculator बैकअप फ़ाइल नहीं है।';
 
   @override
   String get backupNote =>
@@ -1461,4 +1461,100 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get equivalentAgeRow => 'समतुल्य आयु (दोनों पति-पत्नी)';
+
+  @override
+  String get linkSewaTitle => 'डाक बीमा सेवा पोर्टल';
+
+  @override
+  String get linkSewaDesc =>
+      'नया आधिकारिक PLI पोर्टल: लॉगिन, प्रीमियम भुगतान, स्टेटमेंट';
+
+  @override
+  String get linkRegisterTitle => 'पंजीकरण करें या ग्राहक आईडी पाएँ';
+
+  @override
+  String get linkRegisterDesc => 'पॉलिसीधारकों के लिए पहली बार लॉगिन';
+
+  @override
+  String get linkGuidelinesTitle => 'ग्राहकों के लिए दिशानिर्देश';
+
+  @override
+  String get linkGuidelinesDesc => 'दावा, ऋण और पुनर्जीवन के आधिकारिक चरण';
+
+  @override
+  String get payOnlineTitle => 'ऑनलाइन प्रीमियम भुगतान';
+
+  @override
+  String get payOnlineSteps =>
+      '1. डाक बीमा सेवा पोर्टल पर अपनी ग्राहक आईडी से पंजीकरण करें (पंजीकृत मोबाइल पर आईडी पाने के लिए \"Get Customer ID\" दबाएँ)।\n2. लॉगिन करें और पॉलिसी चुनें।\n3. UPI, नेट बैंकिंग या डेबिट कार्ड से भुगतान करें।\n4. रसीद डाउनलोड करें। वार्षिक प्रीमियम रसीदें आयकर में काम आती हैं।';
+
+  @override
+  String get payOnlineButton => 'पोर्टल खोलें';
+
+  @override
+  String get surrenderBonusInfo =>
+      '5 वर्ष से पहले सरेंडर करने पर: कोई बोनस नहीं';
+
+  @override
+  String wlaConversionInfo(int age) {
+    return '$age वर्ष की आयु तक बंदोबस्ती आश्वासन में बदला जा सकता है';
+  }
+
+  @override
+  String get serviceStandardTitle => 'इंडिया पोस्ट सेवा मानक';
+
+  @override
+  String serviceStandardDays(int days) {
+    return 'पूरे दस्तावेज़ मिलने के $days दिनों में निपटान';
+  }
+
+  @override
+  String serviceStandardDeath(int days, int investigationDays) {
+    return '$days दिनों में निपटान; जाँच की आवश्यकता होने पर $investigationDays दिन';
+  }
+
+  @override
+  String serviceStandardBond(int days) {
+    return 'पूरे दस्तावेज़ मिलने के $days दिनों में स्वीकृति पत्र और पॉलिसी बॉन्ड';
+  }
+
+  @override
+  String get tipAckSlip =>
+      'जमा करते समय हस्ताक्षरित पावती पर्ची लें, और CPC अधिक दस्तावेज़ माँगे तो जल्दी जवाब दें।';
+
+  @override
+  String get tipMessenger =>
+      'यदि बीमाधारक नहीं आ सकते (बीमार या विदेश में), तो संदेशवाहक अपना पहचान व पता प्रमाण तथा बीमाधारक का चिकित्सा प्रमाणपत्र या पासपोर्ट प्रति लेकर जमा कर सकता है।';
+
+  @override
+  String get tipDeath =>
+      'मृत्यु दावा किसी भी डाकघर में जमा किया जा सकता है। कुछ मामलों में जाँच होती है; कृपया सहयोग करें।';
+
+  @override
+  String get checklistOfficialNote =>
+      'यह सूची इंडिया पोस्ट के ग्राहक दिशानिर्देशों से है।';
+
+  @override
+  String get doc_loanReceipt => 'ऋण चुकौती रसीद बुक (यदि ऋण लिया हो)';
+
+  @override
+  String get doc_postMortem => 'पोस्टमार्टम रिपोर्ट और FIR (अप्राकृतिक मृत्यु)';
+
+  @override
+  String get doc_succession =>
+      'उत्तराधिकार प्रमाणपत्र या प्रोबेट (यदि नामांकन नहीं है)';
+
+  @override
+  String get doc_claimantAddress => 'दावेदार का पता प्रमाण';
+
+  @override
+  String get doc_ddoCertificate =>
+      'पिछले 6 महीनों की प्रीमियम कटौती का DDO प्रमाणपत्र (वेतन पॉलिसी)';
+
+  @override
+  String get doc_policyBondCopy => 'पॉलिसी बॉन्ड की स्व-सत्यापित प्रति';
+
+  @override
+  String get revivalRulesInfo =>
+      'प्रीमियम 6 महीने (पहले 3 वर्ष) या 12 महीने (3 वर्ष बाद) न भरने पर पॉलिसी व्यपगत हो जाती है। पहली बकाया किस्त से 5 वर्ष के भीतर 12% वार्षिक ब्याज और अच्छे स्वास्थ्य प्रमाणपत्र के साथ इसे पुनर्जीवित किया जा सकता है; बकाया अधिकतम 12 किस्तों में दिया जा सकता है।';
 }

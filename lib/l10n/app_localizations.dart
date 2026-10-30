@@ -123,7 +123,7 @@ abstract class AppLocalizations {
   /// No description provided for @appTitle.
   ///
   /// In en, this message translates to:
-  /// **'PLI & RPLI Calculator'**
+  /// **'PO Premium Calculator'**
   String get appTitle;
 
   /// No description provided for @tilePremium.
@@ -1605,7 +1605,7 @@ abstract class AppLocalizations {
   /// No description provided for @privacyBody.
   ///
   /// In en, this message translates to:
-  /// **'PLI & RPLI Calculator collects no data. Everything you enter or save stays on this phone. No account or internet connection is needed.'**
+  /// **'PO Premium Calculator collects no data. Everything you enter or save stays on this phone. No account or internet connection is needed.'**
   String get privacyBody;
 
   /// No description provided for @dataSourceTitle.
@@ -2229,7 +2229,7 @@ abstract class AppLocalizations {
   /// No description provided for @importFailed.
   ///
   /// In en, this message translates to:
-  /// **'This file is not a PLI & RPLI Calculator backup.'**
+  /// **'This file is not a PO Premium Calculator backup.'**
   String get importFailed;
 
   /// No description provided for @backupNote.
@@ -2632,6 +2632,162 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Equivalent age (both spouses)'**
   String get equivalentAgeRow;
+
+  /// No description provided for @linkSewaTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Dak Bima Sewa Portal'**
+  String get linkSewaTitle;
+
+  /// No description provided for @linkSewaDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'New official PLI portal: log in, pay premium, statements'**
+  String get linkSewaDesc;
+
+  /// No description provided for @linkRegisterTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Register or get Customer ID'**
+  String get linkRegisterTitle;
+
+  /// No description provided for @linkRegisterDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'First-time login for policy holders'**
+  String get linkRegisterDesc;
+
+  /// No description provided for @linkGuidelinesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Guidelines for customers'**
+  String get linkGuidelinesTitle;
+
+  /// No description provided for @linkGuidelinesDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Official steps for claims, loans and revival'**
+  String get linkGuidelinesDesc;
+
+  /// No description provided for @payOnlineTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Pay premium online'**
+  String get payOnlineTitle;
+
+  /// No description provided for @payOnlineSteps.
+  ///
+  /// In en, this message translates to:
+  /// **'1. On the Dak Bima Sewa Portal, register with your Customer ID (tap Get Customer ID to receive it on your registered mobile).\n2. Log in and choose the policy.\n3. Pay by UPI, net banking or debit card.\n4. Download the receipt. Annual premium receipts help with income tax.'**
+  String get payOnlineSteps;
+
+  /// No description provided for @payOnlineButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Open the portal'**
+  String get payOnlineButton;
+
+  /// No description provided for @surrenderBonusInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Surrendered before 5 years: no bonus'**
+  String get surrenderBonusInfo;
+
+  /// No description provided for @wlaConversionInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Can be converted to Endowment Assurance up to age {age}'**
+  String wlaConversionInfo(int age);
+
+  /// No description provided for @serviceStandardTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'India Post service standard'**
+  String get serviceStandardTitle;
+
+  /// No description provided for @serviceStandardDays.
+  ///
+  /// In en, this message translates to:
+  /// **'Settled within {days} days of complete documents'**
+  String serviceStandardDays(int days);
+
+  /// No description provided for @serviceStandardDeath.
+  ///
+  /// In en, this message translates to:
+  /// **'Settled within {days} days; {investigationDays} days if investigation is needed'**
+  String serviceStandardDeath(int days, int investigationDays);
+
+  /// No description provided for @serviceStandardBond.
+  ///
+  /// In en, this message translates to:
+  /// **'Acceptance letter and policy bond within {days} days of complete documents'**
+  String serviceStandardBond(int days);
+
+  /// No description provided for @tipAckSlip.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask for a signed acknowledgement slip when you submit, and reply quickly if the CPC asks for more documents.'**
+  String get tipAckSlip;
+
+  /// No description provided for @tipMessenger.
+  ///
+  /// In en, this message translates to:
+  /// **'If the insurant can\'t visit (medically unfit or abroad), a messenger can submit with their own ID and address proof, plus the insurant\'s medical certificate or passport copy.'**
+  String get tipMessenger;
+
+  /// No description provided for @tipDeath.
+  ///
+  /// In en, this message translates to:
+  /// **'Death claims can be submitted at any Post Office. Some cases are investigated; please co-operate.'**
+  String get tipDeath;
+
+  /// No description provided for @checklistOfficialNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Checklist from India Post\'s Guidelines for Customers.'**
+  String get checklistOfficialNote;
+
+  /// No description provided for @doc_loanReceipt.
+  ///
+  /// In en, this message translates to:
+  /// **'Loan repayment receipt book (if a loan was taken)'**
+  String get doc_loanReceipt;
+
+  /// No description provided for @doc_postMortem.
+  ///
+  /// In en, this message translates to:
+  /// **'Post-mortem report and FIR (unnatural death)'**
+  String get doc_postMortem;
+
+  /// No description provided for @doc_succession.
+  ///
+  /// In en, this message translates to:
+  /// **'Succession certificate or probate (if no nomination)'**
+  String get doc_succession;
+
+  /// No description provided for @doc_claimantAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Claimant\'s address proof'**
+  String get doc_claimantAddress;
+
+  /// No description provided for @doc_ddoCertificate.
+  ///
+  /// In en, this message translates to:
+  /// **'DDO\'s certificate of premium recovery for the last 6 months (pay policies)'**
+  String get doc_ddoCertificate;
+
+  /// No description provided for @doc_policyBondCopy.
+  ///
+  /// In en, this message translates to:
+  /// **'Self-attested copy of the policy bond'**
+  String get doc_policyBondCopy;
+
+  /// No description provided for @revivalRulesInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'A policy lapses if premiums are unpaid for 6 months (first 3 years) or 12 months (after 3 years). It can be revived within 5 years of the first unpaid premium, with interest at 12% a year and a good health certificate; arrears can be paid in up to 12 instalments.'**
+  String get revivalRulesInfo;
 }
 
 class _AppLocalizationsDelegate

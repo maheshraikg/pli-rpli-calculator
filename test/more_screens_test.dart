@@ -69,6 +69,14 @@ void main() {
     expect(find.textContaining('20% at year 6'), findsOneWidget);
   });
 
+  testWidgets('plans screen shows Suraksha conversion and the surrender bonus rule', (tester) async {
+    await pumpApp(tester, location: '/plans');
+    await tester.tap(find.text('Suraksha (Whole Life Assurance)'));
+    await tester.pumpAndSettle();
+    expect(find.textContaining('Can be converted to Endowment Assurance up to age 59'), findsOneWidget);
+    expect(find.textContaining('Surrendered before 5 years: no bonus'), findsOneWidget);
+  });
+
   testWidgets('about lists provisional rules and privacy', (tester) async {
     await pumpApp(tester, location: '/about');
     expect(find.text('Privacy'), findsOneWidget);

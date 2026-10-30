@@ -165,7 +165,23 @@ class _FormDetailScreenState extends ConsumerState<FormDetailScreen> {
                     ],
                   ),
                 ),
-                if (!catalog!.verified) InfoCard(icon: AppIcons.infoLine, message: l.formsVerifyNote),
+                if (s.serviceStandardDays != null)
+                  SectionCard(
+                    title: l.serviceStandardTitle,
+                    icon: AppIcons.hourglassMedium,
+                    child: Text(
+                      s.id == 'proposal'
+                          ? l.serviceStandardBond(s.serviceStandardDays!)
+                          : s.investigationDays != null
+                          ? l.serviceStandardDeath(s.serviceStandardDays!, s.investigationDays!)
+                          : l.serviceStandardDays(s.serviceStandardDays!),
+                    ),
+                  ),
+                for (final t in s.tips) InfoCard(icon: AppIcons.lightbulb, message: tipText(l, t)),
+                if (s.officialChecklist)
+                  InfoCard(icon: AppIcons.sealCheck, message: l.checklistOfficialNote)
+                else if (!catalog!.verified)
+                  InfoCard(icon: AppIcons.infoLine, message: l.formsVerifyNote),
                 if (s.letter) ...[
                   const SizedBox(height: 8),
                   FilledButton.icon(

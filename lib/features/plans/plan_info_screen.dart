@@ -53,8 +53,11 @@ List<String> planFacts(AppLocalizations l, RuleSet rules, PlanRule plan) {
   if (conversion is Map && conversion['earliestAfterYears'] is int) {
     facts.add(l.conversionInfo(conversion['earliestAfterYears'] as int));
   }
+  final wlaConversion = plan.raw['wlaConversionMaxAge'];
+  if (wlaConversion is int) facts.add(l.wlaConversionInfo(wlaConversion));
   facts.add(plan.loanAfterYears == null ? l.noLoanInfo : l.loanInfo(plan.loanAfterYears!));
   facts.add(plan.surrenderAfterYears == null ? l.noSurrenderInfo : l.surrenderInfo(plan.surrenderAfterYears!));
+  if (plan.surrenderAfterYears != null) facts.add(l.surrenderBonusInfo);
   final cls = plan.type == PlanType.cwla ? 'CWLA_BEFORE_CONVERSION' : plan.bonusClass;
   final rate = rules.bonusRatesPer1000[plan.scheme]?[rules.financialYear]?[cls];
   if (rate != null) facts.add(l.bonusInfo(rules.financialYear, rate));

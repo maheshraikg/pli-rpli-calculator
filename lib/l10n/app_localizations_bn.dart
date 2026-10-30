@@ -10,7 +10,7 @@ class AppLocalizationsBn extends AppLocalizations {
   AppLocalizationsBn([String locale = 'bn']) : super(locale);
 
   @override
-  String get appTitle => 'PLI & RPLI ক্যালকুলেটর';
+  String get appTitle => 'PO Premium Calculator';
 
   @override
   String get tilePremium => 'প্রিমিয়াম';
@@ -899,7 +899,7 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'PLI & RPLI ক্যালকুলেটর কোনো তথ্য সংগ্রহ করে না। আপনি যা লেখেন বা সংরক্ষণ করেন, সবই এই ফোনে থাকে। অ্যাকাউন্ট বা ইন্টারনেট লাগে না।';
+      'PO Premium Calculator কোনো তথ্য সংগ্রহ করে না। আপনি যা লেখেন বা সংরক্ষণ করেন, সবই এই ফোনে থাকে। অ্যাকাউন্ট বা ইন্টারনেট লাগে না।';
 
   @override
   String get dataSourceTitle => 'হারের তথ্য';
@@ -1235,7 +1235,7 @@ class AppLocalizationsBn extends AppLocalizations {
   }
 
   @override
-  String get importFailed => 'এটি PLI & RPLI ক্যালকুলেটরের ব্যাকআপ ফাইল নয়।';
+  String get importFailed => 'এটি PO Premium Calculator-এর ব্যাকআপ ফাইল নয়।';
 
   @override
   String get backupNote =>
@@ -1460,4 +1460,99 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get equivalentAgeRow => 'সমতুল্য বয়স (স্বামী-স্ত্রী দুজন)';
+
+  @override
+  String get linkSewaTitle => 'ডাক বিমা সেবা পোর্টাল';
+
+  @override
+  String get linkSewaDesc =>
+      'নতুন অফিসিয়াল PLI পোর্টাল: লগইন, প্রিমিয়াম প্রদান, স্টেটমেন্ট';
+
+  @override
+  String get linkRegisterTitle => 'নিবন্ধন করুন বা গ্রাহক আইডি নিন';
+
+  @override
+  String get linkRegisterDesc => 'পলিসিধারকদের প্রথমবার লগইন';
+
+  @override
+  String get linkGuidelinesTitle => 'গ্রাহকদের জন্য নির্দেশিকা';
+
+  @override
+  String get linkGuidelinesDesc => 'দাবি, ঋণ ও পুনর্জীবনের অফিসিয়াল ধাপ';
+
+  @override
+  String get payOnlineTitle => 'অনলাইনে প্রিমিয়াম প্রদান';
+
+  @override
+  String get payOnlineSteps =>
+      '1. ডাক বিমা সেবা পোর্টালে আপনার গ্রাহক আইডি দিয়ে নিবন্ধন করুন (নিবন্ধিত মোবাইলে আইডি পেতে \"Get Customer ID\" চাপুন)।\n2. লগইন করে পলিসি বেছে নিন।\n3. UPI, নেট ব্যাংকিং বা ডেবিট কার্ডে প্রদান করুন।\n4. রসিদ ডাউনলোড করুন। বার্ষিক প্রিমিয়াম রসিদ আয়করে কাজে লাগে।';
+
+  @override
+  String get payOnlineButton => 'পোর্টাল খুলুন';
+
+  @override
+  String get surrenderBonusInfo => '5 বছরের আগে সারেন্ডার করলে: কোনো বোনাস নেই';
+
+  @override
+  String wlaConversionInfo(int age) {
+    return '$age বছর বয়স পর্যন্ত এনডাওমেন্ট অ্যাসিওরেন্সে রূপান্তর করা যায়';
+  }
+
+  @override
+  String get serviceStandardTitle => 'ইন্ডিয়া পোস্ট পরিষেবা মান';
+
+  @override
+  String serviceStandardDays(int days) {
+    return 'সম্পূর্ণ নথি পাওয়ার $days দিনের মধ্যে নিষ্পত্তি';
+  }
+
+  @override
+  String serviceStandardDeath(int days, int investigationDays) {
+    return '$days দিনের মধ্যে নিষ্পত্তি; তদন্ত লাগলে $investigationDays দিন';
+  }
+
+  @override
+  String serviceStandardBond(int days) {
+    return 'সম্পূর্ণ নথি পাওয়ার $days দিনের মধ্যে গ্রহণপত্র ও পলিসি বন্ড';
+  }
+
+  @override
+  String get tipAckSlip =>
+      'জমা দেওয়ার সময় স্বাক্ষরিত প্রাপ্তিস্বীকার স্লিপ নিন, এবং CPC আরও নথি চাইলে দ্রুত উত্তর দিন।';
+
+  @override
+  String get tipMessenger =>
+      'বিমাকারী আসতে না পারলে (অসুস্থ বা বিদেশে), একজন বার্তাবাহক নিজের পরিচয় ও ঠিকানার প্রমাণ এবং বিমাকারীর মেডিক্যাল সার্টিফিকেট বা পাসপোর্টের কপি নিয়ে জমা দিতে পারেন।';
+
+  @override
+  String get tipDeath =>
+      'মৃত্যু দাবি যেকোনো ডাকঘরে জমা দেওয়া যায়। কিছু ক্ষেত্রে তদন্ত হয়; অনুগ্রহ করে সহযোগিতা করুন।';
+
+  @override
+  String get checklistOfficialNote =>
+      'এই তালিকা ইন্ডিয়া পোস্টের গ্রাহক নির্দেশিকা থেকে।';
+
+  @override
+  String get doc_loanReceipt => 'ঋণ পরিশোধের রসিদ বই (ঋণ নেওয়া থাকলে)';
+
+  @override
+  String get doc_postMortem => 'ময়নাতদন্ত রিপোর্ট ও FIR (অস্বাভাবিক মৃত্যু)';
+
+  @override
+  String get doc_succession =>
+      'উত্তরাধিকার সার্টিফিকেট বা প্রোবেট (নমিনেশন না থাকলে)';
+
+  @override
+  String get doc_claimantAddress => 'দাবিদারের ঠিকানার প্রমাণ';
+
+  @override
+  String get doc_ddoCertificate =>
+      'গত 6 মাসের প্রিমিয়াম কাটার DDO সার্টিফিকেট (বেতন পলিসি)';
+
+  @override
+  String get doc_policyBondCopy => 'পলিসি বন্ডের স্ব-প্রত্যয়িত কপি';
+
+  @override
+  String get revivalRulesInfo =>
+      'প্রিমিয়াম 6 মাস (প্রথম 3 বছর) বা 12 মাস (3 বছর পরে) না দিলে পলিসি ল্যাপস হয়। প্রথম বকেয়া কিস্তি থেকে 5 বছরের মধ্যে বার্ষিক 12% সুদ ও সুস্বাস্থ্যের সার্টিফিকেট দিয়ে এটি পুনর্জীবিত করা যায়; বকেয়া সর্বোচ্চ 12টি কিস্তিতে দেওয়া যায়।';
 }

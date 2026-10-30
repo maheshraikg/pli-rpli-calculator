@@ -10,7 +10,7 @@ class AppLocalizationsTa extends AppLocalizations {
   AppLocalizationsTa([String locale = 'ta']) : super(locale);
 
   @override
-  String get appTitle => 'PLI & RPLI கணிப்பான்';
+  String get appTitle => 'PO Premium Calculator';
 
   @override
   String get tilePremium => 'பிரீமியம்';
@@ -904,7 +904,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'PLI & RPLI கணிப்பான் எந்தத் தரவையும் சேகரிப்பதில்லை. நீங்கள் உள்ளிடுவது அல்லது சேமிப்பது அனைத்தும் இந்தத் தொலைபேசியிலேயே இருக்கும். கணக்கு அல்லது இணையம் தேவையில்லை.';
+      'PO Premium Calculator எந்தத் தரவையும் சேகரிப்பதில்லை. நீங்கள் உள்ளிடுவது அல்லது சேமிப்பது அனைத்தும் இந்தத் தொலைபேசியிலேயே இருக்கும். கணக்கு அல்லது இணையம் தேவையில்லை.';
 
   @override
   String get dataSourceTitle => 'விகிதத் தரவு';
@@ -1247,7 +1247,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get importFailed =>
-      'இது PLI & RPLI கணிப்பான் காப்புப்பிரதி கோப்பு அல்ல.';
+      'இது PO Premium Calculator காப்புப்பிரதி கோப்பு அல்ல.';
 
   @override
   String get backupNote =>
@@ -1474,4 +1474,104 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get equivalentAgeRow => 'சமமான வயது (இரு வாழ்க்கைத் துணைவர்கள்)';
+
+  @override
+  String get linkSewaTitle => 'டாக் பீமா சேவா போர்டல்';
+
+  @override
+  String get linkSewaDesc =>
+      'புதிய அதிகாரப்பூர்வ PLI போர்டல்: உள்நுழைவு, பிரீமியம் செலுத்தல், அறிக்கைகள்';
+
+  @override
+  String get linkRegisterTitle =>
+      'பதிவு செய்யவும் அல்லது வாடிக்கையாளர் ஐடி பெறவும்';
+
+  @override
+  String get linkRegisterDesc => 'பாலிசிதாரர்களுக்கு முதல் முறை உள்நுழைவு';
+
+  @override
+  String get linkGuidelinesTitle => 'வாடிக்கையாளர்களுக்கான வழிகாட்டுதல்கள்';
+
+  @override
+  String get linkGuidelinesDesc =>
+      'கோரிக்கை, கடன், புதுப்பித்தலுக்கான அதிகாரப்பூர்வ படிகள்';
+
+  @override
+  String get payOnlineTitle => 'ஆன்லைனில் பிரீமியம் செலுத்தல்';
+
+  @override
+  String get payOnlineSteps =>
+      '1. டாக் பீமா சேவா போர்டலில் உங்கள் வாடிக்கையாளர் ஐடியுடன் பதிவு செய்யவும் (பதிவு செய்த மொபைலில் ஐடி பெற \"Get Customer ID\" அழுத்தவும்).\n2. உள்நுழைந்து பாலிசியைத் தேர்ந்தெடுக்கவும்.\n3. UPI, நெட் பேங்கிங் அல்லது டெபிட் கார்டு மூலம் செலுத்தவும்.\n4. ரசீதைப் பதிவிறக்கவும். ஆண்டு பிரீமியம் ரசீதுகள் வருமான வரிக்கு உதவும்.';
+
+  @override
+  String get payOnlineButton => 'போர்டலைத் திறக்கவும்';
+
+  @override
+  String get surrenderBonusInfo =>
+      '5 ஆண்டுகளுக்கு முன் சரண்டர் செய்தால்: போனஸ் இல்லை';
+
+  @override
+  String wlaConversionInfo(int age) {
+    return '$age வயது வரை எண்டோமென்ட் அஷ்யூரன்ஸாக மாற்றலாம்';
+  }
+
+  @override
+  String get serviceStandardTitle => 'இந்திய அஞ்சல் சேவைத் தரம்';
+
+  @override
+  String serviceStandardDays(int days) {
+    return 'முழு ஆவணங்கள் கிடைத்த $days நாட்களில் தீர்வு';
+  }
+
+  @override
+  String serviceStandardDeath(int days, int investigationDays) {
+    return '$days நாட்களில் தீர்வு; விசாரணை தேவைப்பட்டால் $investigationDays நாட்கள்';
+  }
+
+  @override
+  String serviceStandardBond(int days) {
+    return 'முழு ஆவணங்கள் கிடைத்த $days நாட்களில் ஏற்பு கடிதம் மற்றும் பாலிசி பத்திரம்';
+  }
+
+  @override
+  String get tipAckSlip =>
+      'சமர்ப்பிக்கும்போது கையொப்பமிட்ட ஒப்புகைச் சீட்டைப் பெறவும்; CPC கூடுதல் ஆவணங்கள் கேட்டால் விரைவாகப் பதிலளிக்கவும்.';
+
+  @override
+  String get tipMessenger =>
+      'காப்பீட்டாளர் வர இயலாவிட்டால் (உடல்நலக் குறைவு அல்லது வெளிநாட்டில்), ஒரு தூதர் தனது அடையாள, முகவரிச் சான்றுடன் காப்பீட்டாளரின் மருத்துவச் சான்றிதழ் அல்லது கடவுச்சீட்டு நகலுடன் சமர்ப்பிக்கலாம்.';
+
+  @override
+  String get tipDeath =>
+      'இறப்புக் கோரிக்கையை எந்த அஞ்சலகத்திலும் சமர்ப்பிக்கலாம். சில வழக்குகளில் விசாரணை நடக்கும்; தயவுசெய்து ஒத்துழைக்கவும்.';
+
+  @override
+  String get checklistOfficialNote =>
+      'இந்தப் பட்டியல் இந்திய அஞ்சலின் வாடிக்கையாளர் வழிகாட்டுதல்களிலிருந்து.';
+
+  @override
+  String get doc_loanReceipt =>
+      'கடன் திருப்பிச் செலுத்திய ரசீது புத்தகம் (கடன் பெற்றிருந்தால்)';
+
+  @override
+  String get doc_postMortem =>
+      'பிரேதப் பரிசோதனை அறிக்கை மற்றும் FIR (இயற்கைக்கு மாறான மரணம்)';
+
+  @override
+  String get doc_succession =>
+      'வாரிசுச் சான்றிதழ் அல்லது புரோபேட் (நியமனம் இல்லையெனில்)';
+
+  @override
+  String get doc_claimantAddress => 'கோருபவரின் முகவரிச் சான்று';
+
+  @override
+  String get doc_ddoCertificate =>
+      'கடந்த 6 மாத பிரீமியம் பிடித்தத்துக்கான DDO சான்றிதழ் (சம்பள பாலிசிகள்)';
+
+  @override
+  String get doc_policyBondCopy => 'பாலிசி பத்திரத்தின் சுய சான்றொப்ப நகல்';
+
+  @override
+  String get revivalRulesInfo =>
+      'பிரீமியம் 6 மாதங்கள் (முதல் 3 ஆண்டுகள்) அல்லது 12 மாதங்கள் (3 ஆண்டுகளுக்குப் பிறகு) செலுத்தாவிட்டால் பாலிசி காலாவதியாகும். முதல் செலுத்தாத தவணையிலிருந்து 5 ஆண்டுகளுக்குள் ஆண்டுக்கு 12% வட்டி மற்றும் நல்ல உடல்நலச் சான்றிதழுடன் புதுப்பிக்கலாம்; நிலுவையை அதிகபட்சம் 12 தவணைகளில் செலுத்தலாம்.';
 }

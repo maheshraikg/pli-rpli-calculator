@@ -10,7 +10,7 @@ class AppLocalizationsOr extends AppLocalizations {
   AppLocalizationsOr([String locale = 'or']) : super(locale);
 
   @override
-  String get appTitle => 'PLI & RPLI କାଲକୁଲେଟର';
+  String get appTitle => 'PO Premium Calculator';
 
   @override
   String get tilePremium => 'ପ୍ରିମିୟମ';
@@ -899,7 +899,7 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'PLI & RPLI କାଲକୁଲେଟର କୌଣସି ତଥ୍ୟ ସଂଗ୍ରହ କରେ ନାହିଁ। ଆପଣ ଲେଖୁଥିବା କିମ୍ବା ସଞ୍ଚୟ କରୁଥିବା ସବୁକିଛି ଏହି ଫୋନରେ ହିଁ ରହେ। ଖାତା କିମ୍ବା ଇଣ୍ଟରନେଟ ଆବଶ୍ୟକ ନାହିଁ।';
+      'PO Premium Calculator କୌଣସି ତଥ୍ୟ ସଂଗ୍ରହ କରେ ନାହିଁ। ଆପଣ ଲେଖୁଥିବା କିମ୍ବା ସଞ୍ଚୟ କରୁଥିବା ସବୁକିଛି ଏହି ଫୋନରେ ହିଁ ରହେ। ଖାତା କିମ୍ବା ଇଣ୍ଟରନେଟ ଆବଶ୍ୟକ ନାହିଁ।';
 
   @override
   String get dataSourceTitle => 'ହାର ତଥ୍ୟ';
@@ -1234,7 +1234,7 @@ class AppLocalizationsOr extends AppLocalizations {
   }
 
   @override
-  String get importFailed => 'ଏହା PLI & RPLI କାଲକୁଲେଟର ବ୍ୟାକଅପ ଫାଇଲ ନୁହେଁ।';
+  String get importFailed => 'ଏହା PO Premium Calculator ବ୍ୟାକଅପ ଫାଇଲ ନୁହେଁ।';
 
   @override
   String get backupNote =>
@@ -1459,4 +1459,100 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get equivalentAgeRow => 'ସମତୁଲ୍ୟ ବୟସ (ଉଭୟ ସାଥୀ)';
+
+  @override
+  String get linkSewaTitle => 'ଡାକ ବୀମା ସେବା ପୋର୍ଟାଲ';
+
+  @override
+  String get linkSewaDesc =>
+      'ନୂଆ ସରକାରୀ PLI ପୋର୍ଟାଲ: ଲଗଇନ, ପ୍ରିମିୟମ ଦେୟ, ଷ୍ଟେଟମେଣ୍ଟ';
+
+  @override
+  String get linkRegisterTitle => 'ପଞ୍ଜୀକରଣ କରନ୍ତୁ ବା ଗ୍ରାହକ ଆଇଡି ପାଆନ୍ତୁ';
+
+  @override
+  String get linkRegisterDesc => 'ପଲିସିଧାରୀଙ୍କ ପାଇଁ ପ୍ରଥମ ଥର ଲଗଇନ';
+
+  @override
+  String get linkGuidelinesTitle => 'ଗ୍ରାହକଙ୍କ ପାଇଁ ନିର୍ଦ୍ଦେଶାବଳୀ';
+
+  @override
+  String get linkGuidelinesDesc => 'ଦାବି, ଋଣ ଓ ପୁନର୍ଜୀବନର ସରକାରୀ ପଦକ୍ଷେପ';
+
+  @override
+  String get payOnlineTitle => 'ଅନଲାଇନ ପ୍ରିମିୟମ ଦେୟ';
+
+  @override
+  String get payOnlineSteps =>
+      '1. ଡାକ ବୀମା ସେବା ପୋର୍ଟାଲରେ ଆପଣଙ୍କ ଗ୍ରାହକ ଆଇଡି ସହ ପଞ୍ଜୀକରଣ କରନ୍ତୁ (ପଞ୍ଜୀକୃତ ମୋବାଇଲରେ ଆଇଡି ପାଇବାକୁ \"Get Customer ID\" ଦବାନ୍ତୁ)।\n2. ଲଗଇନ କରି ପଲିସି ବାଛନ୍ତୁ।\n3. UPI, ନେଟ ବ୍ୟାଙ୍କିଙ୍ଗ ବା ଡେବିଟ କାର୍ଡରେ ଦେୟ କରନ୍ତୁ।\n4. ରସିଦ ଡାଉନଲୋଡ କରନ୍ତୁ। ବାର୍ଷିକ ପ୍ରିମିୟମ ରସିଦ ଆୟକରରେ କାମରେ ଆସେ।';
+
+  @override
+  String get payOnlineButton => 'ପୋର୍ଟାଲ ଖୋଲନ୍ତୁ';
+
+  @override
+  String get surrenderBonusInfo =>
+      '5 ବର୍ଷ ପୂର୍ବରୁ ସରେଣ୍ଡର କଲେ: କୌଣସି ବୋନସ ନାହିଁ';
+
+  @override
+  String wlaConversionInfo(int age) {
+    return '$age ବର୍ଷ ବୟସ ପର୍ଯ୍ୟନ୍ତ ଏଣ୍ଡୋମେଣ୍ଟ ଆସ୍ୟୁରାନ୍ସକୁ ବଦଳାଯାଇପାରେ';
+  }
+
+  @override
+  String get serviceStandardTitle => 'ଇଣ୍ଡିଆ ପୋଷ୍ଟ ସେବା ମାନକ';
+
+  @override
+  String serviceStandardDays(int days) {
+    return 'ସମ୍ପୂର୍ଣ୍ଣ ଦଲିଲ ମିଳିବାର $days ଦିନ ମଧ୍ୟରେ ସମାଧାନ';
+  }
+
+  @override
+  String serviceStandardDeath(int days, int investigationDays) {
+    return '$days ଦିନ ମଧ୍ୟରେ ସମାଧାନ; ତଦନ୍ତ ଆବଶ୍ୟକ ହେଲେ $investigationDays ଦିନ';
+  }
+
+  @override
+  String serviceStandardBond(int days) {
+    return 'ସମ୍ପୂର୍ଣ୍ଣ ଦଲିଲ ମିଳିବାର $days ଦିନ ମଧ୍ୟରେ ସ୍ୱୀକୃତି ପତ୍ର ଓ ପଲିସି ବଣ୍ଡ';
+  }
+
+  @override
+  String get tipAckSlip =>
+      'ଜମା ଦେବା ସମୟରେ ଦସ୍ତଖତ ହୋଇଥିବା ପ୍ରାପ୍ତି ସ୍ଲିପ ନିଅନ୍ତୁ, ଏବଂ CPC ଅଧିକ ଦଲିଲ ମାଗିଲେ ଶୀଘ୍ର ଉତ୍ତର ଦିଅନ୍ତୁ।';
+
+  @override
+  String get tipMessenger =>
+      'ବୀମାଧାରୀ ଆସିପାରୁ ନଥିଲେ (ଅସୁସ୍ଥ ବା ବିଦେଶରେ), ଜଣେ ବାର୍ତ୍ତାବାହକ ନିଜର ପରିଚୟ ଓ ଠିକଣା ପ୍ରମାଣ ସହ ବୀମାଧାରୀଙ୍କ ଡାକ୍ତରୀ ପ୍ରମାଣପତ୍ର ବା ପାସପୋର୍ଟ କପି ନେଇ ଜମା ଦେଇପାରିବେ।';
+
+  @override
+  String get tipDeath =>
+      'ମୃତ୍ୟୁ ଦାବି ଯେକୌଣସି ଡାକଘରରେ ଜମା ଦିଆଯାଇପାରେ। କିଛି ମାମଲାରେ ତଦନ୍ତ ହୁଏ; ଦୟାକରି ସହଯୋଗ କରନ୍ତୁ।';
+
+  @override
+  String get checklistOfficialNote =>
+      'ଏହି ତାଲିକା ଇଣ୍ଡିଆ ପୋଷ୍ଟର ଗ୍ରାହକ ନିର୍ଦ୍ଦେଶାବଳୀରୁ।';
+
+  @override
+  String get doc_loanReceipt => 'ଋଣ ପରିଶୋଧ ରସିଦ ବହି (ଋଣ ନେଇଥିଲେ)';
+
+  @override
+  String get doc_postMortem => 'ଶବ ବ୍ୟବଚ୍ଛେଦ ରିପୋର୍ଟ ଓ FIR (ଅସ୍ୱାଭାବିକ ମୃତ୍ୟୁ)';
+
+  @override
+  String get doc_succession =>
+      'ଉତ୍ତରାଧିକାର ପ୍ରମାଣପତ୍ର ବା ପ୍ରୋବେଟ (ନାମାଙ୍କନ ନଥିଲେ)';
+
+  @override
+  String get doc_claimantAddress => 'ଦାବିଦାରଙ୍କ ଠିକଣା ପ୍ରମାଣ';
+
+  @override
+  String get doc_ddoCertificate =>
+      'ଗତ 6 ମାସର ପ୍ରିମିୟମ କଟାର DDO ପ୍ରମାଣପତ୍ର (ଦରମା ପଲିସି)';
+
+  @override
+  String get doc_policyBondCopy => 'ପଲିସି ବଣ୍ଡର ସ୍ୱ-ପ୍ରମାଣିତ କପି';
+
+  @override
+  String get revivalRulesInfo =>
+      'ପ୍ରିମିୟମ 6 ମାସ (ପ୍ରଥମ 3 ବର୍ଷ) ବା 12 ମାସ (3 ବର୍ଷ ପରେ) ନ ଦେଲେ ପଲିସି ଲାପ୍ସ ହୁଏ। ପ୍ରଥମ ବକେୟା କିସ୍ତିରୁ 5 ବର୍ଷ ମଧ୍ୟରେ ବାର୍ଷିକ 12% ସୁଧ ଓ ସୁସ୍ୱାସ୍ଥ୍ୟ ପ୍ରମାଣପତ୍ର ସହ ଏହାକୁ ପୁନର୍ଜୀବିତ କରାଯାଇପାରେ; ବକେୟା ସର୍ବାଧିକ 12ଟି କିସ୍ତିରେ ଦିଆଯାଇପାରେ।';
 }

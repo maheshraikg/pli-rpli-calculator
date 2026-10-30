@@ -1,6 +1,6 @@
 {
   "@@locale": "en",
-  "appTitle": "PLI & RPLI Calculator",
+  "appTitle": "PO Premium Calculator",
   "tilePremium": "Premium",
   "tileMaturity": "Maturity",
   "tileCompare": "Compare",
@@ -776,7 +776,7 @@
   "faq5a": "PLI: government and semi-government employees, professionals, graduates, diploma holders and others listed by India Post. RPLI: rural residents and scheduled bank savings account holders.",
   "aboutTitle": "About",
   "privacyTitle": "Privacy",
-  "privacyBody": "PLI & RPLI Calculator collects no data. Everything you enter or save stays on this phone. No account or internet connection is needed.",
+  "privacyBody": "PO Premium Calculator collects no data. Everything you enter or save stays on this phone. No account or internet connection is needed.",
   "dataSourceTitle": "Rate data",
   "dataSourceBody": "Rules {id}, effective {date}. Source: {source}",
   "@dataSourceBody": {
@@ -928,7 +928,7 @@
       }
     }
   },
-  "importFailed": "This file is not a PLI & RPLI Calculator backup.",
+  "importFailed": "This file is not a PO Premium Calculator backup.",
   "backupNote": "The backup file contains your policy details. Keep it somewhere safe, such as your own WhatsApp chat or Google Drive.",
   "restore": "Restore",
   "tileDues": "Dues",
@@ -1065,5 +1065,62 @@
     }
   },
   "conversionNote": "Suvidha can be converted to an Endowment Assurance after 5 years. The new monthly premium then applies until the chosen maturity age. \"Not in table\" means that maturity age is not available for this entry age.",
-  "equivalentAgeRow": "Equivalent age (both spouses)"
+  "equivalentAgeRow": "Equivalent age (both spouses)",
+  "linkSewaTitle": "Dak Bima Sewa Portal",
+  "linkSewaDesc": "New official PLI portal: log in, pay premium, statements",
+  "linkRegisterTitle": "Register or get Customer ID",
+  "linkRegisterDesc": "First-time login for policy holders",
+  "linkGuidelinesTitle": "Guidelines for customers",
+  "linkGuidelinesDesc": "Official steps for claims, loans and revival",
+  "payOnlineTitle": "Pay premium online",
+  "payOnlineSteps": "1. On the Dak Bima Sewa Portal, register with your Customer ID (tap Get Customer ID to receive it on your registered mobile).\n2. Log in and choose the policy.\n3. Pay by UPI, net banking or debit card.\n4. Download the receipt. Annual premium receipts help with income tax.",
+  "payOnlineButton": "Open the portal",
+  "surrenderBonusInfo": "Surrendered before 5 years: no bonus",
+  "wlaConversionInfo": "Can be converted to Endowment Assurance up to age {age}",
+  "@wlaConversionInfo": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      }
+    }
+  },
+  "serviceStandardTitle": "India Post service standard",
+  "serviceStandardDays": "Settled within {days} days of complete documents",
+  "@serviceStandardDays": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "serviceStandardDeath": "Settled within {days} days; {investigationDays} days if investigation is needed",
+  "@serviceStandardDeath": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      },
+      "investigationDays": {
+        "type": "int"
+      }
+    }
+  },
+  "serviceStandardBond": "Acceptance letter and policy bond within {days} days of complete documents",
+  "@serviceStandardBond": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "tipAckSlip": "Ask for a signed acknowledgement slip when you submit, and reply quickly if the CPC asks for more documents.",
+  "tipMessenger": "If the insurant can't visit (medically unfit or abroad), a messenger can submit with their own ID and address proof, plus the insurant's medical certificate or passport copy.",
+  "tipDeath": "Death claims can be submitted at any Post Office. Some cases are investigated; please co-operate.",
+  "checklistOfficialNote": "Checklist from India Post's Guidelines for Customers.",
+  "doc_loanReceipt": "Loan repayment receipt book (if a loan was taken)",
+  "doc_postMortem": "Post-mortem report and FIR (unnatural death)",
+  "doc_succession": "Succession certificate or probate (if no nomination)",
+  "doc_claimantAddress": "Claimant's address proof",
+  "doc_ddoCertificate": "DDO's certificate of premium recovery for the last 6 months (pay policies)",
+  "doc_policyBondCopy": "Self-attested copy of the policy bond",
+  "revivalRulesInfo": "A policy lapses if premiums are unpaid for 6 months (first 3 years) or 12 months (after 3 years). It can be revived within 5 years of the first unpaid premium, with interest at 12% a year and a good health certificate; arrears can be paid in up to 12 instalments."
 }

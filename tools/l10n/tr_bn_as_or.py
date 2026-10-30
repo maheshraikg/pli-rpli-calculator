@@ -2,7 +2,7 @@ import sys; sys.path.insert(0, __import__('os').path.dirname(__file__))
 from write_arb import write
 
 write('bn', {
- 'appTitle': 'PLI & RPLI ক্যালকুলেটর', 'tilePremium': 'প্রিমিয়াম', 'tileMaturity': 'মেয়াদপূর্তি', 'tileCompare': 'তুলনা',
+ 'appTitle': 'PO Premium Calculator-', 'tilePremium': 'প্রিমিয়াম', 'tileMaturity': 'মেয়াদপূর্তি', 'tileCompare': 'তুলনা',
  'tileEligibility': 'যোগ্যতা', 'tileMyPolicies': 'আমার পলিসি', 'tileQuotation': 'কোটেশন', 'comingSoon': 'শীঘ্রই আসছে',
  'sampleDataBanner': 'নমুনা ডেটা – সরকারি নয়', 'ratesFooter': 'হার অর্থবর্ষ {financialYear} • সূত্র: ভারতীয় ডাক',
  'bonusDisclaimer': 'বোনাসের হার প্রতি বছর ঘোষিত হয় এবং ভবিষ্যতের জন্য নিশ্চিত নয়। চূড়ান্ত অঙ্ক ভারতীয় ডাক অনুযায়ী।',
@@ -53,7 +53,7 @@ write('bn', {
 })
 
 write('as', {
- 'appTitle': 'PLI & RPLI কেলকুলেটৰ', 'tilePremium': 'প্ৰিমিয়াম', 'tileMaturity': 'ম্যাদ পূৰ্ণ', 'tileCompare': 'তুলনা',
+ 'appTitle': 'PO Premium Calculator-', 'tilePremium': 'প্ৰিমিয়াম', 'tileMaturity': 'ম্যাদ পূৰ্ণ', 'tileCompare': 'তুলনা',
  'tileEligibility': 'যোগ্যতা', 'tileMyPolicies': 'মোৰ পলিচি', 'tileQuotation': 'কোটেশ্বন', 'comingSoon': 'সোনকালে আহিব',
  'sampleDataBanner': 'নমুনা তথ্য – চৰকাৰী নহয়', 'ratesFooter': 'হাৰ বিত্তীয় বৰ্ষ {financialYear} • উৎস: ভাৰতীয় ডাক',
  'bonusDisclaimer': 'বোনাছৰ হাৰ প্ৰতি বছৰে ঘোষণা কৰা হয় আৰু ভৱিষ্যতৰ বাবে নিশ্চিত নহয়। চূড়ান্ত পৰিমাণ ভাৰতীয় ডাক অনুসৰি।',
@@ -104,7 +104,7 @@ write('as', {
 })
 
 write('or', {
- 'appTitle': 'PLI & RPLI କାଲକୁଲେଟର', 'tilePremium': 'ପ୍ରିମିୟମ', 'tileMaturity': 'ପରିପକ୍ୱତା', 'tileCompare': 'ତୁଳନା',
+ 'appTitle': 'PO Premium Calculator-', 'tilePremium': 'ପ୍ରିମିୟମ', 'tileMaturity': 'ପରିପକ୍ୱତା', 'tileCompare': 'ତୁଳନା',
  'tileEligibility': 'ଯୋଗ୍ୟତା', 'tileMyPolicies': 'ମୋ ପଲିସି', 'tileQuotation': 'କୋଟେସନ', 'comingSoon': 'ଶୀଘ୍ର ଆସୁଛି',
  'sampleDataBanner': 'ନମୁନା ତଥ୍ୟ – ସରକାରୀ ନୁହେଁ', 'ratesFooter': 'ହାର ଆର୍ଥିକ ବର୍ଷ {financialYear} • ଉତ୍ସ: ଭାରତୀୟ ଡାକ',
  'bonusDisclaimer': 'ବୋନସ ହାର ପ୍ରତିବର୍ଷ ଘୋଷଣା କରାଯାଏ ଏବଂ ଭବିଷ୍ୟତ ପାଇଁ ନିଶ୍ଚିତ ନୁହେଁ। ଅନ୍ତିମ ରାଶି ଭାରତୀୟ ଡାକ ଅନୁଯାୟୀ।',

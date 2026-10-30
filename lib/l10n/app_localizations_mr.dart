@@ -10,7 +10,7 @@ class AppLocalizationsMr extends AppLocalizations {
   AppLocalizationsMr([String locale = 'mr']) : super(locale);
 
   @override
-  String get appTitle => 'PLI & RPLI कॅल्क्युलेटर';
+  String get appTitle => 'PO Premium Calculator';
 
   @override
   String get tilePremium => 'प्रीमियम';
@@ -898,7 +898,7 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'PLI & RPLI कॅल्क्युलेटर कोणताही डेटा गोळा करत नाही. तुम्ही भरलेले किंवा जतन केलेले सर्व काही याच फोनवर राहते. खाते किंवा इंटरनेटची गरज नाही.';
+      'PO Premium Calculator कोणताही डेटा गोळा करत नाही. तुम्ही भरलेले किंवा जतन केलेले सर्व काही याच फोनवर राहते. खाते किंवा इंटरनेटची गरज नाही.';
 
   @override
   String get dataSourceTitle => 'दर डेटा';
@@ -1233,7 +1233,7 @@ class AppLocalizationsMr extends AppLocalizations {
   }
 
   @override
-  String get importFailed => 'ही PLI & RPLI कॅल्क्युलेटर बॅकअप फाइल नाही.';
+  String get importFailed => 'ही PO Premium Calculator बॅकअप फाइल नाही.';
 
   @override
   String get backupNote =>
@@ -1458,4 +1458,99 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get equivalentAgeRow => 'समतुल्य वय (दोन्ही जोडीदार)';
+
+  @override
+  String get linkSewaTitle => 'डाक बीमा सेवा पोर्टल';
+
+  @override
+  String get linkSewaDesc =>
+      'नवे अधिकृत PLI पोर्टल: लॉगिन, प्रीमियम भरणा, स्टेटमेंट';
+
+  @override
+  String get linkRegisterTitle => 'नोंदणी करा किंवा ग्राहक आयडी मिळवा';
+
+  @override
+  String get linkRegisterDesc => 'पॉलिसीधारकांसाठी पहिल्यांदा लॉगिन';
+
+  @override
+  String get linkGuidelinesTitle => 'ग्राहकांसाठी मार्गदर्शक सूचना';
+
+  @override
+  String get linkGuidelinesDesc => 'दावा, कर्ज आणि पुनरुज्जीवनाचे अधिकृत टप्पे';
+
+  @override
+  String get payOnlineTitle => 'ऑनलाइन प्रीमियम भरणा';
+
+  @override
+  String get payOnlineSteps =>
+      '1. डाक बीमा सेवा पोर्टलवर तुमच्या ग्राहक आयडीने नोंदणी करा (नोंदणीकृत मोबाइलवर आयडी मिळवण्यासाठी \"Get Customer ID\" दाबा).\n2. लॉगिन करा आणि पॉलिसी निवडा.\n3. UPI, नेट बँकिंग किंवा डेबिट कार्डने भरणा करा.\n4. पावती डाउनलोड करा. वार्षिक प्रीमियम पावत्या आयकरासाठी उपयोगी पडतात.';
+
+  @override
+  String get payOnlineButton => 'पोर्टल उघडा';
+
+  @override
+  String get surrenderBonusInfo => '5 वर्षांपूर्वी सरेंडर केल्यास: बोनस नाही';
+
+  @override
+  String wlaConversionInfo(int age) {
+    return '$age वर्षे वयापर्यंत एंडोमेंट ॲश्युरन्समध्ये बदलता येते';
+  }
+
+  @override
+  String get serviceStandardTitle => 'इंडिया पोस्ट सेवा मानक';
+
+  @override
+  String serviceStandardDays(int days) {
+    return 'पूर्ण कागदपत्रे मिळाल्यापासून $days दिवसांत निपटारा';
+  }
+
+  @override
+  String serviceStandardDeath(int days, int investigationDays) {
+    return '$days दिवसांत निपटारा; चौकशी लागल्यास $investigationDays दिवस';
+  }
+
+  @override
+  String serviceStandardBond(int days) {
+    return 'पूर्ण कागदपत्रे मिळाल्यापासून $days दिवसांत स्वीकृती पत्र आणि पॉलिसी बाँड';
+  }
+
+  @override
+  String get tipAckSlip =>
+      'जमा करताना सही केलेली पोच पावती घ्या, आणि CPC ने अधिक कागदपत्रे मागितल्यास लवकर उत्तर द्या.';
+
+  @override
+  String get tipMessenger =>
+      'विमाधारक येऊ शकत नसल्यास (आजारी किंवा परदेशात), संदेशवाहक स्वतःचा ओळख व पत्ता पुरावा आणि विमाधारकाचे वैद्यकीय प्रमाणपत्र किंवा पासपोर्ट प्रत घेऊन जमा करू शकतो.';
+
+  @override
+  String get tipDeath =>
+      'मृत्यू दावा कोणत्याही टपाल कार्यालयात जमा करता येतो. काही प्रकरणांत चौकशी होते; कृपया सहकार्य करा.';
+
+  @override
+  String get checklistOfficialNote =>
+      'ही यादी इंडिया पोस्टच्या ग्राहक मार्गदर्शक सूचनांमधून आहे.';
+
+  @override
+  String get doc_loanReceipt => 'कर्ज परतफेड पावती पुस्तक (कर्ज घेतले असल्यास)';
+
+  @override
+  String get doc_postMortem => 'शवविच्छेदन अहवाल आणि FIR (अनैसर्गिक मृत्यू)';
+
+  @override
+  String get doc_succession =>
+      'वारसा प्रमाणपत्र किंवा प्रोबेट (नामनिर्देशन नसल्यास)';
+
+  @override
+  String get doc_claimantAddress => 'दावेदाराचा पत्ता पुरावा';
+
+  @override
+  String get doc_ddoCertificate =>
+      'मागील 6 महिन्यांच्या प्रीमियम कपातीचे DDO प्रमाणपत्र (पगार पॉलिसी)';
+
+  @override
+  String get doc_policyBondCopy => 'पॉलिसी बाँडची स्व-साक्षांकित प्रत';
+
+  @override
+  String get revivalRulesInfo =>
+      'प्रीमियम 6 महिने (पहिली 3 वर्षे) किंवा 12 महिने (3 वर्षांनंतर) न भरल्यास पॉलिसी व्यपगत होते. पहिल्या थकीत हप्त्यापासून 5 वर्षांच्या आत वार्षिक 12% व्याज आणि चांगल्या आरोग्याच्या प्रमाणपत्रासह ती पुनरुज्जीवित करता येते; थकबाकी जास्तीत जास्त 12 हप्त्यांत भरता येते.';
 }

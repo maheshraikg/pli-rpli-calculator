@@ -10,7 +10,7 @@ class AppLocalizationsKn extends AppLocalizations {
   AppLocalizationsKn([String locale = 'kn']) : super(locale);
 
   @override
-  String get appTitle => 'PLI & RPLI ಕ್ಯಾಲ್ಕುಲೇಟರ್';
+  String get appTitle => 'PO Premium Calculator';
 
   @override
   String get tilePremium => 'ಪ್ರೀಮಿಯಂ';
@@ -899,7 +899,7 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'PLI & RPLI ಕ್ಯಾಲ್ಕುಲೇಟರ್ ಯಾವುದೇ ದತ್ತಾಂಶ ಸಂಗ್ರಹಿಸುವುದಿಲ್ಲ. ನೀವು ನಮೂದಿಸುವ ಅಥವಾ ಉಳಿಸುವ ಎಲ್ಲವೂ ಈ ಫೋನ್‌ನಲ್ಲೇ ಇರುತ್ತದೆ. ಖಾತೆ ಅಥವಾ ಇಂಟರ್ನೆಟ್ ಅಗತ್ಯವಿಲ್ಲ.';
+      'PO Premium Calculator ಯಾವುದೇ ದತ್ತಾಂಶ ಸಂಗ್ರಹಿಸುವುದಿಲ್ಲ. ನೀವು ನಮೂದಿಸುವ ಅಥವಾ ಉಳಿಸುವ ಎಲ್ಲವೂ ಈ ಫೋನ್‌ನಲ್ಲೇ ಇರುತ್ತದೆ. ಖಾತೆ ಅಥವಾ ಇಂಟರ್ನೆಟ್ ಅಗತ್ಯವಿಲ್ಲ.';
 
   @override
   String get dataSourceTitle => 'ದರ ದತ್ತಾಂಶ';
@@ -1235,7 +1235,7 @@ class AppLocalizationsKn extends AppLocalizations {
   }
 
   @override
-  String get importFailed => 'ಇದು PLI & RPLI ಕ್ಯಾಲ್ಕುಲೇಟರ್ ಬ್ಯಾಕಪ್ ಫೈಲ್ ಅಲ್ಲ.';
+  String get importFailed => 'ಇದು PO Premium Calculator ಬ್ಯಾಕಪ್ ಫೈಲ್ ಅಲ್ಲ.';
 
   @override
   String get backupNote =>
@@ -1461,4 +1461,101 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get equivalentAgeRow => 'ಸಮಾನ ವಯಸ್ಸು (ಇಬ್ಬರು ಸಂಗಾತಿಗಳು)';
+
+  @override
+  String get linkSewaTitle => 'ಡಾಕ್ ಬಿಮಾ ಸೇವಾ ಪೋರ್ಟಲ್';
+
+  @override
+  String get linkSewaDesc =>
+      'ಹೊಸ ಅಧಿಕೃತ PLI ಪೋರ್ಟಲ್: ಲಾಗಿನ್, ಪ್ರೀಮಿಯಂ ಪಾವತಿ, ಸ್ಟೇಟ್‌ಮೆಂಟ್';
+
+  @override
+  String get linkRegisterTitle => 'ನೋಂದಾಯಿಸಿ ಅಥವಾ ಗ್ರಾಹಕ ಐಡಿ ಪಡೆಯಿರಿ';
+
+  @override
+  String get linkRegisterDesc => 'ಪಾಲಿಸಿದಾರರಿಗೆ ಮೊದಲ ಬಾರಿಯ ಲಾಗಿನ್';
+
+  @override
+  String get linkGuidelinesTitle => 'ಗ್ರಾಹಕರಿಗೆ ಮಾರ್ಗಸೂಚಿಗಳು';
+
+  @override
+  String get linkGuidelinesDesc =>
+      'ಕ್ಲೈಮ್, ಸಾಲ ಮತ್ತು ಪುನರುಜ್ಜೀವನದ ಅಧಿಕೃತ ಹಂತಗಳು';
+
+  @override
+  String get payOnlineTitle => 'ಆನ್‌ಲೈನ್ ಪ್ರೀಮಿಯಂ ಪಾವತಿ';
+
+  @override
+  String get payOnlineSteps =>
+      '1. ಡಾಕ್ ಬಿಮಾ ಸೇವಾ ಪೋರ್ಟಲ್‌ನಲ್ಲಿ ನಿಮ್ಮ ಗ್ರಾಹಕ ಐಡಿಯೊಂದಿಗೆ ನೋಂದಾಯಿಸಿ (ನೋಂದಾಯಿತ ಮೊಬೈಲ್‌ಗೆ ಐಡಿ ಪಡೆಯಲು \"Get Customer ID\" ಒತ್ತಿ).\n2. ಲಾಗಿನ್ ಮಾಡಿ ಪಾಲಿಸಿ ಆಯ್ಕೆಮಾಡಿ.\n3. UPI, ನೆಟ್ ಬ್ಯಾಂಕಿಂಗ್ ಅಥವಾ ಡೆಬಿಟ್ ಕಾರ್ಡ್‌ನಿಂದ ಪಾವತಿಸಿ.\n4. ರಶೀದಿ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ. ವಾರ್ಷಿಕ ಪ್ರೀಮಿಯಂ ರಶೀದಿಗಳು ಆದಾಯ ತೆರಿಗೆಗೆ ಉಪಯುಕ್ತ.';
+
+  @override
+  String get payOnlineButton => 'ಪೋರ್ಟಲ್ ತೆರೆಯಿರಿ';
+
+  @override
+  String get surrenderBonusInfo =>
+      '5 ವರ್ಷಕ್ಕಿಂತ ಮೊದಲು ಸರೆಂಡರ್ ಮಾಡಿದರೆ: ಬೋನಸ್ ಇಲ್ಲ';
+
+  @override
+  String wlaConversionInfo(int age) {
+    return '$age ವರ್ಷ ವಯಸ್ಸಿನವರೆಗೆ ಎಂಡೋಮೆಂಟ್ ಅಶ್ಯೂರೆನ್ಸ್‌ಗೆ ಬದಲಾಯಿಸಬಹುದು';
+  }
+
+  @override
+  String get serviceStandardTitle => 'ಇಂಡಿಯಾ ಪೋಸ್ಟ್ ಸೇವಾ ಮಾನದಂಡ';
+
+  @override
+  String serviceStandardDays(int days) {
+    return 'ಸಂಪೂರ್ಣ ದಾಖಲೆಗಳು ಸಿಕ್ಕ $days ದಿನಗಳಲ್ಲಿ ಇತ್ಯರ್ಥ';
+  }
+
+  @override
+  String serviceStandardDeath(int days, int investigationDays) {
+    return '$days ದಿನಗಳಲ್ಲಿ ಇತ್ಯರ್ಥ; ತನಿಖೆ ಬೇಕಾದರೆ $investigationDays ದಿನಗಳು';
+  }
+
+  @override
+  String serviceStandardBond(int days) {
+    return 'ಸಂಪೂರ್ಣ ದಾಖಲೆಗಳು ಸಿಕ್ಕ $days ದಿನಗಳಲ್ಲಿ ಅಂಗೀಕಾರ ಪತ್ರ ಮತ್ತು ಪಾಲಿಸಿ ಬಾಂಡ್';
+  }
+
+  @override
+  String get tipAckSlip =>
+      'ಸಲ್ಲಿಸುವಾಗ ಸಹಿ ಮಾಡಿದ ಸ್ವೀಕೃತಿ ಚೀಟಿ ಪಡೆಯಿರಿ; CPC ಹೆಚ್ಚಿನ ದಾಖಲೆ ಕೇಳಿದರೆ ಬೇಗ ಉತ್ತರಿಸಿ.';
+
+  @override
+  String get tipMessenger =>
+      'ವಿಮಾದಾರರು ಬರಲು ಸಾಧ್ಯವಿಲ್ಲದಿದ್ದರೆ (ಅನಾರೋಗ್ಯ ಅಥವಾ ವಿದೇಶದಲ್ಲಿ), ಸಂದೇಶವಾಹಕರು ತಮ್ಮ ಗುರುತು ಮತ್ತು ವಿಳಾಸ ಪುರಾವೆ ಹಾಗೂ ವಿಮಾದಾರರ ವೈದ್ಯಕೀಯ ಪ್ರಮಾಣಪತ್ರ ಅಥವಾ ಪಾಸ್‌ಪೋರ್ಟ್ ಪ್ರತಿಯೊಂದಿಗೆ ಸಲ್ಲಿಸಬಹುದು.';
+
+  @override
+  String get tipDeath =>
+      'ಮರಣ ಕ್ಲೈಮ್ ಅನ್ನು ಯಾವುದೇ ಅಂಚೆ ಕಚೇರಿಯಲ್ಲಿ ಸಲ್ಲಿಸಬಹುದು. ಕೆಲವು ಪ್ರಕರಣಗಳಲ್ಲಿ ತನಿಖೆ ನಡೆಯುತ್ತದೆ; ದಯವಿಟ್ಟು ಸಹಕರಿಸಿ.';
+
+  @override
+  String get checklistOfficialNote =>
+      'ಈ ಪಟ್ಟಿ ಇಂಡಿಯಾ ಪೋಸ್ಟ್‌ನ ಗ್ರಾಹಕ ಮಾರ್ಗಸೂಚಿಗಳಿಂದ.';
+
+  @override
+  String get doc_loanReceipt => 'ಸಾಲ ಮರುಪಾವತಿ ರಶೀದಿ ಪುಸ್ತಕ (ಸಾಲ ಪಡೆದಿದ್ದರೆ)';
+
+  @override
+  String get doc_postMortem => 'ಮರಣೋತ್ತರ ಪರೀಕ್ಷಾ ವರದಿ ಮತ್ತು FIR (ಅಸಹಜ ಮರಣ)';
+
+  @override
+  String get doc_succession =>
+      'ಉತ್ತರಾಧಿಕಾರ ಪ್ರಮಾಣಪತ್ರ ಅಥವಾ ಪ್ರೊಬೇಟ್ (ನಾಮನಿರ್ದೇಶನ ಇಲ್ಲದಿದ್ದರೆ)';
+
+  @override
+  String get doc_claimantAddress => 'ಕ್ಲೈಮುದಾರರ ವಿಳಾಸ ಪುರಾವೆ';
+
+  @override
+  String get doc_ddoCertificate =>
+      'ಕಳೆದ 6 ತಿಂಗಳ ಪ್ರೀಮಿಯಂ ಕಡಿತದ DDO ಪ್ರಮಾಣಪತ್ರ (ವೇತನ ಪಾಲಿಸಿ)';
+
+  @override
+  String get doc_policyBondCopy => 'ಪಾಲಿಸಿ ಬಾಂಡ್‌ನ ಸ್ವಯಂ ದೃಢೀಕೃತ ಪ್ರತಿ';
+
+  @override
+  String get revivalRulesInfo =>
+      'ಪ್ರೀಮಿಯಂ 6 ತಿಂಗಳು (ಮೊದಲ 3 ವರ್ಷ) ಅಥವಾ 12 ತಿಂಗಳು (3 ವರ್ಷದ ನಂತರ) ಕಟ್ಟದಿದ್ದರೆ ಪಾಲಿಸಿ ರದ್ದಾಗುತ್ತದೆ. ಮೊದಲ ಬಾಕಿ ಕಂತಿನಿಂದ 5 ವರ್ಷದೊಳಗೆ ವಾರ್ಷಿಕ 12% ಬಡ್ಡಿ ಮತ್ತು ಉತ್ತಮ ಆರೋಗ್ಯ ಪ್ರಮಾಣಪತ್ರದೊಂದಿಗೆ ಪುನರುಜ್ಜೀವನಗೊಳಿಸಬಹುದು; ಬಾಕಿಯನ್ನು ಗರಿಷ್ಠ 12 ಕಂತುಗಳಲ್ಲಿ ಕಟ್ಟಬಹುದು.';
 }
