@@ -10,7 +10,7 @@ class AppLocalizationsKn extends AppLocalizations {
   AppLocalizationsKn([String locale = 'kn']) : super(locale);
 
   @override
-  String get appTitle => 'PLI & RPLI ಕ್ಯಾಲ್ಕುಲೇಟರ್';
+  String get appTitle => 'ಪ್ರೀಮಿಯಂ & ಪಕ್ವತೆ ಕ್ಯಾಲ್ಕುಲೇಟರ್';
 
   @override
   String get tilePremium => 'ಪ್ರೀಮಿಯಂ';
@@ -899,7 +899,7 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'PLI & RPLI ಕ್ಯಾಲ್ಕುಲೇಟರ್ ಯಾವುದೇ ದತ್ತಾಂಶ ಸಂಗ್ರಹಿಸುವುದಿಲ್ಲ. ನೀವು ನಮೂದಿಸುವ ಅಥವಾ ಉಳಿಸುವ ಎಲ್ಲವೂ ಈ ಫೋನ್‌ನಲ್ಲೇ ಇರುತ್ತದೆ. ಖಾತೆ ಅಥವಾ ಇಂಟರ್ನೆಟ್ ಅಗತ್ಯವಿಲ್ಲ.';
+      'ಪ್ರೀಮಿಯಂ & ಪಕ್ವತೆ ಕ್ಯಾಲ್ಕುಲೇಟರ್ ಯಾವುದೇ ದತ್ತಾಂಶ ಸಂಗ್ರಹಿಸುವುದಿಲ್ಲ. ನೀವು ನಮೂದಿಸುವ ಅಥವಾ ಉಳಿಸುವ ಎಲ್ಲವೂ ಈ ಫೋನ್‌ನಲ್ಲೇ ಇರುತ್ತದೆ. ಖಾತೆ ಅಥವಾ ಇಂಟರ್ನೆಟ್ ಅಗತ್ಯವಿಲ್ಲ.';
 
   @override
   String get dataSourceTitle => 'ದರ ದತ್ತಾಂಶ';
@@ -1235,7 +1235,8 @@ class AppLocalizationsKn extends AppLocalizations {
   }
 
   @override
-  String get importFailed => 'ಇದು PLI & RPLI ಕ್ಯಾಲ್ಕುಲೇಟರ್ ಬ್ಯಾಕಪ್ ಫೈಲ್ ಅಲ್ಲ.';
+  String get importFailed =>
+      'ಇದು ಪ್ರೀಮಿಯಂ & ಪಕ್ವತೆ ಕ್ಯಾಲ್ಕುಲೇಟರ್ ಬ್ಯಾಕಪ್ ಫೈಲ್ ಅಲ್ಲ.';
 
   @override
   String get backupNote =>

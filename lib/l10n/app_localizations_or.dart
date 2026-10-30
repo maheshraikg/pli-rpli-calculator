@@ -10,7 +10,7 @@ class AppLocalizationsOr extends AppLocalizations {
   AppLocalizationsOr([String locale = 'or']) : super(locale);
 
   @override
-  String get appTitle => 'PLI & RPLI କାଲକୁଲେଟର';
+  String get appTitle => 'ପ୍ରିମିୟମ & ପରିପକ୍ୱତା କାଲକୁଲେଟର';
 
   @override
   String get tilePremium => 'ପ୍ରିମିୟମ';
@@ -899,7 +899,7 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'PLI & RPLI କାଲକୁଲେଟର କୌଣସି ତଥ୍ୟ ସଂଗ୍ରହ କରେ ନାହିଁ। ଆପଣ ଲେଖୁଥିବା କିମ୍ବା ସଞ୍ଚୟ କରୁଥିବା ସବୁକିଛି ଏହି ଫୋନରେ ହିଁ ରହେ। ଖାତା କିମ୍ବା ଇଣ୍ଟରନେଟ ଆବଶ୍ୟକ ନାହିଁ।';
+      'ପ୍ରିମିୟମ & ପରିପକ୍ୱତା କାଲକୁଲେଟର କୌଣସି ତଥ୍ୟ ସଂଗ୍ରହ କରେ ନାହିଁ। ଆପଣ ଲେଖୁଥିବା କିମ୍ବା ସଞ୍ଚୟ କରୁଥିବା ସବୁକିଛି ଏହି ଫୋନରେ ହିଁ ରହେ। ଖାତା କିମ୍ବା ଇଣ୍ଟରନେଟ ଆବଶ୍ୟକ ନାହିଁ।';
 
   @override
   String get dataSourceTitle => 'ହାର ତଥ୍ୟ';
@@ -1234,7 +1234,8 @@ class AppLocalizationsOr extends AppLocalizations {
   }
 
   @override
-  String get importFailed => 'ଏହା PLI & RPLI କାଲକୁଲେଟର ବ୍ୟାକଅପ ଫାଇଲ ନୁହେଁ।';
+  String get importFailed =>
+      'ଏହା ପ୍ରିମିୟମ & ପରିପକ୍ୱତା କାଲକୁଲେଟର ବ୍ୟାକଅପ ଫାଇଲ ନୁହେଁ।';
 
   @override
   String get backupNote =>

@@ -10,7 +10,7 @@ class AppLocalizationsGu extends AppLocalizations {
   AppLocalizationsGu([String locale = 'gu']) : super(locale);
 
   @override
-  String get appTitle => 'PLI & RPLI કેલ્ક્યુલેટર';
+  String get appTitle => 'પ્રીમિયમ & પાકતી રકમ કેલ્ક્યુલેટર';
 
   @override
   String get tilePremium => 'પ્રીમિયમ';
@@ -897,7 +897,7 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'PLI & RPLI કેલ્ક્યુલેટર કોઈ ડેટા એકત્ર કરતું નથી. તમે દાખલ કરો કે સાચવો તે બધું આ ફોન પર જ રહે છે. ખાતું કે ઇન્ટરનેટ જરૂરી નથી.';
+      'પ્રીમિયમ & પાકતી રકમ કેલ્ક્યુલેટર કોઈ ડેટા એકત્ર કરતું નથી. તમે દાખલ કરો કે સાચવો તે બધું આ ફોન પર જ રહે છે. ખાતું કે ઇન્ટરનેટ જરૂરી નથી.';
 
   @override
   String get dataSourceTitle => 'દર ડેટા';
@@ -1231,7 +1231,8 @@ class AppLocalizationsGu extends AppLocalizations {
   }
 
   @override
-  String get importFailed => 'આ PLI & RPLI કેલ્ક્યુલેટર બેકઅપ ફાઇલ નથી.';
+  String get importFailed =>
+      'આ પ્રીમિયમ & પાકતી રકમ કેલ્ક્યુલેટર બેકઅપ ફાઇલ નથી.';
 
   @override
   String get backupNote =>

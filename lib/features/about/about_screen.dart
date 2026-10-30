@@ -25,7 +25,7 @@ Uri supportMail(String subject, String body) => Uri(
 );
 
 /// Public privacy policy (also entered in Play Console).
-const kPrivacyPolicyUrl = 'https://docs.google.com/document/d/1nlTftF_zHcZhkOsaneC_XL56SENDPpFScdPiWmn1mLM/view';
+const kPrivacyPolicyUrl = 'https://docs.google.com/document/d/1A5KCfdmnyab3Ij1bovFwLTKjCVFflEIYN71A84R-4zc/view';
 
 class AboutScreen extends ConsumerStatefulWidget {
   const AboutScreen({super.key});
@@ -88,7 +88,7 @@ class _AboutScreenState extends ConsumerState<AboutScreen> {
                   label: Text(l.reportProblem),
                   onPressed: () => launchUrl(
                     supportMail(
-                      'PLI & RPLI Calculator $kAppVersion – problem report',
+                      'Premium & Maturity Calculator $kAppVersion – problem report',
                       'What I did:\n\nWhat went wrong:\n\nPlan / age / sum assured (if relevant):\n\n'
                           'App version: $kAppVersion\nLanguage: ${Localizations.localeOf(context).languageCode}\n',
                     ),
@@ -98,7 +98,7 @@ class _AboutScreenState extends ConsumerState<AboutScreen> {
                   icon: const AppIcon(AppIcons.lightbulb),
                   label: Text(l.sendSuggestion),
                   onPressed: () => launchUrl(
-                    supportMail('PLI & RPLI Calculator $kAppVersion – suggestion', 'My suggestion:\n\n'),
+                    supportMail('Premium & Maturity Calculator $kAppVersion – suggestion', 'My suggestion:\n\n'),
                   ),
                 ),
                 TextButton.icon(

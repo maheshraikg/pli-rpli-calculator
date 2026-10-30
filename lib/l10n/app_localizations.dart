@@ -123,7 +123,7 @@ abstract class AppLocalizations {
   /// No description provided for @appTitle.
   ///
   /// In en, this message translates to:
-  /// **'PLI & RPLI Calculator'**
+  /// **'Premium & Maturity Calculator'**
   String get appTitle;
 
   /// No description provided for @tilePremium.
@@ -1605,7 +1605,7 @@ abstract class AppLocalizations {
   /// No description provided for @privacyBody.
   ///
   /// In en, this message translates to:
-  /// **'PLI & RPLI Calculator collects no data. Everything you enter or save stays on this phone. No account or internet connection is needed.'**
+  /// **'Premium & Maturity Calculator collects no data. Everything you enter or save stays on this phone. No account or internet connection is needed.'**
   String get privacyBody;
 
   /// No description provided for @dataSourceTitle.
@@ -2229,7 +2229,7 @@ abstract class AppLocalizations {
   /// No description provided for @importFailed.
   ///
   /// In en, this message translates to:
-  /// **'This file is not a PLI & RPLI Calculator backup.'**
+  /// **'This file is not a Premium & Maturity Calculator backup.'**
   String get importFailed;
 
   /// No description provided for @backupNote.

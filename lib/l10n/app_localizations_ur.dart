@@ -10,7 +10,7 @@ class AppLocalizationsUr extends AppLocalizations {
   AppLocalizationsUr([String locale = 'ur']) : super(locale);
 
   @override
-  String get appTitle => 'PLI & RPLI کیلکولیٹر';
+  String get appTitle => 'پریمیم & میچورٹی کیلکولیٹر';
 
   @override
   String get tilePremium => 'پریمیم';
@@ -899,7 +899,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'PLI & RPLI کیلکولیٹر کوئی ڈیٹا جمع نہیں کرتا۔ آپ جو بھی درج یا محفوظ کرتے ہیں وہ اسی فون پر رہتا ہے۔ کسی اکاؤنٹ یا انٹرنیٹ کی ضرورت نہیں۔';
+      'پریمیم & میچورٹی کیلکولیٹر کوئی ڈیٹا جمع نہیں کرتا۔ آپ جو بھی درج یا محفوظ کرتے ہیں وہ اسی فون پر رہتا ہے۔ کسی اکاؤنٹ یا انٹرنیٹ کی ضرورت نہیں۔';
 
   @override
   String get dataSourceTitle => 'شرح کا ڈیٹا';
@@ -1233,7 +1233,8 @@ class AppLocalizationsUr extends AppLocalizations {
   }
 
   @override
-  String get importFailed => 'یہ PLI & RPLI کیلکولیٹر کی بیک اپ فائل نہیں ہے۔';
+  String get importFailed =>
+      'یہ پریمیم & میچورٹی کیلکولیٹر کی بیک اپ فائل نہیں ہے۔';
 
   @override
   String get backupNote =>

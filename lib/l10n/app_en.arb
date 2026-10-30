@@ -1,6 +1,6 @@
 {
   "@@locale": "en",
-  "appTitle": "PLI & RPLI Calculator",
+  "appTitle": "Premium & Maturity Calculator",
   "tilePremium": "Premium",
   "tileMaturity": "Maturity",
   "tileCompare": "Compare",
@@ -776,7 +776,7 @@
   "faq5a": "PLI: government and semi-government employees, professionals, graduates, diploma holders and others listed by India Post. RPLI: rural residents and scheduled bank savings account holders.",
   "aboutTitle": "About",
   "privacyTitle": "Privacy",
-  "privacyBody": "PLI & RPLI Calculator collects no data. Everything you enter or save stays on this phone. No account or internet connection is needed.",
+  "privacyBody": "Premium & Maturity Calculator collects no data. Everything you enter or save stays on this phone. No account or internet connection is needed.",
   "dataSourceTitle": "Rate data",
   "dataSourceBody": "Rules {id}, effective {date}. Source: {source}",
   "@dataSourceBody": {
@@ -928,7 +928,7 @@
       }
     }
   },
-  "importFailed": "This file is not a PLI & RPLI Calculator backup.",
+  "importFailed": "This file is not a Premium & Maturity Calculator backup.",
   "backupNote": "The backup file contains your policy details. Keep it somewhere safe, such as your own WhatsApp chat or Google Drive.",
   "restore": "Restore",
   "tileDues": "Dues",
