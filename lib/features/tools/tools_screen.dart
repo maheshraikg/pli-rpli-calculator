@@ -334,6 +334,7 @@ class _RevivalTabState extends ConsumerState<_RevivalTab> {
             ),
           ),
           _note(context, l.revivalNote(_num(widget.rules.premium.defaultFeePercentPerMonth))),
+          _note(context, l.revivalRulesInfo),
         ],
       ],
     );

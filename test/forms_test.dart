@@ -71,6 +71,24 @@ void main() {
       expect(parsed.services.single.pdfAsset, isNull);
     });
 
+    test('claim services carry India Post service standards and official checklists', () {
+      expect(catalog.byId('maturity').serviceStandardDays, 30);
+      expect(catalog.byId('death').investigationDays, 90);
+      expect(catalog.byId('proposal').serviceStandardDays, 15);
+      expect(catalog.byId('death').docs, containsAll(['postMortem', 'succession', 'claimantAddress']));
+      for (final id in ['maturity', 'survival', 'death', 'loan', 'surrender', 'revival', 'assignment', 'conversion']) {
+        expect(catalog.byId(id).officialChecklist, isTrue, reason: id);
+      }
+      for (final lang in kAppLanguages.keys) {
+        final l = lookupAppLocalizations(Locale(lang));
+        for (final s in catalog.services) {
+          for (final t in s.tips) {
+            expect(tipText(l, t), isNot(t), reason: 'tip $t [$lang]');
+          }
+        }
+      }
+    });
+
     test('form link message names the service and link', () {
       expect(en.formLinkMessage('Loan', 'https://x'), 'Loan form (India Post): https://x');
     });
@@ -102,7 +120,7 @@ void main() {
       expect(t, contains('Subject: Request for policy loan – Policy No. PLI-KA-123456'));
       expect(t, contains('a loan of ₹50,000'));
       expect(t, contains('sum assured ₹3,00,000, commencing 1 Jun 2025'));
-      expect(t, contains('1. Original policy bond (or ePLI bond)'));
+      expect(t, contains('1. Self-attested copy of the policy bond'));
       expect(t, contains('Place: Mysuru    Date: 1 Nov 2026'));
     });
 
@@ -141,6 +159,13 @@ void main() {
       expect(find.text('Documents to keep ready'), findsOneWidget);
       await scrollTo(tester, find.text('Write a request letter'));
       expect(find.text('Write a request letter'), findsOneWidget);
+    });
+
+    testWidgets('death claim shows the service standard and official checklist note', (tester) async {
+      await pumpApp(tester, location: '/forms/death');
+      await scrollTo(tester, find.text('India Post service standard'));
+      expect(find.text('Settled within 30 days; 90 days if investigation is needed'), findsOneWidget);
+      await scrollTo(tester, find.text("Checklist from India Post's Guidelines for Customers."));
     });
 
     testWidgets('letter screen fills from a saved policy', (tester) async {

@@ -10,7 +10,7 @@ class AppLocalizationsTe extends AppLocalizations {
   AppLocalizationsTe([String locale = 'te']) : super(locale);
 
   @override
-  String get appTitle => 'PLI & RPLI కాలిక్యులేటర్';
+  String get appTitle => 'PO Premium Calculator';
 
   @override
   String get tilePremium => 'ప్రీమియం';
@@ -901,7 +901,7 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'PLI & RPLI కాలిక్యులేటర్ ఎలాంటి డేటా సేకరించదు. మీరు నమోదు చేసేది లేదా సేవ్ చేసేది అంతా ఈ ఫోన్‌లోనే ఉంటుంది. ఖాతా లేదా ఇంటర్నెట్ అవసరం లేదు.';
+      'PO Premium Calculator ఎలాంటి డేటా సేకరించదు. మీరు నమోదు చేసేది లేదా సేవ్ చేసేది అంతా ఈ ఫోన్‌లోనే ఉంటుంది. ఖాతా లేదా ఇంటర్నెట్ అవసరం లేదు.';
 
   @override
   String get dataSourceTitle => 'రేట్ల డేటా';
@@ -1238,7 +1238,7 @@ class AppLocalizationsTe extends AppLocalizations {
   }
 
   @override
-  String get importFailed => 'ఇది PLI & RPLI కాలిక్యులేటర్ బ్యాకప్ ఫైల్ కాదు.';
+  String get importFailed => 'ఇది PO Premium Calculator బ్యాకప్ ఫైల్ కాదు.';
 
   @override
   String get backupNote =>
@@ -1464,4 +1464,100 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get equivalentAgeRow => 'సమాన వయసు (ఇద్దరు జీవిత భాగస్వాములు)';
+
+  @override
+  String get linkSewaTitle => 'డాక్ బీమా సేవా పోర్టల్';
+
+  @override
+  String get linkSewaDesc =>
+      'కొత్త అధికారిక PLI పోర్టల్: లాగిన్, ప్రీమియం చెల్లింపు, స్టేట్‌మెంట్లు';
+
+  @override
+  String get linkRegisterTitle => 'నమోదు చేయండి లేదా కస్టమర్ ఐడి పొందండి';
+
+  @override
+  String get linkRegisterDesc => 'పాలసీదారులకు మొదటిసారి లాగిన్';
+
+  @override
+  String get linkGuidelinesTitle => 'వినియోగదారులకు మార్గదర్శకాలు';
+
+  @override
+  String get linkGuidelinesDesc => 'క్లెయిమ్, రుణం, పునరుద్ధరణకు అధికారిక దశలు';
+
+  @override
+  String get payOnlineTitle => 'ఆన్‌లైన్ ప్రీమియం చెల్లింపు';
+
+  @override
+  String get payOnlineSteps =>
+      '1. డాక్ బీమా సేవా పోర్టల్‌లో మీ కస్టమర్ ఐడితో నమోదు చేయండి (నమోదిత మొబైల్‌కు ఐడి పొందడానికి \"Get Customer ID\" నొక్కండి).\n2. లాగిన్ చేసి పాలసీని ఎంచుకోండి.\n3. UPI, నెట్ బ్యాంకింగ్ లేదా డెబిట్ కార్డ్‌తో చెల్లించండి.\n4. రసీదును డౌన్‌లోడ్ చేయండి. వార్షిక ప్రీమియం రసీదులు ఆదాయపు పన్నుకు ఉపయోగపడతాయి.';
+
+  @override
+  String get payOnlineButton => 'పోర్టల్ తెరవండి';
+
+  @override
+  String get surrenderBonusInfo =>
+      '5 సంవత్సరాల ముందు సరెండర్ చేస్తే: బోనస్ లేదు';
+
+  @override
+  String wlaConversionInfo(int age) {
+    return '$age సంవత్సరాల వయస్సు వరకు ఎండోమెంట్ అష్యూరెన్స్‌గా మార్చవచ్చు';
+  }
+
+  @override
+  String get serviceStandardTitle => 'ఇండియా పోస్ట్ సేవా ప్రమాణం';
+
+  @override
+  String serviceStandardDays(int days) {
+    return 'పూర్తి పత్రాలు అందిన $days రోజుల్లో పరిష్కారం';
+  }
+
+  @override
+  String serviceStandardDeath(int days, int investigationDays) {
+    return '$days రోజుల్లో పరిష్కారం; విచారణ అవసరమైతే $investigationDays రోజులు';
+  }
+
+  @override
+  String serviceStandardBond(int days) {
+    return 'పూర్తి పత్రాలు అందిన $days రోజుల్లో అంగీకార పత్రం మరియు పాలసీ బాండ్';
+  }
+
+  @override
+  String get tipAckSlip =>
+      'సమర్పించేటప్పుడు సంతకం చేసిన రసీదు స్లిప్ తీసుకోండి, CPC మరిన్ని పత్రాలు అడిగితే త్వరగా స్పందించండి.';
+
+  @override
+  String get tipMessenger =>
+      'బీమాదారు రాలేకపోతే (అనారోగ్యం లేదా విదేశంలో), సందేశవాహకుడు తన గుర్తింపు, చిరునామా రుజువుతో పాటు బీమాదారు వైద్య ధృవపత్రం లేదా పాస్‌పోర్ట్ కాపీతో సమర్పించవచ్చు.';
+
+  @override
+  String get tipDeath =>
+      'మరణ క్లెయిమ్‌ను ఏ పోస్టాఫీసులోనైనా సమర్పించవచ్చు. కొన్ని కేసుల్లో విచారణ జరుగుతుంది; దయచేసి సహకరించండి.';
+
+  @override
+  String get checklistOfficialNote =>
+      'ఈ జాబితా ఇండియా పోస్ట్ వినియోగదారుల మార్గదర్శకాల నుండి.';
+
+  @override
+  String get doc_loanReceipt => 'రుణ చెల్లింపు రసీదు పుస్తకం (రుణం తీసుకుంటే)';
+
+  @override
+  String get doc_postMortem => 'పోస్ట్‌మార్టం నివేదిక మరియు FIR (అసహజ మరణం)';
+
+  @override
+  String get doc_succession =>
+      'వారసత్వ ధృవపత్రం లేదా ప్రొబేట్ (నామినేషన్ లేకపోతే)';
+
+  @override
+  String get doc_claimantAddress => 'క్లెయిమ్‌దారుని చిరునామా రుజువు';
+
+  @override
+  String get doc_ddoCertificate =>
+      'గత 6 నెలల ప్రీమియం కోత DDO ధృవపత్రం (జీతం పాలసీలు)';
+
+  @override
+  String get doc_policyBondCopy => 'పాలసీ బాండ్ స్వీయ ధృవీకృత కాపీ';
+
+  @override
+  String get revivalRulesInfo =>
+      'ప్రీమియం 6 నెలలు (మొదటి 3 సంవత్సరాలు) లేదా 12 నెలలు (3 సంవత్సరాల తర్వాత) చెల్లించకపోతే పాలసీ ల్యాప్స్ అవుతుంది. మొదటి బకాయి వాయిదా నుండి 5 సంవత్సరాలలోపు సంవత్సరానికి 12% వడ్డీ మరియు మంచి ఆరోగ్య ధృవపత్రంతో పునరుద్ధరించవచ్చు; బకాయిని గరిష్ఠంగా 12 వాయిదాల్లో చెల్లించవచ్చు.';
 }

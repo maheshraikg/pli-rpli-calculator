@@ -8,7 +8,19 @@ import '../../l10n/app_localizations.dart';
 import '../../core/app_icons.dart';
 
 class FormService {
-  const FormService({required this.id, required this.icon, required this.docs, required this.letter, this.pdfAsset, this.pdfSource, this.formUrl});
+  const FormService({
+    required this.id,
+    required this.icon,
+    required this.docs,
+    required this.letter,
+    this.pdfAsset,
+    this.pdfSource,
+    this.formUrl,
+    this.officialChecklist = false,
+    this.serviceStandardDays,
+    this.investigationDays,
+    this.tips = const [],
+  });
 
   final String id;
   final IconData icon;
@@ -28,6 +40,18 @@ class FormService {
   /// Download link for the official form (e.g. a Google Drive file shared
   /// as "anyone with the link"), if one has been added.
   final String? formUrl;
+
+  /// Whether [docs] follows India Post's Guidelines for Customers.
+  final bool officialChecklist;
+
+  /// India Post's Citizen Charter time limit after complete documents.
+  final int? serviceStandardDays;
+
+  /// Longer limit for death claims that need investigation.
+  final int? investigationDays;
+
+  /// Tip ids, localised by [tipText].
+  final List<String> tips;
 }
 
 class FormsCatalog {
@@ -48,6 +72,10 @@ class FormsCatalog {
             pdfAsset: s['pdfAsset'] as String?,
             pdfSource: s['pdfSource'] as String?,
             formUrl: s['formUrl'] as String?,
+            officialChecklist: s['officialChecklist'] as bool? ?? false,
+            serviceStandardDays: s['serviceStandardDays'] as int?,
+            investigationDays: s['investigationDays'] as int?,
+            tips: ((s['tips'] as List?) ?? const []).cast<String>(),
           ),
       ],
     );
@@ -126,5 +154,19 @@ String docName(AppLocalizations l, String id) => switch (id) {
   'eligibility' => l.doc_eligibility,
   'nomineeDetails' => l.doc_nomineeDetails,
   'indemnity' => l.doc_indemnity,
+  'loanReceipt' => l.doc_loanReceipt,
+  'postMortem' => l.doc_postMortem,
+  'succession' => l.doc_succession,
+  'claimantAddress' => l.doc_claimantAddress,
+  'ddoCertificate' => l.doc_ddoCertificate,
+  'policyBondCopy' => l.doc_policyBondCopy,
+  _ => id,
+};
+
+String tipText(AppLocalizations l, String id) => switch (id) {
+  'ackSlip' => l.tipAckSlip,
+  'messenger' => l.tipMessenger,
+  'death' => l.tipDeath,
+  'revival' => l.revivalRulesInfo,
   _ => id,
 };

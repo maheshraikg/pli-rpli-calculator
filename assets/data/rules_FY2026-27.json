@@ -78,6 +78,7 @@
         60
       ],
       "maturityAge": 80,
+      "wlaConversionMaxAge": 59,
       "loanAfterYears": 4,
       "surrenderAfterYears": 3,
       "bonusClass": "WLA",

@@ -10,7 +10,7 @@ class AppLocalizationsAs extends AppLocalizations {
   AppLocalizationsAs([String locale = 'as']) : super(locale);
 
   @override
-  String get appTitle => 'PLI & RPLI কেলকুলেটৰ';
+  String get appTitle => 'PO Premium Calculator';
 
   @override
   String get tilePremium => 'প্ৰিমিয়াম';
@@ -900,7 +900,7 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'PLI & RPLI কেলকুলেটৰে কোনো তথ্য সংগ্ৰহ নকৰে। আপুনি লিখা বা সংৰক্ষণ কৰা সকলো এই ফোনতে থাকে। একাউণ্ট বা ইণ্টাৰনেটৰ প্ৰয়োজন নাই।';
+      'PO Premium Calculator-এ কোনো তথ্য সংগ্ৰহ নকৰে। আপুনি লিখা বা সংৰক্ষণ কৰা সকলো এই ফোনতে থাকে। একাউণ্ট বা ইণ্টাৰনেটৰ প্ৰয়োজন নাই।';
 
   @override
   String get dataSourceTitle => 'হাৰৰ তথ্য';
@@ -1235,7 +1235,7 @@ class AppLocalizationsAs extends AppLocalizations {
   }
 
   @override
-  String get importFailed => 'এইটো PLI & RPLI কেলকুলেটৰৰ বেকআপ ফাইল নহয়।';
+  String get importFailed => 'এইটো PO Premium Calculator-ৰ বেকআপ ফাইল নহয়।';
 
   @override
   String get backupNote =>
@@ -1460,4 +1460,101 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get equivalentAgeRow => 'সমতুল্য বয়স (দুয়োজন সংগী)';
+
+  @override
+  String get linkSewaTitle => 'ডাক বীমা সেৱা পৰ্টেল';
+
+  @override
+  String get linkSewaDesc =>
+      'নতুন চৰকাৰী PLI পৰ্টেল: লগইন, প্ৰিমিয়াম পৰিশোধ, ষ্টেটমেণ্ট';
+
+  @override
+  String get linkRegisterTitle => 'পঞ্জীয়ন কৰক বা গ্ৰাহক আইডি লওক';
+
+  @override
+  String get linkRegisterDesc => 'পলিচিধাৰীৰ বাবে প্ৰথমবাৰ লগইন';
+
+  @override
+  String get linkGuidelinesTitle => 'গ্ৰাহকৰ বাবে নিৰ্দেশনা';
+
+  @override
+  String get linkGuidelinesDesc => 'দাবী, ঋণ আৰু পুনৰুজ্জীৱনৰ চৰকাৰী পদক্ষেপ';
+
+  @override
+  String get payOnlineTitle => 'অনলাইনত প্ৰিমিয়াম পৰিশোধ';
+
+  @override
+  String get payOnlineSteps =>
+      '1. ডাক বীমা সেৱা পৰ্টেলত আপোনাৰ গ্ৰাহক আইডিৰে পঞ্জীয়ন কৰক (পঞ্জীভুক্ত মোবাইলত আইডি পাবলৈ \"Get Customer ID\" টিপক)।\n2. লগইন কৰি পলিচি বাছক।\n3. UPI, নেট বেংকিং বা ডেবিট কাৰ্ডেৰে পৰিশোধ কৰক।\n4. ৰচিদ ডাউনলোড কৰক। বাৰ্ষিক প্ৰিমিয়াম ৰচিদ আয়কৰত কামত আহে।';
+
+  @override
+  String get payOnlineButton => 'পৰ্টেল খোলক';
+
+  @override
+  String get surrenderBonusInfo =>
+      '5 বছৰৰ আগতে চাৰেণ্ডাৰ কৰিলে: কোনো বোনাছ নাই';
+
+  @override
+  String wlaConversionInfo(int age) {
+    return '$age বছৰ বয়সলৈকে এণ্ডাউমেণ্ট এচিউৰেঞ্চলৈ সলনি কৰিব পাৰি';
+  }
+
+  @override
+  String get serviceStandardTitle => 'ইণ্ডিয়া পোষ্ট সেৱাৰ মানদণ্ড';
+
+  @override
+  String serviceStandardDays(int days) {
+    return 'সম্পূৰ্ণ নথি পোৱাৰ $days দিনৰ ভিতৰত নিষ্পত্তি';
+  }
+
+  @override
+  String serviceStandardDeath(int days, int investigationDays) {
+    return '$days দিনৰ ভিতৰত নিষ্পত্তি; তদন্তৰ প্ৰয়োজন হ\'লে $investigationDays দিন';
+  }
+
+  @override
+  String serviceStandardBond(int days) {
+    return 'সম্পূৰ্ণ নথি পোৱাৰ $days দিনৰ ভিতৰত গ্ৰহণ পত্ৰ আৰু পলিচি বণ্ড';
+  }
+
+  @override
+  String get tipAckSlip =>
+      'জমা দিওঁতে চহী কৰা প্ৰাপ্তিস্বীকাৰ শ্লিপ লওক, আৰু CPC এ অধিক নথি বিচাৰিলে সোনকালে উত্তৰ দিয়ক।';
+
+  @override
+  String get tipMessenger =>
+      'বীমাকাৰী আহিব নোৱাৰিলে (অসুস্থ বা বিদেশত), বাৰ্তাবাহকে নিজৰ পৰিচয় আৰু ঠিকনাৰ প্ৰমাণ লগতে বীমাকাৰীৰ চিকিৎসা প্ৰমাণপত্ৰ বা পাছপ\'ৰ্টৰ প্ৰতিলিপি লৈ জমা দিব পাৰে।';
+
+  @override
+  String get tipDeath =>
+      'মৃত্যু দাবী যিকোনো ডাকঘৰত জমা দিব পাৰি। কিছুমান ক্ষেত্ৰত তদন্ত হয়; অনুগ্ৰহ কৰি সহযোগ কৰক।';
+
+  @override
+  String get checklistOfficialNote =>
+      'এই তালিকা ইণ্ডিয়া পোষ্টৰ গ্ৰাহক নিৰ্দেশনাৰ পৰা।';
+
+  @override
+  String get doc_loanReceipt => 'ঋণ পৰিশোধৰ ৰচিদ বহী (ঋণ লোৱা থাকিলে)';
+
+  @override
+  String get doc_postMortem =>
+      'ময়না তদন্তৰ প্ৰতিবেদন আৰু FIR (অস্বাভাৱিক মৃত্যু)';
+
+  @override
+  String get doc_succession =>
+      'উত্তৰাধিকাৰ প্ৰমাণপত্ৰ বা প্ৰ\'বেট (মনোনয়ন নাথাকিলে)';
+
+  @override
+  String get doc_claimantAddress => 'দাবীদাৰৰ ঠিকনাৰ প্ৰমাণ';
+
+  @override
+  String get doc_ddoCertificate =>
+      'যোৱা 6 মাহৰ প্ৰিমিয়াম কৰ্তনৰ DDO প্ৰমাণপত্ৰ (দৰমহা পলিচি)';
+
+  @override
+  String get doc_policyBondCopy => 'পলিচি বণ্ডৰ স্ব-প্ৰমাণিত প্ৰতিলিপি';
+
+  @override
+  String get revivalRulesInfo =>
+      'প্ৰিমিয়াম 6 মাহ (প্ৰথম 3 বছৰ) বা 12 মাহ (3 বছৰৰ পিছত) নিদিলে পলিচি লেপছ হয়। প্ৰথম বকেয়া কিস্তিৰ পৰা 5 বছৰৰ ভিতৰত বছৰি 12% সুত আৰু সুস্বাস্থ্যৰ প্ৰমাণপত্ৰৰে ইয়াক পুনৰুজ্জীৱিত কৰিব পাৰি; বকেয়া সৰ্বাধিক 12টা কিস্তিত দিব পাৰি।';
 }

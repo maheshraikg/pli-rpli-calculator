@@ -3,7 +3,7 @@
 
 - Legacy icons: the art with its white outer corners made transparent.
 - Adaptive icon: the art scaled into the safe zone on a matching red
-  background, so circle/squircle masks never clip the PLI / RPLI lettering.
+  background, so circle/squircle masks never clip the banner lettering.
 - assets/images/app_icon.png: the icon shown in the app's home header.
 - Play Store icon 512x512: full-bleed square (Play rounds the corners itself).
 

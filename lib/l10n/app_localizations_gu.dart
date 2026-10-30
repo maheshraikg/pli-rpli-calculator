@@ -10,7 +10,7 @@ class AppLocalizationsGu extends AppLocalizations {
   AppLocalizationsGu([String locale = 'gu']) : super(locale);
 
   @override
-  String get appTitle => 'PLI & RPLI કેલ્ક્યુલેટર';
+  String get appTitle => 'PO Premium Calculator';
 
   @override
   String get tilePremium => 'પ્રીમિયમ';
@@ -897,7 +897,7 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'PLI & RPLI કેલ્ક્યુલેટર કોઈ ડેટા એકત્ર કરતું નથી. તમે દાખલ કરો કે સાચવો તે બધું આ ફોન પર જ રહે છે. ખાતું કે ઇન્ટરનેટ જરૂરી નથી.';
+      'PO Premium Calculator કોઈ ડેટા એકત્ર કરતું નથી. તમે દાખલ કરો કે સાચવો તે બધું આ ફોન પર જ રહે છે. ખાતું કે ઇન્ટરનેટ જરૂરી નથી.';
 
   @override
   String get dataSourceTitle => 'દર ડેટા';
@@ -1231,7 +1231,7 @@ class AppLocalizationsGu extends AppLocalizations {
   }
 
   @override
-  String get importFailed => 'આ PLI & RPLI કેલ્ક્યુલેટર બેકઅપ ફાઇલ નથી.';
+  String get importFailed => 'આ PO Premium Calculator બેકઅપ ફાઇલ નથી.';
 
   @override
   String get backupNote =>
@@ -1456,4 +1456,100 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get equivalentAgeRow => 'સમકક્ષ ઉંમર (બંને જીવનસાથી)';
+
+  @override
+  String get linkSewaTitle => 'ડાક બીમા સેવા પોર્ટલ';
+
+  @override
+  String get linkSewaDesc =>
+      'નવું અધિકૃત PLI પોર્ટલ: લૉગિન, પ્રીમિયમ ચુકવણી, સ્ટેટમેન્ટ';
+
+  @override
+  String get linkRegisterTitle => 'નોંધણી કરો અથવા ગ્રાહક ID મેળવો';
+
+  @override
+  String get linkRegisterDesc => 'પોલિસીધારકો માટે પ્રથમ વખત લૉગિન';
+
+  @override
+  String get linkGuidelinesTitle => 'ગ્રાહકો માટે માર્ગદર્શિકા';
+
+  @override
+  String get linkGuidelinesDesc => 'દાવો, લોન અને પુનર્જીવનનાં અધિકૃત પગલાં';
+
+  @override
+  String get payOnlineTitle => 'ઓનલાઇન પ્રીમિયમ ચુકવણી';
+
+  @override
+  String get payOnlineSteps =>
+      '1. ડાક બીમા સેવા પોર્ટલ પર તમારા ગ્રાહક ID વડે નોંધણી કરો (નોંધાયેલ મોબાઇલ પર ID મેળવવા \"Get Customer ID\" દબાવો).\n2. લૉગિન કરો અને પોલિસી પસંદ કરો.\n3. UPI, નેટ બૅન્કિંગ અથવા ડેબિટ કાર્ડથી ચુકવણી કરો.\n4. રસીદ ડાઉનલોડ કરો. વાર્ષિક પ્રીમિયમ રસીદો આવકવેરામાં ઉપયોગી છે.';
+
+  @override
+  String get payOnlineButton => 'પોર્ટલ ખોલો';
+
+  @override
+  String get surrenderBonusInfo =>
+      '5 વર્ષ પહેલાં સરેન્ડર કરવાથી: કોઈ બોનસ નહીં';
+
+  @override
+  String wlaConversionInfo(int age) {
+    return '$age વર્ષની ઉંમર સુધી એન્ડોમેન્ટ એશ્યોરન્સમાં બદલી શકાય';
+  }
+
+  @override
+  String get serviceStandardTitle => 'ઇન્ડિયા પોસ્ટ સેવા ધોરણ';
+
+  @override
+  String serviceStandardDays(int days) {
+    return 'સંપૂર્ણ દસ્તાવેજો મળ્યાના $days દિવસમાં નિકાલ';
+  }
+
+  @override
+  String serviceStandardDeath(int days, int investigationDays) {
+    return '$days દિવસમાં નિકાલ; તપાસ જરૂરી હોય તો $investigationDays દિવસ';
+  }
+
+  @override
+  String serviceStandardBond(int days) {
+    return 'સંપૂર્ણ દસ્તાવેજો મળ્યાના $days દિવસમાં સ્વીકૃતિ પત્ર અને પોલિસી બોન્ડ';
+  }
+
+  @override
+  String get tipAckSlip =>
+      'જમા કરતી વખતે સહી કરેલી પહોંચ સ્લિપ લો, અને CPC વધુ દસ્તાવેજો માગે તો ઝડપથી જવાબ આપો.';
+
+  @override
+  String get tipMessenger =>
+      'જો વીમાધારક આવી ન શકે (બીમાર કે વિદેશમાં), તો સંદેશવાહક પોતાના ઓળખ અને સરનામાના પુરાવા સાથે વીમાધારકનું તબીબી પ્રમાણપત્ર કે પાસપોર્ટની નકલ લઈને જમા કરી શકે.';
+
+  @override
+  String get tipDeath =>
+      'મૃત્યુ દાવો કોઈપણ પોસ્ટ ઑફિસમાં જમા કરી શકાય. કેટલાક કેસમાં તપાસ થાય છે; કૃપા કરીને સહકાર આપો.';
+
+  @override
+  String get checklistOfficialNote =>
+      'આ યાદી ઇન્ડિયા પોસ્ટની ગ્રાહક માર્ગદર્શિકામાંથી છે.';
+
+  @override
+  String get doc_loanReceipt => 'લોન ચુકવણી રસીદ બુક (લોન લીધી હોય તો)';
+
+  @override
+  String get doc_postMortem => 'પોસ્ટમૉર્ટમ રિપોર્ટ અને FIR (અકુદરતી મૃત્યુ)';
+
+  @override
+  String get doc_succession =>
+      'વારસાઈ પ્રમાણપત્ર અથવા પ્રોબેટ (નોમિનેશન ન હોય તો)';
+
+  @override
+  String get doc_claimantAddress => 'દાવેદારનો સરનામાનો પુરાવો';
+
+  @override
+  String get doc_ddoCertificate =>
+      'છેલ્લા 6 મહિનાની પ્રીમિયમ કપાતનું DDO પ્રમાણપત્ર (પગાર પોલિસી)';
+
+  @override
+  String get doc_policyBondCopy => 'પોલિસી બોન્ડની સ્વ-પ્રમાણિત નકલ';
+
+  @override
+  String get revivalRulesInfo =>
+      'પ્રીમિયમ 6 મહિના (પ્રથમ 3 વર્ષ) અથવા 12 મહિના (3 વર્ષ પછી) ન ભરાય તો પોલિસી લેપ્સ થાય છે. પ્રથમ બાકી હપ્તાથી 5 વર્ષની અંદર વાર્ષિક 12% વ્યાજ અને સારા આરોગ્યના પ્રમાણપત્ર સાથે તેને પુનર્જીવિત કરી શકાય; બાકી રકમ વધુમાં વધુ 12 હપ્તામાં ભરી શકાય.';
 }

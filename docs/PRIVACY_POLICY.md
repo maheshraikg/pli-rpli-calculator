@@ -1,8 +1,8 @@
-# PLI & RPLI Calculator — Privacy Policy
+# PO Premium Calculator — Privacy Policy
 
-_Last updated: 26 October 2026_
+_Last updated: 30 October 2026_
 
-PLI & RPLI Calculator ("the app") is an independent calculator for India
+PO Premium Calculator ("the app") is an independent calculator for India
 Post's Postal Life Insurance (PLI) and Rural Postal Life Insurance (RPLI).
 It is **not** an official India Post or Department of Posts app and is not
 affiliated with the Government of India.

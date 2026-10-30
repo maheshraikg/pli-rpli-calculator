@@ -17,7 +17,27 @@ typedef OfficialLink = ({
   String url,
 });
 
+const kSewaPortal = 'https://ims.indiapost.gov.in/plicustomerportal';
+
 final officialLinks = <OfficialLink>[
+  (
+    icon: AppIcons.globeHemisphereEast,
+    title: (l) => l.linkSewaTitle,
+    desc: (l) => l.linkSewaDesc,
+    url: '$kSewaPortal/home',
+  ),
+  (
+    icon: AppIcons.identificationBadge,
+    title: (l) => l.linkRegisterTitle,
+    desc: (l) => l.linkRegisterDesc,
+    url: '$kSewaPortal/register',
+  ),
+  (
+    icon: AppIcons.bookOpenText,
+    title: (l) => l.linkGuidelinesTitle,
+    desc: (l) => l.linkGuidelinesDesc,
+    url: '$kSewaPortal/pli-customer/miscellaneous/guidelines-for-customers',
+  ),
   (
     icon: AppIcons.umbrella,
     title: (l) => l.linkPortalTitle,
@@ -68,6 +88,22 @@ class LinksScreen extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
+          SectionCard(
+            title: l.payOnlineTitle,
+            icon: AppIcons.wallet,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text(l.payOnlineSteps),
+                const SizedBox(height: 12),
+                FilledButton.icon(
+                  icon: const Icon(AppIcons.arrowSquareOutLine),
+                  label: Text(l.payOnlineButton),
+                  onPressed: () => launchUrl(Uri.parse('$kSewaPortal/home'), mode: LaunchMode.externalApplication),
+                ),
+              ],
+            ),
+          ),
           for (final link in officialLinks)
             Card(
               child: ListTile(

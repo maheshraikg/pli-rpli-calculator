@@ -19,7 +19,9 @@ void main() {
 
   testWidgets('links screen lists every link and the independence note', (tester) async {
     await pumpApp(tester, location: '/links');
-    expect(find.text('PLI Customer Portal'), findsOneWidget);
+    expect(find.text('Pay premium online'), findsOneWidget);
+    await tester.scrollUntilVisible(find.text('Dak Bima Sewa Portal'), 200);
+    await tester.scrollUntilVisible(find.text('PLI Customer Portal'), 200);
     await tester.scrollUntilVisible(find.textContaining('not affiliated'), 200);
     expect(find.text('Toll-free 1800 266 6868'), findsOneWidget);
     expect(find.textContaining('not affiliated with India Post'), findsOneWidget);

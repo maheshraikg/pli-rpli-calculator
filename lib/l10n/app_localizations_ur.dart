@@ -10,7 +10,7 @@ class AppLocalizationsUr extends AppLocalizations {
   AppLocalizationsUr([String locale = 'ur']) : super(locale);
 
   @override
-  String get appTitle => 'PLI & RPLI کیلکولیٹر';
+  String get appTitle => 'PO Premium Calculator';
 
   @override
   String get tilePremium => 'پریمیم';
@@ -899,7 +899,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'PLI & RPLI کیلکولیٹر کوئی ڈیٹا جمع نہیں کرتا۔ آپ جو بھی درج یا محفوظ کرتے ہیں وہ اسی فون پر رہتا ہے۔ کسی اکاؤنٹ یا انٹرنیٹ کی ضرورت نہیں۔';
+      'PO Premium Calculator کوئی ڈیٹا جمع نہیں کرتا۔ آپ جو بھی درج یا محفوظ کرتے ہیں وہ اسی فون پر رہتا ہے۔ کسی اکاؤنٹ یا انٹرنیٹ کی ضرورت نہیں۔';
 
   @override
   String get dataSourceTitle => 'شرح کا ڈیٹا';
@@ -1233,7 +1233,7 @@ class AppLocalizationsUr extends AppLocalizations {
   }
 
   @override
-  String get importFailed => 'یہ PLI & RPLI کیلکولیٹر کی بیک اپ فائل نہیں ہے۔';
+  String get importFailed => 'یہ PO Premium Calculator کی بیک اپ فائل نہیں ہے۔';
 
   @override
   String get backupNote =>
@@ -1459,4 +1459,99 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get equivalentAgeRow => 'مساوی عمر (دونوں میاں بیوی)';
+
+  @override
+  String get linkSewaTitle => 'ڈاک بیمہ سیوا پورٹل';
+
+  @override
+  String get linkSewaDesc =>
+      'نیا سرکاری PLI پورٹل: لاگ ان، پریمیم کی ادائیگی، اسٹیٹمنٹ';
+
+  @override
+  String get linkRegisterTitle => 'رجسٹر کریں یا کسٹمر آئی ڈی حاصل کریں';
+
+  @override
+  String get linkRegisterDesc => 'پالیسی ہولڈرز کے لیے پہلی بار لاگ ان';
+
+  @override
+  String get linkGuidelinesTitle => 'صارفین کے لیے رہنما اصول';
+
+  @override
+  String get linkGuidelinesDesc => 'دعوے، قرض اور بحالی کے سرکاری مراحل';
+
+  @override
+  String get payOnlineTitle => 'آن لائن پریمیم کی ادائیگی';
+
+  @override
+  String get payOnlineSteps =>
+      '1. ڈاک بیمہ سیوا پورٹل پر اپنی کسٹمر آئی ڈی سے رجسٹر کریں (رجسٹرڈ موبائل پر آئی ڈی حاصل کرنے کے لیے \"Get Customer ID\" دبائیں)۔\n2. لاگ ان کریں اور پالیسی منتخب کریں۔\n3. UPI، نیٹ بینکنگ یا ڈیبٹ کارڈ سے ادائیگی کریں۔\n4. رسید ڈاؤن لوڈ کریں۔ سالانہ پریمیم رسیدیں انکم ٹیکس میں کام آتی ہیں۔';
+
+  @override
+  String get payOnlineButton => 'پورٹل کھولیں';
+
+  @override
+  String get surrenderBonusInfo =>
+      '5 سال سے پہلے سرنڈر کرنے پر: کوئی بونس نہیں';
+
+  @override
+  String wlaConversionInfo(int age) {
+    return '$age سال کی عمر تک اینڈاؤمنٹ ایشورنس میں تبدیل کی جا سکتی ہے';
+  }
+
+  @override
+  String get serviceStandardTitle => 'انڈیا پوسٹ سروس معیار';
+
+  @override
+  String serviceStandardDays(int days) {
+    return 'مکمل دستاویزات ملنے کے $days دن کے اندر تصفیہ';
+  }
+
+  @override
+  String serviceStandardDeath(int days, int investigationDays) {
+    return '$days دن کے اندر تصفیہ؛ تحقیقات درکار ہوں تو $investigationDays دن';
+  }
+
+  @override
+  String serviceStandardBond(int days) {
+    return 'مکمل دستاویزات ملنے کے $days دن کے اندر منظوری خط اور پالیسی بانڈ';
+  }
+
+  @override
+  String get tipAckSlip =>
+      'جمع کراتے وقت دستخط شدہ رسید پرچی لیں، اور CPC مزید دستاویزات مانگے تو جلد جواب دیں۔';
+
+  @override
+  String get tipMessenger =>
+      'اگر بیمہ دار نہیں آ سکتا (بیمار یا بیرون ملک)، تو پیغام رساں اپنے شناختی اور پتے کے ثبوت کے ساتھ بیمہ دار کا میڈیکل سرٹیفکیٹ یا پاسپورٹ کی نقل لے کر جمع کرا سکتا ہے۔';
+
+  @override
+  String get tipDeath =>
+      'موت کا دعویٰ کسی بھی ڈاک خانے میں جمع کرایا جا سکتا ہے۔ کچھ معاملات کی تحقیقات ہوتی ہے؛ براہ کرم تعاون کریں۔';
+
+  @override
+  String get checklistOfficialNote =>
+      'یہ فہرست انڈیا پوسٹ کے صارفین کے رہنما اصولوں سے ہے۔';
+
+  @override
+  String get doc_loanReceipt => 'قرض کی واپسی کی رسید بک (اگر قرض لیا ہو)';
+
+  @override
+  String get doc_postMortem => 'پوسٹ مارٹم رپورٹ اور FIR (غیر فطری موت)';
+
+  @override
+  String get doc_succession => 'جانشینی سرٹیفکیٹ یا پروبیٹ (اگر نامزدگی نہ ہو)';
+
+  @override
+  String get doc_claimantAddress => 'دعویدار کے پتے کا ثبوت';
+
+  @override
+  String get doc_ddoCertificate =>
+      'پچھلے 6 ماہ کی پریمیم کٹوتی کا DDO سرٹیفکیٹ (تنخواہ پالیسیاں)';
+
+  @override
+  String get doc_policyBondCopy => 'پالیسی بانڈ کی خود تصدیق شدہ نقل';
+
+  @override
+  String get revivalRulesInfo =>
+      'پریمیم 6 ماہ (پہلے 3 سال) یا 12 ماہ (3 سال کے بعد) ادا نہ ہو تو پالیسی ختم ہو جاتی ہے۔ پہلی بقایا قسط سے 5 سال کے اندر سالانہ 12% سود اور اچھی صحت کے سرٹیفکیٹ کے ساتھ اسے بحال کیا جا سکتا ہے؛ بقایا زیادہ سے زیادہ 12 قسطوں میں ادا کیا جا سکتا ہے۔';
 }

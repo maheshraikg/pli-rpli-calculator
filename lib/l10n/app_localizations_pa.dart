@@ -10,7 +10,7 @@ class AppLocalizationsPa extends AppLocalizations {
   AppLocalizationsPa([String locale = 'pa']) : super(locale);
 
   @override
-  String get appTitle => 'PLI & RPLI ਕੈਲਕੁਲੇਟਰ';
+  String get appTitle => 'PO Premium Calculator';
 
   @override
   String get tilePremium => 'ਪ੍ਰੀਮੀਅਮ';
@@ -896,7 +896,7 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'PLI & RPLI ਕੈਲਕੁਲੇਟਰ ਕੋਈ ਡਾਟਾ ਇਕੱਠਾ ਨਹੀਂ ਕਰਦਾ। ਤੁਸੀਂ ਜੋ ਵੀ ਭਰਦੇ ਜਾਂ ਸੰਭਾਲਦੇ ਹੋ, ਉਹ ਇਸੇ ਫ਼ੋਨ ਉੱਤੇ ਰਹਿੰਦਾ ਹੈ। ਖਾਤੇ ਜਾਂ ਇੰਟਰਨੈੱਟ ਦੀ ਲੋੜ ਨਹੀਂ।';
+      'PO Premium Calculator ਕੋਈ ਡਾਟਾ ਇਕੱਠਾ ਨਹੀਂ ਕਰਦਾ। ਤੁਸੀਂ ਜੋ ਵੀ ਭਰਦੇ ਜਾਂ ਸੰਭਾਲਦੇ ਹੋ, ਉਹ ਇਸੇ ਫ਼ੋਨ ਉੱਤੇ ਰਹਿੰਦਾ ਹੈ। ਖਾਤੇ ਜਾਂ ਇੰਟਰਨੈੱਟ ਦੀ ਲੋੜ ਨਹੀਂ।';
 
   @override
   String get dataSourceTitle => 'ਦਰ ਡਾਟਾ';
@@ -1231,7 +1231,7 @@ class AppLocalizationsPa extends AppLocalizations {
   }
 
   @override
-  String get importFailed => 'ਇਹ PLI & RPLI ਕੈਲਕੁਲੇਟਰ ਬੈਕਅੱਪ ਫ਼ਾਈਲ ਨਹੀਂ ਹੈ।';
+  String get importFailed => 'ਇਹ PO Premium Calculator ਬੈਕਅੱਪ ਫ਼ਾਈਲ ਨਹੀਂ ਹੈ।';
 
   @override
   String get backupNote =>
@@ -1456,4 +1456,101 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get equivalentAgeRow => 'ਬਰਾਬਰ ਉਮਰ (ਦੋਵੇਂ ਜੀਵਨ ਸਾਥੀ)';
+
+  @override
+  String get linkSewaTitle => 'ਡਾਕ ਬੀਮਾ ਸੇਵਾ ਪੋਰਟਲ';
+
+  @override
+  String get linkSewaDesc =>
+      'ਨਵਾਂ ਅਧਿਕਾਰਤ PLI ਪੋਰਟਲ: ਲੌਗਇਨ, ਪ੍ਰੀਮੀਅਮ ਭੁਗਤਾਨ, ਸਟੇਟਮੈਂਟ';
+
+  @override
+  String get linkRegisterTitle => 'ਰਜਿਸਟਰ ਕਰੋ ਜਾਂ ਗਾਹਕ ID ਲਓ';
+
+  @override
+  String get linkRegisterDesc => 'ਪਾਲਿਸੀਧਾਰਕਾਂ ਲਈ ਪਹਿਲੀ ਵਾਰ ਲੌਗਇਨ';
+
+  @override
+  String get linkGuidelinesTitle => 'ਗਾਹਕਾਂ ਲਈ ਦਿਸ਼ਾ-ਨਿਰਦੇਸ਼';
+
+  @override
+  String get linkGuidelinesDesc =>
+      'ਦਾਅਵੇ, ਕਰਜ਼ੇ ਅਤੇ ਮੁੜ-ਚਾਲੂ ਕਰਨ ਦੇ ਅਧਿਕਾਰਤ ਕਦਮ';
+
+  @override
+  String get payOnlineTitle => 'ਆਨਲਾਈਨ ਪ੍ਰੀਮੀਅਮ ਭੁਗਤਾਨ';
+
+  @override
+  String get payOnlineSteps =>
+      '1. ਡਾਕ ਬੀਮਾ ਸੇਵਾ ਪੋਰਟਲ \'ਤੇ ਆਪਣੀ ਗਾਹਕ ID ਨਾਲ ਰਜਿਸਟਰ ਕਰੋ (ਰਜਿਸਟਰਡ ਮੋਬਾਈਲ \'ਤੇ ID ਲੈਣ ਲਈ \"Get Customer ID\" ਦਬਾਓ)।\n2. ਲੌਗਇਨ ਕਰੋ ਅਤੇ ਪਾਲਿਸੀ ਚੁਣੋ।\n3. UPI, ਨੈੱਟ ਬੈਂਕਿੰਗ ਜਾਂ ਡੈਬਿਟ ਕਾਰਡ ਨਾਲ ਭੁਗਤਾਨ ਕਰੋ।\n4. ਰਸੀਦ ਡਾਊਨਲੋਡ ਕਰੋ। ਸਾਲਾਨਾ ਪ੍ਰੀਮੀਅਮ ਰਸੀਦਾਂ ਆਮਦਨ ਕਰ ਵਿੱਚ ਕੰਮ ਆਉਂਦੀਆਂ ਹਨ।';
+
+  @override
+  String get payOnlineButton => 'ਪੋਰਟਲ ਖੋਲ੍ਹੋ';
+
+  @override
+  String get surrenderBonusInfo =>
+      '5 ਸਾਲ ਤੋਂ ਪਹਿਲਾਂ ਸਰੰਡਰ ਕਰਨ \'ਤੇ: ਕੋਈ ਬੋਨਸ ਨਹੀਂ';
+
+  @override
+  String wlaConversionInfo(int age) {
+    return '$age ਸਾਲ ਦੀ ਉਮਰ ਤੱਕ ਐਂਡੋਮੈਂਟ ਅਸ਼ੋਰੈਂਸ ਵਿੱਚ ਬਦਲੀ ਜਾ ਸਕਦੀ ਹੈ';
+  }
+
+  @override
+  String get serviceStandardTitle => 'ਇੰਡੀਆ ਪੋਸਟ ਸੇਵਾ ਮਿਆਰ';
+
+  @override
+  String serviceStandardDays(int days) {
+    return 'ਪੂਰੇ ਦਸਤਾਵੇਜ਼ ਮਿਲਣ ਦੇ $days ਦਿਨਾਂ ਵਿੱਚ ਨਿਪਟਾਰਾ';
+  }
+
+  @override
+  String serviceStandardDeath(int days, int investigationDays) {
+    return '$days ਦਿਨਾਂ ਵਿੱਚ ਨਿਪਟਾਰਾ; ਜਾਂਚ ਦੀ ਲੋੜ ਹੋਵੇ ਤਾਂ $investigationDays ਦਿਨ';
+  }
+
+  @override
+  String serviceStandardBond(int days) {
+    return 'ਪੂਰੇ ਦਸਤਾਵੇਜ਼ ਮਿਲਣ ਦੇ $days ਦਿਨਾਂ ਵਿੱਚ ਪ੍ਰਵਾਨਗੀ ਪੱਤਰ ਅਤੇ ਪਾਲਿਸੀ ਬਾਂਡ';
+  }
+
+  @override
+  String get tipAckSlip =>
+      'ਜਮ੍ਹਾਂ ਕਰਦੇ ਸਮੇਂ ਦਸਤਖ਼ਤ ਵਾਲੀ ਰਸੀਦ ਪਰਚੀ ਲਓ, ਅਤੇ CPC ਹੋਰ ਦਸਤਾਵੇਜ਼ ਮੰਗੇ ਤਾਂ ਜਲਦੀ ਜਵਾਬ ਦਿਓ।';
+
+  @override
+  String get tipMessenger =>
+      'ਜੇ ਬੀਮਾਧਾਰਕ ਨਹੀਂ ਆ ਸਕਦੇ (ਬਿਮਾਰ ਜਾਂ ਵਿਦੇਸ਼ ਵਿੱਚ), ਤਾਂ ਸੰਦੇਸ਼ਵਾਹਕ ਆਪਣੇ ਪਛਾਣ ਅਤੇ ਪਤੇ ਦੇ ਸਬੂਤ ਨਾਲ ਬੀਮਾਧਾਰਕ ਦਾ ਮੈਡੀਕਲ ਸਰਟੀਫ਼ਿਕੇਟ ਜਾਂ ਪਾਸਪੋਰਟ ਕਾਪੀ ਲੈ ਕੇ ਜਮ੍ਹਾਂ ਕਰ ਸਕਦਾ ਹੈ।';
+
+  @override
+  String get tipDeath =>
+      'ਮੌਤ ਦਾਅਵਾ ਕਿਸੇ ਵੀ ਡਾਕਘਰ ਵਿੱਚ ਜਮ੍ਹਾਂ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ। ਕੁਝ ਮਾਮਲਿਆਂ ਦੀ ਜਾਂਚ ਹੁੰਦੀ ਹੈ; ਕਿਰਪਾ ਕਰਕੇ ਸਹਿਯੋਗ ਕਰੋ।';
+
+  @override
+  String get checklistOfficialNote =>
+      'ਇਹ ਸੂਚੀ ਇੰਡੀਆ ਪੋਸਟ ਦੇ ਗਾਹਕ ਦਿਸ਼ਾ-ਨਿਰਦੇਸ਼ਾਂ ਤੋਂ ਹੈ।';
+
+  @override
+  String get doc_loanReceipt => 'ਕਰਜ਼ਾ ਵਾਪਸੀ ਰਸੀਦ ਬੁੱਕ (ਜੇ ਕਰਜ਼ਾ ਲਿਆ ਹੋਵੇ)';
+
+  @override
+  String get doc_postMortem => 'ਪੋਸਟਮਾਰਟਮ ਰਿਪੋਰਟ ਅਤੇ FIR (ਗ਼ੈਰ-ਕੁਦਰਤੀ ਮੌਤ)';
+
+  @override
+  String get doc_succession =>
+      'ਵਿਰਾਸਤ ਸਰਟੀਫ਼ਿਕੇਟ ਜਾਂ ਪ੍ਰੋਬੇਟ (ਜੇ ਨਾਮਜ਼ਦਗੀ ਨਹੀਂ ਹੈ)';
+
+  @override
+  String get doc_claimantAddress => 'ਦਾਅਵੇਦਾਰ ਦਾ ਪਤੇ ਦਾ ਸਬੂਤ';
+
+  @override
+  String get doc_ddoCertificate =>
+      'ਪਿਛਲੇ 6 ਮਹੀਨਿਆਂ ਦੀ ਪ੍ਰੀਮੀਅਮ ਕਟੌਤੀ ਦਾ DDO ਸਰਟੀਫ਼ਿਕੇਟ (ਤਨਖ਼ਾਹ ਪਾਲਿਸੀ)';
+
+  @override
+  String get doc_policyBondCopy => 'ਪਾਲਿਸੀ ਬਾਂਡ ਦੀ ਸਵੈ-ਤਸਦੀਕਸ਼ੁਦਾ ਕਾਪੀ';
+
+  @override
+  String get revivalRulesInfo =>
+      'ਪ੍ਰੀਮੀਅਮ 6 ਮਹੀਨੇ (ਪਹਿਲੇ 3 ਸਾਲ) ਜਾਂ 12 ਮਹੀਨੇ (3 ਸਾਲ ਬਾਅਦ) ਨਾ ਭਰਨ \'ਤੇ ਪਾਲਿਸੀ ਲੈਪਸ ਹੋ ਜਾਂਦੀ ਹੈ। ਪਹਿਲੀ ਬਕਾਇਆ ਕਿਸ਼ਤ ਤੋਂ 5 ਸਾਲ ਦੇ ਅੰਦਰ ਸਾਲਾਨਾ 12% ਵਿਆਜ ਅਤੇ ਚੰਗੀ ਸਿਹਤ ਦੇ ਸਰਟੀਫ਼ਿਕੇਟ ਨਾਲ ਇਸ ਨੂੰ ਮੁੜ ਚਾਲੂ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ; ਬਕਾਇਆ ਵੱਧ ਤੋਂ ਵੱਧ 12 ਕਿਸ਼ਤਾਂ ਵਿੱਚ ਭਰਿਆ ਜਾ ਸਕਦਾ ਹੈ।';
 }

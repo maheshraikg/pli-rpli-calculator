@@ -10,7 +10,7 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get appTitle => 'PLI & RPLI Calculator';
+  String get appTitle => 'PO Premium Calculator';
 
   @override
   String get tilePremium => 'Premium';
@@ -924,7 +924,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'PLI & RPLI Calculator collects no data. Everything you enter or save stays on this phone. No account or internet connection is needed.';
+      'PO Premium Calculator collects no data. Everything you enter or save stays on this phone. No account or internet connection is needed.';
 
   @override
   String get dataSourceTitle => 'Rate data';
@@ -1262,7 +1262,7 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get importFailed => 'This file is not a PLI & RPLI Calculator backup.';
+  String get importFailed => 'This file is not a PO Premium Calculator backup.';
 
   @override
   String get backupNote =>
@@ -1494,4 +1494,101 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get equivalentAgeRow => 'Equivalent age (both spouses)';
+
+  @override
+  String get linkSewaTitle => 'Dak Bima Sewa Portal';
+
+  @override
+  String get linkSewaDesc =>
+      'New official PLI portal: log in, pay premium, statements';
+
+  @override
+  String get linkRegisterTitle => 'Register or get Customer ID';
+
+  @override
+  String get linkRegisterDesc => 'First-time login for policy holders';
+
+  @override
+  String get linkGuidelinesTitle => 'Guidelines for customers';
+
+  @override
+  String get linkGuidelinesDesc =>
+      'Official steps for claims, loans and revival';
+
+  @override
+  String get payOnlineTitle => 'Pay premium online';
+
+  @override
+  String get payOnlineSteps =>
+      '1. On the Dak Bima Sewa Portal, register with your Customer ID (tap Get Customer ID to receive it on your registered mobile).\n2. Log in and choose the policy.\n3. Pay by UPI, net banking or debit card.\n4. Download the receipt. Annual premium receipts help with income tax.';
+
+  @override
+  String get payOnlineButton => 'Open the portal';
+
+  @override
+  String get surrenderBonusInfo => 'Surrendered before 5 years: no bonus';
+
+  @override
+  String wlaConversionInfo(int age) {
+    return 'Can be converted to Endowment Assurance up to age $age';
+  }
+
+  @override
+  String get serviceStandardTitle => 'India Post service standard';
+
+  @override
+  String serviceStandardDays(int days) {
+    return 'Settled within $days days of complete documents';
+  }
+
+  @override
+  String serviceStandardDeath(int days, int investigationDays) {
+    return 'Settled within $days days; $investigationDays days if investigation is needed';
+  }
+
+  @override
+  String serviceStandardBond(int days) {
+    return 'Acceptance letter and policy bond within $days days of complete documents';
+  }
+
+  @override
+  String get tipAckSlip =>
+      'Ask for a signed acknowledgement slip when you submit, and reply quickly if the CPC asks for more documents.';
+
+  @override
+  String get tipMessenger =>
+      'If the insurant can\'t visit (medically unfit or abroad), a messenger can submit with their own ID and address proof, plus the insurant\'s medical certificate or passport copy.';
+
+  @override
+  String get tipDeath =>
+      'Death claims can be submitted at any Post Office. Some cases are investigated; please co-operate.';
+
+  @override
+  String get checklistOfficialNote =>
+      'Checklist from India Post\'s Guidelines for Customers.';
+
+  @override
+  String get doc_loanReceipt =>
+      'Loan repayment receipt book (if a loan was taken)';
+
+  @override
+  String get doc_postMortem => 'Post-mortem report and FIR (unnatural death)';
+
+  @override
+  String get doc_succession =>
+      'Succession certificate or probate (if no nomination)';
+
+  @override
+  String get doc_claimantAddress => 'Claimant\'s address proof';
+
+  @override
+  String get doc_ddoCertificate =>
+      'DDO\'s certificate of premium recovery for the last 6 months (pay policies)';
+
+  @override
+  String get doc_policyBondCopy => 'Self-attested copy of the policy bond';
+
+  @override
+  String get revivalRulesInfo =>
+      'A policy lapses if premiums are unpaid for 6 months (first 3 years) or 12 months (after 3 years). It can be revived within 5 years of the first unpaid premium, with interest at 12% a year and a good health certificate; arrears can be paid in up to 12 instalments.';
 }

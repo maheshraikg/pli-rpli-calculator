@@ -10,7 +10,7 @@ class AppLocalizationsMl extends AppLocalizations {
   AppLocalizationsMl([String locale = 'ml']) : super(locale);
 
   @override
-  String get appTitle => 'PLI & RPLI കാൽക്കുലേറ്റർ';
+  String get appTitle => 'PO Premium Calculator';
 
   @override
   String get tilePremium => 'പ്രീമിയം';
@@ -901,7 +901,7 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'PLI & RPLI കാൽക്കുലേറ്റർ ഒരു ഡാറ്റയും ശേഖരിക്കുന്നില്ല. നിങ്ങൾ നൽകുന്നതും സേവ് ചെയ്യുന്നതുമെല്ലാം ഈ ഫോണിൽ തന്നെ. അക്കൗണ്ടോ ഇന്റർനെറ്റോ ആവശ്യമില്ല.';
+      'PO Premium Calculator ഒരു ഡാറ്റയും ശേഖരിക്കുന്നില്ല. നിങ്ങൾ നൽകുന്നതും സേവ് ചെയ്യുന്നതുമെല്ലാം ഈ ഫോണിൽ തന്നെ. അക്കൗണ്ടോ ഇന്റർനെറ്റോ ആവശ്യമില്ല.';
 
   @override
   String get dataSourceTitle => 'നിരക്ക് ഡാറ്റ';
@@ -1243,7 +1243,7 @@ class AppLocalizationsMl extends AppLocalizations {
   }
 
   @override
-  String get importFailed => 'ഇത് PLI & RPLI കാൽക്കുലേറ്റർ ബാക്കപ്പ് ഫയലല്ല.';
+  String get importFailed => 'ഇത് PO Premium Calculator ബാക്കപ്പ് ഫയലല്ല.';
 
   @override
   String get backupNote =>
@@ -1469,4 +1469,105 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get equivalentAgeRow => 'തുല്യ പ്രായം (ഇരുവരും)';
+
+  @override
+  String get linkSewaTitle => 'ഡാക് ബീമാ സേവാ പോർട്ടൽ';
+
+  @override
+  String get linkSewaDesc =>
+      'പുതിയ ഔദ്യോഗിക PLI പോർട്ടൽ: ലോഗിൻ, പ്രീമിയം അടവ്, സ്റ്റേറ്റ്മെന്റുകൾ';
+
+  @override
+  String get linkRegisterTitle =>
+      'രജിസ്റ്റർ ചെയ്യുക അല്ലെങ്കിൽ കസ്റ്റമർ ഐഡി നേടുക';
+
+  @override
+  String get linkRegisterDesc => 'പോളിസി ഉടമകൾക്ക് ആദ്യ ലോഗിൻ';
+
+  @override
+  String get linkGuidelinesTitle => 'ഉപഭോക്താക്കൾക്കുള്ള മാർഗനിർദേശങ്ങൾ';
+
+  @override
+  String get linkGuidelinesDesc =>
+      'ക്ലെയിം, വായ്പ, പുനരുജ്ജീവനം എന്നിവയുടെ ഔദ്യോഗിക ഘട്ടങ്ങൾ';
+
+  @override
+  String get payOnlineTitle => 'ഓൺലൈനായി പ്രീമിയം അടയ്ക്കുക';
+
+  @override
+  String get payOnlineSteps =>
+      '1. ഡാക് ബീമാ സേവാ പോർട്ടലിൽ നിങ്ങളുടെ കസ്റ്റമർ ഐഡി ഉപയോഗിച്ച് രജിസ്റ്റർ ചെയ്യുക (രജിസ്റ്റർ ചെയ്ത മൊബൈലിൽ ഐഡി ലഭിക്കാൻ \"Get Customer ID\" അമർത്തുക).\n2. ലോഗിൻ ചെയ്ത് പോളിസി തിരഞ്ഞെടുക്കുക.\n3. UPI, നെറ്റ് ബാങ്കിങ് അല്ലെങ്കിൽ ഡെബിറ്റ് കാർഡ് വഴി അടയ്ക്കുക.\n4. രസീത് ഡൗൺലോഡ് ചെയ്യുക. വാർഷിക പ്രീമിയം രസീതുകൾ ആദായനികുതിക്ക് ഉപകരിക്കും.';
+
+  @override
+  String get payOnlineButton => 'പോർട്ടൽ തുറക്കുക';
+
+  @override
+  String get surrenderBonusInfo =>
+      '5 വർഷത്തിനു മുൻപ് സറണ്ടർ ചെയ്താൽ: ബോണസ് ഇല്ല';
+
+  @override
+  String wlaConversionInfo(int age) {
+    return '$age വയസ്സുവരെ എൻഡോവ്മെന്റ് അഷ്വറൻസായി മാറ്റാം';
+  }
+
+  @override
+  String get serviceStandardTitle => 'ഇന്ത്യാ പോസ്റ്റ് സേവന നിലവാരം';
+
+  @override
+  String serviceStandardDays(int days) {
+    return 'പൂർണ രേഖകൾ ലഭിച്ച് $days ദിവസത്തിനകം തീർപ്പ്';
+  }
+
+  @override
+  String serviceStandardDeath(int days, int investigationDays) {
+    return '$days ദിവസത്തിനകം തീർപ്പ്; അന്വേഷണം വേണമെങ്കിൽ $investigationDays ദിവസം';
+  }
+
+  @override
+  String serviceStandardBond(int days) {
+    return 'പൂർണ രേഖകൾ ലഭിച്ച് $days ദിവസത്തിനകം സ്വീകാര്യതാ കത്തും പോളിസി ബോണ്ടും';
+  }
+
+  @override
+  String get tipAckSlip =>
+      'സമർപ്പിക്കുമ്പോൾ ഒപ്പിട്ട രസീത് സ്ലിപ്പ് വാങ്ങുക; CPC കൂടുതൽ രേഖകൾ ചോദിച്ചാൽ വേഗം മറുപടി നൽകുക.';
+
+  @override
+  String get tipMessenger =>
+      'ഇൻഷുർ ചെയ്തയാൾക്ക് വരാൻ കഴിയുന്നില്ലെങ്കിൽ (അസുഖം അല്ലെങ്കിൽ വിദേശത്ത്), ഒരു ദൂതന് സ്വന്തം തിരിച്ചറിയൽ, വിലാസ രേഖകളും ഇൻഷുർ ചെയ്തയാളുടെ മെഡിക്കൽ സർട്ടിഫിക്കറ്റോ പാസ്പോർട്ട് പകർപ്പോ സഹിതം സമർപ്പിക്കാം.';
+
+  @override
+  String get tipDeath =>
+      'മരണ ക്ലെയിം ഏത് പോസ്റ്റ് ഓഫീസിലും സമർപ്പിക്കാം. ചില കേസുകളിൽ അന്വേഷണം നടക്കും; ദയവായി സഹകരിക്കുക.';
+
+  @override
+  String get checklistOfficialNote =>
+      'ഈ പട്ടിക ഇന്ത്യാ പോസ്റ്റിന്റെ ഉപഭോക്തൃ മാർഗനിർദേശങ്ങളിൽ നിന്നാണ്.';
+
+  @override
+  String get doc_loanReceipt =>
+      'വായ്പാ തിരിച്ചടവ് രസീത് ബുക്ക് (വായ്പ എടുത്തിട്ടുണ്ടെങ്കിൽ)';
+
+  @override
+  String get doc_postMortem =>
+      'പോസ്റ്റ്മോർട്ടം റിപ്പോർട്ടും FIR-ഉം (അസ്വാഭാവിക മരണം)';
+
+  @override
+  String get doc_succession =>
+      'പിന്തുടർച്ചാവകാശ സർട്ടിഫിക്കറ്റ് അല്ലെങ്കിൽ പ്രോബേറ്റ് (നോമിനേഷൻ ഇല്ലെങ്കിൽ)';
+
+  @override
+  String get doc_claimantAddress => 'ക്ലെയിമന്റിന്റെ വിലാസ രേഖ';
+
+  @override
+  String get doc_ddoCertificate =>
+      'കഴിഞ്ഞ 6 മാസത്തെ പ്രീമിയം പിടിച്ചതിന്റെ DDO സർട്ടിഫിക്കറ്റ് (ശമ്പള പോളിസികൾ)';
+
+  @override
+  String get doc_policyBondCopy =>
+      'പോളിസി ബോണ്ടിന്റെ സ്വയം സാക്ഷ്യപ്പെടുത്തിയ പകർപ്പ്';
+
+  @override
+  String get revivalRulesInfo =>
+      'പ്രീമിയം 6 മാസം (ആദ്യ 3 വർഷം) അല്ലെങ്കിൽ 12 മാസം (3 വർഷത്തിനു ശേഷം) അടച്ചില്ലെങ്കിൽ പോളിസി ലാപ്സാകും. ആദ്യ കുടിശ്ശിക ഗഡു മുതൽ 5 വർഷത്തിനകം വാർഷിക 12% പലിശയും നല്ല ആരോഗ്യ സർട്ടിഫിക്കറ്റും സഹിതം പുനരുജ്ജീവിപ്പിക്കാം; കുടിശ്ശിക പരമാവധി 12 ഗഡുക്കളായി അടയ്ക്കാം.';
 }
