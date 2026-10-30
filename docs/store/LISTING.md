@@ -1,20 +1,22 @@
-# Google Play listing: PLI & RPLI Calculator
+# Google Play listing: Premium & Maturity Calculator
 
 Copy each block into Play Console. Limits are Google's.
 
 ## App details
-- **App name** (30 max): `PLI & RPLI Calculator`
+- **App name** (30 max): `Premium & Maturity Calculator`
+  (No "PLI", "RPLI", "India Post" or other government names in the title or
+  icon: Play's Impersonation policy rejected the first name.)
 - **Short description** (80 max):
-  `Premium, bonus & maturity calculator for PLI & RPLI. Offline, 13 languages.`
+  `Independent premium & maturity calculator for PLI/RPLI policies. Works offline.`
 - **Category:** Finance
 - **Tags:** Insurance, Calculator
 - **Contact email:** maheshraikg@gmail.com (same as in the app: About > Help & feedback)
-- **Privacy policy URL:** https://docs.google.com/document/d/1nlTftF_zHcZhkOsaneC_XL56SENDPpFScdPiWmn1mLM/view
+- **Privacy policy URL:** https://docs.google.com/document/d/1A5KCfdmnyab3Ij1bovFwLTKjCVFflEIYN71A84R-4zc/view
   (the Google Doc must be shared as "Anyone with the link: Viewer"; the same link is in the app's About screen)
 
 ## Full description (4000 max)
 ```
-PLI & RPLI Calculator helps Postal Life Insurance (PLI) and Rural Postal Life Insurance (RPLI) agents and policy holders work out premiums, bonus and maturity value in seconds, even without internet.
+Premium & Maturity Calculator is an independent app that helps Postal Life Insurance (PLI) and Rural Postal Life Insurance (RPLI) agents and policy holders work out premiums, bonus and maturity value in seconds, even without internet.
 
 ⚠️ Independent app: This app is NOT an official app of India Post, the Department of Posts or the Government of India, and is not affiliated with them. Figures are estimates; the final amounts are as per India Post. Official information: https://pli.indiapost.gov.in and https://www.indiapost.gov.in
 

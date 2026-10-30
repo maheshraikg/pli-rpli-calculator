@@ -88,7 +88,7 @@ STRINGS = [
  ('faq5q', 'Who can buy PLI and RPLI?', None),
  ('faq5a', 'PLI: government and semi-government employees, professionals, graduates, diploma holders and others listed by India Post. RPLI: rural residents and scheduled bank savings account holders.', None),
  ('aboutTitle', 'About', None), ('privacyTitle', 'Privacy', None),
- ('privacyBody', 'PLI & RPLI Calculator collects no data. Everything you enter or save stays on this phone. No account or internet connection is needed.', None),
+ ('privacyBody', 'Premium & Maturity Calculator collects no data. Everything you enter or save stays on this phone. No account or internet connection is needed.', None),
  ('dataSourceTitle', 'Rate data', None),
  ('dataSourceBody', 'Rules {id}, effective {date}. Source: {source}', {'id': S, 'date': S, 'source': S}),
  ('provisionalTitle', 'Rules still being confirmed', None),

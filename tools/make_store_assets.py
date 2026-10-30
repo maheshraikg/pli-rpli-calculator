@@ -21,7 +21,7 @@ OUT = ROOT / 'docs/store'
 # (output name, source render, scroll offset in source px, headline, subline)
 SHOTS = [
     ('01_home', '01b_home_full.png', 0,
-     'All PLI & RPLI tools', 'Premium, maturity, dues and forms'),
+     'All agent tools in one app', 'Premium, maturity, dues and forms'),
     ('02_premium', '02_premium_full.png', 2380,
      'Premium in seconds', 'Every plan, age and frequency'),
     ('03_maturity', '03_maturity_sumangal_full.png', 2040,
@@ -42,7 +42,7 @@ SHOTS = [
 # Tablet shots: (output name, source suffix, headline, subline); sources are
 # tab7_<suffix>.png / tab10_<suffix>.png.
 TABLET_SHOTS = [
-    ('1_home', '1_home', 'All PLI & RPLI tools', 'Premium, maturity, dues and forms'),
+    ('1_home', '1_home', 'All agent tools in one app', 'Premium, maturity, dues and forms'),
     ('2_premium', '2_premium', 'Premium in seconds', 'Every plan, age and frequency'),
     ('3_dues', '3_dues', 'Never miss a due', 'Monthly dues and WhatsApp reminders'),
     ('4_official_links', '4_links', 'Official links', 'PLI portal, DigiLocker, toll-free helpline'),
@@ -174,9 +174,9 @@ def feature_graphic(black, medium):
     m = Image.new('L', art.size, 0)
     ImageDraw.Draw(m).rounded_rectangle([0, 0, size - 1, size - 1], radius=34, fill=255)
     img.paste(art, (x0, y0), m)
-    title = ImageFont.truetype(black, 58)
-    d.text((56, 238), 'PLI & RPLI', font=title, fill=WHITE)
-    d.text((56, 300), 'Calculator', font=title, fill=WHITE)
+    title = ImageFont.truetype(black, 50)
+    d.text((56, 240), 'Premium & Maturity', font=title, fill=WHITE)
+    d.text((56, 298), 'Calculator', font=title, fill=WHITE)
     chip = ImageFont.truetype(medium, 20)
     x = 56
     for label in ['Premium', 'Maturity', '13 languages']:

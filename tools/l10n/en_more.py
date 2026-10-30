@@ -6,7 +6,7 @@ STRINGS = [
  ('importBackup', 'Restore from backup', None),
  ('importConfirm', 'Restore {count} policies from this backup? Policies already saved with the same ID are replaced.', {'count': I}),
  ('importDone', '{count} policies restored.', {'count': I}),
- ('importFailed', 'This file is not a PLI & RPLI Calculator backup.', None),
+ ('importFailed', 'This file is not a Premium & Maturity Calculator backup.', None),
  ('backupNote', 'The backup file contains your policy details. Keep it somewhere safe, such as your own WhatsApp chat or Google Drive.', None),
  ('restore', 'Restore', None),
  ('tileDues', 'Dues', None), ('descDues', 'Premiums due this month', None),

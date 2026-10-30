@@ -2,7 +2,7 @@ import sys; sys.path.insert(0, __import__('os').path.dirname(__file__))
 from write_arb import write
 
 write('hi', {
- 'appTitle': 'PLI & RPLI कैलकुलेटर', 'tilePremium': 'प्रीमियम', 'tileMaturity': 'परिपक्वता', 'tileCompare': 'तुलना',
+ 'appTitle': 'प्रीमियम & परिपक्वता कैलकुलेटर', 'tilePremium': 'प्रीमियम', 'tileMaturity': 'परिपक्वता', 'tileCompare': 'तुलना',
  'tileEligibility': 'पात्रता', 'tileMyPolicies': 'मेरी पॉलिसियाँ', 'tileQuotation': 'कोटेशन', 'comingSoon': 'जल्द आ रहा है',
  'sampleDataBanner': 'नमूना डेटा – आधिकारिक नहीं', 'ratesFooter': 'दरें वित्त वर्ष {financialYear} • स्रोत: भारतीय डाक',
  'bonusDisclaimer': 'बोनस दरें हर वर्ष घोषित होती हैं और भविष्य के लिए गारंटीशुदा नहीं हैं। अंतिम राशि भारतीय डाक के अनुसार।',
@@ -53,7 +53,7 @@ write('hi', {
 })
 
 write('mr', {
- 'appTitle': 'PLI & RPLI कॅल्क्युलेटर', 'tilePremium': 'प्रीमियम', 'tileMaturity': 'परिपक्वता', 'tileCompare': 'तुलना',
+ 'appTitle': 'प्रीमियम & परिपक्वता कॅल्क्युलेटर', 'tilePremium': 'प्रीमियम', 'tileMaturity': 'परिपक्वता', 'tileCompare': 'तुलना',
  'tileEligibility': 'पात्रता', 'tileMyPolicies': 'माझ्या पॉलिसी', 'tileQuotation': 'कोटेशन', 'comingSoon': 'लवकरच',
  'sampleDataBanner': 'नमुना डेटा – अधिकृत नाही', 'ratesFooter': 'दर आर्थिक वर्ष {financialYear} • स्रोत: भारतीय टपाल',
  'bonusDisclaimer': 'बोनस दर दरवर्षी जाहीर होतात आणि भविष्यासाठी हमी नाही. अंतिम रक्कम भारतीय टपालानुसार.',
@@ -104,7 +104,7 @@ write('mr', {
 })
 
 write('gu', {
- 'appTitle': 'PLI & RPLI કેલ્ક્યુલેટર', 'tilePremium': 'પ્રીમિયમ', 'tileMaturity': 'પાકતી રકમ', 'tileCompare': 'સરખામણી',
+ 'appTitle': 'પ્રીમિયમ & પાકતી રકમ કેલ્ક્યુલેટર', 'tilePremium': 'પ્રીમિયમ', 'tileMaturity': 'પાકતી રકમ', 'tileCompare': 'સરખામણી',
  'tileEligibility': 'પાત્રતા', 'tileMyPolicies': 'મારી પૉલિસીઓ', 'tileQuotation': 'ક્વોટેશન', 'comingSoon': 'ટૂંક સમયમાં',
  'sampleDataBanner': 'નમૂના ડેટા – સત્તાવાર નથી', 'ratesFooter': 'દરો નાણાકીય વર્ષ {financialYear} • સ્રોત: ભારતીય ટપાલ',
  'bonusDisclaimer': 'બોનસ દરો દર વર્ષે જાહેર થાય છે અને ભવિષ્ય માટે ખાતરીપૂર્વક નથી. અંતિમ રકમ ભારતીય ટપાલ મુજબ.',
@@ -155,7 +155,7 @@ write('gu', {
 })
 
 write('pa', {
- 'appTitle': 'PLI & RPLI ਕੈਲਕੁਲੇਟਰ', 'tilePremium': 'ਪ੍ਰੀਮੀਅਮ', 'tileMaturity': 'ਮਿਆਦ ਪੂਰੀ', 'tileCompare': 'ਤੁਲਨਾ',
+ 'appTitle': 'ਪ੍ਰੀਮੀਅਮ & ਮਿਆਦ ਪੂਰੀ ਕੈਲਕੁਲੇਟਰ', 'tilePremium': 'ਪ੍ਰੀਮੀਅਮ', 'tileMaturity': 'ਮਿਆਦ ਪੂਰੀ', 'tileCompare': 'ਤੁਲਨਾ',
  'tileEligibility': 'ਯੋਗਤਾ', 'tileMyPolicies': 'ਮੇਰੀਆਂ ਪਾਲਿਸੀਆਂ', 'tileQuotation': 'ਕੋਟੇਸ਼ਨ', 'comingSoon': 'ਜਲਦੀ ਆ ਰਿਹਾ ਹੈ',
  'sampleDataBanner': 'ਨਮੂਨਾ ਡਾਟਾ – ਅਧਿਕਾਰਤ ਨਹੀਂ', 'ratesFooter': 'ਦਰਾਂ ਵਿੱਤੀ ਸਾਲ {financialYear} • ਸਰੋਤ: ਭਾਰਤੀ ਡਾਕ',
  'bonusDisclaimer': 'ਬੋਨਸ ਦਰਾਂ ਹਰ ਸਾਲ ਐਲਾਨੀਆਂ ਜਾਂਦੀਆਂ ਹਨ ਅਤੇ ਭਵਿੱਖ ਲਈ ਗਾਰੰਟੀਸ਼ੁਦਾ ਨਹੀਂ ਹਨ। ਅੰਤਿਮ ਰਕਮ ਭਾਰਤੀ ਡਾਕ ਅਨੁਸਾਰ।',

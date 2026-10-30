@@ -141,6 +141,6 @@ String policyDetailsSheet({
   return [
     'PLI / RPLI policy details — ${_fmt(today)}',
     for (final (k, v) in rows) '$k: $v',
-    '(Prepared with PLI & RPLI Calculator, an independent app. Confirm figures with India Post.)',
+    '(Prepared with Premium & Maturity Calculator, an independent app. Confirm figures with India Post.)',
   ].join('\n');
 }

@@ -10,7 +10,7 @@ class AppLocalizationsBn extends AppLocalizations {
   AppLocalizationsBn([String locale = 'bn']) : super(locale);
 
   @override
-  String get appTitle => 'PLI & RPLI ক্যালকুলেটর';
+  String get appTitle => 'প্রিমিয়াম & মেয়াদপূর্তি ক্যালকুলেটর';
 
   @override
   String get tilePremium => 'প্রিমিয়াম';
@@ -899,7 +899,7 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'PLI & RPLI ক্যালকুলেটর কোনো তথ্য সংগ্রহ করে না। আপনি যা লেখেন বা সংরক্ষণ করেন, সবই এই ফোনে থাকে। অ্যাকাউন্ট বা ইন্টারনেট লাগে না।';
+      'প্রিমিয়াম & মেয়াদপূর্তি ক্যালকুলেটর কোনো তথ্য সংগ্রহ করে না। আপনি যা লেখেন বা সংরক্ষণ করেন, সবই এই ফোনে থাকে। অ্যাকাউন্ট বা ইন্টারনেট লাগে না।';
 
   @override
   String get dataSourceTitle => 'হারের তথ্য';
@@ -1235,7 +1235,8 @@ class AppLocalizationsBn extends AppLocalizations {
   }
 
   @override
-  String get importFailed => 'এটি PLI & RPLI ক্যালকুলেটরের ব্যাকআপ ফাইল নয়।';
+  String get importFailed =>
+      'এটি প্রিমিয়াম & মেয়াদপূর্তি ক্যালকুলেটরের ব্যাকআপ ফাইল নয়।';
 
   @override
   String get backupNote =>

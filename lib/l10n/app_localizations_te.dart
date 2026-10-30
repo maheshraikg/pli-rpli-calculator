@@ -10,7 +10,7 @@ class AppLocalizationsTe extends AppLocalizations {
   AppLocalizationsTe([String locale = 'te']) : super(locale);
 
   @override
-  String get appTitle => 'PLI & RPLI కాలిక్యులేటర్';
+  String get appTitle => 'ప్రీమియం & మెచ్యూరిటీ కాలిక్యులేటర్';
 
   @override
   String get tilePremium => 'ప్రీమియం';
@@ -901,7 +901,7 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'PLI & RPLI కాలిక్యులేటర్ ఎలాంటి డేటా సేకరించదు. మీరు నమోదు చేసేది లేదా సేవ్ చేసేది అంతా ఈ ఫోన్‌లోనే ఉంటుంది. ఖాతా లేదా ఇంటర్నెట్ అవసరం లేదు.';
+      'ప్రీమియం & మెచ్యూరిటీ కాలిక్యులేటర్ ఎలాంటి డేటా సేకరించదు. మీరు నమోదు చేసేది లేదా సేవ్ చేసేది అంతా ఈ ఫోన్‌లోనే ఉంటుంది. ఖాతా లేదా ఇంటర్నెట్ అవసరం లేదు.';
 
   @override
   String get dataSourceTitle => 'రేట్ల డేటా';
@@ -1238,7 +1238,8 @@ class AppLocalizationsTe extends AppLocalizations {
   }
 
   @override
-  String get importFailed => 'ఇది PLI & RPLI కాలిక్యులేటర్ బ్యాకప్ ఫైల్ కాదు.';
+  String get importFailed =>
+      'ఇది ప్రీమియం & మెచ్యూరిటీ కాలిక్యులేటర్ బ్యాకప్ ఫైల్ కాదు.';
 
   @override
   String get backupNote =>
