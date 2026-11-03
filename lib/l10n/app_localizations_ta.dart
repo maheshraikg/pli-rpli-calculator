@@ -915,11 +915,11 @@ class AppLocalizationsTa extends AppLocalizations {
   }
 
   @override
-  String get provisionalTitle => 'இன்னும் உறுதிசெய்யப்பட வேண்டிய விதிகள்';
+  String get provisionalTitle => 'கணக்கீட்டுக் குறிப்புகள்';
 
   @override
   String get provisionalIntro =>
-      'இந்திய அஞ்சலின் அதிகாரப்பூர்வ சுற்றறிக்கைகளிலிருந்து உறுதியாகும் வரை இவ்விதிகள் தற்காலிக அனுமானங்கள் (ஆங்கிலத்தில்):';
+      'செயலி தன் கணக்கீடுகளில் இந்திய அஞ்சல் விதிகளை எப்படிப் பயன்படுத்துகிறது. இறுதித் தொகையை இந்திய அஞ்சல் முடிவு செய்யும் (ஆங்கிலத்தில்):';
 
   @override
   String get checkUpdates => 'விகிதப் புதுப்பிப்புகளைச் சரிபார்';

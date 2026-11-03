@@ -910,11 +910,11 @@ class AppLocalizationsBn extends AppLocalizations {
   }
 
   @override
-  String get provisionalTitle => 'যে নিয়ম এখনও নিশ্চিত হয়নি';
+  String get provisionalTitle => 'হিসাবের নোট';
 
   @override
   String get provisionalIntro =>
-      'ভারতীয় ডাকের সরকারি সার্কুলার থেকে নিশ্চিত না হওয়া পর্যন্ত এই নিয়মগুলি কার্যকরী অনুমান (ইংরেজিতে):';
+      'অ্যাপটি হিসাবে ইন্ডিয়া পোস্টের নিয়ম কীভাবে প্রয়োগ করে। চূড়ান্ত পরিমাণ ইন্ডিয়া পোস্ট ঠিক করে (ইংরেজিতে):';
 
   @override
   String get checkUpdates => 'হার আপডেট দেখুন';

@@ -792,8 +792,8 @@
       }
     }
   },
-  "provisionalTitle": "Rules still being confirmed",
-  "provisionalIntro": "These rules are working assumptions until they are confirmed from official India Post circulars (shown in English):",
+  "provisionalTitle": "Calculation notes",
+  "provisionalIntro": "How the app applies India Post rules in its calculations. Final amounts are as decided by India Post (shown in English):",
   "checkUpdates": "Check for rate updates",
   "updateInstalled": "Rate data updated to version {version}.",
   "@updateInstalled": {

@@ -77,10 +77,18 @@ void main() {
     expect(find.textContaining('Surrendered before 5 years: no bonus'), findsOneWidget);
   });
 
+  testWidgets('about names the official sources with links', (tester) async {
+    await pumpApp(tester, location: '/about');
+    await scrollTo(tester, find.text('India Post: Rural Postal Life Insurance'));
+    expect(find.text('India Post: Postal Life Insurance'), findsOneWidget);
+    expect(find.textContaining('SPEC.md'), findsNothing);
+    expect(find.textContaining('to be confirmed'), findsNothing);
+  });
+
   testWidgets('about lists provisional rules and privacy', (tester) async {
     await pumpApp(tester, location: '/about');
     expect(find.text('Privacy'), findsOneWidget);
-    await scrollTo(tester, find.text('Rules still being confirmed'));
-    expect(find.text('Rules still being confirmed'), findsOneWidget);
+    await scrollTo(tester, find.text('Calculation notes'));
+    expect(find.text('Calculation notes'), findsOneWidget);
   });
 }

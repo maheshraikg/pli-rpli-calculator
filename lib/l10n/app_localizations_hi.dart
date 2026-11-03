@@ -909,11 +909,11 @@ class AppLocalizationsHi extends AppLocalizations {
   }
 
   @override
-  String get provisionalTitle => 'अभी पुष्टि होने वाले नियम';
+  String get provisionalTitle => 'गणना संबंधी नोट';
 
   @override
   String get provisionalIntro =>
-      'भारतीय डाक के आधिकारिक परिपत्रों से पुष्टि होने तक ये नियम कार्यकारी मान्यताएँ हैं (अंग्रेज़ी में):';
+      'ऐप अपनी गणनाओं में इंडिया पोस्ट के नियम कैसे लागू करता है। अंतिम राशि इंडिया पोस्ट द्वारा तय की जाती है (अंग्रेज़ी में):';
 
   @override
   String get checkUpdates => 'दर अपडेट जाँचें';

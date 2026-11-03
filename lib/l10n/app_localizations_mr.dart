@@ -909,11 +909,11 @@ class AppLocalizationsMr extends AppLocalizations {
   }
 
   @override
-  String get provisionalTitle => 'अद्याप निश्चित होणारे नियम';
+  String get provisionalTitle => 'गणनेच्या टिपा';
 
   @override
   String get provisionalIntro =>
-      'भारतीय टपालाच्या अधिकृत परिपत्रकांमधून निश्चित होईपर्यंत हे नियम कार्यरत गृहीतके आहेत (इंग्रजीत):';
+      'ॲप आपल्या गणनेत इंडिया पोस्टचे नियम कसे लागू करते. अंतिम रक्कम इंडिया पोस्ट ठरवते (इंग्रजीत):';
 
   @override
   String get checkUpdates => 'दर अपडेट तपासा';

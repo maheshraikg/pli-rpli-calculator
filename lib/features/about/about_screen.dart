@@ -7,6 +7,7 @@ import '../../core/widgets/data_scaffold.dart';
 import '../../data/data_repository.dart';
 import '../../data/rate_update.dart';
 import '../../l10n/app_localizations.dart';
+import '../links/links_screen.dart';
 import '../common/plan_config_form.dart';
 import '../../core/app_icons.dart';
 
@@ -14,7 +15,6 @@ const kAppVersion = '1.0.0';
 
 /// Where users report problems and send suggestions (also the Play listing contact).
 const kSupportEmail = 'maheshraikg@gmail.com';
-const kPlayStoreUrl = 'https://play.google.com/store/apps/details?id=com.plirpli.calculator';
 
 /// mailto: link with a subject and a short template, so reports arrive with
 /// the app version.
@@ -101,11 +101,6 @@ class _AboutScreenState extends ConsumerState<AboutScreen> {
                     supportMail('PO Premium Calculator $kAppVersion – suggestion', 'My suggestion:\n\n'),
                   ),
                 ),
-                TextButton.icon(
-                  icon: const AppIcon(AppIcons.googlePlayLogo),
-                  label: Text(l.checkAppUpdates),
-                  onPressed: () => launchUrl(Uri.parse(kPlayStoreUrl), mode: LaunchMode.externalApplication),
-                ),
               ],
             ),
           ),
@@ -141,6 +136,12 @@ class _AboutScreenState extends ConsumerState<AboutScreen> {
                   ),
                 ),
                 Text(data.rules.gazetteRef, style: theme.textTheme.bodySmall),
+                for (final (title, url) in [(l.linkPliPageTitle, kPliPage), (l.linkRpliPageTitle, kRpliPage)])
+                  TextButton.icon(
+                    icon: const Icon(AppIcons.arrowSquareOutLine),
+                    label: Text(title),
+                    onPressed: () => launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication),
+                  ),
                 if (data.usesSampleData)
                   Padding(
                     padding: const EdgeInsets.only(top: 4),

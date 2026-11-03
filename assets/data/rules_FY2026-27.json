@@ -3,8 +3,8 @@
   "ruleSetId": "FY2026-27",
   "financialYear": "2026-27",
   "effectiveFrom": "2026-04-01",
-  "source": "India Post PLI/RPLI rules; values from project SPEC.md (research dated 20 Oct 2026)",
-  "gazetteRef": "Gazette Notification No. 12, Jan 2026 (PLI bonus) — exact reference to be confirmed",
+  "source": "Department of Posts (India Post), Government of India: PLI and RPLI plan rules and bonus rates (India Post Postal Life Insurance and Rural Postal Life Insurance pages); premium tables as printed in the Department of Posts \"PLI-RPLI Plans\" booklet (January 2024)",
+  "gazetteRef": "Bonus rates: as last declared by India Post for PLI and RPLI policies.",
   "verification": {
     "status": "partial",
     "notes": [

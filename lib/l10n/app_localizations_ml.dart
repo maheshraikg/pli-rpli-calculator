@@ -912,11 +912,11 @@ class AppLocalizationsMl extends AppLocalizations {
   }
 
   @override
-  String get provisionalTitle => 'ഇനിയും സ്ഥിരീകരിക്കേണ്ട നിയമങ്ങൾ';
+  String get provisionalTitle => 'കണക്കുകൂട്ടൽ കുറിപ്പുകൾ';
 
   @override
   String get provisionalIntro =>
-      'ഇന്ത്യ പോസ്റ്റിന്റെ ഔദ്യോഗിക സർക്കുലറുകളിൽ നിന്ന് സ്ഥിരീകരിക്കും വരെ ഈ നിയമങ്ങൾ താൽക്കാലിക അനുമാനങ്ങളാണ് (ഇംഗ്ലീഷിൽ):';
+      'ആപ്പ് കണക്കുകൂട്ടലുകളിൽ ഇന്ത്യാ പോസ്റ്റ് നിയമങ്ങൾ എങ്ങനെ പ്രയോഗിക്കുന്നു. അന്തിമ തുക ഇന്ത്യാ പോസ്റ്റ് തീരുമാനിക്കും (ഇംഗ്ലീഷിൽ):';
 
   @override
   String get checkUpdates => 'നിരക്ക് അപ്ഡേറ്റ് പരിശോധിക്കുക';

@@ -910,11 +910,11 @@ class AppLocalizationsOr extends AppLocalizations {
   }
 
   @override
-  String get provisionalTitle => 'ଏପର୍ଯ୍ୟନ୍ତ ନିଶ୍ଚିତ ହେବାକୁ ଥିବା ନିୟମ';
+  String get provisionalTitle => 'ହିସାବ ଟିପ୍ପଣୀ';
 
   @override
   String get provisionalIntro =>
-      'ଭାରତୀୟ ଡାକର ସରକାରୀ ସର୍କୁଲାରରୁ ନିଶ୍ଚିତ ନହେବା ପର୍ଯ୍ୟନ୍ତ ଏହି ନିୟମଗୁଡ଼ିକ କାର୍ଯ୍ୟକାରୀ ଅନୁମାନ (ଇଂରାଜୀରେ):';
+      'ଆପ ନିଜ ହିସାବରେ ଇଣ୍ଡିଆ ପୋଷ୍ଟ ନିୟମ କିପରି ପ୍ରୟୋଗ କରେ। ଚୂଡ଼ାନ୍ତ ରାଶି ଇଣ୍ଡିଆ ପୋଷ୍ଟ ସ୍ଥିର କରେ (ଇଂରାଜୀରେ):';
 
   @override
   String get checkUpdates => 'ହାର ଅପଡେଟ ଯାଞ୍ଚ କରନ୍ତୁ';

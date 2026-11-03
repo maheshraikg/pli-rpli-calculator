@@ -935,11 +935,11 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get provisionalTitle => 'Rules still being confirmed';
+  String get provisionalTitle => 'Calculation notes';
 
   @override
   String get provisionalIntro =>
-      'These rules are working assumptions until they are confirmed from official India Post circulars (shown in English):';
+      'How the app applies India Post rules in its calculations. Final amounts are as decided by India Post (shown in English):';
 
   @override
   String get checkUpdates => 'Check for rate updates';

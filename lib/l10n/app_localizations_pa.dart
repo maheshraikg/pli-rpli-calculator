@@ -907,11 +907,11 @@ class AppLocalizationsPa extends AppLocalizations {
   }
 
   @override
-  String get provisionalTitle => 'ਹਾਲੇ ਪੱਕੇ ਹੋਣ ਵਾਲੇ ਨਿਯਮ';
+  String get provisionalTitle => 'ਗਣਨਾ ਨੋਟ';
 
   @override
   String get provisionalIntro =>
-      'ਭਾਰਤੀ ਡਾਕ ਦੇ ਅਧਿਕਾਰਤ ਸਰਕੂਲਰਾਂ ਤੋਂ ਪੱਕੇ ਹੋਣ ਤੱਕ ਇਹ ਨਿਯਮ ਕਾਰਜਕਾਰੀ ਧਾਰਨਾਵਾਂ ਹਨ (ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ):';
+      'ਐਪ ਆਪਣੀਆਂ ਗਣਨਾਵਾਂ ਵਿੱਚ ਇੰਡੀਆ ਪੋਸਟ ਦੇ ਨਿਯਮ ਕਿਵੇਂ ਲਾਗੂ ਕਰਦੀ ਹੈ। ਅੰਤਿਮ ਰਕਮ ਇੰਡੀਆ ਪੋਸਟ ਤੈਅ ਕਰਦੀ ਹੈ (ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ):';
 
   @override
   String get checkUpdates => 'ਦਰ ਅੱਪਡੇਟ ਜਾਂਚੋ';

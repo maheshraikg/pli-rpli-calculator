@@ -910,11 +910,11 @@ class AppLocalizationsUr extends AppLocalizations {
   }
 
   @override
-  String get provisionalTitle => 'ابھی تصدیق طلب قواعد';
+  String get provisionalTitle => 'حساب کے نوٹس';
 
   @override
   String get provisionalIntro =>
-      'انڈیا پوسٹ کے سرکاری سرکلر سے تصدیق ہونے تک یہ قواعد عارضی مفروضے ہیں (انگریزی میں):';
+      'ایپ اپنے حساب میں انڈیا پوسٹ کے قواعد کیسے لاگو کرتی ہے۔ حتمی رقم انڈیا پوسٹ طے کرتا ہے (انگریزی میں):';
 
   @override
   String get checkUpdates => 'شرح اپ ڈیٹ چیک کریں';

@@ -61,7 +61,8 @@ void main() {
     expect(find.text('Help & feedback'), findsOneWidget);
     expect(find.textContaining('maheshraikg@gmail.com'), findsOneWidget);
     expect(find.text('Report a problem'), findsOneWidget);
-    expect(find.text('Check for app updates (Play Store)'), findsOneWidget);
+    // No Play Store link until the app is live: the page is 404 during review.
+    expect(find.text('Check for app updates (Play Store)'), findsNothing);
   });
 
   test('support e-mail link carries subject and body', () {
@@ -70,6 +71,5 @@ void main() {
     expect(uri.path, kSupportEmail);
     expect(uri.query, contains('subject=Bug'));
     expect(Uri.decodeComponent(uri.query), contains('Line 1\nLine 2'));
-    expect(Uri.parse(kPlayStoreUrl).queryParameters['id'], 'com.plirpli.calculator');
   });
 }

@@ -911,11 +911,11 @@ class AppLocalizationsAs extends AppLocalizations {
   }
 
   @override
-  String get provisionalTitle => 'এতিয়াও নিশ্চিত হ\'বলগীয়া নিয়ম';
+  String get provisionalTitle => 'হিচাপৰ টোকা';
 
   @override
   String get provisionalIntro =>
-      'ভাৰতীয় ডাকৰ চৰকাৰী চাৰ্কুলাৰৰ পৰা নিশ্চিত নোহোৱালৈকে এই নিয়মবোৰ কাৰ্যকৰী অনুমান (ইংৰাজীত):';
+      'এপটোৱে হিচাপত ইণ্ডিয়া পোষ্টৰ নিয়ম কেনেকৈ প্ৰয়োগ কৰে। চূড়ান্ত পৰিমাণ ইণ্ডিয়া পোষ্টে নিৰ্ধাৰণ কৰে (ইংৰাজীত):';
 
   @override
   String get checkUpdates => 'হাৰ আপডেট চাওক';

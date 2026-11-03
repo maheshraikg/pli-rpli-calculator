@@ -912,11 +912,11 @@ class AppLocalizationsTe extends AppLocalizations {
   }
 
   @override
-  String get provisionalTitle => 'ఇంకా నిర్ధారణ కావాల్సిన నియమాలు';
+  String get provisionalTitle => 'లెక్కింపు గమనికలు';
 
   @override
   String get provisionalIntro =>
-      'భారత తపాలా అధికారిక సర్క్యులర్ల నుండి నిర్ధారణ అయ్యే వరకు ఈ నియమాలు తాత్కాలిక అంచనాలు (ఆంగ్లంలో):';
+      'యాప్ తన లెక్కల్లో ఇండియా పోస్ట్ నియమాలను ఎలా వర్తింపజేస్తుందో. తుది మొత్తాలను ఇండియా పోస్ట్ నిర్ణయిస్తుంది (ఇంగ్లీషులో):';
 
   @override
   String get checkUpdates => 'రేట్ల నవీకరణ తనిఖీ చేయి';

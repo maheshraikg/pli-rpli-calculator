@@ -910,11 +910,11 @@ class AppLocalizationsKn extends AppLocalizations {
   }
 
   @override
-  String get provisionalTitle => 'ಇನ್ನೂ ದೃಢಪಡಬೇಕಾದ ನಿಯಮಗಳು';
+  String get provisionalTitle => 'ಲೆಕ್ಕಾಚಾರದ ಟಿಪ್ಪಣಿಗಳು';
 
   @override
   String get provisionalIntro =>
-      'ಭಾರತೀಯ ಅಂಚೆಯ ಅಧಿಕೃತ ಸುತ್ತೋಲೆಗಳಿಂದ ದೃಢಪಡುವವರೆಗೆ ಈ ನಿಯಮಗಳು ತಾತ್ಕಾಲಿಕ ಊಹೆಗಳು (ಇಂಗ್ಲಿಷ್‌ನಲ್ಲಿ):';
+      'ಆ್ಯಪ್ ತನ್ನ ಲೆಕ್ಕಾಚಾರಗಳಲ್ಲಿ ಇಂಡಿಯಾ ಪೋಸ್ಟ್ ನಿಯಮಗಳನ್ನು ಹೇಗೆ ಅನ್ವಯಿಸುತ್ತದೆ. ಅಂತಿಮ ಮೊತ್ತವನ್ನು ಇಂಡಿಯಾ ಪೋಸ್ಟ್ ನಿರ್ಧರಿಸುತ್ತದೆ (ಇಂಗ್ಲಿಷ್‌ನಲ್ಲಿ):';
 
   @override
   String get checkUpdates => 'ದರ ನವೀಕರಣ ಪರಿಶೀಲಿಸಿ';

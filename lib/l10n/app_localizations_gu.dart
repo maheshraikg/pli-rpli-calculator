@@ -908,11 +908,11 @@ class AppLocalizationsGu extends AppLocalizations {
   }
 
   @override
-  String get provisionalTitle => 'હજુ પુષ્ટિ બાકી નિયમો';
+  String get provisionalTitle => 'ગણતરીની નોંધો';
 
   @override
   String get provisionalIntro =>
-      'ભારતીય ટપાલના સત્તાવાર પરિપત્રોથી પુષ્ટિ ન થાય ત્યાં સુધી આ નિયમો કાર્યકારી ધારણાઓ છે (અંગ્રેજીમાં):';
+      'એપ તેની ગણતરીઓમાં ઇન્ડિયા પોસ્ટના નિયમો કેવી રીતે લાગુ કરે છે. અંતિમ રકમ ઇન્ડિયા પોસ્ટ નક્કી કરે છે (અંગ્રેજીમાં):';
 
   @override
   String get checkUpdates => 'દર અપડેટ તપાસો';

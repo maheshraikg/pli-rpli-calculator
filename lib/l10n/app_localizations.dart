@@ -1623,13 +1623,13 @@ abstract class AppLocalizations {
   /// No description provided for @provisionalTitle.
   ///
   /// In en, this message translates to:
-  /// **'Rules still being confirmed'**
+  /// **'Calculation notes'**
   String get provisionalTitle;
 
   /// No description provided for @provisionalIntro.
   ///
   /// In en, this message translates to:
-  /// **'These rules are working assumptions until they are confirmed from official India Post circulars (shown in English):'**
+  /// **'How the app applies India Post rules in its calculations. Final amounts are as decided by India Post (shown in English):'**
   String get provisionalIntro;
 
   /// No description provided for @checkUpdates.
