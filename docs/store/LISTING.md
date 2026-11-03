@@ -15,10 +15,27 @@ Copy each block into Play Console. Limits are Google's.
   (the Google Doc must be shared as "Anyone with the link: Viewer"; the same link is in the app's About screen)
 
 ## Full description (4000 max)
+Play rejected an earlier description under the Misleading Claims policy
+("Insufficient sources"): every kind of government information in the app
+must name its official source, with a link that works from outside India.
+Do not add links to ims.indiapost.gov.in, pli.indiapost.gov.in, DigiLocker
+or CPGRAMS: they did not open for the reviewer.
 ```
 PO Premium Calculator is an independent app that helps Postal Life Insurance (PLI) and Rural Postal Life Insurance (RPLI) agents and policy holders work out premiums, bonus and maturity value in seconds, even without internet.
 
-⚠️ Independent app: This app is NOT an official app of India Post, the Department of Posts or the Government of India, and is not affiliated with them. Figures are estimates; the final amounts are as per India Post. Official information: https://pli.indiapost.gov.in and https://www.indiapost.gov.in
+⚠️ DISCLAIMER: This app is NOT an official app of India Post, the Department of Posts or the Government of India. It does not represent any government entity and is not affiliated with or endorsed by them. Figures are estimates; the final amounts are as decided by India Post.
+
+SOURCES OF GOVERNMENT INFORMATION
+All government information in this app comes from the Department of Posts (India Post), Government of India:
+1. Plans, eligibility, entry ages, sum assured limits, loan and surrender rules, bonus rates and premium tables: India Post – Postal Life Insurance: https://www.indiapost.gov.in/insurance-services/pli and India Post – Rural Postal Life Insurance: https://www.indiapost.gov.in/insurance-services/rpli (Schemes and Premium Table sections). Premium tables are as printed in the Department of Posts "PLI-RPLI Plans" booklet (January 2024).
+2. Claim, loan, assignment and surrender forms: Department of Posts (PLI Directorate) Standard Operating Procedures, published at:
+• Maturity/survival claim: https://utilities.cept.gov.in/pli/ExcelReports/SOP/SOP%20for%20handling%20matuirty%20cases%20with%20covering%20letter.pdf
+• Death claim: https://utilities.cept.gov.in/dop/pdfbind.ashx?id=4708
+• Loan and assignment: https://utilities.cept.gov.in/pli/ExcelReports/SOP/SOP%20for%20handling%20Loan%20Cases%20with%20covering%20letter.pdf
+• Surrender: https://utilities.cept.gov.in/dop/pdfbind.ashx?id=9024
+3. Document checklists, settlement times, lapse and revival rules: Department of Posts "Guidelines for Customers" and Citizen's Charter (Customer Guide section of https://www.indiapost.gov.in/insurance-services/pli).
+4. India Post customer care: toll-free 1800 266 6868.
+Each screen in the app shows the rate year and its source. Bonus rates are declared every year and are not guaranteed for the future.
 
 CALCULATORS
 • Premium for every plan, age and sum assured: monthly, quarterly, half-yearly and yearly side by side
@@ -26,16 +43,17 @@ CALCULATORS
 • Compare plans side by side
 • "What can I afford?": best cover for a monthly budget
 • Eligibility checker: who can buy PLI or RPLI
+• Plan guide: entry ages, sum assured limits, loan, surrender, conversion and bonus rates for every plan
 
 POLICY SERVICING
 • My Policies: save customers' policies with due dates and reminders; search and sort
 • Dues: premiums due this month, mark as collected, remind customers on WhatsApp
-• Policy tools: loan, revival, paid-up value
-• Quotation: share a professional PDF or image quotation on WhatsApp, with your name, photo and phone
-• Forms & letters: document checklists, request letters, and official claim forms (maturity/survival, death, loan, assignment, surrender) taken from Department of Posts SOPs, with their source
+• Policy tools: loan, revival, paid-up value, with lapse and revival rules
+• Quotation: share a PDF or image quotation on WhatsApp, with your name, photo and phone
+• Forms & letters: official claim forms with their source, document checklists, settlement times and ready-to-print request letters
 
 OFFICIAL LINKS
-• PLI Customer Portal, official forms page, India Post, DigiLocker, CPGRAMS grievance portal and the India Post toll-free number, all in one place
+• India Post's PLI and RPLI pages, India Post website and the India Post toll-free number, all in one place
 
 BUILT FOR THE FIELD
 • Works fully offline; no account, no ads
@@ -48,9 +66,6 @@ The app collects no data. Everything you enter stays on your phone.
 
 SUPPORT
 Found a problem or a wrong figure? Use Help & feedback in the app or write to maheshraikg@gmail.com.
-
-DATA SOURCES
-Premium rates, bonus rates and rules are taken from India Post / Department of Posts publications. Each screen shows the rate year and source. Bonus rates are declared every year and are not guaranteed for the future.
 ```
 
 ## Graphics (in this folder)

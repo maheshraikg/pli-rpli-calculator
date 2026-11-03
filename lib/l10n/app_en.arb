@@ -1073,7 +1073,7 @@
   "linkGuidelinesTitle": "Guidelines for customers",
   "linkGuidelinesDesc": "Official steps for claims, loans and revival",
   "payOnlineTitle": "Pay premium online",
-  "payOnlineSteps": "1. On the Dak Bima Sewa Portal, register with your Customer ID (tap Get Customer ID to receive it on your registered mobile).\n2. Log in and choose the policy.\n3. Pay by UPI, net banking or debit card.\n4. Download the receipt. Annual premium receipts help with income tax.",
+  "payOnlineSteps": "1. Open India Post's Postal Life Insurance page and choose Pay Premium Online.\n2. Log in with your Customer ID. First time: register; you can get the Customer ID on your registered mobile.\n3. Pay by UPI, net banking or debit card.\n4. Download the receipt. Annual premium receipts help with income tax.",
   "payOnlineButton": "Open the portal",
   "surrenderBonusInfo": "Surrendered before 5 years: no bonus",
   "wlaConversionInfo": "Can be converted to Endowment Assurance up to age {age}",
@@ -1122,5 +1122,9 @@
   "doc_claimantAddress": "Claimant's address proof",
   "doc_ddoCertificate": "DDO's certificate of premium recovery for the last 6 months (pay policies)",
   "doc_policyBondCopy": "Self-attested copy of the policy bond",
-  "revivalRulesInfo": "A policy lapses if premiums are unpaid for 6 months (first 3 years) or 12 months (after 3 years). It can be revived within 5 years of the first unpaid premium, with interest at 12% a year and a good health certificate; arrears can be paid in up to 12 instalments."
+  "revivalRulesInfo": "A policy lapses if premiums are unpaid for 6 months (first 3 years) or 12 months (after 3 years). It can be revived within 5 years of the first unpaid premium, with interest at 12% a year and a good health certificate; arrears can be paid in up to 12 instalments.",
+  "linkPliPageTitle": "India Post: Postal Life Insurance",
+  "linkPliPageDesc": "Plans, premium tables, customer guide, pay premium online",
+  "linkRpliPageTitle": "India Post: Rural Postal Life Insurance",
+  "linkRpliPageDesc": "Plans, premium tables and customer guide"
 }

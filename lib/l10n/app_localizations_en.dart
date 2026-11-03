@@ -1520,7 +1520,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get payOnlineSteps =>
-      '1. On the Dak Bima Sewa Portal, register with your Customer ID (tap Get Customer ID to receive it on your registered mobile).\n2. Log in and choose the policy.\n3. Pay by UPI, net banking or debit card.\n4. Download the receipt. Annual premium receipts help with income tax.';
+      '1. Open India Post\'s Postal Life Insurance page and choose Pay Premium Online.\n2. Log in with your Customer ID. First time: register; you can get the Customer ID on your registered mobile.\n3. Pay by UPI, net banking or debit card.\n4. Download the receipt. Annual premium receipts help with income tax.';
 
   @override
   String get payOnlineButton => 'Open the portal';
@@ -1591,4 +1591,17 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get revivalRulesInfo =>
       'A policy lapses if premiums are unpaid for 6 months (first 3 years) or 12 months (after 3 years). It can be revived within 5 years of the first unpaid premium, with interest at 12% a year and a good health certificate; arrears can be paid in up to 12 instalments.';
+
+  @override
+  String get linkPliPageTitle => 'India Post: Postal Life Insurance';
+
+  @override
+  String get linkPliPageDesc =>
+      'Plans, premium tables, customer guide, pay premium online';
+
+  @override
+  String get linkRpliPageTitle => 'India Post: Rural Postal Life Insurance';
+
+  @override
+  String get linkRpliPageDesc => 'Plans, premium tables and customer guide';
 }
