@@ -40,10 +40,10 @@ listed above. Restoring reads a backup file you pick.
   server is involved.
 
 ## Links to official websites
-The **Official links** screen opens Government of India websites (such as
-pli.indiapost.gov.in, indiapost.gov.in, digilocker.gov.in and
-pgportal.gov.in) in your browser, and can dial the India Post toll-free
-number. Those sites have their own privacy policies.
+The **Official links** screen opens India Post's website (indiapost.gov.in)
+in your browser, and can dial the India Post toll-free number. Official
+forms open from the Department of Posts site (utilities.cept.gov.in).
+Those sites have their own privacy policies.
 
 ## Permissions
 - **Notifications**, **vibrate** and **run at startup**: only to show

@@ -17,11 +17,30 @@ void main() {
     }
   });
 
+  test('only sites that Play reviewers outside India can open are linked', () {
+    // ims.indiapost.gov.in and pli.indiapost.gov.in block foreign visitors,
+    // and DigiLocker and CPGRAMS did not load for the reviewer: Play rejected
+    // the app for links that did not work.
+    const reachable = {'www.indiapost.gov.in', 'utilities.cept.gov.in'};
+    final forms = bundledForms();
+    final urls = [
+      for (final link in officialLinks)
+        if (!link.url.startsWith('tel:')) link.url,
+      kPliPage,
+      kRpliPage,
+      forms.officialFormsUrl,
+      for (final s in forms.services) ?s.pdfSource,
+    ];
+    for (final u in urls) {
+      expect(reachable, contains(Uri.parse(u).host), reason: u);
+    }
+  });
+
   testWidgets('links screen lists every link and the independence note', (tester) async {
     await pumpApp(tester, location: '/links');
     expect(find.text('Pay premium online'), findsOneWidget);
-    await tester.scrollUntilVisible(find.text('Dak Bima Sewa Portal'), 200);
-    await tester.scrollUntilVisible(find.text('PLI Customer Portal'), 200);
+    await tester.scrollUntilVisible(find.text('India Post: Postal Life Insurance'), 200);
+    await tester.scrollUntilVisible(find.text('India Post: Rural Postal Life Insurance'), 200);
     await tester.scrollUntilVisible(find.textContaining('not affiliated'), 200);
     expect(find.text('Toll-free 1800 266 6868'), findsOneWidget);
     expect(find.textContaining('not affiliated with India Post'), findsOneWidget);
@@ -42,7 +61,8 @@ void main() {
     expect(find.text('Help & feedback'), findsOneWidget);
     expect(find.textContaining('maheshraikg@gmail.com'), findsOneWidget);
     expect(find.text('Report a problem'), findsOneWidget);
-    expect(find.text('Check for app updates (Play Store)'), findsOneWidget);
+    // No Play Store link until the app is live: the page is 404 during review.
+    expect(find.text('Check for app updates (Play Store)'), findsNothing);
   });
 
   test('support e-mail link carries subject and body', () {
@@ -51,6 +71,5 @@ void main() {
     expect(uri.path, kSupportEmail);
     expect(uri.query, contains('subject=Bug'));
     expect(Uri.decodeComponent(uri.query), contains('Line 1\nLine 2'));
-    expect(Uri.parse(kPlayStoreUrl).queryParameters['id'], 'com.plirpli.calculator');
   });
 }

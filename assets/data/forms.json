@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "verified": false,
-  "source": "Maturity, survival, death, loan, assignment, surrender, revival and conversion checklists and service standards: Department of Posts, Guidelines for Customers and Citizen Charter on the Dak Bima Sewa Portal (https://ims.indiapost.gov.in/plicustomerportal), read 30 Oct 2026. Other services: general PLI/RPLI servicing practice.",
-  "officialFormsUrl": "https://ims.indiapost.gov.in/plicustomerportal/pli-customer/miscellaneous/guidelines-for-customers",
+  "source": "Maturity, survival, death, loan, assignment, surrender, revival and conversion checklists and service standards: Department of Posts, Guidelines for Customers and Citizen Charter (India Post PLI customer portal, read 30 Oct 2026; India Post PLI page https://www.indiapost.gov.in/insurance-services/pli, Customer Guide). Other services: general PLI/RPLI servicing practice.",
+  "officialFormsUrl": "https://www.indiapost.gov.in/insurance-services/pli",
   "services": [
     { "id": "proposal",     "icon": "note_add",        "letter": false, "pdfAsset": null,
       "docs": ["form", "ageProof", "idProof", "addressProof", "photo", "eligibility", "nomineeDetails", "bankDetails" ], "serviceStandardDays": 15 },

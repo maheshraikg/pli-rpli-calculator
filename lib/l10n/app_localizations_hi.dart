@@ -909,11 +909,11 @@ class AppLocalizationsHi extends AppLocalizations {
   }
 
   @override
-  String get provisionalTitle => 'अभी पुष्टि होने वाले नियम';
+  String get provisionalTitle => 'गणना संबंधी नोट';
 
   @override
   String get provisionalIntro =>
-      'भारतीय डाक के आधिकारिक परिपत्रों से पुष्टि होने तक ये नियम कार्यकारी मान्यताएँ हैं (अंग्रेज़ी में):';
+      'ऐप अपनी गणनाओं में इंडिया पोस्ट के नियम कैसे लागू करता है। अंतिम राशि इंडिया पोस्ट द्वारा तय की जाती है (अंग्रेज़ी में):';
 
   @override
   String get checkUpdates => 'दर अपडेट जाँचें';
@@ -1486,7 +1486,7 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get payOnlineSteps =>
-      '1. डाक बीमा सेवा पोर्टल पर अपनी ग्राहक आईडी से पंजीकरण करें (पंजीकृत मोबाइल पर आईडी पाने के लिए \"Get Customer ID\" दबाएँ)।\n2. लॉगिन करें और पॉलिसी चुनें।\n3. UPI, नेट बैंकिंग या डेबिट कार्ड से भुगतान करें।\n4. रसीद डाउनलोड करें। वार्षिक प्रीमियम रसीदें आयकर में काम आती हैं।';
+      '1. इंडिया पोस्ट का डाक जीवन बीमा पेज खोलें और \"Pay Premium Online\" चुनें।\n2. अपनी ग्राहक आईडी से लॉगिन करें। पहली बार: पंजीकरण करें; ग्राहक आईडी पंजीकृत मोबाइल पर मिल सकती है।\n3. UPI, नेट बैंकिंग या डेबिट कार्ड से भुगतान करें।\n4. रसीद डाउनलोड करें। वार्षिक प्रीमियम रसीदें आयकर में काम आती हैं।';
 
   @override
   String get payOnlineButton => 'पोर्टल खोलें';
@@ -1557,4 +1557,17 @@ class AppLocalizationsHi extends AppLocalizations {
   @override
   String get revivalRulesInfo =>
       'प्रीमियम 6 महीने (पहले 3 वर्ष) या 12 महीने (3 वर्ष बाद) न भरने पर पॉलिसी व्यपगत हो जाती है। पहली बकाया किस्त से 5 वर्ष के भीतर 12% वार्षिक ब्याज और अच्छे स्वास्थ्य प्रमाणपत्र के साथ इसे पुनर्जीवित किया जा सकता है; बकाया अधिकतम 12 किस्तों में दिया जा सकता है।';
+
+  @override
+  String get linkPliPageTitle => 'इंडिया पोस्ट: डाक जीवन बीमा';
+
+  @override
+  String get linkPliPageDesc =>
+      'योजनाएँ, प्रीमियम तालिकाएँ, ग्राहक गाइड, ऑनलाइन प्रीमियम भुगतान';
+
+  @override
+  String get linkRpliPageTitle => 'इंडिया पोस्ट: ग्रामीण डाक जीवन बीमा';
+
+  @override
+  String get linkRpliPageDesc => 'योजनाएँ, प्रीमियम तालिकाएँ और ग्राहक गाइड';
 }

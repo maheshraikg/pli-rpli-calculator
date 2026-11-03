@@ -911,11 +911,11 @@ class AppLocalizationsAs extends AppLocalizations {
   }
 
   @override
-  String get provisionalTitle => 'এতিয়াও নিশ্চিত হ\'বলগীয়া নিয়ম';
+  String get provisionalTitle => 'হিচাপৰ টোকা';
 
   @override
   String get provisionalIntro =>
-      'ভাৰতীয় ডাকৰ চৰকাৰী চাৰ্কুলাৰৰ পৰা নিশ্চিত নোহোৱালৈকে এই নিয়মবোৰ কাৰ্যকৰী অনুমান (ইংৰাজীত):';
+      'এপটোৱে হিচাপত ইণ্ডিয়া পোষ্টৰ নিয়ম কেনেকৈ প্ৰয়োগ কৰে। চূড়ান্ত পৰিমাণ ইণ্ডিয়া পোষ্টে নিৰ্ধাৰণ কৰে (ইংৰাজীত):';
 
   @override
   String get checkUpdates => 'হাৰ আপডেট চাওক';
@@ -1485,7 +1485,7 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get payOnlineSteps =>
-      '1. ডাক বীমা সেৱা পৰ্টেলত আপোনাৰ গ্ৰাহক আইডিৰে পঞ্জীয়ন কৰক (পঞ্জীভুক্ত মোবাইলত আইডি পাবলৈ \"Get Customer ID\" টিপক)।\n2. লগইন কৰি পলিচি বাছক।\n3. UPI, নেট বেংকিং বা ডেবিট কাৰ্ডেৰে পৰিশোধ কৰক।\n4. ৰচিদ ডাউনলোড কৰক। বাৰ্ষিক প্ৰিমিয়াম ৰচিদ আয়কৰত কামত আহে।';
+      '1. ইণ্ডিয়া পোষ্টৰ ডাক জীৱন বীমা পৃষ্ঠা খুলি \"Pay Premium Online\" বাছক।\n2. আপোনাৰ গ্ৰাহক আইডিৰে লগইন কৰক। প্ৰথমবাৰ: পঞ্জীয়ন কৰক; গ্ৰাহক আইডি পঞ্জীভুক্ত মোবাইলত পাব পাৰি।\n3. UPI, নেট বেংকিং বা ডেবিট কাৰ্ডেৰে পৰিশোধ কৰক।\n4. ৰচিদ ডাউনলোড কৰক। বাৰ্ষিক প্ৰিমিয়াম ৰচিদ আয়কৰত কামত আহে।';
 
   @override
   String get payOnlineButton => 'পৰ্টেল খোলক';
@@ -1557,4 +1557,17 @@ class AppLocalizationsAs extends AppLocalizations {
   @override
   String get revivalRulesInfo =>
       'প্ৰিমিয়াম 6 মাহ (প্ৰথম 3 বছৰ) বা 12 মাহ (3 বছৰৰ পিছত) নিদিলে পলিচি লেপছ হয়। প্ৰথম বকেয়া কিস্তিৰ পৰা 5 বছৰৰ ভিতৰত বছৰি 12% সুত আৰু সুস্বাস্থ্যৰ প্ৰমাণপত্ৰৰে ইয়াক পুনৰুজ্জীৱিত কৰিব পাৰি; বকেয়া সৰ্বাধিক 12টা কিস্তিত দিব পাৰি।';
+
+  @override
+  String get linkPliPageTitle => 'ইণ্ডিয়া পোষ্ট: ডাক জীৱন বীমা';
+
+  @override
+  String get linkPliPageDesc =>
+      'আঁচনি, প্ৰিমিয়াম তালিকা, গ্ৰাহক গাইড, অনলাইনত প্ৰিমিয়াম পৰিশোধ';
+
+  @override
+  String get linkRpliPageTitle => 'ইণ্ডিয়া পোষ্ট: গ্ৰাম্য ডাক জীৱন বীমা';
+
+  @override
+  String get linkRpliPageDesc => 'আঁচনি, প্ৰিমিয়াম তালিকা আৰু গ্ৰাহক গাইড';
 }

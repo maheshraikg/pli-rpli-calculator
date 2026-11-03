@@ -35,7 +35,7 @@ SHOTS = [
     ('07_forms', '24_form_maturity.png', 0,
      'Claim forms ready', 'Download, share and document checklist'),
     ('08_official_links', '23_links.png', 0,
-     'Official links', 'PLI portal, DigiLocker, toll-free helpline'),
+     'Official links', 'India Post PLI & RPLI pages, helpline'),
     ('09_kannada', '09_home_kannada.png', 0,
      '13 Indian languages', 'Kannada, Hindi, Tamil, Telugu and more'),
 ]
@@ -45,7 +45,7 @@ TABLET_SHOTS = [
     ('1_home', '1_home', 'All agent tools in one app', 'Premium, maturity, dues and forms'),
     ('2_premium', '2_premium', 'Premium in seconds', 'Every plan, age and frequency'),
     ('3_dues', '3_dues', 'Never miss a due', 'Monthly dues and WhatsApp reminders'),
-    ('4_official_links', '4_links', 'Official links', 'PLI portal, DigiLocker, toll-free helpline'),
+    ('4_official_links', '4_links', 'Official links', 'India Post PLI & RPLI pages, helpline'),
 ]
 # Play needs 16:9 or 9:16: (folder tag, canvas size).
 TABLETS = [('tab7', (1080, 1920)), ('tab10', (1440, 2560))]

@@ -17,38 +17,24 @@ typedef OfficialLink = ({
   String url,
 });
 
-const kSewaPortal = 'https://ims.indiapost.gov.in/plicustomerportal';
+/// India Post's PLI and RPLI pages. These open from outside India too
+/// (Play reviewers): the PLI customer portals, DigiLocker and CPGRAMS are
+/// blocked or unreachable there, so they are not linked.
+const kPliPage = 'https://www.indiapost.gov.in/insurance-services/pli';
+const kRpliPage = 'https://www.indiapost.gov.in/insurance-services/rpli';
 
 final officialLinks = <OfficialLink>[
   (
-    icon: AppIcons.globeHemisphereEast,
-    title: (l) => l.linkSewaTitle,
-    desc: (l) => l.linkSewaDesc,
-    url: '$kSewaPortal/home',
-  ),
-  (
-    icon: AppIcons.identificationBadge,
-    title: (l) => l.linkRegisterTitle,
-    desc: (l) => l.linkRegisterDesc,
-    url: '$kSewaPortal/register',
-  ),
-  (
-    icon: AppIcons.bookOpenText,
-    title: (l) => l.linkGuidelinesTitle,
-    desc: (l) => l.linkGuidelinesDesc,
-    url: '$kSewaPortal/pli-customer/miscellaneous/guidelines-for-customers',
-  ),
-  (
     icon: AppIcons.umbrella,
-    title: (l) => l.linkPortalTitle,
-    desc: (l) => l.linkPortalDesc,
-    url: 'https://pli.indiapost.gov.in/CustomerPortal/Home.action',
+    title: (l) => l.linkPliPageTitle,
+    desc: (l) => l.linkPliPageDesc,
+    url: kPliPage,
   ),
   (
-    icon: AppIcons.clipboardText,
-    title: (l) => l.linkFormsTitle,
-    desc: (l) => l.linkFormsDesc,
-    url: 'https://pli.indiapost.gov.in/CustomerPortal/Documents/downloadforms.action',
+    icon: AppIcons.plant,
+    title: (l) => l.linkRpliPageTitle,
+    desc: (l) => l.linkRpliPageDesc,
+    url: kRpliPage,
   ),
   (
     icon: AppIcons.mailbox,
@@ -61,18 +47,6 @@ final officialLinks = <OfficialLink>[
     title: (l) => l.linkHelplineTitle,
     desc: (l) => l.linkHelplineDesc(kHelplineNumber),
     url: 'tel:${kHelplineNumber.replaceAll(' ', '')}',
-  ),
-  (
-    icon: AppIcons.sealCheck,
-    title: (l) => l.linkDigiLockerTitle,
-    desc: (l) => l.linkDigiLockerDesc,
-    url: 'https://www.digilocker.gov.in',
-  ),
-  (
-    icon: AppIcons.warningCircle,
-    title: (l) => l.linkGrievanceTitle,
-    desc: (l) => l.linkGrievanceDesc,
-    url: 'https://pgportal.gov.in',
   ),
 ];
 
@@ -99,7 +73,7 @@ class LinksScreen extends StatelessWidget {
                 FilledButton.icon(
                   icon: const Icon(AppIcons.arrowSquareOutLine),
                   label: Text(l.payOnlineButton),
-                  onPressed: () => launchUrl(Uri.parse('$kSewaPortal/home'), mode: LaunchMode.externalApplication),
+                  onPressed: () => launchUrl(Uri.parse(kPliPage), mode: LaunchMode.externalApplication),
                 ),
               ],
             ),

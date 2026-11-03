@@ -1623,13 +1623,13 @@ abstract class AppLocalizations {
   /// No description provided for @provisionalTitle.
   ///
   /// In en, this message translates to:
-  /// **'Rules still being confirmed'**
+  /// **'Calculation notes'**
   String get provisionalTitle;
 
   /// No description provided for @provisionalIntro.
   ///
   /// In en, this message translates to:
-  /// **'These rules are working assumptions until they are confirmed from official India Post circulars (shown in English):'**
+  /// **'How the app applies India Post rules in its calculations. Final amounts are as decided by India Post (shown in English):'**
   String get provisionalIntro;
 
   /// No description provided for @checkUpdates.
@@ -2678,7 +2678,7 @@ abstract class AppLocalizations {
   /// No description provided for @payOnlineSteps.
   ///
   /// In en, this message translates to:
-  /// **'1. On the Dak Bima Sewa Portal, register with your Customer ID (tap Get Customer ID to receive it on your registered mobile).\n2. Log in and choose the policy.\n3. Pay by UPI, net banking or debit card.\n4. Download the receipt. Annual premium receipts help with income tax.'**
+  /// **'1. Open India Post\'s Postal Life Insurance page and choose Pay Premium Online.\n2. Log in with your Customer ID. First time: register; you can get the Customer ID on your registered mobile.\n3. Pay by UPI, net banking or debit card.\n4. Download the receipt. Annual premium receipts help with income tax.'**
   String get payOnlineSteps;
 
   /// No description provided for @payOnlineButton.
@@ -2788,6 +2788,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'A policy lapses if premiums are unpaid for 6 months (first 3 years) or 12 months (after 3 years). It can be revived within 5 years of the first unpaid premium, with interest at 12% a year and a good health certificate; arrears can be paid in up to 12 instalments.'**
   String get revivalRulesInfo;
+
+  /// No description provided for @linkPliPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'India Post: Postal Life Insurance'**
+  String get linkPliPageTitle;
+
+  /// No description provided for @linkPliPageDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Plans, premium tables, customer guide, pay premium online'**
+  String get linkPliPageDesc;
+
+  /// No description provided for @linkRpliPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'India Post: Rural Postal Life Insurance'**
+  String get linkRpliPageTitle;
+
+  /// No description provided for @linkRpliPageDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Plans, premium tables and customer guide'**
+  String get linkRpliPageDesc;
 }
 
 class _AppLocalizationsDelegate
