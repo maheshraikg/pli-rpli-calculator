@@ -76,6 +76,18 @@ List<int> uiColumnOptions(PlanRule plan) {
 
 /// Default option when switching plan: the last maturity / ceasing age, the
 /// first term open at [age].
+/// The [scheme] plan of the same kind as [from] (Santosh ↔ Gram Santosh,
+/// Suraksha ↔ Gram Suraksha…), so switching PLI/RPLI compares like with like.
+/// A plan with no counterpart (Yugal Suraksha, Gram Priya) maps to the
+/// endowment plan.
+PlanRule equivalentPlan(RuleSet rules, PlanRule from, Scheme scheme) {
+  final plans = rules.plansFor(scheme);
+  return plans.firstWhere(
+    (p) => p.type == from.type,
+    orElse: () => plans.firstWhere((p) => p.type == PlanType.ea, orElse: () => plans.first),
+  );
+}
+
 int? defaultColumn(PlanRule plan, int age) {
   if (plan.maturityAges.isNotEmpty) return plan.maturityAges.last;
   if (plan.premiumCeasingAges.isNotEmpty) return plan.premiumCeasingAges.last;
@@ -114,7 +126,7 @@ class PlanConfigNotifier extends Notifier<PlanConfig> {
   void selectScheme(Scheme scheme) {
     final rules = _rules;
     if (rules == null || scheme == state.scheme) return;
-    selectPlan(rules.plansFor(scheme).first);
+    selectPlan(equivalentPlan(rules, rules.plan(state.planId), scheme));
   }
 
   void selectPlan(PlanRule plan) {

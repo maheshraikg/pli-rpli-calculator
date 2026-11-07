@@ -68,6 +68,35 @@ void main() {
     expect(find.text('₹10L'), findsOneWidget);
   });
 
+  testWidgets('switching to RPLI keeps the same kind of plan and gives the RPLI value', (tester) async {
+    // A user reported PLI and RPLI maturity values looking the same: RPLI
+    // opened Gram Suraksha, which could not be calculated here.
+    final c = await pumpApp(tester, location: '/maturity');
+    await tester.tap(find.text('RPLI'));
+    await tester.pumpAndSettle();
+    expect(c.read(maturityFormProvider).planId, 'rpli_gram_santosh');
+    // ₹1L, 30 → 60 at ₹48 bonus: 30 × ₹4,800 + ₹1,00,000 (no terminal bonus
+    // in RPLI) vs ₹2,56,200 for PLI Santosh.
+    await scrollTo(tester, find.text('₹2,44,000'));
+    expect(find.text('₹2,44,000'), findsOneWidget);
+    expect(find.text('₹2,56,200'), findsNothing);
+  });
+
+  testWidgets('whole life plans ask for the premium paying age and calculate', (tester) async {
+    final c = await pumpApp(tester, location: '/maturity');
+    final rules = bundledData().rules;
+    for (final (id, value) in [('pli_suraksha', '₹4,80,200'), ('rpli_gram_suraksha', '₹4,00,000')]) {
+      c.read(maturityFormProvider.notifier).selectPlan(rules.plan(id));
+      await tester.pumpAndSettle();
+      expect(find.text('Premium paying age'), findsOneWidget, reason: id);
+      expect(c.read(maturityOutcomeProvider), isA<MaturityReady>(), reason: id);
+      await scrollTo(tester, find.text(value));
+      expect(find.text(value), findsOneWidget, reason: id);
+      await tester.scrollUntilVisible(find.text('Plan').first, -400,
+          scrollable: find.byType(Scrollable).first);
+    }
+  });
+
   testWidgets('renders in Kannada', (tester) async {
     await pumpApp(tester, locale: const Locale('kn'), location: '/maturity');
     expect(find.text('ಪಕ್ವತೆ ಮತ್ತು ಬೋನಸ್'), findsOneWidget);

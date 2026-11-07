@@ -160,6 +160,11 @@ class _MaturityBody extends ConsumerWidget {
         const SizedBox(height: 8),
         chips(plan.maturityAges, input.maturityAge, (v) => '$v', form.setMaturityAge),
       ],
+      PlanType.wla => [
+        Text(l.premiumCeasingAgeLabel, style: title),
+        const SizedBox(height: 8),
+        chips(plan.premiumCeasingAges, input.premiumCeasingAge, (v) => '$v', form.setPremiumCeasingAge),
+      ],
       PlanType.aea => [
         Text(l.termLabel, style: title),
         const SizedBox(height: 8),

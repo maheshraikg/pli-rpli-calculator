@@ -2,6 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pli_engine/pli_engine.dart';
 
 import '../../data/data_repository.dart';
+import '../common/plan_config.dart';
 
 /// Today's date (no time part). Overridden in tests.
 final todayProvider = Provider<DateTime>((ref) {
@@ -19,6 +20,7 @@ class MaturityInput {
     required this.termYears,
     required this.spouseAge,
     required this.commencement,
+    this.premiumCeasingAge,
   });
 
   final Scheme scheme;
@@ -27,6 +29,9 @@ class MaturityInput {
   final int? sumAssured;
   final int? maturityAge;
   final int? termYears;
+
+  /// Whole life plans: age at which premiums stop.
+  final int? premiumCeasingAge;
   final int spouseAge;
   final DateTime commencement;
 
@@ -36,6 +41,7 @@ class MaturityInput {
     bool clearSumAssured = false,
     int? maturityAge,
     int? termYears,
+    int? premiumCeasingAge,
     int? spouseAge,
     DateTime? commencement,
   }) => MaturityInput(
@@ -45,6 +51,7 @@ class MaturityInput {
     sumAssured: clearSumAssured ? null : sumAssured ?? this.sumAssured,
     maturityAge: maturityAge ?? this.maturityAge,
     termYears: termYears ?? this.termYears,
+    premiumCeasingAge: premiumCeasingAge ?? this.premiumCeasingAge,
     spouseAge: spouseAge ?? this.spouseAge,
     commencement: commencement ?? this.commencement,
   );
@@ -65,10 +72,7 @@ class MaturityForm extends Notifier<MaturityInput> {
 
   void selectScheme(Scheme scheme, RuleSet rules) {
     if (scheme == state.scheme) return;
-    final plan = rules
-        .plansFor(scheme)
-        .firstWhere((p) => projectionPendingReason(p.type) == null, orElse: () => rules.plansFor(scheme).first);
-    _apply(plan, scheme: scheme);
+    _apply(equivalentPlan(rules, rules.plan(state.planId), scheme), scheme: scheme);
   }
 
   void selectPlan(PlanRule plan) => _apply(plan, scheme: plan.scheme);
@@ -90,6 +94,7 @@ class MaturityForm extends Notifier<MaturityInput> {
       sumAssured: state.sumAssured,
       maturityAge: plan.maturityAges.isEmpty ? null : plan.maturityAges.last,
       termYears: term,
+      premiumCeasingAge: plan.premiumCeasingAges.isEmpty ? null : plan.premiumCeasingAges.last,
       spouseAge: state.spouseAge,
       commencement: state.commencement,
     );
@@ -100,6 +105,7 @@ class MaturityForm extends Notifier<MaturityInput> {
   void setSumAssured(int? v) => state = state.copyWith(sumAssured: v, clearSumAssured: v == null);
   void setMaturityAge(int v) => state = state.copyWith(maturityAge: v);
   void setTermYears(int v) => state = state.copyWith(termYears: v);
+  void setPremiumCeasingAge(int v) => state = state.copyWith(premiumCeasingAge: v);
   void setCommencement(DateTime v) => state = state.copyWith(commencement: v);
 }
 
@@ -147,6 +153,7 @@ final maturityOutcomeProvider = Provider<MaturityOutcome?>((ref) {
       entryAge: input.entryAge,
       sumAssured: sa,
       maturityAge: input.maturityAge,
+      premiumCeasingAge: input.premiumCeasingAge,
       termYears: input.termYears,
       spouseAge: plan.jointLife != null ? input.spouseAge : null,
     ),
@@ -161,6 +168,7 @@ final maturityOutcomeProvider = Provider<MaturityOutcome?>((ref) {
         sumAssured: sa,
         entryAge: input.entryAge,
         maturityAge: input.maturityAge,
+        premiumCeasingAge: input.premiumCeasingAge,
         termYears: input.termYears,
         commencement: input.commencement,
       ),
