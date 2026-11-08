@@ -11,7 +11,7 @@ import '../links/links_screen.dart';
 import '../common/plan_config_form.dart';
 import '../../core/app_icons.dart';
 
-const kAppVersion = '1.0.0';
+const kAppVersion = '1.0.1';
 
 /// Where users report problems and send suggestions (also the Play listing contact).
 const kSupportEmail = 'maheshraikg@gmail.com';

@@ -25,6 +25,26 @@ void main() {
     expect(find.text('SAMPLE DATA – NOT OFFICIAL'), findsNothing);
   });
 
+  test('switching PLI/RPLI maps each plan to the same kind of plan', () {
+    final rules = bundledData().rules;
+    String to(String id, Scheme s) => equivalentPlan(rules, rules.plan(id), s).id;
+    expect(to('pli_santosh', Scheme.rpli), 'rpli_gram_santosh');
+    expect(to('pli_suraksha', Scheme.rpli), 'rpli_gram_suraksha');
+    expect(to('pli_suvidha', Scheme.rpli), 'rpli_gram_suvidha');
+    expect(to('pli_sumangal', Scheme.rpli), 'rpli_gram_sumangal');
+    expect(to('pli_bal_jeevan_bima', Scheme.rpli), 'rpli_bal_jeevan_bima');
+    expect(to('pli_yugal_suraksha', Scheme.rpli), 'rpli_gram_santosh');
+    expect(to('rpli_gram_santosh', Scheme.pli), 'pli_santosh');
+    expect(to('rpli_gram_priya', Scheme.pli), 'pli_sumangal');
+  });
+
+  testWidgets('premium screen: RPLI after PLI Santosh shows Gram Santosh', (tester) async {
+    final c = await pumpApp(tester, location: '/premium');
+    await tester.tap(find.text('RPLI'));
+    await tester.pumpAndSettle();
+    expect(c.read(planConfigProvider(premiumConfigKey)).planId, 'rpli_gram_santosh');
+  });
+
   testWidgets('date of birth gives age nearest birthday', (tester) async {
     final container = await pumpApp(tester, location: '/premium');
     container.read(planConfigProvider(premiumConfigKey).notifier).setDob(DateTime(1990, 3, 1)); // start 1 Nov 2026
