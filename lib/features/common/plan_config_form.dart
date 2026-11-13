@@ -113,6 +113,7 @@ class PlanConfigForm extends ConsumerWidget {
               onChanged: form.setManualAge,
               valueText: l.ageYears,
             ),
+            Text(l.ageBasisNote, style: theme.textTheme.bodySmall),
             Align(
               alignment: AlignmentDirectional.centerStart,
               child: TextButton.icon(
@@ -140,9 +141,11 @@ class PlanConfigForm extends ConsumerWidget {
               },
             ),
             Text(
-              rules.premium.ageBasis == AgeBasis.nearestBirthday
-                  ? l.ageFromDobNearest(c.entryAge(rules))
-                  : l.ageFromDobLast(c.entryAge(rules)),
+              switch (rules.premium.ageBasis) {
+                AgeBasis.nearestBirthday => l.ageFromDobNearest(c.entryAge(rules)),
+                AgeBasis.lastBirthday => l.ageFromDobLast(c.entryAge(rules)),
+                AgeBasis.nextBirthday => l.ageFromDobNext(c.entryAge(rules)),
+              },
               style: theme.textTheme.titleMedium,
             ),
             Align(

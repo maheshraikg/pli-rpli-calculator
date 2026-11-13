@@ -84,7 +84,7 @@ class AppLocalizationsAs extends AppLocalizations {
   }
 
   @override
-  String get entryAgeLabel => 'প্ৰৱেশৰ বয়স';
+  String get entryAgeLabel => 'বয়স (পৰৱৰ্তী জন্মদিনত)';
 
   @override
   String get childAgeLabel => 'সন্তানৰ বয়স';
@@ -105,7 +105,7 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get ageBasisNote =>
-      'সম্পূৰ্ণ বছৰত বয়স লিখক। ভাৰতীয় ডাকৰ বয়সৰ নিয়ম নিশ্চিত হোৱাৰ পিছত জন্মৰ তাৰিখৰ পৰা বয়স গণনাৰ সুবিধা যোগ কৰা হ\'ব।';
+      'ইণ্ডিয়া পোষ্টে পৰৱৰ্তী জন্মদিনৰ বয়স লয়: সম্পূৰ্ণ বছৰ + 1। উদাহৰণ: 35 বছৰ 5 মাহ = 36।';
 
   @override
   String get sumAssuredLabel => 'বীমাৰ পৰিমাণ (₹)';
@@ -1570,4 +1570,9 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get linkRpliPageDesc => 'আঁচনি, প্ৰিমিয়াম তালিকা আৰু গ্ৰাহক গাইড';
+
+  @override
+  String ageFromDobNext(int age) {
+    return 'আৰম্ভণিৰ তাৰিখত প্ৰৱেশ বয়স: $age (পৰৱৰ্তী জন্মদিনত)';
+  }
 }

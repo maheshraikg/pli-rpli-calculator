@@ -84,7 +84,7 @@ class AppLocalizationsMl extends AppLocalizations {
   }
 
   @override
-  String get entryAgeLabel => 'ചേരുമ്പോഴുള്ള പ്രായം';
+  String get entryAgeLabel => 'പ്രായം (അടുത്ത ജന്മദിനത്തിൽ)';
 
   @override
   String get childAgeLabel => 'കുട്ടിയുടെ പ്രായം';
@@ -105,7 +105,7 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get ageBasisNote =>
-      'പൂർത്തിയായ വർഷങ്ങളിൽ പ്രായം നൽകുക. ഇന്ത്യ പോസ്റ്റിന്റെ പ്രായ നിയമം സ്ഥിരീകരിച്ചാൽ ജനനത്തീയതിയിൽ നിന്ന് പ്രായം കണക്കാക്കുന്ന സൗകര്യം ചേർക്കും.';
+      'ഇന്ത്യാ പോസ്റ്റ് അടുത്ത ജന്മദിനത്തിലെ പ്രായം എടുക്കുന്നു: പൂർത്തിയായ വർഷം + 1. ഉദാ: 35 വർഷം 5 മാസം = 36.';
 
   @override
   String get sumAssuredLabel => 'ഇൻഷുറൻസ് തുക (₹)';
@@ -1584,4 +1584,9 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get linkRpliPageDesc => 'പദ്ധതികൾ, പ്രീമിയം പട്ടികകൾ, ഉപഭോക്തൃ ഗൈഡ്';
+
+  @override
+  String ageFromDobNext(int age) {
+    return 'ആരംഭ തീയതിയിലെ പ്രവേശന പ്രായം: $age (അടുത്ത ജന്മദിനത്തിൽ)';
+  }
 }

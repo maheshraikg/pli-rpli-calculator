@@ -43,7 +43,7 @@
       }
     }
   },
-  "entryAgeLabel": "Age at entry",
+  "entryAgeLabel": "Age (next birthday)",
   "childAgeLabel": "Child's age",
   "spouseAgeLabel": "Spouse's age",
   "ageYears": "{age, plural, =1{1 year} other{{age} years}}",
@@ -56,7 +56,7 @@
   },
   "decrease": "Decrease",
   "increase": "Increase",
-  "ageBasisNote": "Enter age in completed years. Age from date of birth will be added once India Post's age rule is confirmed.",
+  "ageBasisNote": "India Post uses the age on the next birthday: completed years + 1. Example: 35 years 5 months = 36.",
   "sumAssuredLabel": "Sum assured (₹)",
   "maturityAgeLabel": "Maturity age",
   "termLabel": "Policy term",
@@ -1126,5 +1126,13 @@
   "linkPliPageTitle": "India Post: Postal Life Insurance",
   "linkPliPageDesc": "Plans, premium tables, customer guide, pay premium online",
   "linkRpliPageTitle": "India Post: Rural Postal Life Insurance",
-  "linkRpliPageDesc": "Plans, premium tables and customer guide"
+  "linkRpliPageDesc": "Plans, premium tables and customer guide",
+  "ageFromDobNext": "Entry age on start date: {age} (age next birthday)",
+  "@ageFromDobNext": {
+    "placeholders": {
+      "age": {
+        "type": "int"
+      }
+    }
+  }
 }

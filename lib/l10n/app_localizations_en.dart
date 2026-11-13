@@ -84,7 +84,7 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get entryAgeLabel => 'Age at entry';
+  String get entryAgeLabel => 'Age (next birthday)';
 
   @override
   String get childAgeLabel => 'Child\'s age';
@@ -111,7 +111,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get ageBasisNote =>
-      'Enter age in completed years. Age from date of birth will be added once India Post\'s age rule is confirmed.';
+      'India Post uses the age on the next birthday: completed years + 1. Example: 35 years 5 months = 36.';
 
   @override
   String get sumAssuredLabel => 'Sum assured (₹)';
@@ -1604,4 +1604,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get linkRpliPageDesc => 'Plans, premium tables and customer guide';
+
+  @override
+  String ageFromDobNext(int age) {
+    return 'Entry age on start date: $age (age next birthday)';
+  }
 }

@@ -84,7 +84,7 @@ class AppLocalizationsGu extends AppLocalizations {
   }
 
   @override
-  String get entryAgeLabel => 'પ્રવેશ ઉંમર';
+  String get entryAgeLabel => 'ઉંમર (આગામી જન્મદિવસે)';
 
   @override
   String get childAgeLabel => 'બાળકની ઉંમર';
@@ -105,7 +105,7 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get ageBasisNote =>
-      'ઉંમર પૂર્ણ વર્ષોમાં દાખલ કરો. ભારતીય ટપાલનો ઉંમરનો નિયમ પુષ્ટ થયા પછી જન્મતારીખ પરથી ઉંમરની સુવિધા ઉમેરાશે.';
+      'ઇન્ડિયા પોસ્ટ આગામી જન્મદિવસની ઉંમર લે છે: પૂર્ણ વર્ષ + 1. ઉદાહરણ: 35 વર્ષ 5 મહિના = 36.';
 
   @override
   String get sumAssuredLabel => 'વીમા રકમ (₹)';
@@ -1566,4 +1566,9 @@ class AppLocalizationsGu extends AppLocalizations {
   @override
   String get linkRpliPageDesc =>
       'યોજનાઓ, પ્રીમિયમ કોષ્ટકો અને ગ્રાહક માર્ગદર્શિકા';
+
+  @override
+  String ageFromDobNext(int age) {
+    return 'શરૂઆતની તારીખે પ્રવેશ ઉંમર: $age (આગામી જન્મદિવસે)';
+  }
 }

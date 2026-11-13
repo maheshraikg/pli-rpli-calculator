@@ -22,13 +22,13 @@
   "schemeRpli": "دیہی ڈاک زندگی بیمہ (RPLI)",
   "planLabel": "منصوبہ",
   "rulesPendingSuffix": "{plan} (قواعد زیر التوا)",
-  "entryAgeLabel": "داخلے کی عمر",
+  "entryAgeLabel": "عمر (اگلی سالگرہ پر)",
   "childAgeLabel": "بچے کی عمر",
   "spouseAgeLabel": "شریک حیات کی عمر",
   "ageYears": "{age} سال",
   "decrease": "کم کریں",
   "increase": "بڑھائیں",
-  "ageBasisNote": "عمر مکمل سالوں میں درج کریں۔ انڈیا پوسٹ کا عمر کا قاعدہ تصدیق ہونے کے بعد تاریخ پیدائش سے عمر کی سہولت شامل کی جائے گی۔",
+  "ageBasisNote": "انڈیا پوسٹ اگلی سالگرہ کی عمر لیتا ہے: مکمل سال + 1۔ مثال: 35 سال 5 ماہ = 36۔",
   "sumAssuredLabel": "بیمہ رقم (₹)",
   "maturityAgeLabel": "میچورٹی کی عمر",
   "termLabel": "پالیسی کی مدت",
@@ -447,5 +447,6 @@
   "linkPliPageTitle": "انڈیا پوسٹ: پوسٹل لائف انشورنس",
   "linkPliPageDesc": "منصوبے، پریمیم ٹیبل، کسٹمر گائیڈ، آن لائن پریمیم ادائیگی",
   "linkRpliPageTitle": "انڈیا پوسٹ: رورل پوسٹل لائف انشورنس",
-  "linkRpliPageDesc": "منصوبے، پریمیم ٹیبل اور کسٹمر گائیڈ"
+  "linkRpliPageDesc": "منصوبے، پریمیم ٹیبل اور کسٹمر گائیڈ",
+  "ageFromDobNext": "آغاز کی تاریخ پر داخلہ عمر: {age} (اگلی سالگرہ پر)"
 }

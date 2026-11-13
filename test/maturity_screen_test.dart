@@ -82,20 +82,17 @@ void main() {
     expect(find.text('₹2,56,200'), findsNothing);
   });
 
-  testWidgets('whole life plans ask for the premium paying age and calculate', (tester) async {
-    final c = await pumpApp(tester, location: '/maturity');
-    final rules = bundledData().rules;
-    for (final (id, value) in [('pli_suraksha', '₹4,80,200'), ('rpli_gram_suraksha', '₹4,00,000')]) {
-      c.read(maturityFormProvider.notifier).selectPlan(rules.plan(id));
+  for (final (id, value) in [('pli_suraksha', '₹4,80,200'), ('rpli_gram_suraksha', '₹4,00,000')]) {
+    testWidgets('whole life $id asks for the premium paying age and calculates', (tester) async {
+      final c = await pumpApp(tester, location: '/maturity');
+      c.read(maturityFormProvider.notifier).selectPlan(bundledData().rules.plan(id));
       await tester.pumpAndSettle();
-      expect(find.text('Premium paying age'), findsOneWidget, reason: id);
-      expect(c.read(maturityOutcomeProvider), isA<MaturityReady>(), reason: id);
+      expect(find.text('Premium paying age'), findsOneWidget);
+      expect(c.read(maturityOutcomeProvider), isA<MaturityReady>());
       await scrollTo(tester, find.text(value));
-      expect(find.text(value), findsOneWidget, reason: id);
-      await tester.scrollUntilVisible(find.text('Plan').first, -400,
-          scrollable: find.byType(Scrollable).first);
-    }
-  });
+      expect(find.text(value), findsOneWidget);
+    });
+  }
 
   testWidgets('renders in Kannada', (tester) async {
     await pumpApp(tester, locale: const Locale('kn'), location: '/maturity');

@@ -612,7 +612,7 @@
       "YEARLY"
     ],
     "tableUnitSumAssured": 10000,
-    "ageBasis": "AGE_NEAREST_BIRTHDAY",
+    "ageBasis": "AGE_NEXT_BIRTHDAY",
     "rounding": "NEAREST_RUPEE_AFTER_REBATE",
     "sumAssuredRebate": {
       "rupeesPerMonth": 1,
@@ -654,7 +654,7 @@
       },
       "verified": false
     },
-    "ageBasisVerified": false,
+    "ageBasisVerified": true,
     "roundingVerified": false
   },
   "loan": {
@@ -683,8 +683,7 @@
     "verified": false
   },
   "provisional": [
-    "Entry age = age nearest birthday (6 months or more past the last birthday counts as the next age), on the policy start date.",
-    "Default fee = 1% of the instalment per month of delay; a part month counts as a full month.",
+        "Default fee = 1% of the instalment per month of delay; a part month counts as a full month.",
     "Bonus is credited for each completed policy year at the rate of the financial year in which that policy year ends.",
     "Whole life (Suraksha / Gram Suraksha): bonus keeps accruing until maturity at age 80 after premiums stop; terminal bonus if that period is 20 years or more.",
     "Maturity and survival benefits fall due on the policy anniversary.",
