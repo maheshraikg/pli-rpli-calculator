@@ -84,7 +84,7 @@ class AppLocalizationsTe extends AppLocalizations {
   }
 
   @override
-  String get entryAgeLabel => 'ప్రవేశ వయస్సు';
+  String get entryAgeLabel => 'వయస్సు (తదుపరి పుట్టినరోజుకు)';
 
   @override
   String get childAgeLabel => 'పిల్లల వయస్సు';
@@ -105,7 +105,7 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get ageBasisNote =>
-      'పూర్తయిన సంవత్సరాల్లో వయస్సు నమోదు చేయండి. భారత తపాలా వయస్సు నియమం నిర్ధారణ అయ్యాక పుట్టిన తేదీ నుండి వయస్సు లెక్కించే సౌకర్యం జోడించబడుతుంది.';
+      'ఇండియా పోస్ట్ తదుపరి పుట్టినరోజు వయస్సును తీసుకుంటుంది: పూర్తి సంవత్సరాలు + 1. ఉదాహరణ: 35 సంవత్సరాలు 5 నెలలు = 36.';
 
   @override
   String get sumAssuredLabel => 'బీమా మొత్తం (₹)';
@@ -1574,4 +1574,9 @@ class AppLocalizationsTe extends AppLocalizations {
   @override
   String get linkRpliPageDesc =>
       'పథకాలు, ప్రీమియం పట్టికలు మరియు వినియోగదారు గైడ్';
+
+  @override
+  String ageFromDobNext(int age) {
+    return 'ప్రారంభ తేదీన ప్రవేశ వయస్సు: $age (తదుపరి పుట్టినరోజుకు)';
+  }
 }

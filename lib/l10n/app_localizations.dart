@@ -255,7 +255,7 @@ abstract class AppLocalizations {
   /// No description provided for @entryAgeLabel.
   ///
   /// In en, this message translates to:
-  /// **'Age at entry'**
+  /// **'Age (next birthday)'**
   String get entryAgeLabel;
 
   /// No description provided for @childAgeLabel.
@@ -291,7 +291,7 @@ abstract class AppLocalizations {
   /// No description provided for @ageBasisNote.
   ///
   /// In en, this message translates to:
-  /// **'Enter age in completed years. Age from date of birth will be added once India Post\'s age rule is confirmed.'**
+  /// **'India Post uses the age on the next birthday: completed years + 1. Example: 35 years 5 months = 36.'**
   String get ageBasisNote;
 
   /// No description provided for @sumAssuredLabel.
@@ -2812,6 +2812,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Plans, premium tables and customer guide'**
   String get linkRpliPageDesc;
+
+  /// No description provided for @ageFromDobNext.
+  ///
+  /// In en, this message translates to:
+  /// **'Entry age on start date: {age} (age next birthday)'**
+  String ageFromDobNext(int age);
 }
 
 class _AppLocalizationsDelegate

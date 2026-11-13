@@ -84,7 +84,7 @@ class AppLocalizationsPa extends AppLocalizations {
   }
 
   @override
-  String get entryAgeLabel => 'ਦਾਖ਼ਲਾ ਉਮਰ';
+  String get entryAgeLabel => 'ਉਮਰ (ਅਗਲੇ ਜਨਮ ਦਿਨ \'ਤੇ)';
 
   @override
   String get childAgeLabel => 'ਬੱਚੇ ਦੀ ਉਮਰ';
@@ -105,7 +105,7 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get ageBasisNote =>
-      'ਉਮਰ ਪੂਰੇ ਸਾਲਾਂ ਵਿੱਚ ਭਰੋ। ਭਾਰਤੀ ਡਾਕ ਦਾ ਉਮਰ ਨਿਯਮ ਪੱਕਾ ਹੋਣ ਤੋਂ ਬਾਅਦ ਜਨਮ ਮਿਤੀ ਤੋਂ ਉਮਰ ਦੀ ਸਹੂਲਤ ਜੋੜੀ ਜਾਵੇਗੀ।';
+      'ਇੰਡੀਆ ਪੋਸਟ ਅਗਲੇ ਜਨਮ ਦਿਨ ਦੀ ਉਮਰ ਲੈਂਦੀ ਹੈ: ਪੂਰੇ ਸਾਲ + 1। ਉਦਾਹਰਨ: 35 ਸਾਲ 5 ਮਹੀਨੇ = 36।';
 
   @override
   String get sumAssuredLabel => 'ਬੀਮਾ ਰਕਮ (₹)';
@@ -1566,4 +1566,9 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get linkRpliPageDesc => 'ਯੋਜਨਾਵਾਂ, ਪ੍ਰੀਮੀਅਮ ਸਾਰਣੀਆਂ ਅਤੇ ਗਾਹਕ ਗਾਈਡ';
+
+  @override
+  String ageFromDobNext(int age) {
+    return 'ਸ਼ੁਰੂਆਤੀ ਮਿਤੀ \'ਤੇ ਦਾਖ਼ਲਾ ਉਮਰ: $age (ਅਗਲੇ ਜਨਮ ਦਿਨ \'ਤੇ)';
+  }
 }

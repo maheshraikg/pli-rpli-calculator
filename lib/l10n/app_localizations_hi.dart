@@ -84,7 +84,7 @@ class AppLocalizationsHi extends AppLocalizations {
   }
 
   @override
-  String get entryAgeLabel => 'प्रवेश आयु';
+  String get entryAgeLabel => 'आयु (अगले जन्मदिन पर)';
 
   @override
   String get childAgeLabel => 'बच्चे की आयु';
@@ -105,7 +105,7 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get ageBasisNote =>
-      'आयु पूरे वर्षों में दर्ज करें। भारतीय डाक का आयु नियम पुष्ट होने के बाद जन्मतिथि से आयु की सुविधा जोड़ी जाएगी।';
+      'इंडिया पोस्ट अगले जन्मदिन की आयु लेता है: पूरे वर्ष + 1। उदाहरण: 35 वर्ष 5 महीने = 36।';
 
   @override
   String get sumAssuredLabel => 'बीमा राशि (₹)';
@@ -1570,4 +1570,9 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get linkRpliPageDesc => 'योजनाएँ, प्रीमियम तालिकाएँ और ग्राहक गाइड';
+
+  @override
+  String ageFromDobNext(int age) {
+    return 'प्रारंभ तिथि पर प्रवेश आयु: $age (अगले जन्मदिन पर)';
+  }
 }

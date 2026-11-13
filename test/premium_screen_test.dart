@@ -45,11 +45,31 @@ void main() {
     expect(c.read(planConfigProvider(premiumConfigKey)).planId, 'rpli_gram_santosh');
   });
 
-  testWidgets('date of birth gives age nearest birthday', (tester) async {
+  testWidgets('date of birth uses age next birthday, matching Dak Sewa', (tester) async {
+    // Dak Sewa quote: Santosh, born 9 Jun 1991, start 13 Nov 2026, ₹10 lakh,
+    // maturity at 55: age 36, 19 years, ₹4,400 − ₹50 = ₹4,350 a month,
+    // maturity ₹19,88,000.
+    final c = await pumpApp(tester, location: '/premium');
+    c.read(planConfigProvider(premiumConfigKey).notifier)
+      ..setCommencement(DateTime(2026, 11, 13))
+      ..setDob(DateTime(1991, 6, 9))
+      ..setSumAssured(1000000)
+      ..setColumn(55);
+    await tester.pumpAndSettle();
+    expect(find.text('Entry age on start date: 36 (age next birthday)'), findsOneWidget);
+    final e = c.read(planEvaluationProvider(premiumConfigKey))!;
+    expect(e.entryAge, 36);
+    expect(e.selectedQuote!.premium, Paise.wholeRupees(4350));
+    expect(e.selectedQuote!.payingYears, 19);
+    expect(e.projection!.termYears, 19);
+    expect(e.projection!.totalBenefits, Paise.wholeRupees(1988000));
+  });
+
+  testWidgets('date of birth gives age next birthday', (tester) async {
     final container = await pumpApp(tester, location: '/premium');
     container.read(planConfigProvider(premiumConfigKey).notifier).setDob(DateTime(1990, 3, 1)); // start 1 Nov 2026
     await tester.pumpAndSettle();
-    expect(find.text('Entry age on start date: 37 (age nearest birthday)'), findsOneWidget);
+    expect(find.text('Entry age on start date: 37 (age next birthday)'), findsOneWidget);
   });
 
   testWidgets('plan without a premium table says so instead of a number', (tester) async {

@@ -84,7 +84,7 @@ class AppLocalizationsMr extends AppLocalizations {
   }
 
   @override
-  String get entryAgeLabel => 'प्रवेश वय';
+  String get entryAgeLabel => 'वय (पुढील वाढदिवसाला)';
 
   @override
   String get childAgeLabel => 'मुलाचे वय';
@@ -105,7 +105,7 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get ageBasisNote =>
-      'वय पूर्ण वर्षांत भरा. भारतीय टपालाचा वयाचा नियम निश्चित झाल्यावर जन्मतारखेवरून वय मोजण्याची सोय जोडली जाईल.';
+      'इंडिया पोस्ट पुढील वाढदिवसाचे वय घेते: पूर्ण वर्षे + 1. उदाहरण: 35 वर्षे 5 महिने = 36.';
 
   @override
   String get sumAssuredLabel => 'विमा रक्कम (₹)';
@@ -1566,4 +1566,9 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get linkRpliPageDesc => 'योजना, प्रीमियम तक्ते आणि ग्राहक मार्गदर्शक';
+
+  @override
+  String ageFromDobNext(int age) {
+    return 'सुरुवातीच्या तारखेला प्रवेश वय: $age (पुढील वाढदिवसाला)';
+  }
 }

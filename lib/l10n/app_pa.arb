@@ -22,13 +22,13 @@
   "schemeRpli": "ਪੇਂਡੂ ਡਾਕ ਜੀਵਨ ਬੀਮਾ (RPLI)",
   "planLabel": "ਯੋਜਨਾ",
   "rulesPendingSuffix": "{plan} (ਨਿਯਮ ਬਾਕੀ)",
-  "entryAgeLabel": "ਦਾਖ਼ਲਾ ਉਮਰ",
+  "entryAgeLabel": "ਉਮਰ (ਅਗਲੇ ਜਨਮ ਦਿਨ 'ਤੇ)",
   "childAgeLabel": "ਬੱਚੇ ਦੀ ਉਮਰ",
   "spouseAgeLabel": "ਜੀਵਨ ਸਾਥੀ ਦੀ ਉਮਰ",
   "ageYears": "{age} ਸਾਲ",
   "decrease": "ਘਟਾਓ",
   "increase": "ਵਧਾਓ",
-  "ageBasisNote": "ਉਮਰ ਪੂਰੇ ਸਾਲਾਂ ਵਿੱਚ ਭਰੋ। ਭਾਰਤੀ ਡਾਕ ਦਾ ਉਮਰ ਨਿਯਮ ਪੱਕਾ ਹੋਣ ਤੋਂ ਬਾਅਦ ਜਨਮ ਮਿਤੀ ਤੋਂ ਉਮਰ ਦੀ ਸਹੂਲਤ ਜੋੜੀ ਜਾਵੇਗੀ।",
+  "ageBasisNote": "ਇੰਡੀਆ ਪੋਸਟ ਅਗਲੇ ਜਨਮ ਦਿਨ ਦੀ ਉਮਰ ਲੈਂਦੀ ਹੈ: ਪੂਰੇ ਸਾਲ + 1। ਉਦਾਹਰਨ: 35 ਸਾਲ 5 ਮਹੀਨੇ = 36।",
   "sumAssuredLabel": "ਬੀਮਾ ਰਕਮ (₹)",
   "maturityAgeLabel": "ਮਿਆਦ ਪੂਰੀ ਹੋਣ ਦੀ ਉਮਰ",
   "termLabel": "ਪਾਲਿਸੀ ਮਿਆਦ",
@@ -447,5 +447,6 @@
   "linkPliPageTitle": "ਇੰਡੀਆ ਪੋਸਟ: ਡਾਕ ਜੀਵਨ ਬੀਮਾ",
   "linkPliPageDesc": "ਯੋਜਨਾਵਾਂ, ਪ੍ਰੀਮੀਅਮ ਸਾਰਣੀਆਂ, ਗਾਹਕ ਗਾਈਡ, ਆਨਲਾਈਨ ਪ੍ਰੀਮੀਅਮ ਭੁਗਤਾਨ",
   "linkRpliPageTitle": "ਇੰਡੀਆ ਪੋਸਟ: ਪੇਂਡੂ ਡਾਕ ਜੀਵਨ ਬੀਮਾ",
-  "linkRpliPageDesc": "ਯੋਜਨਾਵਾਂ, ਪ੍ਰੀਮੀਅਮ ਸਾਰਣੀਆਂ ਅਤੇ ਗਾਹਕ ਗਾਈਡ"
+  "linkRpliPageDesc": "ਯੋਜਨਾਵਾਂ, ਪ੍ਰੀਮੀਅਮ ਸਾਰਣੀਆਂ ਅਤੇ ਗਾਹਕ ਗਾਈਡ",
+  "ageFromDobNext": "ਸ਼ੁਰੂਆਤੀ ਮਿਤੀ 'ਤੇ ਦਾਖ਼ਲਾ ਉਮਰ: {age} (ਅਗਲੇ ਜਨਮ ਦਿਨ 'ਤੇ)"
 }

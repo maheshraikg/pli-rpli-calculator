@@ -3,7 +3,8 @@ import 'enums.dart';
 
 enum AgeBasis {
   nearestBirthday('AGE_NEAREST_BIRTHDAY'),
-  lastBirthday('AGE_LAST_BIRTHDAY');
+  lastBirthday('AGE_LAST_BIRTHDAY'),
+  nextBirthday('AGE_NEXT_BIRTHDAY');
 
   const AgeBasis(this.code);
   final String code;

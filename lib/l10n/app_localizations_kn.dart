@@ -84,7 +84,7 @@ class AppLocalizationsKn extends AppLocalizations {
   }
 
   @override
-  String get entryAgeLabel => 'ಪ್ರವೇಶ ವಯಸ್ಸು';
+  String get entryAgeLabel => 'ವಯಸ್ಸು (ಮುಂದಿನ ಜನ್ಮದಿನಕ್ಕೆ)';
 
   @override
   String get childAgeLabel => 'ಮಗುವಿನ ವಯಸ್ಸು';
@@ -105,7 +105,7 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get ageBasisNote =>
-      'ಪೂರ್ಣಗೊಂಡ ವರ್ಷಗಳಲ್ಲಿ ವಯಸ್ಸು ನಮೂದಿಸಿ. ಭಾರತೀಯ ಅಂಚೆಯ ವಯಸ್ಸಿನ ನಿಯಮ ದೃಢಪಟ್ಟ ನಂತರ ಜನ್ಮ ದಿನಾಂಕದಿಂದ ವಯಸ್ಸು ಲೆಕ್ಕಹಾಕುವ ಸೌಲಭ್ಯ ಸೇರಿಸಲಾಗುವುದು.';
+      'ಇಂಡಿಯಾ ಪೋಸ್ಟ್ ಮುಂದಿನ ಜನ್ಮದಿನದ ವಯಸ್ಸನ್ನು ಬಳಸುತ್ತದೆ: ಪೂರ್ಣ ವರ್ಷಗಳು + 1. ಉದಾಹರಣೆ: 35 ವರ್ಷ 5 ತಿಂಗಳು = 36.';
 
   @override
   String get sumAssuredLabel => 'ವಿಮಾ ಮೊತ್ತ (₹)';
@@ -1572,4 +1572,9 @@ class AppLocalizationsKn extends AppLocalizations {
   @override
   String get linkRpliPageDesc =>
       'ಯೋಜನೆಗಳು, ಪ್ರೀಮಿಯಂ ಕೋಷ್ಟಕಗಳು ಮತ್ತು ಗ್ರಾಹಕ ಮಾರ್ಗದರ್ಶಿ';
+
+  @override
+  String ageFromDobNext(int age) {
+    return 'ಆರಂಭ ದಿನಾಂಕದಂದು ಪ್ರವೇಶ ವಯಸ್ಸು: $age (ಮುಂದಿನ ಜನ್ಮದಿನಕ್ಕೆ)';
+  }
 }

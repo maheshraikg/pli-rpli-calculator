@@ -16,7 +16,13 @@ int ageNearestBirthday(DateTime dob, DateTime on) {
   return on.isBefore(halfway) ? last : last + 1;
 }
 
+/// The age the person will be on their next birthday: completed years + 1.
+/// India Post's Dak Sewa premium quote uses this (born 9 Jun 1991, policy
+/// starting 13 Nov 2026: age 36).
+int ageNextBirthday(DateTime dob, DateTime on) => ageLastBirthday(dob, on) + 1;
+
 int ageOn(AgeBasis basis, DateTime dob, DateTime on) => switch (basis) {
       AgeBasis.nearestBirthday => ageNearestBirthday(dob, on),
       AgeBasis.lastBirthday => ageLastBirthday(dob, on),
+      AgeBasis.nextBirthday => ageNextBirthday(dob, on),
     };

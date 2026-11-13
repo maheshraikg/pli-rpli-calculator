@@ -84,7 +84,7 @@ class AppLocalizationsOr extends AppLocalizations {
   }
 
   @override
-  String get entryAgeLabel => 'ପ୍ରବେଶ ବୟସ';
+  String get entryAgeLabel => 'ବୟସ (ପରବର୍ତ୍ତୀ ଜନ୍ମଦିନରେ)';
 
   @override
   String get childAgeLabel => 'ପିଲାର ବୟସ';
@@ -105,7 +105,7 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get ageBasisNote =>
-      'ପୂର୍ଣ୍ଣ ବର୍ଷରେ ବୟସ ଲେଖନ୍ତୁ। ଭାରତୀୟ ଡାକର ବୟସ ନିୟମ ନିଶ୍ଚିତ ହେବା ପରେ ଜନ୍ମ ତାରିଖରୁ ବୟସ ଗଣନା ସୁବିଧା ଯୋଡ଼ାଯିବ।';
+      'ଇଣ୍ଡିଆ ପୋଷ୍ଟ ପରବର୍ତ୍ତୀ ଜନ୍ମଦିନର ବୟସ ନିଏ: ସମ୍ପୂର୍ଣ୍ଣ ବର୍ଷ + 1। ଉଦାହରଣ: 35 ବର୍ଷ 5 ମାସ = 36।';
 
   @override
   String get sumAssuredLabel => 'ବୀମା ରାଶି (₹)';
@@ -1568,4 +1568,9 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get linkRpliPageDesc => 'ଯୋଜନା, ପ୍ରିମିୟମ ସାରଣୀ ଓ ଗ୍ରାହକ ଗାଇଡ';
+
+  @override
+  String ageFromDobNext(int age) {
+    return 'ଆରମ୍ଭ ତାରିଖରେ ପ୍ରବେଶ ବୟସ: $age (ପରବର୍ତ୍ତୀ ଜନ୍ମଦିନରେ)';
+  }
 }

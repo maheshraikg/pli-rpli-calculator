@@ -84,7 +84,7 @@ class AppLocalizationsUr extends AppLocalizations {
   }
 
   @override
-  String get entryAgeLabel => 'داخلے کی عمر';
+  String get entryAgeLabel => 'عمر (اگلی سالگرہ پر)';
 
   @override
   String get childAgeLabel => 'بچے کی عمر';
@@ -105,7 +105,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get ageBasisNote =>
-      'عمر مکمل سالوں میں درج کریں۔ انڈیا پوسٹ کا عمر کا قاعدہ تصدیق ہونے کے بعد تاریخ پیدائش سے عمر کی سہولت شامل کی جائے گی۔';
+      'انڈیا پوسٹ اگلی سالگرہ کی عمر لیتا ہے: مکمل سال + 1۔ مثال: 35 سال 5 ماہ = 36۔';
 
   @override
   String get sumAssuredLabel => 'بیمہ رقم (₹)';
@@ -1567,4 +1567,9 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get linkRpliPageDesc => 'منصوبے، پریمیم ٹیبل اور کسٹمر گائیڈ';
+
+  @override
+  String ageFromDobNext(int age) {
+    return 'آغاز کی تاریخ پر داخلہ عمر: $age (اگلی سالگرہ پر)';
+  }
 }

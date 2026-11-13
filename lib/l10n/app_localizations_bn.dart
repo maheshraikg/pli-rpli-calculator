@@ -84,7 +84,7 @@ class AppLocalizationsBn extends AppLocalizations {
   }
 
   @override
-  String get entryAgeLabel => 'প্রবেশের বয়স';
+  String get entryAgeLabel => 'বয়স (পরের জন্মদিনে)';
 
   @override
   String get childAgeLabel => 'সন্তানের বয়স';
@@ -105,7 +105,7 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get ageBasisNote =>
-      'পূর্ণ বছরে বয়স লিখুন। ভারতীয় ডাকের বয়সের নিয়ম নিশ্চিত হলে জন্মতারিখ থেকে বয়স গণনার সুবিধা যোগ করা হবে।';
+      'ইন্ডিয়া পোস্ট পরের জন্মদিনের বয়স ধরে: পূর্ণ বছর + 1। উদাহরণ: 35 বছর 5 মাস = 36।';
 
   @override
   String get sumAssuredLabel => 'বিমার অঙ্ক (₹)';
@@ -1568,4 +1568,9 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get linkRpliPageDesc => 'প্ল্যান, প্রিমিয়াম তালিকা ও গ্রাহক গাইড';
+
+  @override
+  String ageFromDobNext(int age) {
+    return 'শুরুর তারিখে প্রবেশ বয়স: $age (পরের জন্মদিনে)';
+  }
 }

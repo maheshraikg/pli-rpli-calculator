@@ -84,7 +84,7 @@ class AppLocalizationsTa extends AppLocalizations {
   }
 
   @override
-  String get entryAgeLabel => 'நுழைவு வயது';
+  String get entryAgeLabel => 'வயது (அடுத்த பிறந்தநாளில்)';
 
   @override
   String get childAgeLabel => 'குழந்தையின் வயது';
@@ -105,7 +105,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get ageBasisNote =>
-      'முழு ஆண்டுகளில் வயதை உள்ளிடவும். இந்திய அஞ்சலின் வயது விதி உறுதியானதும் பிறந்த தேதியிலிருந்து வயது கணக்கிடும் வசதி சேர்க்கப்படும்.';
+      'இந்திய அஞ்சல் அடுத்த பிறந்தநாள் வயதைக் கணக்கிடும்: முடிந்த ஆண்டுகள் + 1. எ.கா: 35 ஆண்டு 5 மாதம் = 36.';
 
   @override
   String get sumAssuredLabel => 'காப்பீட்டுத் தொகை (₹)';
@@ -1589,4 +1589,9 @@ class AppLocalizationsTa extends AppLocalizations {
   @override
   String get linkRpliPageDesc =>
       'திட்டங்கள், பிரீமியம் அட்டவணைகள் மற்றும் வாடிக்கையாளர் வழிகாட்டி';
+
+  @override
+  String ageFromDobNext(int age) {
+    return 'தொடக்கத் தேதியில் நுழைவு வயது: $age (அடுத்த பிறந்தநாளில்)';
+  }
 }
